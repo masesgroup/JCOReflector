@@ -187,7 +187,7 @@ public class FlowSwitch_1<T extends IJCOBridgeReflected> extends system.activiti
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.FlowSwitch-1.Expression" target="_top">.NET documentation</a>
      */
-    public Activity_1 getExpression() throws Throwable {
+    public Activity_1<T> getExpression() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExpression = null;
@@ -209,7 +209,7 @@ public class FlowSwitch_1<T extends IJCOBridgeReflected> extends system.activiti
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.FlowSwitch-1.Expression" target="_top">.NET documentation</a>
      */
-    public void setExpression(Activity_1 Expression) throws Throwable {
+    public void setExpression(Activity_1<T> Expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -265,7 +265,7 @@ public class FlowSwitch_1<T extends IJCOBridgeReflected> extends system.activiti
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.FlowSwitch-1.Cases" target="_top">.NET documentation</a>
      */
-    public IDictionary_2 getCases() throws Throwable {
+    public IDictionary_2<T, FlowNode> getCases() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCases = null;

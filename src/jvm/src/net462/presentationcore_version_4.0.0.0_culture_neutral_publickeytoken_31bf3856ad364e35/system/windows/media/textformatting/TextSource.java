@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.windows.media.textformatting.TextRun;
 import system.windows.media.textformatting.TextSpan_1;
+import system.windows.media.textformatting.CultureSpecificCharacterBufferRange;
 
 
 /**
@@ -235,7 +236,7 @@ public class TextSource extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextSource.GetPrecedingText" target="_top">.NET documentation</a>
      */
-    public TextSpan_1 GetPrecedingText(int textSourceCharacterIndexLimit) throws Throwable {
+    public TextSpan_1<CultureSpecificCharacterBufferRange> GetPrecedingText(int textSourceCharacterIndexLimit) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetPrecedingText = null;

@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.ValueType;
 import system.collections.generic.Dictionary_2;
+import system.windows.forms.ImeMode;
+import system.windows.forms.ImeModeConversion;
 
 
 /**
@@ -198,7 +200,7 @@ public class ImeModeConversion extends system.ValueType  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.ImeModeConversion.ImeModeConversionBits" target="_top">.NET documentation</a>
      */
-    public static Dictionary_2 getImeModeConversionBits() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException {
+    public static Dictionary_2<ImeMode, ImeModeConversion> getImeModeConversionBits() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectImeModeConversionBits = null;

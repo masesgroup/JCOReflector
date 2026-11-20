@@ -42,12 +42,15 @@ import system.windows.DependencyObject;
 import system.windows.FrameworkElement;
 import system.windows.controls.DataGridRow;
 import system.Nullable_1;
+import system.componentmodel.ListSortDirection;
 import system.windows.controls.DataGridLength;
 import system.windows.controls.DataTemplateSelector;
 import system.windows.data.BindingBase;
 import system.windows.DataTemplate;
 import system.windows.Style;
 import system.windows.Visibility;
+import system.EventHandler_1;
+import system.windows.controls.DataGridCellClipboardEventArgs;
 
 
 /**
@@ -954,7 +957,7 @@ public class DataGridColumn extends system.windows.DependencyObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridColumn.SortDirection" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getSortDirection() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+    public Nullable_1<ListSortDirection> getSortDirection() throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSortDirection = null;
@@ -985,7 +988,7 @@ public class DataGridColumn extends system.windows.DependencyObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridColumn.SortDirection" target="_top">.NET documentation</a>
      */
-    public void setSortDirection(Nullable_1 SortDirection) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
+    public void setSortDirection(Nullable_1<ListSortDirection> SortDirection) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -1596,6 +1599,74 @@ public class DataGridColumn extends system.windows.DependencyObject  {
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addCopyingCellClipboardContent.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataGridCellClipboardEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addCopyingCellClipboardContent(EventHandler_1<DataGridCellClipboardEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("CopyingCellClipboardContent", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeCopyingCellClipboardContent.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataGridCellClipboardEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeCopyingCellClipboardContent(EventHandler_1<DataGridCellClipboardEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("CopyingCellClipboardContent", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addPastingCellClipboardContent.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataGridCellClipboardEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addPastingCellClipboardContent(EventHandler_1<DataGridCellClipboardEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("PastingCellClipboardContent", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removePastingCellClipboardContent.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataGridCellClipboardEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removePastingCellClipboardContent(EventHandler_1<DataGridCellClipboardEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("PastingCellClipboardContent", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

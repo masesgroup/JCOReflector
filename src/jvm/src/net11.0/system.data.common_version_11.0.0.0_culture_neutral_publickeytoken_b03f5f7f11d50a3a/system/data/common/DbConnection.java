@@ -551,7 +551,7 @@ public class DbConnection extends system.componentmodel.Component  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbConnection.GetSchemaAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 GetSchemaAsync(java.lang.String collectionName, java.lang.String[] restrictionValues, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.ArgumentNullException, system.IndexOutOfRangeException {
+    public Task_1<DataTable> GetSchemaAsync(java.lang.String collectionName, java.lang.String[] restrictionValues, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetSchemaAsync = null;
@@ -585,7 +585,7 @@ public class DbConnection extends system.componentmodel.Component  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbConnection.GetSchemaAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 GetSchemaAsync(java.lang.String dupParam0, JCORefOut dupParam1, CancellationToken dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.ArgumentNullException, system.IndexOutOfRangeException {
+    public Task_1<DataTable> GetSchemaAsync(java.lang.String dupParam0, JCORefOut dupParam1, CancellationToken dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetSchemaAsync = null;
@@ -618,7 +618,7 @@ public class DbConnection extends system.componentmodel.Component  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbConnection.GetSchemaAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 GetSchemaAsync(java.lang.String collectionName, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.ArgumentNullException, system.IndexOutOfRangeException {
+    public Task_1<DataTable> GetSchemaAsync(java.lang.String collectionName, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetSchemaAsync = null;
@@ -650,7 +650,7 @@ public class DbConnection extends system.componentmodel.Component  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbConnection.GetSchemaAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 GetSchemaAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.ArgumentNullException, system.IndexOutOfRangeException {
+    public Task_1<DataTable> GetSchemaAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetSchemaAsync = null;
@@ -711,7 +711,7 @@ public class DbConnection extends system.componentmodel.Component  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbConnection.BeginTransactionAsync" target="_top">.NET documentation</a>
      */
-    public ValueTask_1 BeginTransactionAsync(IsolationLevel isolationLevel, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.InvalidOperationException, system.IndexOutOfRangeException {
+    public ValueTask_1<DbTransaction> BeginTransactionAsync(IsolationLevel isolationLevel, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectBeginTransactionAsync = null;
@@ -742,7 +742,7 @@ public class DbConnection extends system.componentmodel.Component  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbConnection.BeginTransactionAsync" target="_top">.NET documentation</a>
      */
-    public ValueTask_1 BeginTransactionAsync(CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.InvalidOperationException, system.IndexOutOfRangeException {
+    public ValueTask_1<DbTransaction> BeginTransactionAsync(CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectBeginTransactionAsync = null;

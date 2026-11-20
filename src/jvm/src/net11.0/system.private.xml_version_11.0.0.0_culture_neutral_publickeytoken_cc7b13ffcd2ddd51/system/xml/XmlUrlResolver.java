@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.xml.XmlResolver;
 import system.Uri;
 import system.threading.tasks.Task_1;
+import system.Object;
 import system.net.cache.RequestCachePolicy;
 import system.net.ICredentials;
 import system.net.ICredentialsImplementation;
@@ -246,7 +247,7 @@ public class XmlUrlResolver extends system.xml.XmlResolver  {
      * @throws system.xml.XmlException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlUrlResolver.GetEntityAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 GetEntityAsync(Uri absoluteUri, java.lang.String role, NetType ofObjectToReturn) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.UriFormatException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.net.http.HttpRequestException, system.AggregateException, system.FormatException, system.xml.XmlException {
+    public Task_1<Object> GetEntityAsync(Uri absoluteUri, java.lang.String role, NetType ofObjectToReturn) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.UriFormatException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.net.http.HttpRequestException, system.AggregateException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetEntityAsync = null;

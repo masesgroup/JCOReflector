@@ -3544,7 +3544,7 @@ public class Vector4 extends system.ValueType  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector4.SinCos" target="_top">.NET documentation</a>
      */
-    public static ValueTuple_2 SinCos(Vector4 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static ValueTuple_2<Vector4, Vector4> SinCos(Vector4 vector) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSinCos = null;

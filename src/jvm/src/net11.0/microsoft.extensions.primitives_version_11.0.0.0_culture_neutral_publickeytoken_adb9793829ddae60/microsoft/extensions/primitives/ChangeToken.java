@@ -41,7 +41,10 @@ import java.util.ArrayList;
 import system.IDisposable;
 import system.IDisposableImplementation;
 import system.Func_1;
+import microsoft.extensions.primitives.IChangeToken;
+import microsoft.extensions.primitives.IChangeTokenImplementation;
 import system.Action;
+import system.threading.tasks.Task;
 import system.Action_1;
 import system.Func_2;
 
@@ -163,7 +166,7 @@ public class ChangeToken extends NetObject  {
     /**
      * Invokes the .NET member OnChange.
      *
-     * @param changeTokenProducer the argument of type {@code Func_1}
+     * @param changeTokenProducer the argument of type {@code Func_1<IChangeToken>}
      * @param changeTokenConsumer the argument of type {@code Action}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -177,7 +180,7 @@ public class ChangeToken extends NetObject  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Primitives.ChangeToken.OnChange" target="_top">.NET documentation</a>
      */
-    public static IDisposable OnChange(Func_1 changeTokenProducer, Action changeTokenConsumer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException {
+    public static IDisposable OnChange(Func_1<IChangeToken> changeTokenProducer, Action changeTokenConsumer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOnChange = null;
@@ -195,8 +198,8 @@ public class ChangeToken extends NetObject  {
     /**
      * Invokes the .NET member OnChange.
      *
-     * @param changeTokenProducer the argument of type {@code Func_1}
-     * @param changeTokenConsumer the argument of type {@code Func_1}
+     * @param changeTokenProducer the argument of type {@code Func_1<IChangeToken>}
+     * @param changeTokenConsumer the argument of type {@code Func_1<Task>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -209,7 +212,7 @@ public class ChangeToken extends NetObject  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Primitives.ChangeToken.OnChange" target="_top">.NET documentation</a>
      */
-    public static IDisposable OnChange(Func_1 changeTokenProducer, Func_1 changeTokenConsumer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException {
+    public static IDisposable OnChange(Func_1<IChangeToken> changeTokenProducer, Func_1<Task> changeTokenConsumer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOnChange = null;
@@ -228,7 +231,7 @@ public class ChangeToken extends NetObject  {
      * Invokes the .NET member OnChange.
      *
      * @param <TState> the type of the generic argument TState
-     * @param changeTokenProducer the argument of type {@code Func_1}
+     * @param changeTokenProducer the argument of type {@code Func_1<IChangeToken>}
      * @param changeTokenConsumer the argument of type {@code Action_1}
      * @param state the argument of type {@code TState}
      * @return the value returned by the .NET member
@@ -243,7 +246,7 @@ public class ChangeToken extends NetObject  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Primitives.ChangeToken.OnChange" target="_top">.NET documentation</a>
      */
-    public static <TState extends IJCOBridgeReflected> IDisposable OnChange(Func_1 changeTokenProducer, Action_1 changeTokenConsumer, TState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException {
+    public static <TState extends IJCOBridgeReflected> IDisposable OnChange(Func_1<IChangeToken> changeTokenProducer, Action_1 changeTokenConsumer, TState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOnChange = null;
@@ -262,7 +265,7 @@ public class ChangeToken extends NetObject  {
      * Invokes the .NET member OnChange.
      *
      * @param <TState> the type of the generic argument TState
-     * @param changeTokenProducer the argument of type {@code Func_1}
+     * @param changeTokenProducer the argument of type {@code Func_1<IChangeToken>}
      * @param changeTokenConsumer the argument of type {@code Func_2}
      * @param state the argument of type {@code TState}
      * @return the value returned by the .NET member
@@ -277,7 +280,7 @@ public class ChangeToken extends NetObject  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Primitives.ChangeToken.OnChange" target="_top">.NET documentation</a>
      */
-    public static <TState extends IJCOBridgeReflected> IDisposable OnChange(Func_1 changeTokenProducer, Func_2 changeTokenConsumer, TState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException {
+    public static <TState extends IJCOBridgeReflected> IDisposable OnChange(Func_1<IChangeToken> changeTokenProducer, Func_2 changeTokenConsumer, TState state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOnChange = null;

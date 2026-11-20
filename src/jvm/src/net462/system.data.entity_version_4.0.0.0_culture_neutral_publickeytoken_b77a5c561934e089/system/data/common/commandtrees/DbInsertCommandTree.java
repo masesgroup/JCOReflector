@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.data.common.commandtrees.DbModificationCommandTree;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.data.common.commandtrees.DbModificationClause;
 import system.data.common.commandtrees.DbExpression;
 
 
@@ -171,7 +172,7 @@ public class DbInsertCommandTree extends system.data.common.commandtrees.DbModif
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbInsertCommandTree.SetClauses" target="_top">.NET documentation</a>
      */
-    public IList_1 getSetClauses() throws Throwable {
+    public IList_1<DbModificationClause> getSetClauses() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSetClauses = null;

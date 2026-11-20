@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.identitymodel.tokens.SecurityToken;
 import system.identitymodel.tokens.Saml2Assertion;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.identitymodel.tokens.SecurityKey;
 import system.identitymodel.tokens.SecurityKeyIdentifierClause;
 import system.DateTime;
 
@@ -189,7 +190,7 @@ public class Saml2SecurityToken extends system.identitymodel.tokens.SecurityToke
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param assertion the argument of type {@code Saml2Assertion}
-     * @param keys the argument of type {@code ReadOnlyCollection_1}
+     * @param keys the argument of type {@code ReadOnlyCollection_1<SecurityKey>}
      * @param issuerToken the argument of type {@code SecurityToken}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
@@ -205,7 +206,7 @@ public class Saml2SecurityToken extends system.identitymodel.tokens.SecurityToke
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2SecurityToken.-ctor" target="_top">.NET documentation</a>
      */
-    public Saml2SecurityToken(Saml2Assertion assertion, ReadOnlyCollection_1 keys, SecurityToken issuerToken) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+    public Saml2SecurityToken(Saml2Assertion assertion, ReadOnlyCollection_1<SecurityKey> keys, SecurityToken issuerToken) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

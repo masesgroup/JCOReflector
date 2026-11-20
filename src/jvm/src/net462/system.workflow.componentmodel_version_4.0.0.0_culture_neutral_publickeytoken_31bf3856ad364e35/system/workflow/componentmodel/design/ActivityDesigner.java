@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.workflow.componentmodel.design.CompositeActivityDesigner;
 import system.workflow.componentmodel.Activity;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.workflow.componentmodel.design.ConnectionPoint;
 import system.workflow.componentmodel.design.DesignerEdges;
 import system.drawing.Image;
 import system.drawing.Graphics;
@@ -261,7 +262,7 @@ public class ActivityDesigner extends NetObject implements AutoCloseable {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDesigner.GetConnectionPoints" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 GetConnectionPoints(DesignerEdges edges) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.FormatException {
+    public ReadOnlyCollection_1<ConnectionPoint> GetConnectionPoints(DesignerEdges edges) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetConnectionPoints = null;

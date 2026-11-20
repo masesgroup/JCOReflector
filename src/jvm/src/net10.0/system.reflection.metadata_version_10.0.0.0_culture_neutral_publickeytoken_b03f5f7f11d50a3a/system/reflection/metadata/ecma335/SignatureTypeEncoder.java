@@ -335,8 +335,8 @@ public class SignatureTypeEncoder extends system.ValueType  {
     /**
      * Invokes the .NET member Array.
      *
-     * @param elementType the argument of type {@code Action_1}
-     * @param arrayShape the argument of type {@code Action_1}
+     * @param elementType the argument of type {@code Action_1<SignatureTypeEncoder>}
+     * @param arrayShape the argument of type {@code Action_1<ArrayShapeEncoder>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -350,7 +350,7 @@ public class SignatureTypeEncoder extends system.ValueType  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.SignatureTypeEncoder.Array" target="_top">.NET documentation</a>
      */
-    public void Array(Action_1 elementType, Action_1 arrayShape) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public void Array(Action_1<SignatureTypeEncoder> elementType, Action_1<ArrayShapeEncoder> arrayShape) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

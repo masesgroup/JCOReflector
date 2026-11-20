@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.Action_1;
+import system.EventHandler_1;
 
 
 /**
@@ -171,13 +172,13 @@ public class Progress_1<T extends IJCOBridgeReflected> extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param handler the argument of type {@code Action_1}
+     * @param handler the argument of type {@code Action_1<T>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Progress-1.-ctor" target="_top">.NET documentation</a>
      */
-    public Progress_1(Action_1 handler) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException {
+    public Progress_1(Action_1<T> handler) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -201,6 +202,40 @@ public class Progress_1<T extends IJCOBridgeReflected> extends NetObject  {
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addProgressChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<T>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addProgressChanged(EventHandler_1<T> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("ProgressChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeProgressChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<T>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeProgressChanged(EventHandler_1<T> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("ProgressChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

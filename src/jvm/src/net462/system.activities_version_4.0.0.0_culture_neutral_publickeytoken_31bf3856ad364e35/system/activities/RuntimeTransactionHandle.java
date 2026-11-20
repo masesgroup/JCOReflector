@@ -45,6 +45,8 @@ import system.activities.CodeActivityContext;
 import system.activities.NativeActivityContext;
 import system.activities.BookmarkCallback;
 import system.Action_2;
+import system.activities.NativeActivityTransactionContext;
+import system.Object;
 import system.activities.RegistrationContext;
 
 
@@ -355,7 +357,7 @@ public class RuntimeTransactionHandle extends system.activities.Handle  {
      * Invokes the .NET member RequestTransactionContext.
      *
      * @param context the argument of type {@code NativeActivityContext}
-     * @param callback the argument of type {@code Action_2}
+     * @param callback the argument of type {@code Action_2<NativeActivityTransactionContext, Object>}
      * @param state the argument of type {@code NetObject}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -369,7 +371,7 @@ public class RuntimeTransactionHandle extends system.activities.Handle  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.RuntimeTransactionHandle.RequestTransactionContext" target="_top">.NET documentation</a>
      */
-    public void RequestTransactionContext(NativeActivityContext context, Action_2 callback, NetObject state) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+    public void RequestTransactionContext(NativeActivityContext context, Action_2<NativeActivityTransactionContext, Object> callback, NetObject state) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -383,7 +385,7 @@ public class RuntimeTransactionHandle extends system.activities.Handle  {
      * Invokes the .NET member RequireTransactionContext.
      *
      * @param context the argument of type {@code NativeActivityContext}
-     * @param callback the argument of type {@code Action_2}
+     * @param callback the argument of type {@code Action_2<NativeActivityTransactionContext, Object>}
      * @param state the argument of type {@code NetObject}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -397,7 +399,7 @@ public class RuntimeTransactionHandle extends system.activities.Handle  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.RuntimeTransactionHandle.RequireTransactionContext" target="_top">.NET documentation</a>
      */
-    public void RequireTransactionContext(NativeActivityContext context, Action_2 callback, NetObject state) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+    public void RequireTransactionContext(NativeActivityContext context, Action_2<NativeActivityTransactionContext, Object> callback, NetObject state) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.security.cryptography.x509certificates.X509Certificate2;
 import system.identitymodel.selectors.AudienceUriMode;
 import system.identitymodel.selectors.X509CertificateValidator;
 import system.identitymodel.tokens.SamlSerializer;
@@ -230,7 +231,7 @@ public class IssuedTokenServiceCredential extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates" target="_top">.NET documentation</a>
      */
-    public IList_1 getKnownCertificates() throws Throwable, system.ArgumentNullException {
+    public IList_1<X509Certificate2> getKnownCertificates() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectKnownCertificates = null;

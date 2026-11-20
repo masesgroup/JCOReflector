@@ -362,11 +362,11 @@ public class IWorkflowDebuggerImplementation extends NetObject implements IWorkf
      * @param programId the argument of type {@code Guid}
      * @param scheduleTypeId the argument of type {@code Guid}
      * @param activityQualifiedName the argument of type {@code java.lang.String}
-     * @param handlerMethods the argument of type {@code List_1}
+     * @param handlerMethods the argument of type {@code List_1<ActivityHandlerDescriptor>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.DebugEngine.IWorkflowDebugger.UpdateHandlerMethodsForActivity" target="_top">.NET documentation</a>
      */
-    public void UpdateHandlerMethodsForActivity(Guid programId, Guid scheduleTypeId, java.lang.String activityQualifiedName, List_1 handlerMethods) throws Throwable {
+    public void UpdateHandlerMethodsForActivity(Guid programId, Guid scheduleTypeId, java.lang.String activityQualifiedName, List_1<ActivityHandlerDescriptor> handlerMethods) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

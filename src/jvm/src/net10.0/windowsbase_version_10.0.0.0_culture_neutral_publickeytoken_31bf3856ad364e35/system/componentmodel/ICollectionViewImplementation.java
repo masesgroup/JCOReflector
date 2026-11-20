@@ -43,7 +43,9 @@ import system.collections.specialized.INotifyCollectionChangedImplementation;
 import system.IDisposable;
 import system.IDisposableImplementation;
 import system.collections.objectmodel.ObservableCollection_1;
+import system.componentmodel.GroupDescription;
 import system.collections.objectmodel.ReadOnlyObservableCollection_1;
+import system.Object;
 import system.componentmodel.SortDescriptionCollection;
 import system.globalization.CultureInfo;
 import system.Predicate_1;
@@ -549,7 +551,7 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionView.GroupDescriptions" target="_top">.NET documentation</a>
      */
-    public ObservableCollection_1 getGroupDescriptions() throws Throwable {
+    public ObservableCollection_1<GroupDescription> getGroupDescriptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGroupDescriptions = null;
@@ -571,7 +573,7 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionView.Groups" target="_top">.NET documentation</a>
      */
-    public ReadOnlyObservableCollection_1 getGroups() throws Throwable {
+    public ReadOnlyObservableCollection_1<Object> getGroups() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGroups = null;
@@ -676,15 +678,15 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionView.Filter" target="_top">.NET documentation</a>
      */
-    public Predicate_1 getFilter() throws Throwable {
+    public Predicate_1<Object> getFilter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFilter = null;
         try {
             retObjectFilter = classInstance.Get("Filter");
-            return (Predicate_1)retObjectFilter;
+            return (Predicate_1<Object>)retObjectFilter;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Predicate_1", retObjectFilter != null ? retObjectFilter.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Predicate_1<Object>", retObjectFilter != null ? retObjectFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -697,7 +699,7 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.ICollectionView.Filter" target="_top">.NET documentation</a>
      */
-    public void setFilter(Predicate_1 Filter) throws Throwable {
+    public void setFilter(Predicate_1<Object> Filter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

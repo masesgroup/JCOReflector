@@ -47,10 +47,12 @@ import system.net.http.HttpMessageInvoker;
 import system.ArraySegment_1;
 import system.net.websockets.WebSocketMessageType;
 import system.threading.tasks.Task_1;
+import system.net.websockets.WebSocketReceiveResult;
 import system.threading.tasks.ValueTask;
 import system.ReadOnlyMemory_1;
 import system.net.websockets.WebSocketMessageFlags;
 import system.threading.tasks.ValueTask_1;
+import system.net.websockets.ValueWebSocketReceiveResult;
 import system.Memory_1;
 import system.collections.generic.IReadOnlyDictionary_2;
 import system.collections.generic.IReadOnlyDictionary_2Implementation;
@@ -377,7 +379,7 @@ public class ClientWebSocket extends system.net.websockets.WebSocket  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.ClientWebSocket.ReceiveAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 ReceiveAsync(ArraySegment_1 buffer, CancellationToken cancellationToken) throws Throwable, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+    public Task_1<WebSocketReceiveResult> ReceiveAsync(ArraySegment_1 buffer, CancellationToken cancellationToken) throws Throwable, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReceiveAsync = null;
@@ -477,7 +479,7 @@ public class ClientWebSocket extends system.net.websockets.WebSocket  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.ClientWebSocket.ReceiveAsync" target="_top">.NET documentation</a>
      */
-    public ValueTask_1 ReceiveAsync(Memory_1 buffer, CancellationToken cancellationToken) throws Throwable, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+    public ValueTask_1<ValueWebSocketReceiveResult> ReceiveAsync(Memory_1 buffer, CancellationToken cancellationToken) throws Throwable, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReceiveAsync = null;

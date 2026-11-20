@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.data.metadata.edm.EntityTypeBase;
 import system.data.metadata.edm.ReadOnlyMetadataCollection_1;
+import system.data.metadata.edm.RelationshipEndMember;
 
 
 /**
@@ -169,7 +170,7 @@ public class RelationshipType extends system.data.metadata.edm.EntityTypeBase  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.RelationshipType.RelationshipEndMembers" target="_top">.NET documentation</a>
      */
-    public ReadOnlyMetadataCollection_1 getRelationshipEndMembers() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public ReadOnlyMetadataCollection_1<RelationshipEndMember> getRelationshipEndMembers() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRelationshipEndMembers = null;

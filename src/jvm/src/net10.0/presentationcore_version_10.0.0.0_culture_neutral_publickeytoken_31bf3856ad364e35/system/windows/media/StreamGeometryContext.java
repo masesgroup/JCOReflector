@@ -261,13 +261,13 @@ public class StreamGeometryContext extends system.windows.threading.DispatcherOb
     /**
      * Invokes the .NET member PolyBezierTo.
      *
-     * @param points the argument of type {@code IList_1}
+     * @param points the argument of type {@code IList_1<Point>}
      * @param isStroked the argument of type {@code boolean}
      * @param isSmoothJoin the argument of type {@code boolean}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.StreamGeometryContext.PolyBezierTo" target="_top">.NET documentation</a>
      */
-    public void PolyBezierTo(IList_1 points, boolean isStroked, boolean isSmoothJoin) throws Throwable {
+    public void PolyBezierTo(IList_1<Point> points, boolean isStroked, boolean isSmoothJoin) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -280,13 +280,13 @@ public class StreamGeometryContext extends system.windows.threading.DispatcherOb
     /**
      * Invokes the .NET member PolyLineTo.
      *
-     * @param points the argument of type {@code IList_1}
+     * @param points the argument of type {@code IList_1<Point>}
      * @param isStroked the argument of type {@code boolean}
      * @param isSmoothJoin the argument of type {@code boolean}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.StreamGeometryContext.PolyLineTo" target="_top">.NET documentation</a>
      */
-    public void PolyLineTo(IList_1 points, boolean isStroked, boolean isSmoothJoin) throws Throwable {
+    public void PolyLineTo(IList_1<Point> points, boolean isStroked, boolean isSmoothJoin) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -299,13 +299,13 @@ public class StreamGeometryContext extends system.windows.threading.DispatcherOb
     /**
      * Invokes the .NET member PolyQuadraticBezierTo.
      *
-     * @param points the argument of type {@code IList_1}
+     * @param points the argument of type {@code IList_1<Point>}
      * @param isStroked the argument of type {@code boolean}
      * @param isSmoothJoin the argument of type {@code boolean}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.StreamGeometryContext.PolyQuadraticBezierTo" target="_top">.NET documentation</a>
      */
-    public void PolyQuadraticBezierTo(IList_1 points, boolean isStroked, boolean isSmoothJoin) throws Throwable {
+    public void PolyQuadraticBezierTo(IList_1<Point> points, boolean isStroked, boolean isSmoothJoin) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

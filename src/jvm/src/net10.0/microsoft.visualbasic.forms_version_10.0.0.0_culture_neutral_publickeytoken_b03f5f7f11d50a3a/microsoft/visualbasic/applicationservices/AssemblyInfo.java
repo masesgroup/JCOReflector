@@ -249,7 +249,7 @@ public class AssemblyInfo extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.ApplicationServices.AssemblyInfo.LoadedAssemblies" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getLoadedAssemblies() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentNullException {
+    public ReadOnlyCollection_1<Assembly> getLoadedAssemblies() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectLoadedAssemblies = null;

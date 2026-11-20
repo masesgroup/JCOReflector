@@ -3063,7 +3063,7 @@ public class Half extends system.ValueType  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Half.SinCos" target="_top">.NET documentation</a>
      */
-    public static ValueTuple_2 SinCos(Half x) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static ValueTuple_2<Half, Half> SinCos(Half x) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSinCos = null;
@@ -3089,7 +3089,7 @@ public class Half extends system.ValueType  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Half.SinCosPi" target="_top">.NET documentation</a>
      */
-    public static ValueTuple_2 SinCosPi(Half x) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static ValueTuple_2<Half, Half> SinCosPi(Half x) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSinCosPi = null;

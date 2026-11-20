@@ -43,6 +43,7 @@ import system.io.FileMode;
 import system.io.FileOptions;
 import system.io.FileShare;
 import system.Nullable_1;
+import system.io.UnixFileMode;
 
 
 /**
@@ -522,7 +523,7 @@ public class FileStreamOptions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.FileStreamOptions.UnixCreateMode" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getUnixCreateMode() throws Throwable {
+    public Nullable_1<UnixFileMode> getUnixCreateMode() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUnixCreateMode = null;
@@ -556,7 +557,7 @@ public class FileStreamOptions extends NetObject  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.FileStreamOptions.UnixCreateMode" target="_top">.NET documentation</a>
      */
-    public void setUnixCreateMode(Nullable_1 UnixCreateMode) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.threading.LockRecursionException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public void setUnixCreateMode(Nullable_1<UnixFileMode> UnixCreateMode) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.threading.LockRecursionException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

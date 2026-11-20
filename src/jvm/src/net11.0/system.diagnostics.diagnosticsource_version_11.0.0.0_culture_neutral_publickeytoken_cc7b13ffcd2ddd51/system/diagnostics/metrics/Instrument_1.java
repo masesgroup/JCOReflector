@@ -167,7 +167,7 @@ public class Instrument_1<T extends IJCOBridgeReflected> extends system.diagnost
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.Instrument-1.Advice" target="_top">.NET documentation</a>
      */
-    public InstrumentAdvice_1 getAdvice() throws Throwable {
+    public InstrumentAdvice_1<T> getAdvice() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAdvice = null;

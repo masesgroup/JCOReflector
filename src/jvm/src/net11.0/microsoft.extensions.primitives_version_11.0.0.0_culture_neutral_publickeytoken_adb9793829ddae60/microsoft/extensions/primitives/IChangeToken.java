@@ -40,6 +40,7 @@ import org.mases.jcobridge.netreflection.*;
 import system.IDisposable;
 import system.IDisposableImplementation;
 import system.Action_1;
+import system.Object;
 
 
 /**
@@ -118,7 +119,7 @@ public interface IChangeToken extends IJCOBridgeReflected {
 
     // Methods section
     
-    public IDisposable RegisterChangeCallback(Action_1 callback, NetObject state) throws Throwable;
+    public IDisposable RegisterChangeCallback(Action_1<Object> callback, NetObject state) throws Throwable;
 
 
     

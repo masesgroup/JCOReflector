@@ -211,7 +211,7 @@ public class HostingAbstractionsHostBuilderExtensions extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Hosting.HostingAbstractionsHostBuilderExtensions.StartAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 StartAsync(IHostBuilder hostBuilder, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public static Task_1<IHost> StartAsync(IHostBuilder hostBuilder, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStartAsync = null;

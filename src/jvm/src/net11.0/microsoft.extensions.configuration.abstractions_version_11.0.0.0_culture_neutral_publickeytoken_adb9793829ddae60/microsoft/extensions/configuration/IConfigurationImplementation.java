@@ -201,7 +201,7 @@ public class IConfigurationImplementation extends NetObject implements IConfigur
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Configuration.IConfiguration.GetChildren" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetChildren() throws Throwable {
+    public IEnumerable_1<IConfigurationSection> GetChildren() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetChildren = null;

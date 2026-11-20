@@ -44,6 +44,7 @@ import system.servicemodel.description.OperationDescription;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
 import system.collections.objectmodel.Collection_1;
+import system.servicemodel.activities.CorrelationInitializer;
 import system.servicemodel.activities.Receive;
 import system.servicemodel.activities.SendContent;
 
@@ -267,7 +268,7 @@ public class SendReply extends system.activities.Activity  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.SendReply.CorrelationInitializers" target="_top">.NET documentation</a>
      */
-    public Collection_1 getCorrelationInitializers() throws Throwable {
+    public Collection_1<CorrelationInitializer> getCorrelationInitializers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCorrelationInitializers = null;

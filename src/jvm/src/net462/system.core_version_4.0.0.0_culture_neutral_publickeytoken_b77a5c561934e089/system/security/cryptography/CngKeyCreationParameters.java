@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.Nullable_1;
+import system.security.cryptography.CngExportPolicies;
+import system.security.cryptography.CngKeyUsages;
 import system.security.cryptography.CngKeyCreationOptions;
 import system.security.cryptography.CngPropertyCollection;
 import system.security.cryptography.CngProvider;
@@ -194,7 +196,7 @@ public class CngKeyCreationParameters extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKeyCreationParameters.ExportPolicy" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getExportPolicy() throws Throwable {
+    public Nullable_1<CngExportPolicies> getExportPolicy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExportPolicy = null;
@@ -216,7 +218,7 @@ public class CngKeyCreationParameters extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKeyCreationParameters.ExportPolicy" target="_top">.NET documentation</a>
      */
-    public void setExportPolicy(Nullable_1 ExportPolicy) throws Throwable {
+    public void setExportPolicy(Nullable_1<CngExportPolicies> ExportPolicy) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -233,7 +235,7 @@ public class CngKeyCreationParameters extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKeyCreationParameters.KeyUsage" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getKeyUsage() throws Throwable {
+    public Nullable_1<CngKeyUsages> getKeyUsage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectKeyUsage = null;
@@ -255,7 +257,7 @@ public class CngKeyCreationParameters extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.CngKeyCreationParameters.KeyUsage" target="_top">.NET documentation</a>
      */
-    public void setKeyUsage(Nullable_1 KeyUsage) throws Throwable {
+    public void setKeyUsage(Nullable_1<CngKeyUsages> KeyUsage) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

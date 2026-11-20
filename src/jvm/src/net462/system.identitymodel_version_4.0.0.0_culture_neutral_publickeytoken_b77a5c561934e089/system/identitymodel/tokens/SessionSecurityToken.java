@@ -41,9 +41,9 @@ import java.util.ArrayList;
 import system.identitymodel.tokens.SecurityToken;
 import system.security.claims.ClaimsPrincipal;
 import system.Nullable_1;
+import system.DateTime;
 import system.TimeSpan;
 import system.xml.UniqueId;
-import system.DateTime;
 import system.identitymodel.tokens.SymmetricSecurityKey;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
@@ -231,8 +231,8 @@ public class SessionSecurityToken extends system.identitymodel.tokens.SecurityTo
      *
      * @param claimsPrincipal the argument of type {@code ClaimsPrincipal}
      * @param context the argument of type {@code java.lang.String}
-     * @param validFrom the argument of type {@code Nullable_1}
-     * @param validTo the argument of type {@code Nullable_1}
+     * @param validFrom the argument of type {@code Nullable_1<DateTime>}
+     * @param validTo the argument of type {@code Nullable_1<DateTime>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -246,7 +246,7 @@ public class SessionSecurityToken extends system.identitymodel.tokens.SecurityTo
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SessionSecurityToken.-ctor" target="_top">.NET documentation</a>
      */
-    public SessionSecurityToken(ClaimsPrincipal claimsPrincipal, java.lang.String context, Nullable_1 validFrom, Nullable_1 validTo) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.NotImplementedException {
+    public SessionSecurityToken(ClaimsPrincipal claimsPrincipal, java.lang.String context, Nullable_1<DateTime> validFrom, Nullable_1<DateTime> validTo) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.NotImplementedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -262,8 +262,8 @@ public class SessionSecurityToken extends system.identitymodel.tokens.SecurityTo
      * @param claimsPrincipal the argument of type {@code ClaimsPrincipal}
      * @param context the argument of type {@code java.lang.String}
      * @param endpointId the argument of type {@code java.lang.String}
-     * @param validFrom the argument of type {@code Nullable_1}
-     * @param validTo the argument of type {@code Nullable_1}
+     * @param validFrom the argument of type {@code Nullable_1<DateTime>}
+     * @param validTo the argument of type {@code Nullable_1<DateTime>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -277,7 +277,7 @@ public class SessionSecurityToken extends system.identitymodel.tokens.SecurityTo
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SessionSecurityToken.-ctor" target="_top">.NET documentation</a>
      */
-    public SessionSecurityToken(ClaimsPrincipal claimsPrincipal, java.lang.String context, java.lang.String endpointId, Nullable_1 validFrom, Nullable_1 validTo) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.NotImplementedException {
+    public SessionSecurityToken(ClaimsPrincipal claimsPrincipal, java.lang.String context, java.lang.String endpointId, Nullable_1<DateTime> validFrom, Nullable_1<DateTime> validTo) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.OverflowException, system.NotImplementedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -370,8 +370,8 @@ public class SessionSecurityToken extends system.identitymodel.tokens.SecurityTo
      * @param contextId the argument of type {@code UniqueId}
      * @param context the argument of type {@code java.lang.String}
      * @param endpointId the argument of type {@code java.lang.String}
-     * @param validFrom the argument of type {@code Nullable_1}
-     * @param validTo the argument of type {@code Nullable_1}
+     * @param validFrom the argument of type {@code Nullable_1<DateTime>}
+     * @param validTo the argument of type {@code Nullable_1<DateTime>}
      * @param key the argument of type {@code SymmetricSecurityKey}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -389,7 +389,7 @@ public class SessionSecurityToken extends system.identitymodel.tokens.SecurityTo
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SessionSecurityToken.-ctor" target="_top">.NET documentation</a>
      */
-    public SessionSecurityToken(ClaimsPrincipal claimsPrincipal, UniqueId contextId, java.lang.String context, java.lang.String endpointId, Nullable_1 validFrom, Nullable_1 validTo, SymmetricSecurityKey key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ApplicationException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.NotImplementedException {
+    public SessionSecurityToken(ClaimsPrincipal claimsPrincipal, UniqueId contextId, java.lang.String context, java.lang.String endpointId, Nullable_1<DateTime> validFrom, Nullable_1<DateTime> validTo, SymmetricSecurityKey key) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ApplicationException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.NotImplementedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

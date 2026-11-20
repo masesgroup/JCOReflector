@@ -39,6 +39,12 @@ import java.util.ArrayList;
 
 // Import section
 import system.Nullable_1;
+import system.DateTime;
+import system.messaging.AcknowledgeTypes;
+import system.messaging.Acknowledgment;
+import system.messaging.MessagePriority;
+import system.messaging.MessageType;
+import system.TimeSpan;
 import system.Uri;
 
 
@@ -298,7 +304,7 @@ public class MsmqMessage_1<T extends IJCOBridgeReflected> extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqIntegration.MsmqMessage-1.ArrivedTime" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getArrivedTime() throws Throwable {
+    public Nullable_1<DateTime> getArrivedTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArrivedTime = null;
@@ -320,7 +326,7 @@ public class MsmqMessage_1<T extends IJCOBridgeReflected> extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqIntegration.MsmqMessage-1.SentTime" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getSentTime() throws Throwable {
+    public Nullable_1<DateTime> getSentTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSentTime = null;
@@ -420,7 +426,7 @@ public class MsmqMessage_1<T extends IJCOBridgeReflected> extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqIntegration.MsmqMessage-1.AcknowledgeType" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getAcknowledgeType() throws Throwable {
+    public Nullable_1<AcknowledgeTypes> getAcknowledgeType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAcknowledgeType = null;
@@ -442,7 +448,7 @@ public class MsmqMessage_1<T extends IJCOBridgeReflected> extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqIntegration.MsmqMessage-1.AcknowledgeType" target="_top">.NET documentation</a>
      */
-    public void setAcknowledgeType(Nullable_1 AcknowledgeType) throws Throwable {
+    public void setAcknowledgeType(Nullable_1<AcknowledgeTypes> AcknowledgeType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -459,7 +465,7 @@ public class MsmqMessage_1<T extends IJCOBridgeReflected> extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqIntegration.MsmqMessage-1.Acknowledgment" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getAcknowledgment() throws Throwable {
+    public Nullable_1<Acknowledgment> getAcknowledgment() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAcknowledgment = null;
@@ -481,7 +487,7 @@ public class MsmqMessage_1<T extends IJCOBridgeReflected> extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqIntegration.MsmqMessage-1.Priority" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getPriority() throws Throwable {
+    public Nullable_1<MessagePriority> getPriority() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPriority = null;
@@ -516,7 +522,7 @@ public class MsmqMessage_1<T extends IJCOBridgeReflected> extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqIntegration.MsmqMessage-1.Priority" target="_top">.NET documentation</a>
      */
-    public void setPriority(Nullable_1 Priority) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
+    public void setPriority(Nullable_1<MessagePriority> Priority) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -533,7 +539,7 @@ public class MsmqMessage_1<T extends IJCOBridgeReflected> extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqIntegration.MsmqMessage-1.MessageType" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getMessageType() throws Throwable {
+    public Nullable_1<MessageType> getMessageType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectMessageType = null;
@@ -555,7 +561,7 @@ public class MsmqMessage_1<T extends IJCOBridgeReflected> extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqIntegration.MsmqMessage-1.TimeToReachQueue" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getTimeToReachQueue() throws Throwable {
+    public Nullable_1<TimeSpan> getTimeToReachQueue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTimeToReachQueue = null;
@@ -588,7 +594,7 @@ public class MsmqMessage_1<T extends IJCOBridgeReflected> extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqIntegration.MsmqMessage-1.TimeToReachQueue" target="_top">.NET documentation</a>
      */
-    public void setTimeToReachQueue(Nullable_1 TimeToReachQueue) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.OutOfMemoryException {
+    public void setTimeToReachQueue(Nullable_1<TimeSpan> TimeToReachQueue) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

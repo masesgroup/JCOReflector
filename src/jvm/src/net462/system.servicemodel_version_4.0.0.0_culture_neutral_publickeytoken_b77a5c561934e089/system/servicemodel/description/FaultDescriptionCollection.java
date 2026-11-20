@@ -167,7 +167,7 @@ public class FaultDescriptionCollection extends system.collections.objectmodel.C
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.FaultDescriptionCollection.FindAll" target="_top">.NET documentation</a>
      */
-    public Collection_1 FindAll(java.lang.String action) throws Throwable, system.NotSupportedException {
+    public Collection_1<FaultDescription> FindAll(java.lang.String action) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFindAll = null;

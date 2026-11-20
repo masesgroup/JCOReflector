@@ -45,6 +45,8 @@ import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
 import system.componentmodel.ISynchronizeInvoke;
 import system.componentmodel.ISynchronizeInvokeImplementation;
+import system.EventHandler_1;
+import system.net.peertopeer.collaboration.ObjectChangedEventArgs;
 
 
 /**
@@ -502,6 +504,40 @@ public class PeerObject extends NetObject implements AutoCloseable {
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addObjectChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ObjectChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addObjectChanged(EventHandler_1<ObjectChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("ObjectChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeObjectChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ObjectChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeObjectChanged(EventHandler_1<ObjectChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("ObjectChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

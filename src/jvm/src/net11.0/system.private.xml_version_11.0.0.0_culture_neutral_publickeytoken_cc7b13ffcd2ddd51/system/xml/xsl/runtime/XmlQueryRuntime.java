@@ -42,8 +42,8 @@ import system.xml.xpath.XPathNavigator;
 import system.xml.xsl.runtime.XmlILIndex;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
-import system.xml.schema.XmlTypeCode;
 import system.xml.xpath.XPathItem;
+import system.xml.schema.XmlTypeCode;
 import system.xml.xsl.runtime.XmlQueryOutput;
 import system.collections.IList;
 import system.collections.IListImplementation;
@@ -313,7 +313,7 @@ public class XmlQueryRuntime extends NetObject  {
     /**
      * Invokes the .NET member MatchesXmlType.
      *
-     * @param seq the argument of type {@code IList_1}
+     * @param seq the argument of type {@code IList_1<XPathItem>}
      * @param indexType the argument of type {@code int}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -322,7 +322,7 @@ public class XmlQueryRuntime extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.MatchesXmlType" target="_top">.NET documentation</a>
      */
-    public boolean MatchesXmlType(IList_1 seq, int indexType) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public boolean MatchesXmlType(IList_1<XPathItem> seq, int indexType) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectMatchesXmlType = null;
@@ -339,13 +339,13 @@ public class XmlQueryRuntime extends NetObject  {
     /**
      * Invokes the .NET member MatchesXmlType.
      *
-     * @param seq the argument of type {@code IList_1}
+     * @param seq the argument of type {@code IList_1<XPathItem>}
      * @param code the argument of type {@code XmlTypeCode}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.MatchesXmlType" target="_top">.NET documentation</a>
      */
-    public boolean MatchesXmlType(IList_1 seq, XmlTypeCode code) throws Throwable {
+    public boolean MatchesXmlType(IList_1<XPathItem> seq, XmlTypeCode code) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectMatchesXmlType = null;
@@ -526,7 +526,7 @@ public class XmlQueryRuntime extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.EndSequenceConstruction" target="_top">.NET documentation</a>
      */
-    public IList_1 EndSequenceConstruction(JCORefOut<XmlQueryOutput> output) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+    public IList_1<XPathItem> EndSequenceConstruction(JCORefOut<XmlQueryOutput> output) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEndSequenceConstruction = null;
@@ -544,7 +544,7 @@ public class XmlQueryRuntime extends NetObject  {
     /**
      * Invokes the .NET member DocOrderDistinct.
      *
-     * @param seq the argument of type {@code IList_1}
+     * @param seq the argument of type {@code IList_1<XPathNavigator>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -557,7 +557,7 @@ public class XmlQueryRuntime extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryRuntime.DocOrderDistinct" target="_top">.NET documentation</a>
      */
-    public IList_1 DocOrderDistinct(IList_1 seq) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentNullException {
+    public IList_1<XPathNavigator> DocOrderDistinct(IList_1<XPathNavigator> seq) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDocOrderDistinct = null;

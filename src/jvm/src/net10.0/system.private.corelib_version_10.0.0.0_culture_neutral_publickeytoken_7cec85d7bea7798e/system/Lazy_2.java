@@ -157,7 +157,7 @@ public class Lazy_2<T extends IJCOBridgeReflected, TMetadata extends IJCOBridgeR
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param valueFactory the argument of type {@code Func_1}
+     * @param valueFactory the argument of type {@code Func_1<T>}
      * @param metadata the argument of type {@code TMetadata}
      * @param isThreadSafe the argument of type {@code boolean}
      * @throws Throwable if the .NET constructor fails
@@ -167,7 +167,7 @@ public class Lazy_2<T extends IJCOBridgeReflected, TMetadata extends IJCOBridgeR
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Lazy-2.-ctor" target="_top">.NET documentation</a>
      */
-    public Lazy_2(Func_1 valueFactory, TMetadata metadata, boolean isThreadSafe) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public Lazy_2(Func_1<T> valueFactory, TMetadata metadata, boolean isThreadSafe) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -182,7 +182,7 @@ public class Lazy_2<T extends IJCOBridgeReflected, TMetadata extends IJCOBridgeR
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param valueFactory the argument of type {@code Func_1}
+     * @param valueFactory the argument of type {@code Func_1<T>}
      * @param metadata the argument of type {@code TMetadata}
      * @param mode the argument of type {@code LazyThreadSafetyMode}
      * @throws Throwable if the .NET constructor fails
@@ -192,7 +192,7 @@ public class Lazy_2<T extends IJCOBridgeReflected, TMetadata extends IJCOBridgeR
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Lazy-2.-ctor" target="_top">.NET documentation</a>
      */
-    public Lazy_2(Func_1 valueFactory, TMetadata metadata, LazyThreadSafetyMode mode) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public Lazy_2(Func_1<T> valueFactory, TMetadata metadata, LazyThreadSafetyMode mode) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -207,7 +207,7 @@ public class Lazy_2<T extends IJCOBridgeReflected, TMetadata extends IJCOBridgeR
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param valueFactory the argument of type {@code Func_1}
+     * @param valueFactory the argument of type {@code Func_1<T>}
      * @param metadata the argument of type {@code TMetadata}
      * @throws Throwable if the .NET constructor fails
      * @throws system.NotSupportedException if the .NET member raises it
@@ -216,7 +216,7 @@ public class Lazy_2<T extends IJCOBridgeReflected, TMetadata extends IJCOBridgeR
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Lazy-2.-ctor" target="_top">.NET documentation</a>
      */
-    public Lazy_2(Func_1 valueFactory, TMetadata metadata) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public Lazy_2(Func_1<T> valueFactory, TMetadata metadata) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

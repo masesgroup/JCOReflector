@@ -236,7 +236,7 @@ public class SecurityToken extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityToken.SecurityKeys" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getSecurityKeys() throws Throwable {
+    public ReadOnlyCollection_1<SecurityKey> getSecurityKeys() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSecurityKeys = null;

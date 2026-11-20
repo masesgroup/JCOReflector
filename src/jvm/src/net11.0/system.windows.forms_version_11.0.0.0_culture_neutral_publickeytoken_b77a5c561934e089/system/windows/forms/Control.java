@@ -52,6 +52,7 @@ import system.Action;
 import system.threading.tasks.Task;
 import system.threading.CancellationToken;
 import system.Func_2;
+import system.threading.tasks.ValueTask;
 import system.threading.tasks.Task_1;
 import system.Func_1;
 import system.windows.forms.GetChildAtPointSkip;
@@ -896,7 +897,7 @@ public class Control extends system.componentmodel.Component  {
     /**
      * Invokes the .NET member InvokeAsync.
      *
-     * @param callback the argument of type {@code Func_2}
+     * @param callback the argument of type {@code Func_2<CancellationToken, ValueTask>}
      * @param cancellationToken the argument of type {@code CancellationToken}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -908,7 +909,7 @@ public class Control extends system.componentmodel.Component  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Control.InvokeAsync" target="_top">.NET documentation</a>
      */
-    public Task InvokeAsync(Func_2 callback, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public Task InvokeAsync(Func_2<CancellationToken, ValueTask> callback, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectInvokeAsync = null;

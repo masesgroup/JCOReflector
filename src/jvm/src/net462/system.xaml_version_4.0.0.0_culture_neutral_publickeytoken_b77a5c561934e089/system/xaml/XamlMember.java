@@ -52,6 +52,9 @@ import system.collections.generic.IReadOnlyDictionary_2Implementation;
 import system.componentmodel.DesignerSerializationVisibility;
 import system.reflection.MemberInfo;
 import system.xaml.schema.XamlValueConverter_1;
+import system.componentmodel.TypeConverter;
+import system.windows.markup.ValueSerializer;
+import system.xaml.XamlDeferringLoader;
 
 
 /**
@@ -738,7 +741,7 @@ public class XamlMember extends NetObject  {
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlMember.DependsOn" target="_top">.NET documentation</a>
      */
-    public IList_1 getDependsOn() throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.FormatException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xaml.XamlSchemaException, system.collections.generic.KeyNotFoundException {
+    public IList_1<XamlMember> getDependsOn() throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.FormatException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xaml.XamlSchemaException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDependsOn = null;
@@ -935,7 +938,7 @@ public class XamlMember extends NetObject  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlMember.TypeConverter" target="_top">.NET documentation</a>
      */
-    public XamlValueConverter_1 getTypeConverter() throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.NotImplementedException, system.FormatException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xaml.XamlSchemaException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.globalization.CultureNotFoundException {
+    public XamlValueConverter_1<TypeConverter> getTypeConverter() throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.NotImplementedException, system.FormatException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xaml.XamlSchemaException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTypeConverter = null;
@@ -973,7 +976,7 @@ public class XamlMember extends NetObject  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlMember.ValueSerializer" target="_top">.NET documentation</a>
      */
-    public XamlValueConverter_1 getValueSerializer() throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.NotImplementedException, system.FormatException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xaml.XamlSchemaException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.globalization.CultureNotFoundException {
+    public XamlValueConverter_1<ValueSerializer> getValueSerializer() throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.NotImplementedException, system.FormatException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xaml.XamlSchemaException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValueSerializer = null;
@@ -1009,7 +1012,7 @@ public class XamlMember extends NetObject  {
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlMember.DeferringLoader" target="_top">.NET documentation</a>
      */
-    public XamlValueConverter_1 getDeferringLoader() throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.NotImplementedException, system.FormatException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xaml.XamlSchemaException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException {
+    public XamlValueConverter_1<XamlDeferringLoader> getDeferringLoader() throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.NotImplementedException, system.FormatException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xaml.XamlSchemaException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDeferringLoader = null;

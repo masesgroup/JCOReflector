@@ -265,7 +265,7 @@ public class ZipArchiveEntry extends NetObject  {
      * @throws system.UnauthorizedAccessException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Compression.ZipArchiveEntry.OpenAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 OpenAsync(FileAccess access, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.OperationCanceledException, system.io.InvalidDataException, system.security.cryptography.CryptographicException, system.diagnostics.UnreachableException, system.io.IOException, system.UnauthorizedAccessException {
+    public Task_1<Stream> OpenAsync(FileAccess access, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.OperationCanceledException, system.io.InvalidDataException, system.security.cryptography.CryptographicException, system.diagnostics.UnreachableException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOpenAsync = null;
@@ -303,7 +303,7 @@ public class ZipArchiveEntry extends NetObject  {
      * @throws system.UnauthorizedAccessException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Compression.ZipArchiveEntry.OpenAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 OpenAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.OperationCanceledException, system.io.InvalidDataException, system.security.cryptography.CryptographicException, system.diagnostics.UnreachableException, system.io.IOException, system.UnauthorizedAccessException {
+    public Task_1<Stream> OpenAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.OperationCanceledException, system.io.InvalidDataException, system.security.cryptography.CryptographicException, system.diagnostics.UnreachableException, system.io.IOException, system.UnauthorizedAccessException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOpenAsync = null;

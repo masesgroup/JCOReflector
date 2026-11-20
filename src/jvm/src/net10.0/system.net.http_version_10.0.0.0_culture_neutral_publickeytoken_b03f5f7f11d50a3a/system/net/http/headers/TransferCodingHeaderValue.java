@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.net.http.headers.TransferCodingHeaderValue;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.net.http.headers.NameValueHeaderValue;
 
 
 /**
@@ -262,7 +263,7 @@ public class TransferCodingHeaderValue extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.TransferCodingHeaderValue.Parameters" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getParameters() throws Throwable {
+    public ICollection_1<NameValueHeaderValue> getParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectParameters = null;

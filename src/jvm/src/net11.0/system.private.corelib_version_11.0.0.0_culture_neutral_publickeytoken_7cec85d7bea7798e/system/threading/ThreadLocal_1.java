@@ -225,7 +225,7 @@ public class ThreadLocal_1<T extends IJCOBridgeReflected> extends NetObject impl
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param valueFactory the argument of type {@code Func_1}
+     * @param valueFactory the argument of type {@code Func_1<T>}
      * @param trackAllValues the argument of type {@code boolean}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
@@ -244,7 +244,7 @@ public class ThreadLocal_1<T extends IJCOBridgeReflected> extends NetObject impl
      * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ThreadLocal-1.-ctor" target="_top">.NET documentation</a>
      */
-    public ThreadLocal_1(Func_1 valueFactory, boolean trackAllValues) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.threading.LockRecursionException, system.NullReferenceException, system.OutOfMemoryException, system.DuplicateWaitObjectException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException {
+    public ThreadLocal_1(Func_1<T> valueFactory, boolean trackAllValues) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.threading.LockRecursionException, system.NullReferenceException, system.OutOfMemoryException, system.DuplicateWaitObjectException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -259,7 +259,7 @@ public class ThreadLocal_1<T extends IJCOBridgeReflected> extends NetObject impl
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param valueFactory the argument of type {@code Func_1}
+     * @param valueFactory the argument of type {@code Func_1<T>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -277,7 +277,7 @@ public class ThreadLocal_1<T extends IJCOBridgeReflected> extends NetObject impl
      * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ThreadLocal-1.-ctor" target="_top">.NET documentation</a>
      */
-    public ThreadLocal_1(Func_1 valueFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.threading.LockRecursionException, system.NullReferenceException, system.OutOfMemoryException, system.DuplicateWaitObjectException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException {
+    public ThreadLocal_1(Func_1<T> valueFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.threading.LockRecursionException, system.NullReferenceException, system.OutOfMemoryException, system.DuplicateWaitObjectException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -387,7 +387,7 @@ public class ThreadLocal_1<T extends IJCOBridgeReflected> extends NetObject impl
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.ThreadLocal-1.Values" target="_top">.NET documentation</a>
      */
-    public IList_1 getValues() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.threading.LockRecursionException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public IList_1<T> getValues() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.threading.LockRecursionException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.RankException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValues = null;

@@ -42,6 +42,7 @@ import system.linq.expressions.MemberBinding;
 import system.linq.expressions.MemberListBinding;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.linq.expressions.ElementInit;
 import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
@@ -164,7 +165,7 @@ public class MemberListBinding extends system.linq.expressions.MemberBinding  {
     /**
      * Invokes the .NET member Update.
      *
-     * @param initializers the argument of type {@code IEnumerable_1}
+     * @param initializers the argument of type {@code IEnumerable_1<ElementInit>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -177,7 +178,7 @@ public class MemberListBinding extends system.linq.expressions.MemberBinding  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.MemberListBinding.Update" target="_top">.NET documentation</a>
      */
-    public MemberListBinding Update(IEnumerable_1 initializers) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public MemberListBinding Update(IEnumerable_1<ElementInit> initializers) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUpdate = null;
@@ -203,7 +204,7 @@ public class MemberListBinding extends system.linq.expressions.MemberBinding  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.MemberListBinding.Initializers" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getInitializers() throws Throwable {
+    public ReadOnlyCollection_1<ElementInit> getInitializers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectInitializers = null;

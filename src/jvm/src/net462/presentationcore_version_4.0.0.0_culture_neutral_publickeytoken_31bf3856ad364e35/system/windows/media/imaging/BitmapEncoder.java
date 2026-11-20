@@ -44,7 +44,9 @@ import system.Guid;
 import system.io.Stream;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.windows.media.imaging.BitmapFrame;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.windows.media.ColorContext;
 import system.windows.media.imaging.BitmapCodecInfo;
 import system.windows.media.imaging.BitmapMetadata;
 import system.windows.media.imaging.BitmapPalette;
@@ -262,7 +264,7 @@ public class BitmapEncoder extends system.windows.threading.DispatcherObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.BitmapEncoder.Frames" target="_top">.NET documentation</a>
      */
-    public IList_1 getFrames() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public IList_1<BitmapFrame> getFrames() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFrames = null;
@@ -291,7 +293,7 @@ public class BitmapEncoder extends system.windows.threading.DispatcherObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.BitmapEncoder.Frames" target="_top">.NET documentation</a>
      */
-    public void setFrames(IList_1 Frames) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
+    public void setFrames(IList_1<BitmapFrame> Frames) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -315,7 +317,7 @@ public class BitmapEncoder extends system.windows.threading.DispatcherObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.BitmapEncoder.ColorContexts" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getColorContexts() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
+    public ReadOnlyCollection_1<ColorContext> getColorContexts() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectColorContexts = null;
@@ -344,7 +346,7 @@ public class BitmapEncoder extends system.windows.threading.DispatcherObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.BitmapEncoder.ColorContexts" target="_top">.NET documentation</a>
      */
-    public void setColorContexts(ReadOnlyCollection_1 ColorContexts) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
+    public void setColorContexts(ReadOnlyCollection_1<ColorContext> ColorContexts) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

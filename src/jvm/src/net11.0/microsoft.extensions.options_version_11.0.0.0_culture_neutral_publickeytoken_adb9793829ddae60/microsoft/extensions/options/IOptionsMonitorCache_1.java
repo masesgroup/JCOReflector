@@ -120,7 +120,7 @@ public interface IOptionsMonitorCache_1<TOptions extends IJCOBridgeReflected> ex
 
     public boolean TryRemove(java.lang.String name) throws Throwable;
 
-    public TOptions GetOrAdd(java.lang.String name, Func_1 createOptions) throws Throwable;
+    public TOptions GetOrAdd(java.lang.String name, Func_1<TOptions> createOptions) throws Throwable;
 
     public void Clear() throws Throwable;
 

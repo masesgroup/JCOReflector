@@ -45,6 +45,8 @@ import system.activities.dynamicupdate.DynamicUpdateMapQuery;
 import system.activities.Activity;
 import system.collections.generic.IDictionary_2;
 import system.collections.generic.IDictionary_2Implementation;
+import system.Object;
+import system.activities.dynamicupdate.DynamicUpdateMapItem;
 import system.activities.LocationReferenceEnvironment;
 
 
@@ -198,7 +200,7 @@ public class DynamicUpdateMap extends NetObject  {
     /**
      * Invokes the .NET member Merge.
      *
-     * @param maps the argument of type {@code IEnumerable_1}
+     * @param maps the argument of type {@code IEnumerable_1<DynamicUpdateMap>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -211,7 +213,7 @@ public class DynamicUpdateMap extends NetObject  {
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMap.Merge" target="_top">.NET documentation</a>
      */
-    public static DynamicUpdateMap Merge(IEnumerable_1 maps) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException {
+    public static DynamicUpdateMap Merge(IEnumerable_1<DynamicUpdateMap> maps) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMerge = null;
@@ -273,7 +275,7 @@ public class DynamicUpdateMap extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMap.CalculateImplementationMapItems" target="_top">.NET documentation</a>
      */
-    public static IDictionary_2 CalculateImplementationMapItems(Activity activityDefinitionToBeUpdated) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public static IDictionary_2<Object, DynamicUpdateMapItem> CalculateImplementationMapItems(Activity activityDefinitionToBeUpdated) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCalculateImplementationMapItems = null;
@@ -305,7 +307,7 @@ public class DynamicUpdateMap extends NetObject  {
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMap.CalculateImplementationMapItems" target="_top">.NET documentation</a>
      */
-    public static IDictionary_2 CalculateImplementationMapItems(Activity activityDefinitionToBeUpdated, LocationReferenceEnvironment environment) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.NotImplementedException {
+    public static IDictionary_2<Object, DynamicUpdateMapItem> CalculateImplementationMapItems(Activity activityDefinitionToBeUpdated, LocationReferenceEnvironment environment) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCalculateImplementationMapItems = null;
@@ -336,7 +338,7 @@ public class DynamicUpdateMap extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMap.CalculateMapItems" target="_top">.NET documentation</a>
      */
-    public static IDictionary_2 CalculateMapItems(Activity workflowDefinitionToBeUpdated) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public static IDictionary_2<Object, DynamicUpdateMapItem> CalculateMapItems(Activity workflowDefinitionToBeUpdated) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCalculateMapItems = null;
@@ -368,7 +370,7 @@ public class DynamicUpdateMap extends NetObject  {
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMap.CalculateMapItems" target="_top">.NET documentation</a>
      */
-    public static IDictionary_2 CalculateMapItems(Activity workflowDefinitionToBeUpdated, LocationReferenceEnvironment environment) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.NotImplementedException {
+    public static IDictionary_2<Object, DynamicUpdateMapItem> CalculateMapItems(Activity workflowDefinitionToBeUpdated, LocationReferenceEnvironment environment) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCalculateMapItems = null;

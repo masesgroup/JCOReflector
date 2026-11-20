@@ -215,7 +215,7 @@ public class ValueSerializer extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.ValueSerializer.TypeReferences" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 TypeReferences(NetObject value, IValueSerializerContext context) throws Throwable {
+    public IEnumerable_1<NetType> TypeReferences(NetObject value, IValueSerializerContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTypeReferences = null;

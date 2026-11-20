@@ -184,7 +184,7 @@ public class InvokeAction_1<T extends IJCOBridgeReflected> extends system.activi
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.InvokeAction-1.Action" target="_top">.NET documentation</a>
      */
-    public ActivityAction_1 getAction() throws Throwable {
+    public ActivityAction_1<T> getAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAction = null;
@@ -206,7 +206,7 @@ public class InvokeAction_1<T extends IJCOBridgeReflected> extends system.activi
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.InvokeAction-1.Action" target="_top">.NET documentation</a>
      */
-    public void setAction(ActivityAction_1 Action) throws Throwable {
+    public void setAction(ActivityAction_1<T> Action) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -223,7 +223,7 @@ public class InvokeAction_1<T extends IJCOBridgeReflected> extends system.activi
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.InvokeAction-1.Argument" target="_top">.NET documentation</a>
      */
-    public InArgument_1 getArgument() throws Throwable {
+    public InArgument_1<T> getArgument() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArgument = null;
@@ -245,7 +245,7 @@ public class InvokeAction_1<T extends IJCOBridgeReflected> extends system.activi
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.InvokeAction-1.Argument" target="_top">.NET documentation</a>
      */
-    public void setArgument(InArgument_1 Argument) throws Throwable {
+    public void setArgument(InArgument_1<T> Argument) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

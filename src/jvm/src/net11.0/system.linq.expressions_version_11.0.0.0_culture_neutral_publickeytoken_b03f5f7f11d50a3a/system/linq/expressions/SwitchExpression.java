@@ -42,6 +42,7 @@ import system.linq.expressions.Expression;
 import system.linq.expressions.SwitchExpression;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.linq.expressions.SwitchCase;
 import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.linq.expressions.ExpressionType;
 import system.reflection.MethodInfo;
@@ -167,7 +168,7 @@ public class SwitchExpression extends system.linq.expressions.Expression  {
      * Invokes the .NET member Update.
      *
      * @param switchValue the argument of type {@code Expression}
-     * @param cases the argument of type {@code IEnumerable_1}
+     * @param cases the argument of type {@code IEnumerable_1<SwitchCase>}
      * @param defaultBody the argument of type {@code Expression}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -186,7 +187,7 @@ public class SwitchExpression extends system.linq.expressions.Expression  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.SwitchExpression.Update" target="_top">.NET documentation</a>
      */
-    public SwitchExpression Update(Expression switchValue, IEnumerable_1 cases, Expression defaultBody) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.NotSupportedException {
+    public SwitchExpression Update(Expression switchValue, IEnumerable_1<SwitchCase> cases, Expression defaultBody) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUpdate = null;
@@ -212,7 +213,7 @@ public class SwitchExpression extends system.linq.expressions.Expression  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.SwitchExpression.Cases" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getCases() throws Throwable {
+    public ReadOnlyCollection_1<SwitchCase> getCases() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCases = null;

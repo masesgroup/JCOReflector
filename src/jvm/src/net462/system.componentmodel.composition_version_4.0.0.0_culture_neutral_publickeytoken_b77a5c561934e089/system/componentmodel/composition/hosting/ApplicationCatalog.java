@@ -44,6 +44,9 @@ import system.componentmodel.composition.primitives.ICompositionElementImplement
 import system.reflection.ReflectionContext;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.Tuple_2;
+import system.componentmodel.composition.primitives.ComposablePartDefinition;
+import system.componentmodel.composition.primitives.ExportDefinition;
 import system.componentmodel.composition.primitives.ImportDefinition;
 
 
@@ -251,7 +254,7 @@ public class ApplicationCatalog extends system.componentmodel.composition.primit
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.ApplicationCatalog.GetExports" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetExports(ImportDefinition definition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.NotSupportedException, system.NotImplementedException, system.threading.ThreadAbortException, system.collections.generic.KeyNotFoundException {
+    public IEnumerable_1<Tuple_2<ComposablePartDefinition, ExportDefinition>> GetExports(ImportDefinition definition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.NotSupportedException, system.NotImplementedException, system.threading.ThreadAbortException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetExports = null;

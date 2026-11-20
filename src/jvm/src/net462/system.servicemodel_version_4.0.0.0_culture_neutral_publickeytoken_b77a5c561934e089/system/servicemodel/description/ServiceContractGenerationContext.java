@@ -42,6 +42,7 @@ import system.servicemodel.description.ServiceContractGenerator;
 import system.servicemodel.description.ContractDescription;
 import system.codedom.CodeTypeDeclaration;
 import system.collections.objectmodel.Collection_1;
+import system.servicemodel.description.OperationContractGenerationContext;
 
 
 /**
@@ -279,7 +280,7 @@ public class ServiceContractGenerationContext extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceContractGenerationContext.Operations" target="_top">.NET documentation</a>
      */
-    public Collection_1 getOperations() throws Throwable {
+    public Collection_1<OperationContractGenerationContext> getOperations() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOperations = null;

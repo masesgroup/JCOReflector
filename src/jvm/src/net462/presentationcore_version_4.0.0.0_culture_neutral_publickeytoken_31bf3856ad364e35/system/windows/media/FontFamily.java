@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.Uri;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.windows.media.Typeface;
 import system.windows.media.FamilyTypefaceCollection;
 import system.windows.media.FontFamilyMapCollection;
 import system.windows.media.LanguageSpecificStringDictionary;
@@ -255,7 +256,7 @@ public class FontFamily extends NetObject  {
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.FontFamily.GetTypefaces" target="_top">.NET documentation</a>
      */
-    public ICollection_1 GetTypefaces() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.FileFormatException, system.net.WebException, system.NotImplementedException {
+    public ICollection_1<Typeface> GetTypefaces() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.FileFormatException, system.net.WebException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetTypefaces = null;

@@ -43,6 +43,7 @@ import system.security.rightsmanagement.SecureEnvironment;
 import system.security.rightsmanagement.UseLicense;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.security.rightsmanagement.ContentGrant;
 import system.collections.generic.IDictionary_2;
 import system.collections.generic.IDictionary_2Implementation;
 import system.Guid;
@@ -276,7 +277,7 @@ public class UnsignedPublishLicense extends NetObject  {
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.RightsManagement.UnsignedPublishLicense.Grants" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getGrants() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException {
+    public ICollection_1<ContentGrant> getGrants() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGrants = null;

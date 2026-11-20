@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.windows.forms.CommonDialog;
 import system.Nullable_1;
+import system.Guid;
 import system.EventHandler;
 
 
@@ -534,7 +535,7 @@ public class FolderBrowserDialog extends system.windows.forms.CommonDialog  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FolderBrowserDialog.ClientGuid" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getClientGuid() throws Throwable {
+    public Nullable_1<Guid> getClientGuid() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectClientGuid = null;
@@ -556,7 +557,7 @@ public class FolderBrowserDialog extends system.windows.forms.CommonDialog  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.FolderBrowserDialog.ClientGuid" target="_top">.NET documentation</a>
      */
-    public void setClientGuid(Nullable_1 ClientGuid) throws Throwable {
+    public void setClientGuid(Nullable_1<Guid> ClientGuid) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

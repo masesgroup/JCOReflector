@@ -330,7 +330,7 @@ public class JsonDocument extends NetObject implements AutoCloseable {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonDocument.ParseAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 ParseAsync(Stream utf8Json, JsonDocumentOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public static Task_1<JsonDocument> ParseAsync(Stream utf8Json, JsonDocumentOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParseAsync = null;

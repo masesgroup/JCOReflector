@@ -250,15 +250,15 @@ public class AttachedProperty_1<T extends IJCOBridgeReflected> extends system.ac
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.AttachedProperty-1.Setter" target="_top">.NET documentation</a>
      */
-    public Action_2 getSetter() throws Throwable {
+    public Action_2<ModelItem, T> getSetter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSetter = null;
         try {
             retObjectSetter = classInstance.Get("Setter");
-            return (Action_2)retObjectSetter;
+            return (Action_2<ModelItem, T>)retObjectSetter;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_2", retObjectSetter != null ? retObjectSetter.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_2<ModelItem, T>", retObjectSetter != null ? retObjectSetter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,7 +271,7 @@ public class AttachedProperty_1<T extends IJCOBridgeReflected> extends system.ac
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.AttachedProperty-1.Setter" target="_top">.NET documentation</a>
      */
-    public void setSetter(Action_2 Setter) throws Throwable {
+    public void setSetter(Action_2<ModelItem, T> Setter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -288,15 +288,15 @@ public class AttachedProperty_1<T extends IJCOBridgeReflected> extends system.ac
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.AttachedProperty-1.Getter" target="_top">.NET documentation</a>
      */
-    public Func_2 getGetter() throws Throwable {
+    public Func_2<ModelItem, T> getGetter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetter = null;
         try {
             retObjectGetter = classInstance.Get("Getter");
-            return (Func_2)retObjectGetter;
+            return (Func_2<ModelItem, T>)retObjectGetter;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2", retObjectGetter != null ? retObjectGetter.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2<ModelItem, T>", retObjectGetter != null ? retObjectGetter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,7 +309,7 @@ public class AttachedProperty_1<T extends IJCOBridgeReflected> extends system.ac
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.AttachedProperty-1.Getter" target="_top">.NET documentation</a>
      */
-    public void setGetter(Func_2 Getter) throws Throwable {
+    public void setGetter(Func_2<ModelItem, T> Getter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

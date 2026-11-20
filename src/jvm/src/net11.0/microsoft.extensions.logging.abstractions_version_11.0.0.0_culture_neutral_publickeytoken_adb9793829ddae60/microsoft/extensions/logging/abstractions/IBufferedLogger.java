@@ -39,6 +39,7 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import microsoft.extensions.logging.abstractions.BufferedLogRecord;
 
 
 /**
@@ -117,7 +118,7 @@ public interface IBufferedLogger extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void LogRecords(IEnumerable_1 records) throws Throwable;
+    public void LogRecords(IEnumerable_1<BufferedLogRecord> records) throws Throwable;
 
 
     

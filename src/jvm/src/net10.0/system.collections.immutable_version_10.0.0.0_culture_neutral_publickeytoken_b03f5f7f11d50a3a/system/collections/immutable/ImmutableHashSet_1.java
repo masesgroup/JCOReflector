@@ -193,7 +193,7 @@ public class ImmutableHashSet_1<T extends IJCOBridgeReflected> extends NetObject
     /**
      * Invokes the .NET member IsProperSubsetOf.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -208,7 +208,7 @@ public class ImmutableHashSet_1<T extends IJCOBridgeReflected> extends NetObject
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableHashSet-1.IsProperSubsetOf" target="_top">.NET documentation</a>
      */
-    public boolean IsProperSubsetOf(IEnumerable_1 other) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
+    public boolean IsProperSubsetOf(IEnumerable_1<T> other) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIsProperSubsetOf = null;
@@ -225,7 +225,7 @@ public class ImmutableHashSet_1<T extends IJCOBridgeReflected> extends NetObject
     /**
      * Invokes the .NET member IsProperSupersetOf.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -239,7 +239,7 @@ public class ImmutableHashSet_1<T extends IJCOBridgeReflected> extends NetObject
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableHashSet-1.IsProperSupersetOf" target="_top">.NET documentation</a>
      */
-    public boolean IsProperSupersetOf(IEnumerable_1 other) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public boolean IsProperSupersetOf(IEnumerable_1<T> other) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIsProperSupersetOf = null;
@@ -256,7 +256,7 @@ public class ImmutableHashSet_1<T extends IJCOBridgeReflected> extends NetObject
     /**
      * Invokes the .NET member IsSubsetOf.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -271,7 +271,7 @@ public class ImmutableHashSet_1<T extends IJCOBridgeReflected> extends NetObject
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableHashSet-1.IsSubsetOf" target="_top">.NET documentation</a>
      */
-    public boolean IsSubsetOf(IEnumerable_1 other) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
+    public boolean IsSubsetOf(IEnumerable_1<T> other) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIsSubsetOf = null;
@@ -288,7 +288,7 @@ public class ImmutableHashSet_1<T extends IJCOBridgeReflected> extends NetObject
     /**
      * Invokes the .NET member IsSupersetOf.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -302,7 +302,7 @@ public class ImmutableHashSet_1<T extends IJCOBridgeReflected> extends NetObject
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableHashSet-1.IsSupersetOf" target="_top">.NET documentation</a>
      */
-    public boolean IsSupersetOf(IEnumerable_1 other) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public boolean IsSupersetOf(IEnumerable_1<T> other) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIsSupersetOf = null;
@@ -319,7 +319,7 @@ public class ImmutableHashSet_1<T extends IJCOBridgeReflected> extends NetObject
     /**
      * Invokes the .NET member Overlaps.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -333,7 +333,7 @@ public class ImmutableHashSet_1<T extends IJCOBridgeReflected> extends NetObject
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableHashSet-1.Overlaps" target="_top">.NET documentation</a>
      */
-    public boolean Overlaps(IEnumerable_1 other) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public boolean Overlaps(IEnumerable_1<T> other) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOverlaps = null;
@@ -350,7 +350,7 @@ public class ImmutableHashSet_1<T extends IJCOBridgeReflected> extends NetObject
     /**
      * Invokes the .NET member SetEquals.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -365,7 +365,7 @@ public class ImmutableHashSet_1<T extends IJCOBridgeReflected> extends NetObject
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableHashSet-1.SetEquals" target="_top">.NET documentation</a>
      */
-    public boolean SetEquals(IEnumerable_1 other) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
+    public boolean SetEquals(IEnumerable_1<T> other) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSetEquals = null;
@@ -425,7 +425,7 @@ public class ImmutableHashSet_1<T extends IJCOBridgeReflected> extends NetObject
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableHashSet-1.Add" target="_top">.NET documentation</a>
      */
-    public ImmutableHashSet_1 Add(T item) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.FormatException {
+    public ImmutableHashSet_1<T> Add(T item) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAdd = null;
@@ -452,7 +452,7 @@ public class ImmutableHashSet_1<T extends IJCOBridgeReflected> extends NetObject
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableHashSet-1.Clear" target="_top">.NET documentation</a>
      */
-    public ImmutableHashSet_1 Clear() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException {
+    public ImmutableHashSet_1<T> Clear() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectClear = null;
@@ -470,7 +470,7 @@ public class ImmutableHashSet_1<T extends IJCOBridgeReflected> extends NetObject
     /**
      * Invokes the .NET member Except.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -484,7 +484,7 @@ public class ImmutableHashSet_1<T extends IJCOBridgeReflected> extends NetObject
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableHashSet-1.Except" target="_top">.NET documentation</a>
      */
-    public ImmutableHashSet_1 Except(IEnumerable_1 other) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public ImmutableHashSet_1<T> Except(IEnumerable_1<T> other) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExcept = null;
@@ -502,7 +502,7 @@ public class ImmutableHashSet_1<T extends IJCOBridgeReflected> extends NetObject
     /**
      * Invokes the .NET member Intersect.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -516,7 +516,7 @@ public class ImmutableHashSet_1<T extends IJCOBridgeReflected> extends NetObject
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableHashSet-1.Intersect" target="_top">.NET documentation</a>
      */
-    public ImmutableHashSet_1 Intersect(IEnumerable_1 other) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public ImmutableHashSet_1<T> Intersect(IEnumerable_1<T> other) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIntersect = null;
@@ -547,7 +547,7 @@ public class ImmutableHashSet_1<T extends IJCOBridgeReflected> extends NetObject
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableHashSet-1.Remove" target="_top">.NET documentation</a>
      */
-    public ImmutableHashSet_1 Remove(T item) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.FormatException {
+    public ImmutableHashSet_1<T> Remove(T item) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRemove = null;
@@ -565,7 +565,7 @@ public class ImmutableHashSet_1<T extends IJCOBridgeReflected> extends NetObject
     /**
      * Invokes the .NET member SymmetricExcept.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -579,7 +579,7 @@ public class ImmutableHashSet_1<T extends IJCOBridgeReflected> extends NetObject
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableHashSet-1.SymmetricExcept" target="_top">.NET documentation</a>
      */
-    public ImmutableHashSet_1 SymmetricExcept(IEnumerable_1 other) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public ImmutableHashSet_1<T> SymmetricExcept(IEnumerable_1<T> other) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSymmetricExcept = null;
@@ -597,7 +597,7 @@ public class ImmutableHashSet_1<T extends IJCOBridgeReflected> extends NetObject
     /**
      * Invokes the .NET member Union.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -611,7 +611,7 @@ public class ImmutableHashSet_1<T extends IJCOBridgeReflected> extends NetObject
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableHashSet-1.Union" target="_top">.NET documentation</a>
      */
-    public ImmutableHashSet_1 Union(IEnumerable_1 other) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public ImmutableHashSet_1<T> Union(IEnumerable_1<T> other) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUnion = null;
@@ -629,7 +629,7 @@ public class ImmutableHashSet_1<T extends IJCOBridgeReflected> extends NetObject
     /**
      * Invokes the .NET member WithComparer.
      *
-     * @param equalityComparer the argument of type {@code IEqualityComparer_1}
+     * @param equalityComparer the argument of type {@code IEqualityComparer_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.NotSupportedException if the .NET member raises it
@@ -641,7 +641,7 @@ public class ImmutableHashSet_1<T extends IJCOBridgeReflected> extends NetObject
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableHashSet-1.WithComparer" target="_top">.NET documentation</a>
      */
-    public ImmutableHashSet_1 WithComparer(IEqualityComparer_1 equalityComparer) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
+    public ImmutableHashSet_1<T> WithComparer(IEqualityComparer_1<T> equalityComparer) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectWithComparer = null;
@@ -749,7 +749,7 @@ public class ImmutableHashSet_1<T extends IJCOBridgeReflected> extends NetObject
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableHashSet-1.KeyComparer" target="_top">.NET documentation</a>
      */
-    public IEqualityComparer_1 getKeyComparer() throws Throwable {
+    public IEqualityComparer_1<T> getKeyComparer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectKeyComparer = null;

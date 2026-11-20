@@ -42,6 +42,7 @@ import system.activities.AsyncCodeActivity;
 import system.activities.InArgument;
 import system.activities.OutArgument;
 import system.collections.objectmodel.Collection_1;
+import system.activities.Argument;
 
 
 /**
@@ -303,7 +304,7 @@ public class InvokeMethod extends system.activities.AsyncCodeActivity  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.InvokeMethod.Parameters" target="_top">.NET documentation</a>
      */
-    public Collection_1 getParameters() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+    public Collection_1<Argument> getParameters() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectParameters = null;
@@ -329,7 +330,7 @@ public class InvokeMethod extends system.activities.AsyncCodeActivity  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.InvokeMethod.GenericTypeArguments" target="_top">.NET documentation</a>
      */
-    public Collection_1 getGenericTypeArguments() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+    public Collection_1<NetType> getGenericTypeArguments() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGenericTypeArguments = null;

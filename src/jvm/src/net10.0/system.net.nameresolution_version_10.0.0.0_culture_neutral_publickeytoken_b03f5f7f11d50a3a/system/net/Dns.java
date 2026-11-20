@@ -1016,7 +1016,7 @@ public class Dns extends NetObject  {
      * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Dns.GetHostEntryAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 GetHostEntryAsync(IPAddress address) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException, system.net.sockets.SocketException, system.threading.tasks.TaskSchedulerException {
+    public static Task_1<IPHostEntry> GetHostEntryAsync(IPAddress address) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException, system.net.sockets.SocketException, system.threading.tasks.TaskSchedulerException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetHostEntryAsync = null;
@@ -1058,7 +1058,7 @@ public class Dns extends NetObject  {
      * @throws system.OperationCanceledException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Dns.GetHostEntryAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 GetHostEntryAsync(java.lang.String hostNameOrAddress, AddressFamily family, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.threading.tasks.TaskSchedulerException, system.threading.ThreadStateException, system.OperationCanceledException {
+    public static Task_1<IPHostEntry> GetHostEntryAsync(java.lang.String hostNameOrAddress, AddressFamily family, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.threading.tasks.TaskSchedulerException, system.threading.ThreadStateException, system.OperationCanceledException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetHostEntryAsync = null;
@@ -1094,7 +1094,7 @@ public class Dns extends NetObject  {
      * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Dns.GetHostEntryAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 GetHostEntryAsync(java.lang.String hostNameOrAddress, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.threading.tasks.TaskSchedulerException {
+    public static Task_1<IPHostEntry> GetHostEntryAsync(java.lang.String hostNameOrAddress, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.threading.tasks.TaskSchedulerException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetHostEntryAsync = null;
@@ -1129,7 +1129,7 @@ public class Dns extends NetObject  {
      * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Dns.GetHostEntryAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 GetHostEntryAsync(java.lang.String hostNameOrAddress) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.threading.tasks.TaskSchedulerException {
+    public static Task_1<IPHostEntry> GetHostEntryAsync(java.lang.String hostNameOrAddress) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.threading.tasks.TaskSchedulerException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetHostEntryAsync = null;

@@ -42,6 +42,8 @@ import system.EventArgs;
 import system.activities.presentation.services.ModelChangeInfo;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.activities.presentation.model.ModelItem;
+import system.activities.presentation.model.ModelProperty;
 
 
 /**
@@ -191,7 +193,7 @@ public class ModelChangedEventArgs extends system.EventArgs  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Services.ModelChangedEventArgs.ItemsAdded" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getItemsAdded() throws Throwable {
+    public IEnumerable_1<ModelItem> getItemsAdded() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectItemsAdded = null;
@@ -213,7 +215,7 @@ public class ModelChangedEventArgs extends system.EventArgs  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Services.ModelChangedEventArgs.ItemsRemoved" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getItemsRemoved() throws Throwable {
+    public IEnumerable_1<ModelItem> getItemsRemoved() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectItemsRemoved = null;
@@ -235,7 +237,7 @@ public class ModelChangedEventArgs extends system.EventArgs  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Services.ModelChangedEventArgs.PropertiesChanged" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getPropertiesChanged() throws Throwable {
+    public IEnumerable_1<ModelProperty> getPropertiesChanged() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPropertiesChanged = null;

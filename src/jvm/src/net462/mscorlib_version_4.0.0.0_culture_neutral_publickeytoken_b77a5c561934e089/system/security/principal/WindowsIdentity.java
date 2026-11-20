@@ -48,6 +48,7 @@ import microsoft.win32.safehandles.SafeAccessTokenHandle;
 import system.Action;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.security.claims.Claim;
 import system.security.principal.IdentityReferenceCollection;
 import system.security.principal.SecurityIdentifier;
 import system.security.principal.TokenImpersonationLevel;
@@ -645,7 +646,7 @@ public class WindowsIdentity extends system.security.claims.ClaimsIdentity imple
      * @throws system.AccessViolationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Principal.WindowsIdentity.DeviceClaims" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getDeviceClaims() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.security.SecurityException, system.AccessViolationException {
+    public IEnumerable_1<Claim> getDeviceClaims() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.security.SecurityException, system.AccessViolationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDeviceClaims = null;
@@ -677,7 +678,7 @@ public class WindowsIdentity extends system.security.claims.ClaimsIdentity imple
      * @throws system.AccessViolationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Principal.WindowsIdentity.UserClaims" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getUserClaims() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.security.SecurityException, system.AccessViolationException {
+    public IEnumerable_1<Claim> getUserClaims() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.security.SecurityException, system.AccessViolationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUserClaims = null;

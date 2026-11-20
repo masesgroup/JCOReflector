@@ -142,9 +142,9 @@ public interface IXpsFixedDocumentReader extends IJCOBridgeReflected, system.win
     
     public int getDocumentNumber() throws Throwable;
 
-    public ICollection_1 getSignatureDefinitions() throws Throwable;
+    public ICollection_1<XpsSignatureDefinition> getSignatureDefinitions() throws Throwable;
 
-    public ReadOnlyCollection_1 getFixedPages() throws Throwable;
+    public ReadOnlyCollection_1<IXpsFixedPageReader> getFixedPages() throws Throwable;
 
     public PrintTicket getPrintTicket() throws Throwable;
 

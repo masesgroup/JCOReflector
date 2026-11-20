@@ -215,7 +215,7 @@ public class GlyphRun extends NetObject  {
      * @param glyphIndices the argument of type {@code IList_1}
      * @param baselineOrigin the argument of type {@code Point}
      * @param advanceWidths the argument of type {@code IList_1}
-     * @param glyphOffsets the argument of type {@code IList_1}
+     * @param glyphOffsets the argument of type {@code IList_1<Point>}
      * @param characters the argument of type {@code IList_1}
      * @param deviceFontName the argument of type {@code java.lang.String}
      * @param clusterMap the argument of type {@code IList_1}
@@ -241,7 +241,7 @@ public class GlyphRun extends NetObject  {
      * @throws system.io.IOException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.GlyphRun.-ctor" target="_top">.NET documentation</a>
      */
-    public GlyphRun(GlyphTypeface glyphTypeface, int bidiLevel, boolean isSideways, double renderingEmSize, Single pixelsPerDip, IList_1 glyphIndices, Point baselineOrigin, IList_1 advanceWidths, IList_1 glyphOffsets, IList_1 characters, java.lang.String deviceFontName, IList_1 clusterMap, IList_1 caretStops, XmlLanguage language) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+    public GlyphRun(GlyphTypeface glyphTypeface, int bidiLevel, boolean isSideways, double renderingEmSize, Single pixelsPerDip, IList_1 glyphIndices, Point baselineOrigin, IList_1 advanceWidths, IList_1<Point> glyphOffsets, IList_1 characters, java.lang.String deviceFontName, IList_1 clusterMap, IList_1 caretStops, XmlLanguage language) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -261,7 +261,7 @@ public class GlyphRun extends NetObject  {
      * @param glyphIndices the argument of type {@code IList_1}
      * @param baselineOrigin the argument of type {@code Point}
      * @param advanceWidths the argument of type {@code IList_1}
-     * @param glyphOffsets the argument of type {@code IList_1}
+     * @param glyphOffsets the argument of type {@code IList_1<Point>}
      * @param characters the argument of type {@code IList_1}
      * @param deviceFontName the argument of type {@code java.lang.String}
      * @param clusterMap the argument of type {@code IList_1}
@@ -287,7 +287,7 @@ public class GlyphRun extends NetObject  {
      * @throws system.io.IOException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.GlyphRun.-ctor" target="_top">.NET documentation</a>
      */
-    public GlyphRun(GlyphTypeface glyphTypeface, int bidiLevel, boolean isSideways, double renderingEmSize, IList_1 glyphIndices, Point baselineOrigin, IList_1 advanceWidths, IList_1 glyphOffsets, IList_1 characters, java.lang.String deviceFontName, IList_1 clusterMap, IList_1 caretStops, XmlLanguage language) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+    public GlyphRun(GlyphTypeface glyphTypeface, int bidiLevel, boolean isSideways, double renderingEmSize, IList_1 glyphIndices, Point baselineOrigin, IList_1 advanceWidths, IList_1<Point> glyphOffsets, IList_1 characters, java.lang.String deviceFontName, IList_1 clusterMap, IList_1 caretStops, XmlLanguage language) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -1173,7 +1173,7 @@ public class GlyphRun extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.GlyphRun.GlyphOffsets" target="_top">.NET documentation</a>
      */
-    public IList_1 getGlyphOffsets() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public IList_1<Point> getGlyphOffsets() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGlyphOffsets = null;
@@ -1203,7 +1203,7 @@ public class GlyphRun extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.GlyphRun.GlyphOffsets" target="_top">.NET documentation</a>
      */
-    public void setGlyphOffsets(IList_1 GlyphOffsets) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public void setGlyphOffsets(IList_1<Point> GlyphOffsets) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

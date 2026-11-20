@@ -42,6 +42,7 @@ import system.windows.WeakEventManager;
 import system.collections.specialized.INotifyCollectionChanged;
 import system.collections.specialized.INotifyCollectionChangedImplementation;
 import system.EventHandler_1;
+import system.collections.specialized.NotifyCollectionChangedEventArgs;
 import system.windows.IWeakEventListener;
 import system.windows.IWeakEventListenerImplementation;
 
@@ -166,7 +167,7 @@ public class CollectionChangedEventManager extends system.windows.WeakEventManag
      * Invokes the .NET member AddHandler.
      *
      * @param source the argument of type {@code INotifyCollectionChanged}
-     * @param handler the argument of type {@code EventHandler_1}
+     * @param handler the argument of type {@code EventHandler_1<NotifyCollectionChangedEventArgs>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -183,7 +184,7 @@ public class CollectionChangedEventManager extends system.windows.WeakEventManag
      * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Specialized.CollectionChangedEventManager.AddHandler" target="_top">.NET documentation</a>
      */
-    public static void AddHandler(INotifyCollectionChanged source, EventHandler_1 handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.OverflowException {
+    public static void AddHandler(INotifyCollectionChanged source, EventHandler_1<NotifyCollectionChangedEventArgs> handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -228,7 +229,7 @@ public class CollectionChangedEventManager extends system.windows.WeakEventManag
      * Invokes the .NET member RemoveHandler.
      *
      * @param source the argument of type {@code INotifyCollectionChanged}
-     * @param handler the argument of type {@code EventHandler_1}
+     * @param handler the argument of type {@code EventHandler_1<NotifyCollectionChangedEventArgs>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -245,7 +246,7 @@ public class CollectionChangedEventManager extends system.windows.WeakEventManag
      * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Specialized.CollectionChangedEventManager.RemoveHandler" target="_top">.NET documentation</a>
      */
-    public static void RemoveHandler(INotifyCollectionChanged source, EventHandler_1 handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.OverflowException {
+    public static void RemoveHandler(INotifyCollectionChanged source, EventHandler_1<NotifyCollectionChangedEventArgs> handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

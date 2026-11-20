@@ -40,6 +40,7 @@ import org.mases.jcobridge.netreflection.*;
 import system.servicemodel.description.ServiceDescription;
 import system.servicemodel.ServiceHostBase;
 import system.collections.objectmodel.Collection_1;
+import system.servicemodel.description.ServiceEndpoint;
 import system.servicemodel.channels.BindingParameterCollection;
 
 
@@ -119,7 +120,7 @@ public interface IServiceBehavior extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void AddBindingParameters(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase, Collection_1 endpoints, BindingParameterCollection bindingParameters) throws Throwable;
+    public void AddBindingParameters(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase, Collection_1<ServiceEndpoint> endpoints, BindingParameterCollection bindingParameters) throws Throwable;
 
     public void ApplyDispatchBehavior(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable;
 

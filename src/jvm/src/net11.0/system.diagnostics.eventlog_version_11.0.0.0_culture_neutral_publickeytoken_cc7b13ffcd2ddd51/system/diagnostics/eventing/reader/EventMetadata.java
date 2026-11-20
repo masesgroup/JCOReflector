@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.diagnostics.eventing.reader.EventKeyword;
 import system.diagnostics.eventing.reader.EventLevel;
 import system.diagnostics.eventing.reader.EventLogLink;
 import system.diagnostics.eventing.reader.EventOpcode;
@@ -275,7 +276,7 @@ public class EventMetadata extends NetObject  {
      * @throws system.InvalidCastException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.Reader.EventMetadata.Keywords" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getKeywords() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
+    public IEnumerable_1<EventKeyword> getKeywords() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectKeywords = null;

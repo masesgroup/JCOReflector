@@ -46,6 +46,7 @@ import system.collections.Hashtable;
 import system.data.common.DbProviderFactory;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.reflection.Assembly;
 
 
 /**
@@ -395,7 +396,7 @@ public class TypedDataSetGenerator extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Design.TypedDataSetGenerator.ReferencedAssemblies" target="_top">.NET documentation</a>
      */
-    public static ICollection_1 getReferencedAssemblies() throws Throwable {
+    public static ICollection_1<Assembly> getReferencedAssemblies() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReferencedAssemblies = null;

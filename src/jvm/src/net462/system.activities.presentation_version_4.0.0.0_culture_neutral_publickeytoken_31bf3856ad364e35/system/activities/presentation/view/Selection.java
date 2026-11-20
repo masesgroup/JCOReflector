@@ -197,7 +197,7 @@ public class Selection extends system.activities.presentation.ContextItem  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param selectedObjects the argument of type {@code IEnumerable_1}
+     * @param selectedObjects the argument of type {@code IEnumerable_1<ModelItem>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -208,7 +208,7 @@ public class Selection extends system.activities.presentation.ContextItem  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.Selection.-ctor" target="_top">.NET documentation</a>
      */
-    public Selection(IEnumerable_1 selectedObjects) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public Selection(IEnumerable_1<ModelItem> selectedObjects) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -221,8 +221,8 @@ public class Selection extends system.activities.presentation.ContextItem  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param selectedObjects the argument of type {@code IEnumerable_1}
-     * @param match the argument of type {@code Predicate_1}
+     * @param selectedObjects the argument of type {@code IEnumerable_1<ModelItem>}
+     * @param match the argument of type {@code Predicate_1<ModelItem>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -233,7 +233,7 @@ public class Selection extends system.activities.presentation.ContextItem  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.Selection.-ctor" target="_top">.NET documentation</a>
      */
-    public Selection(IEnumerable_1 selectedObjects, Predicate_1 match) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public Selection(IEnumerable_1<ModelItem> selectedObjects, Predicate_1<ModelItem> match) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -271,7 +271,7 @@ public class Selection extends system.activities.presentation.ContextItem  {
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param selectedObjects the argument of type {@code IEnumerable}
-     * @param match the argument of type {@code Predicate_1}
+     * @param match the argument of type {@code Predicate_1<ModelItem>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -282,7 +282,7 @@ public class Selection extends system.activities.presentation.ContextItem  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.Selection.-ctor" target="_top">.NET documentation</a>
      */
-    public Selection(IEnumerable selectedObjects, Predicate_1 match) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public Selection(IEnumerable selectedObjects, Predicate_1<ModelItem> match) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -424,7 +424,7 @@ public class Selection extends system.activities.presentation.ContextItem  {
      * Invokes the .NET member Subscribe.
      *
      * @param context the argument of type {@code EditingContext}
-     * @param handler the argument of type {@code SubscribeContextCallback_1}
+     * @param handler the argument of type {@code SubscribeContextCallback_1<Selection>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -435,7 +435,7 @@ public class Selection extends system.activities.presentation.ContextItem  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.Selection.Subscribe" target="_top">.NET documentation</a>
      */
-    public static void Subscribe(EditingContext context, SubscribeContextCallback_1 handler) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static void Subscribe(EditingContext context, SubscribeContextCallback_1<Selection> handler) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -449,7 +449,7 @@ public class Selection extends system.activities.presentation.ContextItem  {
      * Invokes the .NET member Unsubscribe.
      *
      * @param context the argument of type {@code EditingContext}
-     * @param handler the argument of type {@code SubscribeContextCallback_1}
+     * @param handler the argument of type {@code SubscribeContextCallback_1<Selection>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -460,7 +460,7 @@ public class Selection extends system.activities.presentation.ContextItem  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.Selection.Unsubscribe" target="_top">.NET documentation</a>
      */
-    public static void Unsubscribe(EditingContext context, SubscribeContextCallback_1 handler) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static void Unsubscribe(EditingContext context, SubscribeContextCallback_1<Selection> handler) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -550,7 +550,7 @@ public class Selection extends system.activities.presentation.ContextItem  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.Selection.SelectedObjects" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getSelectedObjects() throws Throwable {
+    public IEnumerable_1<ModelItem> getSelectedObjects() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSelectedObjects = null;

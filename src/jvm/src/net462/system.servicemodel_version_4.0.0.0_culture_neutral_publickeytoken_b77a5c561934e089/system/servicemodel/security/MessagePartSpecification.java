@@ -392,7 +392,7 @@ public class MessagePartSpecification extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.MessagePartSpecification.HeaderTypes" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getHeaderTypes() throws Throwable, system.ArgumentNullException {
+    public ICollection_1<XmlQualifiedName> getHeaderTypes() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectHeaderTypes = null;

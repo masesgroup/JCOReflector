@@ -235,7 +235,7 @@ public class WorkflowInspectionServices extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.WorkflowInspectionServices.GetActivities" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 GetActivities(Activity activity) throws Throwable {
+    public static IEnumerable_1<Activity> GetActivities(Activity activity) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetActivities = null;

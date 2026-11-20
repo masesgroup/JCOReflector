@@ -161,7 +161,7 @@ public class ValueTask_1<TResult extends IJCOBridgeReflected> extends system.Val
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param source the argument of type {@code IValueTaskSource_1}
+     * @param source the argument of type {@code IValueTaskSource_1<TResult>}
      * @param token the argument of type {@code short}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
@@ -176,7 +176,7 @@ public class ValueTask_1<TResult extends IJCOBridgeReflected> extends system.Val
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.ValueTask-1.-ctor" target="_top">.NET documentation</a>
      */
-    public ValueTask_1(IValueTaskSource_1 source, short token) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public ValueTask_1(IValueTaskSource_1<TResult> source, short token) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -191,7 +191,7 @@ public class ValueTask_1<TResult extends IJCOBridgeReflected> extends system.Val
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param task the argument of type {@code Task_1}
+     * @param task the argument of type {@code Task_1<TResult>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -205,7 +205,7 @@ public class ValueTask_1<TResult extends IJCOBridgeReflected> extends system.Val
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.ValueTask-1.-ctor" target="_top">.NET documentation</a>
      */
-    public ValueTask_1(Task_1 task) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public ValueTask_1(Task_1<TResult> task) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -271,7 +271,7 @@ public class ValueTask_1<TResult extends IJCOBridgeReflected> extends system.Val
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.ValueTask-1.ConfigureAwait" target="_top">.NET documentation</a>
      */
-    public ConfiguredValueTaskAwaitable_1 ConfigureAwait(boolean continueOnCapturedContext) throws Throwable {
+    public ConfiguredValueTaskAwaitable_1<TResult> ConfigureAwait(boolean continueOnCapturedContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectConfigureAwait = null;
@@ -293,7 +293,7 @@ public class ValueTask_1<TResult extends IJCOBridgeReflected> extends system.Val
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.ValueTask-1.GetAwaiter" target="_top">.NET documentation</a>
      */
-    public ValueTaskAwaiter_1 GetAwaiter() throws Throwable {
+    public ValueTaskAwaiter_1<TResult> GetAwaiter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetAwaiter = null;
@@ -326,7 +326,7 @@ public class ValueTask_1<TResult extends IJCOBridgeReflected> extends system.Val
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.ValueTask-1.AsTask" target="_top">.NET documentation</a>
      */
-    public Task_1 AsTask() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NullReferenceException {
+    public Task_1<TResult> AsTask() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAsTask = null;
@@ -358,7 +358,7 @@ public class ValueTask_1<TResult extends IJCOBridgeReflected> extends system.Val
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.ValueTask-1.Preserve" target="_top">.NET documentation</a>
      */
-    public ValueTask_1 Preserve() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
+    public ValueTask_1<TResult> Preserve() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPreserve = null;

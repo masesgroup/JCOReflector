@@ -47,6 +47,7 @@ import system.Uri;
 import system.net.cache.RequestCachePolicy;
 import system.windows.media.imaging.BitmapMetadata;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.windows.media.ColorContext;
 import system.windows.media.imaging.InPlaceBitmapMetadataWriter;
 import system.windows.media.imaging.BitmapDecoder;
 
@@ -524,7 +525,7 @@ public class BitmapFrame extends system.windows.media.imaging.BitmapSource  {
      * @param source the argument of type {@code BitmapSource}
      * @param thumbnail the argument of type {@code BitmapSource}
      * @param metadata the argument of type {@code BitmapMetadata}
-     * @param colorContexts the argument of type {@code ReadOnlyCollection_1}
+     * @param colorContexts the argument of type {@code ReadOnlyCollection_1<ColorContext>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -534,7 +535,7 @@ public class BitmapFrame extends system.windows.media.imaging.BitmapSource  {
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.BitmapFrame.Create" target="_top">.NET documentation</a>
      */
-    public static BitmapFrame Create(BitmapSource source, BitmapSource thumbnail, BitmapMetadata metadata, ReadOnlyCollection_1 colorContexts) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException {
+    public static BitmapFrame Create(BitmapSource source, BitmapSource thumbnail, BitmapMetadata metadata, ReadOnlyCollection_1<ColorContext> colorContexts) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -582,7 +583,7 @@ public class BitmapFrame extends system.windows.media.imaging.BitmapSource  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.BitmapFrame.ColorContexts" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getColorContexts() throws Throwable {
+    public ReadOnlyCollection_1<ColorContext> getColorContexts() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectColorContexts = null;

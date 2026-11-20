@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.windows.IDataObject;
 import system.windows.IDataObjectImplementation;
 import system.Func_2;
+import system.reflection.metadata.TypeName;
 
 
 /**
@@ -243,14 +244,14 @@ public class ITypedDataObjectImplementation extends NetObject implements ITypedD
      *
      * @param <T> the type of the generic argument T
      * @param format the argument of type {@code java.lang.String}
-     * @param resolver the argument of type {@code Func_2}
+     * @param resolver the argument of type {@code Func_2<TypeName, NetType>}
      * @param autoConvert the argument of type {@code boolean}
      * @param data the argument of type {@code JCORefOut<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ITypedDataObject.TryGetData" target="_top">.NET documentation</a>
      */
-    public <T extends IJCOBridgeReflected> boolean TryGetData(java.lang.String format, Func_2 resolver, boolean autoConvert, JCORefOut<T> data) throws Throwable {
+    public <T extends IJCOBridgeReflected> boolean TryGetData(java.lang.String format, Func_2<TypeName, NetType> resolver, boolean autoConvert, JCORefOut<T> data) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTryGetData = null;

@@ -39,11 +39,11 @@ import java.util.ArrayList;
 
 // Import section
 import system.threading.tasks.Task_1;
+import system.windows.forms.TaskDialogButton;
 import system.windows.forms.IWin32Window;
 import system.windows.forms.IWin32WindowImplementation;
 import system.windows.forms.TaskDialogPage;
 import system.windows.forms.TaskDialogStartupLocation;
-import system.windows.forms.TaskDialogButton;
 
 
 /**
@@ -176,7 +176,7 @@ public class TaskDialog extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialog.ShowDialogAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 ShowDialogAsync(IWin32Window owner, TaskDialogPage page, TaskDialogStartupLocation startupLocation) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public static Task_1<TaskDialogButton> ShowDialogAsync(IWin32Window owner, TaskDialogPage page, TaskDialogStartupLocation startupLocation) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectShowDialogAsync = null;
@@ -206,7 +206,7 @@ public class TaskDialog extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.TaskDialog.ShowDialogAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 ShowDialogAsync(TaskDialogPage page, TaskDialogStartupLocation startupLocation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public static Task_1<TaskDialogButton> ShowDialogAsync(TaskDialogPage page, TaskDialogStartupLocation startupLocation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectShowDialogAsync = null;

@@ -42,6 +42,8 @@ import system.activities.NativeActivity;
 import system.activities.Activity_1;
 import system.activities.InArgument_1;
 import system.linq.expressions.Expression_1;
+import system.Func_2;
+import system.activities.ActivityContext;
 import system.activities.Activity;
 import system.collections.generic.IDictionary_2;
 import system.collections.generic.IDictionary_2Implementation;
@@ -176,7 +178,7 @@ public class Switch_1<T extends IJCOBridgeReflected> extends system.activities.N
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param expression the argument of type {@code Activity_1}
+     * @param expression the argument of type {@code Activity_1<T>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -187,7 +189,7 @@ public class Switch_1<T extends IJCOBridgeReflected> extends system.activities.N
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.Switch-1.-ctor" target="_top">.NET documentation</a>
      */
-    public Switch_1(Activity_1 expression) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public Switch_1(Activity_1<T> expression) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -202,7 +204,7 @@ public class Switch_1<T extends IJCOBridgeReflected> extends system.activities.N
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param expression the argument of type {@code InArgument_1}
+     * @param expression the argument of type {@code InArgument_1<T>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -213,7 +215,7 @@ public class Switch_1<T extends IJCOBridgeReflected> extends system.activities.N
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.Switch-1.-ctor" target="_top">.NET documentation</a>
      */
-    public Switch_1(InArgument_1 expression) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public Switch_1(InArgument_1<T> expression) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -228,7 +230,7 @@ public class Switch_1<T extends IJCOBridgeReflected> extends system.activities.N
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param expression the argument of type {@code Expression_1}
+     * @param expression the argument of type {@code Expression_1<Func_2<ActivityContext, T>>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -239,7 +241,7 @@ public class Switch_1<T extends IJCOBridgeReflected> extends system.activities.N
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.Switch-1.-ctor" target="_top">.NET documentation</a>
      */
-    public Switch_1(Expression_1 expression) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public Switch_1(Expression_1<Func_2<ActivityContext, T>> expression) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -305,7 +307,7 @@ public class Switch_1<T extends IJCOBridgeReflected> extends system.activities.N
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.Switch-1.Expression" target="_top">.NET documentation</a>
      */
-    public InArgument_1 getExpression() throws Throwable {
+    public InArgument_1<T> getExpression() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExpression = null;
@@ -327,7 +329,7 @@ public class Switch_1<T extends IJCOBridgeReflected> extends system.activities.N
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.Switch-1.Expression" target="_top">.NET documentation</a>
      */
-    public void setExpression(InArgument_1 Expression) throws Throwable {
+    public void setExpression(InArgument_1<T> Expression) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -346,7 +348,7 @@ public class Switch_1<T extends IJCOBridgeReflected> extends system.activities.N
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.Switch-1.Cases" target="_top">.NET documentation</a>
      */
-    public IDictionary_2 getCases() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public IDictionary_2<T, Activity> getCases() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCases = null;

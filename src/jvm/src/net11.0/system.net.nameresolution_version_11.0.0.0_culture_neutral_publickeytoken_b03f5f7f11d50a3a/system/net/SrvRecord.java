@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.ValueType;
 import system.collections.generic.IReadOnlyList_1;
 import system.collections.generic.IReadOnlyList_1Implementation;
+import system.net.AddressRecord;
 import system.TimeSpan;
 import system.UInt16;
 
@@ -172,7 +173,7 @@ public class SrvRecord extends system.ValueType  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.SrvRecord.Addresses" target="_top">.NET documentation</a>
      */
-    public IReadOnlyList_1 getAddresses() throws Throwable {
+    public IReadOnlyList_1<AddressRecord> getAddresses() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAddresses = null;

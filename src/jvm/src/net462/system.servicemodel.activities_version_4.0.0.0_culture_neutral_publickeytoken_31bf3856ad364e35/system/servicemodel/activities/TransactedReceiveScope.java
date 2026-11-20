@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.activities.NativeActivity;
 import system.activities.Activity;
 import system.collections.objectmodel.Collection_1;
+import system.activities.Variable;
 import system.servicemodel.activities.Receive;
 
 
@@ -233,7 +234,7 @@ public class TransactedReceiveScope extends system.activities.NativeActivity  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.TransactedReceiveScope.Variables" target="_top">.NET documentation</a>
      */
-    public Collection_1 getVariables() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+    public Collection_1<Variable> getVariables() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectVariables = null;

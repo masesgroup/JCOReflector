@@ -41,9 +41,9 @@ import java.util.ArrayList;
 import system.io.FileSystemInfo;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.io.DirectoryInfo;
 import system.io.EnumerationOptions;
 import system.io.SearchOption;
-import system.io.DirectoryInfo;
 import system.io.FileInfo;
 
 
@@ -206,7 +206,7 @@ public class DirectoryInfo extends system.io.FileSystemInfo  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.DirectoryInfo.EnumerateDirectories" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 EnumerateDirectories() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+    public IEnumerable_1<DirectoryInfo> EnumerateDirectories() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEnumerateDirectories = null;
@@ -240,7 +240,7 @@ public class DirectoryInfo extends system.io.FileSystemInfo  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.DirectoryInfo.EnumerateDirectories" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 EnumerateDirectories(java.lang.String searchPattern, EnumerationOptions enumerationOptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException {
+    public IEnumerable_1<DirectoryInfo> EnumerateDirectories(java.lang.String searchPattern, EnumerationOptions enumerationOptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEnumerateDirectories = null;
@@ -274,7 +274,7 @@ public class DirectoryInfo extends system.io.FileSystemInfo  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.DirectoryInfo.EnumerateDirectories" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 EnumerateDirectories(java.lang.String searchPattern, SearchOption searchOption) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+    public IEnumerable_1<DirectoryInfo> EnumerateDirectories(java.lang.String searchPattern, SearchOption searchOption) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEnumerateDirectories = null;
@@ -304,7 +304,7 @@ public class DirectoryInfo extends system.io.FileSystemInfo  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.DirectoryInfo.EnumerateDirectories" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 EnumerateDirectories(java.lang.String searchPattern) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+    public IEnumerable_1<DirectoryInfo> EnumerateDirectories(java.lang.String searchPattern) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEnumerateDirectories = null;
@@ -333,7 +333,7 @@ public class DirectoryInfo extends system.io.FileSystemInfo  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.DirectoryInfo.EnumerateFiles" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 EnumerateFiles() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+    public IEnumerable_1<FileInfo> EnumerateFiles() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEnumerateFiles = null;
@@ -367,7 +367,7 @@ public class DirectoryInfo extends system.io.FileSystemInfo  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.DirectoryInfo.EnumerateFiles" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 EnumerateFiles(java.lang.String searchPattern, EnumerationOptions enumerationOptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException {
+    public IEnumerable_1<FileInfo> EnumerateFiles(java.lang.String searchPattern, EnumerationOptions enumerationOptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEnumerateFiles = null;
@@ -401,7 +401,7 @@ public class DirectoryInfo extends system.io.FileSystemInfo  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.DirectoryInfo.EnumerateFiles" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 EnumerateFiles(java.lang.String searchPattern, SearchOption searchOption) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+    public IEnumerable_1<FileInfo> EnumerateFiles(java.lang.String searchPattern, SearchOption searchOption) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEnumerateFiles = null;
@@ -431,7 +431,7 @@ public class DirectoryInfo extends system.io.FileSystemInfo  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.DirectoryInfo.EnumerateFiles" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 EnumerateFiles(java.lang.String searchPattern) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+    public IEnumerable_1<FileInfo> EnumerateFiles(java.lang.String searchPattern) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEnumerateFiles = null;
@@ -460,7 +460,7 @@ public class DirectoryInfo extends system.io.FileSystemInfo  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.DirectoryInfo.EnumerateFileSystemInfos" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 EnumerateFileSystemInfos() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+    public IEnumerable_1<FileSystemInfo> EnumerateFileSystemInfos() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEnumerateFileSystemInfos = null;
@@ -494,7 +494,7 @@ public class DirectoryInfo extends system.io.FileSystemInfo  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.DirectoryInfo.EnumerateFileSystemInfos" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 EnumerateFileSystemInfos(java.lang.String searchPattern, EnumerationOptions enumerationOptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException {
+    public IEnumerable_1<FileSystemInfo> EnumerateFileSystemInfos(java.lang.String searchPattern, EnumerationOptions enumerationOptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEnumerateFileSystemInfos = null;
@@ -528,7 +528,7 @@ public class DirectoryInfo extends system.io.FileSystemInfo  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.DirectoryInfo.EnumerateFileSystemInfos" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 EnumerateFileSystemInfos(java.lang.String searchPattern, SearchOption searchOption) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+    public IEnumerable_1<FileSystemInfo> EnumerateFileSystemInfos(java.lang.String searchPattern, SearchOption searchOption) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEnumerateFileSystemInfos = null;
@@ -558,7 +558,7 @@ public class DirectoryInfo extends system.io.FileSystemInfo  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.DirectoryInfo.EnumerateFileSystemInfos" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 EnumerateFileSystemInfos(java.lang.String searchPattern) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+    public IEnumerable_1<FileSystemInfo> EnumerateFileSystemInfos(java.lang.String searchPattern) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEnumerateFileSystemInfos = null;

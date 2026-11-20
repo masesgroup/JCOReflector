@@ -40,7 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.activities.LocationReference;
 import system.linq.expressions.Expression;
+import system.activities.Location;
 import system.activities.ActivityContext;
 
 
@@ -152,13 +154,13 @@ public class ICompiledExpressionRootImplementation extends NetObject implements 
      *
      * @param expressionText the argument of type {@code java.lang.String}
      * @param isReference the argument of type {@code boolean}
-     * @param locations the argument of type {@code IList_1}
+     * @param locations the argument of type {@code IList_1<LocationReference>}
      * @param expressionId the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.ICompiledExpressionRoot.CanExecuteExpression" target="_top">.NET documentation</a>
      */
-    public boolean CanExecuteExpression(java.lang.String expressionText, boolean isReference, IList_1 locations, JCORefOut<java.util.concurrent.atomic.AtomicInteger> expressionId) throws Throwable {
+    public boolean CanExecuteExpression(java.lang.String expressionText, boolean isReference, IList_1<LocationReference> locations, JCORefOut<java.util.concurrent.atomic.AtomicInteger> expressionId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCanExecuteExpression = null;
@@ -199,12 +201,12 @@ public class ICompiledExpressionRootImplementation extends NetObject implements 
      * Invokes the .NET member GetExpressionTreeForExpression.
      *
      * @param expressionId the argument of type {@code int}
-     * @param locationReferences the argument of type {@code IList_1}
+     * @param locationReferences the argument of type {@code IList_1<LocationReference>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.ICompiledExpressionRoot.GetExpressionTreeForExpression" target="_top">.NET documentation</a>
      */
-    public Expression GetExpressionTreeForExpression(int expressionId, IList_1 locationReferences) throws Throwable {
+    public Expression GetExpressionTreeForExpression(int expressionId, IList_1<LocationReference> locationReferences) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetExpressionTreeForExpression = null;
@@ -223,12 +225,12 @@ public class ICompiledExpressionRootImplementation extends NetObject implements 
      * Invokes the .NET member InvokeExpression.
      *
      * @param expressionId the argument of type {@code int}
-     * @param locations the argument of type {@code IList_1}
+     * @param locations the argument of type {@code IList_1<Location>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.ICompiledExpressionRoot.InvokeExpression" target="_top">.NET documentation</a>
      */
-    public NetObject InvokeExpression(int expressionId, IList_1 locations) throws Throwable {
+    public NetObject InvokeExpression(int expressionId, IList_1<Location> locations) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectInvokeExpression = null;
@@ -247,13 +249,13 @@ public class ICompiledExpressionRootImplementation extends NetObject implements 
      * Invokes the .NET member InvokeExpression.
      *
      * @param expressionId the argument of type {@code int}
-     * @param locations the argument of type {@code IList_1}
+     * @param locations the argument of type {@code IList_1<LocationReference>}
      * @param activityContext the argument of type {@code ActivityContext}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.XamlIntegration.ICompiledExpressionRoot.InvokeExpression" target="_top">.NET documentation</a>
      */
-    public NetObject InvokeExpression(int expressionId, IList_1 locations, ActivityContext activityContext) throws Throwable {
+    public NetObject InvokeExpression(int expressionId, IList_1<LocationReference> locations, ActivityContext activityContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectInvokeExpression = null;

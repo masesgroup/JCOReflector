@@ -40,14 +40,17 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.xaml.XamlType;
 import system.xaml.XamlSchemaContext;
 import system.xaml.schema.XamlTypeInvoker;
-import system.xaml.XamlType;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
 import system.xaml.XamlMember;
 import system.xaml.XamlDirective;
 import system.xaml.schema.XamlValueConverter_1;
+import system.componentmodel.TypeConverter;
+import system.windows.markup.ValueSerializer;
+import system.xaml.XamlDeferringLoader;
 
 
 /**
@@ -166,7 +169,7 @@ public class XamlType extends NetObject  {
      *
      * @param unknownTypeNamespace the argument of type {@code java.lang.String}
      * @param unknownTypeName the argument of type {@code java.lang.String}
-     * @param typeArguments the argument of type {@code IList_1}
+     * @param typeArguments the argument of type {@code IList_1<XamlType>}
      * @param schemaContext the argument of type {@code XamlSchemaContext}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -179,7 +182,7 @@ public class XamlType extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlType.-ctor" target="_top">.NET documentation</a>
      */
-    public XamlType(java.lang.String unknownTypeNamespace, java.lang.String unknownTypeName, IList_1 typeArguments, XamlSchemaContext schemaContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public XamlType(java.lang.String unknownTypeNamespace, java.lang.String unknownTypeName, IList_1<XamlType> typeArguments, XamlSchemaContext schemaContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -313,7 +316,7 @@ public class XamlType extends NetObject  {
      * @throws system.xaml.XamlSchemaException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlType.GetAllAttachableMembers" target="_top">.NET documentation</a>
      */
-    public ICollection_1 GetAllAttachableMembers() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.threading.ThreadAbortException, system.IndexOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.xaml.XamlSchemaException {
+    public ICollection_1<XamlMember> GetAllAttachableMembers() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.threading.ThreadAbortException, system.IndexOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.xaml.XamlSchemaException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetAllAttachableMembers = null;
@@ -345,7 +348,7 @@ public class XamlType extends NetObject  {
      * @throws system.xaml.XamlSchemaException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlType.GetAllMembers" target="_top">.NET documentation</a>
      */
-    public ICollection_1 GetAllMembers() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.threading.ThreadAbortException, system.IndexOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.xaml.XamlSchemaException {
+    public ICollection_1<XamlMember> GetAllMembers() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.threading.ThreadAbortException, system.IndexOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.xaml.XamlSchemaException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetAllMembers = null;
@@ -414,7 +417,7 @@ public class XamlType extends NetObject  {
      * @throws system.xaml.XamlSchemaException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlType.GetPositionalParameters" target="_top">.NET documentation</a>
      */
-    public IList_1 GetPositionalParameters(int parameterCount) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.threading.ThreadAbortException, system.IndexOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.xaml.XamlSchemaException {
+    public IList_1<XamlType> GetPositionalParameters(int parameterCount) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.threading.ThreadAbortException, system.IndexOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.xaml.XamlSchemaException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetPositionalParameters = null;
@@ -1046,7 +1049,7 @@ public class XamlType extends NetObject  {
      * @throws system.xaml.XamlSchemaException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlType.AllowedContentTypes" target="_top">.NET documentation</a>
      */
-    public IList_1 getAllowedContentTypes() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.threading.ThreadAbortException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.xaml.XamlSchemaException {
+    public IList_1<XamlType> getAllowedContentTypes() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.threading.ThreadAbortException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.xaml.XamlSchemaException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAllowedContentTypes = null;
@@ -1079,7 +1082,7 @@ public class XamlType extends NetObject  {
      * @throws system.xaml.XamlSchemaException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlType.ContentWrappers" target="_top">.NET documentation</a>
      */
-    public IList_1 getContentWrappers() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xaml.XamlSchemaException {
+    public IList_1<XamlType> getContentWrappers() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xaml.XamlSchemaException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContentWrappers = null;
@@ -1101,7 +1104,7 @@ public class XamlType extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlType.TypeArguments" target="_top">.NET documentation</a>
      */
-    public IList_1 getTypeArguments() throws Throwable {
+    public IList_1<XamlType> getTypeArguments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTypeArguments = null;
@@ -1240,7 +1243,7 @@ public class XamlType extends NetObject  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlType.TypeConverter" target="_top">.NET documentation</a>
      */
-    public XamlValueConverter_1 getTypeConverter() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.threading.ThreadAbortException, system.TypeLoadException, system.NotImplementedException, system.FormatException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xaml.XamlSchemaException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.globalization.CultureNotFoundException {
+    public XamlValueConverter_1<TypeConverter> getTypeConverter() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.threading.ThreadAbortException, system.TypeLoadException, system.NotImplementedException, system.FormatException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xaml.XamlSchemaException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTypeConverter = null;
@@ -1279,7 +1282,7 @@ public class XamlType extends NetObject  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlType.ValueSerializer" target="_top">.NET documentation</a>
      */
-    public XamlValueConverter_1 getValueSerializer() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.threading.ThreadAbortException, system.TypeLoadException, system.NotImplementedException, system.FormatException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xaml.XamlSchemaException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
+    public XamlValueConverter_1<ValueSerializer> getValueSerializer() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.threading.ThreadAbortException, system.TypeLoadException, system.NotImplementedException, system.FormatException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xaml.XamlSchemaException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValueSerializer = null;
@@ -1315,7 +1318,7 @@ public class XamlType extends NetObject  {
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlType.DeferringLoader" target="_top">.NET documentation</a>
      */
-    public XamlValueConverter_1 getDeferringLoader() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.threading.ThreadAbortException, system.TypeLoadException, system.NotImplementedException, system.FormatException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xaml.XamlSchemaException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException {
+    public XamlValueConverter_1<XamlDeferringLoader> getDeferringLoader() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.threading.ThreadAbortException, system.TypeLoadException, system.NotImplementedException, system.FormatException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.xaml.XamlSchemaException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDeferringLoader = null;

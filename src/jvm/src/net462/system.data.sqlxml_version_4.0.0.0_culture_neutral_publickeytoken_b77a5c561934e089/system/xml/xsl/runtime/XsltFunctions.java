@@ -245,7 +245,7 @@ public class XsltFunctions extends NetObject  {
     /**
      * Invokes the .NET member MSNumber.
      *
-     * @param value the argument of type {@code IList_1}
+     * @param value the argument of type {@code IList_1<XPathItem>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -262,7 +262,7 @@ public class XsltFunctions extends NetObject  {
      * @throws system.threading.AbandonedMutexException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XsltFunctions.MSNumber" target="_top">.NET documentation</a>
      */
-    public static double MSNumber(IList_1 value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static double MSNumber(IList_1<XPathItem> value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMSNumber = null;
@@ -440,12 +440,12 @@ public class XsltFunctions extends NetObject  {
     /**
      * Invokes the .NET member EXslObjectType.
      *
-     * @param value the argument of type {@code IList_1}
+     * @param value the argument of type {@code IList_1<XPathItem>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XsltFunctions.EXslObjectType" target="_top">.NET documentation</a>
      */
-    public static java.lang.String EXslObjectType(IList_1 value) throws Throwable {
+    public static java.lang.String EXslObjectType(IList_1<XPathItem> value) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEXslObjectType = null;

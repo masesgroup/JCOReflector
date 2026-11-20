@@ -51,6 +51,8 @@ import system.servicemodel.dispatcher.DispatchRuntime;
 import system.servicemodel.description.WsdlExporter;
 import system.servicemodel.description.WsdlContractConversionContext;
 import system.servicemodel.description.WsdlEndpointConversionContext;
+import system.EventHandler_1;
+import system.servicemodel.security.WSTrustRequestProcessingErrorEventArgs;
 
 
 /**
@@ -2404,6 +2406,40 @@ public class WSTrustServiceContract extends NetObject  {
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addRequestFailed.
+     *
+     * @param handler the argument of type {@code EventHandler_1<WSTrustRequestProcessingErrorEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addRequestFailed(EventHandler_1<WSTrustRequestProcessingErrorEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("RequestFailed", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeRequestFailed.
+     *
+     * @param handler the argument of type {@code EventHandler_1<WSTrustRequestProcessingErrorEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeRequestFailed(EventHandler_1<WSTrustRequestProcessingErrorEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("RequestFailed", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

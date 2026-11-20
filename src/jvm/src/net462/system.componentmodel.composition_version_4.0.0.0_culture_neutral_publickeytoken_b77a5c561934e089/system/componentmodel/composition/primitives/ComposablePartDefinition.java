@@ -43,6 +43,8 @@ import system.collections.generic.IDictionary_2;
 import system.collections.generic.IDictionary_2Implementation;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.componentmodel.composition.primitives.ExportDefinition;
+import system.componentmodel.composition.primitives.ImportDefinition;
 
 
 /**
@@ -214,7 +216,7 @@ public class ComposablePartDefinition extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Primitives.ComposablePartDefinition.ExportDefinitions" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getExportDefinitions() throws Throwable {
+    public IEnumerable_1<ExportDefinition> getExportDefinitions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExportDefinitions = null;
@@ -236,7 +238,7 @@ public class ComposablePartDefinition extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Primitives.ComposablePartDefinition.ImportDefinitions" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getImportDefinitions() throws Throwable {
+    public IEnumerable_1<ImportDefinition> getImportDefinitions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectImportDefinitions = null;

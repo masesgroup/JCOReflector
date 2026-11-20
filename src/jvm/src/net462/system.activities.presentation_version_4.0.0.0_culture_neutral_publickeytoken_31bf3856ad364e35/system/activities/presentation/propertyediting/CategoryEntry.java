@@ -44,6 +44,8 @@ import system.activities.presentation.propertyediting.PropertyEntry;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
 import system.componentmodel.PropertyChangedEventHandler;
+import system.EventHandler_1;
+import system.activities.presentation.propertyediting.PropertyFilterAppliedEventArgs;
 
 
 /**
@@ -257,7 +259,7 @@ public class CategoryEntry extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.CategoryEntry.Properties" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getProperties() throws Throwable {
+    public IEnumerable_1<PropertyEntry> getProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectProperties = null;
@@ -327,6 +329,40 @@ public class CategoryEntry extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("PropertyChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addFilterApplied.
+     *
+     * @param handler the argument of type {@code EventHandler_1<PropertyFilterAppliedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addFilterApplied(EventHandler_1<PropertyFilterAppliedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("FilterApplied", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeFilterApplied.
+     *
+     * @param handler the argument of type {@code EventHandler_1<PropertyFilterAppliedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeFilterApplied(EventHandler_1<PropertyFilterAppliedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("FilterApplied", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

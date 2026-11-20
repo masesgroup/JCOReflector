@@ -181,7 +181,7 @@ public class Participants extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.Participants.Participant" target="_top">.NET documentation</a>
      */
-    public List_1 getParticipant() throws Throwable {
+    public List_1<EndpointReference> getParticipant() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectParticipant = null;

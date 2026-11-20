@@ -184,7 +184,7 @@ public class Assign_1<T extends IJCOBridgeReflected> extends system.activities.C
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.Assign-1.Value" target="_top">.NET documentation</a>
      */
-    public InArgument_1 getValue() throws Throwable {
+    public InArgument_1<T> getValue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValue = null;
@@ -206,7 +206,7 @@ public class Assign_1<T extends IJCOBridgeReflected> extends system.activities.C
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.Assign-1.Value" target="_top">.NET documentation</a>
      */
-    public void setValue(InArgument_1 Value) throws Throwable {
+    public void setValue(InArgument_1<T> Value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -223,7 +223,7 @@ public class Assign_1<T extends IJCOBridgeReflected> extends system.activities.C
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.Assign-1.To" target="_top">.NET documentation</a>
      */
-    public OutArgument_1 getTo() throws Throwable {
+    public OutArgument_1<T> getTo() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTo = null;
@@ -245,7 +245,7 @@ public class Assign_1<T extends IJCOBridgeReflected> extends system.activities.C
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.Assign-1.To" target="_top">.NET documentation</a>
      */
-    public void setTo(OutArgument_1 To) throws Throwable {
+    public void setTo(OutArgument_1<T> To) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

@@ -45,6 +45,9 @@ import system.Nullable_1;
 import system.windows.controls.CalendarBlackoutDatesCollection;
 import system.windows.controls.DatePickerFormat;
 import system.windows.Style;
+import system.EventHandler_1;
+import system.windows.controls.DatePickerDateValidationErrorEventArgs;
+import system.windows.controls.SelectionChangedEventArgs;
 import system.windows.RoutedEventHandler;
 
 
@@ -454,7 +457,7 @@ public class DatePicker extends system.windows.controls.Control  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DatePicker.DisplayDateEnd" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getDisplayDateEnd() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public Nullable_1<DateTime> getDisplayDateEnd() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDisplayDateEnd = null;
@@ -484,7 +487,7 @@ public class DatePicker extends system.windows.controls.Control  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DatePicker.DisplayDateEnd" target="_top">.NET documentation</a>
      */
-    public void setDisplayDateEnd(Nullable_1 DisplayDateEnd) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public void setDisplayDateEnd(Nullable_1<DateTime> DisplayDateEnd) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -509,7 +512,7 @@ public class DatePicker extends system.windows.controls.Control  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DatePicker.DisplayDateStart" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getDisplayDateStart() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public Nullable_1<DateTime> getDisplayDateStart() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDisplayDateStart = null;
@@ -539,7 +542,7 @@ public class DatePicker extends system.windows.controls.Control  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DatePicker.DisplayDateStart" target="_top">.NET documentation</a>
      */
-    public void setDisplayDateStart(Nullable_1 DisplayDateStart) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public void setDisplayDateStart(Nullable_1<DateTime> DisplayDateStart) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -564,7 +567,7 @@ public class DatePicker extends system.windows.controls.Control  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DatePicker.SelectedDate" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getSelectedDate() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public Nullable_1<DateTime> getSelectedDate() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSelectedDate = null;
@@ -594,7 +597,7 @@ public class DatePicker extends system.windows.controls.Control  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DatePicker.SelectedDate" target="_top">.NET documentation</a>
      */
-    public void setSelectedDate(Nullable_1 SelectedDate) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public void setSelectedDate(Nullable_1<DateTime> SelectedDate) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -794,6 +797,74 @@ public class DatePicker extends system.windows.controls.Control  {
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addDateValidationError.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DatePickerDateValidationErrorEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addDateValidationError(EventHandler_1<DatePickerDateValidationErrorEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("DateValidationError", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeDateValidationError.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DatePickerDateValidationErrorEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeDateValidationError(EventHandler_1<DatePickerDateValidationErrorEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("DateValidationError", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addSelectedDateChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<SelectionChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addSelectedDateChanged(EventHandler_1<SelectionChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("SelectedDateChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeSelectedDateChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<SelectionChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeSelectedDateChanged(EventHandler_1<SelectionChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("SelectedDateChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
     /**
      * Invokes the .NET member addCalendarClosed.

@@ -47,6 +47,7 @@ import system.windows.controls.ItemContainerGenerator;
 import system.windows.controls.Panel;
 import system.EventArgs;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.Object;
 import system.windows.controls.primitives.GeneratorStatus;
 import system.EventHandler;
 import system.windows.controls.primitives.ItemsChangedEventHandler;
@@ -574,7 +575,7 @@ public class ItemContainerGenerator extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ItemContainerGenerator.Items" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getItems() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public ReadOnlyCollection_1<Object> getItems() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectItems = null;

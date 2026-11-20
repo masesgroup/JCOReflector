@@ -166,7 +166,7 @@ public class DispatcherOperation_1<TResult extends IJCOBridgeReflected> extends 
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Threading.DispatcherOperation-1.GetAwaiterNewDispatcherOperation_1" target="_top">.NET documentation</a>
      */
-    public TaskAwaiter_1 GetAwaiterNewDispatcherOperation_1() throws Throwable {
+    public TaskAwaiter_1<TResult> GetAwaiterNewDispatcherOperation_1() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetAwaiter = null;

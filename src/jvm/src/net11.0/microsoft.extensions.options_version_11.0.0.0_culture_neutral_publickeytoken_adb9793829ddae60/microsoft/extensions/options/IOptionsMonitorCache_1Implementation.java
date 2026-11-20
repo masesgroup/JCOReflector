@@ -193,12 +193,12 @@ public class IOptionsMonitorCache_1Implementation<TOptions extends IJCOBridgeRef
      * Invokes the .NET member GetOrAdd.
      *
      * @param name the argument of type {@code java.lang.String}
-     * @param createOptions the argument of type {@code Func_1}
+     * @param createOptions the argument of type {@code Func_1<TOptions>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.IOptionsMonitorCache-1.GetOrAdd" target="_top">.NET documentation</a>
      */
-    public TOptions GetOrAdd(java.lang.String name, Func_1 createOptions) throws Throwable {
+    public TOptions GetOrAdd(java.lang.String name, Func_1<TOptions> createOptions) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetOrAdd = null;

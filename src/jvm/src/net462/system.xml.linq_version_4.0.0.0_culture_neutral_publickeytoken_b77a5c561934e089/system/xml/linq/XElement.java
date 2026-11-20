@@ -44,8 +44,9 @@ import system.xml.linq.XName;
 import system.xml.linq.XStreamingElement;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
-import system.xml.linq.XNamespace;
 import system.xml.linq.XAttribute;
+import system.xml.linq.XNode;
+import system.xml.linq.XNamespace;
 import system.io.Stream;
 import system.xml.linq.LoadOptions;
 import system.io.TextReader;
@@ -295,7 +296,7 @@ public class XElement extends system.xml.linq.XContainer  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XElement.Attributes" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 Attributes() throws Throwable {
+    public IEnumerable_1<XAttribute> Attributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAttributes = null;
@@ -318,7 +319,7 @@ public class XElement extends system.xml.linq.XContainer  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XElement.Attributes" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 Attributes(XName name) throws Throwable {
+    public IEnumerable_1<XAttribute> Attributes(XName name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAttributes = null;
@@ -340,7 +341,7 @@ public class XElement extends system.xml.linq.XContainer  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XElement.AncestorsAndSelf" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 AncestorsAndSelf() throws Throwable {
+    public IEnumerable_1<XElement> AncestorsAndSelf() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAncestorsAndSelf = null;
@@ -363,7 +364,7 @@ public class XElement extends system.xml.linq.XContainer  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XElement.AncestorsAndSelf" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 AncestorsAndSelf(XName name) throws Throwable {
+    public IEnumerable_1<XElement> AncestorsAndSelf(XName name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAncestorsAndSelf = null;
@@ -385,7 +386,7 @@ public class XElement extends system.xml.linq.XContainer  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XElement.DescendantsAndSelf" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 DescendantsAndSelf() throws Throwable {
+    public IEnumerable_1<XElement> DescendantsAndSelf() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDescendantsAndSelf = null;
@@ -408,7 +409,7 @@ public class XElement extends system.xml.linq.XContainer  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XElement.DescendantsAndSelf" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 DescendantsAndSelf(XName name) throws Throwable {
+    public IEnumerable_1<XElement> DescendantsAndSelf(XName name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDescendantsAndSelf = null;
@@ -430,7 +431,7 @@ public class XElement extends system.xml.linq.XContainer  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XElement.DescendantNodesAndSelf" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 DescendantNodesAndSelf() throws Throwable {
+    public IEnumerable_1<XNode> DescendantNodesAndSelf() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDescendantNodesAndSelf = null;
@@ -1517,7 +1518,7 @@ public class XElement extends system.xml.linq.XContainer  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XElement.EmptySequence" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 getEmptySequence() throws Throwable {
+    public static IEnumerable_1<XElement> getEmptySequence() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEmptySequence = null;

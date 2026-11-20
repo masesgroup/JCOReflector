@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 import system.collections.generic.List_1;
+import system.windows.automation.peers.AutomationPeer;
 import system.windows.automation.peers.PatternInterface;
 import system.windows.automation.peers.AutomationControlType;
 import system.windows.automation.peers.ItemAutomationPeer;
@@ -120,7 +121,7 @@ public interface IViewAutomationPeer extends IJCOBridgeReflected {
 
     // Methods section
     
-    public List_1 GetChildren(List_1 children) throws Throwable;
+    public List_1<AutomationPeer> GetChildren(List_1<AutomationPeer> children) throws Throwable;
 
     public NetObject GetPattern(PatternInterface patternInterface) throws Throwable;
 

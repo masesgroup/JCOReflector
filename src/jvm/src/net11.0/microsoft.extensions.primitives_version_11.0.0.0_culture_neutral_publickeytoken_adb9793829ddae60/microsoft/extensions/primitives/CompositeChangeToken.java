@@ -40,9 +40,12 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IReadOnlyList_1;
 import system.collections.generic.IReadOnlyList_1Implementation;
+import microsoft.extensions.primitives.IChangeToken;
+import microsoft.extensions.primitives.IChangeTokenImplementation;
 import system.IDisposable;
 import system.IDisposableImplementation;
 import system.Action_1;
+import system.Object;
 
 
 /**
@@ -159,7 +162,7 @@ public class CompositeChangeToken extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param changeTokens the argument of type {@code IReadOnlyList_1}
+     * @param changeTokens the argument of type {@code IReadOnlyList_1<IChangeToken>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -170,7 +173,7 @@ public class CompositeChangeToken extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Primitives.CompositeChangeToken.-ctor" target="_top">.NET documentation</a>
      */
-    public CompositeChangeToken(IReadOnlyList_1 changeTokens) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public CompositeChangeToken(IReadOnlyList_1<IChangeToken> changeTokens) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -188,7 +191,7 @@ public class CompositeChangeToken extends NetObject  {
     /**
      * Invokes the .NET member RegisterChangeCallback.
      *
-     * @param callback the argument of type {@code Action_1}
+     * @param callback the argument of type {@code Action_1<Object>}
      * @param state the argument of type {@code NetObject}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -204,7 +207,7 @@ public class CompositeChangeToken extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Primitives.CompositeChangeToken.RegisterChangeCallback" target="_top">.NET documentation</a>
      */
-    public IDisposable RegisterChangeCallback(Action_1 callback, NetObject state) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.LockRecursionException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException {
+    public IDisposable RegisterChangeCallback(Action_1<Object> callback, NetObject state) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.LockRecursionException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRegisterChangeCallback = null;
@@ -281,7 +284,7 @@ public class CompositeChangeToken extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Primitives.CompositeChangeToken.ChangeTokens" target="_top">.NET documentation</a>
      */
-    public IReadOnlyList_1 getChangeTokens() throws Throwable {
+    public IReadOnlyList_1<IChangeToken> getChangeTokens() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectChangeTokens = null;

@@ -210,7 +210,7 @@ public class TransformCollection extends system.windows.media.animation.Animatab
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param collection the argument of type {@code IEnumerable_1}
+     * @param collection the argument of type {@code IEnumerable_1<Transform>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -226,7 +226,7 @@ public class TransformCollection extends system.windows.media.animation.Animatab
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TransformCollection.-ctor" target="_top">.NET documentation</a>
      */
-    public TransformCollection(IEnumerable_1 collection) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
+    public TransformCollection(IEnumerable_1<Transform> collection) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

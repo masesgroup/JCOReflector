@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.componentmodel.ItemPropertyInfo;
 
 
 /**
@@ -155,7 +156,7 @@ public class IItemPropertiesImplementation extends NetObject implements IItemPro
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.IItemProperties.ItemProperties" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getItemProperties() throws Throwable {
+    public ReadOnlyCollection_1<ItemPropertyInfo> getItemProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectItemProperties = null;

@@ -40,6 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.Uri;
 import system.runtime.remoting.ObjectHandle;
+import system.EventHandler_1;
+import system.deployment.application.DownloadApplicationCompletedEventArgs;
+import system.deployment.application.DownloadProgressChangedEventArgs;
+import system.deployment.application.GetManifestCompletedEventArgs;
 
 
 /**
@@ -660,6 +664,108 @@ public class InPlaceHostingManager extends NetObject implements AutoCloseable {
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addDownloadApplicationCompleted.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DownloadApplicationCompletedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addDownloadApplicationCompleted(EventHandler_1<DownloadApplicationCompletedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("DownloadApplicationCompleted", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeDownloadApplicationCompleted.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DownloadApplicationCompletedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeDownloadApplicationCompleted(EventHandler_1<DownloadApplicationCompletedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("DownloadApplicationCompleted", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addDownloadProgressChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DownloadProgressChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addDownloadProgressChanged(EventHandler_1<DownloadProgressChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("DownloadProgressChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeDownloadProgressChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DownloadProgressChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeDownloadProgressChanged(EventHandler_1<DownloadProgressChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("DownloadProgressChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addGetManifestCompleted.
+     *
+     * @param handler the argument of type {@code EventHandler_1<GetManifestCompletedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addGetManifestCompleted(EventHandler_1<GetManifestCompletedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("GetManifestCompleted", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeGetManifestCompleted.
+     *
+     * @param handler the argument of type {@code EventHandler_1<GetManifestCompletedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeGetManifestCompleted(EventHandler_1<GetManifestCompletedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("GetManifestCompleted", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

@@ -285,7 +285,7 @@ public class WSSecurityTokenSerializer extends system.identitymodel.selectors.Se
      * @param emitBspRequiredAttributes the argument of type {@code boolean}
      * @param samlSerializer the argument of type {@code SamlSerializer}
      * @param securityStateEncoder the argument of type {@code SecurityStateEncoder}
-     * @param knownTypes the argument of type {@code IEnumerable_1}
+     * @param knownTypes the argument of type {@code IEnumerable_1<NetType>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -300,7 +300,7 @@ public class WSSecurityTokenSerializer extends system.identitymodel.selectors.Se
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.WSSecurityTokenSerializer.-ctor" target="_top">.NET documentation</a>
      */
-    public WSSecurityTokenSerializer(SecurityVersion securityVersion, boolean emitBspRequiredAttributes, SamlSerializer samlSerializer, SecurityStateEncoder securityStateEncoder, IEnumerable_1 knownTypes) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+    public WSSecurityTokenSerializer(SecurityVersion securityVersion, boolean emitBspRequiredAttributes, SamlSerializer samlSerializer, SecurityStateEncoder securityStateEncoder, IEnumerable_1<NetType> knownTypes) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -317,7 +317,7 @@ public class WSSecurityTokenSerializer extends system.identitymodel.selectors.Se
      * @param emitBspRequiredAttributes the argument of type {@code boolean}
      * @param samlSerializer the argument of type {@code SamlSerializer}
      * @param securityStateEncoder the argument of type {@code SecurityStateEncoder}
-     * @param knownTypes the argument of type {@code IEnumerable_1}
+     * @param knownTypes the argument of type {@code IEnumerable_1<NetType>}
      * @param maximumKeyDerivationOffset the argument of type {@code int}
      * @param maximumKeyDerivationLabelLength the argument of type {@code int}
      * @param maximumKeyDerivationNonceLength the argument of type {@code int}
@@ -339,7 +339,7 @@ public class WSSecurityTokenSerializer extends system.identitymodel.selectors.Se
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.WSSecurityTokenSerializer.-ctor" target="_top">.NET documentation</a>
      */
-    public WSSecurityTokenSerializer(SecurityVersion securityVersion, boolean emitBspRequiredAttributes, SamlSerializer samlSerializer, SecurityStateEncoder securityStateEncoder, IEnumerable_1 knownTypes, int maximumKeyDerivationOffset, int maximumKeyDerivationLabelLength, int maximumKeyDerivationNonceLength) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException {
+    public WSSecurityTokenSerializer(SecurityVersion securityVersion, boolean emitBspRequiredAttributes, SamlSerializer samlSerializer, SecurityStateEncoder securityStateEncoder, IEnumerable_1<NetType> knownTypes, int maximumKeyDerivationOffset, int maximumKeyDerivationLabelLength, int maximumKeyDerivationNonceLength) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -358,7 +358,7 @@ public class WSSecurityTokenSerializer extends system.identitymodel.selectors.Se
      * @param emitBspRequiredAttributes the argument of type {@code boolean}
      * @param samlSerializer the argument of type {@code SamlSerializer}
      * @param securityStateEncoder the argument of type {@code SecurityStateEncoder}
-     * @param knownTypes the argument of type {@code IEnumerable_1}
+     * @param knownTypes the argument of type {@code IEnumerable_1<NetType>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -377,7 +377,7 @@ public class WSSecurityTokenSerializer extends system.identitymodel.selectors.Se
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.WSSecurityTokenSerializer.-ctor" target="_top">.NET documentation</a>
      */
-    public WSSecurityTokenSerializer(SecurityVersion securityVersion, TrustVersion trustVersion, SecureConversationVersion secureConversationVersion, boolean emitBspRequiredAttributes, SamlSerializer samlSerializer, SecurityStateEncoder securityStateEncoder, IEnumerable_1 knownTypes) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException {
+    public WSSecurityTokenSerializer(SecurityVersion securityVersion, TrustVersion trustVersion, SecureConversationVersion secureConversationVersion, boolean emitBspRequiredAttributes, SamlSerializer samlSerializer, SecurityStateEncoder securityStateEncoder, IEnumerable_1<NetType> knownTypes) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -396,7 +396,7 @@ public class WSSecurityTokenSerializer extends system.identitymodel.selectors.Se
      * @param emitBspRequiredAttributes the argument of type {@code boolean}
      * @param samlSerializer the argument of type {@code SamlSerializer}
      * @param securityStateEncoder the argument of type {@code SecurityStateEncoder}
-     * @param knownTypes the argument of type {@code IEnumerable_1}
+     * @param knownTypes the argument of type {@code IEnumerable_1<NetType>}
      * @param maximumKeyDerivationOffset the argument of type {@code int}
      * @param maximumKeyDerivationLabelLength the argument of type {@code int}
      * @param maximumKeyDerivationNonceLength the argument of type {@code int}
@@ -415,7 +415,7 @@ public class WSSecurityTokenSerializer extends system.identitymodel.selectors.Se
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.WSSecurityTokenSerializer.-ctor" target="_top">.NET documentation</a>
      */
-    public WSSecurityTokenSerializer(SecurityVersion securityVersion, TrustVersion trustVersion, SecureConversationVersion secureConversationVersion, boolean emitBspRequiredAttributes, SamlSerializer samlSerializer, SecurityStateEncoder securityStateEncoder, IEnumerable_1 knownTypes, int maximumKeyDerivationOffset, int maximumKeyDerivationLabelLength, int maximumKeyDerivationNonceLength) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+    public WSSecurityTokenSerializer(SecurityVersion securityVersion, TrustVersion trustVersion, SecureConversationVersion secureConversationVersion, boolean emitBspRequiredAttributes, SamlSerializer samlSerializer, SecurityStateEncoder securityStateEncoder, IEnumerable_1<NetType> knownTypes, int maximumKeyDerivationOffset, int maximumKeyDerivationLabelLength, int maximumKeyDerivationNonceLength) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

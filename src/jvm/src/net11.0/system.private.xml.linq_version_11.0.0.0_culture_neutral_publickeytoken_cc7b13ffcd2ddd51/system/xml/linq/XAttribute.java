@@ -301,7 +301,7 @@ public class XAttribute extends system.xml.linq.XObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XAttribute.EmptySequence" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 getEmptySequence() throws Throwable {
+    public static IEnumerable_1<XAttribute> getEmptySequence() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectEmptySequence = null;

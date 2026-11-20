@@ -40,6 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.workflow.runtime.tracking.ActivityTrackingRecord;
+import system.workflow.runtime.tracking.SqlTrackingWorkflowInstance;
+import system.workflow.runtime.tracking.UserTrackingRecord;
+import system.workflow.runtime.tracking.WorkflowTrackingRecord;
 import system.DateTime;
 import system.Guid;
 import system.workflow.componentmodel.Activity;
@@ -343,7 +347,7 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
      * @throws system.runtime.serialization.SerializationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.ActivityEvents" target="_top">.NET documentation</a>
      */
-    public IList_1 getActivityEvents() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.data.sqltypes.SqlNullValueException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.runtime.serialization.SerializationException {
+    public IList_1<ActivityTrackingRecord> getActivityEvents() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.data.sqltypes.SqlNullValueException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectActivityEvents = null;
@@ -374,7 +378,7 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
      * @throws system.TypeLoadException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.InvokedWorkflows" target="_top">.NET documentation</a>
      */
-    public IList_1 getInvokedWorkflows() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.data.sqltypes.SqlNullValueException, system.TypeLoadException {
+    public IList_1<SqlTrackingWorkflowInstance> getInvokedWorkflows() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.data.sqltypes.SqlNullValueException, system.TypeLoadException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectInvokedWorkflows = null;
@@ -407,7 +411,7 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.UserEvents" target="_top">.NET documentation</a>
      */
-    public IList_1 getUserEvents() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.data.sqltypes.SqlNullValueException, system.runtime.serialization.SerializationException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException {
+    public IList_1<UserTrackingRecord> getUserEvents() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.data.sqltypes.SqlNullValueException, system.runtime.serialization.SerializationException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUserEvents = null;
@@ -448,7 +452,7 @@ public class SqlTrackingWorkflowInstance extends NetObject  {
      * @throws system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingWorkflowInstance.WorkflowEvents" target="_top">.NET documentation</a>
      */
-    public IList_1 getWorkflowEvents() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.data.sqltypes.SqlNullValueException, system.runtime.serialization.SerializationException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.xml.XmlException, system.configuration.ConfigurationErrorsException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException {
+    public IList_1<WorkflowTrackingRecord> getWorkflowEvents() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.data.sqltypes.SqlNullValueException, system.runtime.serialization.SerializationException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.xml.XmlException, system.configuration.ConfigurationErrorsException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectWorkflowEvents = null;

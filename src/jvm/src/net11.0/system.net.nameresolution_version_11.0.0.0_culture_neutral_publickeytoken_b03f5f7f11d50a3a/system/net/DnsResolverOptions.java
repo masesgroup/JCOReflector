@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.net.IPEndPoint;
 
 
 /**
@@ -181,7 +182,7 @@ public class DnsResolverOptions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.DnsResolverOptions.Servers" target="_top">.NET documentation</a>
      */
-    public IList_1 getServers() throws Throwable {
+    public IList_1<IPEndPoint> getServers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectServers = null;
@@ -210,7 +211,7 @@ public class DnsResolverOptions extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.DnsResolverOptions.Servers" target="_top">.NET documentation</a>
      */
-    public void setServers(IList_1 Servers) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public void setServers(IList_1<IPEndPoint> Servers) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

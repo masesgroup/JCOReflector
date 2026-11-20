@@ -170,7 +170,7 @@ public class PropertyAccessors extends system.ValueType  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.PropertyAccessors.Others" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 getOthers() throws Throwable {
+    public ImmutableArray_1<MethodDefinitionHandle> getOthers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOthers = null;

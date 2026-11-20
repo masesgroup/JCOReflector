@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.servicemodel.description.ServiceDescription;
 import system.servicemodel.ServiceHostBase;
 import system.collections.objectmodel.Collection_1;
+import system.servicemodel.description.ServiceEndpoint;
 import system.servicemodel.channels.BindingParameterCollection;
 
 
@@ -187,12 +188,12 @@ public class WorkflowInstanceManagementBehavior extends NetObject  {
      *
      * @param serviceDescription the argument of type {@code ServiceDescription}
      * @param serviceHostBase the argument of type {@code ServiceHostBase}
-     * @param endpoints the argument of type {@code Collection_1}
+     * @param endpoints the argument of type {@code Collection_1<ServiceEndpoint>}
      * @param bindingParameters the argument of type {@code BindingParameterCollection}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.WorkflowInstanceManagementBehavior.AddBindingParameters" target="_top">.NET documentation</a>
      */
-    public void AddBindingParameters(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase, Collection_1 endpoints, BindingParameterCollection bindingParameters) throws Throwable {
+    public void AddBindingParameters(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase, Collection_1<ServiceEndpoint> endpoints, BindingParameterCollection bindingParameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

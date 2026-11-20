@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.generic.List_1;
+import system.Object;
 
 
 /**
@@ -180,7 +181,7 @@ public class ClipboardData extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ClipboardData.Data" target="_top">.NET documentation</a>
      */
-    public List_1 getData() throws Throwable {
+    public List_1<Object> getData() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectData = null;
@@ -202,7 +203,7 @@ public class ClipboardData extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ClipboardData.Data" target="_top">.NET documentation</a>
      */
-    public void setData(List_1 Data) throws Throwable {
+    public void setData(List_1<Object> Data) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -219,7 +220,7 @@ public class ClipboardData extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ClipboardData.Metadata" target="_top">.NET documentation</a>
      */
-    public List_1 getMetadata() throws Throwable {
+    public List_1<Object> getMetadata() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectMetadata = null;
@@ -241,7 +242,7 @@ public class ClipboardData extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ClipboardData.Metadata" target="_top">.NET documentation</a>
      */
-    public void setMetadata(List_1 Metadata) throws Throwable {
+    public void setMetadata(List_1<Object> Metadata) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

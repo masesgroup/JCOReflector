@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.Action_1;
+import system.threading.AsyncLocalValueChangedArgs_1;
 
 
 /**
@@ -170,11 +171,11 @@ public class AsyncLocal_1<T extends IJCOBridgeReflected> extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param valueChangedHandler the argument of type {@code Action_1}
+     * @param valueChangedHandler the argument of type {@code Action_1<AsyncLocalValueChangedArgs_1<T>>}
      * @throws Throwable if the .NET constructor fails
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.AsyncLocal-1.-ctor" target="_top">.NET documentation</a>
      */
-    public AsyncLocal_1(Action_1 valueChangedHandler) throws Throwable {
+    public AsyncLocal_1(Action_1<AsyncLocalValueChangedArgs_1<T>> valueChangedHandler) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

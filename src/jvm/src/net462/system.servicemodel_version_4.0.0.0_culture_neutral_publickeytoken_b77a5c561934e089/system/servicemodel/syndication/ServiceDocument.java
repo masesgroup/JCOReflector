@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.servicemodel.syndication.Workspace;
 import system.servicemodel.syndication.ServiceDocument;
 import system.xml.XmlReader;
 import system.servicemodel.syndication.ServiceDocumentFormatter;
@@ -178,12 +179,12 @@ public class ServiceDocument extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param workspaces the argument of type {@code IEnumerable_1}
+     * @param workspaces the argument of type {@code IEnumerable_1<Workspace>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.ServiceDocument.-ctor" target="_top">.NET documentation</a>
      */
-    public ServiceDocument(IEnumerable_1 workspaces) throws Throwable, system.NotSupportedException {
+    public ServiceDocument(IEnumerable_1<Workspace> workspaces) throws Throwable, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -314,7 +315,7 @@ public class ServiceDocument extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.ServiceDocument.Workspaces" target="_top">.NET documentation</a>
      */
-    public Collection_1 getWorkspaces() throws Throwable {
+    public Collection_1<Workspace> getWorkspaces() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectWorkspaces = null;

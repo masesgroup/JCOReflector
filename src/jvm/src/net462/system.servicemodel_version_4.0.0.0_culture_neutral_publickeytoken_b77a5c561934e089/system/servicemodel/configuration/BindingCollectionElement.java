@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.configuration.ConfigurationElement;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.servicemodel.configuration.IBindingConfigurationElement;
+import system.servicemodel.configuration.IBindingConfigurationElementImplementation;
 
 
 /**
@@ -189,7 +191,7 @@ public class BindingCollectionElement extends system.configuration.Configuration
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Configuration.BindingCollectionElement.ConfiguredBindings" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getConfiguredBindings() throws Throwable {
+    public ReadOnlyCollection_1<IBindingConfigurationElement> getConfiguredBindings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectConfiguredBindings = null;

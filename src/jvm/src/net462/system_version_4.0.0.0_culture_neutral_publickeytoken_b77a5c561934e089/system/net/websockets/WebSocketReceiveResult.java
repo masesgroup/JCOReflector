@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.net.websockets.WebSocketMessageType;
 import system.Nullable_1;
+import system.net.websockets.WebSocketCloseStatus;
 
 
 /**
@@ -179,13 +180,13 @@ public class WebSocketReceiveResult extends NetObject  {
      * @param count the argument of type {@code int}
      * @param messageType the argument of type {@code WebSocketMessageType}
      * @param endOfMessage the argument of type {@code boolean}
-     * @param closeStatus the argument of type {@code Nullable_1}
+     * @param closeStatus the argument of type {@code Nullable_1<WebSocketCloseStatus>}
      * @param closeStatusDescription the argument of type {@code java.lang.String}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketReceiveResult.-ctor" target="_top">.NET documentation</a>
      */
-    public WebSocketReceiveResult(int count, WebSocketMessageType messageType, boolean endOfMessage, Nullable_1 closeStatus, java.lang.String closeStatusDescription) throws Throwable, system.ArgumentOutOfRangeException {
+    public WebSocketReceiveResult(int count, WebSocketMessageType messageType, boolean endOfMessage, Nullable_1<WebSocketCloseStatus> closeStatus, java.lang.String closeStatusDescription) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -352,7 +353,7 @@ public class WebSocketReceiveResult extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketReceiveResult.CloseStatus" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getCloseStatus() throws Throwable {
+    public Nullable_1<WebSocketCloseStatus> getCloseStatus() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCloseStatus = null;
@@ -374,7 +375,7 @@ public class WebSocketReceiveResult extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocketReceiveResult.CloseStatus" target="_top">.NET documentation</a>
      */
-    public void setCloseStatus(Nullable_1 CloseStatus) throws Throwable {
+    public void setCloseStatus(Nullable_1<WebSocketCloseStatus> CloseStatus) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

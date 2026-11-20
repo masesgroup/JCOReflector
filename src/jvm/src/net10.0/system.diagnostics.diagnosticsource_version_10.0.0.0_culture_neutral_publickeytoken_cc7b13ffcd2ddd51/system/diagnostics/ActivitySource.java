@@ -44,6 +44,7 @@ import system.collections.generic.IEnumerable_1Implementation;
 import system.diagnostics.Activity;
 import system.diagnostics.ActivityKind;
 import system.diagnostics.ActivityContext;
+import system.diagnostics.ActivityLink;
 import system.diagnostics.ActivityIdFormat;
 import system.DateTimeOffset;
 import system.diagnostics.ActivityListener;
@@ -317,7 +318,7 @@ public class ActivitySource extends NetObject implements AutoCloseable {
      * @param kind the argument of type {@code ActivityKind}
      * @param parentContext the argument of type {@code ActivityContext}
      * @param tags the argument of type {@code IEnumerable_1}
-     * @param links the argument of type {@code IEnumerable_1}
+     * @param links the argument of type {@code IEnumerable_1<ActivityLink>}
      * @param idFormat the argument of type {@code ActivityIdFormat}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -336,7 +337,7 @@ public class ActivitySource extends NetObject implements AutoCloseable {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ActivitySource.CreateActivity" target="_top">.NET documentation</a>
      */
-    public Activity CreateActivity(java.lang.String name, ActivityKind kind, ActivityContext parentContext, IEnumerable_1 tags, IEnumerable_1 links, ActivityIdFormat idFormat) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException {
+    public Activity CreateActivity(java.lang.String name, ActivityKind kind, ActivityContext parentContext, IEnumerable_1 tags, IEnumerable_1<ActivityLink> links, ActivityIdFormat idFormat) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCreateActivity = null;
@@ -358,7 +359,7 @@ public class ActivitySource extends NetObject implements AutoCloseable {
      * @param kind the argument of type {@code ActivityKind}
      * @param parentId the argument of type {@code java.lang.String}
      * @param tags the argument of type {@code IEnumerable_1}
-     * @param links the argument of type {@code IEnumerable_1}
+     * @param links the argument of type {@code IEnumerable_1<ActivityLink>}
      * @param idFormat the argument of type {@code ActivityIdFormat}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -377,7 +378,7 @@ public class ActivitySource extends NetObject implements AutoCloseable {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ActivitySource.CreateActivity" target="_top">.NET documentation</a>
      */
-    public Activity CreateActivity(java.lang.String name, ActivityKind kind, java.lang.String parentId, IEnumerable_1 tags, IEnumerable_1 links, ActivityIdFormat idFormat) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException {
+    public Activity CreateActivity(java.lang.String name, ActivityKind kind, java.lang.String parentId, IEnumerable_1 tags, IEnumerable_1<ActivityLink> links, ActivityIdFormat idFormat) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCreateActivity = null;
@@ -435,7 +436,7 @@ public class ActivitySource extends NetObject implements AutoCloseable {
      * @param kind the argument of type {@code ActivityKind}
      * @param parentContext the argument of type {@code ActivityContext}
      * @param tags the argument of type {@code IEnumerable_1}
-     * @param links the argument of type {@code IEnumerable_1}
+     * @param links the argument of type {@code IEnumerable_1<ActivityLink>}
      * @param startTime the argument of type {@code DateTimeOffset}
      * @param name the argument of type {@code java.lang.String}
      * @return the value returned by the .NET member
@@ -455,7 +456,7 @@ public class ActivitySource extends NetObject implements AutoCloseable {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ActivitySource.StartActivity" target="_top">.NET documentation</a>
      */
-    public Activity StartActivity(ActivityKind kind, ActivityContext parentContext, IEnumerable_1 tags, IEnumerable_1 links, DateTimeOffset startTime, java.lang.String name) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException {
+    public Activity StartActivity(ActivityKind kind, ActivityContext parentContext, IEnumerable_1 tags, IEnumerable_1<ActivityLink> links, DateTimeOffset startTime, java.lang.String name) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectStartActivity = null;
@@ -477,7 +478,7 @@ public class ActivitySource extends NetObject implements AutoCloseable {
      * @param kind the argument of type {@code ActivityKind}
      * @param parentContext the argument of type {@code ActivityContext}
      * @param tags the argument of type {@code IEnumerable_1}
-     * @param links the argument of type {@code IEnumerable_1}
+     * @param links the argument of type {@code IEnumerable_1<ActivityLink>}
      * @param startTime the argument of type {@code DateTimeOffset}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -496,7 +497,7 @@ public class ActivitySource extends NetObject implements AutoCloseable {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ActivitySource.StartActivity" target="_top">.NET documentation</a>
      */
-    public Activity StartActivity(java.lang.String name, ActivityKind kind, ActivityContext parentContext, IEnumerable_1 tags, IEnumerable_1 links, DateTimeOffset startTime) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException {
+    public Activity StartActivity(java.lang.String name, ActivityKind kind, ActivityContext parentContext, IEnumerable_1 tags, IEnumerable_1<ActivityLink> links, DateTimeOffset startTime) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectStartActivity = null;
@@ -518,7 +519,7 @@ public class ActivitySource extends NetObject implements AutoCloseable {
      * @param kind the argument of type {@code ActivityKind}
      * @param parentId the argument of type {@code java.lang.String}
      * @param tags the argument of type {@code IEnumerable_1}
-     * @param links the argument of type {@code IEnumerable_1}
+     * @param links the argument of type {@code IEnumerable_1<ActivityLink>}
      * @param startTime the argument of type {@code DateTimeOffset}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -537,7 +538,7 @@ public class ActivitySource extends NetObject implements AutoCloseable {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ActivitySource.StartActivity" target="_top">.NET documentation</a>
      */
-    public Activity StartActivity(java.lang.String name, ActivityKind kind, java.lang.String parentId, IEnumerable_1 tags, IEnumerable_1 links, DateTimeOffset startTime) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException {
+    public Activity StartActivity(java.lang.String name, ActivityKind kind, java.lang.String parentId, IEnumerable_1 tags, IEnumerable_1<ActivityLink> links, DateTimeOffset startTime) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectStartActivity = null;

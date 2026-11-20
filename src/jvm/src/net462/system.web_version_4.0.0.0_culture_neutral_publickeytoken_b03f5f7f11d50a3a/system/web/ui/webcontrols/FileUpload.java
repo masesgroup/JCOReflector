@@ -41,8 +41,8 @@ import java.util.ArrayList;
 import system.web.ui.webcontrols.WebControl;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
-import system.io.Stream;
 import system.web.HttpPostedFile;
+import system.io.Stream;
 
 
 /**
@@ -403,7 +403,7 @@ public class FileUpload extends system.web.ui.webcontrols.WebControl  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.WebControls.FileUpload.PostedFiles" target="_top">.NET documentation</a>
      */
-    public IList_1 getPostedFiles() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.NullReferenceException {
+    public IList_1<HttpPostedFile> getPostedFiles() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPostedFiles = null;

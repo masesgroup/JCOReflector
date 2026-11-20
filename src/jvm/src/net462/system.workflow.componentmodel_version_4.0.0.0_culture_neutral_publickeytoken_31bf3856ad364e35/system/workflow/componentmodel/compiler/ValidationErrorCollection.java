@@ -172,13 +172,13 @@ public class ValidationErrorCollection extends system.collections.objectmodel.Co
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param value the argument of type {@code IEnumerable_1}
+     * @param value the argument of type {@code IEnumerable_1<ValidationError>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.ValidationErrorCollection.-ctor" target="_top">.NET documentation</a>
      */
-    public ValidationErrorCollection(IEnumerable_1 value) throws Throwable, system.ArgumentNullException, system.NotSupportedException {
+    public ValidationErrorCollection(IEnumerable_1<ValidationError> value) throws Throwable, system.ArgumentNullException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -242,13 +242,13 @@ public class ValidationErrorCollection extends system.collections.objectmodel.Co
     /**
      * Invokes the .NET member AddRange.
      *
-     * @param value the argument of type {@code IEnumerable_1}
+     * @param value the argument of type {@code IEnumerable_1<ValidationError>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.ValidationErrorCollection.AddRange" target="_top">.NET documentation</a>
      */
-    public void AddRange(IEnumerable_1 value) throws Throwable, system.ArgumentNullException, system.NotSupportedException {
+    public void AddRange(IEnumerable_1<ValidationError> value) throws Throwable, system.ArgumentNullException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

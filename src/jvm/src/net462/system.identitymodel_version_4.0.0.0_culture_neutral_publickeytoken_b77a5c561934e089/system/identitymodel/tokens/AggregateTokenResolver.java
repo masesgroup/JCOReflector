@@ -158,7 +158,7 @@ public class AggregateTokenResolver extends system.identitymodel.selectors.Secur
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param tokenResolvers the argument of type {@code IEnumerable_1}
+     * @param tokenResolvers the argument of type {@code IEnumerable_1<SecurityTokenResolver>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -173,7 +173,7 @@ public class AggregateTokenResolver extends system.identitymodel.selectors.Secur
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.AggregateTokenResolver.-ctor" target="_top">.NET documentation</a>
      */
-    public AggregateTokenResolver(IEnumerable_1 tokenResolvers) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+    public AggregateTokenResolver(IEnumerable_1<SecurityTokenResolver> tokenResolvers) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -200,7 +200,7 @@ public class AggregateTokenResolver extends system.identitymodel.selectors.Secur
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.AggregateTokenResolver.TokenResolvers" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getTokenResolvers() throws Throwable, system.ArgumentNullException {
+    public ReadOnlyCollection_1<SecurityTokenResolver> getTokenResolvers() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTokenResolvers = null;

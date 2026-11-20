@@ -128,9 +128,9 @@ public interface IReadOnlyDictionary_2<TKey extends IJCOBridgeReflected, TValue 
     
     // Properties section
     
-    public IEnumerable_1 getKeys() throws Throwable;
+    public IEnumerable_1<TKey> getKeys() throws Throwable;
 
-    public IEnumerable_1 getValues() throws Throwable;
+    public IEnumerable_1<TValue> getValues() throws Throwable;
 
 
 

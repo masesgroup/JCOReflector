@@ -366,7 +366,7 @@ public class PipeReader extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.PipeReader.ReadAsync" target="_top">.NET documentation</a>
      */
-    public ValueTask_1 ReadAsync(CancellationToken cancellationToken) throws Throwable {
+    public ValueTask_1<ReadResult> ReadAsync(CancellationToken cancellationToken) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadAsync = null;
@@ -393,7 +393,7 @@ public class PipeReader extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.PipeReader.ReadAtLeastAsync" target="_top">.NET documentation</a>
      */
-    public ValueTask_1 ReadAtLeastAsync(int minimumSize, CancellationToken cancellationToken) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public ValueTask_1<ReadResult> ReadAtLeastAsync(int minimumSize, CancellationToken cancellationToken) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadAtLeastAsync = null;

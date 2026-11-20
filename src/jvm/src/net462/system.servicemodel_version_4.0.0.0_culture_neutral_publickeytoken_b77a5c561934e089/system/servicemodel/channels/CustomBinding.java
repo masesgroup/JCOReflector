@@ -172,7 +172,7 @@ public class CustomBinding extends system.servicemodel.channels.Binding  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param bindingElementsInTopDownChannelStackOrder the argument of type {@code IEnumerable_1}
+     * @param bindingElementsInTopDownChannelStackOrder the argument of type {@code IEnumerable_1<BindingElement>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -188,7 +188,7 @@ public class CustomBinding extends system.servicemodel.channels.Binding  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.CustomBinding.-ctor" target="_top">.NET documentation</a>
      */
-    public CustomBinding(IEnumerable_1 bindingElementsInTopDownChannelStackOrder) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+    public CustomBinding(IEnumerable_1<BindingElement> bindingElementsInTopDownChannelStackOrder) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

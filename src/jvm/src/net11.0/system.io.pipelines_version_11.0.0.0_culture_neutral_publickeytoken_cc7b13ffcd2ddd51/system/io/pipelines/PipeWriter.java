@@ -44,6 +44,7 @@ import system.io.pipelines.StreamPipeWriterOptions;
 import system.Memory_1;
 import system.threading.tasks.ValueTask;
 import system.threading.tasks.ValueTask_1;
+import system.io.pipelines.FlushResult;
 import system.threading.CancellationToken;
 import system.ReadOnlyMemory_1;
 import system.Action_2;
@@ -279,7 +280,7 @@ public class PipeWriter extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.PipeWriter.FlushAsync" target="_top">.NET documentation</a>
      */
-    public ValueTask_1 FlushAsync(CancellationToken cancellationToken) throws Throwable {
+    public ValueTask_1<FlushResult> FlushAsync(CancellationToken cancellationToken) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFlushAsync = null;
@@ -306,7 +307,7 @@ public class PipeWriter extends NetObject  {
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Pipelines.PipeWriter.WriteAsync" target="_top">.NET documentation</a>
      */
-    public ValueTask_1 WriteAsync(ReadOnlyMemory_1 source, CancellationToken cancellationToken) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public ValueTask_1<FlushResult> WriteAsync(ReadOnlyMemory_1 source, CancellationToken cancellationToken) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectWriteAsync = null;

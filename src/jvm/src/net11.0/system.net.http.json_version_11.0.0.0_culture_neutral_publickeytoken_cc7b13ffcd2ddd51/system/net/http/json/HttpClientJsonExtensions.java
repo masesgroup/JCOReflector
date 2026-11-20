@@ -46,6 +46,8 @@ import system.threading.CancellationToken;
 import system.text.json.serialization.metadata.JsonTypeInfo_1;
 import system.Uri;
 import system.threading.tasks.Task_1;
+import system.net.http.HttpResponseMessage;
+import system.Object;
 import system.text.json.serialization.JsonSerializerContext;
 
 
@@ -402,7 +404,7 @@ public class HttpClientJsonExtensions extends NetObject  {
      * @throws system.UriFormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PatchAsJsonAsync" target="_top">.NET documentation</a>
      */
-    public static <TValue extends IJCOBridgeReflected> Task_1 PatchAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.UriFormatException {
+    public static <TValue extends IJCOBridgeReflected> Task_1<HttpResponseMessage> PatchAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPatchAsJsonAsync = null;
@@ -443,7 +445,7 @@ public class HttpClientJsonExtensions extends NetObject  {
      * @throws system.UriFormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PatchAsJsonAsync" target="_top">.NET documentation</a>
      */
-    public static <TValue extends IJCOBridgeReflected> Task_1 PatchAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.UriFormatException {
+    public static <TValue extends IJCOBridgeReflected> Task_1<HttpResponseMessage> PatchAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPatchAsJsonAsync = null;
@@ -481,7 +483,7 @@ public class HttpClientJsonExtensions extends NetObject  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PatchAsJsonAsync" target="_top">.NET documentation</a>
      */
-    public static <TValue extends IJCOBridgeReflected> Task_1 PatchAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.UriFormatException, system.ObjectDisposedException {
+    public static <TValue extends IJCOBridgeReflected> Task_1<HttpResponseMessage> PatchAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.UriFormatException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPatchAsJsonAsync = null;
@@ -522,7 +524,7 @@ public class HttpClientJsonExtensions extends NetObject  {
      * @throws system.diagnostics.UnreachableException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PatchAsJsonAsync" target="_top">.NET documentation</a>
      */
-    public static <TValue extends IJCOBridgeReflected> Task_1 PatchAsJsonAsync(HttpClient client, Uri requestUri, TValue value, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.UriFormatException, system.diagnostics.UnreachableException {
+    public static <TValue extends IJCOBridgeReflected> Task_1<HttpResponseMessage> PatchAsJsonAsync(HttpClient client, Uri requestUri, TValue value, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.UriFormatException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPatchAsJsonAsync = null;
@@ -563,7 +565,7 @@ public class HttpClientJsonExtensions extends NetObject  {
      * @throws system.UriFormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PatchAsJsonAsync" target="_top">.NET documentation</a>
      */
-    public static <TValue extends IJCOBridgeReflected> Task_1 PatchAsJsonAsync(HttpClient client, Uri requestUri, TValue value, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.UriFormatException {
+    public static <TValue extends IJCOBridgeReflected> Task_1<HttpResponseMessage> PatchAsJsonAsync(HttpClient client, Uri requestUri, TValue value, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPatchAsJsonAsync = null;
@@ -601,7 +603,7 @@ public class HttpClientJsonExtensions extends NetObject  {
      * @throws system.diagnostics.UnreachableException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PatchAsJsonAsync" target="_top">.NET documentation</a>
      */
-    public static <TValue extends IJCOBridgeReflected> Task_1 PatchAsJsonAsync(HttpClient client, Uri requestUri, TValue value, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.UriFormatException, system.diagnostics.UnreachableException {
+    public static <TValue extends IJCOBridgeReflected> Task_1<HttpResponseMessage> PatchAsJsonAsync(HttpClient client, Uri requestUri, TValue value, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.UriFormatException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPatchAsJsonAsync = null;
@@ -642,7 +644,7 @@ public class HttpClientJsonExtensions extends NetObject  {
      * @throws system.UriFormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PostAsJsonAsync" target="_top">.NET documentation</a>
      */
-    public static <TValue extends IJCOBridgeReflected> Task_1 PostAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.UriFormatException {
+    public static <TValue extends IJCOBridgeReflected> Task_1<HttpResponseMessage> PostAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPostAsJsonAsync = null;
@@ -683,7 +685,7 @@ public class HttpClientJsonExtensions extends NetObject  {
      * @throws system.UriFormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PostAsJsonAsync" target="_top">.NET documentation</a>
      */
-    public static <TValue extends IJCOBridgeReflected> Task_1 PostAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.UriFormatException {
+    public static <TValue extends IJCOBridgeReflected> Task_1<HttpResponseMessage> PostAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPostAsJsonAsync = null;
@@ -721,7 +723,7 @@ public class HttpClientJsonExtensions extends NetObject  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PostAsJsonAsync" target="_top">.NET documentation</a>
      */
-    public static <TValue extends IJCOBridgeReflected> Task_1 PostAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.UriFormatException, system.ObjectDisposedException {
+    public static <TValue extends IJCOBridgeReflected> Task_1<HttpResponseMessage> PostAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.UriFormatException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPostAsJsonAsync = null;
@@ -762,7 +764,7 @@ public class HttpClientJsonExtensions extends NetObject  {
      * @throws system.diagnostics.UnreachableException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PostAsJsonAsync" target="_top">.NET documentation</a>
      */
-    public static <TValue extends IJCOBridgeReflected> Task_1 PostAsJsonAsync(HttpClient client, Uri requestUri, TValue value, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.UriFormatException, system.diagnostics.UnreachableException {
+    public static <TValue extends IJCOBridgeReflected> Task_1<HttpResponseMessage> PostAsJsonAsync(HttpClient client, Uri requestUri, TValue value, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.UriFormatException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPostAsJsonAsync = null;
@@ -803,7 +805,7 @@ public class HttpClientJsonExtensions extends NetObject  {
      * @throws system.UriFormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PostAsJsonAsync" target="_top">.NET documentation</a>
      */
-    public static <TValue extends IJCOBridgeReflected> Task_1 PostAsJsonAsync(HttpClient client, Uri requestUri, TValue value, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.UriFormatException {
+    public static <TValue extends IJCOBridgeReflected> Task_1<HttpResponseMessage> PostAsJsonAsync(HttpClient client, Uri requestUri, TValue value, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPostAsJsonAsync = null;
@@ -841,7 +843,7 @@ public class HttpClientJsonExtensions extends NetObject  {
      * @throws system.diagnostics.UnreachableException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PostAsJsonAsync" target="_top">.NET documentation</a>
      */
-    public static <TValue extends IJCOBridgeReflected> Task_1 PostAsJsonAsync(HttpClient client, Uri requestUri, TValue value, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.UriFormatException, system.diagnostics.UnreachableException {
+    public static <TValue extends IJCOBridgeReflected> Task_1<HttpResponseMessage> PostAsJsonAsync(HttpClient client, Uri requestUri, TValue value, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.UriFormatException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPostAsJsonAsync = null;
@@ -882,7 +884,7 @@ public class HttpClientJsonExtensions extends NetObject  {
      * @throws system.UriFormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PutAsJsonAsync" target="_top">.NET documentation</a>
      */
-    public static <TValue extends IJCOBridgeReflected> Task_1 PutAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.UriFormatException {
+    public static <TValue extends IJCOBridgeReflected> Task_1<HttpResponseMessage> PutAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPutAsJsonAsync = null;
@@ -923,7 +925,7 @@ public class HttpClientJsonExtensions extends NetObject  {
      * @throws system.UriFormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PutAsJsonAsync" target="_top">.NET documentation</a>
      */
-    public static <TValue extends IJCOBridgeReflected> Task_1 PutAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.UriFormatException {
+    public static <TValue extends IJCOBridgeReflected> Task_1<HttpResponseMessage> PutAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPutAsJsonAsync = null;
@@ -961,7 +963,7 @@ public class HttpClientJsonExtensions extends NetObject  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PutAsJsonAsync" target="_top">.NET documentation</a>
      */
-    public static <TValue extends IJCOBridgeReflected> Task_1 PutAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.UriFormatException, system.ObjectDisposedException {
+    public static <TValue extends IJCOBridgeReflected> Task_1<HttpResponseMessage> PutAsJsonAsync(HttpClient client, java.lang.String requestUri, TValue value, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.UriFormatException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPutAsJsonAsync = null;
@@ -1002,7 +1004,7 @@ public class HttpClientJsonExtensions extends NetObject  {
      * @throws system.diagnostics.UnreachableException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PutAsJsonAsync" target="_top">.NET documentation</a>
      */
-    public static <TValue extends IJCOBridgeReflected> Task_1 PutAsJsonAsync(HttpClient client, Uri requestUri, TValue value, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.UriFormatException, system.diagnostics.UnreachableException {
+    public static <TValue extends IJCOBridgeReflected> Task_1<HttpResponseMessage> PutAsJsonAsync(HttpClient client, Uri requestUri, TValue value, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.UriFormatException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPutAsJsonAsync = null;
@@ -1043,7 +1045,7 @@ public class HttpClientJsonExtensions extends NetObject  {
      * @throws system.UriFormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PutAsJsonAsync" target="_top">.NET documentation</a>
      */
-    public static <TValue extends IJCOBridgeReflected> Task_1 PutAsJsonAsync(HttpClient client, Uri requestUri, TValue value, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.UriFormatException {
+    public static <TValue extends IJCOBridgeReflected> Task_1<HttpResponseMessage> PutAsJsonAsync(HttpClient client, Uri requestUri, TValue value, JsonTypeInfo_1 jsonTypeInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPutAsJsonAsync = null;
@@ -1081,7 +1083,7 @@ public class HttpClientJsonExtensions extends NetObject  {
      * @throws system.diagnostics.UnreachableException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.PutAsJsonAsync" target="_top">.NET documentation</a>
      */
-    public static <TValue extends IJCOBridgeReflected> Task_1 PutAsJsonAsync(HttpClient client, Uri requestUri, TValue value, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.UriFormatException, system.diagnostics.UnreachableException {
+    public static <TValue extends IJCOBridgeReflected> Task_1<HttpResponseMessage> PutAsJsonAsync(HttpClient client, Uri requestUri, TValue value, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.UriFormatException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPutAsJsonAsync = null;
@@ -1121,7 +1123,7 @@ public class HttpClientJsonExtensions extends NetObject  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.DeleteFromJsonAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 DeleteFromJsonAsync(HttpClient client, java.lang.String requestUri, NetType type, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException, system.NullReferenceException {
+    public static Task_1<Object> DeleteFromJsonAsync(HttpClient client, java.lang.String requestUri, NetType type, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDeleteFromJsonAsync = null;
@@ -1161,7 +1163,7 @@ public class HttpClientJsonExtensions extends NetObject  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.DeleteFromJsonAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 DeleteFromJsonAsync(HttpClient client, java.lang.String requestUri, NetType type, JsonSerializerContext context, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException, system.NullReferenceException {
+    public static Task_1<Object> DeleteFromJsonAsync(HttpClient client, java.lang.String requestUri, NetType type, JsonSerializerContext context, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDeleteFromJsonAsync = null;
@@ -1197,7 +1199,7 @@ public class HttpClientJsonExtensions extends NetObject  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.DeleteFromJsonAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 DeleteFromJsonAsync(HttpClient client, java.lang.String requestUri, NetType type, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.UriFormatException, system.ObjectDisposedException {
+    public static Task_1<Object> DeleteFromJsonAsync(HttpClient client, java.lang.String requestUri, NetType type, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.UriFormatException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDeleteFromJsonAsync = null;
@@ -1234,7 +1236,7 @@ public class HttpClientJsonExtensions extends NetObject  {
      * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.DeleteFromJsonAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 DeleteFromJsonAsync(HttpClient client, Uri requestUri, NetType type, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.SynchronizationLockException {
+    public static Task_1<Object> DeleteFromJsonAsync(HttpClient client, Uri requestUri, NetType type, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDeleteFromJsonAsync = null;
@@ -1269,7 +1271,7 @@ public class HttpClientJsonExtensions extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.DeleteFromJsonAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 DeleteFromJsonAsync(HttpClient client, Uri requestUri, NetType type, JsonSerializerContext context, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.ArgumentOutOfRangeException {
+    public static Task_1<Object> DeleteFromJsonAsync(HttpClient client, Uri requestUri, NetType type, JsonSerializerContext context, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDeleteFromJsonAsync = null;
@@ -1302,7 +1304,7 @@ public class HttpClientJsonExtensions extends NetObject  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.DeleteFromJsonAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 DeleteFromJsonAsync(HttpClient client, Uri requestUri, NetType type, CancellationToken cancellationToken) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ObjectDisposedException {
+    public static Task_1<Object> DeleteFromJsonAsync(HttpClient client, Uri requestUri, NetType type, CancellationToken cancellationToken) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDeleteFromJsonAsync = null;
@@ -1341,7 +1343,7 @@ public class HttpClientJsonExtensions extends NetObject  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 GetFromJsonAsync(HttpClient client, java.lang.String requestUri, NetType type, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException {
+    public static Task_1<Object> GetFromJsonAsync(HttpClient client, java.lang.String requestUri, NetType type, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetFromJsonAsync = null;
@@ -1381,7 +1383,7 @@ public class HttpClientJsonExtensions extends NetObject  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 GetFromJsonAsync(HttpClient client, java.lang.String requestUri, NetType type, JsonSerializerContext context, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException, system.NullReferenceException {
+    public static Task_1<Object> GetFromJsonAsync(HttpClient client, java.lang.String requestUri, NetType type, JsonSerializerContext context, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetFromJsonAsync = null;
@@ -1417,7 +1419,7 @@ public class HttpClientJsonExtensions extends NetObject  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 GetFromJsonAsync(HttpClient client, java.lang.String requestUri, NetType type, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.UriFormatException, system.ObjectDisposedException {
+    public static Task_1<Object> GetFromJsonAsync(HttpClient client, java.lang.String requestUri, NetType type, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.UriFormatException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetFromJsonAsync = null;
@@ -1455,7 +1457,7 @@ public class HttpClientJsonExtensions extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 GetFromJsonAsync(HttpClient client, Uri requestUri, NetType type, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.UriFormatException, system.IndexOutOfRangeException {
+    public static Task_1<Object> GetFromJsonAsync(HttpClient client, Uri requestUri, NetType type, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.UriFormatException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetFromJsonAsync = null;
@@ -1490,7 +1492,7 @@ public class HttpClientJsonExtensions extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 GetFromJsonAsync(HttpClient client, Uri requestUri, NetType type, JsonSerializerContext context, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.ArgumentOutOfRangeException {
+    public static Task_1<Object> GetFromJsonAsync(HttpClient client, Uri requestUri, NetType type, JsonSerializerContext context, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetFromJsonAsync = null;
@@ -1526,7 +1528,7 @@ public class HttpClientJsonExtensions extends NetObject  {
      * @throws system.diagnostics.UnreachableException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpClientJsonExtensions.GetFromJsonAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 GetFromJsonAsync(HttpClient client, Uri requestUri, NetType type, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.IndexOutOfRangeException, system.NotSupportedException, system.diagnostics.UnreachableException {
+    public static Task_1<Object> GetFromJsonAsync(HttpClient client, Uri requestUri, NetType type, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.UriFormatException, system.IndexOutOfRangeException, system.NotSupportedException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetFromJsonAsync = null;

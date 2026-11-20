@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.windows.forms.DragEventArgs;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.workflow.componentmodel.Activity;
 import system.drawing.Point;
 
 
@@ -171,7 +172,7 @@ public class ActivityDragEventArgs extends system.windows.forms.DragEventArgs  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDragEventArgs.Activities" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getActivities() throws Throwable, system.ArgumentNullException {
+    public ReadOnlyCollection_1<Activity> getActivities() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectActivities = null;

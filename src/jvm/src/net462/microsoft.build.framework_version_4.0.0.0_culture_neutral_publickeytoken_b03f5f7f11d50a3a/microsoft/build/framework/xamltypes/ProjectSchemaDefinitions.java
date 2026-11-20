@@ -40,7 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.Object;
 import system.collections.generic.List_1;
+import microsoft.build.framework.xamltypes.IProjectSchemaNode;
+import microsoft.build.framework.xamltypes.IProjectSchemaNodeImplementation;
 
 
 /**
@@ -179,7 +182,7 @@ public class ProjectSchemaDefinitions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.ProjectSchemaDefinitions.GetSchemaObjects" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetSchemaObjects(NetType type) throws Throwable {
+    public IEnumerable_1<Object> GetSchemaObjects(NetType type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetSchemaObjects = null;
@@ -205,7 +208,7 @@ public class ProjectSchemaDefinitions extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.ProjectSchemaDefinitions.GetSchemaObjectTypes" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetSchemaObjectTypes() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+    public IEnumerable_1<NetType> GetSchemaObjectTypes() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetSchemaObjectTypes = null;
@@ -231,7 +234,7 @@ public class ProjectSchemaDefinitions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.ProjectSchemaDefinitions.Nodes" target="_top">.NET documentation</a>
      */
-    public List_1 getNodes() throws Throwable {
+    public List_1<IProjectSchemaNode> getNodes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectNodes = null;
@@ -253,7 +256,7 @@ public class ProjectSchemaDefinitions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.ProjectSchemaDefinitions.Nodes" target="_top">.NET documentation</a>
      */
-    public void setNodes(List_1 Nodes) throws Throwable {
+    public void setNodes(List_1<IProjectSchemaNode> Nodes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

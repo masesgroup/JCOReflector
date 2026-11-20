@@ -45,6 +45,8 @@ import system.windows.controls.Panel;
 import system.windows.forms.integration.PropertyMap;
 import system.windows.UIElement;
 import system.EventHandler;
+import system.EventHandler_1;
+import system.windows.forms.integration.ChildChangedEventArgs;
 import system.windows.forms.ControlEventHandler;
 import system.windows.forms.DragEventHandler;
 import system.windows.forms.GiveFeedbackEventHandler;
@@ -1142,6 +1144,40 @@ public class ElementHost extends system.windows.forms.Control  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TextChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addChildChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ChildChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addChildChanged(EventHandler_1<ChildChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("ChildChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeChildChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ChildChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeChildChanged(EventHandler_1<ChildChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("ChildChanged", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

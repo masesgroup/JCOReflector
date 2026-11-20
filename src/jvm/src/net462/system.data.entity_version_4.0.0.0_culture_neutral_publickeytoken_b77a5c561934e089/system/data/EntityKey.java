@@ -40,11 +40,11 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.data.EntityKeyMember;
 import system.data.EntityKey;
 import system.data.metadata.edm.EntitySet;
 import system.data.metadata.edm.MetadataWorkspace;
 import system.runtime.serialization.StreamingContext;
-import system.data.EntityKeyMember;
 
 
 /**

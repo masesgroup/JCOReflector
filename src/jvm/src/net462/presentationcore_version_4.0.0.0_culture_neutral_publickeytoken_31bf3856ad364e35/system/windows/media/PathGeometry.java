@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.windows.media.Geometry;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.windows.media.PathFigure;
 import system.windows.media.FillRule;
 import system.windows.media.Transform;
 import system.windows.media.PathGeometry;
@@ -180,7 +181,7 @@ public class PathGeometry extends system.windows.media.Geometry  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param figures the argument of type {@code IEnumerable_1}
+     * @param figures the argument of type {@code IEnumerable_1<PathFigure>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -190,7 +191,7 @@ public class PathGeometry extends system.windows.media.Geometry  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.PathGeometry.-ctor" target="_top">.NET documentation</a>
      */
-    public PathGeometry(IEnumerable_1 figures) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public PathGeometry(IEnumerable_1<PathFigure> figures) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -203,7 +204,7 @@ public class PathGeometry extends system.windows.media.Geometry  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param figures the argument of type {@code IEnumerable_1}
+     * @param figures the argument of type {@code IEnumerable_1<PathFigure>}
      * @param fillRule the argument of type {@code FillRule}
      * @param transform the argument of type {@code Transform}
      * @throws Throwable if the .NET constructor fails
@@ -215,7 +216,7 @@ public class PathGeometry extends system.windows.media.Geometry  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.PathGeometry.-ctor" target="_top">.NET documentation</a>
      */
-    public PathGeometry(IEnumerable_1 figures, FillRule fillRule, Transform transform) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public PathGeometry(IEnumerable_1<PathFigure> figures, FillRule fillRule, Transform transform) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

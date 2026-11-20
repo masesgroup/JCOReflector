@@ -46,6 +46,7 @@ import system.identitymodel.tokens.SecurityTokenHandlerConfiguration;
 import system.xml.XmlReader;
 import system.identitymodel.tokens.SecurityToken;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.security.claims.ClaimsIdentity;
 import system.identitymodel.tokens.SecurityKeyIdentifierClause;
 import system.identitymodel.tokens.SecurityTokenDescriptor;
 import system.identitymodel.tokens.SecurityTokenHandlerCollection;
@@ -185,7 +186,7 @@ public class SecurityTokenHandlerCollection extends system.collections.objectmod
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param handlers the argument of type {@code IEnumerable_1}
+     * @param handlers the argument of type {@code IEnumerable_1<SecurityTokenHandler>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -196,7 +197,7 @@ public class SecurityTokenHandlerCollection extends system.collections.objectmod
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenHandlerCollection.-ctor" target="_top">.NET documentation</a>
      */
-    public SecurityTokenHandlerCollection(IEnumerable_1 handlers) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+    public SecurityTokenHandlerCollection(IEnumerable_1<SecurityTokenHandler> handlers) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -209,7 +210,7 @@ public class SecurityTokenHandlerCollection extends system.collections.objectmod
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param handlers the argument of type {@code IEnumerable_1}
+     * @param handlers the argument of type {@code IEnumerable_1<SecurityTokenHandler>}
      * @param configuration the argument of type {@code SecurityTokenHandlerConfiguration}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -227,7 +228,7 @@ public class SecurityTokenHandlerCollection extends system.collections.objectmod
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenHandlerCollection.-ctor" target="_top">.NET documentation</a>
      */
-    public SecurityTokenHandlerCollection(IEnumerable_1 handlers, SecurityTokenHandlerConfiguration configuration) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+    public SecurityTokenHandlerCollection(IEnumerable_1<SecurityTokenHandler> handlers, SecurityTokenHandlerConfiguration configuration) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -422,7 +423,7 @@ public class SecurityTokenHandlerCollection extends system.collections.objectmod
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenHandlerCollection.ValidateToken" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 ValidateToken(SecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+    public ReadOnlyCollection_1<ClaimsIdentity> ValidateToken(SecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValidateToken = null;
@@ -790,7 +791,7 @@ public class SecurityTokenHandlerCollection extends system.collections.objectmod
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenHandlerCollection.TokenTypes" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getTokenTypes() throws Throwable, system.ArgumentNullException {
+    public IEnumerable_1<NetType> getTokenTypes() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTokenTypes = null;

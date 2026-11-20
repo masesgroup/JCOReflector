@@ -43,6 +43,7 @@ import system.Uri;
 import system.io.packaging.VerifyResult;
 import system.security.cryptography.x509certificates.X509Certificate;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.io.packaging.PackageRelationshipSelector;
 import system.DateTime;
 import system.io.packaging.CertificateEmbeddingOption;
 import system.io.packaging.PackagePart;
@@ -369,7 +370,7 @@ public class PackageDigitalSignature extends NetObject  {
      * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageDigitalSignature.SignedRelationshipSelectors" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getSignedRelationshipSelectors() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.cryptography.CryptographicException, system.io.IOException, system.security.SecurityException, system.io.FileFormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.NullReferenceException, system.xml.xpath.XPathException, system.OverflowException {
+    public ReadOnlyCollection_1<PackageRelationshipSelector> getSignedRelationshipSelectors() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.cryptography.CryptographicException, system.io.IOException, system.security.SecurityException, system.io.FileFormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.NullReferenceException, system.xml.xpath.XPathException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSignedRelationshipSelectors = null;
@@ -408,7 +409,7 @@ public class PackageDigitalSignature extends NetObject  {
      * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageDigitalSignature.SignedParts" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getSignedParts() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.cryptography.CryptographicException, system.io.IOException, system.security.SecurityException, system.io.FileFormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.NullReferenceException, system.xml.xpath.XPathException, system.OverflowException {
+    public ReadOnlyCollection_1<Uri> getSignedParts() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.cryptography.CryptographicException, system.io.IOException, system.security.SecurityException, system.io.FileFormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.NullReferenceException, system.xml.xpath.XPathException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSignedParts = null;

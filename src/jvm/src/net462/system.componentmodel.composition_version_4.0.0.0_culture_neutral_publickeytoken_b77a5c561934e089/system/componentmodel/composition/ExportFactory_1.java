@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.Func_1;
+import system.Tuple_2;
+import system.Action;
 import system.componentmodel.composition.ExportLifetimeContext_1;
 
 
@@ -156,12 +158,12 @@ public class ExportFactory_1<T extends IJCOBridgeReflected> extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param exportLifetimeContextCreator the argument of type {@code Func_1}
+     * @param exportLifetimeContextCreator the argument of type {@code Func_1<Tuple_2<T, Action>>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ExportFactory-1.-ctor" target="_top">.NET documentation</a>
      */
-    public ExportFactory_1(Func_1 exportLifetimeContextCreator) throws Throwable, system.ArgumentNullException {
+    public ExportFactory_1(Func_1<Tuple_2<T, Action>> exportLifetimeContextCreator) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -185,7 +187,7 @@ public class ExportFactory_1<T extends IJCOBridgeReflected> extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ExportFactory-1.CreateExport" target="_top">.NET documentation</a>
      */
-    public ExportLifetimeContext_1 CreateExport() throws Throwable {
+    public ExportLifetimeContext_1<T> CreateExport() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCreateExport = null;

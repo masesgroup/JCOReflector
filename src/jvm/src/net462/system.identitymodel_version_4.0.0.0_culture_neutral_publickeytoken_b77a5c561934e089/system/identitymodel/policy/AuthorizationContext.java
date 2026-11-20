@@ -41,9 +41,12 @@ import java.util.ArrayList;
 import system.identitymodel.policy.AuthorizationContext;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.identitymodel.policy.IAuthorizationPolicy;
+import system.identitymodel.policy.IAuthorizationPolicyImplementation;
 import system.collections.generic.IDictionary_2;
 import system.collections.generic.IDictionary_2Implementation;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.identitymodel.claims.ClaimSet;
 import system.DateTime;
 
 
@@ -164,7 +167,7 @@ public class AuthorizationContext extends NetObject  {
     /**
      * Invokes the .NET member CreateDefaultAuthorizationContext.
      *
-     * @param authorizationPolicies the argument of type {@code IList_1}
+     * @param authorizationPolicies the argument of type {@code IList_1<IAuthorizationPolicy>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -180,7 +183,7 @@ public class AuthorizationContext extends NetObject  {
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Policy.AuthorizationContext.CreateDefaultAuthorizationContext" target="_top">.NET documentation</a>
      */
-    public static AuthorizationContext CreateDefaultAuthorizationContext(IList_1 authorizationPolicies) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException {
+    public static AuthorizationContext CreateDefaultAuthorizationContext(IList_1<IAuthorizationPolicy> authorizationPolicies) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateDefaultAuthorizationContext = null;
@@ -228,7 +231,7 @@ public class AuthorizationContext extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Policy.AuthorizationContext.ClaimSets" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getClaimSets() throws Throwable {
+    public ReadOnlyCollection_1<ClaimSet> getClaimSets() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectClaimSets = null;

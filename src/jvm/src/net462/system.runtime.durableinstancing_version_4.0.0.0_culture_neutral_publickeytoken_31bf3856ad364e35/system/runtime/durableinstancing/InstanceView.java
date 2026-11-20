@@ -40,8 +40,12 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IDictionary_2;
 import system.collections.generic.IDictionary_2Implementation;
-import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.Guid;
+import system.runtime.durableinstancing.InstanceKeyView;
+import system.xml.linq.XName;
+import system.runtime.durableinstancing.InstanceValue;
+import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.runtime.durableinstancing.InstanceStoreQueryResult;
 import system.runtime.durableinstancing.InstanceOwner;
 import system.runtime.durableinstancing.InstanceState;
 import system.runtime.durableinstancing.InstanceValueConsistency;
@@ -254,7 +258,7 @@ public class InstanceView extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.InstanceKeys" target="_top">.NET documentation</a>
      */
-    public IDictionary_2 getInstanceKeys() throws Throwable {
+    public IDictionary_2<Guid, InstanceKeyView> getInstanceKeys() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectInstanceKeys = null;
@@ -284,7 +288,7 @@ public class InstanceView extends NetObject  {
      * @throws system.MulticastNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.InstanceKeys" target="_top">.NET documentation</a>
      */
-    public void setInstanceKeys(IDictionary_2 InstanceKeys) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException {
+    public void setInstanceKeys(IDictionary_2<Guid, InstanceKeyView> InstanceKeys) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -301,7 +305,7 @@ public class InstanceView extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.InstanceData" target="_top">.NET documentation</a>
      */
-    public IDictionary_2 getInstanceData() throws Throwable {
+    public IDictionary_2<XName, InstanceValue> getInstanceData() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectInstanceData = null;
@@ -331,7 +335,7 @@ public class InstanceView extends NetObject  {
      * @throws system.MulticastNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.InstanceData" target="_top">.NET documentation</a>
      */
-    public void setInstanceData(IDictionary_2 InstanceData) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException {
+    public void setInstanceData(IDictionary_2<XName, InstanceValue> InstanceData) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -357,7 +361,7 @@ public class InstanceView extends NetObject  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.InstanceMetadata" target="_top">.NET documentation</a>
      */
-    public IDictionary_2 getInstanceMetadata() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException {
+    public IDictionary_2<XName, InstanceValue> getInstanceMetadata() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectInstanceMetadata = null;
@@ -387,7 +391,7 @@ public class InstanceView extends NetObject  {
      * @throws system.MulticastNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.InstanceMetadata" target="_top">.NET documentation</a>
      */
-    public void setInstanceMetadata(IDictionary_2 InstanceMetadata) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException {
+    public void setInstanceMetadata(IDictionary_2<XName, InstanceValue> InstanceMetadata) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -413,7 +417,7 @@ public class InstanceView extends NetObject  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.InstanceOwnerMetadata" target="_top">.NET documentation</a>
      */
-    public IDictionary_2 getInstanceOwnerMetadata() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException {
+    public IDictionary_2<XName, InstanceValue> getInstanceOwnerMetadata() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectInstanceOwnerMetadata = null;
@@ -443,7 +447,7 @@ public class InstanceView extends NetObject  {
      * @throws system.MulticastNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.InstanceOwnerMetadata" target="_top">.NET documentation</a>
      */
-    public void setInstanceOwnerMetadata(IDictionary_2 InstanceOwnerMetadata) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException {
+    public void setInstanceOwnerMetadata(IDictionary_2<XName, InstanceValue> InstanceOwnerMetadata) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -461,7 +465,7 @@ public class InstanceView extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.InstanceStoreQueryResults" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getInstanceStoreQueryResults() throws Throwable, system.ArgumentNullException {
+    public ReadOnlyCollection_1<InstanceStoreQueryResult> getInstanceStoreQueryResults() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectInstanceStoreQueryResults = null;
@@ -492,7 +496,7 @@ public class InstanceView extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceView.InstanceStoreQueryResults" target="_top">.NET documentation</a>
      */
-    public void setInstanceStoreQueryResults(ReadOnlyCollection_1 InstanceStoreQueryResults) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.NotSupportedException {
+    public void setInstanceStoreQueryResults(ReadOnlyCollection_1<InstanceStoreQueryResult> InstanceStoreQueryResults) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

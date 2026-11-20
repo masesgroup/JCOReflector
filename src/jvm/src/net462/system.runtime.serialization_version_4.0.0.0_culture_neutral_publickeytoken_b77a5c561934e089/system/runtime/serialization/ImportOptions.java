@@ -377,7 +377,7 @@ public class ImportOptions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ImportOptions.ReferencedCollectionTypes" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getReferencedCollectionTypes() throws Throwable {
+    public ICollection_1<NetType> getReferencedCollectionTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReferencedCollectionTypes = null;
@@ -399,7 +399,7 @@ public class ImportOptions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.ImportOptions.ReferencedTypes" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getReferencedTypes() throws Throwable {
+    public ICollection_1<NetType> getReferencedTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReferencedTypes = null;

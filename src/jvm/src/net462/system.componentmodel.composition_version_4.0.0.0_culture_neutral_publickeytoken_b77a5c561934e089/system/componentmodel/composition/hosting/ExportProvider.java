@@ -42,8 +42,12 @@ import system.componentmodel.composition.primitives.ImportDefinition;
 import system.componentmodel.composition.hosting.AtomicComposition;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
-import system.Lazy_1;
+import system.componentmodel.composition.primitives.Export;
 import system.Lazy_2;
+import system.Object;
+import system.Lazy_1;
+import system.EventHandler_1;
+import system.componentmodel.composition.hosting.ExportsChangeEventArgs;
 
 
 /**
@@ -202,7 +206,7 @@ public class ExportProvider extends NetObject  {
      * @throws system.componentmodel.composition.ImportCardinalityMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.ExportProvider.GetExports" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetExports(ImportDefinition definition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.componentmodel.composition.ImportCardinalityMismatchException {
+    public IEnumerable_1<Export> GetExports(ImportDefinition definition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.componentmodel.composition.ImportCardinalityMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetExports = null;
@@ -232,7 +236,7 @@ public class ExportProvider extends NetObject  {
      * @throws system.componentmodel.composition.ImportCardinalityMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.ExportProvider.GetExports" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetExports(ImportDefinition definition, AtomicComposition atomicComposition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.composition.ImportCardinalityMismatchException {
+    public IEnumerable_1<Export> GetExports(ImportDefinition definition, AtomicComposition atomicComposition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.composition.ImportCardinalityMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetExports = null;
@@ -342,7 +346,7 @@ public class ExportProvider extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.ExportProvider.GetExports" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetExports(NetType type, NetType metadataViewType, java.lang.String contractName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.composition.ImportCardinalityMismatchException, system.FormatException {
+    public IEnumerable_1<Lazy_2<Object, Object>> GetExports(NetType type, NetType metadataViewType, java.lang.String contractName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.componentmodel.composition.ImportCardinalityMismatchException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetExports = null;
@@ -509,6 +513,74 @@ public class ExportProvider extends NetObject  {
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addExportsChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ExportsChangeEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addExportsChanged(EventHandler_1<ExportsChangeEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("ExportsChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeExportsChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ExportsChangeEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeExportsChanged(EventHandler_1<ExportsChangeEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("ExportsChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addExportsChanging.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ExportsChangeEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addExportsChanging(EventHandler_1<ExportsChangeEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("ExportsChanging", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeExportsChanging.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ExportsChangeEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeExportsChanging(EventHandler_1<ExportsChangeEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("ExportsChanging", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

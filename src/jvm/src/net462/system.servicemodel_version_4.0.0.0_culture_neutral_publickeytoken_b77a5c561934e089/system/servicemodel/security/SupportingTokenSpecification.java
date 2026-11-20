@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.servicemodel.security.SecurityTokenSpecification;
 import system.identitymodel.tokens.SecurityToken;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.identitymodel.policy.IAuthorizationPolicy;
+import system.identitymodel.policy.IAuthorizationPolicyImplementation;
 import system.servicemodel.security.SecurityTokenAttachmentMode;
 import system.servicemodel.security.tokens.SecurityTokenParameters;
 
@@ -160,7 +162,7 @@ public class SupportingTokenSpecification extends system.servicemodel.security.S
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param token the argument of type {@code SecurityToken}
-     * @param tokenPolicies the argument of type {@code ReadOnlyCollection_1}
+     * @param tokenPolicies the argument of type {@code ReadOnlyCollection_1<IAuthorizationPolicy>}
      * @param attachmentMode the argument of type {@code SecurityTokenAttachmentMode}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
@@ -171,7 +173,7 @@ public class SupportingTokenSpecification extends system.servicemodel.security.S
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SupportingTokenSpecification.-ctor" target="_top">.NET documentation</a>
      */
-    public SupportingTokenSpecification(SecurityToken token, ReadOnlyCollection_1 tokenPolicies, SecurityTokenAttachmentMode attachmentMode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException {
+    public SupportingTokenSpecification(SecurityToken token, ReadOnlyCollection_1<IAuthorizationPolicy> tokenPolicies, SecurityTokenAttachmentMode attachmentMode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -185,7 +187,7 @@ public class SupportingTokenSpecification extends system.servicemodel.security.S
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param token the argument of type {@code SecurityToken}
-     * @param tokenPolicies the argument of type {@code ReadOnlyCollection_1}
+     * @param tokenPolicies the argument of type {@code ReadOnlyCollection_1<IAuthorizationPolicy>}
      * @param attachmentMode the argument of type {@code SecurityTokenAttachmentMode}
      * @param tokenParameters the argument of type {@code SecurityTokenParameters}
      * @throws Throwable if the .NET constructor fails
@@ -203,7 +205,7 @@ public class SupportingTokenSpecification extends system.servicemodel.security.S
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SupportingTokenSpecification.-ctor" target="_top">.NET documentation</a>
      */
-    public SupportingTokenSpecification(SecurityToken token, ReadOnlyCollection_1 tokenPolicies, SecurityTokenAttachmentMode attachmentMode, SecurityTokenParameters tokenParameters) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+    public SupportingTokenSpecification(SecurityToken token, ReadOnlyCollection_1<IAuthorizationPolicy> tokenPolicies, SecurityTokenAttachmentMode attachmentMode, SecurityTokenParameters tokenParameters) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

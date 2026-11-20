@@ -231,7 +231,7 @@ public class IConfigurationBuilderImplementation extends NetObject implements IC
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Configuration.IConfigurationBuilder.Sources" target="_top">.NET documentation</a>
      */
-    public IList_1 getSources() throws Throwable {
+    public IList_1<IConfigurationSource> getSources() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSources = null;

@@ -39,8 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.objectmodel.Collection_1;
+import system.identitymodel.tokens.Saml2AudienceRestriction;
 import system.identitymodel.tokens.Saml2ProxyRestriction;
 import system.Nullable_1;
+import system.DateTime;
 
 
 /**
@@ -220,7 +222,7 @@ public class Saml2Conditions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2Conditions.AudienceRestrictions" target="_top">.NET documentation</a>
      */
-    public Collection_1 getAudienceRestrictions() throws Throwable {
+    public Collection_1<Saml2AudienceRestriction> getAudienceRestrictions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAudienceRestrictions = null;
@@ -281,7 +283,7 @@ public class Saml2Conditions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2Conditions.NotBefore" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getNotBefore() throws Throwable {
+    public Nullable_1<DateTime> getNotBefore() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectNotBefore = null;
@@ -316,7 +318,7 @@ public class Saml2Conditions extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2Conditions.NotBefore" target="_top">.NET documentation</a>
      */
-    public void setNotBefore(Nullable_1 NotBefore) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.OverflowException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException {
+    public void setNotBefore(Nullable_1<DateTime> NotBefore) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.OverflowException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -333,7 +335,7 @@ public class Saml2Conditions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2Conditions.NotOnOrAfter" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getNotOnOrAfter() throws Throwable {
+    public Nullable_1<DateTime> getNotOnOrAfter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectNotOnOrAfter = null;
@@ -368,7 +370,7 @@ public class Saml2Conditions extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2Conditions.NotOnOrAfter" target="_top">.NET documentation</a>
      */
-    public void setNotOnOrAfter(Nullable_1 NotOnOrAfter) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.OverflowException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException {
+    public void setNotOnOrAfter(Nullable_1<DateTime> NotOnOrAfter) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.OverflowException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

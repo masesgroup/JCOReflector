@@ -45,6 +45,7 @@ import system.net.http.headers.ContentDispositionHeaderValue;
 import system.net.http.headers.ContentRangeHeaderValue;
 import system.net.http.headers.MediaTypeHeaderValue;
 import system.Nullable_1;
+import system.DateTimeOffset;
 import system.Uri;
 
 
@@ -469,7 +470,7 @@ public class HttpContentHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpContentHeaders.Expires" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getExpires() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+    public Nullable_1<DateTimeOffset> getExpires() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExpires = null;
@@ -500,7 +501,7 @@ public class HttpContentHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpContentHeaders.Expires" target="_top">.NET documentation</a>
      */
-    public void setExpires(Nullable_1 Expires) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.ArgumentOutOfRangeException {
+    public void setExpires(Nullable_1<DateTimeOffset> Expires) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -521,7 +522,7 @@ public class HttpContentHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpContentHeaders.LastModified" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getLastModified() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+    public Nullable_1<DateTimeOffset> getLastModified() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectLastModified = null;
@@ -552,7 +553,7 @@ public class HttpContentHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpContentHeaders.LastModified" target="_top">.NET documentation</a>
      */
-    public void setLastModified(Nullable_1 LastModified) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.ArgumentOutOfRangeException {
+    public void setLastModified(Nullable_1<DateTimeOffset> LastModified) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

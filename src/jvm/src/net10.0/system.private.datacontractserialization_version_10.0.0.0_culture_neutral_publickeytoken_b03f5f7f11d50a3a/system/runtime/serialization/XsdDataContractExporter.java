@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.xml.schema.XmlSchemaSet;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.reflection.Assembly;
 import system.xml.schema.XmlSchemaType;
 import system.xml.XmlQualifiedName;
 import system.runtime.serialization.ExportOptions;
@@ -194,7 +195,7 @@ public class XsdDataContractExporter extends NetObject  {
     /**
      * Invokes the .NET member CanExport.
      *
-     * @param assemblies the argument of type {@code ICollection_1}
+     * @param assemblies the argument of type {@code ICollection_1<Assembly>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -213,7 +214,7 @@ public class XsdDataContractExporter extends NetObject  {
      * @throws system.runtime.serialization.SerializationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.XsdDataContractExporter.CanExport" target="_top">.NET documentation</a>
      */
-    public boolean CanExport(ICollection_1 assemblies) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.runtime.serialization.InvalidDataContractException, system.runtime.serialization.SerializationException {
+    public boolean CanExport(ICollection_1<Assembly> assemblies) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.runtime.serialization.InvalidDataContractException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCanExport = null;
@@ -365,7 +366,7 @@ public class XsdDataContractExporter extends NetObject  {
     /**
      * Invokes the .NET member Export.
      *
-     * @param assemblies the argument of type {@code ICollection_1}
+     * @param assemblies the argument of type {@code ICollection_1<Assembly>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -388,7 +389,7 @@ public class XsdDataContractExporter extends NetObject  {
      * @throws system.reflection.TargetInvocationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.XsdDataContractExporter.Export" target="_top">.NET documentation</a>
      */
-    public void Export(ICollection_1 assemblies) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.runtime.serialization.InvalidDataContractException, system.runtime.serialization.SerializationException, system.globalization.CultureNotFoundException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public void Export(ICollection_1<Assembly> assemblies) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.runtime.serialization.InvalidDataContractException, system.runtime.serialization.SerializationException, system.globalization.CultureNotFoundException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

@@ -43,6 +43,7 @@ import system.componentmodel.composition.primitives.ImportDefinition;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
 import system.Lazy_1;
+import system.componentmodel.composition.primitives.ExportDefinition;
 import system.componentmodel.composition.primitives.ICompositionElement;
 import system.componentmodel.composition.primitives.ICompositionElementImplementation;
 import system.componentmodel.composition.primitives.ContractBasedImportDefinition;
@@ -51,7 +52,7 @@ import system.componentmodel.composition.primitives.ImportCardinality;
 import system.componentmodel.composition.CreationPolicy;
 import system.collections.generic.IDictionary_2;
 import system.collections.generic.IDictionary_2Implementation;
-import system.componentmodel.composition.primitives.ExportDefinition;
+import system.reflection.ParameterInfo;
 
 
 /**
@@ -256,7 +257,7 @@ public class ReflectionModelServices extends NetObject  {
      * Invokes the .NET member TryMakeGenericPartDefinition.
      *
      * @param partDefinition the argument of type {@code ComposablePartDefinition}
-     * @param genericParameters the argument of type {@code IEnumerable_1}
+     * @param genericParameters the argument of type {@code IEnumerable_1<NetType>}
      * @param specialization the argument of type {@code JCORefOut<ComposablePartDefinition>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -269,7 +270,7 @@ public class ReflectionModelServices extends NetObject  {
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ReflectionModel.ReflectionModelServices.TryMakeGenericPartDefinition" target="_top">.NET documentation</a>
      */
-    public static boolean TryMakeGenericPartDefinition(ComposablePartDefinition partDefinition, IEnumerable_1 genericParameters, JCORefOut<ComposablePartDefinition> specialization) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.NotImplementedException {
+    public static boolean TryMakeGenericPartDefinition(ComposablePartDefinition partDefinition, IEnumerable_1<NetType> genericParameters, JCORefOut<ComposablePartDefinition> specialization) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryMakeGenericPartDefinition = null;
@@ -286,10 +287,10 @@ public class ReflectionModelServices extends NetObject  {
     /**
      * Invokes the .NET member CreatePartDefinition.
      *
-     * @param partType the argument of type {@code Lazy_1}
+     * @param partType the argument of type {@code Lazy_1<NetType>}
      * @param isDisposalRequired the argument of type {@code boolean}
-     * @param imports the argument of type {@code Lazy_1}
-     * @param exports the argument of type {@code Lazy_1}
+     * @param imports the argument of type {@code Lazy_1<IEnumerable_1<ImportDefinition>>}
+     * @param exports the argument of type {@code Lazy_1<IEnumerable_1<ExportDefinition>>}
      * @param metadata the argument of type {@code Lazy_1}
      * @param origin the argument of type {@code ICompositionElement}
      * @return the value returned by the .NET member
@@ -301,7 +302,7 @@ public class ReflectionModelServices extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ReflectionModel.ReflectionModelServices.CreatePartDefinition" target="_top">.NET documentation</a>
      */
-    public static ComposablePartDefinition CreatePartDefinition(Lazy_1 partType, boolean isDisposalRequired, Lazy_1 imports, Lazy_1 exports, Lazy_1 metadata, ICompositionElement origin) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static ComposablePartDefinition CreatePartDefinition(Lazy_1<NetType> partType, boolean isDisposalRequired, Lazy_1<IEnumerable_1<ImportDefinition>> imports, Lazy_1<IEnumerable_1<ExportDefinition>> exports, Lazy_1 metadata, ICompositionElement origin) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreatePartDefinition = null;
@@ -449,7 +450,7 @@ public class ReflectionModelServices extends NetObject  {
     /**
      * Invokes the .NET member CreateImportDefinition.
      *
-     * @param parameter the argument of type {@code Lazy_1}
+     * @param parameter the argument of type {@code Lazy_1<ParameterInfo>}
      * @param contractName the argument of type {@code java.lang.String}
      * @param requiredTypeIdentity the argument of type {@code java.lang.String}
      * @param requiredMetadata the argument of type {@code IEnumerable_1}
@@ -475,7 +476,7 @@ public class ReflectionModelServices extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ReflectionModel.ReflectionModelServices.CreateImportDefinition" target="_top">.NET documentation</a>
      */
-    public static ContractBasedImportDefinition CreateImportDefinition(Lazy_1 parameter, java.lang.String contractName, java.lang.String requiredTypeIdentity, IEnumerable_1 requiredMetadata, ImportCardinality cardinality, CreationPolicy requiredCreationPolicy, IDictionary_2 metadata, boolean isExportFactory, ICompositionElement origin) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public static ContractBasedImportDefinition CreateImportDefinition(Lazy_1<ParameterInfo> parameter, java.lang.String contractName, java.lang.String requiredTypeIdentity, IEnumerable_1 requiredMetadata, ImportCardinality cardinality, CreationPolicy requiredCreationPolicy, IDictionary_2 metadata, boolean isExportFactory, ICompositionElement origin) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateImportDefinition = null;
@@ -493,7 +494,7 @@ public class ReflectionModelServices extends NetObject  {
     /**
      * Invokes the .NET member CreateImportDefinition.
      *
-     * @param parameter the argument of type {@code Lazy_1}
+     * @param parameter the argument of type {@code Lazy_1<ParameterInfo>}
      * @param contractName the argument of type {@code java.lang.String}
      * @param requiredTypeIdentity the argument of type {@code java.lang.String}
      * @param requiredMetadata the argument of type {@code IEnumerable_1}
@@ -516,7 +517,7 @@ public class ReflectionModelServices extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ReflectionModel.ReflectionModelServices.CreateImportDefinition" target="_top">.NET documentation</a>
      */
-    public static ContractBasedImportDefinition CreateImportDefinition(Lazy_1 parameter, java.lang.String contractName, java.lang.String requiredTypeIdentity, IEnumerable_1 requiredMetadata, ImportCardinality cardinality, CreationPolicy requiredCreationPolicy, ICompositionElement origin) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public static ContractBasedImportDefinition CreateImportDefinition(Lazy_1<ParameterInfo> parameter, java.lang.String contractName, java.lang.String requiredTypeIdentity, IEnumerable_1 requiredMetadata, ImportCardinality cardinality, CreationPolicy requiredCreationPolicy, ICompositionElement origin) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateImportDefinition = null;
@@ -699,7 +700,7 @@ public class ReflectionModelServices extends NetObject  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ReflectionModel.ReflectionModelServices.GetImportingParameter" target="_top">.NET documentation</a>
      */
-    public static Lazy_1 GetImportingParameter(ImportDefinition importDefinition) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static Lazy_1<ParameterInfo> GetImportingParameter(ImportDefinition importDefinition) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetImportingParameter = null;
@@ -726,7 +727,7 @@ public class ReflectionModelServices extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.ReflectionModel.ReflectionModelServices.GetPartType" target="_top">.NET documentation</a>
      */
-    public static Lazy_1 GetPartType(ComposablePartDefinition partDefinition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
+    public static Lazy_1<NetType> GetPartType(ComposablePartDefinition partDefinition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPartType = null;

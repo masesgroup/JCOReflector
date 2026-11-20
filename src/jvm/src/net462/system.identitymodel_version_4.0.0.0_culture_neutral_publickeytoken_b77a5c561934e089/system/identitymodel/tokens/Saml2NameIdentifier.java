@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.Uri;
 import system.collections.objectmodel.Collection_1;
+import system.identitymodel.tokens.EncryptedKeyIdentifierClause;
 import system.identitymodel.tokens.EncryptingCredentials;
 
 
@@ -228,7 +229,7 @@ public class Saml2NameIdentifier extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2NameIdentifier.ExternalEncryptedKeys" target="_top">.NET documentation</a>
      */
-    public Collection_1 getExternalEncryptedKeys() throws Throwable {
+    public Collection_1<EncryptedKeyIdentifierClause> getExternalEncryptedKeys() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExternalEncryptedKeys = null;

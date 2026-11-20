@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.Action_1;
+import system.threading.Barrier;
 import system.threading.CancellationToken;
 import system.TimeSpan;
 
@@ -158,7 +159,7 @@ public class Barrier extends NetObject implements AutoCloseable {
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param participantCount the argument of type {@code int}
-     * @param postPhaseAction the argument of type {@code Action_1}
+     * @param postPhaseAction the argument of type {@code Action_1<Barrier>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -173,7 +174,7 @@ public class Barrier extends NetObject implements AutoCloseable {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Barrier.-ctor" target="_top">.NET documentation</a>
      */
-    public Barrier(int participantCount, Action_1 postPhaseAction) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
+    public Barrier(int participantCount, Action_1<Barrier> postPhaseAction) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

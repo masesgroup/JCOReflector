@@ -183,7 +183,7 @@ public class StrokeCollection extends system.collections.objectmodel.Collection_
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param strokes the argument of type {@code IEnumerable_1}
+     * @param strokes the argument of type {@code IEnumerable_1<Stroke>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -198,7 +198,7 @@ public class StrokeCollection extends system.collections.objectmodel.Collection_
      * @throws system.threading.AbandonedMutexException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Ink.StrokeCollection.-ctor" target="_top">.NET documentation</a>
      */
-    public StrokeCollection(IEnumerable_1 strokes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public StrokeCollection(IEnumerable_1<Stroke> strokes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -475,7 +475,7 @@ public class StrokeCollection extends system.collections.objectmodel.Collection_
     /**
      * Invokes the .NET member HitTest.
      *
-     * @param lassoPoints the argument of type {@code IEnumerable_1}
+     * @param lassoPoints the argument of type {@code IEnumerable_1<Point>}
      * @param percentageWithinLasso the argument of type {@code int}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -489,7 +489,7 @@ public class StrokeCollection extends system.collections.objectmodel.Collection_
      * @throws system.MulticastNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Ink.StrokeCollection.HitTest" target="_top">.NET documentation</a>
      */
-    public StrokeCollection HitTest(IEnumerable_1 lassoPoints, int percentageWithinLasso) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException {
+    public StrokeCollection HitTest(IEnumerable_1<Point> lassoPoints, int percentageWithinLasso) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectHitTest = null;
@@ -507,7 +507,7 @@ public class StrokeCollection extends system.collections.objectmodel.Collection_
     /**
      * Invokes the .NET member HitTest.
      *
-     * @param path the argument of type {@code IEnumerable_1}
+     * @param path the argument of type {@code IEnumerable_1<Point>}
      * @param stylusShape the argument of type {@code StylusShape}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -521,7 +521,7 @@ public class StrokeCollection extends system.collections.objectmodel.Collection_
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Ink.StrokeCollection.HitTest" target="_top">.NET documentation</a>
      */
-    public StrokeCollection HitTest(IEnumerable_1 path, StylusShape stylusShape) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
+    public StrokeCollection HitTest(IEnumerable_1<Point> path, StylusShape stylusShape) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectHitTest = null;
@@ -723,7 +723,7 @@ public class StrokeCollection extends system.collections.objectmodel.Collection_
     /**
      * Invokes the .NET member Clip.
      *
-     * @param lassoPoints the argument of type {@code IEnumerable_1}
+     * @param lassoPoints the argument of type {@code IEnumerable_1<Point>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -741,7 +741,7 @@ public class StrokeCollection extends system.collections.objectmodel.Collection_
      * @throws system.MulticastNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Ink.StrokeCollection.Clip" target="_top">.NET documentation</a>
      */
-    public void Clip(IEnumerable_1 lassoPoints) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException {
+    public void Clip(IEnumerable_1<Point> lassoPoints) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -811,7 +811,7 @@ public class StrokeCollection extends system.collections.objectmodel.Collection_
     /**
      * Invokes the .NET member Erase.
      *
-     * @param lassoPoints the argument of type {@code IEnumerable_1}
+     * @param lassoPoints the argument of type {@code IEnumerable_1<Point>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -829,7 +829,7 @@ public class StrokeCollection extends system.collections.objectmodel.Collection_
      * @throws system.MulticastNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Ink.StrokeCollection.Erase" target="_top">.NET documentation</a>
      */
-    public void Erase(IEnumerable_1 lassoPoints) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException {
+    public void Erase(IEnumerable_1<Point> lassoPoints) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -842,7 +842,7 @@ public class StrokeCollection extends system.collections.objectmodel.Collection_
     /**
      * Invokes the .NET member Erase.
      *
-     * @param eraserPath the argument of type {@code IEnumerable_1}
+     * @param eraserPath the argument of type {@code IEnumerable_1<Point>}
      * @param eraserShape the argument of type {@code StylusShape}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -861,7 +861,7 @@ public class StrokeCollection extends system.collections.objectmodel.Collection_
      * @throws system.MulticastNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Ink.StrokeCollection.Erase" target="_top">.NET documentation</a>
      */
-    public void Erase(IEnumerable_1 eraserPath, StylusShape eraserShape) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NotSupportedException, system.MulticastNotSupportedException {
+    public void Erase(IEnumerable_1<Point> eraserPath, StylusShape eraserShape) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

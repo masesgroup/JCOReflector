@@ -41,8 +41,13 @@ import java.util.ArrayList;
 import system.windows.media.textformatting.CharacterHit;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.windows.media.textformatting.IndexedGlyphRun;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.windows.media.textformatting.TextBounds;
+import system.windows.media.textformatting.TextCollapsedRange;
+import system.windows.media.textformatting.TextSpan_1;
+import system.windows.media.textformatting.TextRun;
 import system.windows.media.textformatting.TextLine;
 import system.windows.media.textformatting.TextCollapsingProperties;
 import system.windows.media.textformatting.TextLineBreak;
@@ -220,7 +225,7 @@ public class TextLine extends NetObject implements AutoCloseable {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.GetIndexedGlyphRuns" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetIndexedGlyphRuns() throws Throwable {
+    public IEnumerable_1<IndexedGlyphRun> GetIndexedGlyphRuns() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetIndexedGlyphRuns = null;
@@ -244,7 +249,7 @@ public class TextLine extends NetObject implements AutoCloseable {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.GetTextBounds" target="_top">.NET documentation</a>
      */
-    public IList_1 GetTextBounds(int firstTextSourceCharacterIndex, int textLength) throws Throwable {
+    public IList_1<TextBounds> GetTextBounds(int firstTextSourceCharacterIndex, int textLength) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetTextBounds = null;
@@ -266,7 +271,7 @@ public class TextLine extends NetObject implements AutoCloseable {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.GetTextCollapsedRanges" target="_top">.NET documentation</a>
      */
-    public IList_1 GetTextCollapsedRanges() throws Throwable {
+    public IList_1<TextCollapsedRange> GetTextCollapsedRanges() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetTextCollapsedRanges = null;
@@ -288,7 +293,7 @@ public class TextLine extends NetObject implements AutoCloseable {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.TextFormatting.TextLine.GetTextRunSpans" target="_top">.NET documentation</a>
      */
-    public IList_1 GetTextRunSpans() throws Throwable {
+    public IList_1<TextSpan_1<TextRun>> GetTextRunSpans() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetTextRunSpans = null;

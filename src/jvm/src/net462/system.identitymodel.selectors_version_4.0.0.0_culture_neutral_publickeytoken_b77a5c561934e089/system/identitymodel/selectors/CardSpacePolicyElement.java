@@ -159,7 +159,7 @@ public class CardSpacePolicyElement extends NetObject  {
      *
      * @param target the argument of type {@code XmlElement}
      * @param issuer the argument of type {@code XmlElement}
-     * @param parameters the argument of type {@code Collection_1}
+     * @param parameters the argument of type {@code Collection_1<XmlElement>}
      * @param privacyNoticeLink the argument of type {@code Uri}
      * @param privacyNoticeVersion the argument of type {@code int}
      * @param isManagedIssuer the argument of type {@code boolean}
@@ -187,7 +187,7 @@ public class CardSpacePolicyElement extends NetObject  {
      * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Selectors.CardSpacePolicyElement.-ctor" target="_top">.NET documentation</a>
      */
-    public CardSpacePolicyElement(XmlElement target, XmlElement issuer, Collection_1 parameters, Uri privacyNoticeLink, int privacyNoticeVersion, boolean isManagedIssuer) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.security.SecurityException, system.OutOfMemoryException, system.AccessViolationException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.OverflowException {
+    public CardSpacePolicyElement(XmlElement target, XmlElement issuer, Collection_1<XmlElement> parameters, Uri privacyNoticeLink, int privacyNoticeVersion, boolean isManagedIssuer) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.security.SecurityException, system.OutOfMemoryException, system.AccessViolationException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -315,7 +315,7 @@ public class CardSpacePolicyElement extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Selectors.CardSpacePolicyElement.Parameters" target="_top">.NET documentation</a>
      */
-    public Collection_1 getParameters() throws Throwable {
+    public Collection_1<XmlElement> getParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectParameters = null;

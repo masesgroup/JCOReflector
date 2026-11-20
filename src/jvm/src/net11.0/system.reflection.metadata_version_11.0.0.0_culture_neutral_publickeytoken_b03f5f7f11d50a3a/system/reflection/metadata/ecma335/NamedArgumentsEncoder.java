@@ -183,9 +183,9 @@ public class NamedArgumentsEncoder extends system.ValueType  {
      * Invokes the .NET member AddArgument.
      *
      * @param isField the argument of type {@code boolean}
-     * @param type the argument of type {@code Action_1}
-     * @param name the argument of type {@code Action_1}
-     * @param literal the argument of type {@code Action_1}
+     * @param type the argument of type {@code Action_1<NamedArgumentTypeEncoder>}
+     * @param name the argument of type {@code Action_1<NameEncoder>}
+     * @param literal the argument of type {@code Action_1<LiteralEncoder>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -198,7 +198,7 @@ public class NamedArgumentsEncoder extends system.ValueType  {
      * @throws system.RankException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.NamedArgumentsEncoder.AddArgument" target="_top">.NET documentation</a>
      */
-    public void AddArgument(boolean isField, Action_1 type, Action_1 name, Action_1 literal) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException {
+    public void AddArgument(boolean isField, Action_1<NamedArgumentTypeEncoder> type, Action_1<NameEncoder> name, Action_1<LiteralEncoder> literal) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

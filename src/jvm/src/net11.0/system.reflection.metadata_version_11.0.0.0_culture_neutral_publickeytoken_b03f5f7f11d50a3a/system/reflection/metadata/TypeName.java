@@ -274,7 +274,7 @@ public class TypeName extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.TypeName.GetGenericArguments" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 GetGenericArguments() throws Throwable {
+    public ImmutableArray_1<TypeName> GetGenericArguments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetGenericArguments = null;
@@ -406,7 +406,7 @@ public class TypeName extends NetObject  {
     /**
      * Invokes the .NET member MakeGenericTypeName.
      *
-     * @param typeArguments the argument of type {@code ImmutableArray_1}
+     * @param typeArguments the argument of type {@code ImmutableArray_1<TypeName>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -418,7 +418,7 @@ public class TypeName extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.TypeName.MakeGenericTypeName" target="_top">.NET documentation</a>
      */
-    public TypeName MakeGenericTypeName(ImmutableArray_1 typeArguments) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
+    public TypeName MakeGenericTypeName(ImmutableArray_1<TypeName> typeArguments) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectMakeGenericTypeName = null;

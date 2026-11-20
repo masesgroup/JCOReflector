@@ -39,7 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.generic.Dictionary_2;
+import system.Uri;
 import system.collections.generic.KeyedByTypeCollection_1;
+import system.servicemodel.description.IEndpointBehavior;
+import system.servicemodel.description.IEndpointBehaviorImplementation;
 import system.servicemodel.EndpointAddress;
 import system.servicemodel.security.SecurityKeyEntropyMode;
 import system.TimeSpan;
@@ -308,7 +311,7 @@ public class IssuedTokenClientCredential extends NetObject  {
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IssuedTokenClientCredential.IssuerChannelBehaviors" target="_top">.NET documentation</a>
      */
-    public Dictionary_2 getIssuerChannelBehaviors() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public Dictionary_2<Uri, KeyedByTypeCollection_1<IEndpointBehavior>> getIssuerChannelBehaviors() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIssuerChannelBehaviors = null;
@@ -331,7 +334,7 @@ public class IssuedTokenClientCredential extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors" target="_top">.NET documentation</a>
      */
-    public KeyedByTypeCollection_1 getLocalIssuerChannelBehaviors() throws Throwable, system.ArgumentOutOfRangeException {
+    public KeyedByTypeCollection_1<IEndpointBehavior> getLocalIssuerChannelBehaviors() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectLocalIssuerChannelBehaviors = null;

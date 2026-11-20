@@ -39,7 +39,13 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.generic.List_1;
+import system.net.security.SslApplicationProtocol;
 import system.Func_4;
+import system.net.quic.QuicConnection;
+import system.net.security.SslClientHelloInfo;
+import system.threading.CancellationToken;
+import system.threading.tasks.ValueTask_1;
+import system.net.quic.QuicServerConnectionOptions;
 import system.net.IPEndPoint;
 
 
@@ -246,7 +252,7 @@ public class QuicListenerOptions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicListenerOptions.ApplicationProtocols" target="_top">.NET documentation</a>
      */
-    public List_1 getApplicationProtocols() throws Throwable {
+    public List_1<SslApplicationProtocol> getApplicationProtocols() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectApplicationProtocols = null;
@@ -268,7 +274,7 @@ public class QuicListenerOptions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicListenerOptions.ApplicationProtocols" target="_top">.NET documentation</a>
      */
-    public void setApplicationProtocols(List_1 ApplicationProtocols) throws Throwable {
+    public void setApplicationProtocols(List_1<SslApplicationProtocol> ApplicationProtocols) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -285,15 +291,15 @@ public class QuicListenerOptions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicListenerOptions.ConnectionOptionsCallback" target="_top">.NET documentation</a>
      */
-    public Func_4 getConnectionOptionsCallback() throws Throwable {
+    public Func_4<QuicConnection, SslClientHelloInfo, CancellationToken, ValueTask_1<QuicServerConnectionOptions>> getConnectionOptionsCallback() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectConnectionOptionsCallback = null;
         try {
             retObjectConnectionOptionsCallback = classInstance.Get("ConnectionOptionsCallback");
-            return (Func_4)retObjectConnectionOptionsCallback;
+            return (Func_4<QuicConnection, SslClientHelloInfo, CancellationToken, ValueTask_1<QuicServerConnectionOptions>>)retObjectConnectionOptionsCallback;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_4", retObjectConnectionOptionsCallback != null ? retObjectConnectionOptionsCallback.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_4<QuicConnection, SslClientHelloInfo, CancellationToken, ValueTask_1<QuicServerConnectionOptions>>", retObjectConnectionOptionsCallback != null ? retObjectConnectionOptionsCallback.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -306,7 +312,7 @@ public class QuicListenerOptions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicListenerOptions.ConnectionOptionsCallback" target="_top">.NET documentation</a>
      */
-    public void setConnectionOptionsCallback(Func_4 ConnectionOptionsCallback) throws Throwable {
+    public void setConnectionOptionsCallback(Func_4<QuicConnection, SslClientHelloInfo, CancellationToken, ValueTask_1<QuicServerConnectionOptions>> ConnectionOptionsCallback) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

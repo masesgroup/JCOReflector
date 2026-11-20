@@ -41,6 +41,7 @@ import system.web.services.description.ServiceDescriptionCollection;
 import system.xml.schema.XmlSchemaSet;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.xml.XmlElement;
 import system.servicemodel.description.WsdlImporter;
 import system.servicemodel.description.WsdlContractConversionContext;
 import system.servicemodel.description.WsdlEndpointConversionContext;
@@ -122,7 +123,7 @@ public interface IWsdlImportExtension extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void BeforeImport(ServiceDescriptionCollection wsdlDocuments, XmlSchemaSet xmlSchemas, ICollection_1 policy) throws Throwable;
+    public void BeforeImport(ServiceDescriptionCollection wsdlDocuments, XmlSchemaSet xmlSchemas, ICollection_1<XmlElement> policy) throws Throwable;
 
     public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context) throws Throwable;
 

@@ -161,7 +161,7 @@ public class IOrderedEnumerable_1Implementation<TElement extends IJCOBridgeRefle
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.IOrderedEnumerable-1.CreateOrderedEnumerable" target="_top">.NET documentation</a>
      */
-    public <TKey extends IJCOBridgeReflected> IOrderedEnumerable_1 CreateOrderedEnumerable(Func_2 keySelector, IComparer_1 comparer, boolean descending) throws Throwable {
+    public <TKey extends IJCOBridgeReflected> IOrderedEnumerable_1<TElement> CreateOrderedEnumerable(Func_2 keySelector, IComparer_1 comparer, boolean descending) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCreateOrderedEnumerable = null;

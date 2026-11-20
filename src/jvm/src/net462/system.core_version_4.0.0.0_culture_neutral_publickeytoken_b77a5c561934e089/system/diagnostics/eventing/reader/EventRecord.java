@@ -40,10 +40,14 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.Object;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.diagnostics.eventing.reader.EventProperty;
 import system.diagnostics.eventing.reader.EventBookmark;
 import system.Nullable_1;
+import system.DateTime;
+import system.Guid;
 import system.security.principal.SecurityIdentifier;
 
 
@@ -185,12 +189,12 @@ public class EventRecord extends NetObject implements AutoCloseable {
     /**
      * Invokes the .NET member FormatDescription.
      *
-     * @param values the argument of type {@code IEnumerable_1}
+     * @param values the argument of type {@code IEnumerable_1<Object>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.Reader.EventRecord.FormatDescription" target="_top">.NET documentation</a>
      */
-    public java.lang.String FormatDescription(IEnumerable_1 values) throws Throwable {
+    public java.lang.String FormatDescription(IEnumerable_1<Object> values) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFormatDescription = null;
@@ -335,7 +339,7 @@ public class EventRecord extends NetObject implements AutoCloseable {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.Reader.EventRecord.Properties" target="_top">.NET documentation</a>
      */
-    public IList_1 getProperties() throws Throwable {
+    public IList_1<EventProperty> getProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectProperties = null;
@@ -423,7 +427,7 @@ public class EventRecord extends NetObject implements AutoCloseable {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.Reader.EventRecord.TimeCreated" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getTimeCreated() throws Throwable {
+    public Nullable_1<DateTime> getTimeCreated() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTimeCreated = null;
@@ -445,7 +449,7 @@ public class EventRecord extends NetObject implements AutoCloseable {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.Reader.EventRecord.ActivityId" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getActivityId() throws Throwable {
+    public Nullable_1<Guid> getActivityId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectActivityId = null;
@@ -467,7 +471,7 @@ public class EventRecord extends NetObject implements AutoCloseable {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.Reader.EventRecord.ProviderId" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getProviderId() throws Throwable {
+    public Nullable_1<Guid> getProviderId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectProviderId = null;
@@ -489,7 +493,7 @@ public class EventRecord extends NetObject implements AutoCloseable {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.Reader.EventRecord.RelatedActivityId" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getRelatedActivityId() throws Throwable {
+    public Nullable_1<Guid> getRelatedActivityId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRelatedActivityId = null;

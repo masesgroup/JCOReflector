@@ -207,7 +207,7 @@ public class DelegateOutArgument_1<T extends IJCOBridgeReflected> extends system
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DelegateOutArgument-1.GetLocationNewDelegateOutArgument_1" target="_top">.NET documentation</a>
      */
-    public Location_1 GetLocationNewDelegateOutArgument_1(ActivityContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public Location_1<T> GetLocationNewDelegateOutArgument_1(ActivityContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetLocation = null;

@@ -2974,7 +2974,7 @@ public class NFloat extends system.ValueType  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.SinCos" target="_top">.NET documentation</a>
      */
-    public static ValueTuple_2 SinCos(NFloat x) throws Throwable {
+    public static ValueTuple_2<NFloat, NFloat> SinCos(NFloat x) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSinCos = null;
@@ -2999,7 +2999,7 @@ public class NFloat extends system.ValueType  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.NFloat.SinCosPi" target="_top">.NET documentation</a>
      */
-    public static ValueTuple_2 SinCosPi(NFloat x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
+    public static ValueTuple_2<NFloat, NFloat> SinCosPi(NFloat x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSinCosPi = null;

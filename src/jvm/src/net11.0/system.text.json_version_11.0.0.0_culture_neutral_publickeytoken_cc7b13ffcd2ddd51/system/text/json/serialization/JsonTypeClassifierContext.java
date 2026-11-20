@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IReadOnlyList_1;
 import system.collections.generic.IReadOnlyList_1Implementation;
+import system.text.json.serialization.metadata.JsonDerivedType;
+import system.text.json.serialization.metadata.JsonUnionCaseInfo;
 import system.text.json.serialization.JsonTypeClassifierKind;
 
 
@@ -170,7 +172,7 @@ public class JsonTypeClassifierContext extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonTypeClassifierContext.DerivedTypes" target="_top">.NET documentation</a>
      */
-    public IReadOnlyList_1 getDerivedTypes() throws Throwable {
+    public IReadOnlyList_1<JsonDerivedType> getDerivedTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDerivedTypes = null;
@@ -192,7 +194,7 @@ public class JsonTypeClassifierContext extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.JsonTypeClassifierContext.UnionCases" target="_top">.NET documentation</a>
      */
-    public IReadOnlyList_1 getUnionCases() throws Throwable {
+    public IReadOnlyList_1<JsonUnionCaseInfo> getUnionCases() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUnionCases = null;

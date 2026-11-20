@@ -209,12 +209,12 @@ public class ValueTuple_4<T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeR
     /**
      * Invokes the .NET member CompareTo.
      *
-     * @param other the argument of type {@code ValueTuple_4}
+     * @param other the argument of type {@code ValueTuple_4<T1, T2, T3, T4>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ValueTuple-4.CompareTo" target="_top">.NET documentation</a>
      */
-    public int CompareTo(ValueTuple_4 other) throws Throwable {
+    public int CompareTo(ValueTuple_4<T1, T2, T3, T4> other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCompareTo = null;

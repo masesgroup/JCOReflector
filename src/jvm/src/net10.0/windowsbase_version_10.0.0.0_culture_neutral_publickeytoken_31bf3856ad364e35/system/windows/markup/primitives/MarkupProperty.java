@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.windows.markup.primitives.MarkupObject;
 import system.componentmodel.AttributeCollection;
 import system.componentmodel.PropertyDescriptor;
 import system.windows.DependencyProperty;
@@ -296,7 +297,7 @@ public class MarkupProperty extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Primitives.MarkupProperty.TypeReferences" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getTypeReferences() throws Throwable {
+    public IEnumerable_1<NetType> getTypeReferences() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTypeReferences = null;
@@ -318,7 +319,7 @@ public class MarkupProperty extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Primitives.MarkupProperty.Items" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getItems() throws Throwable {
+    public IEnumerable_1<MarkupObject> getItems() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectItems = null;

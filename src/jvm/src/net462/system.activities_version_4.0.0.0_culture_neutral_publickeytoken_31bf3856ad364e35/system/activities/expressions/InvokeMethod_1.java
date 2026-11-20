@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.activities.AsyncCodeActivity_1;
 import system.activities.InArgument;
 import system.collections.objectmodel.Collection_1;
+import system.activities.Argument;
 
 
 /**
@@ -265,7 +266,7 @@ public class InvokeMethod_1<TResult extends IJCOBridgeReflected> extends system.
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.InvokeMethod-1.Parameters" target="_top">.NET documentation</a>
      */
-    public Collection_1 getParameters() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+    public Collection_1<Argument> getParameters() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectParameters = null;
@@ -291,7 +292,7 @@ public class InvokeMethod_1<TResult extends IJCOBridgeReflected> extends system.
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.InvokeMethod-1.GenericTypeArguments" target="_top">.NET documentation</a>
      */
-    public Collection_1 getGenericTypeArguments() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+    public Collection_1<NetType> getGenericTypeArguments() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGenericTypeArguments = null;

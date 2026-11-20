@@ -44,6 +44,9 @@ import system.security.cryptography.x509certificates.X509Certificate;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
 import system.Uri;
+import system.io.packaging.PackageRelationshipSelector;
+import system.security.cryptography.xml.DataObject;
+import system.security.cryptography.xml.Reference;
 import system.io.packaging.VerifyResult;
 import system.security.cryptography.x509certificates.X509ChainStatusFlags;
 import system.collections.generic.Dictionary_2;
@@ -245,7 +248,7 @@ public class PackageDigitalSignatureManager extends NetObject  {
      * Invokes the .NET member Countersign.
      *
      * @param certificate the argument of type {@code X509Certificate}
-     * @param signatures the argument of type {@code IEnumerable_1}
+     * @param signatures the argument of type {@code IEnumerable_1<Uri>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -268,7 +271,7 @@ public class PackageDigitalSignatureManager extends NetObject  {
      * @throws system.security.cryptography.CryptographicUnexpectedOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageDigitalSignatureManager.Countersign" target="_top">.NET documentation</a>
      */
-    public PackageDigitalSignature Countersign(X509Certificate certificate, IEnumerable_1 signatures) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.io.IOException, system.IndexOutOfRangeException, system.io.FileFormatException, system.xml.XmlException, system.OutOfMemoryException, system.FormatException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.security.cryptography.CryptographicUnexpectedOperationException {
+    public PackageDigitalSignature Countersign(X509Certificate certificate, IEnumerable_1<Uri> signatures) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.io.IOException, system.IndexOutOfRangeException, system.io.FileFormatException, system.xml.XmlException, system.OutOfMemoryException, system.FormatException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCountersign = null;
@@ -364,12 +367,12 @@ public class PackageDigitalSignatureManager extends NetObject  {
     /**
      * Invokes the .NET member Sign.
      *
-     * @param parts the argument of type {@code IEnumerable_1}
+     * @param parts the argument of type {@code IEnumerable_1<Uri>}
      * @param certificate the argument of type {@code X509Certificate}
-     * @param relationshipSelectors the argument of type {@code IEnumerable_1}
+     * @param relationshipSelectors the argument of type {@code IEnumerable_1<PackageRelationshipSelector>}
      * @param signatureId the argument of type {@code java.lang.String}
-     * @param signatureObjects the argument of type {@code IEnumerable_1}
-     * @param objectReferences the argument of type {@code IEnumerable_1}
+     * @param signatureObjects the argument of type {@code IEnumerable_1<DataObject>}
+     * @param objectReferences the argument of type {@code IEnumerable_1<Reference>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -402,7 +405,7 @@ public class PackageDigitalSignatureManager extends NetObject  {
      * @throws system.security.cryptography.CryptographicUnexpectedOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageDigitalSignatureManager.Sign" target="_top">.NET documentation</a>
      */
-    public PackageDigitalSignature Sign(IEnumerable_1 parts, X509Certificate certificate, IEnumerable_1 relationshipSelectors, java.lang.String signatureId, IEnumerable_1 signatureObjects, IEnumerable_1 objectReferences) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.FormatException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.diagnostics.UnreachableException, system.security.SecurityException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicUnexpectedOperationException {
+    public PackageDigitalSignature Sign(IEnumerable_1<Uri> parts, X509Certificate certificate, IEnumerable_1<PackageRelationshipSelector> relationshipSelectors, java.lang.String signatureId, IEnumerable_1<DataObject> signatureObjects, IEnumerable_1<Reference> objectReferences) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.FormatException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.diagnostics.UnreachableException, system.security.SecurityException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSign = null;
@@ -420,9 +423,9 @@ public class PackageDigitalSignatureManager extends NetObject  {
     /**
      * Invokes the .NET member Sign.
      *
-     * @param parts the argument of type {@code IEnumerable_1}
+     * @param parts the argument of type {@code IEnumerable_1<Uri>}
      * @param certificate the argument of type {@code X509Certificate}
-     * @param relationshipSelectors the argument of type {@code IEnumerable_1}
+     * @param relationshipSelectors the argument of type {@code IEnumerable_1<PackageRelationshipSelector>}
      * @param signatureId the argument of type {@code java.lang.String}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -451,7 +454,7 @@ public class PackageDigitalSignatureManager extends NetObject  {
      * @throws system.security.cryptography.CryptographicUnexpectedOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageDigitalSignatureManager.Sign" target="_top">.NET documentation</a>
      */
-    public PackageDigitalSignature Sign(IEnumerable_1 parts, X509Certificate certificate, IEnumerable_1 relationshipSelectors, java.lang.String signatureId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.FormatException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException, system.security.cryptography.CryptographicUnexpectedOperationException {
+    public PackageDigitalSignature Sign(IEnumerable_1<Uri> parts, X509Certificate certificate, IEnumerable_1<PackageRelationshipSelector> relationshipSelectors, java.lang.String signatureId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.FormatException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSign = null;
@@ -469,9 +472,9 @@ public class PackageDigitalSignatureManager extends NetObject  {
     /**
      * Invokes the .NET member Sign.
      *
-     * @param parts the argument of type {@code IEnumerable_1}
+     * @param parts the argument of type {@code IEnumerable_1<Uri>}
      * @param certificate the argument of type {@code X509Certificate}
-     * @param relationshipSelectors the argument of type {@code IEnumerable_1}
+     * @param relationshipSelectors the argument of type {@code IEnumerable_1<PackageRelationshipSelector>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -498,7 +501,7 @@ public class PackageDigitalSignatureManager extends NetObject  {
      * @throws system.security.cryptography.CryptographicUnexpectedOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageDigitalSignatureManager.Sign" target="_top">.NET documentation</a>
      */
-    public PackageDigitalSignature Sign(IEnumerable_1 parts, X509Certificate certificate, IEnumerable_1 relationshipSelectors) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.io.IOException, system.io.FileFormatException, system.FormatException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException, system.security.cryptography.CryptographicUnexpectedOperationException {
+    public PackageDigitalSignature Sign(IEnumerable_1<Uri> parts, X509Certificate certificate, IEnumerable_1<PackageRelationshipSelector> relationshipSelectors) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.io.IOException, system.io.FileFormatException, system.FormatException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.cryptography.CryptographicException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSign = null;
@@ -516,7 +519,7 @@ public class PackageDigitalSignatureManager extends NetObject  {
     /**
      * Invokes the .NET member Sign.
      *
-     * @param parts the argument of type {@code IEnumerable_1}
+     * @param parts the argument of type {@code IEnumerable_1<Uri>}
      * @param certificate the argument of type {@code X509Certificate}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -537,7 +540,7 @@ public class PackageDigitalSignatureManager extends NetObject  {
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageDigitalSignatureManager.Sign" target="_top">.NET documentation</a>
      */
-    public PackageDigitalSignature Sign(IEnumerable_1 parts, X509Certificate certificate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.io.IOException, system.io.FileFormatException, system.FormatException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException {
+    public PackageDigitalSignature Sign(IEnumerable_1<Uri> parts, X509Certificate certificate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.io.IOException, system.io.FileFormatException, system.FormatException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSign = null;
@@ -555,7 +558,7 @@ public class PackageDigitalSignatureManager extends NetObject  {
     /**
      * Invokes the .NET member Sign.
      *
-     * @param parts the argument of type {@code IEnumerable_1}
+     * @param parts the argument of type {@code IEnumerable_1<Uri>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -584,7 +587,7 @@ public class PackageDigitalSignatureManager extends NetObject  {
      * @throws system.security.cryptography.CryptographicUnexpectedOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageDigitalSignatureManager.Sign" target="_top">.NET documentation</a>
      */
-    public PackageDigitalSignature Sign(IEnumerable_1 parts) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException, system.security.cryptography.CryptographicException, system.ArrayTypeMismatchException, system.RankException, system.InvalidCastException, system.OutOfMemoryException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicUnexpectedOperationException {
+    public PackageDigitalSignature Sign(IEnumerable_1<Uri> parts) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException, system.security.cryptography.CryptographicException, system.ArrayTypeMismatchException, system.RankException, system.InvalidCastException, system.OutOfMemoryException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSign = null;
@@ -841,7 +844,7 @@ public class PackageDigitalSignatureManager extends NetObject  {
      * @throws system.InvalidCastException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageDigitalSignatureManager.Signatures" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getSignatures() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.io.IOException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.io.FileFormatException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.NullReferenceException, system.NotSupportedException, system.security.SecurityException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
+    public ReadOnlyCollection_1<PackageDigitalSignature> getSignatures() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.io.IOException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.io.FileFormatException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.NullReferenceException, system.NotSupportedException, system.security.SecurityException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSignatures = null;

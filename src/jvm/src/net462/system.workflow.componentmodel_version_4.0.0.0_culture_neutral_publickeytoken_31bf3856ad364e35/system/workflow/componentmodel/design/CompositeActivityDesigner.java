@@ -41,12 +41,12 @@ import java.util.ArrayList;
 import system.workflow.componentmodel.design.ActivityDesigner;
 import system.workflow.componentmodel.design.HitTestInfo;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.workflow.componentmodel.Activity;
 import system.workflow.componentmodel.design.DesignerNavigationDirection;
 import system.windows.forms.IDataObject;
 import system.windows.forms.IDataObjectImplementation;
 import system.IServiceProvider;
 import system.IServiceProviderImplementation;
-import system.workflow.componentmodel.Activity;
 import system.drawing.Rectangle;
 import system.drawing.Point;
 import system.workflow.componentmodel.design.CompositeActivityDesigner;
@@ -171,7 +171,7 @@ public class CompositeActivityDesigner extends system.workflow.componentmodel.de
      * Invokes the .NET member CanInsertActivities.
      *
      * @param insertLocation the argument of type {@code HitTestInfo}
-     * @param activitiesToInsert the argument of type {@code ReadOnlyCollection_1}
+     * @param activitiesToInsert the argument of type {@code ReadOnlyCollection_1<Activity>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -185,7 +185,7 @@ public class CompositeActivityDesigner extends system.workflow.componentmodel.de
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.CompositeActivityDesigner.CanInsertActivities" target="_top">.NET documentation</a>
      */
-    public boolean CanInsertActivities(HitTestInfo insertLocation, ReadOnlyCollection_1 activitiesToInsert) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.NotImplementedException {
+    public boolean CanInsertActivities(HitTestInfo insertLocation, ReadOnlyCollection_1<Activity> activitiesToInsert) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCanInsertActivities = null;
@@ -203,7 +203,7 @@ public class CompositeActivityDesigner extends system.workflow.componentmodel.de
      * Invokes the .NET member CanMoveActivities.
      *
      * @param moveLocation the argument of type {@code HitTestInfo}
-     * @param activitiesToMove the argument of type {@code ReadOnlyCollection_1}
+     * @param activitiesToMove the argument of type {@code ReadOnlyCollection_1<Activity>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -215,7 +215,7 @@ public class CompositeActivityDesigner extends system.workflow.componentmodel.de
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.CompositeActivityDesigner.CanMoveActivities" target="_top">.NET documentation</a>
      */
-    public boolean CanMoveActivities(HitTestInfo moveLocation, ReadOnlyCollection_1 activitiesToMove) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+    public boolean CanMoveActivities(HitTestInfo moveLocation, ReadOnlyCollection_1<Activity> activitiesToMove) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCanMoveActivities = null;
@@ -232,7 +232,7 @@ public class CompositeActivityDesigner extends system.workflow.componentmodel.de
     /**
      * Invokes the .NET member CanRemoveActivities.
      *
-     * @param activitiesToRemove the argument of type {@code ReadOnlyCollection_1}
+     * @param activitiesToRemove the argument of type {@code ReadOnlyCollection_1<Activity>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -244,7 +244,7 @@ public class CompositeActivityDesigner extends system.workflow.componentmodel.de
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.CompositeActivityDesigner.CanRemoveActivities" target="_top">.NET documentation</a>
      */
-    public boolean CanRemoveActivities(ReadOnlyCollection_1 activitiesToRemove) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+    public boolean CanRemoveActivities(ReadOnlyCollection_1<Activity> activitiesToRemove) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCanRemoveActivities = null;
@@ -491,7 +491,7 @@ public class CompositeActivityDesigner extends system.workflow.componentmodel.de
      *
      * @param compositeActivityDesigner the argument of type {@code CompositeActivityDesigner}
      * @param insertLocation the argument of type {@code HitTestInfo}
-     * @param activitiesToInsert the argument of type {@code ReadOnlyCollection_1}
+     * @param activitiesToInsert the argument of type {@code ReadOnlyCollection_1<Activity>}
      * @param undoTransactionDescription the argument of type {@code java.lang.String}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -504,7 +504,7 @@ public class CompositeActivityDesigner extends system.workflow.componentmodel.de
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.CompositeActivityDesigner.InsertActivities" target="_top">.NET documentation</a>
      */
-    public static void InsertActivities(CompositeActivityDesigner compositeActivityDesigner, HitTestInfo insertLocation, ReadOnlyCollection_1 activitiesToInsert, java.lang.String undoTransactionDescription) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException {
+    public static void InsertActivities(CompositeActivityDesigner compositeActivityDesigner, HitTestInfo insertLocation, ReadOnlyCollection_1<Activity> activitiesToInsert, java.lang.String undoTransactionDescription) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -518,7 +518,7 @@ public class CompositeActivityDesigner extends system.workflow.componentmodel.de
      * Invokes the .NET member InsertActivities.
      *
      * @param insertLocation the argument of type {@code HitTestInfo}
-     * @param activitiesToInsert the argument of type {@code ReadOnlyCollection_1}
+     * @param activitiesToInsert the argument of type {@code ReadOnlyCollection_1<Activity>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
@@ -534,7 +534,7 @@ public class CompositeActivityDesigner extends system.workflow.componentmodel.de
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.CompositeActivityDesigner.InsertActivities" target="_top">.NET documentation</a>
      */
-    public void InsertActivities(HitTestInfo insertLocation, ReadOnlyCollection_1 activitiesToInsert) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
+    public void InsertActivities(HitTestInfo insertLocation, ReadOnlyCollection_1<Activity> activitiesToInsert) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -548,7 +548,7 @@ public class CompositeActivityDesigner extends system.workflow.componentmodel.de
      * Invokes the .NET member MoveActivities.
      *
      * @param moveLocation the argument of type {@code HitTestInfo}
-     * @param activitiesToMove the argument of type {@code ReadOnlyCollection_1}
+     * @param activitiesToMove the argument of type {@code ReadOnlyCollection_1<Activity>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
@@ -565,7 +565,7 @@ public class CompositeActivityDesigner extends system.workflow.componentmodel.de
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.CompositeActivityDesigner.MoveActivities" target="_top">.NET documentation</a>
      */
-    public void MoveActivities(HitTestInfo moveLocation, ReadOnlyCollection_1 activitiesToMove) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException {
+    public void MoveActivities(HitTestInfo moveLocation, ReadOnlyCollection_1<Activity> activitiesToMove) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -605,7 +605,7 @@ public class CompositeActivityDesigner extends system.workflow.componentmodel.de
     /**
      * Invokes the .NET member RemoveActivities.
      *
-     * @param activitiesToRemove the argument of type {@code ReadOnlyCollection_1}
+     * @param activitiesToRemove the argument of type {@code ReadOnlyCollection_1<Activity>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
@@ -620,7 +620,7 @@ public class CompositeActivityDesigner extends system.workflow.componentmodel.de
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.CompositeActivityDesigner.RemoveActivities" target="_top">.NET documentation</a>
      */
-    public void RemoveActivities(ReadOnlyCollection_1 activitiesToRemove) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public void RemoveActivities(ReadOnlyCollection_1<Activity> activitiesToRemove) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -634,7 +634,7 @@ public class CompositeActivityDesigner extends system.workflow.componentmodel.de
      * Invokes the .NET member RemoveActivities.
      *
      * @param serviceProvider the argument of type {@code IServiceProvider}
-     * @param activitiesToRemove the argument of type {@code ReadOnlyCollection_1}
+     * @param activitiesToRemove the argument of type {@code ReadOnlyCollection_1<Activity>}
      * @param transactionDescription the argument of type {@code java.lang.String}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -647,7 +647,7 @@ public class CompositeActivityDesigner extends system.workflow.componentmodel.de
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.CompositeActivityDesigner.RemoveActivities" target="_top">.NET documentation</a>
      */
-    public static void RemoveActivities(IServiceProvider serviceProvider, ReadOnlyCollection_1 activitiesToRemove, java.lang.String transactionDescription) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public static void RemoveActivities(IServiceProvider serviceProvider, ReadOnlyCollection_1<Activity> activitiesToRemove, java.lang.String transactionDescription) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -787,7 +787,7 @@ public class CompositeActivityDesigner extends system.workflow.componentmodel.de
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.CompositeActivityDesigner.ContainedDesigners" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getContainedDesigners() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public ReadOnlyCollection_1<ActivityDesigner> getContainedDesigners() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContainedDesigners = null;

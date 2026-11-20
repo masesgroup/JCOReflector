@@ -718,7 +718,7 @@ public class ZipFile extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Compression.ZipFile.OpenAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 OpenAsync(java.lang.String archiveFileName, ZipArchiveMode mode, Encoding entryNameEncoding, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public static Task_1<ZipArchive> OpenAsync(java.lang.String archiveFileName, ZipArchiveMode mode, Encoding entryNameEncoding, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenAsync = null;
@@ -747,7 +747,7 @@ public class ZipFile extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Compression.ZipFile.OpenAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 OpenAsync(java.lang.String archiveFileName, ZipArchiveMode mode, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public static Task_1<ZipArchive> OpenAsync(java.lang.String archiveFileName, ZipArchiveMode mode, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenAsync = null;
@@ -773,7 +773,7 @@ public class ZipFile extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Compression.ZipFile.OpenReadAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 OpenReadAsync(java.lang.String archiveFileName, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public static Task_1<ZipArchive> OpenReadAsync(java.lang.String archiveFileName, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOpenReadAsync = null;

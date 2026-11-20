@@ -178,12 +178,12 @@ public class ModelBinderDictionary extends NetObjectEnumerable  {
     /**
      * Invokes the .NET member Contains.
      *
-     * @param item the argument of type {@code KeyValuePair_2}
+     * @param item the argument of type {@code KeyValuePair_2<NetType, IModelBinder>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBinderDictionary.Contains" target="_top">.NET documentation</a>
      */
-    public boolean Contains(KeyValuePair_2 item) throws Throwable {
+    public boolean Contains(KeyValuePair_2<NetType, IModelBinder> item) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContains = null;
@@ -223,12 +223,12 @@ public class ModelBinderDictionary extends NetObjectEnumerable  {
     /**
      * Invokes the .NET member Remove.
      *
-     * @param item the argument of type {@code KeyValuePair_2}
+     * @param item the argument of type {@code KeyValuePair_2<NetType, IModelBinder>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBinderDictionary.Remove" target="_top">.NET documentation</a>
      */
-    public boolean Remove(KeyValuePair_2 item) throws Throwable {
+    public boolean Remove(KeyValuePair_2<NetType, IModelBinder> item) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRemove = null;
@@ -292,11 +292,11 @@ public class ModelBinderDictionary extends NetObjectEnumerable  {
     /**
      * Invokes the .NET member Add.
      *
-     * @param item the argument of type {@code KeyValuePair_2}
+     * @param item the argument of type {@code KeyValuePair_2<NetType, IModelBinder>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBinderDictionary.Add" target="_top">.NET documentation</a>
      */
-    public void Add(KeyValuePair_2 item) throws Throwable {
+    public void Add(KeyValuePair_2<NetType, IModelBinder> item) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -441,7 +441,7 @@ public class ModelBinderDictionary extends NetObjectEnumerable  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBinderDictionary.Keys" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getKeys() throws Throwable, system.ArgumentNullException {
+    public ICollection_1<NetType> getKeys() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectKeys = null;
@@ -464,7 +464,7 @@ public class ModelBinderDictionary extends NetObjectEnumerable  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBinderDictionary.Values" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getValues() throws Throwable, system.ArgumentNullException {
+    public ICollection_1<IModelBinder> getValues() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValues = null;

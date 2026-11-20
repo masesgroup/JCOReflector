@@ -164,7 +164,7 @@ public class ImmutableQueue_1<T extends IJCOBridgeReflected> extends NetObjectEn
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableQueue-1.Clear" target="_top">.NET documentation</a>
      */
-    public ImmutableQueue_1 Clear() throws Throwable {
+    public ImmutableQueue_1<T> Clear() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectClear = null;
@@ -194,7 +194,7 @@ public class ImmutableQueue_1<T extends IJCOBridgeReflected> extends NetObjectEn
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableQueue-1.Dequeue" target="_top">.NET documentation</a>
      */
-    public ImmutableQueue_1 Dequeue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
+    public ImmutableQueue_1<T> Dequeue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDequeue = null;
@@ -225,7 +225,7 @@ public class ImmutableQueue_1<T extends IJCOBridgeReflected> extends NetObjectEn
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableQueue-1.Dequeue" target="_top">.NET documentation</a>
      */
-    public ImmutableQueue_1 Dequeue(JCORefOut<T> value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
+    public ImmutableQueue_1<T> Dequeue(JCORefOut<T> value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDequeue = null;
@@ -248,7 +248,7 @@ public class ImmutableQueue_1<T extends IJCOBridgeReflected> extends NetObjectEn
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableQueue-1.Enqueue" target="_top">.NET documentation</a>
      */
-    public ImmutableQueue_1 Enqueue(T value) throws Throwable {
+    public ImmutableQueue_1<T> Enqueue(T value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEnqueue = null;

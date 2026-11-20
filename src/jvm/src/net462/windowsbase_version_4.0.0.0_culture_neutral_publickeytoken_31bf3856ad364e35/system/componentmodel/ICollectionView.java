@@ -42,7 +42,9 @@ import system.collections.specialized.INotifyCollectionChangedImplementation;
 import system.IDisposable;
 import system.IDisposableImplementation;
 import system.collections.objectmodel.ObservableCollection_1;
+import system.componentmodel.GroupDescription;
 import system.collections.objectmodel.ReadOnlyObservableCollection_1;
+import system.Object;
 import system.componentmodel.SortDescriptionCollection;
 import system.globalization.CultureInfo;
 import system.Predicate_1;
@@ -165,9 +167,9 @@ public interface ICollectionView extends IJCOBridgeReflected, org.mases.jcobridg
 
     public IEnumerable getSourceCollection() throws Throwable;
 
-    public ObservableCollection_1 getGroupDescriptions() throws Throwable;
+    public ObservableCollection_1<GroupDescription> getGroupDescriptions() throws Throwable;
 
-    public ReadOnlyObservableCollection_1 getGroups() throws Throwable;
+    public ReadOnlyObservableCollection_1<Object> getGroups() throws Throwable;
 
     public SortDescriptionCollection getSortDescriptions() throws Throwable;
 
@@ -177,9 +179,9 @@ public interface ICollectionView extends IJCOBridgeReflected, org.mases.jcobridg
 
     public NetObject getCurrentItem() throws Throwable;
 
-    public Predicate_1 getFilter() throws Throwable;
+    public Predicate_1<Object> getFilter() throws Throwable;
 
-    public void setFilter(Predicate_1 Filter) throws Throwable;
+    public void setFilter(Predicate_1<Object> Filter) throws Throwable;
 
 
 

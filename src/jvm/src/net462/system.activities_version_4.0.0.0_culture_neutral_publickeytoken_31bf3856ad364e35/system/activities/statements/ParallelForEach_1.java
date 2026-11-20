@@ -42,6 +42,8 @@ import system.activities.NativeActivity;
 import system.activities.Activity_1;
 import system.activities.ActivityAction_1;
 import system.activities.InArgument_1;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
 
 
 /**
@@ -224,7 +226,7 @@ public class ParallelForEach_1<T extends IJCOBridgeReflected> extends system.act
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.ParallelForEach-1.Body" target="_top">.NET documentation</a>
      */
-    public ActivityAction_1 getBody() throws Throwable {
+    public ActivityAction_1<T> getBody() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectBody = null;
@@ -246,7 +248,7 @@ public class ParallelForEach_1<T extends IJCOBridgeReflected> extends system.act
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.ParallelForEach-1.Body" target="_top">.NET documentation</a>
      */
-    public void setBody(ActivityAction_1 Body) throws Throwable {
+    public void setBody(ActivityAction_1<T> Body) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -263,7 +265,7 @@ public class ParallelForEach_1<T extends IJCOBridgeReflected> extends system.act
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.ParallelForEach-1.Values" target="_top">.NET documentation</a>
      */
-    public InArgument_1 getValues() throws Throwable {
+    public InArgument_1<IEnumerable_1<T>> getValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValues = null;
@@ -285,7 +287,7 @@ public class ParallelForEach_1<T extends IJCOBridgeReflected> extends system.act
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.ParallelForEach-1.Values" target="_top">.NET documentation</a>
      */
-    public void setValues(InArgument_1 Values) throws Throwable {
+    public void setValues(InArgument_1<IEnumerable_1<T>> Values) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.runtime.interopservices.PosixSignalRegistration;
 import system.runtime.interopservices.PosixSignal;
 import system.Action_1;
+import system.runtime.interopservices.PosixSignalContext;
 
 
 /**
@@ -163,7 +164,7 @@ public class PosixSignalRegistration extends NetObject implements AutoCloseable 
      * Invokes the .NET member Create.
      *
      * @param signal the argument of type {@code PosixSignal}
-     * @param handler the argument of type {@code Action_1}
+     * @param handler the argument of type {@code Action_1<PosixSignalContext>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -180,7 +181,7 @@ public class PosixSignalRegistration extends NetObject implements AutoCloseable 
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.PosixSignalRegistration.Create" target="_top">.NET documentation</a>
      */
-    public static PosixSignalRegistration Create(PosixSignal signal, Action_1 handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
+    public static PosixSignalRegistration Create(PosixSignal signal, Action_1<PosixSignalContext> handler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

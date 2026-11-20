@@ -42,6 +42,8 @@ import microsoft.extensions.options.IOptionsFactory_1;
 import microsoft.extensions.options.IOptionsFactory_1Implementation;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import microsoft.extensions.options.IOptionsChangeTokenSource_1;
+import microsoft.extensions.options.IOptionsChangeTokenSource_1Implementation;
 import microsoft.extensions.options.IOptionsMonitorCache_1;
 import microsoft.extensions.options.IOptionsMonitorCache_1Implementation;
 import system.IDisposable;
@@ -163,9 +165,9 @@ public class OptionsMonitor_1<TOptions extends IJCOBridgeReflected> extends NetO
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param factory the argument of type {@code IOptionsFactory_1}
-     * @param sources the argument of type {@code IEnumerable_1}
-     * @param cache the argument of type {@code IOptionsMonitorCache_1}
+     * @param factory the argument of type {@code IOptionsFactory_1<TOptions>}
+     * @param sources the argument of type {@code IEnumerable_1<IOptionsChangeTokenSource_1<TOptions>>}
+     * @param cache the argument of type {@code IOptionsMonitorCache_1<TOptions>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -176,7 +178,7 @@ public class OptionsMonitor_1<TOptions extends IJCOBridgeReflected> extends NetO
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.OptionsMonitor-1.-ctor" target="_top">.NET documentation</a>
      */
-    public OptionsMonitor_1(IOptionsFactory_1 factory, IEnumerable_1 sources, IOptionsMonitorCache_1 cache) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NullReferenceException, system.NotSupportedException {
+    public OptionsMonitor_1(IOptionsFactory_1<TOptions> factory, IEnumerable_1<IOptionsChangeTokenSource_1<TOptions>> sources, IOptionsMonitorCache_1<TOptions> cache) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NullReferenceException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

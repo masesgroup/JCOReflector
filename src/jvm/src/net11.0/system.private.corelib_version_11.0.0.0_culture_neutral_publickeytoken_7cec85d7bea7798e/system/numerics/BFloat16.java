@@ -2992,7 +2992,7 @@ public class BFloat16 extends system.ValueType  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.BFloat16.SinCos" target="_top">.NET documentation</a>
      */
-    public static ValueTuple_2 SinCos(BFloat16 x) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static ValueTuple_2<BFloat16, BFloat16> SinCos(BFloat16 x) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSinCos = null;
@@ -3018,7 +3018,7 @@ public class BFloat16 extends system.ValueType  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.BFloat16.SinCosPi" target="_top">.NET documentation</a>
      */
-    public static ValueTuple_2 SinCosPi(BFloat16 x) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static ValueTuple_2<BFloat16, BFloat16> SinCosPi(BFloat16 x) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSinCosPi = null;

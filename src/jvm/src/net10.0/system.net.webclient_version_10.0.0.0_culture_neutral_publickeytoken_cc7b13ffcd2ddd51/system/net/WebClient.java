@@ -2262,7 +2262,7 @@ public class WebClient extends system.componentmodel.Component  {
      * @throws system.MulticastNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebClient.OpenReadTaskAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 OpenReadTaskAsync(java.lang.String address) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.UriFormatException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException {
+    public Task_1<Stream> OpenReadTaskAsync(java.lang.String address) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.UriFormatException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOpenReadTaskAsync = null;
@@ -2300,7 +2300,7 @@ public class WebClient extends system.componentmodel.Component  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebClient.OpenReadTaskAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 OpenReadTaskAsync(Uri address) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.reflection.TargetInvocationException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.UriFormatException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.RankException, system.ArrayTypeMismatchException {
+    public Task_1<Stream> OpenReadTaskAsync(Uri address) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.reflection.TargetInvocationException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.UriFormatException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOpenReadTaskAsync = null;
@@ -2337,7 +2337,7 @@ public class WebClient extends system.componentmodel.Component  {
      * @throws system.MulticastNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebClient.OpenWriteTaskAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 OpenWriteTaskAsync(java.lang.String address, java.lang.String method) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.UriFormatException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException {
+    public Task_1<Stream> OpenWriteTaskAsync(java.lang.String address, java.lang.String method) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.UriFormatException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOpenWriteTaskAsync = null;
@@ -2373,7 +2373,7 @@ public class WebClient extends system.componentmodel.Component  {
      * @throws system.MulticastNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebClient.OpenWriteTaskAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 OpenWriteTaskAsync(java.lang.String address) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.UriFormatException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException {
+    public Task_1<Stream> OpenWriteTaskAsync(java.lang.String address) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.UriFormatException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOpenWriteTaskAsync = null;
@@ -2412,7 +2412,7 @@ public class WebClient extends system.componentmodel.Component  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebClient.OpenWriteTaskAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 OpenWriteTaskAsync(Uri address, java.lang.String method) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.reflection.TargetInvocationException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.UriFormatException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.RankException, system.ArrayTypeMismatchException {
+    public Task_1<Stream> OpenWriteTaskAsync(Uri address, java.lang.String method) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.reflection.TargetInvocationException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.UriFormatException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOpenWriteTaskAsync = null;
@@ -2450,7 +2450,7 @@ public class WebClient extends system.componentmodel.Component  {
      * @throws system.RankException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebClient.OpenWriteTaskAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 OpenWriteTaskAsync(Uri address) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.reflection.TargetInvocationException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.NullReferenceException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.UriFormatException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.ArrayTypeMismatchException, system.RankException {
+    public Task_1<Stream> OpenWriteTaskAsync(Uri address) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.reflection.TargetInvocationException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.NullReferenceException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.UriFormatException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.ArrayTypeMismatchException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOpenWriteTaskAsync = null;

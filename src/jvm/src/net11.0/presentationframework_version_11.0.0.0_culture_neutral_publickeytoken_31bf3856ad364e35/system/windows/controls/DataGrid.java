@@ -42,16 +42,17 @@ import system.windows.controls.primitives.MultiSelector;
 import system.windows.RoutedEventArgs;
 import system.windows.controls.DataGridEditingUnit;
 import system.collections.objectmodel.Collection_1;
+import system.windows.controls.DataGridColumn;
 import system.componentmodel.IItemProperties;
 import system.componentmodel.IItemPropertiesImplementation;
-import system.windows.controls.DataGridColumn;
 import system.windows.Visibility;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.windows.controls.DataGridCellInfo;
 import system.collections.objectmodel.ObservableCollection_1;
+import system.windows.controls.ValidationRule;
 import system.windows.ComponentResourceKey;
 import system.windows.controls.ControlTemplate;
-import system.windows.controls.DataGridCellInfo;
 import system.windows.controls.DataGridClipboardCopyMode;
 import system.windows.controls.DataGridGridLinesVisibility;
 import system.windows.controls.DataGridHeadersVisibility;
@@ -70,6 +71,22 @@ import system.windows.media.Brush;
 import system.windows.Style;
 import system.windows.Thickness;
 import system.EventHandler;
+import system.EventHandler_1;
+import system.EventArgs;
+import system.windows.controls.AddingNewItemEventArgs;
+import system.windows.controls.DataGridAutoGeneratingColumnEventArgs;
+import system.windows.controls.DataGridBeginningEditEventArgs;
+import system.windows.controls.DataGridCellEditEndingEventArgs;
+import system.windows.controls.DataGridColumnEventArgs;
+import system.windows.controls.DataGridColumnReorderingEventArgs;
+import system.windows.controls.DataGridPreparingCellForEditEventArgs;
+import system.windows.controls.DataGridRowClipboardEventArgs;
+import system.windows.controls.DataGridRowDetailsEventArgs;
+import system.windows.controls.DataGridRowEditEndingEventArgs;
+import system.windows.controls.DataGridRowEventArgs;
+import system.windows.controls.primitives.DragCompletedEventArgs;
+import system.windows.controls.primitives.DragDeltaEventArgs;
+import system.windows.controls.primitives.DragStartedEventArgs;
 import system.windows.controls.DataGridSortingEventHandler;
 import system.windows.controls.InitializingNewItemEventHandler;
 import system.windows.controls.SelectedCellsChangedEventHandler;
@@ -403,7 +420,7 @@ public class DataGrid extends system.windows.controls.primitives.MultiSelector  
      * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGrid.GenerateColumns" target="_top">.NET documentation</a>
      */
-    public static Collection_1 GenerateColumns(IItemProperties itemProperties) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
+    public static Collection_1<DataGridColumn> GenerateColumns(IItemProperties itemProperties) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGenerateColumns = null;
@@ -2084,7 +2101,7 @@ public class DataGrid extends system.windows.controls.primitives.MultiSelector  
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGrid.SelectedCells" target="_top">.NET documentation</a>
      */
-    public IList_1 getSelectedCells() throws Throwable {
+    public IList_1<DataGridCellInfo> getSelectedCells() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSelectedCells = null;
@@ -2106,7 +2123,7 @@ public class DataGrid extends system.windows.controls.primitives.MultiSelector  
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGrid.Columns" target="_top">.NET documentation</a>
      */
-    public ObservableCollection_1 getColumns() throws Throwable {
+    public ObservableCollection_1<DataGridColumn> getColumns() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectColumns = null;
@@ -2128,7 +2145,7 @@ public class DataGrid extends system.windows.controls.primitives.MultiSelector  
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGrid.RowValidationRules" target="_top">.NET documentation</a>
      */
-    public ObservableCollection_1 getRowValidationRules() throws Throwable {
+    public ObservableCollection_1<ValidationRule> getRowValidationRules() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRowValidationRules = null;
@@ -3928,6 +3945,652 @@ public class DataGrid extends system.windows.controls.primitives.MultiSelector  
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("AutoGeneratedColumns", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addCurrentCellChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<EventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addCurrentCellChanged(EventHandler_1<EventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("CurrentCellChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeCurrentCellChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<EventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeCurrentCellChanged(EventHandler_1<EventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("CurrentCellChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addAddingNewItem.
+     *
+     * @param handler the argument of type {@code EventHandler_1<AddingNewItemEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addAddingNewItem(EventHandler_1<AddingNewItemEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("AddingNewItem", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeAddingNewItem.
+     *
+     * @param handler the argument of type {@code EventHandler_1<AddingNewItemEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeAddingNewItem(EventHandler_1<AddingNewItemEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("AddingNewItem", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addAutoGeneratingColumn.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataGridAutoGeneratingColumnEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addAutoGeneratingColumn(EventHandler_1<DataGridAutoGeneratingColumnEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("AutoGeneratingColumn", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeAutoGeneratingColumn.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataGridAutoGeneratingColumnEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeAutoGeneratingColumn(EventHandler_1<DataGridAutoGeneratingColumnEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("AutoGeneratingColumn", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addBeginningEdit.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataGridBeginningEditEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addBeginningEdit(EventHandler_1<DataGridBeginningEditEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("BeginningEdit", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeBeginningEdit.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataGridBeginningEditEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeBeginningEdit(EventHandler_1<DataGridBeginningEditEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("BeginningEdit", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addCellEditEnding.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataGridCellEditEndingEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addCellEditEnding(EventHandler_1<DataGridCellEditEndingEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("CellEditEnding", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeCellEditEnding.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataGridCellEditEndingEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeCellEditEnding(EventHandler_1<DataGridCellEditEndingEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("CellEditEnding", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addColumnDisplayIndexChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataGridColumnEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addColumnDisplayIndexChanged(EventHandler_1<DataGridColumnEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("ColumnDisplayIndexChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeColumnDisplayIndexChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataGridColumnEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeColumnDisplayIndexChanged(EventHandler_1<DataGridColumnEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("ColumnDisplayIndexChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addColumnReordered.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataGridColumnEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addColumnReordered(EventHandler_1<DataGridColumnEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("ColumnReordered", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeColumnReordered.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataGridColumnEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeColumnReordered(EventHandler_1<DataGridColumnEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("ColumnReordered", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addColumnReordering.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataGridColumnReorderingEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addColumnReordering(EventHandler_1<DataGridColumnReorderingEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("ColumnReordering", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeColumnReordering.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataGridColumnReorderingEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeColumnReordering(EventHandler_1<DataGridColumnReorderingEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("ColumnReordering", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addPreparingCellForEdit.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataGridPreparingCellForEditEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addPreparingCellForEdit(EventHandler_1<DataGridPreparingCellForEditEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("PreparingCellForEdit", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removePreparingCellForEdit.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataGridPreparingCellForEditEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removePreparingCellForEdit(EventHandler_1<DataGridPreparingCellForEditEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("PreparingCellForEdit", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addCopyingRowClipboardContent.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataGridRowClipboardEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addCopyingRowClipboardContent(EventHandler_1<DataGridRowClipboardEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("CopyingRowClipboardContent", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeCopyingRowClipboardContent.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataGridRowClipboardEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeCopyingRowClipboardContent(EventHandler_1<DataGridRowClipboardEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("CopyingRowClipboardContent", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addLoadingRowDetails.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataGridRowDetailsEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addLoadingRowDetails(EventHandler_1<DataGridRowDetailsEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("LoadingRowDetails", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeLoadingRowDetails.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataGridRowDetailsEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeLoadingRowDetails(EventHandler_1<DataGridRowDetailsEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("LoadingRowDetails", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addRowDetailsVisibilityChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataGridRowDetailsEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addRowDetailsVisibilityChanged(EventHandler_1<DataGridRowDetailsEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("RowDetailsVisibilityChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeRowDetailsVisibilityChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataGridRowDetailsEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeRowDetailsVisibilityChanged(EventHandler_1<DataGridRowDetailsEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("RowDetailsVisibilityChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addUnloadingRowDetails.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataGridRowDetailsEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addUnloadingRowDetails(EventHandler_1<DataGridRowDetailsEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("UnloadingRowDetails", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeUnloadingRowDetails.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataGridRowDetailsEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeUnloadingRowDetails(EventHandler_1<DataGridRowDetailsEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("UnloadingRowDetails", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addRowEditEnding.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataGridRowEditEndingEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addRowEditEnding(EventHandler_1<DataGridRowEditEndingEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("RowEditEnding", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeRowEditEnding.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataGridRowEditEndingEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeRowEditEnding(EventHandler_1<DataGridRowEditEndingEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("RowEditEnding", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addLoadingRow.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataGridRowEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addLoadingRow(EventHandler_1<DataGridRowEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("LoadingRow", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeLoadingRow.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataGridRowEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeLoadingRow(EventHandler_1<DataGridRowEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("LoadingRow", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addUnloadingRow.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataGridRowEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addUnloadingRow(EventHandler_1<DataGridRowEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("UnloadingRow", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeUnloadingRow.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataGridRowEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeUnloadingRow(EventHandler_1<DataGridRowEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("UnloadingRow", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addColumnHeaderDragCompleted.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DragCompletedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addColumnHeaderDragCompleted(EventHandler_1<DragCompletedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("ColumnHeaderDragCompleted", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeColumnHeaderDragCompleted.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DragCompletedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeColumnHeaderDragCompleted(EventHandler_1<DragCompletedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("ColumnHeaderDragCompleted", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addColumnHeaderDragDelta.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DragDeltaEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addColumnHeaderDragDelta(EventHandler_1<DragDeltaEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("ColumnHeaderDragDelta", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeColumnHeaderDragDelta.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DragDeltaEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeColumnHeaderDragDelta(EventHandler_1<DragDeltaEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("ColumnHeaderDragDelta", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addColumnHeaderDragStarted.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DragStartedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addColumnHeaderDragStarted(EventHandler_1<DragStartedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("ColumnHeaderDragStarted", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeColumnHeaderDragStarted.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DragStartedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeColumnHeaderDragStarted(EventHandler_1<DragStartedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("ColumnHeaderDragStarted", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

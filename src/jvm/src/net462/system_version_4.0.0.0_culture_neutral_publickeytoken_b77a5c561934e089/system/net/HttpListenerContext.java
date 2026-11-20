@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.threading.tasks.Task_1;
+import system.net.websockets.HttpListenerWebSocketContext;
 import system.TimeSpan;
 import system.ArraySegment_1;
 import system.net.HttpListenerRequest;
@@ -181,7 +182,7 @@ public class HttpListenerContext extends NetObject  {
      * @throws system.security.SecurityException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.HttpListenerContext.AcceptWebSocketAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 AcceptWebSocketAsync(java.lang.String subProtocol) throws Throwable, system.ArgumentException, system.OverflowException, system.InvalidOperationException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException {
+    public Task_1<HttpListenerWebSocketContext> AcceptWebSocketAsync(java.lang.String subProtocol) throws Throwable, system.ArgumentException, system.OverflowException, system.InvalidOperationException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAcceptWebSocketAsync = null;
@@ -216,7 +217,7 @@ public class HttpListenerContext extends NetObject  {
      * @throws system.security.SecurityException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.HttpListenerContext.AcceptWebSocketAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 AcceptWebSocketAsync(java.lang.String subProtocol, int receiveBufferSize, TimeSpan keepAliveInterval) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException {
+    public Task_1<HttpListenerWebSocketContext> AcceptWebSocketAsync(java.lang.String subProtocol, int receiveBufferSize, TimeSpan keepAliveInterval) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAcceptWebSocketAsync = null;
@@ -251,7 +252,7 @@ public class HttpListenerContext extends NetObject  {
      * @throws system.security.SecurityException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.HttpListenerContext.AcceptWebSocketAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 AcceptWebSocketAsync(java.lang.String subProtocol, int receiveBufferSize, TimeSpan keepAliveInterval, ArraySegment_1 internalBuffer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException {
+    public Task_1<HttpListenerWebSocketContext> AcceptWebSocketAsync(java.lang.String subProtocol, int receiveBufferSize, TimeSpan keepAliveInterval, ArraySegment_1 internalBuffer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAcceptWebSocketAsync = null;
@@ -284,7 +285,7 @@ public class HttpListenerContext extends NetObject  {
      * @throws system.security.SecurityException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.HttpListenerContext.AcceptWebSocketAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 AcceptWebSocketAsync(java.lang.String subProtocol, TimeSpan keepAliveInterval) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException {
+    public Task_1<HttpListenerWebSocketContext> AcceptWebSocketAsync(java.lang.String subProtocol, TimeSpan keepAliveInterval) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAcceptWebSocketAsync = null;

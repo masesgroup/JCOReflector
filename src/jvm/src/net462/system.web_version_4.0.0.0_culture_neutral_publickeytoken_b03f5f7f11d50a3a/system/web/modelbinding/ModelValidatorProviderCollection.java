@@ -44,6 +44,7 @@ import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.web.modelbinding.ModelValidator;
 import system.web.modelbinding.ModelMetadata;
 import system.web.modelbinding.ModelBindingExecutionContext;
 
@@ -175,12 +176,12 @@ public class ModelValidatorProviderCollection extends system.collections.objectm
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param list the argument of type {@code IList_1}
+     * @param list the argument of type {@code IList_1<ModelValidatorProvider>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelValidatorProviderCollection.-ctor" target="_top">.NET documentation</a>
      */
-    public ModelValidatorProviderCollection(IList_1 list) throws Throwable, system.ArgumentNullException {
+    public ModelValidatorProviderCollection(IList_1<ModelValidatorProvider> list) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -203,7 +204,7 @@ public class ModelValidatorProviderCollection extends system.collections.objectm
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelValidatorProviderCollection.GetValidators" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetValidators(ModelMetadata metadata, ModelBindingExecutionContext context) throws Throwable {
+    public IEnumerable_1<ModelValidator> GetValidators(ModelMetadata metadata, ModelBindingExecutionContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetValidators = null;

@@ -44,6 +44,7 @@ import system.security.principal.SecurityIdentifier;
 import system.security.principal.WindowsBuiltInRole;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.security.claims.Claim;
 import system.security.principal.IIdentity;
 import system.security.principal.IIdentityImplementation;
 
@@ -351,7 +352,7 @@ public class WindowsPrincipal extends system.security.claims.ClaimsPrincipal  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Principal.WindowsPrincipal.DeviceClaims" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getDeviceClaims() throws Throwable {
+    public IEnumerable_1<Claim> getDeviceClaims() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDeviceClaims = null;
@@ -373,7 +374,7 @@ public class WindowsPrincipal extends system.security.claims.ClaimsPrincipal  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Principal.WindowsPrincipal.UserClaims" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getUserClaims() throws Throwable {
+    public IEnumerable_1<Claim> getUserClaims() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUserClaims = null;

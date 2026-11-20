@@ -635,7 +635,7 @@ public class IDuplexContextChannelImplementation extends NetObject implements ID
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.IDuplexContextChannel.Extensions" target="_top">.NET documentation</a>
      */
-    public IExtensionCollection_1 getExtensions() throws Throwable {
+    public IExtensionCollection_1<IContextChannel> getExtensions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExtensions = null;

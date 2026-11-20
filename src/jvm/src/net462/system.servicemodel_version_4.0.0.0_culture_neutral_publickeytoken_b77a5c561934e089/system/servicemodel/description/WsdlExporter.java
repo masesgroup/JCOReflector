@@ -290,7 +290,7 @@ public class WsdlExporter extends system.servicemodel.description.MetadataExport
     /**
      * Invokes the .NET member ExportEndpoints.
      *
-     * @param endpoints the argument of type {@code IEnumerable_1}
+     * @param endpoints the argument of type {@code IEnumerable_1<ServiceEndpoint>}
      * @param wsdlServiceQName the argument of type {@code XmlQualifiedName}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -316,7 +316,7 @@ public class WsdlExporter extends system.servicemodel.description.MetadataExport
      * @throws system.xml.XmlException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.WsdlExporter.ExportEndpoints" target="_top">.NET documentation</a>
      */
-    public void ExportEndpoints(IEnumerable_1 endpoints, XmlQualifiedName wsdlServiceQName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.FormatException, system.UriFormatException, system.NotSupportedException, system.xml.XmlException {
+    public void ExportEndpoints(IEnumerable_1<ServiceEndpoint> endpoints, XmlQualifiedName wsdlServiceQName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.FormatException, system.UriFormatException, system.NotSupportedException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

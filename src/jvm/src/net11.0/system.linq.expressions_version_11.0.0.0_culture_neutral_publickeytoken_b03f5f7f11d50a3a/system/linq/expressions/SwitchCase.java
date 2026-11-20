@@ -164,7 +164,7 @@ public class SwitchCase extends NetObject  {
     /**
      * Invokes the .NET member Update.
      *
-     * @param testValues the argument of type {@code IEnumerable_1}
+     * @param testValues the argument of type {@code IEnumerable_1<Expression>}
      * @param body the argument of type {@code Expression}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -181,7 +181,7 @@ public class SwitchCase extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.SwitchCase.Update" target="_top">.NET documentation</a>
      */
-    public SwitchCase Update(IEnumerable_1 testValues, Expression body) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException {
+    public SwitchCase Update(IEnumerable_1<Expression> testValues, Expression body) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUpdate = null;
@@ -207,7 +207,7 @@ public class SwitchCase extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.SwitchCase.TestValues" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getTestValues() throws Throwable {
+    public ReadOnlyCollection_1<Expression> getTestValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTestValues = null;

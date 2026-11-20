@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.EventArgs;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.windows.shell.JumpItem;
+import system.windows.shell.JumpItemRejectionReason;
 
 
 /**
@@ -181,8 +183,8 @@ public class JumpItemsRejectedEventArgs extends system.EventArgs  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param rejectedItems the argument of type {@code IList_1}
-     * @param reasons the argument of type {@code IList_1}
+     * @param rejectedItems the argument of type {@code IList_1<JumpItem>}
+     * @param reasons the argument of type {@code IList_1<JumpItemRejectionReason>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -198,7 +200,7 @@ public class JumpItemsRejectedEventArgs extends system.EventArgs  {
      * @throws system.InvalidCastException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Shell.JumpItemsRejectedEventArgs.-ctor" target="_top">.NET documentation</a>
      */
-    public JumpItemsRejectedEventArgs(IList_1 rejectedItems, IList_1 reasons) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
+    public JumpItemsRejectedEventArgs(IList_1<JumpItem> rejectedItems, IList_1<JumpItemRejectionReason> reasons) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -223,7 +225,7 @@ public class JumpItemsRejectedEventArgs extends system.EventArgs  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Shell.JumpItemsRejectedEventArgs.RejectedItems" target="_top">.NET documentation</a>
      */
-    public IList_1 getRejectedItems() throws Throwable {
+    public IList_1<JumpItem> getRejectedItems() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRejectedItems = null;
@@ -245,7 +247,7 @@ public class JumpItemsRejectedEventArgs extends system.EventArgs  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Shell.JumpItemsRejectedEventArgs.RejectedItems" target="_top">.NET documentation</a>
      */
-    public void setRejectedItems(IList_1 RejectedItems) throws Throwable {
+    public void setRejectedItems(IList_1<JumpItem> RejectedItems) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -262,7 +264,7 @@ public class JumpItemsRejectedEventArgs extends system.EventArgs  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Shell.JumpItemsRejectedEventArgs.RejectionReasons" target="_top">.NET documentation</a>
      */
-    public IList_1 getRejectionReasons() throws Throwable {
+    public IList_1<JumpItemRejectionReason> getRejectionReasons() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRejectionReasons = null;
@@ -284,7 +286,7 @@ public class JumpItemsRejectedEventArgs extends system.EventArgs  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Shell.JumpItemsRejectedEventArgs.RejectionReasons" target="_top">.NET documentation</a>
      */
-    public void setRejectionReasons(IList_1 RejectionReasons) throws Throwable {
+    public void setRejectionReasons(IList_1<JumpItemRejectionReason> RejectionReasons) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

@@ -46,6 +46,7 @@ import system.threading.tasks.Task;
 import system.web.ISubscriptionToken;
 import system.web.ISubscriptionTokenImplementation;
 import system.Action_1;
+import system.web.HttpContext;
 import system.web.caching.CacheDependency;
 import system.web.HttpCookie;
 import system.collections.specialized.NameValueCollection;
@@ -315,7 +316,7 @@ public class HttpResponse extends NetObject  {
     /**
      * Invokes the .NET member AddOnSendingHeaders.
      *
-     * @param callback the argument of type {@code Action_1}
+     * @param callback the argument of type {@code Action_1<HttpContext>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -333,7 +334,7 @@ public class HttpResponse extends NetObject  {
      * @throws system.web.HttpException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponse.AddOnSendingHeaders" target="_top">.NET documentation</a>
      */
-    public ISubscriptionToken AddOnSendingHeaders(Action_1 callback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.web.HttpException {
+    public ISubscriptionToken AddOnSendingHeaders(Action_1<HttpContext> callback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.web.HttpException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAddOnSendingHeaders = null;

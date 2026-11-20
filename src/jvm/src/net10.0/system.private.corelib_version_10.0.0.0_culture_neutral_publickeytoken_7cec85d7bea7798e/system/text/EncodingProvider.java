@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.text.EncodingInfo;
 import system.text.Encoding;
 import system.text.EncoderFallback;
 import system.text.DecoderFallback;
@@ -166,7 +167,7 @@ public class EncodingProvider extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.EncodingProvider.GetEncodings" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetEncodings() throws Throwable {
+    public IEnumerable_1<EncodingInfo> GetEncodings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetEncodings = null;

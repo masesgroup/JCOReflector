@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.activities.CodeActivity_1;
 import system.collections.objectmodel.Collection_1;
+import system.activities.Argument;
 
 
 /**
@@ -187,7 +188,7 @@ public class New_1<TResult extends IJCOBridgeReflected> extends system.activitie
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.New-1.Arguments" target="_top">.NET documentation</a>
      */
-    public Collection_1 getArguments() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+    public Collection_1<Argument> getArguments() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArguments = null;

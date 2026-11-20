@@ -42,6 +42,7 @@ import system.windows.controls.ContentControl;
 import system.activities.presentation.EditingContext;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.activities.presentation.view.TypeWrapper;
 import system.collections.objectmodel.ObservableCollection_1;
 import system.Func_2;
 import system.componentmodel.PropertyChangedEventHandler;
@@ -564,7 +565,7 @@ public class TypePresenter extends system.windows.controls.ContentControl  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.TypePresenter.Items" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getItems() throws Throwable {
+    public IEnumerable_1<TypeWrapper> getItems() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectItems = null;
@@ -588,7 +589,7 @@ public class TypePresenter extends system.windows.controls.ContentControl  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.TypePresenter.DefaultMostRecentlyUsedTypes" target="_top">.NET documentation</a>
      */
-    public static ObservableCollection_1 getDefaultMostRecentlyUsedTypes() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public static ObservableCollection_1<NetType> getDefaultMostRecentlyUsedTypes() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDefaultMostRecentlyUsedTypes = null;
@@ -618,7 +619,7 @@ public class TypePresenter extends system.windows.controls.ContentControl  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.TypePresenter.MostRecentlyUsedTypes" target="_top">.NET documentation</a>
      */
-    public ObservableCollection_1 getMostRecentlyUsedTypes() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public ObservableCollection_1<NetType> getMostRecentlyUsedTypes() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectMostRecentlyUsedTypes = null;
@@ -648,7 +649,7 @@ public class TypePresenter extends system.windows.controls.ContentControl  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.TypePresenter.MostRecentlyUsedTypes" target="_top">.NET documentation</a>
      */
-    public void setMostRecentlyUsedTypes(ObservableCollection_1 MostRecentlyUsedTypes) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public void setMostRecentlyUsedTypes(ObservableCollection_1<NetType> MostRecentlyUsedTypes) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

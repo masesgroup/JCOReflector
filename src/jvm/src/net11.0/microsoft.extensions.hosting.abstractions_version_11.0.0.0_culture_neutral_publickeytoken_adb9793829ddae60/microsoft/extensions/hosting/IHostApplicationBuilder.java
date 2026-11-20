@@ -52,6 +52,7 @@ import microsoft.extensions.logging.ILoggingBuilder;
 import microsoft.extensions.logging.ILoggingBuilderImplementation;
 import system.collections.generic.IDictionary_2;
 import system.collections.generic.IDictionary_2Implementation;
+import system.Object;
 
 
 /**
@@ -146,7 +147,7 @@ public interface IHostApplicationBuilder extends IJCOBridgeReflected {
 
     public ILoggingBuilder getLogging() throws Throwable;
 
-    public IDictionary_2 getProperties() throws Throwable;
+    public IDictionary_2<Object, Object> getProperties() throws Throwable;
 
 
 

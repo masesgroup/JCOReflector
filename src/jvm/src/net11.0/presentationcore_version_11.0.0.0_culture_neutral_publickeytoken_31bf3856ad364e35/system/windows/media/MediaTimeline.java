@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.windows.media.animation.Timeline;
 import system.Nullable_1;
+import system.TimeSpan;
 import system.windows.Duration;
 import system.windows.media.animation.RepeatBehavior;
 import system.Uri;
@@ -179,7 +180,7 @@ public class MediaTimeline extends system.windows.media.animation.Timeline  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param beginTime the argument of type {@code Nullable_1}
+     * @param beginTime the argument of type {@code Nullable_1<TimeSpan>}
      * @param duration the argument of type {@code Duration}
      * @param repeatBehavior the argument of type {@code RepeatBehavior}
      * @throws Throwable if the .NET constructor fails
@@ -193,7 +194,7 @@ public class MediaTimeline extends system.windows.media.animation.Timeline  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.MediaTimeline.-ctor" target="_top">.NET documentation</a>
      */
-    public MediaTimeline(Nullable_1 beginTime, Duration duration, RepeatBehavior repeatBehavior) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
+    public MediaTimeline(Nullable_1<TimeSpan> beginTime, Duration duration, RepeatBehavior repeatBehavior) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -206,7 +207,7 @@ public class MediaTimeline extends system.windows.media.animation.Timeline  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param beginTime the argument of type {@code Nullable_1}
+     * @param beginTime the argument of type {@code Nullable_1<TimeSpan>}
      * @param duration the argument of type {@code Duration}
      * @throws Throwable if the .NET constructor fails
      * @throws system.InvalidOperationException if the .NET member raises it
@@ -219,7 +220,7 @@ public class MediaTimeline extends system.windows.media.animation.Timeline  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.MediaTimeline.-ctor" target="_top">.NET documentation</a>
      */
-    public MediaTimeline(Nullable_1 beginTime, Duration duration) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
+    public MediaTimeline(Nullable_1<TimeSpan> beginTime, Duration duration) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -232,7 +233,7 @@ public class MediaTimeline extends system.windows.media.animation.Timeline  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param beginTime the argument of type {@code Nullable_1}
+     * @param beginTime the argument of type {@code Nullable_1<TimeSpan>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -244,7 +245,7 @@ public class MediaTimeline extends system.windows.media.animation.Timeline  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.MediaTimeline.-ctor" target="_top">.NET documentation</a>
      */
-    public MediaTimeline(Nullable_1 beginTime) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
+    public MediaTimeline(Nullable_1<TimeSpan> beginTime) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

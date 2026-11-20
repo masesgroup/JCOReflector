@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.threading.tasks.Task_1;
-import system.threading.CancellationToken;
 import system.runtime.interopservices.javascript.JSObject;
+import system.threading.CancellationToken;
 
 
 /**
@@ -175,7 +175,7 @@ public class JSHost extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.JavaScript.JSHost.ImportAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 ImportAsync(java.lang.String moduleName, java.lang.String moduleUrl, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static Task_1<JSObject> ImportAsync(java.lang.String moduleName, java.lang.String moduleUrl, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectImportAsync = null;

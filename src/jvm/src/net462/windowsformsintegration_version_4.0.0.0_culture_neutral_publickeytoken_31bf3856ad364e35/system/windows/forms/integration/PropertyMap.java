@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.windows.forms.integration.PropertyTranslator;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
+import system.EventHandler_1;
+import system.windows.forms.integration.PropertyMappingExceptionEventArgs;
 
 
 /**
@@ -449,6 +451,40 @@ public class PropertyMap extends NetObject  {
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addPropertyMappingError.
+     *
+     * @param handler the argument of type {@code EventHandler_1<PropertyMappingExceptionEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addPropertyMappingError(EventHandler_1<PropertyMappingExceptionEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("PropertyMappingError", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removePropertyMappingError.
+     *
+     * @param handler the argument of type {@code EventHandler_1<PropertyMappingExceptionEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removePropertyMappingError(EventHandler_1<PropertyMappingExceptionEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("PropertyMappingError", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

@@ -41,6 +41,9 @@ import java.util.ArrayList;
 import microsoft.build.framework.xamltypes.DataSource;
 import microsoft.build.framework.xamltypes.Rule;
 import system.collections.generic.List_1;
+import microsoft.build.framework.xamltypes.Argument;
+import microsoft.build.framework.xamltypes.NameValuePair;
+import microsoft.build.framework.xamltypes.ValueEditor;
 
 
 /**
@@ -532,7 +535,7 @@ public class BaseProperty extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.Arguments" target="_top">.NET documentation</a>
      */
-    public List_1 getArguments() throws Throwable {
+    public List_1<Argument> getArguments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArguments = null;
@@ -554,7 +557,7 @@ public class BaseProperty extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.Arguments" target="_top">.NET documentation</a>
      */
-    public void setArguments(List_1 Arguments) throws Throwable {
+    public void setArguments(List_1<Argument> Arguments) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -571,7 +574,7 @@ public class BaseProperty extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.Metadata" target="_top">.NET documentation</a>
      */
-    public List_1 getMetadata() throws Throwable {
+    public List_1<NameValuePair> getMetadata() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectMetadata = null;
@@ -593,7 +596,7 @@ public class BaseProperty extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.Metadata" target="_top">.NET documentation</a>
      */
-    public void setMetadata(List_1 Metadata) throws Throwable {
+    public void setMetadata(List_1<NameValuePair> Metadata) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -610,7 +613,7 @@ public class BaseProperty extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.ValueEditors" target="_top">.NET documentation</a>
      */
-    public List_1 getValueEditors() throws Throwable {
+    public List_1<ValueEditor> getValueEditors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValueEditors = null;
@@ -632,7 +635,7 @@ public class BaseProperty extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.BaseProperty.ValueEditors" target="_top">.NET documentation</a>
      */
-    public void setValueEditors(List_1 ValueEditors) throws Throwable {
+    public void setValueEditors(List_1<ValueEditor> ValueEditors) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

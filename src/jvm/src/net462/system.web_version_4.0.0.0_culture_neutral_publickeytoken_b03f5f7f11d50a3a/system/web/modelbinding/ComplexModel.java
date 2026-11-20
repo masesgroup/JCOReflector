@@ -43,6 +43,7 @@ import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
 import system.collections.generic.IDictionary_2;
 import system.collections.generic.IDictionary_2Implementation;
+import system.web.modelbinding.ComplexModelResult;
 import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
@@ -161,14 +162,14 @@ public class ComplexModel extends NetObject  {
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param modelMetadata the argument of type {@code ModelMetadata}
-     * @param propertyMetadata the argument of type {@code IEnumerable_1}
+     * @param propertyMetadata the argument of type {@code IEnumerable_1<ModelMetadata>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ComplexModel.-ctor" target="_top">.NET documentation</a>
      */
-    public ComplexModel(ModelMetadata modelMetadata, IEnumerable_1 propertyMetadata) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public ComplexModel(ModelMetadata modelMetadata, IEnumerable_1<ModelMetadata> propertyMetadata) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -194,7 +195,7 @@ public class ComplexModel extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ComplexModel.Results" target="_top">.NET documentation</a>
      */
-    public IDictionary_2 getResults() throws Throwable {
+    public IDictionary_2<ModelMetadata, ComplexModelResult> getResults() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectResults = null;
@@ -216,7 +217,7 @@ public class ComplexModel extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ComplexModel.Results" target="_top">.NET documentation</a>
      */
-    public void setResults(IDictionary_2 Results) throws Throwable {
+    public void setResults(IDictionary_2<ModelMetadata, ComplexModelResult> Results) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -233,7 +234,7 @@ public class ComplexModel extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ComplexModel.PropertyMetadata" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getPropertyMetadata() throws Throwable {
+    public ReadOnlyCollection_1<ModelMetadata> getPropertyMetadata() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPropertyMetadata = null;
@@ -255,7 +256,7 @@ public class ComplexModel extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ComplexModel.PropertyMetadata" target="_top">.NET documentation</a>
      */
-    public void setPropertyMetadata(ReadOnlyCollection_1 PropertyMetadata) throws Throwable {
+    public void setPropertyMetadata(ReadOnlyCollection_1<ModelMetadata> PropertyMetadata) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

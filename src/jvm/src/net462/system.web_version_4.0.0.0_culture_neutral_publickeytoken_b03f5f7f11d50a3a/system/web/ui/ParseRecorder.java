@@ -46,6 +46,8 @@ import system.codedom.CodeMemberMethod;
 import system.text.regularexpressions.Match;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.Func_1;
+import system.web.ui.ParseRecorder;
 
 
 /**
@@ -301,7 +303,7 @@ public class ParseRecorder extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.ParseRecorder.RecorderFactories" target="_top">.NET documentation</a>
      */
-    public static IList_1 getRecorderFactories() throws Throwable {
+    public static IList_1<Func_1<ParseRecorder>> getRecorderFactories() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRecorderFactories = null;

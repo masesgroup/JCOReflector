@@ -40,10 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.xml.linq.XElement;
 import system.xml.linq.XNode;
 import system.xml.IXmlNamespaceResolver;
 import system.xml.IXmlNamespaceResolverImplementation;
-import system.xml.linq.XElement;
 import system.xml.xpath.XPathNavigator;
 import system.xml.XmlNameTable;
 
@@ -180,7 +180,7 @@ public class Extensions extends NetObject  {
      * @throws system.xml.xpath.XPathException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XPath.Extensions.XPathSelectElements" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 XPathSelectElements(XNode node, java.lang.String expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException {
+    public static IEnumerable_1<XElement> XPathSelectElements(XNode node, java.lang.String expression) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectXPathSelectElements = null;
@@ -214,7 +214,7 @@ public class Extensions extends NetObject  {
      * @throws system.xml.xpath.XPathException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XPath.Extensions.XPathSelectElements" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 XPathSelectElements(XNode node, java.lang.String expression, IXmlNamespaceResolver resolver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.xpath.XPathException {
+    public static IEnumerable_1<XElement> XPathSelectElements(XNode node, java.lang.String expression, IXmlNamespaceResolver resolver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.xpath.XPathException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectXPathSelectElements = null;

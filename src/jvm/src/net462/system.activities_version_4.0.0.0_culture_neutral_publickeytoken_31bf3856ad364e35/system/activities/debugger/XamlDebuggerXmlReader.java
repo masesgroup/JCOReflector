@@ -44,6 +44,8 @@ import system.xaml.NamespaceDeclaration;
 import system.xaml.XamlMember;
 import system.xaml.XamlNodeType;
 import system.xaml.XamlType;
+import system.EventHandler_1;
+import system.activities.debugger.SourceLocationFoundEventArgs;
 
 
 /**
@@ -729,6 +731,40 @@ public class XamlDebuggerXmlReader extends NetObject  {
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addSourceLocationFound.
+     *
+     * @param handler the argument of type {@code EventHandler_1<SourceLocationFoundEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addSourceLocationFound(EventHandler_1<SourceLocationFoundEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("SourceLocationFound", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeSourceLocationFound.
+     *
+     * @param handler the argument of type {@code EventHandler_1<SourceLocationFoundEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeSourceLocationFound(EventHandler_1<SourceLocationFoundEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("SourceLocationFound", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

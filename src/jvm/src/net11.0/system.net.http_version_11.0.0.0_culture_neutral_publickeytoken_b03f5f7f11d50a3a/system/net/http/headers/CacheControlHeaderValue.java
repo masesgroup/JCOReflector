@@ -41,7 +41,9 @@ import java.util.ArrayList;
 import system.net.http.headers.CacheControlHeaderValue;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.net.http.headers.NameValueHeaderValue;
 import system.Nullable_1;
+import system.TimeSpan;
 
 
 /**
@@ -647,7 +649,7 @@ public class CacheControlHeaderValue extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.Extensions" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getExtensions() throws Throwable {
+    public ICollection_1<NameValueHeaderValue> getExtensions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExtensions = null;
@@ -713,7 +715,7 @@ public class CacheControlHeaderValue extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.MaxAge" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getMaxAge() throws Throwable {
+    public Nullable_1<TimeSpan> getMaxAge() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectMaxAge = null;
@@ -740,7 +742,7 @@ public class CacheControlHeaderValue extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.MaxAge" target="_top">.NET documentation</a>
      */
-    public void setMaxAge(Nullable_1 MaxAge) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public void setMaxAge(Nullable_1<TimeSpan> MaxAge) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -757,7 +759,7 @@ public class CacheControlHeaderValue extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.MaxStaleLimit" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getMaxStaleLimit() throws Throwable {
+    public Nullable_1<TimeSpan> getMaxStaleLimit() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectMaxStaleLimit = null;
@@ -784,7 +786,7 @@ public class CacheControlHeaderValue extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.MaxStaleLimit" target="_top">.NET documentation</a>
      */
-    public void setMaxStaleLimit(Nullable_1 MaxStaleLimit) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public void setMaxStaleLimit(Nullable_1<TimeSpan> MaxStaleLimit) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -801,7 +803,7 @@ public class CacheControlHeaderValue extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.MinFresh" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getMinFresh() throws Throwable {
+    public Nullable_1<TimeSpan> getMinFresh() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectMinFresh = null;
@@ -828,7 +830,7 @@ public class CacheControlHeaderValue extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.MinFresh" target="_top">.NET documentation</a>
      */
-    public void setMinFresh(Nullable_1 MinFresh) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public void setMinFresh(Nullable_1<TimeSpan> MinFresh) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -845,7 +847,7 @@ public class CacheControlHeaderValue extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.SharedMaxAge" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getSharedMaxAge() throws Throwable {
+    public Nullable_1<TimeSpan> getSharedMaxAge() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSharedMaxAge = null;
@@ -872,7 +874,7 @@ public class CacheControlHeaderValue extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.CacheControlHeaderValue.SharedMaxAge" target="_top">.NET documentation</a>
      */
-    public void setSharedMaxAge(Nullable_1 SharedMaxAge) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public void setSharedMaxAge(Nullable_1<TimeSpan> SharedMaxAge) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

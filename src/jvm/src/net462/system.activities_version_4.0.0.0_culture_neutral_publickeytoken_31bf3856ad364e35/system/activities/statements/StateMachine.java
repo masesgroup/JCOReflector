@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.activities.NativeActivity;
 import system.activities.statements.State;
 import system.collections.objectmodel.Collection_1;
+import system.activities.Variable;
 
 
 /**
@@ -240,7 +241,7 @@ public class StateMachine extends system.activities.NativeActivity  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.StateMachine.States" target="_top">.NET documentation</a>
      */
-    public Collection_1 getStates() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public Collection_1<State> getStates() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectStates = null;
@@ -267,7 +268,7 @@ public class StateMachine extends system.activities.NativeActivity  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.StateMachine.Variables" target="_top">.NET documentation</a>
      */
-    public Collection_1 getVariables() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public Collection_1<Variable> getVariables() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectVariables = null;

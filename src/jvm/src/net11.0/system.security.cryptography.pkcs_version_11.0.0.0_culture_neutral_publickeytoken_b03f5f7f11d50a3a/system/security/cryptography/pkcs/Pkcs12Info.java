@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.security.cryptography.pkcs.Pkcs12Info;
 import system.ReadOnlyMemory_1;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.security.cryptography.pkcs.Pkcs12SafeContents;
 import system.security.cryptography.pkcs.Pkcs12IntegrityMode;
 
 
@@ -241,7 +242,7 @@ public class Pkcs12Info extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.Pkcs12Info.AuthenticatedSafe" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getAuthenticatedSafe() throws Throwable {
+    public ReadOnlyCollection_1<Pkcs12SafeContents> getAuthenticatedSafe() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAuthenticatedSafe = null;
@@ -263,7 +264,7 @@ public class Pkcs12Info extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.Pkcs12Info.AuthenticatedSafe" target="_top">.NET documentation</a>
      */
-    public void setAuthenticatedSafe(ReadOnlyCollection_1 AuthenticatedSafe) throws Throwable {
+    public void setAuthenticatedSafe(ReadOnlyCollection_1<Pkcs12SafeContents> AuthenticatedSafe) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

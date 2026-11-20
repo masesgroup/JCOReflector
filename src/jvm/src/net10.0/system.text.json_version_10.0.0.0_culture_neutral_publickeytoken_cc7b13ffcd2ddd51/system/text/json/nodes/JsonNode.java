@@ -44,6 +44,7 @@ import system.text.json.JsonValueKind;
 import system.text.json.nodes.JsonArray;
 import system.io.Stream;
 import system.Nullable_1;
+import system.text.json.nodes.JsonNodeOptions;
 import system.text.json.JsonDocumentOptions;
 import system.text.json.nodes.JsonObject;
 import system.text.json.nodes.JsonValue;
@@ -421,7 +422,7 @@ public class JsonNode extends NetObject  {
      * Invokes the .NET member Parse.
      *
      * @param utf8Json the argument of type {@code Stream}
-     * @param nodeOptions the argument of type {@code Nullable_1}
+     * @param nodeOptions the argument of type {@code Nullable_1<JsonNodeOptions>}
      * @param documentOptions the argument of type {@code JsonDocumentOptions}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -438,7 +439,7 @@ public class JsonNode extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Nodes.JsonNode.Parse" target="_top">.NET documentation</a>
      */
-    public static JsonNode Parse(Stream utf8Json, Nullable_1 nodeOptions, JsonDocumentOptions documentOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.text.json.JsonException, system.IndexOutOfRangeException {
+    public static JsonNode Parse(Stream utf8Json, Nullable_1<JsonNodeOptions> nodeOptions, JsonDocumentOptions documentOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.text.json.JsonException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -457,7 +458,7 @@ public class JsonNode extends NetObject  {
      * Invokes the .NET member Parse.
      *
      * @param json the argument of type {@code java.lang.String}
-     * @param nodeOptions the argument of type {@code Nullable_1}
+     * @param nodeOptions the argument of type {@code Nullable_1<JsonNodeOptions>}
      * @param documentOptions the argument of type {@code JsonDocumentOptions}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -474,7 +475,7 @@ public class JsonNode extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Nodes.JsonNode.Parse" target="_top">.NET documentation</a>
      */
-    public static JsonNode Parse(java.lang.String json, Nullable_1 nodeOptions, JsonDocumentOptions documentOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.text.json.JsonException, system.IndexOutOfRangeException {
+    public static JsonNode Parse(java.lang.String json, Nullable_1<JsonNodeOptions> nodeOptions, JsonDocumentOptions documentOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.text.json.JsonException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParse = null;
@@ -559,7 +560,7 @@ public class JsonNode extends NetObject  {
      * Invokes the .NET member ParseAsync.
      *
      * @param utf8Json the argument of type {@code Stream}
-     * @param nodeOptions the argument of type {@code Nullable_1}
+     * @param nodeOptions the argument of type {@code Nullable_1<JsonNodeOptions>}
      * @param documentOptions the argument of type {@code JsonDocumentOptions}
      * @param cancellationToken the argument of type {@code CancellationToken}
      * @return the value returned by the .NET member
@@ -572,7 +573,7 @@ public class JsonNode extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Nodes.JsonNode.ParseAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 ParseAsync(Stream utf8Json, Nullable_1 nodeOptions, JsonDocumentOptions documentOptions, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public static Task_1<JsonNode> ParseAsync(Stream utf8Json, Nullable_1<JsonNodeOptions> nodeOptions, JsonDocumentOptions documentOptions, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParseAsync = null;
@@ -647,7 +648,7 @@ public class JsonNode extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Nodes.JsonNode.Options" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getOptions() throws Throwable {
+    public Nullable_1<JsonNodeOptions> getOptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOptions = null;

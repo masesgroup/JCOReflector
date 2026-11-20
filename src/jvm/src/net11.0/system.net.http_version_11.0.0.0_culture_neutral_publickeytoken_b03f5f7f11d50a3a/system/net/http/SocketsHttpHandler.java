@@ -45,9 +45,15 @@ import system.diagnostics.DistributedContextPropagator;
 import system.diagnostics.metrics.IMeterFactory;
 import system.diagnostics.metrics.IMeterFactoryImplementation;
 import system.Func_3;
+import system.net.http.SocketsHttpConnectionContext;
+import system.threading.CancellationToken;
+import system.threading.tasks.ValueTask_1;
+import system.io.Stream;
+import system.net.http.SocketsHttpPlaintextStreamFilterContext;
 import system.net.CookieContainer;
 import system.net.DecompressionMethods;
 import system.net.http.HeaderEncodingSelector_1;
+import system.net.http.HttpRequestMessage;
 import system.net.http.HttpKeepAlivePingPolicy;
 import system.net.ICredentials;
 import system.net.ICredentialsImplementation;
@@ -1063,15 +1069,15 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.ConnectCallback" target="_top">.NET documentation</a>
      */
-    public Func_3 getConnectCallback() throws Throwable {
+    public Func_3<SocketsHttpConnectionContext, CancellationToken, ValueTask_1<Stream>> getConnectCallback() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectConnectCallback = null;
         try {
             retObjectConnectCallback = classInstance.Get("ConnectCallback");
-            return (Func_3)retObjectConnectCallback;
+            return (Func_3<SocketsHttpConnectionContext, CancellationToken, ValueTask_1<Stream>>)retObjectConnectCallback;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_3", retObjectConnectCallback != null ? retObjectConnectCallback.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_3<SocketsHttpConnectionContext, CancellationToken, ValueTask_1<Stream>>", retObjectConnectCallback != null ? retObjectConnectCallback.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1092,7 +1098,7 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.ConnectCallback" target="_top">.NET documentation</a>
      */
-    public void setConnectCallback(Func_3 ConnectCallback) throws Throwable, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+    public void setConnectCallback(Func_3<SocketsHttpConnectionContext, CancellationToken, ValueTask_1<Stream>> ConnectCallback) throws Throwable, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -1155,15 +1161,15 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.PlaintextStreamFilter" target="_top">.NET documentation</a>
      */
-    public Func_3 getPlaintextStreamFilter() throws Throwable {
+    public Func_3<SocketsHttpPlaintextStreamFilterContext, CancellationToken, ValueTask_1<Stream>> getPlaintextStreamFilter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPlaintextStreamFilter = null;
         try {
             retObjectPlaintextStreamFilter = classInstance.Get("PlaintextStreamFilter");
-            return (Func_3)retObjectPlaintextStreamFilter;
+            return (Func_3<SocketsHttpPlaintextStreamFilterContext, CancellationToken, ValueTask_1<Stream>>)retObjectPlaintextStreamFilter;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_3", retObjectPlaintextStreamFilter != null ? retObjectPlaintextStreamFilter.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_3<SocketsHttpPlaintextStreamFilterContext, CancellationToken, ValueTask_1<Stream>>", retObjectPlaintextStreamFilter != null ? retObjectPlaintextStreamFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1184,7 +1190,7 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.PlaintextStreamFilter" target="_top">.NET documentation</a>
      */
-    public void setPlaintextStreamFilter(Func_3 PlaintextStreamFilter) throws Throwable, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+    public void setPlaintextStreamFilter(Func_3<SocketsHttpPlaintextStreamFilterContext, CancellationToken, ValueTask_1<Stream>> PlaintextStreamFilter) throws Throwable, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -1301,15 +1307,15 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.RequestHeaderEncodingSelector" target="_top">.NET documentation</a>
      */
-    public HeaderEncodingSelector_1 getRequestHeaderEncodingSelector() throws Throwable {
+    public HeaderEncodingSelector_1<HttpRequestMessage> getRequestHeaderEncodingSelector() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRequestHeaderEncodingSelector = null;
         try {
             retObjectRequestHeaderEncodingSelector = classInstance.Get("RequestHeaderEncodingSelector");
-            return (HeaderEncodingSelector_1)retObjectRequestHeaderEncodingSelector;
+            return (HeaderEncodingSelector_1<HttpRequestMessage>)retObjectRequestHeaderEncodingSelector;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into HeaderEncodingSelector_1", retObjectRequestHeaderEncodingSelector != null ? retObjectRequestHeaderEncodingSelector.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into HeaderEncodingSelector_1<HttpRequestMessage>", retObjectRequestHeaderEncodingSelector != null ? retObjectRequestHeaderEncodingSelector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1330,7 +1336,7 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.RequestHeaderEncodingSelector" target="_top">.NET documentation</a>
      */
-    public void setRequestHeaderEncodingSelector(HeaderEncodingSelector_1 RequestHeaderEncodingSelector) throws Throwable, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+    public void setRequestHeaderEncodingSelector(HeaderEncodingSelector_1<HttpRequestMessage> RequestHeaderEncodingSelector) throws Throwable, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -1347,15 +1353,15 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.ResponseHeaderEncodingSelector" target="_top">.NET documentation</a>
      */
-    public HeaderEncodingSelector_1 getResponseHeaderEncodingSelector() throws Throwable {
+    public HeaderEncodingSelector_1<HttpRequestMessage> getResponseHeaderEncodingSelector() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectResponseHeaderEncodingSelector = null;
         try {
             retObjectResponseHeaderEncodingSelector = classInstance.Get("ResponseHeaderEncodingSelector");
-            return (HeaderEncodingSelector_1)retObjectResponseHeaderEncodingSelector;
+            return (HeaderEncodingSelector_1<HttpRequestMessage>)retObjectResponseHeaderEncodingSelector;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into HeaderEncodingSelector_1", retObjectResponseHeaderEncodingSelector != null ? retObjectResponseHeaderEncodingSelector.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into HeaderEncodingSelector_1<HttpRequestMessage>", retObjectResponseHeaderEncodingSelector != null ? retObjectResponseHeaderEncodingSelector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1376,7 +1382,7 @@ public class SocketsHttpHandler extends system.net.http.HttpMessageHandler  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.SocketsHttpHandler.ResponseHeaderEncodingSelector" target="_top">.NET documentation</a>
      */
-    public void setResponseHeaderEncodingSelector(HeaderEncodingSelector_1 ResponseHeaderEncodingSelector) throws Throwable, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+    public void setResponseHeaderEncodingSelector(HeaderEncodingSelector_1<HttpRequestMessage> ResponseHeaderEncodingSelector) throws Throwable, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

@@ -366,7 +366,7 @@ public class Saml2AuthenticationStatement extends system.identitymodel.tokens.Sa
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2AuthenticationStatement.SessionNotOnOrAfter" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getSessionNotOnOrAfter() throws Throwable {
+    public Nullable_1<DateTime> getSessionNotOnOrAfter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSessionNotOnOrAfter = null;
@@ -393,7 +393,7 @@ public class Saml2AuthenticationStatement extends system.identitymodel.tokens.Sa
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2AuthenticationStatement.SessionNotOnOrAfter" target="_top">.NET documentation</a>
      */
-    public void setSessionNotOnOrAfter(Nullable_1 SessionNotOnOrAfter) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.OverflowException, system.ArgumentOutOfRangeException {
+    public void setSessionNotOnOrAfter(Nullable_1<DateTime> SessionNotOnOrAfter) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.OverflowException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

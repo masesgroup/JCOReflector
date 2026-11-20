@@ -44,6 +44,8 @@ import system.collections.generic.IReadOnlyList_1;
 import system.collections.generic.IReadOnlyList_1Implementation;
 import system.DateTimeOffset;
 import system.Nullable_1;
+import system.diagnostics.ActivitySpanId;
+import system.diagnostics.ActivityTraceId;
 
 
 /**
@@ -259,7 +261,7 @@ public class BufferedLogRecord extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Logging.Abstractions.BufferedLogRecord.ActivitySpanId" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getActivitySpanId() throws Throwable {
+    public Nullable_1<ActivitySpanId> getActivitySpanId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectActivitySpanId = null;
@@ -281,7 +283,7 @@ public class BufferedLogRecord extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Logging.Abstractions.BufferedLogRecord.ActivityTraceId" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getActivityTraceId() throws Throwable {
+    public Nullable_1<ActivityTraceId> getActivityTraceId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectActivityTraceId = null;

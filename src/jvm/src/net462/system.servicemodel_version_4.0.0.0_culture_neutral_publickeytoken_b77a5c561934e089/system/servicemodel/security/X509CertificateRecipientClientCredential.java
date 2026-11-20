@@ -332,7 +332,7 @@ public class X509CertificateRecipientClientCredential extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates" target="_top">.NET documentation</a>
      */
-    public Dictionary_2 getScopedCertificates() throws Throwable {
+    public Dictionary_2<Uri, X509Certificate2> getScopedCertificates() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectScopedCertificates = null;

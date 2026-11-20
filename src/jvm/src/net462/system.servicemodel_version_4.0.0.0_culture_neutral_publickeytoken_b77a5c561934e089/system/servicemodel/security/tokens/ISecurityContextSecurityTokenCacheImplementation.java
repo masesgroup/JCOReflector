@@ -177,7 +177,7 @@ public class ISecurityContextSecurityTokenCacheImplementation extends NetObject 
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.ISecurityContextSecurityTokenCache.GetAllContexts" target="_top">.NET documentation</a>
      */
-    public Collection_1 GetAllContexts(UniqueId contextId) throws Throwable {
+    public Collection_1<SecurityContextSecurityToken> GetAllContexts(UniqueId contextId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetAllContexts = null;

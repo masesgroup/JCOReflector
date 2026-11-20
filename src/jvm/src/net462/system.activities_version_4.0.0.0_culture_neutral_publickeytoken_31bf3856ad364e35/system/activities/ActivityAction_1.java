@@ -183,7 +183,7 @@ public class ActivityAction_1<T extends IJCOBridgeReflected> extends system.acti
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-1.Argument" target="_top">.NET documentation</a>
      */
-    public DelegateInArgument_1 getArgument() throws Throwable {
+    public DelegateInArgument_1<T> getArgument() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArgument = null;
@@ -205,7 +205,7 @@ public class ActivityAction_1<T extends IJCOBridgeReflected> extends system.acti
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-1.Argument" target="_top">.NET documentation</a>
      */
-    public void setArgument(DelegateInArgument_1 Argument) throws Throwable {
+    public void setArgument(DelegateInArgument_1<T> Argument) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

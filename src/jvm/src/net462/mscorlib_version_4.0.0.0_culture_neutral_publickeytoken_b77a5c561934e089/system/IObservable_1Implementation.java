@@ -150,12 +150,12 @@ public class IObservable_1Implementation<T extends IJCOBridgeReflected> extends 
     /**
      * Invokes the .NET member Subscribe.
      *
-     * @param observer the argument of type {@code IObserver_1}
+     * @param observer the argument of type {@code IObserver_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IObservable-1.Subscribe" target="_top">.NET documentation</a>
      */
-    public IDisposable Subscribe(IObserver_1 observer) throws Throwable {
+    public IDisposable Subscribe(IObserver_1<T> observer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSubscribe = null;

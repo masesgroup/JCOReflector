@@ -603,7 +603,7 @@ public class WorkflowServiceHost extends system.servicemodel.ServiceHostBase  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.WorkflowServiceHost.SupportedVersions" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getSupportedVersions() throws Throwable {
+    public ICollection_1<WorkflowService> getSupportedVersions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSupportedVersions = null;

@@ -41,8 +41,8 @@ import java.util.ArrayList;
 import system.security.CodeAccessPermission;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
-import system.security.permissions.PermissionState;
 import system.xaml.permissions.XamlAccessLevel;
+import system.security.permissions.PermissionState;
 import system.security.IPermission;
 import system.security.IPermissionImplementation;
 import system.security.SecurityElement;
@@ -164,7 +164,7 @@ public class XamlLoadPermission extends system.security.CodeAccessPermission  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param allowedAccess the argument of type {@code IEnumerable_1}
+     * @param allowedAccess the argument of type {@code IEnumerable_1<XamlAccessLevel>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -179,7 +179,7 @@ public class XamlLoadPermission extends system.security.CodeAccessPermission  {
      * @throws system.threading.AbandonedMutexException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.Permissions.XamlLoadPermission.-ctor" target="_top">.NET documentation</a>
      */
-    public XamlLoadPermission(IEnumerable_1 allowedAccess) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public XamlLoadPermission(IEnumerable_1<XamlAccessLevel> allowedAccess) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -461,7 +461,7 @@ public class XamlLoadPermission extends system.security.CodeAccessPermission  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.Permissions.XamlLoadPermission.AllowedAccess" target="_top">.NET documentation</a>
      */
-    public IList_1 getAllowedAccess() throws Throwable {
+    public IList_1<XamlAccessLevel> getAllowedAccess() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAllowedAccess = null;
@@ -483,7 +483,7 @@ public class XamlLoadPermission extends system.security.CodeAccessPermission  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.Permissions.XamlLoadPermission.AllowedAccess" target="_top">.NET documentation</a>
      */
-    public void setAllowedAccess(IList_1 AllowedAccess) throws Throwable {
+    public void setAllowedAccess(IList_1<XamlAccessLevel> AllowedAccess) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

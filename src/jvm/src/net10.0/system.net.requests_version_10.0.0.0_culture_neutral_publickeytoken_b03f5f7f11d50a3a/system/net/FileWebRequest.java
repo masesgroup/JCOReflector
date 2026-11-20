@@ -400,7 +400,7 @@ public class FileWebRequest extends system.net.WebRequest  {
      * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.FileWebRequest.GetRequestStreamAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 GetRequestStreamAsync() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.net.WebException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.net.ProtocolViolationException, system.InvalidOperationException, system.UriFormatException, system.ArrayTypeMismatchException, system.diagnostics.tracing.EventSourceException {
+    public Task_1<Stream> GetRequestStreamAsync() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.net.WebException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.net.ProtocolViolationException, system.InvalidOperationException, system.UriFormatException, system.ArrayTypeMismatchException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetRequestStreamAsync = null;
@@ -438,7 +438,7 @@ public class FileWebRequest extends system.net.WebRequest  {
      * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.FileWebRequest.GetResponseAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 GetResponseAsync() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.net.WebException, system.InvalidOperationException, system.ObjectDisposedException, system.OperationCanceledException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.UriFormatException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException {
+    public Task_1<WebResponse> GetResponseAsync() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.net.WebException, system.InvalidOperationException, system.ObjectDisposedException, system.OperationCanceledException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.UriFormatException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetResponseAsync = null;

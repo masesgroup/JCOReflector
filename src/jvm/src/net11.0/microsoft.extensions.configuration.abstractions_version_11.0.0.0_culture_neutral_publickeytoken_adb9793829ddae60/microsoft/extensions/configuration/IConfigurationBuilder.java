@@ -135,7 +135,7 @@ public interface IConfigurationBuilder extends IJCOBridgeReflected {
     
     public IDictionary_2 getProperties() throws Throwable;
 
-    public IList_1 getSources() throws Throwable;
+    public IList_1<IConfigurationSource> getSources() throws Throwable;
 
 
 

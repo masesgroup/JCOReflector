@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.ValueType;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.diagnostics.ActivityLink;
 import system.diagnostics.ActivityKind;
 import system.diagnostics.ActivitySource;
 import system.diagnostics.ActivityTagsCollection;
@@ -196,7 +197,7 @@ public class ActivityCreationOptions_1<T extends IJCOBridgeReflected> extends sy
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ActivityCreationOptions-1.Links" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getLinks() throws Throwable {
+    public IEnumerable_1<ActivityLink> getLinks() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectLinks = null;

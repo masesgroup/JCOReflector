@@ -206,13 +206,13 @@ public class ConcurrentDictionary_2<TKey extends IJCOBridgeReflected, TValue ext
      *
      * @param concurrencyLevel the argument of type {@code int}
      * @param capacity the argument of type {@code int}
-     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1<TKey>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.ConcurrentDictionary-2.-ctor" target="_top">.NET documentation</a>
      */
-    public ConcurrentDictionary_2(int concurrencyLevel, int capacity, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public ConcurrentDictionary_2(int concurrencyLevel, int capacity, IEqualityComparer_1<TKey> comparer) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -228,15 +228,15 @@ public class ConcurrentDictionary_2<TKey extends IJCOBridgeReflected, TValue ext
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param concurrencyLevel the argument of type {@code int}
-     * @param collection the argument of type {@code IEnumerable_1}
-     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @param collection the argument of type {@code IEnumerable_1<KeyValuePair_2<TKey, TValue>>}
+     * @param comparer the argument of type {@code IEqualityComparer_1<TKey>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.ConcurrentDictionary-2.-ctor" target="_top">.NET documentation</a>
      */
-    public ConcurrentDictionary_2(int concurrencyLevel, IEnumerable_1 collection, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
+    public ConcurrentDictionary_2(int concurrencyLevel, IEnumerable_1<KeyValuePair_2<TKey, TValue>> collection, IEqualityComparer_1<TKey> comparer) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -251,14 +251,14 @@ public class ConcurrentDictionary_2<TKey extends IJCOBridgeReflected, TValue ext
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param collection the argument of type {@code IEnumerable_1}
+     * @param collection the argument of type {@code IEnumerable_1<KeyValuePair_2<TKey, TValue>>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.ConcurrentDictionary-2.-ctor" target="_top">.NET documentation</a>
      */
-    public ConcurrentDictionary_2(IEnumerable_1 collection) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
+    public ConcurrentDictionary_2(IEnumerable_1<KeyValuePair_2<TKey, TValue>> collection) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -273,15 +273,15 @@ public class ConcurrentDictionary_2<TKey extends IJCOBridgeReflected, TValue ext
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param collection the argument of type {@code IEnumerable_1}
-     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @param collection the argument of type {@code IEnumerable_1<KeyValuePair_2<TKey, TValue>>}
+     * @param comparer the argument of type {@code IEqualityComparer_1<TKey>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.ConcurrentDictionary-2.-ctor" target="_top">.NET documentation</a>
      */
-    public ConcurrentDictionary_2(IEnumerable_1 collection, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
+    public ConcurrentDictionary_2(IEnumerable_1<KeyValuePair_2<TKey, TValue>> collection, IEqualityComparer_1<TKey> comparer) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -296,13 +296,13 @@ public class ConcurrentDictionary_2<TKey extends IJCOBridgeReflected, TValue ext
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1<TKey>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.ConcurrentDictionary-2.-ctor" target="_top">.NET documentation</a>
      */
-    public ConcurrentDictionary_2(IEqualityComparer_1 comparer) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public ConcurrentDictionary_2(IEqualityComparer_1<TKey> comparer) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -482,8 +482,8 @@ public class ConcurrentDictionary_2<TKey extends IJCOBridgeReflected, TValue ext
      * Invokes the .NET member AddOrUpdate.
      *
      * @param key the argument of type {@code TKey}
-     * @param addValueFactory the argument of type {@code Func_2}
-     * @param updateValueFactory the argument of type {@code Func_3}
+     * @param addValueFactory the argument of type {@code Func_2<TKey, TValue>}
+     * @param updateValueFactory the argument of type {@code Func_3<TKey, TValue, TValue>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -491,7 +491,7 @@ public class ConcurrentDictionary_2<TKey extends IJCOBridgeReflected, TValue ext
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.ConcurrentDictionary-2.AddOrUpdate" target="_top">.NET documentation</a>
      */
-    public TValue AddOrUpdate(TKey key, Func_2 addValueFactory, Func_3 updateValueFactory) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
+    public TValue AddOrUpdate(TKey key, Func_2<TKey, TValue> addValueFactory, Func_3<TKey, TValue, TValue> updateValueFactory) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAddOrUpdate = null;
@@ -510,7 +510,7 @@ public class ConcurrentDictionary_2<TKey extends IJCOBridgeReflected, TValue ext
      *
      * @param key the argument of type {@code TKey}
      * @param addValue the argument of type {@code TValue}
-     * @param updateValueFactory the argument of type {@code Func_3}
+     * @param updateValueFactory the argument of type {@code Func_3<TKey, TValue, TValue>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -518,7 +518,7 @@ public class ConcurrentDictionary_2<TKey extends IJCOBridgeReflected, TValue ext
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.ConcurrentDictionary-2.AddOrUpdate" target="_top">.NET documentation</a>
      */
-    public TValue AddOrUpdate(TKey key, TValue addValue, Func_3 updateValueFactory) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
+    public TValue AddOrUpdate(TKey key, TValue addValue, Func_3<TKey, TValue, TValue> updateValueFactory) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAddOrUpdate = null;
@@ -565,7 +565,7 @@ public class ConcurrentDictionary_2<TKey extends IJCOBridgeReflected, TValue ext
      * Invokes the .NET member GetOrAdd.
      *
      * @param key the argument of type {@code TKey}
-     * @param valueFactory the argument of type {@code Func_2}
+     * @param valueFactory the argument of type {@code Func_2<TKey, TValue>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -573,7 +573,7 @@ public class ConcurrentDictionary_2<TKey extends IJCOBridgeReflected, TValue ext
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.ConcurrentDictionary-2.GetOrAdd" target="_top">.NET documentation</a>
      */
-    public TValue GetOrAdd(TKey key, Func_2 valueFactory) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
+    public TValue GetOrAdd(TKey key, Func_2<TKey, TValue> valueFactory) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetOrAdd = null;
@@ -820,7 +820,7 @@ public class ConcurrentDictionary_2<TKey extends IJCOBridgeReflected, TValue ext
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.ConcurrentDictionary-2.Keys" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getKeys() throws Throwable, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public ICollection_1<TKey> getKeys() throws Throwable, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectKeys = null;
@@ -847,7 +847,7 @@ public class ConcurrentDictionary_2<TKey extends IJCOBridgeReflected, TValue ext
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.ConcurrentDictionary-2.Values" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getValues() throws Throwable, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public ICollection_1<TValue> getValues() throws Throwable, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValues = null;

@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.linq.expressions.Expression;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.linq.expressions.ParameterExpression;
 import system.linq.expressions.LabelTarget;
 
 
@@ -161,13 +162,13 @@ public class CallSiteBinder extends NetObject  {
      * Invokes the .NET member Bind.
      *
      * @param args the argument of type {@code NetObject[]}
-     * @param parameters the argument of type {@code ReadOnlyCollection_1}
+     * @param parameters the argument of type {@code ReadOnlyCollection_1<ParameterExpression>}
      * @param returnLabel the argument of type {@code LabelTarget}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.CallSiteBinder.Bind" target="_top">.NET documentation</a>
      */
-    public Expression Bind(NetObject[] args, ReadOnlyCollection_1 parameters, LabelTarget returnLabel) throws Throwable {
+    public Expression Bind(NetObject[] args, ReadOnlyCollection_1<ParameterExpression> parameters, LabelTarget returnLabel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectBind = null;

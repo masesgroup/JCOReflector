@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.activities.tracking.ImplementationVisibility;
 import system.collections.objectmodel.Collection_1;
+import system.activities.tracking.TrackingQuery;
 
 
 /**
@@ -220,7 +221,7 @@ public class TrackingProfile extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.TrackingProfile.Queries" target="_top">.NET documentation</a>
      */
-    public Collection_1 getQueries() throws Throwable {
+    public Collection_1<TrackingQuery> getQueries() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectQueries = null;

@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.security.rightsmanagement.ContentGrant;
 
 
 /**
@@ -526,7 +527,7 @@ public class CryptoProvider extends NetObject implements AutoCloseable {
      * @throws system.InvalidCastException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.RightsManagement.CryptoProvider.BoundGrants" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getBoundGrants() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
+    public ReadOnlyCollection_1<ContentGrant> getBoundGrants() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectBoundGrants = null;

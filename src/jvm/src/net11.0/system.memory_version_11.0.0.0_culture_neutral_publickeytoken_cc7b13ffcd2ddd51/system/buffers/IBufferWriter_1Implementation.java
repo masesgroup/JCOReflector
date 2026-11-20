@@ -152,7 +152,7 @@ public class IBufferWriter_1Implementation<T extends IJCOBridgeReflected> extend
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.IBufferWriter-1.GetMemory" target="_top">.NET documentation</a>
      */
-    public Memory_1 GetMemory(int sizeHint) throws Throwable {
+    public Memory_1<T> GetMemory(int sizeHint) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetMemory = null;

@@ -341,7 +341,7 @@ public class ActivityExecutionContextManager extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.ActivityExecutionContextManager.PersistedExecutionContexts" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getPersistedExecutionContexts() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public IEnumerable_1<Guid> getPersistedExecutionContexts() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPersistedExecutionContexts = null;
@@ -365,7 +365,7 @@ public class ActivityExecutionContextManager extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.ActivityExecutionContextManager.ExecutionContexts" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getExecutionContexts() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException {
+    public ReadOnlyCollection_1<ActivityExecutionContext> getExecutionContexts() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExecutionContexts = null;

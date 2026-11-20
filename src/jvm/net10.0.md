@@ -329,7 +329,7 @@ Parsed assemblies are:
 >     * Methods = 28013
 >       * Duplicated Methods = 1049
 >     * Properties = 18922
->     * Events = 1723
+>     * Events = 1826
 > * Discarded Types = 21164
 >   * Non Public = 21056
 >   * Generic = 40

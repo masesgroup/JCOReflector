@@ -41,7 +41,9 @@ import java.util.ArrayList;
 import system.data.metadata.edm.ItemCollection;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.xml.XmlReader;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.data.metadata.edm.PrimitiveType;
 
 
 /**
@@ -158,7 +160,7 @@ public class EdmItemCollection extends system.data.metadata.edm.ItemCollection  
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param xmlReaders the argument of type {@code IEnumerable_1}
+     * @param xmlReaders the argument of type {@code IEnumerable_1<XmlReader>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -179,7 +181,7 @@ public class EdmItemCollection extends system.data.metadata.edm.ItemCollection  
      * @throws system.data.MetadataException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EdmItemCollection.-ctor" target="_top">.NET documentation</a>
      */
-    public EdmItemCollection(IEnumerable_1 xmlReaders) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.xml.XmlException, system.MulticastNotSupportedException, system.threading.SynchronizationLockException, system.InvalidCastException, system.collections.generic.KeyNotFoundException, system.data.ProviderIncompatibleException, system.OutOfMemoryException, system.data.MetadataException {
+    public EdmItemCollection(IEnumerable_1<XmlReader> xmlReaders) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.xml.XmlException, system.MulticastNotSupportedException, system.threading.SynchronizationLockException, system.InvalidCastException, system.collections.generic.KeyNotFoundException, system.data.ProviderIncompatibleException, system.OutOfMemoryException, system.data.MetadataException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -241,7 +243,7 @@ public class EdmItemCollection extends system.data.metadata.edm.ItemCollection  
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EdmItemCollection.GetPrimitiveTypes" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 GetPrimitiveTypes() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public ReadOnlyCollection_1<PrimitiveType> GetPrimitiveTypes() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetPrimitiveTypes = null;
@@ -278,7 +280,7 @@ public class EdmItemCollection extends system.data.metadata.edm.ItemCollection  
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EdmItemCollection.GetPrimitiveTypes" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 GetPrimitiveTypes(double edmVersion) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException {
+    public ReadOnlyCollection_1<PrimitiveType> GetPrimitiveTypes(double edmVersion) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetPrimitiveTypes = null;

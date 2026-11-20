@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.objectmodel.Collection_1;
+import system.Object;
 
 
 /**
@@ -248,7 +249,7 @@ public class PropertyPath extends NetObject  {
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.PropertyPath.PathParameters" target="_top">.NET documentation</a>
      */
-    public Collection_1 getPathParameters() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException {
+    public Collection_1<Object> getPathParameters() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPathParameters = null;

@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.componentmodel.composition.primitives.ExportDefinition;
 import system.Func_1;
+import system.Object;
 import system.collections.generic.IDictionary_2;
 import system.collections.generic.IDictionary_2Implementation;
 
@@ -159,12 +160,12 @@ public class Export extends NetObject  {
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param definition the argument of type {@code ExportDefinition}
-     * @param exportedValueGetter the argument of type {@code Func_1}
+     * @param exportedValueGetter the argument of type {@code Func_1<Object>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Primitives.Export.-ctor" target="_top">.NET documentation</a>
      */
-    public Export(ExportDefinition definition, Func_1 exportedValueGetter) throws Throwable, system.ArgumentNullException {
+    public Export(ExportDefinition definition, Func_1<Object> exportedValueGetter) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -179,7 +180,7 @@ public class Export extends NetObject  {
      *
      * @param contractName the argument of type {@code java.lang.String}
      * @param metadata the argument of type {@code IDictionary_2}
-     * @param exportedValueGetter the argument of type {@code Func_1}
+     * @param exportedValueGetter the argument of type {@code Func_1<Object>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -195,7 +196,7 @@ public class Export extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Primitives.Export.-ctor" target="_top">.NET documentation</a>
      */
-    public Export(java.lang.String contractName, IDictionary_2 metadata, Func_1 exportedValueGetter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public Export(java.lang.String contractName, IDictionary_2 metadata, Func_1<Object> exportedValueGetter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -209,7 +210,7 @@ public class Export extends NetObject  {
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param contractName the argument of type {@code java.lang.String}
-     * @param exportedValueGetter the argument of type {@code Func_1}
+     * @param exportedValueGetter the argument of type {@code Func_1<Object>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -225,7 +226,7 @@ public class Export extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Primitives.Export.-ctor" target="_top">.NET documentation</a>
      */
-    public Export(java.lang.String contractName, Func_1 exportedValueGetter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public Export(java.lang.String contractName, Func_1<Object> exportedValueGetter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

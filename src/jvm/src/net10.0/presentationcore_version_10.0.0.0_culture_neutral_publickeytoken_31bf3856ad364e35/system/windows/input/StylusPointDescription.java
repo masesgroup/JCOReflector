@@ -40,10 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.windows.input.StylusPointPropertyInfo;
 import system.windows.input.StylusPointDescription;
 import system.windows.input.StylusPointProperty;
 import system.collections.objectmodel.ReadOnlyCollection_1;
-import system.windows.input.StylusPointPropertyInfo;
 
 
 /**
@@ -173,7 +173,7 @@ public class StylusPointDescription extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param stylusPointPropertyInfos the argument of type {@code IEnumerable_1}
+     * @param stylusPointPropertyInfos the argument of type {@code IEnumerable_1<StylusPointPropertyInfo>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -186,7 +186,7 @@ public class StylusPointDescription extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.StylusPointDescription.-ctor" target="_top">.NET documentation</a>
      */
-    public StylusPointDescription(IEnumerable_1 stylusPointPropertyInfos) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public StylusPointDescription(IEnumerable_1<StylusPointPropertyInfo> stylusPointPropertyInfos) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -310,7 +310,7 @@ public class StylusPointDescription extends NetObject  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.StylusPointDescription.GetStylusPointProperties" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 GetStylusPointProperties() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public ReadOnlyCollection_1<StylusPointPropertyInfo> GetStylusPointProperties() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetStylusPointProperties = null;

@@ -56,6 +56,7 @@ import system.reflection.emit.AssemblyBuilder;
 import system.reflection.emit.AssemblyBuilderAccess;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.reflection.emit.CustomAttributeBuilder;
 import system.security.SecurityContextSource;
 import system.runtime.remoting.ObjectHandle;
 import system.CrossAppDomainDelegate;
@@ -74,6 +75,8 @@ import system.security.policy.ApplicationTrust;
 import system.TimeSpan;
 import system.AssemblyLoadEventHandler;
 import system.EventHandler;
+import system.EventHandler_1;
+import system.runtime.exceptionservices.FirstChanceExceptionEventArgs;
 import system.ResolveEventHandler;
 import system.UnhandledExceptionEventHandler;
 
@@ -2608,7 +2611,7 @@ public class AppDomain extends system.MarshalByRefObject  {
      *
      * @param name the argument of type {@code AssemblyName}
      * @param access the argument of type {@code AssemblyBuilderAccess}
-     * @param assemblyAttributes the argument of type {@code IEnumerable_1}
+     * @param assemblyAttributes the argument of type {@code IEnumerable_1<CustomAttributeBuilder>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.InvalidOperationException if the .NET member raises it
@@ -2621,7 +2624,7 @@ public class AppDomain extends system.MarshalByRefObject  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomain.DefineDynamicAssembly" target="_top">.NET documentation</a>
      */
-    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, IEnumerable_1 assemblyAttributes) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException {
+    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, IEnumerable_1<CustomAttributeBuilder> assemblyAttributes) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDefineDynamicAssembly = null;
@@ -2641,7 +2644,7 @@ public class AppDomain extends system.MarshalByRefObject  {
      *
      * @param name the argument of type {@code AssemblyName}
      * @param access the argument of type {@code AssemblyBuilderAccess}
-     * @param assemblyAttributes the argument of type {@code IEnumerable_1}
+     * @param assemblyAttributes the argument of type {@code IEnumerable_1<CustomAttributeBuilder>}
      * @param securityContextSource the argument of type {@code SecurityContextSource}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -2655,7 +2658,7 @@ public class AppDomain extends system.MarshalByRefObject  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomain.DefineDynamicAssembly" target="_top">.NET documentation</a>
      */
-    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, IEnumerable_1 assemblyAttributes, SecurityContextSource securityContextSource) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException {
+    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, IEnumerable_1<CustomAttributeBuilder> assemblyAttributes, SecurityContextSource securityContextSource) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDefineDynamicAssembly = null;
@@ -2814,7 +2817,7 @@ public class AppDomain extends system.MarshalByRefObject  {
      * @param access the argument of type {@code AssemblyBuilderAccess}
      * @param dir the argument of type {@code java.lang.String}
      * @param isSynchronized the argument of type {@code boolean}
-     * @param assemblyAttributes the argument of type {@code IEnumerable_1}
+     * @param assemblyAttributes the argument of type {@code IEnumerable_1<CustomAttributeBuilder>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.InvalidOperationException if the .NET member raises it
@@ -2827,7 +2830,7 @@ public class AppDomain extends system.MarshalByRefObject  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomain.DefineDynamicAssembly" target="_top">.NET documentation</a>
      */
-    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, java.lang.String dir, boolean isSynchronized, IEnumerable_1 assemblyAttributes) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException {
+    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, java.lang.String dir, boolean isSynchronized, IEnumerable_1<CustomAttributeBuilder> assemblyAttributes) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDefineDynamicAssembly = null;
@@ -2998,7 +3001,7 @@ public class AppDomain extends system.MarshalByRefObject  {
      * @param optionalPermissions the argument of type {@code PermissionSet}
      * @param refusedPermissions the argument of type {@code PermissionSet}
      * @param isSynchronized the argument of type {@code boolean}
-     * @param assemblyAttributes the argument of type {@code IEnumerable_1}
+     * @param assemblyAttributes the argument of type {@code IEnumerable_1<CustomAttributeBuilder>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.InvalidOperationException if the .NET member raises it
@@ -3011,7 +3014,7 @@ public class AppDomain extends system.MarshalByRefObject  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.AppDomain.DefineDynamicAssembly" target="_top">.NET documentation</a>
      */
-    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, java.lang.String dir, Evidence evidence, PermissionSet requiredPermissions, PermissionSet optionalPermissions, PermissionSet refusedPermissions, boolean isSynchronized, IEnumerable_1 assemblyAttributes) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException {
+    public AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, java.lang.String dir, Evidence evidence, PermissionSet requiredPermissions, PermissionSet optionalPermissions, PermissionSet refusedPermissions, boolean isSynchronized, IEnumerable_1<CustomAttributeBuilder> assemblyAttributes) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDefineDynamicAssembly = null;
@@ -4570,6 +4573,40 @@ public class AppDomain extends system.MarshalByRefObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ProcessExit", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addFirstChanceException.
+     *
+     * @param handler the argument of type {@code EventHandler_1<FirstChanceExceptionEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addFirstChanceException(EventHandler_1<FirstChanceExceptionEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("FirstChanceException", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeFirstChanceException.
+     *
+     * @param handler the argument of type {@code EventHandler_1<FirstChanceExceptionEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeFirstChanceException(EventHandler_1<FirstChanceExceptionEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("FirstChanceException", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

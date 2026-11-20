@@ -42,6 +42,7 @@ import system.linq.expressions.Expression;
 import system.linq.expressions.TryExpression;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.linq.expressions.CatchBlock;
 import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.linq.expressions.ExpressionType;
 
@@ -166,7 +167,7 @@ public class TryExpression extends system.linq.expressions.Expression  {
      * Invokes the .NET member Update.
      *
      * @param body the argument of type {@code Expression}
-     * @param handlers the argument of type {@code IEnumerable_1}
+     * @param handlers the argument of type {@code IEnumerable_1<CatchBlock>}
      * @param _finally the argument of type {@code Expression}
      * @param fault the argument of type {@code Expression}
      * @return the value returned by the .NET member
@@ -181,7 +182,7 @@ public class TryExpression extends system.linq.expressions.Expression  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.TryExpression.Update" target="_top">.NET documentation</a>
      */
-    public TryExpression Update(Expression body, IEnumerable_1 handlers, Expression _finally, Expression fault) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException {
+    public TryExpression Update(Expression body, IEnumerable_1<CatchBlock> handlers, Expression _finally, Expression fault) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUpdate = null;
@@ -207,7 +208,7 @@ public class TryExpression extends system.linq.expressions.Expression  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.TryExpression.Handlers" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getHandlers() throws Throwable {
+    public ReadOnlyCollection_1<CatchBlock> getHandlers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectHandlers = null;

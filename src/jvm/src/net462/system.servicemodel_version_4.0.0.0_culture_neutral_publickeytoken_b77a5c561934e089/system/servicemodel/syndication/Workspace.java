@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.servicemodel.syndication.TextSyndicationContent;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.servicemodel.syndication.ResourceCollectionInfo;
 import system.collections.generic.Dictionary_2;
 import system.collections.objectmodel.Collection_1;
 import system.servicemodel.syndication.SyndicationElementExtensionCollection;
@@ -175,12 +176,12 @@ public class Workspace extends NetObject  {
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param title the argument of type {@code TextSyndicationContent}
-     * @param collections the argument of type {@code IEnumerable_1}
+     * @param collections the argument of type {@code IEnumerable_1<ResourceCollectionInfo>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.Workspace.-ctor" target="_top">.NET documentation</a>
      */
-    public Workspace(TextSyndicationContent title, IEnumerable_1 collections) throws Throwable, system.NotSupportedException {
+    public Workspace(TextSyndicationContent title, IEnumerable_1<ResourceCollectionInfo> collections) throws Throwable, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -194,7 +195,7 @@ public class Workspace extends NetObject  {
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param title the argument of type {@code java.lang.String}
-     * @param collections the argument of type {@code IEnumerable_1}
+     * @param collections the argument of type {@code IEnumerable_1<ResourceCollectionInfo>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -209,7 +210,7 @@ public class Workspace extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.Workspace.-ctor" target="_top">.NET documentation</a>
      */
-    public Workspace(java.lang.String title, IEnumerable_1 collections) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+    public Workspace(java.lang.String title, IEnumerable_1<ResourceCollectionInfo> collections) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -258,7 +259,7 @@ public class Workspace extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.Workspace.Collections" target="_top">.NET documentation</a>
      */
-    public Collection_1 getCollections() throws Throwable {
+    public Collection_1<ResourceCollectionInfo> getCollections() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCollections = null;

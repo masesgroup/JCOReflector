@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.servicemodel.description.ContractDescription;
 import system.collections.generic.KeyedByTypeCollection_1;
+import system.servicemodel.description.IOperationBehavior;
+import system.servicemodel.description.IOperationBehaviorImplementation;
 import system.collections.objectmodel.Collection_1;
 import system.collections.objectmodel.KeyedCollection_2;
 import system.net.security.ProtectionLevel;
@@ -343,7 +345,7 @@ public class OperationDescription extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationDescription.Behaviors" target="_top">.NET documentation</a>
      */
-    public KeyedByTypeCollection_1 getBehaviors() throws Throwable {
+    public KeyedByTypeCollection_1<IOperationBehavior> getBehaviors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectBehaviors = null;
@@ -365,7 +367,7 @@ public class OperationDescription extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationDescription.KnownTypes" target="_top">.NET documentation</a>
      */
-    public Collection_1 getKnownTypes() throws Throwable {
+    public Collection_1<NetType> getKnownTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectKnownTypes = null;
@@ -387,7 +389,7 @@ public class OperationDescription extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.OperationDescription.OperationBehaviors" target="_top">.NET documentation</a>
      */
-    public KeyedCollection_2 getOperationBehaviors() throws Throwable {
+    public KeyedCollection_2<NetType, IOperationBehavior> getOperationBehaviors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOperationBehaviors = null;

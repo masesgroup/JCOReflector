@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.identitymodel.metadata.SingleSignOnDescriptor;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.identitymodel.metadata.ProtocolEndpoint;
+import system.identitymodel.tokens.Saml2Attribute;
 
 
 /**
@@ -220,7 +222,7 @@ public class IdentityProviderSingleSignOnDescriptor extends system.identitymodel
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.IdentityProviderSingleSignOnDescriptor.SingleSignOnServices" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getSingleSignOnServices() throws Throwable {
+    public ICollection_1<ProtocolEndpoint> getSingleSignOnServices() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSingleSignOnServices = null;
@@ -242,7 +244,7 @@ public class IdentityProviderSingleSignOnDescriptor extends system.identitymodel
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.IdentityProviderSingleSignOnDescriptor.SupportedAttributes" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getSupportedAttributes() throws Throwable {
+    public ICollection_1<Saml2Attribute> getSupportedAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSupportedAttributes = null;

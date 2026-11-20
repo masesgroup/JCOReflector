@@ -42,7 +42,10 @@ import system.windows.DependencyObject;
 import system.collections.IList;
 import system.collections.IListImplementation;
 import system.collections.objectmodel.Collection_1;
+import system.windows.controls.ValidationRule;
+import system.windows.data.BindingExpressionBase;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.windows.controls.ValidationError;
 
 
 /**
@@ -632,7 +635,7 @@ public class BindingGroup extends system.windows.DependencyObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.BindingGroup.ValidationRules" target="_top">.NET documentation</a>
      */
-    public Collection_1 getValidationRules() throws Throwable {
+    public Collection_1<ValidationRule> getValidationRules() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValidationRules = null;
@@ -654,7 +657,7 @@ public class BindingGroup extends system.windows.DependencyObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.BindingGroup.BindingExpressions" target="_top">.NET documentation</a>
      */
-    public Collection_1 getBindingExpressions() throws Throwable {
+    public Collection_1<BindingExpressionBase> getBindingExpressions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectBindingExpressions = null;
@@ -688,7 +691,7 @@ public class BindingGroup extends system.windows.DependencyObject  {
      * @throws system.InvalidCastException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.BindingGroup.ValidationErrors" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getValidationErrors() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
+    public ReadOnlyCollection_1<ValidationError> getValidationErrors() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValidationErrors = null;

@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.componentmodel.ItemPropertyInfo;
 
 
 /**
@@ -120,7 +121,7 @@ public interface IItemProperties extends IJCOBridgeReflected {
     
     // Properties section
     
-    public ReadOnlyCollection_1 getItemProperties() throws Throwable;
+    public ReadOnlyCollection_1<ItemPropertyInfo> getItemProperties() throws Throwable;
 
 
 

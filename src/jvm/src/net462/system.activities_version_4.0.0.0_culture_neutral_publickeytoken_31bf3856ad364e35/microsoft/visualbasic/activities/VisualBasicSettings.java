@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import microsoft.visualbasic.activities.VisualBasicSettings;
 import system.collections.generic.ISet_1;
 import system.collections.generic.ISet_1Implementation;
+import microsoft.visualbasic.activities.VisualBasicImportReference;
 
 
 /**
@@ -204,7 +205,7 @@ public class VisualBasicSettings extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Activities.VisualBasicSettings.ImportReferences" target="_top">.NET documentation</a>
      */
-    public ISet_1 getImportReferences() throws Throwable {
+    public ISet_1<VisualBasicImportReference> getImportReferences() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectImportReferences = null;
@@ -226,7 +227,7 @@ public class VisualBasicSettings extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.Activities.VisualBasicSettings.ImportReferences" target="_top">.NET documentation</a>
      */
-    public void setImportReferences(ISet_1 ImportReferences) throws Throwable {
+    public void setImportReferences(ISet_1<VisualBasicImportReference> ImportReferences) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

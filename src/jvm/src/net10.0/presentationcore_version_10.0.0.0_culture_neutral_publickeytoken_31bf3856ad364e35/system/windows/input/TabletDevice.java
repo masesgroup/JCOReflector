@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.windows.input.InputDevice;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.windows.input.StylusPointProperty;
 import system.windows.IInputElement;
 import system.windows.IInputElementImplementation;
 import system.windows.input.StylusDeviceCollection;
@@ -232,7 +233,7 @@ public class TabletDevice extends system.windows.input.InputDevice  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.TabletDevice.SupportedStylusPointProperties" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getSupportedStylusPointProperties() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
+    public ReadOnlyCollection_1<StylusPointProperty> getSupportedStylusPointProperties() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSupportedStylusPointProperties = null;

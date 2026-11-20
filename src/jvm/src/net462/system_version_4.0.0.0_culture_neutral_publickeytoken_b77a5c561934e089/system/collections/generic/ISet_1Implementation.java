@@ -194,12 +194,12 @@ public class ISet_1Implementation<T extends IJCOBridgeReflected> extends IEnumer
     /**
      * Invokes the .NET member IsProperSubsetOf.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.ISet-1.IsProperSubsetOf" target="_top">.NET documentation</a>
      */
-    public boolean IsProperSubsetOf(IEnumerable_1 other) throws Throwable {
+    public boolean IsProperSubsetOf(IEnumerable_1<T> other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIsProperSubsetOf = null;
@@ -216,12 +216,12 @@ public class ISet_1Implementation<T extends IJCOBridgeReflected> extends IEnumer
     /**
      * Invokes the .NET member IsProperSupersetOf.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.ISet-1.IsProperSupersetOf" target="_top">.NET documentation</a>
      */
-    public boolean IsProperSupersetOf(IEnumerable_1 other) throws Throwable {
+    public boolean IsProperSupersetOf(IEnumerable_1<T> other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIsProperSupersetOf = null;
@@ -238,12 +238,12 @@ public class ISet_1Implementation<T extends IJCOBridgeReflected> extends IEnumer
     /**
      * Invokes the .NET member IsSubsetOf.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.ISet-1.IsSubsetOf" target="_top">.NET documentation</a>
      */
-    public boolean IsSubsetOf(IEnumerable_1 other) throws Throwable {
+    public boolean IsSubsetOf(IEnumerable_1<T> other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIsSubsetOf = null;
@@ -260,12 +260,12 @@ public class ISet_1Implementation<T extends IJCOBridgeReflected> extends IEnumer
     /**
      * Invokes the .NET member IsSupersetOf.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.ISet-1.IsSupersetOf" target="_top">.NET documentation</a>
      */
-    public boolean IsSupersetOf(IEnumerable_1 other) throws Throwable {
+    public boolean IsSupersetOf(IEnumerable_1<T> other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIsSupersetOf = null;
@@ -282,12 +282,12 @@ public class ISet_1Implementation<T extends IJCOBridgeReflected> extends IEnumer
     /**
      * Invokes the .NET member Overlaps.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.ISet-1.Overlaps" target="_top">.NET documentation</a>
      */
-    public boolean Overlaps(IEnumerable_1 other) throws Throwable {
+    public boolean Overlaps(IEnumerable_1<T> other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOverlaps = null;
@@ -326,12 +326,12 @@ public class ISet_1Implementation<T extends IJCOBridgeReflected> extends IEnumer
     /**
      * Invokes the .NET member SetEquals.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.ISet-1.SetEquals" target="_top">.NET documentation</a>
      */
-    public boolean SetEquals(IEnumerable_1 other) throws Throwable {
+    public boolean SetEquals(IEnumerable_1<T> other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSetEquals = null;
@@ -382,11 +382,11 @@ public class ISet_1Implementation<T extends IJCOBridgeReflected> extends IEnumer
     /**
      * Invokes the .NET member ExceptWith.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.ISet-1.ExceptWith" target="_top">.NET documentation</a>
      */
-    public void ExceptWith(IEnumerable_1 other) throws Throwable {
+    public void ExceptWith(IEnumerable_1<T> other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -399,11 +399,11 @@ public class ISet_1Implementation<T extends IJCOBridgeReflected> extends IEnumer
     /**
      * Invokes the .NET member IntersectWith.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.ISet-1.IntersectWith" target="_top">.NET documentation</a>
      */
-    public void IntersectWith(IEnumerable_1 other) throws Throwable {
+    public void IntersectWith(IEnumerable_1<T> other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -416,11 +416,11 @@ public class ISet_1Implementation<T extends IJCOBridgeReflected> extends IEnumer
     /**
      * Invokes the .NET member SymmetricExceptWith.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.ISet-1.SymmetricExceptWith" target="_top">.NET documentation</a>
      */
-    public void SymmetricExceptWith(IEnumerable_1 other) throws Throwable {
+    public void SymmetricExceptWith(IEnumerable_1<T> other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -433,11 +433,11 @@ public class ISet_1Implementation<T extends IJCOBridgeReflected> extends IEnumer
     /**
      * Invokes the .NET member UnionWith.
      *
-     * @param other the argument of type {@code IEnumerable_1}
+     * @param other the argument of type {@code IEnumerable_1<T>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.ISet-1.UnionWith" target="_top">.NET documentation</a>
      */
-    public void UnionWith(IEnumerable_1 other) throws Throwable {
+    public void UnionWith(IEnumerable_1<T> other) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

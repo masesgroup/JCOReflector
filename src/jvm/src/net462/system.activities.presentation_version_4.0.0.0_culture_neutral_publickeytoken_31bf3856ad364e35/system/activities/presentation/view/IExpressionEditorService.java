@@ -42,6 +42,7 @@ import system.activities.presentation.view.IExpressionEditorInstanceImplementati
 import system.activities.presentation.hosting.AssemblyContextControlItem;
 import system.activities.presentation.hosting.ImportedNamespaceContextItem;
 import system.collections.generic.List_1;
+import system.activities.presentation.model.ModelItem;
 import system.windows.Size;
 
 
@@ -121,13 +122,13 @@ public interface IExpressionEditorService extends IJCOBridgeReflected {
 
     // Methods section
     
-    public IExpressionEditorInstance CreateExpressionEditor(AssemblyContextControlItem assemblies, ImportedNamespaceContextItem importedNamespaces, List_1 variables, java.lang.String text) throws Throwable;
+    public IExpressionEditorInstance CreateExpressionEditor(AssemblyContextControlItem assemblies, ImportedNamespaceContextItem importedNamespaces, List_1<ModelItem> variables, java.lang.String text) throws Throwable;
 
-    public IExpressionEditorInstance CreateExpressionEditor(AssemblyContextControlItem assemblies, ImportedNamespaceContextItem importedNamespaces, List_1 variables, java.lang.String text, NetType expressionType) throws Throwable;
+    public IExpressionEditorInstance CreateExpressionEditor(AssemblyContextControlItem assemblies, ImportedNamespaceContextItem importedNamespaces, List_1<ModelItem> variables, java.lang.String text, NetType expressionType) throws Throwable;
 
-    public IExpressionEditorInstance CreateExpressionEditor(AssemblyContextControlItem assemblies, ImportedNamespaceContextItem importedNamespaces, List_1 variables, java.lang.String text, NetType expressionType, Size initialSize) throws Throwable;
+    public IExpressionEditorInstance CreateExpressionEditor(AssemblyContextControlItem assemblies, ImportedNamespaceContextItem importedNamespaces, List_1<ModelItem> variables, java.lang.String text, NetType expressionType, Size initialSize) throws Throwable;
 
-    public IExpressionEditorInstance CreateExpressionEditor(AssemblyContextControlItem assemblies, ImportedNamespaceContextItem importedNamespaces, List_1 variables, java.lang.String text, Size initialSize) throws Throwable;
+    public IExpressionEditorInstance CreateExpressionEditor(AssemblyContextControlItem assemblies, ImportedNamespaceContextItem importedNamespaces, List_1<ModelItem> variables, java.lang.String text, Size initialSize) throws Throwable;
 
     public void CloseExpressionEditors() throws Throwable;
 

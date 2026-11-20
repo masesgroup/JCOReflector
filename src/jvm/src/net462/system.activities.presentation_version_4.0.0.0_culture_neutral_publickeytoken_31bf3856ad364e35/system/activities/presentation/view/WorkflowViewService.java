@@ -43,6 +43,8 @@ import system.activities.presentation.EditingContext;
 import system.activities.presentation.model.ModelItem;
 import system.windows.DependencyObject;
 import system.activities.presentation.WorkflowViewElement;
+import system.EventHandler_1;
+import system.activities.presentation.view.ViewCreatedEventArgs;
 
 
 /**
@@ -291,6 +293,40 @@ public class WorkflowViewService extends system.activities.presentation.services
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addViewCreated.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ViewCreatedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addViewCreated(EventHandler_1<ViewCreatedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("ViewCreated", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeViewCreated.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ViewCreatedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeViewCreated(EventHandler_1<ViewCreatedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("ViewCreated", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

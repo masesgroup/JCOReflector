@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.objectmodel.Collection_1;
+import system.Attribute;
 
 
 /**
@@ -180,7 +181,7 @@ public class DynamicActivityProperty extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicActivityProperty.Attributes" target="_top">.NET documentation</a>
      */
-    public Collection_1 getAttributes() throws Throwable {
+    public Collection_1<Attribute> getAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAttributes = null;

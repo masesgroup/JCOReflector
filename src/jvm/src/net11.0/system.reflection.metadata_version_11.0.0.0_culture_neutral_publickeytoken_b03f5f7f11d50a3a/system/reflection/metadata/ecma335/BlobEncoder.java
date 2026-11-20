@@ -472,8 +472,8 @@ public class BlobEncoder extends system.ValueType  {
     /**
      * Invokes the .NET member CustomAttributeSignature.
      *
-     * @param fixedArguments the argument of type {@code Action_1}
-     * @param namedArguments the argument of type {@code Action_1}
+     * @param fixedArguments the argument of type {@code Action_1<FixedArgumentsEncoder>}
+     * @param namedArguments the argument of type {@code Action_1<CustomAttributeNamedArgumentsEncoder>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -486,7 +486,7 @@ public class BlobEncoder extends system.ValueType  {
      * @throws system.RankException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.BlobEncoder.CustomAttributeSignature" target="_top">.NET documentation</a>
      */
-    public void CustomAttributeSignature(Action_1 fixedArguments, Action_1 namedArguments) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException {
+    public void CustomAttributeSignature(Action_1<FixedArgumentsEncoder> fixedArguments, Action_1<CustomAttributeNamedArgumentsEncoder> namedArguments) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

@@ -194,7 +194,7 @@ public class EntityReference_1<TEntity extends IJCOBridgeReflected> extends syst
      * @throws system.data.ProviderIncompatibleException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.EntityReference-1.CreateSourceQuery" target="_top">.NET documentation</a>
      */
-    public ObjectQuery_1 CreateSourceQuery() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.data.MappingException, system.data.MetadataException, system.threading.SynchronizationLockException, system.NullReferenceException, system.data.ProviderIncompatibleException {
+    public ObjectQuery_1<TEntity> CreateSourceQuery() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.data.MappingException, system.data.MetadataException, system.threading.SynchronizationLockException, system.NullReferenceException, system.data.ProviderIncompatibleException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCreateSourceQuery = null;

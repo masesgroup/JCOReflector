@@ -207,7 +207,7 @@ public class ArrayBufferWriter_1<T extends IJCOBridgeReflected> extends NetObjec
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.ArrayBufferWriter-1.GetMemory" target="_top">.NET documentation</a>
      */
-    public Memory_1 GetMemory(int sizeHint) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
+    public Memory_1<T> GetMemory(int sizeHint) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetMemory = null;
@@ -443,7 +443,7 @@ public class ArrayBufferWriter_1<T extends IJCOBridgeReflected> extends NetObjec
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.ArrayBufferWriter-1.WrittenMemory" target="_top">.NET documentation</a>
      */
-    public ReadOnlyMemory_1 getWrittenMemory() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException {
+    public ReadOnlyMemory_1<T> getWrittenMemory() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectWrittenMemory = null;

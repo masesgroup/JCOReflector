@@ -267,7 +267,7 @@ public class PageResolution extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PageResolution.QualitativeResolution" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getQualitativeResolution() throws Throwable {
+    public Nullable_1<PageQualitativeResolution> getQualitativeResolution() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectQualitativeResolution = null;

@@ -184,7 +184,7 @@ public class ActivityFunc_5<T1 extends IJCOBridgeReflected, T2 extends IJCOBridg
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityFunc-5.Argument1" target="_top">.NET documentation</a>
      */
-    public DelegateInArgument_1 getArgument1() throws Throwable {
+    public DelegateInArgument_1<T1> getArgument1() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArgument1 = null;
@@ -206,7 +206,7 @@ public class ActivityFunc_5<T1 extends IJCOBridgeReflected, T2 extends IJCOBridg
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityFunc-5.Argument1" target="_top">.NET documentation</a>
      */
-    public void setArgument1(DelegateInArgument_1 Argument1) throws Throwable {
+    public void setArgument1(DelegateInArgument_1<T1> Argument1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -223,7 +223,7 @@ public class ActivityFunc_5<T1 extends IJCOBridgeReflected, T2 extends IJCOBridg
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityFunc-5.Argument2" target="_top">.NET documentation</a>
      */
-    public DelegateInArgument_1 getArgument2() throws Throwable {
+    public DelegateInArgument_1<T2> getArgument2() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArgument2 = null;
@@ -245,7 +245,7 @@ public class ActivityFunc_5<T1 extends IJCOBridgeReflected, T2 extends IJCOBridg
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityFunc-5.Argument2" target="_top">.NET documentation</a>
      */
-    public void setArgument2(DelegateInArgument_1 Argument2) throws Throwable {
+    public void setArgument2(DelegateInArgument_1<T2> Argument2) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -262,7 +262,7 @@ public class ActivityFunc_5<T1 extends IJCOBridgeReflected, T2 extends IJCOBridg
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityFunc-5.Argument3" target="_top">.NET documentation</a>
      */
-    public DelegateInArgument_1 getArgument3() throws Throwable {
+    public DelegateInArgument_1<T3> getArgument3() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArgument3 = null;
@@ -284,7 +284,7 @@ public class ActivityFunc_5<T1 extends IJCOBridgeReflected, T2 extends IJCOBridg
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityFunc-5.Argument3" target="_top">.NET documentation</a>
      */
-    public void setArgument3(DelegateInArgument_1 Argument3) throws Throwable {
+    public void setArgument3(DelegateInArgument_1<T3> Argument3) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -301,7 +301,7 @@ public class ActivityFunc_5<T1 extends IJCOBridgeReflected, T2 extends IJCOBridg
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityFunc-5.Argument4" target="_top">.NET documentation</a>
      */
-    public DelegateInArgument_1 getArgument4() throws Throwable {
+    public DelegateInArgument_1<T4> getArgument4() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArgument4 = null;
@@ -323,7 +323,7 @@ public class ActivityFunc_5<T1 extends IJCOBridgeReflected, T2 extends IJCOBridg
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityFunc-5.Argument4" target="_top">.NET documentation</a>
      */
-    public void setArgument4(DelegateInArgument_1 Argument4) throws Throwable {
+    public void setArgument4(DelegateInArgument_1<T4> Argument4) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -340,7 +340,7 @@ public class ActivityFunc_5<T1 extends IJCOBridgeReflected, T2 extends IJCOBridg
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityFunc-5.Result" target="_top">.NET documentation</a>
      */
-    public DelegateOutArgument_1 getResult() throws Throwable {
+    public DelegateOutArgument_1<TResult> getResult() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectResult = null;
@@ -362,7 +362,7 @@ public class ActivityFunc_5<T1 extends IJCOBridgeReflected, T2 extends IJCOBridg
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityFunc-5.Result" target="_top">.NET documentation</a>
      */
-    public void setResult(DelegateOutArgument_1 Result) throws Throwable {
+    public void setResult(DelegateOutArgument_1<TResult> Result) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

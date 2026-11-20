@@ -42,6 +42,7 @@ import system.Nullable_1;
 import system.net.http.headers.RangeHeaderValue;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.net.http.headers.RangeItemHeaderValue;
 
 
 /**
@@ -282,7 +283,7 @@ public class RangeHeaderValue extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.RangeHeaderValue.Ranges" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getRanges() throws Throwable, system.ArgumentNullException {
+    public ICollection_1<RangeItemHeaderValue> getRanges() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRanges = null;

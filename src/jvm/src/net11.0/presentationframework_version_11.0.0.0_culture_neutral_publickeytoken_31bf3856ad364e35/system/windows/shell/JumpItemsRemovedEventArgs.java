@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.EventArgs;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.windows.shell.JumpItem;
 
 
 /**
@@ -179,7 +180,7 @@ public class JumpItemsRemovedEventArgs extends system.EventArgs  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param removedItems the argument of type {@code IList_1}
+     * @param removedItems the argument of type {@code IList_1<JumpItem>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -191,7 +192,7 @@ public class JumpItemsRemovedEventArgs extends system.EventArgs  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Shell.JumpItemsRemovedEventArgs.-ctor" target="_top">.NET documentation</a>
      */
-    public JumpItemsRemovedEventArgs(IList_1 removedItems) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException {
+    public JumpItemsRemovedEventArgs(IList_1<JumpItem> removedItems) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -216,7 +217,7 @@ public class JumpItemsRemovedEventArgs extends system.EventArgs  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Shell.JumpItemsRemovedEventArgs.RemovedItems" target="_top">.NET documentation</a>
      */
-    public IList_1 getRemovedItems() throws Throwable {
+    public IList_1<JumpItem> getRemovedItems() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRemovedItems = null;
@@ -238,7 +239,7 @@ public class JumpItemsRemovedEventArgs extends system.EventArgs  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Shell.JumpItemsRemovedEventArgs.RemovedItems" target="_top">.NET documentation</a>
      */
-    public void setRemovedItems(IList_1 RemovedItems) throws Throwable {
+    public void setRemovedItems(IList_1<JumpItem> RemovedItems) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

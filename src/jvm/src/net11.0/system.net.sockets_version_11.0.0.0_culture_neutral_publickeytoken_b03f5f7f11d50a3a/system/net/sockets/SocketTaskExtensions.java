@@ -47,6 +47,8 @@ import system.ArraySegment_1;
 import system.net.sockets.SocketFlags;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.net.sockets.SocketReceiveFromResult;
+import system.net.sockets.SocketReceiveMessageFromResult;
 import system.threading.tasks.ValueTask;
 import system.threading.CancellationToken;
 import system.threading.tasks.ValueTask_1;
@@ -510,7 +512,7 @@ public class SocketTaskExtensions extends NetObject  {
      * @throws system.net.sockets.SocketException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketTaskExtensions.AcceptAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 AcceptAsync(Socket socket, Socket acceptSocket) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.ArgumentException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
+    public static Task_1<Socket> AcceptAsync(Socket socket, Socket acceptSocket) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.ArgumentException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAcceptAsync = null;
@@ -543,7 +545,7 @@ public class SocketTaskExtensions extends NetObject  {
      * @throws system.net.sockets.SocketException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketTaskExtensions.AcceptAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 AcceptAsync(Socket socket) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.ArgumentException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
+    public static Task_1<Socket> AcceptAsync(Socket socket) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.ArgumentException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAcceptAsync = null;
@@ -579,7 +581,7 @@ public class SocketTaskExtensions extends NetObject  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketTaskExtensions.ReceiveFromAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 ReceiveFromAsync(Socket socket, ArraySegment_1 buffer, SocketFlags socketFlags, EndPoint remoteEndPoint) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NullReferenceException {
+    public static Task_1<SocketReceiveFromResult> ReceiveFromAsync(Socket socket, ArraySegment_1 buffer, SocketFlags socketFlags, EndPoint remoteEndPoint) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReceiveFromAsync = null;
@@ -616,7 +618,7 @@ public class SocketTaskExtensions extends NetObject  {
      * @throws system.net.sockets.SocketException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketTaskExtensions.ReceiveMessageFromAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 ReceiveMessageFromAsync(Socket socket, ArraySegment_1 buffer, SocketFlags socketFlags, EndPoint remoteEndPoint) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NullReferenceException, system.net.sockets.SocketException {
+    public static Task_1<SocketReceiveMessageFromResult> ReceiveMessageFromAsync(Socket socket, ArraySegment_1 buffer, SocketFlags socketFlags, EndPoint remoteEndPoint) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NullReferenceException, system.net.sockets.SocketException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReceiveMessageFromAsync = null;

@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.windows.media.PathSegment;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.windows.Point;
 import system.windows.media.PolyQuadraticBezierSegment;
 import system.windows.media.PointCollection;
 
@@ -176,7 +177,7 @@ public class PolyQuadraticBezierSegment extends system.windows.media.PathSegment
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param points the argument of type {@code IEnumerable_1}
+     * @param points the argument of type {@code IEnumerable_1<Point>}
      * @param isStroked the argument of type {@code boolean}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
@@ -188,7 +189,7 @@ public class PolyQuadraticBezierSegment extends system.windows.media.PathSegment
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.PolyQuadraticBezierSegment.-ctor" target="_top">.NET documentation</a>
      */
-    public PolyQuadraticBezierSegment(IEnumerable_1 points, boolean isStroked) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
+    public PolyQuadraticBezierSegment(IEnumerable_1<Point> points, boolean isStroked) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

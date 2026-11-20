@@ -332,7 +332,7 @@ public class SecurityTokenHandlerCollectionManager extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenHandlerCollectionManager.SecurityTokenHandlerCollections" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getSecurityTokenHandlerCollections() throws Throwable, system.ArgumentNullException {
+    public IEnumerable_1<SecurityTokenHandlerCollection> getSecurityTokenHandlerCollections() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSecurityTokenHandlerCollections = null;

@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.Action_2;
+import system.net.quic.QuicConnection;
+import system.net.quic.QuicStreamCapacityChangedArgs;
 import system.net.quic.QuicReceiveWindowSizes;
 import system.TimeSpan;
 
@@ -424,15 +426,15 @@ public class QuicConnectionOptions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicConnectionOptions.StreamCapacityCallback" target="_top">.NET documentation</a>
      */
-    public Action_2 getStreamCapacityCallback() throws Throwable {
+    public Action_2<QuicConnection, QuicStreamCapacityChangedArgs> getStreamCapacityCallback() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectStreamCapacityCallback = null;
         try {
             retObjectStreamCapacityCallback = classInstance.Get("StreamCapacityCallback");
-            return (Action_2)retObjectStreamCapacityCallback;
+            return (Action_2<QuicConnection, QuicStreamCapacityChangedArgs>)retObjectStreamCapacityCallback;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_2", retObjectStreamCapacityCallback != null ? retObjectStreamCapacityCallback.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_2<QuicConnection, QuicStreamCapacityChangedArgs>", retObjectStreamCapacityCallback != null ? retObjectStreamCapacityCallback.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -445,7 +447,7 @@ public class QuicConnectionOptions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicConnectionOptions.StreamCapacityCallback" target="_top">.NET documentation</a>
      */
-    public void setStreamCapacityCallback(Action_2 StreamCapacityCallback) throws Throwable {
+    public void setStreamCapacityCallback(Action_2<QuicConnection, QuicStreamCapacityChangedArgs> StreamCapacityCallback) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

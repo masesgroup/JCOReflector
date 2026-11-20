@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.threading.tasks.Task_1;
+import system.net.websockets.HttpListenerWebSocketContext;
 import system.TimeSpan;
 import system.ArraySegment_1;
 import system.net.HttpListenerRequest;
@@ -186,7 +187,7 @@ public class HttpListenerContext extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.HttpListenerContext.AcceptWebSocketAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 AcceptWebSocketAsync(java.lang.String subProtocol, int receiveBufferSize, TimeSpan keepAliveInterval, ArraySegment_1 internalBuffer) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.diagnostics.UnreachableException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
+    public Task_1<HttpListenerWebSocketContext> AcceptWebSocketAsync(java.lang.String subProtocol, int receiveBufferSize, TimeSpan keepAliveInterval, ArraySegment_1 internalBuffer) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.diagnostics.UnreachableException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAcceptWebSocketAsync = null;
@@ -224,7 +225,7 @@ public class HttpListenerContext extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.HttpListenerContext.AcceptWebSocketAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 AcceptWebSocketAsync(java.lang.String subProtocol, int receiveBufferSize, TimeSpan keepAliveInterval) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
+    public Task_1<HttpListenerWebSocketContext> AcceptWebSocketAsync(java.lang.String subProtocol, int receiveBufferSize, TimeSpan keepAliveInterval) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAcceptWebSocketAsync = null;
@@ -260,7 +261,7 @@ public class HttpListenerContext extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.HttpListenerContext.AcceptWebSocketAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 AcceptWebSocketAsync(java.lang.String subProtocol, TimeSpan keepAliveInterval) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.diagnostics.UnreachableException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
+    public Task_1<HttpListenerWebSocketContext> AcceptWebSocketAsync(java.lang.String subProtocol, TimeSpan keepAliveInterval) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.diagnostics.UnreachableException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAcceptWebSocketAsync = null;
@@ -295,7 +296,7 @@ public class HttpListenerContext extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.HttpListenerContext.AcceptWebSocketAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 AcceptWebSocketAsync(java.lang.String subProtocol) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.diagnostics.UnreachableException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
+    public Task_1<HttpListenerWebSocketContext> AcceptWebSocketAsync(java.lang.String subProtocol) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.diagnostics.UnreachableException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAcceptWebSocketAsync = null;

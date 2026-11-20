@@ -182,7 +182,7 @@ public class IAsyncValidateOptions_1Implementation<TOptions extends IJCOBridgeRe
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.IAsyncValidateOptions-1.ValidateAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 ValidateAsync(java.lang.String name, TOptions options, CancellationToken cancellationToken) throws Throwable {
+    public Task_1<ValidateOptionsResult> ValidateAsync(java.lang.String name, TOptions options, CancellationToken cancellationToken) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValidateAsync = null;

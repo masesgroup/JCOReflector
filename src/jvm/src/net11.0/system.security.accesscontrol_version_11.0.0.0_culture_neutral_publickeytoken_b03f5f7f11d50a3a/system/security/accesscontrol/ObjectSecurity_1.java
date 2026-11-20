@@ -167,7 +167,7 @@ public class ObjectSecurity_1<T extends IJCOBridgeReflected> extends system.secu
     /**
      * Invokes the .NET member RemoveAccessRule.
      *
-     * @param rule the argument of type {@code AccessRule_1}
+     * @param rule the argument of type {@code AccessRule_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -182,7 +182,7 @@ public class ObjectSecurity_1<T extends IJCOBridgeReflected> extends system.secu
      * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.ObjectSecurity-1.RemoveAccessRule" target="_top">.NET documentation</a>
      */
-    public boolean RemoveAccessRule(AccessRule_1 rule) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.LockRecursionException, system.PlatformNotSupportedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
+    public boolean RemoveAccessRule(AccessRule_1<T> rule) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.LockRecursionException, system.PlatformNotSupportedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRemoveAccessRule = null;
@@ -199,7 +199,7 @@ public class ObjectSecurity_1<T extends IJCOBridgeReflected> extends system.secu
     /**
      * Invokes the .NET member RemoveAuditRule.
      *
-     * @param rule the argument of type {@code AuditRule_1}
+     * @param rule the argument of type {@code AuditRule_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -214,7 +214,7 @@ public class ObjectSecurity_1<T extends IJCOBridgeReflected> extends system.secu
      * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.ObjectSecurity-1.RemoveAuditRule" target="_top">.NET documentation</a>
      */
-    public boolean RemoveAuditRule(AuditRule_1 rule) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.LockRecursionException, system.PlatformNotSupportedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
+    public boolean RemoveAuditRule(AuditRule_1<T> rule) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.LockRecursionException, system.PlatformNotSupportedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRemoveAuditRule = null;
@@ -301,7 +301,7 @@ public class ObjectSecurity_1<T extends IJCOBridgeReflected> extends system.secu
     /**
      * Invokes the .NET member AddAccessRule.
      *
-     * @param rule the argument of type {@code AccessRule_1}
+     * @param rule the argument of type {@code AccessRule_1<T>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -315,7 +315,7 @@ public class ObjectSecurity_1<T extends IJCOBridgeReflected> extends system.secu
      * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.ObjectSecurity-1.AddAccessRule" target="_top">.NET documentation</a>
      */
-    public void AddAccessRule(AccessRule_1 rule) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.LockRecursionException, system.PlatformNotSupportedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
+    public void AddAccessRule(AccessRule_1<T> rule) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.LockRecursionException, system.PlatformNotSupportedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -328,7 +328,7 @@ public class ObjectSecurity_1<T extends IJCOBridgeReflected> extends system.secu
     /**
      * Invokes the .NET member AddAuditRule.
      *
-     * @param rule the argument of type {@code AuditRule_1}
+     * @param rule the argument of type {@code AuditRule_1<T>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -342,7 +342,7 @@ public class ObjectSecurity_1<T extends IJCOBridgeReflected> extends system.secu
      * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.ObjectSecurity-1.AddAuditRule" target="_top">.NET documentation</a>
      */
-    public void AddAuditRule(AuditRule_1 rule) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.LockRecursionException, system.PlatformNotSupportedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
+    public void AddAuditRule(AuditRule_1<T> rule) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.LockRecursionException, system.PlatformNotSupportedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -355,7 +355,7 @@ public class ObjectSecurity_1<T extends IJCOBridgeReflected> extends system.secu
     /**
      * Invokes the .NET member RemoveAccessRuleAll.
      *
-     * @param rule the argument of type {@code AccessRule_1}
+     * @param rule the argument of type {@code AccessRule_1<T>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -369,7 +369,7 @@ public class ObjectSecurity_1<T extends IJCOBridgeReflected> extends system.secu
      * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.ObjectSecurity-1.RemoveAccessRuleAll" target="_top">.NET documentation</a>
      */
-    public void RemoveAccessRuleAll(AccessRule_1 rule) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.LockRecursionException, system.PlatformNotSupportedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
+    public void RemoveAccessRuleAll(AccessRule_1<T> rule) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.LockRecursionException, system.PlatformNotSupportedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -382,7 +382,7 @@ public class ObjectSecurity_1<T extends IJCOBridgeReflected> extends system.secu
     /**
      * Invokes the .NET member RemoveAccessRuleSpecific.
      *
-     * @param rule the argument of type {@code AccessRule_1}
+     * @param rule the argument of type {@code AccessRule_1<T>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -396,7 +396,7 @@ public class ObjectSecurity_1<T extends IJCOBridgeReflected> extends system.secu
      * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.ObjectSecurity-1.RemoveAccessRuleSpecific" target="_top">.NET documentation</a>
      */
-    public void RemoveAccessRuleSpecific(AccessRule_1 rule) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.LockRecursionException, system.PlatformNotSupportedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
+    public void RemoveAccessRuleSpecific(AccessRule_1<T> rule) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.LockRecursionException, system.PlatformNotSupportedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -409,7 +409,7 @@ public class ObjectSecurity_1<T extends IJCOBridgeReflected> extends system.secu
     /**
      * Invokes the .NET member RemoveAuditRuleAll.
      *
-     * @param rule the argument of type {@code AuditRule_1}
+     * @param rule the argument of type {@code AuditRule_1<T>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -423,7 +423,7 @@ public class ObjectSecurity_1<T extends IJCOBridgeReflected> extends system.secu
      * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.ObjectSecurity-1.RemoveAuditRuleAll" target="_top">.NET documentation</a>
      */
-    public void RemoveAuditRuleAll(AuditRule_1 rule) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.LockRecursionException, system.PlatformNotSupportedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
+    public void RemoveAuditRuleAll(AuditRule_1<T> rule) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.LockRecursionException, system.PlatformNotSupportedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -436,7 +436,7 @@ public class ObjectSecurity_1<T extends IJCOBridgeReflected> extends system.secu
     /**
      * Invokes the .NET member RemoveAuditRuleSpecific.
      *
-     * @param rule the argument of type {@code AuditRule_1}
+     * @param rule the argument of type {@code AuditRule_1<T>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -450,7 +450,7 @@ public class ObjectSecurity_1<T extends IJCOBridgeReflected> extends system.secu
      * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.ObjectSecurity-1.RemoveAuditRuleSpecific" target="_top">.NET documentation</a>
      */
-    public void RemoveAuditRuleSpecific(AuditRule_1 rule) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.LockRecursionException, system.PlatformNotSupportedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
+    public void RemoveAuditRuleSpecific(AuditRule_1<T> rule) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.LockRecursionException, system.PlatformNotSupportedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -463,7 +463,7 @@ public class ObjectSecurity_1<T extends IJCOBridgeReflected> extends system.secu
     /**
      * Invokes the .NET member ResetAccessRule.
      *
-     * @param rule the argument of type {@code AccessRule_1}
+     * @param rule the argument of type {@code AccessRule_1<T>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -477,7 +477,7 @@ public class ObjectSecurity_1<T extends IJCOBridgeReflected> extends system.secu
      * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.ObjectSecurity-1.ResetAccessRule" target="_top">.NET documentation</a>
      */
-    public void ResetAccessRule(AccessRule_1 rule) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.LockRecursionException, system.PlatformNotSupportedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
+    public void ResetAccessRule(AccessRule_1<T> rule) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.LockRecursionException, system.PlatformNotSupportedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -490,7 +490,7 @@ public class ObjectSecurity_1<T extends IJCOBridgeReflected> extends system.secu
     /**
      * Invokes the .NET member SetAccessRule.
      *
-     * @param rule the argument of type {@code AccessRule_1}
+     * @param rule the argument of type {@code AccessRule_1<T>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -504,7 +504,7 @@ public class ObjectSecurity_1<T extends IJCOBridgeReflected> extends system.secu
      * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.ObjectSecurity-1.SetAccessRule" target="_top">.NET documentation</a>
      */
-    public void SetAccessRule(AccessRule_1 rule) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.LockRecursionException, system.PlatformNotSupportedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
+    public void SetAccessRule(AccessRule_1<T> rule) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.LockRecursionException, system.PlatformNotSupportedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -517,7 +517,7 @@ public class ObjectSecurity_1<T extends IJCOBridgeReflected> extends system.secu
     /**
      * Invokes the .NET member SetAuditRule.
      *
-     * @param rule the argument of type {@code AuditRule_1}
+     * @param rule the argument of type {@code AuditRule_1<T>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -531,7 +531,7 @@ public class ObjectSecurity_1<T extends IJCOBridgeReflected> extends system.secu
      * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.AccessControl.ObjectSecurity-1.SetAuditRule" target="_top">.NET documentation</a>
      */
-    public void SetAuditRule(AuditRule_1 rule) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.LockRecursionException, system.PlatformNotSupportedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
+    public void SetAuditRule(AuditRule_1<T> rule) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.LockRecursionException, system.PlatformNotSupportedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

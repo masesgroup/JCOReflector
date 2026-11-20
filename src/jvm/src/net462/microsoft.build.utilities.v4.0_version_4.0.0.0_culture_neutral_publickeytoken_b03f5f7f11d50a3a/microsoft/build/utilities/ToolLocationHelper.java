@@ -43,7 +43,9 @@ import system.collections.generic.IDictionary_2Implementation;
 import system.Version;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import microsoft.build.utilities.AssemblyFoldersExInfo;
 import system.reflection.ProcessorArchitecture;
+import microsoft.build.utilities.TargetPlatformSDK;
 import system.runtime.versioning.FrameworkName;
 import microsoft.build.utilities.TargetDotNetFrameworkVersion;
 import microsoft.build.utilities.VisualStudioVersion;
@@ -317,7 +319,7 @@ public class ToolLocationHelper extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetAssemblyFoldersExInfo" target="_top">.NET documentation</a>
      */
-    public static IList_1 GetAssemblyFoldersExInfo(java.lang.String registryRoot, java.lang.String targetFrameworkVersion, java.lang.String registryKeySuffix, java.lang.String osVersion, java.lang.String platform, ProcessorArchitecture targetProcessorArchitecture) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException {
+    public static IList_1<AssemblyFoldersExInfo> GetAssemblyFoldersExInfo(java.lang.String registryRoot, java.lang.String targetFrameworkVersion, java.lang.String registryKeySuffix, java.lang.String osVersion, java.lang.String platform, ProcessorArchitecture targetProcessorArchitecture) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetAssemblyFoldersExInfo = null;
@@ -354,7 +356,7 @@ public class ToolLocationHelper extends NetObject  {
      * @throws system.io.IOException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetTargetPlatformSdks" target="_top">.NET documentation</a>
      */
-    public static IList_1 GetTargetPlatformSdks() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+    public static IList_1<TargetPlatformSDK> GetTargetPlatformSdks() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.NullReferenceException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTargetPlatformSdks = null;
@@ -392,7 +394,7 @@ public class ToolLocationHelper extends NetObject  {
      * @throws system.io.IOException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetTargetPlatformSdks" target="_top">.NET documentation</a>
      */
-    public static IList_1 GetTargetPlatformSdks(java.lang.String[] diskRoots, java.lang.String registryRoot) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.io.PathTooLongException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+    public static IList_1<TargetPlatformSDK> GetTargetPlatformSdks(java.lang.String[] diskRoots, java.lang.String registryRoot) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.io.PathTooLongException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTargetPlatformSdks = null;
@@ -430,7 +432,7 @@ public class ToolLocationHelper extends NetObject  {
      * @throws system.io.IOException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Utilities.ToolLocationHelper.GetTargetPlatformSdks" target="_top">.NET documentation</a>
      */
-    public static IList_1 GetTargetPlatformSdks(JCORefOut dupParam0, java.lang.String dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.io.PathTooLongException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+    public static IList_1<TargetPlatformSDK> GetTargetPlatformSdks(JCORefOut dupParam0, java.lang.String dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.InvalidOperationException, system.io.PathTooLongException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTargetPlatformSdks = null;

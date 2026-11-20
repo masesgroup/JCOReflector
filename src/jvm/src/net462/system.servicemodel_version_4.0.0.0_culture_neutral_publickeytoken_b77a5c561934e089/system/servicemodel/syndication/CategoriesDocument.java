@@ -43,6 +43,7 @@ import system.xml.XmlReader;
 import system.servicemodel.syndication.CategoriesDocumentFormatter;
 import system.servicemodel.syndication.InlineCategoriesDocument;
 import system.collections.objectmodel.Collection_1;
+import system.servicemodel.syndication.SyndicationCategory;
 import system.servicemodel.syndication.ReferencedCategoriesDocument;
 import system.Uri;
 import system.xml.XmlWriter;
@@ -224,13 +225,13 @@ public class CategoriesDocument extends NetObject  {
     /**
      * Invokes the .NET member Create.
      *
-     * @param categories the argument of type {@code Collection_1}
+     * @param categories the argument of type {@code Collection_1<SyndicationCategory>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.CategoriesDocument.Create" target="_top">.NET documentation</a>
      */
-    public static InlineCategoriesDocument Create(Collection_1 categories) throws Throwable, system.NotSupportedException {
+    public static InlineCategoriesDocument Create(Collection_1<SyndicationCategory> categories) throws Throwable, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -248,7 +249,7 @@ public class CategoriesDocument extends NetObject  {
     /**
      * Invokes the .NET member Create.
      *
-     * @param categories the argument of type {@code Collection_1}
+     * @param categories the argument of type {@code Collection_1<SyndicationCategory>}
      * @param isFixed the argument of type {@code boolean}
      * @param scheme the argument of type {@code java.lang.String}
      * @return the value returned by the .NET member
@@ -256,7 +257,7 @@ public class CategoriesDocument extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.CategoriesDocument.Create" target="_top">.NET documentation</a>
      */
-    public static InlineCategoriesDocument Create(Collection_1 categories, boolean isFixed, java.lang.String scheme) throws Throwable, system.NotSupportedException {
+    public static InlineCategoriesDocument Create(Collection_1<SyndicationCategory> categories, boolean isFixed, java.lang.String scheme) throws Throwable, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

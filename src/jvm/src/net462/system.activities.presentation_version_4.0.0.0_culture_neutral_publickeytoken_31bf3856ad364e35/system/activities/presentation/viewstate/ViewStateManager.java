@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.objectmodel.Collection_1;
+import system.activities.presentation.viewstate.ViewStateData;
 
 
 /**
@@ -180,7 +181,7 @@ public class ViewStateManager extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ViewState.ViewStateManager.ViewStateData" target="_top">.NET documentation</a>
      */
-    public Collection_1 getViewStateData() throws Throwable {
+    public Collection_1<ViewStateData> getViewStateData() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectViewStateData = null;

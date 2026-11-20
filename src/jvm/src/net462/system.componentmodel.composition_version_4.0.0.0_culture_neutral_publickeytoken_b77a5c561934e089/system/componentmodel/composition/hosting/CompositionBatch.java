@@ -177,8 +177,8 @@ public class CompositionBatch extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param partsToAdd the argument of type {@code IEnumerable_1}
-     * @param partsToRemove the argument of type {@code IEnumerable_1}
+     * @param partsToAdd the argument of type {@code IEnumerable_1<ComposablePart>}
+     * @param partsToRemove the argument of type {@code IEnumerable_1<ComposablePart>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -188,7 +188,7 @@ public class CompositionBatch extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.CompositionBatch.-ctor" target="_top">.NET documentation</a>
      */
-    public CompositionBatch(IEnumerable_1 partsToAdd, IEnumerable_1 partsToRemove) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public CompositionBatch(IEnumerable_1<ComposablePart> partsToAdd, IEnumerable_1<ComposablePart> partsToRemove) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -283,7 +283,7 @@ public class CompositionBatch extends NetObject  {
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.CompositionBatch.PartsToAdd" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getPartsToAdd() throws Throwable, system.ArgumentException {
+    public ReadOnlyCollection_1<ComposablePart> getPartsToAdd() throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPartsToAdd = null;
@@ -306,7 +306,7 @@ public class CompositionBatch extends NetObject  {
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.CompositionBatch.PartsToRemove" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getPartsToRemove() throws Throwable, system.ArgumentException {
+    public ReadOnlyCollection_1<ComposablePart> getPartsToRemove() throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPartsToRemove = null;

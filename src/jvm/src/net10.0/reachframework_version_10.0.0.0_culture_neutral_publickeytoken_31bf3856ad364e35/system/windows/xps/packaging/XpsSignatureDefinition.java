@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.globalization.CultureInfo;
 import system.Nullable_1;
+import system.DateTime;
+import system.Guid;
 import system.windows.xps.packaging.SpotLocation;
 
 
@@ -259,7 +261,7 @@ public class XpsSignatureDefinition extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsSignatureDefinition.SignBy" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getSignBy() throws Throwable {
+    public Nullable_1<DateTime> getSignBy() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSignBy = null;
@@ -281,7 +283,7 @@ public class XpsSignatureDefinition extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsSignatureDefinition.SignBy" target="_top">.NET documentation</a>
      */
-    public void setSignBy(Nullable_1 SignBy) throws Throwable {
+    public void setSignBy(Nullable_1<DateTime> SignBy) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -298,7 +300,7 @@ public class XpsSignatureDefinition extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsSignatureDefinition.SpotId" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getSpotId() throws Throwable {
+    public Nullable_1<Guid> getSpotId() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSpotId = null;
@@ -320,7 +322,7 @@ public class XpsSignatureDefinition extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsSignatureDefinition.SpotId" target="_top">.NET documentation</a>
      */
-    public void setSpotId(Nullable_1 SpotId) throws Throwable {
+    public void setSpotId(Nullable_1<Guid> SpotId) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

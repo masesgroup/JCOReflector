@@ -1,0 +1,60 @@
+# -----------------------------------------------------------------------------
+# List of the JVM tests run by run_jvm_tests.py (java, scala, kotlin, clojure)
+#
+# One line = one test:  [filters] class [arguments]
+#   - the order of the lines is the order of execution
+#   - empty lines and everything after '#' are ignored
+#   - [filters] is optional: comma-separated list, ALL terms must be true;
+#     a leading '!' negates a term.
+#       language tags: java, scala, kotlin, clojure
+#       OS tags:       windows, linux, macos
+#     An unknown tag (e.g. a typo) fails the step, so no test is ever
+#     silently skipped.
+#
+# Examples:
+#   generics.Foo                      -> all languages, all operating systems
+#   [java] generics.Bar               -> Java only
+#   [java,!windows] nettest.X -a b    -> Java on Linux and macOS
+# -----------------------------------------------------------------------------
+
+# --- generics ----------------------------------------------------------------
+generics.GenericConstructedEventHandlerTypeIsResolved
+generics.GenericClosedEventHandlerTypeIsResolved
+generics.GenericClosedTypeArgumentsAreResolved
+generics.GenericInheritedInterfaceMethodsAreConsistent
+generics.GenericExceptionTypeArgumentStaysRaw
+generics.GenericRefStructTypesAreNotExported
+generics.GenericConstructedReturnTypeIsResolved
+generics.GenericNestedConstructedArgumentsAreResolved
+generics.GenericConstructedPropertyTypeIsResolved
+generics.GenericConstructedParameterTypeInConstructor
+generics.GenericConstructedParameterTypeIsResolved
+generics.AnonymousSubclassConstruction
+generics.EqualsGenericRenameOnEqualityComparer
+generics.GenericCollectionAddAndGet
+generics.GenericComparisonDelegateSortsAList
+generics.GenericDictionaryWithTwoTypeArguments
+generics.GenericExceptionExposesBoundType
+generics.MissingAnonymousSubclassFails
+generics.RemoveByKeyRenameOnKeyedCollection
+
+# --- hierarchy / mscorlib ----------------------------------------------------
+hierarchy.HelloHierarchy
+hierarchy.HelloInterfaces
+mscorlib.HelloLock
+mscorlib.HelloNET
+mscorlib.HelloNETEvent
+mscorlib.HelloIterator
+
+# --- nettest: Java on Linux/macOS needs '-server 127.0.0.1' ------------------
+[java,windows]  nettest.HelloNETSocket
+[java,!windows] nettest.HelloNETSocket -server 127.0.0.1
+[!java]         nettest.HelloNETSocket
+
+[java,windows]  nettest.HelloNETSocket -async
+[java,!windows] nettest.HelloNETSocket -async -server 127.0.0.1
+[!java]         nettest.HelloNETSocket -async
+
+# --- refout ------------------------------------------------------------------
+refout.HelloRefOutBase
+refout.HelloRefOut

@@ -78,7 +78,6 @@ object GenericClosedEventHandlerTypeIsResolved {
                 }
             }
         }
-        println(handler.javaClass.genericSuperclass)
 
         val domain = AppDomain.getCurrentDomain()
         domain.addFirstChanceException(handler)

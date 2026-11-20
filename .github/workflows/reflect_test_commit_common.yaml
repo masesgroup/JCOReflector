@@ -469,7 +469,10 @@ jobs:
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.GenericConstructedEventHandlerTypeIsResolved
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.GenericClosedEventHandlerTypeIsResolved
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.GenericClosedEventHandlerTypeIsResolved
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.GenericClosedTypeArgumentsAreResolved
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.GenericRefStructTypesAreNotExported
@@ -1204,6 +1207,9 @@ jobs:
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.GenericClosedEventHandlerTypeIsResolved
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.GenericClosedTypeArgumentsAreResolved
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.GenericRefStructTypesAreNotExported
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
@@ -1803,6 +1809,9 @@ jobs:
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.GenericClosedEventHandlerTypeIsResolved
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.GenericClosedTypeArgumentsAreResolved
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.GenericRefStructTypesAreNotExported

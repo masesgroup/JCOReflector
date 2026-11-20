@@ -93,7 +93,7 @@ namespace MASES.JCOReflector.Engine
         // arguments reference generic parameters in scope and that can be rendered as a parameterized
         // Java type in a member signature. Method-level parameters are excluded: they need the method's
         // own <T> declaration, which is handled by the dedicated method-generic paths.
-        static bool IsResolvableConstructedGeneric(Type t, bool allowClosed = false)
+        static bool IsResolvableConstructedGeneric(Type t, bool allowClosed = true)
         {
             if (!EnableGenerics) return false;
             if (t.IsByRef || t.IsArray || t.IsPointer) return false;
@@ -109,7 +109,23 @@ namespace MASES.JCOReflector.Engine
             // (Func<Task[],TResult>, Predicate<T[]>, ITargetBlock<T[]>...).
             if (ContainsArrayTypeArgument(t)) return false;
             if (ViolatesReflectedBound(t)) return false;
+            if (!AreTypeArgumentsExportable(t)) return false;
             return !ContainsMethodLevelGenericParameter(t);
+        }
+
+        // Every type argument that is not a generic parameter must be a class the generator really emits:
+        // managed (public, not a ref struct...), not nested and, if itself generic, recursively the same.
+        // Otherwise the parameterized name would cite a Java class that does not exist.
+        static bool AreTypeArgumentsExportable(Type t)
+        {
+            foreach (var arg in t.GetGenericArguments())
+            {
+                if (arg.IsGenericParameter) continue;
+                if (arg.IsNested) return false;
+                if (!arg.IsManagedType(0, 2)) return false;
+                if (arg.IsGenericType && !AreTypeArgumentsExportable(arg)) return false;
+            }
+            return true;
         }
 
         // Same reasoning as DeclaresSameNameAndArityInBaseClass, for properties: a derived setter taking

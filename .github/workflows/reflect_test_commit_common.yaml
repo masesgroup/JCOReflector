@@ -466,6 +466,9 @@ jobs:
         shell: bash
         run: echo "JCOBRIDGE_CoreCLRVersion=11" >> $GITHUB_ENV
 
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.GenericConstructedEventHandlerTypeIsResolved
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" generics.GenericRefStructTypesAreNotExported
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
@@ -1192,6 +1195,9 @@ jobs:
         continue-on-error: ${{ inputs.ForceExecution == true }}
         run: javac -cp ./bin/${{ matrix.framework }}/JCOReflector.jar ./tests/jvm/java/src/generics/*.java ./tests/jvm/java/src/hierarchy/*.java ./tests/jvm/java/src/mscorlib/*.java ./tests/jvm/java/src/nettest/*.java ./tests/jvm/java/src/refout/*.java
 
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.GenericConstructedEventHandlerTypeIsResolved
+        continue-on-error: ${{ inputs.ForceExecution == true }}
+
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.GenericRefStructTypesAreNotExported
         continue-on-error: ${{ inputs.ForceExecution == true }}
 
@@ -1786,6 +1792,9 @@ jobs:
       - name: Build Java test source file
         continue-on-error: ${{ inputs.ForceExecution == true }}
         run: javac -cp ./bin/${{ matrix.framework }}/JCOReflector.jar ./tests/jvm/java/src/generics/*.java ./tests/jvm/java/src/hierarchy/*.java ./tests/jvm/java/src/mscorlib/*.java ./tests/jvm/java/src/nettest/*.java ./tests/jvm/java/src/refout/*.java
+
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.GenericConstructedEventHandlerTypeIsResolved
+        continue-on-error: ${{ inputs.ForceExecution == true }}
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" generics.GenericRefStructTypesAreNotExported
         continue-on-error: ${{ inputs.ForceExecution == true }}

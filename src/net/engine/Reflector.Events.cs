@@ -170,7 +170,12 @@ namespace MASES.JCOReflector.Engine
 
                 // FIXED PIPELINE CHANNELS: Added required out string parameter to match updated ExportingDelegate signature
                 string dummyEnumeratorType = string.Empty;
-                if (!item.EventHandlerType.ExportingDelegate(destFolder, assemblyname, out dummyEnumeratorType, true)) continue;
+                // A handler that is a constructed generic delegate over in-scope type parameters (Progress<T>.ProgressChanged is
+                // EventHandler<T>) is checked and exported through its generic definition, and registered with its type arguments.
+                bool isHandlerConstructedGeneric = !isException && IsResolvableConstructedGeneric(item.EventHandlerType)
+                                                   && !DeclaresSameEventInBaseClass(type, eventName);
+                var handlerToExport = isHandlerConstructedGeneric ? item.EventHandlerType.GetGenericTypeDefinition() : item.EventHandlerType;
+                if (!handlerToExport.ExportingDelegate(destFolder, assemblyname, out dummyEnumeratorType, true)) continue;
 
                 eventType = ConvertType(imports, item.EventHandlerType, out isPrimitive, out defaultPrimitiveValue, out isConcrete, out isSpecial, out isArray);
                 if (!isConcrete) continue; // found not managed type, jump to next 
@@ -183,7 +188,9 @@ namespace MASES.JCOReflector.Engine
                 }
 
                 // RESOLUTION GENERICS: Resolve non-colliding java name for the handler delegate type
-                string javaHandlerName = item.EventHandlerType.GetJavaClassName(item.EventHandlerType.Assembly);
+                string javaHandlerName = isHandlerConstructedGeneric
+                    ? ResolveGenericTypeName(item.EventHandlerType, imports)
+                    : item.EventHandlerType.GetJavaClassName(item.EventHandlerType.Assembly);
 
                 var eventStr = templateToUse.Replace(Const.Events.EVENT_JAVA_NAME, isNewEventVal ? newEventName : eventName)
                                             .Replace(Const.Events.EVENT_NAME, eventName)

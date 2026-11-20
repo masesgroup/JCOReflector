@@ -122,6 +122,18 @@ namespace MASES.JCOReflector.Engine
             return false;
         }
 
+        // Events: a derived addX/removeX taking EventHandler_1<T> would not override a base one taking the
+        // raw EventHandler_1 (name clash), so an event already declared in a base class stays raw.
+        static bool DeclaresSameEventInBaseClass(Type type, string eventName)
+        {
+            for (var b = type.BaseType; b != null && b != typeof(object); b = b.BaseType)
+            {
+                if (b.GetEvents(BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly)
+                     .Any(e => e.Name == eventName)) return true;
+            }
+            return false;
+        }
+
         static bool ContainsArrayTypeArgument(Type t)
         {
             if (t == null) return false;

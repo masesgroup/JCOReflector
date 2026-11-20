@@ -29,6 +29,14 @@
            [system.reflection Assembly CustomAttributeData TypeInfo]
            [system.threading.tasks Task]))
 
+(defn- assert-closed [tp raw argument]
+  (when-not (instance? ParameterizedType tp)
+    (throw (AssertionError. (str "Expected " (.getSimpleName ^Class raw) "<" (.getSimpleName ^Class argument) ">, got " tp))))
+  (when-not (identical? (.getRawType ^ParameterizedType tp) raw)
+    (throw (AssertionError. (str "Expected raw type " (.getSimpleName ^Class raw) ", got " (.getRawType ^ParameterizedType tp)))))
+  (when-not (identical? (aget (.getActualTypeArguments ^ParameterizedType tp) 0) argument)
+    (throw (AssertionError. (str "Expected type argument " (.getSimpleName ^Class argument) ", got " (aget (.getActualTypeArguments ^ParameterizedType tp) 0))))))
+
 ;; Exercises fully closed generic types in member signatures, whose type arguments are reflected
 ;; classes: Task.WhenAll(IEnumerable<Task>) as a parameter, Assembly.DefinedTypes
 ;; (IEnumerable<TypeInfo>) as a property and Assembly.GetCustomAttributesData()
@@ -46,14 +54,6 @@
   (let [assembly (Assembly/GetExecutingAssembly)]
     (when (nil? (.getDefinedTypes assembly))
       (throw (AssertionError. "Expected a non-null collection of defined types")))))
-
-(defn- assert-closed [tp raw argument]
-  (when-not (instance? ParameterizedType tp)
-    (throw (AssertionError. (str "Expected " (.getSimpleName ^Class raw) "<" (.getSimpleName ^Class argument) ">, got " tp))))
-  (when-not (identical? (.getRawType ^ParameterizedType tp) raw)
-    (throw (AssertionError. (str "Expected raw type " (.getSimpleName ^Class raw) ", got " (.getRawType ^ParameterizedType tp)))))
-  (when-not (identical? (aget (.getActualTypeArguments ^ParameterizedType tp) 0) argument)
-    (throw (AssertionError. (str "Expected type argument " (.getSimpleName ^Class argument) ", got " (aget (.getActualTypeArguments ^ParameterizedType tp) 0))))))
 
 (defn -main [& args]
   (JCOReflector/setCommandLineArgs (into-array String args))

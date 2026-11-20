@@ -11,7 +11,7 @@ updates:
       interval: "weekly"
 
   - package-ecosystem: maven
-    directory: "/src/jvm/src"
+    directory: "/tests/jvm/clojure"
     schedule:
       interval: "weekly"
 

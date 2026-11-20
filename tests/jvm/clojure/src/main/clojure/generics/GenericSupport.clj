@@ -27,7 +27,8 @@
   an anonymous generic subclass: a public no-arg subclass whose Signature is
   Super<TypeArg1, ...>. Methods named in `impls` are overridden and forwarded to Clojure fns."
   (:import [clojure.asm ClassWriter Opcodes Type]
-           [java.lang.reflect Method Modifier]))
+           [java.lang.reflect Method Modifier]
+		   [java.lang.reflect ParameterizedType TypeVariable]))
 
 (def ^:private cache (atom {}))
 (def ^:private counter (atom 0))

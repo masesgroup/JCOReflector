@@ -23,8 +23,7 @@
 (ns generics.GenericConstructedPropertyTypeIsResolved
   (:gen-class)
   (:require [generics.GenericSupport :as gs])
-  (:import [java.lang.reflect ParameterizedType TypeVariable]
-           [org.mases.jcobridge.netreflection IJCOBridgeReflected JCOReflector NetObject]
+  (:import [org.mases.jcobridge.netreflection IJCOBridgeReflected JCOReflector NetObject]
            [system Console Environment]
            [system.collections.concurrent ConcurrentDictionary_2]
            [system.collections.generic ICollection_1 IDictionary_2]))

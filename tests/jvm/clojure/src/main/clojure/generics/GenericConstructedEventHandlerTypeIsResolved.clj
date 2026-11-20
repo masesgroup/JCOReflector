@@ -23,8 +23,7 @@
 (ns generics.GenericConstructedEventHandlerTypeIsResolved
   (:gen-class)
   (:require [generics.GenericSupport :as gs])
-  (:import [java.lang.reflect ParameterizedType TypeVariable]
-           [org.mases.jcobridge.netreflection IJCOBridgeReflected JCOReflector NetObject]
+  (:import [org.mases.jcobridge.netreflection IJCOBridgeReflected JCOReflector NetObject]
            [system Console Environment EventHandler_1 Progress_1]))
 
 ;; Exercises an event whose handler is a constructed generic delegate over a class-level type

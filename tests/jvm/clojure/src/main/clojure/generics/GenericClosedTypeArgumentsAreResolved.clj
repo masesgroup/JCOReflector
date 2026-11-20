@@ -23,8 +23,7 @@
 (ns generics.GenericClosedTypeArgumentsAreResolved
   (:gen-class)
   (:require [generics.GenericSupport :as gs])
-  (:import [java.lang.reflect ParameterizedType TypeVariable]
-           [org.mases.jcobridge.netreflection IJCOBridgeReflected JCOReflector NetObject]
+  (:import [org.mases.jcobridge.netreflection IJCOBridgeReflected JCOReflector NetObject]
            [system Console Environment]
            [system.collections.generic IEnumerable_1 IList_1]
            [system.reflection Assembly CustomAttributeData TypeInfo]

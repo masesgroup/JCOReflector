@@ -23,8 +23,7 @@
 (ns generics.GenericConstructedReturnTypeIsResolved
   (:gen-class)
   (:require [generics.GenericSupport :as gs])
-  (:import [java.lang.reflect ParameterizedType TypeVariable]
-           [org.mases.jcobridge.netreflection IJCOBridgeReflected JCOReflector NetObject]
+  (:import [org.mases.jcobridge.netreflection IJCOBridgeReflected JCOReflector NetObject]
            [system Console Environment]
            [system.collections.generic List_1]
            [system.collections.objectmodel ReadOnlyCollection_1]))

@@ -69,13 +69,16 @@ object GenericClosedEventHandlerTypeIsResolved {
 
         // ...and the handler is really called back by the runtime
         val calls = java.util.concurrent.atomic.AtomicInteger()
-
         val handler = object : EventHandler_1<FirstChanceExceptionEventArgs>() {
-            override fun Invoke(sender: NetObject, e: FirstChanceExceptionEventArgs) {
-                // keep it minimal: this handler runs for every first-chance exception of the process
-                calls.incrementAndGet()
+            override fun Invoke(sender: NetObject?, e: FirstChanceExceptionEventArgs?) {
+                try {
+                    calls.incrementAndGet()
+                } catch (t: Throwable) {
+                    t.printStackTrace()
+                }
             }
         }
+        println(handler.javaClass.genericSuperclass)
 
         val domain = AppDomain.getCurrentDomain()
         domain.addFirstChanceException(handler)

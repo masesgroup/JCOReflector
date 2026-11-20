@@ -22,6 +22,7 @@
 
 (ns generics.GenericConstructedEventHandlerTypeIsResolved
   (:gen-class)
+  (:require [generics.GenericSupport :as gs])
   (:import [java.lang.reflect ParameterizedType TypeVariable]
            [org.mases.jcobridge.netreflection IJCOBridgeReflected JCOReflector NetObject]
            [system Console Environment EventHandler_1 Progress_1]))
@@ -31,21 +32,10 @@
 ;; altogether (only non-generic delegate types were accepted); now addProgressChanged and
 ;; removeProgressChanged are generated and take an EventHandler_1<T>.
 (defn- test-generic-constructed-event-handler-type-is-resolved []
-  (assert-parameterized (aget (.getGenericParameterTypes (.getMethod Progress_1 "addProgressChanged" (into-array Class [EventHandler_1]))) 0)
-                        EventHandler_1 Progress_1 "T")
-  (assert-parameterized (aget (.getGenericParameterTypes (.getMethod Progress_1 "removeProgressChanged" (into-array Class [EventHandler_1]))) 0)
-                        EventHandler_1 Progress_1 "T"))
-
-(defn- assert-parameterized [tp raw declaring variable-name]
-  (when-not (instance? ParameterizedType tp)
-    (throw (AssertionError. (str "Expected " (.getSimpleName ^Class raw) "<" variable-name ">, got " tp))))
-  (when-not (identical? (.getRawType ^ParameterizedType tp) raw)
-    (throw (AssertionError. (str "Expected raw type " (.getSimpleName ^Class raw) ", got " (.getRawType ^ParameterizedType tp)))))
-  (let [argument (aget (.getActualTypeArguments ^ParameterizedType tp) 0)]
-    (when-not (and (instance? TypeVariable argument)
-                   (identical? (.getGenericDeclaration ^TypeVariable argument) declaring)
-                   (= (.getName ^TypeVariable argument) variable-name))
-      (throw (AssertionError. (str "Expected type variable " variable-name " of " (.getSimpleName ^Class declaring) ", got " argument))))))
+  (gs/assert-parameterized (aget (.getGenericParameterTypes (.getMethod Progress_1 "addProgressChanged" (into-array Class [EventHandler_1]))) 0)
+                           EventHandler_1 Progress_1 "T")
+  (gs/assert-parameterized (aget (.getGenericParameterTypes (.getMethod Progress_1 "removeProgressChanged" (into-array Class [EventHandler_1]))) 0)
+                           EventHandler_1 Progress_1 "T"))
 
 (defn -main [& args]
   (JCOReflector/setCommandLineArgs (into-array String args))

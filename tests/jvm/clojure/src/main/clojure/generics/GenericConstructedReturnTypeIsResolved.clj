@@ -34,10 +34,10 @@
 ;; returns List<T>. They must be declared as ReadOnlyCollection_1<T> / List_1<T>, not as the raw
 ;; classes, while the returned instance is still wrapped correctly.
 (defn- test-generic-constructed-return-type-is-resolved []
-  (assert-parameterized (.getGenericReturnType (.getMethod List_1 "AsReadOnly" (into-array Class [])))
-                        ReadOnlyCollection_1 List_1 "T")
-  (assert-parameterized (.getGenericReturnType (.getMethod List_1 "GetRange" (into-array Class [Integer/TYPE Integer/TYPE])))
-                        List_1 List_1 "T")
+  (gs/assert-parameterized (.getGenericReturnType (.getMethod List_1 "AsReadOnly" (into-array Class [])))
+                           ReadOnlyCollection_1 List_1 "T")
+  (gs/assert-parameterized (.getGenericReturnType (.getMethod List_1 "GetRange" (into-array Class [Integer/TYPE Integer/TYPE])))
+                           List_1 List_1 "T")
 
   ;; the typed results are usable end to end
   (let [^List_1 lst (gs/new-generic List_1 [system.Object])
@@ -51,17 +51,6 @@
     (let [^List_1 range (.GetRange lst 0 1)]
       (when-not (= 1 (.getCount range))
         (throw (AssertionError. "Expected 1 element in the range"))))))
-
-(defn- assert-parameterized [tp raw declaring variable-name]
-  (when-not (instance? ParameterizedType tp)
-    (throw (AssertionError. (str "Expected " (.getSimpleName ^Class raw) "<" variable-name ">, got " tp))))
-  (when-not (identical? (.getRawType ^ParameterizedType tp) raw)
-    (throw (AssertionError. (str "Expected raw type " (.getSimpleName ^Class raw) ", got " (.getRawType ^ParameterizedType tp)))))
-  (let [argument (aget (.getActualTypeArguments ^ParameterizedType tp) 0)]
-    (when-not (and (instance? TypeVariable argument)
-                   (identical? (.getGenericDeclaration ^TypeVariable argument) declaring)
-                   (= (.getName ^TypeVariable argument) variable-name))
-      (throw (AssertionError. (str "Expected type variable " variable-name " of " (.getSimpleName ^Class declaring) ", got " argument))))))
 
 (defn -main [& args]
   (JCOReflector/setCommandLineArgs (into-array String args))

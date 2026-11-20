@@ -34,14 +34,14 @@
 ;; same holds for the public ConcurrentDictionary<TKey,TValue>.Keys/Values. They must be exposed
 ;; as ICollection_1<TKey> / ICollection_1<TValue>, not as the raw ICollection_1.
 (defn- test-generic-constructed-property-type-is-resolved []
-  (assert-parameterized (.getGenericReturnType (.getMethod IDictionary_2 "getKeys" (into-array Class [])))
-                        ICollection_1 IDictionary_2 "TKey")
-  (assert-parameterized (.getGenericReturnType (.getMethod IDictionary_2 "getValues" (into-array Class [])))
-                        ICollection_1 IDictionary_2 "TValue")
-  (assert-parameterized (.getGenericReturnType (.getMethod ConcurrentDictionary_2 "getKeys" (into-array Class [])))
-                        ICollection_1 ConcurrentDictionary_2 "TKey")
-  (assert-parameterized (.getGenericReturnType (.getMethod ConcurrentDictionary_2 "getValues" (into-array Class [])))
-                        ICollection_1 ConcurrentDictionary_2 "TValue")
+  (gs/assert-parameterized (.getGenericReturnType (.getMethod IDictionary_2 "getKeys" (into-array Class [])))
+                           ICollection_1 IDictionary_2 "TKey")
+  (gs/assert-parameterized (.getGenericReturnType (.getMethod IDictionary_2 "getValues" (into-array Class [])))
+                           ICollection_1 IDictionary_2 "TValue")
+  (gs/assert-parameterized (.getGenericReturnType (.getMethod ConcurrentDictionary_2 "getKeys" (into-array Class [])))
+                           ICollection_1 ConcurrentDictionary_2 "TKey")
+  (gs/assert-parameterized (.getGenericReturnType (.getMethod ConcurrentDictionary_2 "getValues" (into-array Class [])))
+                           ICollection_1 ConcurrentDictionary_2 "TValue")
 
   ;; the typed property is usable end to end
   (let [^ConcurrentDictionary_2 dict (gs/new-generic ConcurrentDictionary_2 [system.Object system.Object])
@@ -53,17 +53,6 @@
           ^ICollection_1 values (.getValues dict)]
       (when-not (= 1 (.getCount keys)) (throw (AssertionError. "Expected 1 key")))
       (when-not (= 1 (.getCount values)) (throw (AssertionError. "Expected 1 value"))))))
-
-(defn- assert-parameterized [tp raw declaring variable-name]
-  (when-not (instance? ParameterizedType tp)
-    (throw (AssertionError. (str "Expected " (.getSimpleName ^Class raw) "<" variable-name ">, got " tp))))
-  (when-not (identical? (.getRawType ^ParameterizedType tp) raw)
-    (throw (AssertionError. (str "Expected raw type " (.getSimpleName ^Class raw) ", got " (.getRawType ^ParameterizedType tp)))))
-  (let [argument (aget (.getActualTypeArguments ^ParameterizedType tp) 0)]
-    (when-not (and (instance? TypeVariable argument)
-                   (identical? (.getGenericDeclaration ^TypeVariable argument) declaring)
-                   (= (.getName ^TypeVariable argument) variable-name))
-      (throw (AssertionError. (str "Expected type variable " variable-name " of " (.getSimpleName ^Class declaring) ", got " argument))))))
 
 (defn -main [& args]
   (JCOReflector/setCommandLineArgs (into-array String args))

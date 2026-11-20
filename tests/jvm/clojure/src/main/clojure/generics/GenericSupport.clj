@@ -165,6 +165,25 @@
         i (.lastIndexOf n ".")]
     (if (neg? i) "" (subs n 0 i))))
 
+(defn- assert-closed [tp raw argument]
+  (when-not (instance? ParameterizedType tp)
+    (throw (AssertionError. (str "Expected " (.getSimpleName ^Class raw) "<" (.getSimpleName ^Class argument) ">, got " tp))))
+  (when-not (identical? (.getRawType ^ParameterizedType tp) raw)
+    (throw (AssertionError. (str "Expected raw type " (.getSimpleName ^Class raw) ", got " (.getRawType ^ParameterizedType tp)))))
+  (when-not (identical? (aget (.getActualTypeArguments ^ParameterizedType tp) 0) argument)
+    (throw (AssertionError. (str "Expected type argument " (.getSimpleName ^Class argument) ", got " (aget (.getActualTypeArguments ^ParameterizedType tp) 0))))))
+
+(defn- assert-parameterized [tp raw declaring variable-name]
+  (when-not (instance? ParameterizedType tp)
+    (throw (AssertionError. (str "Expected " (.getSimpleName ^Class raw) "<" variable-name ">, got " tp))))
+  (when-not (identical? (.getRawType ^ParameterizedType tp) raw)
+    (throw (AssertionError. (str "Expected raw type " (.getSimpleName ^Class raw) ", got " (.getRawType ^ParameterizedType tp)))))
+  (let [argument (aget (.getActualTypeArguments ^ParameterizedType tp) 0)]
+    (when-not (and (instance? TypeVariable argument)
+                   (identical? (.getGenericDeclaration ^TypeVariable argument) declaring)
+                   (= (.getName ^TypeVariable argument) variable-name))
+      (throw (AssertionError. (str "Expected type variable " variable-name " of " (.getSimpleName ^Class declaring) ", got " argument))))))
+
 (defn- generic-class ^Class [^Class super type-args method-names]
   (let [k [super (vec type-args) (vec (sort method-names))]]
     (or (get @cache k)

@@ -170,9 +170,10 @@ namespace MASES.JCOReflector.Engine
 
                 // FIXED PIPELINE CHANNELS: Added required out string parameter to match updated ExportingDelegate signature
                 string dummyEnumeratorType = string.Empty;
-                // A handler that is a constructed generic delegate over in-scope type parameters (Progress<T>.ProgressChanged is
-                // EventHandler<T>) is checked and exported through its generic definition, and registered with its type arguments.
-                bool isHandlerConstructedGeneric = !isException && IsResolvableConstructedGeneric(item.EventHandlerType)
+                // A handler that is a constructed generic delegate, open over in-scope type parameters (Progress<T>.ProgressChanged is
+                // EventHandler<T>) or closed (AppDomain.FirstChanceException is EventHandler<FirstChanceExceptionEventArgs>), is
+                // checked and exported through its generic definition, and registered with its type arguments.
+                bool isHandlerConstructedGeneric = !isException && IsResolvableConstructedGeneric(item.EventHandlerType, true)
                                                    && !DeclaresSameEventInBaseClass(type, eventName);
                 var handlerToExport = isHandlerConstructedGeneric ? item.EventHandlerType.GetGenericTypeDefinition() : item.EventHandlerType;
                 if (!handlerToExport.ExportingDelegate(destFolder, assemblyname, out dummyEnumeratorType, true)) continue;

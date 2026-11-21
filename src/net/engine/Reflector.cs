@@ -142,6 +142,7 @@ namespace MASES.JCOReflector.Engine
                 Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Text\.Rune$", new string[] { "TryFormat" });
                 Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Net\.IPAddress$", new string[] { "TryFormat" });
                 Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Net\.IPNetwork$", new string[] { "TryFormat" });
+				Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Windows\.Markup\.INameScopeDictionary$", null);
             }
 
             Const.SpecialNames.DirectMappablePrimitives.Clear();

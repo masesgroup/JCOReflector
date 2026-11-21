@@ -661,6 +661,9 @@ namespace MASES.JCOReflector.Engine
                                 // A parameter is generic if it is a raw generic parameter (T) OR an array of generic parameters (T[])
                                 bool isParamGeneric = EnableGenerics && (parameter.ParameterType.IsGenericParameter ||
                                                      (parameter.ParameterType.IsArray && parameter.ParameterType.GetElementType().IsGenericParameter));
+                                // same rule as the main signature, so the duplicated overload stays consistent with it
+                                bool isParamConstructedGeneric = !isParamGeneric && IsResolvableConstructedGeneric(parameter.ParameterType)
+                                                                 && !DeclaresSameNameAndArityInBaseClass(type, methodName, parameters.Length);
 
                                 if (isParamGeneric)
                                 {
@@ -681,6 +684,11 @@ namespace MASES.JCOReflector.Engine
                                 else
                                 {
                                     paramType = ConvertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+
+                                    if (isParamConstructedGeneric && isManaged && !isPrimitive && !isSpecial && !isArray)
+                                    {
+                                        paramType = ResolveGenericTypeName(parameter.ParameterType, imports);
+                                    }
                                 }
 
                                 bool isNativeArrayInParameter = isArray && isPrimitive;

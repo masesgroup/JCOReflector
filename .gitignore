@@ -12,6 +12,7 @@ QueryBaseline.txt
 *.userosscache
 *.sln.docstates
 *launchSettings.json
+*.patch
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs

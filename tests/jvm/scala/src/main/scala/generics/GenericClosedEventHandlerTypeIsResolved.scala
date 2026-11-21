@@ -64,7 +64,6 @@ object GenericClosedEventHandlerTypeIsResolved {
   @throws[Throwable]
   private[generics] def testGenericClosedEventHandlerTypeIsResolved(): Unit = {
     // the signature carries the closed type argument...
-    AppDomain.getClass // keep the import explicit for readers: AppDomain is a reflected class
     classOf[AppDomain].getMethod("addFirstChanceException", classOf[EventHandler_1[_ <: R]]).getGenericParameterTypes()(0) match {
       case parameterized: java.lang.reflect.ParameterizedType =>
         if (parameterized.getRawType ne classOf[EventHandler_1[_ <: R]])

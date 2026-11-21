@@ -145,10 +145,8 @@ public class NetType extends NetObject {
             // every interface the type implements, inherited ones included
             Object interfaces = TypeInvoke(runtimeType, "GetInterfaces");
             if (interfaces instanceof JCObject) {
-                JCObject array = (JCObject) interfaces;
-                int length = (int) array.Get("Length");
-                for (int i = 0; i < length; i++) {
-                    Object item = array.Invoke("GetValue", i);
+                // the bridge enumerates any enumerable CLR object, an array included
+                for (Object item : (JCObject) interfaces) {
                     if (item != null && IsConstructedFrom(to, item))
                         return true;
                 }

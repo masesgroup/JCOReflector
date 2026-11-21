@@ -40,10 +40,11 @@ import java.util.ArrayList;
 // Import section
 import system.windows.DependencyObject;
 import system.collections.objectmodel.ReadOnlyObservableCollection_1;
+import system.windows.controls.ValidationError;
 import system.windows.controls.ControlTemplate;
 import system.EventHandler_1;
+import system.windows.controls.ValidationErrorEventArgs;
 import system.windows.data.BindingExpressionBase;
-import system.windows.controls.ValidationError;
 
 
 /**
@@ -212,7 +213,7 @@ public class Validation extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Validation.GetErrors" target="_top">.NET documentation</a>
      */
-    public static ReadOnlyObservableCollection_1 GetErrors(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
+    public static ReadOnlyObservableCollection_1<ValidationError> GetErrors(DependencyObject element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetErrors = null;
@@ -333,7 +334,7 @@ public class Validation extends NetObject  {
      * Invokes the .NET member AddErrorHandler.
      *
      * @param element the argument of type {@code DependencyObject}
-     * @param handler the argument of type {@code EventHandler_1}
+     * @param handler the argument of type {@code EventHandler_1<ValidationErrorEventArgs>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -344,7 +345,7 @@ public class Validation extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Validation.AddErrorHandler" target="_top">.NET documentation</a>
      */
-    public static void AddErrorHandler(DependencyObject element, EventHandler_1 handler) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException {
+    public static void AddErrorHandler(DependencyObject element, EventHandler_1<ValidationErrorEventArgs> handler) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -415,7 +416,7 @@ public class Validation extends NetObject  {
      * Invokes the .NET member RemoveErrorHandler.
      *
      * @param element the argument of type {@code DependencyObject}
-     * @param handler the argument of type {@code EventHandler_1}
+     * @param handler the argument of type {@code EventHandler_1<ValidationErrorEventArgs>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -428,7 +429,7 @@ public class Validation extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Validation.RemoveErrorHandler" target="_top">.NET documentation</a>
      */
-    public static void RemoveErrorHandler(DependencyObject element, EventHandler_1 handler) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
+    public static void RemoveErrorHandler(DependencyObject element, EventHandler_1<ValidationErrorEventArgs> handler) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

@@ -159,7 +159,7 @@ public class TaskExtensions extends NetObject  {
     /**
      * Invokes the .NET member Unwrap.
      *
-     * @param task the argument of type {@code Task_1}
+     * @param task the argument of type {@code Task_1<Task>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -174,7 +174,7 @@ public class TaskExtensions extends NetObject  {
      * @throws system.AggregateException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskExtensions.Unwrap" target="_top">.NET documentation</a>
      */
-    public static Task Unwrap(Task_1 task) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.tasks.TaskSchedulerException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.ArgumentException, system.threading.ThreadAbortException, system.AggregateException {
+    public static Task Unwrap(Task_1<Task> task) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.tasks.TaskSchedulerException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.ArgumentException, system.threading.ThreadAbortException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUnwrap = null;

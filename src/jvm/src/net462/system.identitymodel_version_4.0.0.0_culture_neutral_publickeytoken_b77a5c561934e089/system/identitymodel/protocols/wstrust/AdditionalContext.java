@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.identitymodel.protocols.wstrust.ContextItem;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
 
@@ -171,7 +172,7 @@ public class AdditionalContext extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param items the argument of type {@code IEnumerable_1}
+     * @param items the argument of type {@code IEnumerable_1<ContextItem>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -186,7 +187,7 @@ public class AdditionalContext extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.AdditionalContext.-ctor" target="_top">.NET documentation</a>
      */
-    public AdditionalContext(IEnumerable_1 items) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+    public AdditionalContext(IEnumerable_1<ContextItem> items) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -211,7 +212,7 @@ public class AdditionalContext extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.AdditionalContext.Items" target="_top">.NET documentation</a>
      */
-    public IList_1 getItems() throws Throwable {
+    public IList_1<ContextItem> getItems() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectItems = null;

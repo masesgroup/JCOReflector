@@ -40,6 +40,12 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import microsoft.extensions.options.IConfigureOptions_1;
+import microsoft.extensions.options.IConfigureOptions_1Implementation;
+import microsoft.extensions.options.IPostConfigureOptions_1;
+import microsoft.extensions.options.IPostConfigureOptions_1Implementation;
+import microsoft.extensions.options.IValidateOptions_1;
+import microsoft.extensions.options.IValidateOptions_1Implementation;
 
 
 /**
@@ -156,9 +162,9 @@ public class OptionsFactory_1<TOptions extends IJCOBridgeReflected> extends NetO
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param setups the argument of type {@code IEnumerable_1}
-     * @param postConfigures the argument of type {@code IEnumerable_1}
-     * @param validations the argument of type {@code IEnumerable_1}
+     * @param setups the argument of type {@code IEnumerable_1<IConfigureOptions_1<TOptions>>}
+     * @param postConfigures the argument of type {@code IEnumerable_1<IPostConfigureOptions_1<TOptions>>}
+     * @param validations the argument of type {@code IEnumerable_1<IValidateOptions_1<TOptions>>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -170,7 +176,7 @@ public class OptionsFactory_1<TOptions extends IJCOBridgeReflected> extends NetO
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.OptionsFactory-1.-ctor" target="_top">.NET documentation</a>
      */
-    public OptionsFactory_1(IEnumerable_1 setups, IEnumerable_1 postConfigures, IEnumerable_1 validations) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException {
+    public OptionsFactory_1(IEnumerable_1<IConfigureOptions_1<TOptions>> setups, IEnumerable_1<IPostConfigureOptions_1<TOptions>> postConfigures, IEnumerable_1<IValidateOptions_1<TOptions>> validations) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -185,8 +191,8 @@ public class OptionsFactory_1<TOptions extends IJCOBridgeReflected> extends NetO
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param setups the argument of type {@code IEnumerable_1}
-     * @param postConfigures the argument of type {@code IEnumerable_1}
+     * @param setups the argument of type {@code IEnumerable_1<IConfigureOptions_1<TOptions>>}
+     * @param postConfigures the argument of type {@code IEnumerable_1<IPostConfigureOptions_1<TOptions>>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -199,7 +205,7 @@ public class OptionsFactory_1<TOptions extends IJCOBridgeReflected> extends NetO
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.OptionsFactory-1.-ctor" target="_top">.NET documentation</a>
      */
-    public OptionsFactory_1(IEnumerable_1 setups, IEnumerable_1 postConfigures) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+    public OptionsFactory_1(IEnumerable_1<IConfigureOptions_1<TOptions>> setups, IEnumerable_1<IPostConfigureOptions_1<TOptions>> postConfigures) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.servicemodel.channels.CorrelationDataDescription;
 
 
 /**
@@ -156,7 +157,7 @@ public class ICorrelationDataSourceImplementation extends NetObject implements I
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.ICorrelationDataSource.DataSources" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getDataSources() throws Throwable {
+    public ICollection_1<CorrelationDataDescription> getDataSources() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDataSources = null;

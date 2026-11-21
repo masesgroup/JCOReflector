@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.reflection.CustomAttributeData;
 import system.runtime.serialization.StreamingContext;
 import system.Guid;
 import system.UInt32;
@@ -197,7 +198,7 @@ public class ParameterInfo extends NetObject  {
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.ParameterInfo.GetCustomAttributesData" target="_top">.NET documentation</a>
      */
-    public IList_1 GetCustomAttributesData() throws Throwable, system.NotImplementedException {
+    public IList_1<CustomAttributeData> GetCustomAttributesData() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetCustomAttributesData = null;
@@ -599,7 +600,7 @@ public class ParameterInfo extends NetObject  {
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.ParameterInfo.CustomAttributes" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getCustomAttributes() throws Throwable, system.NotImplementedException {
+    public IEnumerable_1<CustomAttributeData> getCustomAttributes() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCustomAttributes = null;

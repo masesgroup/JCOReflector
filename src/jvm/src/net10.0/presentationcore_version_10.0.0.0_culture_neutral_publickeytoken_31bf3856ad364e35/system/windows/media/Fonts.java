@@ -40,7 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.windows.media.FontFamily;
 import system.Uri;
+import system.windows.media.Typeface;
 
 
 /**
@@ -186,7 +188,7 @@ public class Fonts extends NetObject  {
      * @throws system.net.WebException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Fonts.GetFontFamilies" target="_top">.NET documentation</a>
      */
-    public static ICollection_1 GetFontFamilies(java.lang.String location) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.UriFormatException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.IOException, system.net.WebException {
+    public static ICollection_1<FontFamily> GetFontFamilies(java.lang.String location) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.UriFormatException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.IOException, system.net.WebException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetFontFamilies = null;
@@ -231,7 +233,7 @@ public class Fonts extends NetObject  {
      * @throws system.xml.XmlException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Fonts.GetFontFamilies" target="_top">.NET documentation</a>
      */
-    public static ICollection_1 GetFontFamilies(Uri baseUri, java.lang.String location) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.UriFormatException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.IOException, system.net.WebException, system.xml.XmlException {
+    public static ICollection_1<FontFamily> GetFontFamilies(Uri baseUri, java.lang.String location) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.UriFormatException, system.ArrayTypeMismatchException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.IOException, system.net.WebException, system.xml.XmlException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetFontFamilies = null;
@@ -275,7 +277,7 @@ public class Fonts extends NetObject  {
      * @throws system.net.WebException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Fonts.GetFontFamilies" target="_top">.NET documentation</a>
      */
-    public static ICollection_1 GetFontFamilies(Uri baseUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.UriFormatException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.IOException, system.net.WebException {
+    public static ICollection_1<FontFamily> GetFontFamilies(Uri baseUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.UriFormatException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.IOException, system.net.WebException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetFontFamilies = null;
@@ -319,7 +321,7 @@ public class Fonts extends NetObject  {
      * @throws system.net.WebException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Fonts.GetTypefaces" target="_top">.NET documentation</a>
      */
-    public static ICollection_1 GetTypefaces(java.lang.String location) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.UriFormatException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.IOException, system.net.WebException {
+    public static ICollection_1<Typeface> GetTypefaces(java.lang.String location) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.UriFormatException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.IOException, system.net.WebException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTypefaces = null;
@@ -362,7 +364,7 @@ public class Fonts extends NetObject  {
      * @throws system.net.WebException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Fonts.GetTypefaces" target="_top">.NET documentation</a>
      */
-    public static ICollection_1 GetTypefaces(Uri baseUri, java.lang.String location) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.UriFormatException, system.ObjectDisposedException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.IOException, system.net.WebException {
+    public static ICollection_1<Typeface> GetTypefaces(Uri baseUri, java.lang.String location) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.UriFormatException, system.ObjectDisposedException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.IOException, system.net.WebException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTypefaces = null;
@@ -406,7 +408,7 @@ public class Fonts extends NetObject  {
      * @throws system.net.WebException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Fonts.GetTypefaces" target="_top">.NET documentation</a>
      */
-    public static ICollection_1 GetTypefaces(Uri baseUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.UriFormatException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.IOException, system.net.WebException {
+    public static ICollection_1<Typeface> GetTypefaces(Uri baseUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.UriFormatException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.io.FileFormatException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.IOException, system.net.WebException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTypefaces = null;
@@ -432,7 +434,7 @@ public class Fonts extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Fonts.SystemFontFamilies" target="_top">.NET documentation</a>
      */
-    public static ICollection_1 getSystemFontFamilies() throws Throwable {
+    public static ICollection_1<FontFamily> getSystemFontFamilies() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSystemFontFamilies = null;
@@ -454,7 +456,7 @@ public class Fonts extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Fonts.SystemTypefaces" target="_top">.NET documentation</a>
      */
-    public static ICollection_1 getSystemTypefaces() throws Throwable {
+    public static ICollection_1<Typeface> getSystemTypefaces() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSystemTypefaces = null;

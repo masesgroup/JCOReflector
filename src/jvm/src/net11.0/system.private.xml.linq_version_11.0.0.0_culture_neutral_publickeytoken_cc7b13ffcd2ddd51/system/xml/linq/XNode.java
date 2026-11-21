@@ -42,6 +42,7 @@ import system.xml.linq.XObject;
 import system.xml.linq.XNode;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.xml.linq.XElement;
 import system.xml.linq.XName;
 import system.xml.linq.SaveOptions;
 import system.threading.tasks.Task;
@@ -315,7 +316,7 @@ public class XNode extends system.xml.linq.XObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XNode.Ancestors" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 Ancestors() throws Throwable {
+    public IEnumerable_1<XElement> Ancestors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAncestors = null;
@@ -338,7 +339,7 @@ public class XNode extends system.xml.linq.XObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XNode.Ancestors" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 Ancestors(XName name) throws Throwable {
+    public IEnumerable_1<XElement> Ancestors(XName name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAncestors = null;
@@ -360,7 +361,7 @@ public class XNode extends system.xml.linq.XObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XNode.ElementsAfterSelf" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 ElementsAfterSelf() throws Throwable {
+    public IEnumerable_1<XElement> ElementsAfterSelf() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectElementsAfterSelf = null;
@@ -383,7 +384,7 @@ public class XNode extends system.xml.linq.XObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XNode.ElementsAfterSelf" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 ElementsAfterSelf(XName name) throws Throwable {
+    public IEnumerable_1<XElement> ElementsAfterSelf(XName name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectElementsAfterSelf = null;
@@ -405,7 +406,7 @@ public class XNode extends system.xml.linq.XObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XNode.ElementsBeforeSelf" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 ElementsBeforeSelf() throws Throwable {
+    public IEnumerable_1<XElement> ElementsBeforeSelf() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectElementsBeforeSelf = null;
@@ -428,7 +429,7 @@ public class XNode extends system.xml.linq.XObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XNode.ElementsBeforeSelf" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 ElementsBeforeSelf(XName name) throws Throwable {
+    public IEnumerable_1<XElement> ElementsBeforeSelf(XName name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectElementsBeforeSelf = null;
@@ -450,7 +451,7 @@ public class XNode extends system.xml.linq.XObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XNode.NodesAfterSelf" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 NodesAfterSelf() throws Throwable {
+    public IEnumerable_1<XNode> NodesAfterSelf() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectNodesAfterSelf = null;
@@ -472,7 +473,7 @@ public class XNode extends system.xml.linq.XObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XNode.NodesBeforeSelf" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 NodesBeforeSelf() throws Throwable {
+    public IEnumerable_1<XNode> NodesBeforeSelf() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectNodesBeforeSelf = null;
@@ -564,7 +565,7 @@ public class XNode extends system.xml.linq.XObject  {
      * @throws system.diagnostics.UnreachableException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XNode.ReadFromAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 ReadFromAsync(XmlReader reader, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.OperationCanceledException, system.NotImplementedException, system.diagnostics.UnreachableException {
+    public static Task_1<XNode> ReadFromAsync(XmlReader reader, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.OperationCanceledException, system.NotImplementedException, system.diagnostics.UnreachableException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReadFromAsync = null;

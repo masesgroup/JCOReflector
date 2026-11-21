@@ -42,6 +42,8 @@ import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.collections.generic.IEnumerator_1;
+import system.collections.generic.IEnumerator_1Implementation;
 
 
 /**
@@ -173,7 +175,7 @@ public class Partitioner_1<TSource extends IJCOBridgeReflected> extends NetObjec
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.Partitioner-1.GetDynamicPartitions" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetDynamicPartitions() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
+    public IEnumerable_1<TSource> GetDynamicPartitions() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetDynamicPartitions = null;
@@ -196,7 +198,7 @@ public class Partitioner_1<TSource extends IJCOBridgeReflected> extends NetObjec
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.Partitioner-1.GetPartitions" target="_top">.NET documentation</a>
      */
-    public IList_1 GetPartitions(int partitionCount) throws Throwable {
+    public IList_1<IEnumerator_1<TSource>> GetPartitions(int partitionCount) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetPartitions = null;

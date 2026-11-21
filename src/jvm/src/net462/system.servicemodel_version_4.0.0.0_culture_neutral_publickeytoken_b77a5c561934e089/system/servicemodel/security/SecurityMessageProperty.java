@@ -43,7 +43,10 @@ import system.servicemodel.channels.IMessagePropertyImplementation;
 import system.servicemodel.security.SecurityMessageProperty;
 import system.servicemodel.channels.Message;
 import system.collections.objectmodel.Collection_1;
+import system.servicemodel.security.SupportingTokenSpecification;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.identitymodel.policy.IAuthorizationPolicy;
+import system.identitymodel.policy.IAuthorizationPolicyImplementation;
 import system.servicemodel.security.SecurityTokenSpecification;
 import system.servicemodel.ServiceSecurityContext;
 
@@ -342,7 +345,7 @@ public class SecurityMessageProperty extends NetObject implements AutoCloseable 
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityMessageProperty.IncomingSupportingTokens" target="_top">.NET documentation</a>
      */
-    public Collection_1 getIncomingSupportingTokens() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
+    public Collection_1<SupportingTokenSpecification> getIncomingSupportingTokens() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIncomingSupportingTokens = null;
@@ -364,7 +367,7 @@ public class SecurityMessageProperty extends NetObject implements AutoCloseable 
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityMessageProperty.OutgoingSupportingTokens" target="_top">.NET documentation</a>
      */
-    public Collection_1 getOutgoingSupportingTokens() throws Throwable {
+    public Collection_1<SupportingTokenSpecification> getOutgoingSupportingTokens() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOutgoingSupportingTokens = null;
@@ -386,7 +389,7 @@ public class SecurityMessageProperty extends NetObject implements AutoCloseable 
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityMessageProperty.ExternalAuthorizationPolicies" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getExternalAuthorizationPolicies() throws Throwable {
+    public ReadOnlyCollection_1<IAuthorizationPolicy> getExternalAuthorizationPolicies() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExternalAuthorizationPolicies = null;
@@ -408,7 +411,7 @@ public class SecurityMessageProperty extends NetObject implements AutoCloseable 
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecurityMessageProperty.ExternalAuthorizationPolicies" target="_top">.NET documentation</a>
      */
-    public void setExternalAuthorizationPolicies(ReadOnlyCollection_1 ExternalAuthorizationPolicies) throws Throwable {
+    public void setExternalAuthorizationPolicies(ReadOnlyCollection_1<IAuthorizationPolicy> ExternalAuthorizationPolicies) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

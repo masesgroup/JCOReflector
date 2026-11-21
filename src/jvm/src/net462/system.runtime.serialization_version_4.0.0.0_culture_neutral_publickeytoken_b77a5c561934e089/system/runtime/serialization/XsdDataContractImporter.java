@@ -42,8 +42,8 @@ import system.codedom.CodeCompileUnit;
 import system.xml.schema.XmlSchemaSet;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
-import system.xml.schema.XmlSchemaElement;
 import system.xml.XmlQualifiedName;
+import system.xml.schema.XmlSchemaElement;
 import system.codedom.CodeTypeReference;
 import system.runtime.serialization.ImportOptions;
 
@@ -235,7 +235,7 @@ public class XsdDataContractImporter extends NetObject  {
      * Invokes the .NET member CanImport.
      *
      * @param schemas the argument of type {@code XmlSchemaSet}
-     * @param typeNames the argument of type {@code ICollection_1}
+     * @param typeNames the argument of type {@code ICollection_1<XmlQualifiedName>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -256,7 +256,7 @@ public class XsdDataContractImporter extends NetObject  {
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.XsdDataContractImporter.CanImport" target="_top">.NET documentation</a>
      */
-    public boolean CanImport(XmlSchemaSet schemas, ICollection_1 typeNames) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.xml.schema.XmlSchemaException, system.RankException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
+    public boolean CanImport(XmlSchemaSet schemas, ICollection_1<XmlQualifiedName> typeNames) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.xml.schema.XmlSchemaException, system.RankException, system.xml.XmlException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCanImport = null;
@@ -447,7 +447,7 @@ public class XsdDataContractImporter extends NetObject  {
      * @throws system.runtime.serialization.InvalidDataContractException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.XsdDataContractImporter.GetKnownTypeReferences" target="_top">.NET documentation</a>
      */
-    public ICollection_1 GetKnownTypeReferences(XmlQualifiedName typeName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException {
+    public ICollection_1<CodeTypeReference> GetKnownTypeReferences(XmlQualifiedName typeName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetKnownTypeReferences = null;
@@ -539,7 +539,7 @@ public class XsdDataContractImporter extends NetObject  {
      * Invokes the .NET member Import.
      *
      * @param schemas the argument of type {@code XmlSchemaSet}
-     * @param typeNames the argument of type {@code ICollection_1}
+     * @param typeNames the argument of type {@code ICollection_1<XmlQualifiedName>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -559,7 +559,7 @@ public class XsdDataContractImporter extends NetObject  {
      * @throws system.xml.XmlException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.XsdDataContractImporter.Import" target="_top">.NET documentation</a>
      */
-    public void Import(XmlSchemaSet schemas, ICollection_1 typeNames) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.xml.schema.XmlSchemaException, system.RankException, system.xml.XmlException {
+    public void Import(XmlSchemaSet schemas, ICollection_1<XmlQualifiedName> typeNames) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.xml.schema.XmlSchemaException, system.RankException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

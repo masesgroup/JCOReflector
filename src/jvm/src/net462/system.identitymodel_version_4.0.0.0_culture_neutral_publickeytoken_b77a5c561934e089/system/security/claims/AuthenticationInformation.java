@@ -39,7 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.objectmodel.Collection_1;
+import system.identitymodel.tokens.AuthenticationContext;
 import system.Nullable_1;
+import system.DateTime;
 
 
 /**
@@ -181,7 +183,7 @@ public class AuthenticationInformation extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.AuthenticationInformation.AuthorizationContexts" target="_top">.NET documentation</a>
      */
-    public Collection_1 getAuthorizationContexts() throws Throwable {
+    public Collection_1<AuthenticationContext> getAuthorizationContexts() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAuthorizationContexts = null;
@@ -203,7 +205,7 @@ public class AuthenticationInformation extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.AuthenticationInformation.NotOnOrAfter" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getNotOnOrAfter() throws Throwable {
+    public Nullable_1<DateTime> getNotOnOrAfter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectNotOnOrAfter = null;
@@ -225,7 +227,7 @@ public class AuthenticationInformation extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.AuthenticationInformation.NotOnOrAfter" target="_top">.NET documentation</a>
      */
-    public void setNotOnOrAfter(Nullable_1 NotOnOrAfter) throws Throwable {
+    public void setNotOnOrAfter(Nullable_1<DateTime> NotOnOrAfter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

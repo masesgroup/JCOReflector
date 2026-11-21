@@ -45,6 +45,7 @@ import system.Nullable_1;
 import system.data.metadata.edm.EdmType;
 import system.data.metadata.edm.BuiltInTypeKind;
 import system.data.metadata.edm.ReadOnlyMetadataCollection_1;
+import system.data.metadata.edm.Facet;
 
 
 /**
@@ -561,7 +562,7 @@ public class TypeUsage extends system.data.metadata.edm.MetadataItem  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.TypeUsage.Facets" target="_top">.NET documentation</a>
      */
-    public ReadOnlyMetadataCollection_1 getFacets() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
+    public ReadOnlyMetadataCollection_1<Facet> getFacets() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFacets = null;

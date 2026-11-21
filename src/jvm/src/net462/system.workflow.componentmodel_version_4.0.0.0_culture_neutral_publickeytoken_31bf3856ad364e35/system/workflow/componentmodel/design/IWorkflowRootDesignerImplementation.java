@@ -48,6 +48,7 @@ import system.componentmodel.design.ViewTechnology;
 import system.componentmodel.IComponent;
 import system.componentmodel.IComponentImplementation;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.workflow.componentmodel.design.WorkflowDesignerMessageFilter;
 import system.componentmodel.design.DesignerVerbCollection;
 import system.workflow.componentmodel.design.CompositeActivityDesigner;
 
@@ -281,7 +282,7 @@ public class IWorkflowRootDesignerImplementation extends NetObject implements IW
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IWorkflowRootDesigner.MessageFilters" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getMessageFilters() throws Throwable {
+    public ReadOnlyCollection_1<WorkflowDesignerMessageFilter> getMessageFilters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectMessageFilters = null;

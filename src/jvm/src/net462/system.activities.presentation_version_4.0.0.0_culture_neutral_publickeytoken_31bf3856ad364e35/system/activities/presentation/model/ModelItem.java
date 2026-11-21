@@ -412,7 +412,7 @@ public class ModelItem extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelItem.Parents" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getParents() throws Throwable {
+    public IEnumerable_1<ModelItem> getParents() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectParents = null;
@@ -434,7 +434,7 @@ public class ModelItem extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelItem.Sources" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getSources() throws Throwable {
+    public IEnumerable_1<ModelProperty> getSources() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSources = null;

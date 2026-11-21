@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.ValueType;
 import system.collections.immutable.ImmutableArray_1;
+import system.reflection.metadata.TypeDefinitionHandle;
 import system.reflection.metadata.CustomAttributeHandleCollection;
 import system.reflection.metadata.DeclarativeSecurityAttributeHandleCollection;
 import system.reflection.metadata.EventDefinitionHandleCollection;
@@ -49,7 +50,6 @@ import system.reflection.metadata.InterfaceImplementationHandleCollection;
 import system.reflection.metadata.MethodDefinitionHandleCollection;
 import system.reflection.metadata.MethodImplementationHandleCollection;
 import system.reflection.metadata.PropertyDefinitionHandleCollection;
-import system.reflection.metadata.TypeDefinitionHandle;
 import system.reflection.metadata.TypeLayout;
 import system.reflection.metadata.EntityHandle;
 import system.reflection.metadata.NamespaceDefinitionHandle;
@@ -187,7 +187,7 @@ public class TypeDefinition extends system.ValueType  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.TypeDefinition.GetNestedTypes" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 GetNestedTypes() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.BadImageFormatException, system.ArgumentNullException, system.InvalidOperationException {
+    public ImmutableArray_1<TypeDefinitionHandle> GetNestedTypes() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.BadImageFormatException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetNestedTypes = null;

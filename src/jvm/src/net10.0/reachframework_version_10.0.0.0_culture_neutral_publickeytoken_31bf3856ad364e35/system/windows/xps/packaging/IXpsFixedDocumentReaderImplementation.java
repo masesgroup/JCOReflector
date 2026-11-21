@@ -308,7 +308,7 @@ public class IXpsFixedDocumentReaderImplementation extends NetObject implements 
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedDocumentReader.SignatureDefinitions" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getSignatureDefinitions() throws Throwable {
+    public ICollection_1<XpsSignatureDefinition> getSignatureDefinitions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSignatureDefinitions = null;
@@ -330,7 +330,7 @@ public class IXpsFixedDocumentReaderImplementation extends NetObject implements 
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedDocumentReader.FixedPages" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getFixedPages() throws Throwable {
+    public ReadOnlyCollection_1<IXpsFixedPageReader> getFixedPages() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFixedPages = null;

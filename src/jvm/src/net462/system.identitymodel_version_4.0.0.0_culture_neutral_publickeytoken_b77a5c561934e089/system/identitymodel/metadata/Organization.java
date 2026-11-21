@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.identitymodel.metadata.LocalizedEntryCollection_1;
+import system.identitymodel.metadata.LocalizedName;
+import system.identitymodel.metadata.LocalizedUri;
 
 
 /**
@@ -180,9 +182,9 @@ public class Organization extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param names the argument of type {@code LocalizedEntryCollection_1}
-     * @param displayNames the argument of type {@code LocalizedEntryCollection_1}
-     * @param urls the argument of type {@code LocalizedEntryCollection_1}
+     * @param names the argument of type {@code LocalizedEntryCollection_1<LocalizedName>}
+     * @param displayNames the argument of type {@code LocalizedEntryCollection_1<LocalizedName>}
+     * @param urls the argument of type {@code LocalizedEntryCollection_1<LocalizedUri>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -197,7 +199,7 @@ public class Organization extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.Organization.-ctor" target="_top">.NET documentation</a>
      */
-    public Organization(LocalizedEntryCollection_1 names, LocalizedEntryCollection_1 displayNames, LocalizedEntryCollection_1 urls) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
+    public Organization(LocalizedEntryCollection_1<LocalizedName> names, LocalizedEntryCollection_1<LocalizedName> displayNames, LocalizedEntryCollection_1<LocalizedUri> urls) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -222,7 +224,7 @@ public class Organization extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.Organization.DisplayNames" target="_top">.NET documentation</a>
      */
-    public LocalizedEntryCollection_1 getDisplayNames() throws Throwable {
+    public LocalizedEntryCollection_1<LocalizedName> getDisplayNames() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDisplayNames = null;
@@ -244,7 +246,7 @@ public class Organization extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.Organization.Names" target="_top">.NET documentation</a>
      */
-    public LocalizedEntryCollection_1 getNames() throws Throwable {
+    public LocalizedEntryCollection_1<LocalizedName> getNames() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectNames = null;
@@ -266,7 +268,7 @@ public class Organization extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.Organization.Urls" target="_top">.NET documentation</a>
      */
-    public LocalizedEntryCollection_1 getUrls() throws Throwable {
+    public LocalizedEntryCollection_1<LocalizedUri> getUrls() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUrls = null;

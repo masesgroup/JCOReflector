@@ -39,6 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.Func_1;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.net.http.DelegatingHandler;
 import system.net.http.HttpMessageHandler;
 
 
@@ -156,7 +159,7 @@ public class HttpMessageHandlerFactory extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param handlers the argument of type {@code Func_1}
+     * @param handlers the argument of type {@code Func_1<IEnumerable_1<DelegatingHandler>>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -167,7 +170,7 @@ public class HttpMessageHandlerFactory extends NetObject  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.HttpMessageHandlerFactory.-ctor" target="_top">.NET documentation</a>
      */
-    public HttpMessageHandlerFactory(Func_1 handlers) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public HttpMessageHandlerFactory(Func_1<IEnumerable_1<DelegatingHandler>> handlers) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

@@ -164,7 +164,7 @@ public class SamlSecurityTokenAuthenticator extends system.identitymodel.selecto
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param supportingAuthenticators the argument of type {@code IList_1}
+     * @param supportingAuthenticators the argument of type {@code IList_1<SecurityTokenAuthenticator>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -180,7 +180,7 @@ public class SamlSecurityTokenAuthenticator extends system.identitymodel.selecto
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.-ctor" target="_top">.NET documentation</a>
      */
-    public SamlSecurityTokenAuthenticator(IList_1 supportingAuthenticators) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+    public SamlSecurityTokenAuthenticator(IList_1<SecurityTokenAuthenticator> supportingAuthenticators) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -193,7 +193,7 @@ public class SamlSecurityTokenAuthenticator extends system.identitymodel.selecto
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param supportingAuthenticators the argument of type {@code IList_1}
+     * @param supportingAuthenticators the argument of type {@code IList_1<SecurityTokenAuthenticator>}
      * @param maxClockSkew the argument of type {@code TimeSpan}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
@@ -209,7 +209,7 @@ public class SamlSecurityTokenAuthenticator extends system.identitymodel.selecto
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.-ctor" target="_top">.NET documentation</a>
      */
-    public SamlSecurityTokenAuthenticator(IList_1 supportingAuthenticators, TimeSpan maxClockSkew) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+    public SamlSecurityTokenAuthenticator(IList_1<SecurityTokenAuthenticator> supportingAuthenticators, TimeSpan maxClockSkew) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

@@ -3462,7 +3462,7 @@ public class Vector3 extends system.ValueType  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Vector3.SinCos" target="_top">.NET documentation</a>
      */
-    public static ValueTuple_2 SinCos(Vector3 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static ValueTuple_2<Vector3, Vector3> SinCos(Vector3 vector) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSinCos = null;

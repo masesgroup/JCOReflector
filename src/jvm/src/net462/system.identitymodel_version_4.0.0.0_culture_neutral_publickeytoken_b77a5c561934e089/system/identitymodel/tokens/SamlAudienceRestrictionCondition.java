@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.identitymodel.tokens.SamlCondition;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.Uri;
 import system.xml.XmlDictionaryReader;
 import system.identitymodel.tokens.SamlSerializer;
 import system.identitymodel.selectors.SecurityTokenSerializer;
@@ -177,7 +178,7 @@ public class SamlAudienceRestrictionCondition extends system.identitymodel.token
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param audiences the argument of type {@code IEnumerable_1}
+     * @param audiences the argument of type {@code IEnumerable_1<Uri>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -193,7 +194,7 @@ public class SamlAudienceRestrictionCondition extends system.identitymodel.token
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlAudienceRestrictionCondition.-ctor" target="_top">.NET documentation</a>
      */
-    public SamlAudienceRestrictionCondition(IEnumerable_1 audiences) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+    public SamlAudienceRestrictionCondition(IEnumerable_1<Uri> audiences) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -306,7 +307,7 @@ public class SamlAudienceRestrictionCondition extends system.identitymodel.token
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlAudienceRestrictionCondition.Audiences" target="_top">.NET documentation</a>
      */
-    public IList_1 getAudiences() throws Throwable {
+    public IList_1<Uri> getAudiences() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAudiences = null;

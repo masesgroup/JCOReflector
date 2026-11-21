@@ -252,7 +252,7 @@ public class ArraySegment_1<T extends IJCOBridgeReflected> extends system.ValueT
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ArraySegment-1.Slice" target="_top">.NET documentation</a>
      */
-    public ArraySegment_1 Slice(int index, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public ArraySegment_1<T> Slice(int index, int count) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSlice = null;
@@ -279,7 +279,7 @@ public class ArraySegment_1<T extends IJCOBridgeReflected> extends system.ValueT
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ArraySegment-1.Slice" target="_top">.NET documentation</a>
      */
-    public ArraySegment_1 Slice(int index) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public ArraySegment_1<T> Slice(int index) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSlice = null;
@@ -331,7 +331,7 @@ public T[] ToArray() throws Throwable, system.ArgumentException, system.NotSuppo
     /**
      * Invokes the .NET member CopyTo.
      *
-     * @param destination the argument of type {@code ArraySegment_1}
+     * @param destination the argument of type {@code ArraySegment_1<T>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -339,7 +339,7 @@ public T[] ToArray() throws Throwable, system.ArgumentException, system.NotSuppo
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ArraySegment-1.CopyTo" target="_top">.NET documentation</a>
      */
-    public void CopyTo(ArraySegment_1 destination) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public void CopyTo(ArraySegment_1<T> destination) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

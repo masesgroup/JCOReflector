@@ -1121,7 +1121,7 @@ public class Activity extends NetObject implements AutoCloseable {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Activity.Events" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getEvents() throws Throwable {
+    public IEnumerable_1<ActivityEvent> getEvents() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEvents = null;
@@ -1143,7 +1143,7 @@ public class Activity extends NetObject implements AutoCloseable {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Activity.Links" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getLinks() throws Throwable {
+    public IEnumerable_1<ActivityLink> getLinks() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectLinks = null;
@@ -1641,15 +1641,15 @@ public class Activity extends NetObject implements AutoCloseable {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Activity.TraceIdGenerator" target="_top">.NET documentation</a>
      */
-    public static Func_1 getTraceIdGenerator() throws Throwable {
+    public static Func_1<ActivityTraceId> getTraceIdGenerator() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTraceIdGenerator = null;
         try {
             retObjectTraceIdGenerator = classType.Get("TraceIdGenerator");
-            return (Func_1)retObjectTraceIdGenerator;
+            return (Func_1<ActivityTraceId>)retObjectTraceIdGenerator;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_1", retObjectTraceIdGenerator != null ? retObjectTraceIdGenerator.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_1<ActivityTraceId>", retObjectTraceIdGenerator != null ? retObjectTraceIdGenerator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1662,7 +1662,7 @@ public class Activity extends NetObject implements AutoCloseable {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Activity.TraceIdGenerator" target="_top">.NET documentation</a>
      */
-    public static void setTraceIdGenerator(Func_1 TraceIdGenerator) throws Throwable {
+    public static void setTraceIdGenerator(Func_1<ActivityTraceId> TraceIdGenerator) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

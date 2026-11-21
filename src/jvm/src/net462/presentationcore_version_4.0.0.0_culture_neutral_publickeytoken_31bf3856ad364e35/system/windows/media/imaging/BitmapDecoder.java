@@ -47,11 +47,16 @@ import system.Uri;
 import system.net.cache.RequestCachePolicy;
 import system.windows.media.imaging.InPlaceBitmapMetadataWriter;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.windows.media.ColorContext;
+import system.windows.media.imaging.BitmapFrame;
 import system.windows.media.imaging.BitmapCodecInfo;
 import system.windows.media.imaging.BitmapMetadata;
 import system.windows.media.imaging.BitmapPalette;
 import system.windows.media.imaging.BitmapSource;
 import system.EventHandler;
+import system.EventHandler_1;
+import system.windows.media.ExceptionEventArgs;
+import system.windows.media.imaging.DownloadProgressEventArgs;
 
 
 /**
@@ -414,7 +419,7 @@ public class BitmapDecoder extends system.windows.threading.DispatcherObject  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.BitmapDecoder.ColorContexts" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getColorContexts() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+    public ReadOnlyCollection_1<ColorContext> getColorContexts() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectColorContexts = null;
@@ -451,7 +456,7 @@ public class BitmapDecoder extends system.windows.threading.DispatcherObject  {
      * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.BitmapDecoder.Frames" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getFrames() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.componentmodel.Win32Exception, system.security.SecurityException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException {
+    public ReadOnlyCollection_1<BitmapFrame> getFrames() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.componentmodel.Win32Exception, system.security.SecurityException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFrames = null;
@@ -684,6 +689,74 @@ public class BitmapDecoder extends system.windows.threading.DispatcherObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("DownloadCompleted", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addDownloadFailed.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ExceptionEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addDownloadFailed(EventHandler_1<ExceptionEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("DownloadFailed", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeDownloadFailed.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ExceptionEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeDownloadFailed(EventHandler_1<ExceptionEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("DownloadFailed", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addDownloadProgress.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DownloadProgressEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addDownloadProgress(EventHandler_1<DownloadProgressEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("DownloadProgress", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeDownloadProgress.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DownloadProgressEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeDownloadProgress(EventHandler_1<DownloadProgressEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("DownloadProgress", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

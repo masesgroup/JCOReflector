@@ -43,6 +43,7 @@ import system.identitymodel.tokens.SamlSubject;
 import system.identitymodel.tokens.SamlAccessDecision;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.identitymodel.tokens.SamlAction;
 import system.identitymodel.tokens.SamlEvidence;
 import system.xml.XmlDictionaryReader;
 import system.identitymodel.tokens.SamlSerializer;
@@ -183,7 +184,7 @@ public class SamlAuthorizationDecisionStatement extends system.identitymodel.tok
      * @param samlSubject the argument of type {@code SamlSubject}
      * @param resource the argument of type {@code java.lang.String}
      * @param accessDecision the argument of type {@code SamlAccessDecision}
-     * @param samlActions the argument of type {@code IEnumerable_1}
+     * @param samlActions the argument of type {@code IEnumerable_1<SamlAction>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -198,7 +199,7 @@ public class SamlAuthorizationDecisionStatement extends system.identitymodel.tok
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlAuthorizationDecisionStatement.-ctor" target="_top">.NET documentation</a>
      */
-    public SamlAuthorizationDecisionStatement(SamlSubject samlSubject, java.lang.String resource, SamlAccessDecision accessDecision, IEnumerable_1 samlActions) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+    public SamlAuthorizationDecisionStatement(SamlSubject samlSubject, java.lang.String resource, SamlAccessDecision accessDecision, IEnumerable_1<SamlAction> samlActions) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -214,7 +215,7 @@ public class SamlAuthorizationDecisionStatement extends system.identitymodel.tok
      * @param samlSubject the argument of type {@code SamlSubject}
      * @param resource the argument of type {@code java.lang.String}
      * @param accessDecision the argument of type {@code SamlAccessDecision}
-     * @param samlActions the argument of type {@code IEnumerable_1}
+     * @param samlActions the argument of type {@code IEnumerable_1<SamlAction>}
      * @param samlEvidence the argument of type {@code SamlEvidence}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
@@ -234,7 +235,7 @@ public class SamlAuthorizationDecisionStatement extends system.identitymodel.tok
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlAuthorizationDecisionStatement.-ctor" target="_top">.NET documentation</a>
      */
-    public SamlAuthorizationDecisionStatement(SamlSubject samlSubject, java.lang.String resource, SamlAccessDecision accessDecision, IEnumerable_1 samlActions, SamlEvidence samlEvidence) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException {
+    public SamlAuthorizationDecisionStatement(SamlSubject samlSubject, java.lang.String resource, SamlAccessDecision accessDecision, IEnumerable_1<SamlAction> samlActions, SamlEvidence samlEvidence) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -351,7 +352,7 @@ public class SamlAuthorizationDecisionStatement extends system.identitymodel.tok
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlAuthorizationDecisionStatement.SamlActions" target="_top">.NET documentation</a>
      */
-    public IList_1 getSamlActions() throws Throwable {
+    public IList_1<SamlAction> getSamlActions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSamlActions = null;

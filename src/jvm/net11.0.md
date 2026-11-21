@@ -318,25 +318,25 @@ Parsed assemblies are:
 >   * Delegates = 419
 >   * Classes
 >     * Constructors = 7370
->     * Methods = 41197
+>     * Methods = 41200
 >     * Properties = 20206
 >     * Events = 1839
-> * Implemented Types = 8118
+> * Implemented Types = 8119
 >   * Enumerators = 25
 >   * Delegates = 415
 >   * Enums = 1306
 >     * Flags = 279
->   * Interfaces = 483
+>   * Interfaces = 484
 >   * Classes = 5889
 >     * Exceptions = 242
 >     * Constructors = 6539
->     * Methods = 29779
+>     * Methods = 29782
 >       * Duplicated Methods = 1194
 >     * Properties = 19541
->     * Events = 1729
-> * Discarded Types = 20725
+>     * Events = 1832
+> * Discarded Types = 20724
 >   * Non Public = 20606
->   * Generic = 41
+>   * Generic = 40
 >   * Internals = 26
 
 [//]: # "EndReport net11.0"

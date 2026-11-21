@@ -281,7 +281,7 @@ public class ValidateOptionsResultBuilder extends NetObject  {
     /**
      * Invokes the .NET member AddResults.
      *
-     * @param results the argument of type {@code IEnumerable_1}
+     * @param results the argument of type {@code IEnumerable_1<ValidationResult>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -294,7 +294,7 @@ public class ValidateOptionsResultBuilder extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.ValidateOptionsResultBuilder.AddResults" target="_top">.NET documentation</a>
      */
-    public void AddResults(IEnumerable_1 results) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public void AddResults(IEnumerable_1<ValidationResult> results) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

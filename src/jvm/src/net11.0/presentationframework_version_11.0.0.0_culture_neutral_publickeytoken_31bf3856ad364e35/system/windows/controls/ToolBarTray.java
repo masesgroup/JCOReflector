@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.windows.FrameworkElement;
 import system.windows.DependencyObject;
 import system.collections.objectmodel.Collection_1;
+import system.windows.controls.ToolBar;
 import system.windows.controls.Orientation;
 import system.windows.media.Brush;
 
@@ -334,7 +335,7 @@ public class ToolBarTray extends system.windows.FrameworkElement  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ToolBarTray.ToolBars" target="_top">.NET documentation</a>
      */
-    public Collection_1 getToolBars() throws Throwable {
+    public Collection_1<ToolBar> getToolBars() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectToolBars = null;

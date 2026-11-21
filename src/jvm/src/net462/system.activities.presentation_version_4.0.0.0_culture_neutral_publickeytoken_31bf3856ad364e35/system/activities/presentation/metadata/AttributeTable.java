@@ -356,7 +356,7 @@ public class AttributeTable extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Metadata.AttributeTable.AttributedTypes" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getAttributedTypes() throws Throwable, system.ArgumentNullException {
+    public IEnumerable_1<NetType> getAttributedTypes() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAttributedTypes = null;

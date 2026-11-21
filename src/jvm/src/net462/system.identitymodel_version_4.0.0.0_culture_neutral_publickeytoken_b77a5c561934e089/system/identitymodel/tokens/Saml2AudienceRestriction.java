@@ -171,7 +171,7 @@ public class Saml2AudienceRestriction extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param audiences the argument of type {@code IEnumerable_1}
+     * @param audiences the argument of type {@code IEnumerable_1<Uri>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -187,7 +187,7 @@ public class Saml2AudienceRestriction extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2AudienceRestriction.-ctor" target="_top">.NET documentation</a>
      */
-    public Saml2AudienceRestriction(IEnumerable_1 audiences) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+    public Saml2AudienceRestriction(IEnumerable_1<Uri> audiences) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -242,7 +242,7 @@ public class Saml2AudienceRestriction extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2AudienceRestriction.Audiences" target="_top">.NET documentation</a>
      */
-    public Collection_1 getAudiences() throws Throwable {
+    public Collection_1<Uri> getAudiences() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAudiences = null;

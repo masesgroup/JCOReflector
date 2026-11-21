@@ -441,14 +441,14 @@ public class CompositionContainer extends system.componentmodel.composition.host
     /**
      * Invokes the .NET member ReleaseExports.
      *
-     * @param exports the argument of type {@code IEnumerable_1}
+     * @param exports the argument of type {@code IEnumerable_1<Export>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.resources.MissingManifestResourceException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.CompositionContainer.ReleaseExports" target="_top">.NET documentation</a>
      */
-    public void ReleaseExports(IEnumerable_1 exports) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException {
+    public void ReleaseExports(IEnumerable_1<Export> exports) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -517,7 +517,7 @@ public class CompositionContainer extends system.componentmodel.composition.host
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.CompositionContainer.Providers" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getProviders() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+    public ReadOnlyCollection_1<ExportProvider> getProviders() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectProviders = null;

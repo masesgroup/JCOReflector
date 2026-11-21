@@ -404,7 +404,7 @@ public class FrozenDictionary_2<TKey extends IJCOBridgeReflected, TValue extends
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Frozen.FrozenDictionary-2.Comparer" target="_top">.NET documentation</a>
      */
-    public IEqualityComparer_1 getComparer() throws Throwable {
+    public IEqualityComparer_1<TKey> getComparer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectComparer = null;
@@ -426,7 +426,7 @@ public class FrozenDictionary_2<TKey extends IJCOBridgeReflected, TValue extends
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Frozen.FrozenDictionary-2.Keys" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 getKeys() throws Throwable {
+    public ImmutableArray_1<TKey> getKeys() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectKeys = null;
@@ -448,7 +448,7 @@ public class FrozenDictionary_2<TKey extends IJCOBridgeReflected, TValue extends
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Frozen.FrozenDictionary-2.Values" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 getValues() throws Throwable {
+    public ImmutableArray_1<TValue> getValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValues = null;

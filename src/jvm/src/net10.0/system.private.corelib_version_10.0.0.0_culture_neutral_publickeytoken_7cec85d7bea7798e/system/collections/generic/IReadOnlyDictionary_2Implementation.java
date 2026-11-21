@@ -251,7 +251,7 @@ public class IReadOnlyDictionary_2Implementation<TKey extends IJCOBridgeReflecte
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IReadOnlyDictionary-2.Keys" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getKeys() throws Throwable {
+    public IEnumerable_1<TKey> getKeys() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectKeys = null;
@@ -273,7 +273,7 @@ public class IReadOnlyDictionary_2Implementation<TKey extends IJCOBridgeReflecte
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IReadOnlyDictionary-2.Values" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getValues() throws Throwable {
+    public IEnumerable_1<TValue> getValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValues = null;

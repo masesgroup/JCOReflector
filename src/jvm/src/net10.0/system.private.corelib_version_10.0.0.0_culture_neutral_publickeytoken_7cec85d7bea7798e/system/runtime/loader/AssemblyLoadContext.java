@@ -44,6 +44,8 @@ import system.io.Stream;
 import system.runtime.loader.AssemblyLoadContext;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.Action_1;
+import system.Func_3;
 
 
 /**
@@ -515,7 +517,7 @@ public class AssemblyLoadContext extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Loader.AssemblyLoadContext.Assemblies" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getAssemblies() throws Throwable {
+    public IEnumerable_1<Assembly> getAssemblies() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAssemblies = null;
@@ -537,7 +539,7 @@ public class AssemblyLoadContext extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Loader.AssemblyLoadContext.All" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 getAll() throws Throwable {
+    public static IEnumerable_1<AssemblyLoadContext> getAll() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAll = null;
@@ -622,6 +624,74 @@ public class AssemblyLoadContext extends NetObject  {
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addUnloading.
+     *
+     * @param handler the argument of type {@code Action_1<AssemblyLoadContext>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addUnloading(Action_1<AssemblyLoadContext> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("Unloading", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeUnloading.
+     *
+     * @param handler the argument of type {@code Action_1<AssemblyLoadContext>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeUnloading(Action_1<AssemblyLoadContext> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("Unloading", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addResolving.
+     *
+     * @param handler the argument of type {@code Func_3<AssemblyLoadContext, AssemblyName, Assembly>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addResolving(Func_3<AssemblyLoadContext, AssemblyName, Assembly> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("Resolving", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeResolving.
+     *
+     * @param handler the argument of type {@code Func_3<AssemblyLoadContext, AssemblyName, Assembly>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeResolving(Func_3<AssemblyLoadContext, AssemblyName, Assembly> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("Resolving", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

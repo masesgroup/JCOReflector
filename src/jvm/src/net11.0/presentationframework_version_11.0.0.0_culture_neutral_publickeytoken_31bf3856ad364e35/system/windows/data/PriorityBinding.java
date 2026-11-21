@@ -241,7 +241,7 @@ public class PriorityBinding extends system.windows.data.BindingBase  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.PriorityBinding.Bindings" target="_top">.NET documentation</a>
      */
-    public Collection_1 getBindings() throws Throwable {
+    public Collection_1<BindingBase> getBindings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectBindings = null;

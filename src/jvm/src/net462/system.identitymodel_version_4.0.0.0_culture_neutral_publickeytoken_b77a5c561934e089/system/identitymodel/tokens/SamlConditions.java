@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.DateTime;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.identitymodel.tokens.SamlCondition;
 import system.xml.XmlDictionaryReader;
 import system.identitymodel.tokens.SamlSerializer;
 import system.identitymodel.selectors.SecurityTokenSerializer;
@@ -208,7 +209,7 @@ public class SamlConditions extends NetObject  {
      *
      * @param notBefore the argument of type {@code DateTime}
      * @param notOnOrAfter the argument of type {@code DateTime}
-     * @param conditions the argument of type {@code IEnumerable_1}
+     * @param conditions the argument of type {@code IEnumerable_1<SamlCondition>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -223,7 +224,7 @@ public class SamlConditions extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlConditions.-ctor" target="_top">.NET documentation</a>
      */
-    public SamlConditions(DateTime notBefore, DateTime notOnOrAfter, IEnumerable_1 conditions) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException, system.resources.MissingManifestResourceException, system.OutOfMemoryException {
+    public SamlConditions(DateTime notBefore, DateTime notOnOrAfter, IEnumerable_1<SamlCondition> conditions) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException, system.resources.MissingManifestResourceException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -348,7 +349,7 @@ public class SamlConditions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlConditions.Conditions" target="_top">.NET documentation</a>
      */
-    public IList_1 getConditions() throws Throwable {
+    public IList_1<SamlCondition> getConditions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectConditions = null;

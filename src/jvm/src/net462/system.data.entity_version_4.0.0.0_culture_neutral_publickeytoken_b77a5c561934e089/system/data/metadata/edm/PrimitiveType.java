@@ -40,9 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.data.metadata.edm.SimpleType;
 import system.collections.objectmodel.ReadOnlyCollection_1;
-import system.data.metadata.edm.EdmType;
 import system.data.metadata.edm.PrimitiveType;
+import system.data.metadata.edm.EdmType;
 import system.data.metadata.edm.PrimitiveTypeKind;
+import system.data.metadata.edm.FacetDescription;
 import system.data.metadata.edm.BuiltInTypeKind;
 
 
@@ -169,7 +170,7 @@ public class PrimitiveType extends system.data.metadata.edm.SimpleType  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.PrimitiveType.GetEdmPrimitiveTypes" target="_top">.NET documentation</a>
      */
-    public static ReadOnlyCollection_1 GetEdmPrimitiveTypes() throws Throwable {
+    public static ReadOnlyCollection_1<PrimitiveType> GetEdmPrimitiveTypes() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetEdmPrimitiveTypes = null;
@@ -248,7 +249,7 @@ public class PrimitiveType extends system.data.metadata.edm.SimpleType  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.PrimitiveType.FacetDescriptions" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getFacetDescriptions() throws Throwable {
+    public ReadOnlyCollection_1<FacetDescription> getFacetDescriptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFacetDescriptions = null;

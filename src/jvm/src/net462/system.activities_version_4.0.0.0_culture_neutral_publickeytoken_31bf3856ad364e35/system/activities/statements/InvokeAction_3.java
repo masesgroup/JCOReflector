@@ -184,7 +184,7 @@ public class InvokeAction_3<T1 extends IJCOBridgeReflected, T2 extends IJCOBridg
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.InvokeAction-3.Action" target="_top">.NET documentation</a>
      */
-    public ActivityAction_3 getAction() throws Throwable {
+    public ActivityAction_3<T1, T2, T3> getAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAction = null;
@@ -206,7 +206,7 @@ public class InvokeAction_3<T1 extends IJCOBridgeReflected, T2 extends IJCOBridg
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.InvokeAction-3.Action" target="_top">.NET documentation</a>
      */
-    public void setAction(ActivityAction_3 Action) throws Throwable {
+    public void setAction(ActivityAction_3<T1, T2, T3> Action) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -223,7 +223,7 @@ public class InvokeAction_3<T1 extends IJCOBridgeReflected, T2 extends IJCOBridg
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.InvokeAction-3.Argument1" target="_top">.NET documentation</a>
      */
-    public InArgument_1 getArgument1() throws Throwable {
+    public InArgument_1<T1> getArgument1() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArgument1 = null;
@@ -245,7 +245,7 @@ public class InvokeAction_3<T1 extends IJCOBridgeReflected, T2 extends IJCOBridg
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.InvokeAction-3.Argument1" target="_top">.NET documentation</a>
      */
-    public void setArgument1(InArgument_1 Argument1) throws Throwable {
+    public void setArgument1(InArgument_1<T1> Argument1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -262,7 +262,7 @@ public class InvokeAction_3<T1 extends IJCOBridgeReflected, T2 extends IJCOBridg
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.InvokeAction-3.Argument2" target="_top">.NET documentation</a>
      */
-    public InArgument_1 getArgument2() throws Throwable {
+    public InArgument_1<T2> getArgument2() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArgument2 = null;
@@ -284,7 +284,7 @@ public class InvokeAction_3<T1 extends IJCOBridgeReflected, T2 extends IJCOBridg
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.InvokeAction-3.Argument2" target="_top">.NET documentation</a>
      */
-    public void setArgument2(InArgument_1 Argument2) throws Throwable {
+    public void setArgument2(InArgument_1<T2> Argument2) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -301,7 +301,7 @@ public class InvokeAction_3<T1 extends IJCOBridgeReflected, T2 extends IJCOBridg
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.InvokeAction-3.Argument3" target="_top">.NET documentation</a>
      */
-    public InArgument_1 getArgument3() throws Throwable {
+    public InArgument_1<T3> getArgument3() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArgument3 = null;
@@ -323,7 +323,7 @@ public class InvokeAction_3<T1 extends IJCOBridgeReflected, T2 extends IJCOBridg
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.InvokeAction-3.Argument3" target="_top">.NET documentation</a>
      */
-    public void setArgument3(InArgument_1 Argument3) throws Throwable {
+    public void setArgument3(InArgument_1<T3> Argument3) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

@@ -121,7 +121,7 @@ public interface IExtensibleObject_1<T extends IJCOBridgeReflected> extends IJCO
     
     // Properties section
     
-    public IExtensionCollection_1 getExtensions() throws Throwable;
+    public IExtensionCollection_1<T> getExtensions() throws Throwable;
 
 
 

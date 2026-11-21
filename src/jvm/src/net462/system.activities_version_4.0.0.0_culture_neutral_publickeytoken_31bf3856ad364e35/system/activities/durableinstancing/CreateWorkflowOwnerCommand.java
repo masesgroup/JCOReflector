@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.runtime.durableinstancing.InstancePersistenceCommand;
 import system.collections.generic.IDictionary_2;
 import system.collections.generic.IDictionary_2Implementation;
+import system.xml.linq.XName;
+import system.runtime.durableinstancing.InstanceValue;
 
 
 /**
@@ -192,7 +194,7 @@ public class CreateWorkflowOwnerCommand extends system.runtime.durableinstancing
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.CreateWorkflowOwnerCommand.InstanceOwnerMetadata" target="_top">.NET documentation</a>
      */
-    public IDictionary_2 getInstanceOwnerMetadata() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public IDictionary_2<XName, InstanceValue> getInstanceOwnerMetadata() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectInstanceOwnerMetadata = null;

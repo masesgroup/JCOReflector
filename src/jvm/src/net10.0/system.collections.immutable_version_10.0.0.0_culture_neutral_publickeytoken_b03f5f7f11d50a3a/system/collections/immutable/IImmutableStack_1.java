@@ -119,11 +119,11 @@ public interface IImmutableStack_1<T extends IJCOBridgeReflected> extends IJCOBr
 
     // Methods section
     
-    public IImmutableStack_1 Clear() throws Throwable;
+    public IImmutableStack_1<T> Clear() throws Throwable;
 
-    public IImmutableStack_1 Pop() throws Throwable;
+    public IImmutableStack_1<T> Pop() throws Throwable;
 
-    public IImmutableStack_1 Push(T value) throws Throwable;
+    public IImmutableStack_1<T> Push(T value) throws Throwable;
 
     public T Peek() throws Throwable;
 

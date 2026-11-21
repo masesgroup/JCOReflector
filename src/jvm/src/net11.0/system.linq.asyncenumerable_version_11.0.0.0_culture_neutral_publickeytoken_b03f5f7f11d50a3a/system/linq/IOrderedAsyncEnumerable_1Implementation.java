@@ -162,7 +162,7 @@ public class IOrderedAsyncEnumerable_1Implementation<TElement extends IJCOBridge
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.IOrderedAsyncEnumerable-1.GetAsyncEnumerator" target="_top">.NET documentation</a>
      */
-    public IAsyncEnumerator_1 GetAsyncEnumerator(CancellationToken cancellationToken) throws Throwable {
+    public IAsyncEnumerator_1<TElement> GetAsyncEnumerator(CancellationToken cancellationToken) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetAsyncEnumerator = null;
@@ -188,7 +188,7 @@ public class IOrderedAsyncEnumerable_1Implementation<TElement extends IJCOBridge
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.IOrderedAsyncEnumerable-1.CreateOrderedAsyncEnumerable" target="_top">.NET documentation</a>
      */
-    public <TKey extends IJCOBridgeReflected> IOrderedAsyncEnumerable_1 CreateOrderedAsyncEnumerable(Func_2 keySelector, IComparer_1 comparer, boolean descending) throws Throwable {
+    public <TKey extends IJCOBridgeReflected> IOrderedAsyncEnumerable_1<TElement> CreateOrderedAsyncEnumerable(Func_2 keySelector, IComparer_1 comparer, boolean descending) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCreateOrderedAsyncEnumerable = null;
@@ -214,7 +214,7 @@ public class IOrderedAsyncEnumerable_1Implementation<TElement extends IJCOBridge
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.IOrderedAsyncEnumerable-1.CreateOrderedAsyncEnumerable" target="_top">.NET documentation</a>
      */
-    public <TKey extends IJCOBridgeReflected> IOrderedAsyncEnumerable_1 CreateOrderedAsyncEnumerable(Func_3 keySelector, IComparer_1 comparer, boolean descending) throws Throwable {
+    public <TKey extends IJCOBridgeReflected> IOrderedAsyncEnumerable_1<TElement> CreateOrderedAsyncEnumerable(Func_3 keySelector, IComparer_1 comparer, boolean descending) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCreateOrderedAsyncEnumerable = null;

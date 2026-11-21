@@ -42,6 +42,7 @@ import system.workflow.componentmodel.CompositeActivity;
 import system.workflow.activities.IfElseBranchActivity;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.workflow.componentmodel.Activity;
 import system.workflow.componentmodel.ActivityCondition;
 import system.workflow.componentmodel.ActivityExecutionStatusChangedEventArgs;
 
@@ -214,7 +215,7 @@ public class IfElseActivity extends system.workflow.componentmodel.CompositeActi
     /**
      * Invokes the .NET member AddBranch.
      *
-     * @param activities the argument of type {@code ICollection_1}
+     * @param activities the argument of type {@code ICollection_1<Activity>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -229,7 +230,7 @@ public class IfElseActivity extends system.workflow.componentmodel.CompositeActi
      * @throws system.MulticastNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.IfElseActivity.AddBranch" target="_top">.NET documentation</a>
      */
-    public IfElseBranchActivity AddBranch(ICollection_1 activities) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException {
+    public IfElseBranchActivity AddBranch(ICollection_1<Activity> activities) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAddBranch = null;
@@ -247,7 +248,7 @@ public class IfElseActivity extends system.workflow.componentmodel.CompositeActi
     /**
      * Invokes the .NET member AddBranch.
      *
-     * @param activities the argument of type {@code ICollection_1}
+     * @param activities the argument of type {@code ICollection_1<Activity>}
      * @param branchCondition the argument of type {@code ActivityCondition}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -264,7 +265,7 @@ public class IfElseActivity extends system.workflow.componentmodel.CompositeActi
      * @throws system.RankException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.IfElseActivity.AddBranch" target="_top">.NET documentation</a>
      */
-    public IfElseBranchActivity AddBranch(ICollection_1 activities, ActivityCondition branchCondition) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.RankException {
+    public IfElseBranchActivity AddBranch(ICollection_1<Activity> activities, ActivityCondition branchCondition) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAddBranch = null;

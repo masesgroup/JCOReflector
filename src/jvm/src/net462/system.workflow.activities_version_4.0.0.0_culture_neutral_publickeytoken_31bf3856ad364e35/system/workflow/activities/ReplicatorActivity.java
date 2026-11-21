@@ -41,11 +41,14 @@ import java.util.ArrayList;
 import system.workflow.componentmodel.CompositeActivity;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.workflow.componentmodel.Activity;
 import system.collections.IList;
 import system.collections.IListImplementation;
 import system.workflow.activities.ExecutionType;
 import system.workflow.componentmodel.ActivityCondition;
 import system.EventHandler;
+import system.EventHandler_1;
+import system.workflow.activities.ReplicatorChildEventArgs;
 
 
 /**
@@ -345,7 +348,7 @@ public class ReplicatorActivity extends system.workflow.componentmodel.Composite
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.ReplicatorActivity.DynamicActivities" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getDynamicActivities() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public ICollection_1<Activity> getDynamicActivities() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDynamicActivities = null;
@@ -629,6 +632,74 @@ public class ReplicatorActivity extends system.workflow.componentmodel.Composite
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Initialized", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addChildCompleted.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ReplicatorChildEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addChildCompleted(EventHandler_1<ReplicatorChildEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("ChildCompleted", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeChildCompleted.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ReplicatorChildEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeChildCompleted(EventHandler_1<ReplicatorChildEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("ChildCompleted", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addChildInitialized.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ReplicatorChildEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addChildInitialized(EventHandler_1<ReplicatorChildEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("ChildInitialized", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeChildInitialized.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ReplicatorChildEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeChildInitialized(EventHandler_1<ReplicatorChildEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("ChildInitialized", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

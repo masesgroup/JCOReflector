@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.linq.expressions.Expression;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.linq.expressions.ParameterExpression;
 import system.linq.expressions.ExpressionType;
 
 
@@ -240,7 +241,7 @@ public class LambdaExpression extends system.linq.expressions.Expression  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.LambdaExpression.Parameters" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getParameters() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public ReadOnlyCollection_1<ParameterExpression> getParameters() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectParameters = null;

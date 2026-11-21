@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.windows.IDataObject;
 import system.windows.IDataObjectImplementation;
 import system.Func_2;
+import system.reflection.metadata.TypeName;
 
 
 /**
@@ -197,7 +198,7 @@ public class DataObjectExtensions extends NetObject  {
      * @param <T> the type of the generic argument T
      * @param dataObject the argument of type {@code IDataObject}
      * @param format the argument of type {@code java.lang.String}
-     * @param resolver the argument of type {@code Func_2}
+     * @param resolver the argument of type {@code Func_2<TypeName, NetType>}
      * @param autoConvert the argument of type {@code boolean}
      * @param data the argument of type {@code JCORefOut<T>}
      * @return the value returned by the .NET member
@@ -212,7 +213,7 @@ public class DataObjectExtensions extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.DataObjectExtensions.TryGetData" target="_top">.NET documentation</a>
      */
-    public static <T extends IJCOBridgeReflected> boolean TryGetData(IDataObject dataObject, java.lang.String format, Func_2 resolver, boolean autoConvert, JCORefOut<T> data) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+    public static <T extends IJCOBridgeReflected> boolean TryGetData(IDataObject dataObject, java.lang.String format, Func_2<TypeName, NetType> resolver, boolean autoConvert, JCORefOut<T> data) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryGetData = null;

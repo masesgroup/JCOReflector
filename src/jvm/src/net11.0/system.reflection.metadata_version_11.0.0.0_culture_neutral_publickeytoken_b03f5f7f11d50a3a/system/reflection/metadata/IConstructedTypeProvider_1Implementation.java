@@ -196,12 +196,12 @@ public class IConstructedTypeProvider_1Implementation<TType extends IJCOBridgeRe
      * Invokes the .NET member GetGenericInstantiation.
      *
      * @param genericType the argument of type {@code TType}
-     * @param typeArguments the argument of type {@code ImmutableArray_1}
+     * @param typeArguments the argument of type {@code ImmutableArray_1<TType>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.IConstructedTypeProvider-1.GetGenericInstantiation" target="_top">.NET documentation</a>
      */
-    public TType GetGenericInstantiation(TType genericType, ImmutableArray_1 typeArguments) throws Throwable {
+    public TType GetGenericInstantiation(TType genericType, ImmutableArray_1<TType> typeArguments) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetGenericInstantiation = null;

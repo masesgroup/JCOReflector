@@ -43,6 +43,8 @@ import system.servicemodel.ServiceHostBase;
 import system.collections.objectmodel.Collection_1;
 import system.servicemodel.channels.BindingParameterCollection;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.identitymodel.policy.IAuthorizationPolicy;
+import system.identitymodel.policy.IAuthorizationPolicyImplementation;
 import system.servicemodel.description.PrincipalPermissionMode;
 import system.servicemodel.ServiceAuthorizationManager;
 import system.web.security.RoleProvider;
@@ -381,7 +383,7 @@ public class ServiceAuthorizationBehavior extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getExternalAuthorizationPolicies() throws Throwable {
+    public ReadOnlyCollection_1<IAuthorizationPolicy> getExternalAuthorizationPolicies() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExternalAuthorizationPolicies = null;
@@ -419,7 +421,7 @@ public class ServiceAuthorizationBehavior extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies" target="_top">.NET documentation</a>
      */
-    public void setExternalAuthorizationPolicies(ReadOnlyCollection_1 ExternalAuthorizationPolicies) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
+    public void setExternalAuthorizationPolicies(ReadOnlyCollection_1<IAuthorizationPolicy> ExternalAuthorizationPolicies) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

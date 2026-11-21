@@ -191,7 +191,7 @@ public class IDesignerGlyphProviderServiceImplementation extends NetObject imple
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IDesignerGlyphProviderService.GlyphProviders" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getGlyphProviders() throws Throwable {
+    public ReadOnlyCollection_1<IDesignerGlyphProvider> getGlyphProviders() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGlyphProviders = null;

@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.activities.Activity;
 import system.collections.objectmodel.Collection_1;
+import system.activities.validation.Constraint;
+import system.Attribute;
 import system.collections.objectmodel.KeyedCollection_2;
 import system.Version;
 
@@ -237,7 +239,7 @@ public class ActivityBuilder_1<TResult extends IJCOBridgeReflected> extends NetO
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityBuilder-1.Constraints" target="_top">.NET documentation</a>
      */
-    public Collection_1 getConstraints() throws Throwable {
+    public Collection_1<Constraint> getConstraints() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectConstraints = null;
@@ -259,7 +261,7 @@ public class ActivityBuilder_1<TResult extends IJCOBridgeReflected> extends NetO
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityBuilder-1.Attributes" target="_top">.NET documentation</a>
      */
-    public Collection_1 getAttributes() throws Throwable {
+    public Collection_1<Attribute> getAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAttributes = null;

@@ -131,7 +131,7 @@ public interface ISignatureTypeProvider_2<TType extends IJCOBridgeReflected, TGe
     
 
 
-    public TType GetFunctionPointerType(MethodSignature_1 signature) throws Throwable;
+    public TType GetFunctionPointerType(MethodSignature_1<TType> signature) throws Throwable;
 
 
     public TType GetGenericMethodParameter(TGenericContext genericContext, int index) throws Throwable;

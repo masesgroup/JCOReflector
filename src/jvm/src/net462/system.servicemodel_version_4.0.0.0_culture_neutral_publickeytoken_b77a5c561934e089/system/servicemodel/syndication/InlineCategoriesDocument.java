@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.servicemodel.syndication.CategoriesDocument;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.servicemodel.syndication.SyndicationCategory;
 import system.collections.objectmodel.Collection_1;
 
 
@@ -171,12 +172,12 @@ public class InlineCategoriesDocument extends system.servicemodel.syndication.Ca
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param categories the argument of type {@code IEnumerable_1}
+     * @param categories the argument of type {@code IEnumerable_1<SyndicationCategory>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.InlineCategoriesDocument.-ctor" target="_top">.NET documentation</a>
      */
-    public InlineCategoriesDocument(IEnumerable_1 categories) throws Throwable, system.NotSupportedException {
+    public InlineCategoriesDocument(IEnumerable_1<SyndicationCategory> categories) throws Throwable, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -189,14 +190,14 @@ public class InlineCategoriesDocument extends system.servicemodel.syndication.Ca
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param categories the argument of type {@code IEnumerable_1}
+     * @param categories the argument of type {@code IEnumerable_1<SyndicationCategory>}
      * @param isFixed the argument of type {@code boolean}
      * @param scheme the argument of type {@code java.lang.String}
      * @throws Throwable if the .NET constructor fails
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.InlineCategoriesDocument.-ctor" target="_top">.NET documentation</a>
      */
-    public InlineCategoriesDocument(IEnumerable_1 categories, boolean isFixed, java.lang.String scheme) throws Throwable, system.NotSupportedException {
+    public InlineCategoriesDocument(IEnumerable_1<SyndicationCategory> categories, boolean isFixed, java.lang.String scheme) throws Throwable, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -259,7 +260,7 @@ public class InlineCategoriesDocument extends system.servicemodel.syndication.Ca
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.InlineCategoriesDocument.Categories" target="_top">.NET documentation</a>
      */
-    public Collection_1 getCategories() throws Throwable {
+    public Collection_1<SyndicationCategory> getCategories() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCategories = null;

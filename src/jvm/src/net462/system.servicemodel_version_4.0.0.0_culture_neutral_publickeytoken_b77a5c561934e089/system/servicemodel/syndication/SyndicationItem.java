@@ -48,6 +48,9 @@ import system.xml.XmlReader;
 import system.xml.XmlWriter;
 import system.collections.generic.Dictionary_2;
 import system.collections.objectmodel.Collection_1;
+import system.servicemodel.syndication.SyndicationCategory;
+import system.servicemodel.syndication.SyndicationLink;
+import system.servicemodel.syndication.SyndicationPerson;
 import system.servicemodel.syndication.SyndicationElementExtensionCollection;
 import system.servicemodel.syndication.SyndicationFeed;
 import system.servicemodel.syndication.TextSyndicationContent;
@@ -546,7 +549,7 @@ public class SyndicationItem extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.SyndicationItem.Categories" target="_top">.NET documentation</a>
      */
-    public Collection_1 getCategories() throws Throwable {
+    public Collection_1<SyndicationCategory> getCategories() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCategories = null;
@@ -568,7 +571,7 @@ public class SyndicationItem extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.SyndicationItem.Links" target="_top">.NET documentation</a>
      */
-    public Collection_1 getLinks() throws Throwable {
+    public Collection_1<SyndicationLink> getLinks() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectLinks = null;
@@ -590,7 +593,7 @@ public class SyndicationItem extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.SyndicationItem.Authors" target="_top">.NET documentation</a>
      */
-    public Collection_1 getAuthors() throws Throwable {
+    public Collection_1<SyndicationPerson> getAuthors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAuthors = null;
@@ -612,7 +615,7 @@ public class SyndicationItem extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.SyndicationItem.Contributors" target="_top">.NET documentation</a>
      */
-    public Collection_1 getContributors() throws Throwable {
+    public Collection_1<SyndicationPerson> getContributors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContributors = null;

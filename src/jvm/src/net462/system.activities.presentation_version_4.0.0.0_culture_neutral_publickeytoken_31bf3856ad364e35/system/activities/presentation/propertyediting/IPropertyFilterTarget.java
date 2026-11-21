@@ -39,6 +39,8 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.activities.presentation.propertyediting.PropertyFilterPredicate;
 import system.activities.presentation.propertyediting.PropertyFilter;
+import system.EventHandler_1;
+import system.activities.presentation.propertyediting.PropertyFilterAppliedEventArgs;
 
 
 /**
@@ -131,5 +133,9 @@ public interface IPropertyFilterTarget extends IJCOBridgeReflected {
 
     // Instance Events section
     
+    public void addFilterApplied(EventHandler_1<PropertyFilterAppliedEventArgs> handler) throws Throwable;
+
+    public void removeFilterApplied(EventHandler_1<PropertyFilterAppliedEventArgs> handler) throws Throwable;
+
 
 }

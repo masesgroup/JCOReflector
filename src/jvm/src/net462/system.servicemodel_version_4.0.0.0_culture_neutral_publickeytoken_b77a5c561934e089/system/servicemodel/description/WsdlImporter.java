@@ -42,8 +42,13 @@ import system.servicemodel.description.MetadataImporter;
 import system.servicemodel.description.MetadataSet;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.servicemodel.description.IPolicyImportExtension;
+import system.servicemodel.description.IPolicyImportExtensionImplementation;
+import system.servicemodel.description.IWsdlImportExtension;
+import system.servicemodel.description.IWsdlImportExtensionImplementation;
 import system.servicemodel.description.MetadataImporterQuotas;
 import system.collections.objectmodel.Collection_1;
+import system.servicemodel.channels.Binding;
 import system.servicemodel.description.ContractDescription;
 import system.web.services.description.PortType;
 import system.servicemodel.description.ServiceEndpoint;
@@ -202,8 +207,8 @@ public class WsdlImporter extends system.servicemodel.description.MetadataImport
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param metadata the argument of type {@code MetadataSet}
-     * @param policyImportExtensions the argument of type {@code IEnumerable_1}
-     * @param wsdlImportExtensions the argument of type {@code IEnumerable_1}
+     * @param policyImportExtensions the argument of type {@code IEnumerable_1<IPolicyImportExtension>}
+     * @param wsdlImportExtensions the argument of type {@code IEnumerable_1<IWsdlImportExtension>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -222,7 +227,7 @@ public class WsdlImporter extends system.servicemodel.description.MetadataImport
      * @throws system.RankException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.WsdlImporter.-ctor" target="_top">.NET documentation</a>
      */
-    public WsdlImporter(MetadataSet metadata, IEnumerable_1 policyImportExtensions, IEnumerable_1 wsdlImportExtensions) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.xml.schema.XmlSchemaException, system.IndexOutOfRangeException, system.xml.XmlException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.TypeLoadException, system.RankException {
+    public WsdlImporter(MetadataSet metadata, IEnumerable_1<IPolicyImportExtension> policyImportExtensions, IEnumerable_1<IWsdlImportExtension> wsdlImportExtensions) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.xml.schema.XmlSchemaException, system.IndexOutOfRangeException, system.xml.XmlException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.TypeLoadException, system.RankException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -236,8 +241,8 @@ public class WsdlImporter extends system.servicemodel.description.MetadataImport
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param metadata the argument of type {@code MetadataSet}
-     * @param policyImportExtensions the argument of type {@code IEnumerable_1}
-     * @param wsdlImportExtensions the argument of type {@code IEnumerable_1}
+     * @param policyImportExtensions the argument of type {@code IEnumerable_1<IPolicyImportExtension>}
+     * @param wsdlImportExtensions the argument of type {@code IEnumerable_1<IWsdlImportExtension>}
      * @param quotas the argument of type {@code MetadataImporterQuotas}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -260,7 +265,7 @@ public class WsdlImporter extends system.servicemodel.description.MetadataImport
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.WsdlImporter.-ctor" target="_top">.NET documentation</a>
      */
-    public WsdlImporter(MetadataSet metadata, IEnumerable_1 policyImportExtensions, IEnumerable_1 wsdlImportExtensions, MetadataImporterQuotas quotas) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.xml.schema.XmlSchemaException, system.InvalidOperationException, system.xml.XmlException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.TypeLoadException, system.NotSupportedException, system.RankException, system.FormatException {
+    public WsdlImporter(MetadataSet metadata, IEnumerable_1<IPolicyImportExtension> policyImportExtensions, IEnumerable_1<IWsdlImportExtension> wsdlImportExtensions, MetadataImporterQuotas quotas) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.xml.schema.XmlSchemaException, system.InvalidOperationException, system.xml.XmlException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.TypeLoadException, system.NotSupportedException, system.RankException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -298,7 +303,7 @@ public class WsdlImporter extends system.servicemodel.description.MetadataImport
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.WsdlImporter.ImportAllBindings" target="_top">.NET documentation</a>
      */
-    public Collection_1 ImportAllBindings() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
+    public Collection_1<Binding> ImportAllBindings() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectImportAllBindings = null;
@@ -336,7 +341,7 @@ public class WsdlImporter extends system.servicemodel.description.MetadataImport
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.WsdlImporter.ImportAllContracts" target="_top">.NET documentation</a>
      */
-    public Collection_1 ImportAllContracts() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
+    public Collection_1<ContractDescription> ImportAllContracts() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectImportAllContracts = null;
@@ -634,7 +639,7 @@ public class WsdlImporter extends system.servicemodel.description.MetadataImport
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.WsdlImporter.WsdlImportExtensions" target="_top">.NET documentation</a>
      */
-    public KeyedByTypeCollection_1 getWsdlImportExtensions() throws Throwable {
+    public KeyedByTypeCollection_1<IWsdlImportExtension> getWsdlImportExtensions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectWsdlImportExtensions = null;

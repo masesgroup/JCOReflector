@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.ValueType;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.xml.xpath.XPathNavigator;
 import system.xml.xsl.runtime.XmlQueryRuntime;
 
 
@@ -172,7 +173,7 @@ public class DodSequenceMerge extends system.ValueType  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.DodSequenceMerge.MergeSequences" target="_top">.NET documentation</a>
      */
-    public IList_1 MergeSequences() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public IList_1<XPathNavigator> MergeSequences() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectMergeSequences = null;
@@ -190,7 +191,7 @@ public class DodSequenceMerge extends system.ValueType  {
     /**
      * Invokes the .NET member AddSequence.
      *
-     * @param sequence the argument of type {@code IList_1}
+     * @param sequence the argument of type {@code IList_1<XPathNavigator>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -202,7 +203,7 @@ public class DodSequenceMerge extends system.ValueType  {
      * @throws system.InvalidCastException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.DodSequenceMerge.AddSequence" target="_top">.NET documentation</a>
      */
-    public void AddSequence(IList_1 sequence) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
+    public void AddSequence(IList_1<XPathNavigator> sequence) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

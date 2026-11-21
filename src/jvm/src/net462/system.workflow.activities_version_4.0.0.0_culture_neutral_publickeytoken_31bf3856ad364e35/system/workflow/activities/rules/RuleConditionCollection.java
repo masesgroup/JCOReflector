@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.collections.objectmodel.KeyedCollection_2;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.workflow.componentmodel.WorkflowChangeAction;
 import system.workflow.activities.rules.RuleCondition;
 
 
@@ -196,7 +197,7 @@ public class RuleConditionCollection extends system.collections.objectmodel.Keye
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RuleConditionCollection.Diff" target="_top">.NET documentation</a>
      */
-    public IList_1 Diff(NetObject originalDefinition, NetObject changedDefinition) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public IList_1<WorkflowChangeAction> Diff(NetObject originalDefinition, NetObject changedDefinition) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDiff = null;

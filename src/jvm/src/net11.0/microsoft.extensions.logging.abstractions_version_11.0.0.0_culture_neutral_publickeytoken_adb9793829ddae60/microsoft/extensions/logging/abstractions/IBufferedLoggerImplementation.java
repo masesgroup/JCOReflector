@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import microsoft.extensions.logging.abstractions.BufferedLogRecord;
 
 
 /**
@@ -148,11 +149,11 @@ public class IBufferedLoggerImplementation extends NetObject implements IBuffere
     /**
      * Invokes the .NET member LogRecords.
      *
-     * @param records the argument of type {@code IEnumerable_1}
+     * @param records the argument of type {@code IEnumerable_1<BufferedLogRecord>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Logging.Abstractions.IBufferedLogger.LogRecords" target="_top">.NET documentation</a>
      */
-    public void LogRecords(IEnumerable_1 records) throws Throwable {
+    public void LogRecords(IEnumerable_1<BufferedLogRecord> records) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

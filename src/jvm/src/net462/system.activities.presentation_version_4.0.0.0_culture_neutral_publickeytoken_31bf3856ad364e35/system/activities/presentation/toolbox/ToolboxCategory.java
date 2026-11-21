@@ -374,7 +374,7 @@ public class ToolboxCategory extends NetObjectEnumerable  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Toolbox.ToolboxCategory.Tools" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getTools() throws Throwable {
+    public ICollection_1<ToolboxItemWrapper> getTools() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTools = null;

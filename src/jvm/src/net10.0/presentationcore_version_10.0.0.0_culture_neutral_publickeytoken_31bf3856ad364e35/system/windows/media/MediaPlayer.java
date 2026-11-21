@@ -44,6 +44,9 @@ import system.TimeSpan;
 import system.windows.Duration;
 import system.windows.media.MediaClock;
 import system.EventHandler;
+import system.EventHandler_1;
+import system.windows.media.ExceptionEventArgs;
+import system.windows.media.MediaScriptCommandEventArgs;
 
 
 /**
@@ -1302,6 +1305,74 @@ public class MediaPlayer extends system.windows.media.animation.Animatable  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("MediaOpened", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addMediaFailed.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ExceptionEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addMediaFailed(EventHandler_1<ExceptionEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("MediaFailed", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeMediaFailed.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ExceptionEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeMediaFailed(EventHandler_1<ExceptionEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("MediaFailed", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addScriptCommand.
+     *
+     * @param handler the argument of type {@code EventHandler_1<MediaScriptCommandEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addScriptCommand(EventHandler_1<MediaScriptCommandEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("ScriptCommand", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeScriptCommand.
+     *
+     * @param handler the argument of type {@code EventHandler_1<MediaScriptCommandEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeScriptCommand(EventHandler_1<MediaScriptCommandEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("ScriptCommand", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

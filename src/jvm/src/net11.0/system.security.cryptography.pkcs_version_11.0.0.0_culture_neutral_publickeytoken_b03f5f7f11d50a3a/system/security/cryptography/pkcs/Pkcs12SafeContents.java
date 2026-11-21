@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.security.cryptography.pkcs.Pkcs12SafeBag;
 import system.security.cryptography.pkcs.Pkcs12CertBag;
 import system.security.cryptography.x509certificates.X509Certificate2;
 import system.security.cryptography.pkcs.Pkcs12KeyBag;
@@ -51,7 +52,6 @@ import system.security.cryptography.Oid;
 import system.ReadOnlyMemory_1;
 import system.security.cryptography.pkcs.Pkcs12ShroudedKeyBag;
 import system.security.cryptography.PbeParameters;
-import system.security.cryptography.pkcs.Pkcs12SafeBag;
 import system.security.cryptography.pkcs.Pkcs12ConfidentialityMode;
 
 
@@ -198,7 +198,7 @@ public class Pkcs12SafeContents extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.Pkcs.Pkcs12SafeContents.GetBags" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetBags() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
+    public IEnumerable_1<Pkcs12SafeBag> GetBags() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetBags = null;

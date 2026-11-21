@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.activities.CodeActivity_1;
 import system.activities.Location_1;
 import system.linq.expressions.Expression_1;
+import system.Func_2;
+import system.activities.ActivityContext;
 import system.windows.markup.IValueSerializerContext;
 import system.windows.markup.IValueSerializerContextImplementation;
 
@@ -159,7 +161,7 @@ public class LambdaReference_1<T extends IJCOBridgeReflected> extends system.act
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param locationExpression the argument of type {@code Expression_1}
+     * @param locationExpression the argument of type {@code Expression_1<Func_2<ActivityContext, T>>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -170,7 +172,7 @@ public class LambdaReference_1<T extends IJCOBridgeReflected> extends system.act
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.LambdaReference-1.-ctor" target="_top">.NET documentation</a>
      */
-    public LambdaReference_1(Expression_1 locationExpression) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public LambdaReference_1(Expression_1<Func_2<ActivityContext, T>> locationExpression) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

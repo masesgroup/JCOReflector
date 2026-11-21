@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.identitymodel.tokens.Saml2NameIdentifier;
 import system.xml.XmlWriter;
 import system.collections.objectmodel.Collection_1;
+import system.identitymodel.tokens.EncryptedKeyIdentifierClause;
+import system.identitymodel.tokens.Saml2Statement;
 import system.DateTime;
 import system.identitymodel.tokens.EncryptingCredentials;
 import system.identitymodel.tokens.Saml2Advice;
@@ -254,7 +256,7 @@ public class Saml2Assertion extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2Assertion.ExternalEncryptedKeys" target="_top">.NET documentation</a>
      */
-    public Collection_1 getExternalEncryptedKeys() throws Throwable {
+    public Collection_1<EncryptedKeyIdentifierClause> getExternalEncryptedKeys() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExternalEncryptedKeys = null;
@@ -276,7 +278,7 @@ public class Saml2Assertion extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2Assertion.Statements" target="_top">.NET documentation</a>
      */
-    public Collection_1 getStatements() throws Throwable {
+    public Collection_1<Saml2Statement> getStatements() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectStatements = null;

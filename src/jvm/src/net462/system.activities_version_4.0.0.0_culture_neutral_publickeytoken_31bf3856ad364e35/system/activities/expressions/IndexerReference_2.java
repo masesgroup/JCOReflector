@@ -42,6 +42,7 @@ import system.activities.CodeActivity_1;
 import system.activities.Location_1;
 import system.activities.InArgument_1;
 import system.collections.objectmodel.Collection_1;
+import system.activities.InArgument;
 
 
 /**
@@ -185,7 +186,7 @@ public class IndexerReference_2<TOperand extends IJCOBridgeReflected, TItem exte
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.IndexerReference-2.Operand" target="_top">.NET documentation</a>
      */
-    public InArgument_1 getOperand() throws Throwable {
+    public InArgument_1<TOperand> getOperand() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOperand = null;
@@ -207,7 +208,7 @@ public class IndexerReference_2<TOperand extends IJCOBridgeReflected, TItem exte
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.IndexerReference-2.Operand" target="_top">.NET documentation</a>
      */
-    public void setOperand(InArgument_1 Operand) throws Throwable {
+    public void setOperand(InArgument_1<TOperand> Operand) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -228,7 +229,7 @@ public class IndexerReference_2<TOperand extends IJCOBridgeReflected, TItem exte
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.IndexerReference-2.Indices" target="_top">.NET documentation</a>
      */
-    public Collection_1 getIndices() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+    public Collection_1<InArgument> getIndices() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIndices = null;

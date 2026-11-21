@@ -63,6 +63,8 @@ import system.windows.Thickness;
 import system.windows.TriggerCollection;
 import system.windows.VerticalAlignment;
 import system.EventHandler;
+import system.EventHandler_1;
+import system.windows.data.DataTransferEventArgs;
 import system.windows.controls.ContextMenuEventHandler;
 import system.windows.controls.ToolTipEventHandler;
 import system.windows.DependencyPropertyChangedEventHandler;
@@ -2843,6 +2845,74 @@ public class FrameworkElement extends system.windows.UIElement  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Initialized", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addSourceUpdated.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataTransferEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addSourceUpdated(EventHandler_1<DataTransferEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("SourceUpdated", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeSourceUpdated.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataTransferEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeSourceUpdated(EventHandler_1<DataTransferEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("SourceUpdated", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addTargetUpdated.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataTransferEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addTargetUpdated(EventHandler_1<DataTransferEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("TargetUpdated", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeTargetUpdated.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataTransferEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeTargetUpdated(EventHandler_1<DataTransferEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("TargetUpdated", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

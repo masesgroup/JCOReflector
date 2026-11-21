@@ -204,7 +204,7 @@ public class TextDecorationCollection extends system.windows.media.animation.Ani
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param collection the argument of type {@code IEnumerable_1}
+     * @param collection the argument of type {@code IEnumerable_1<TextDecoration>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -218,7 +218,7 @@ public class TextDecorationCollection extends system.windows.media.animation.Ani
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.TextDecorationCollection.-ctor" target="_top">.NET documentation</a>
      */
-    public TextDecorationCollection(IEnumerable_1 collection) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentNullException {
+    public TextDecorationCollection(IEnumerable_1<TextDecoration> collection) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -290,7 +290,7 @@ public class TextDecorationCollection extends system.windows.media.animation.Ani
     /**
      * Invokes the .NET member TryRemove.
      *
-     * @param textDecorations the argument of type {@code IEnumerable_1}
+     * @param textDecorations the argument of type {@code IEnumerable_1<TextDecoration>}
      * @param result the argument of type {@code JCORefOut<TextDecorationCollection>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -304,7 +304,7 @@ public class TextDecorationCollection extends system.windows.media.animation.Ani
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.TextDecorationCollection.TryRemove" target="_top">.NET documentation</a>
      */
-    public boolean TryRemove(IEnumerable_1 textDecorations, JCORefOut<TextDecorationCollection> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException {
+    public boolean TryRemove(IEnumerable_1<TextDecoration> textDecorations, JCORefOut<TextDecorationCollection> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTryRemove = null;
@@ -436,7 +436,7 @@ public class TextDecorationCollection extends system.windows.media.animation.Ani
     /**
      * Invokes the .NET member Add.
      *
-     * @param textDecorations the argument of type {@code IEnumerable_1}
+     * @param textDecorations the argument of type {@code IEnumerable_1<TextDecoration>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -447,7 +447,7 @@ public class TextDecorationCollection extends system.windows.media.animation.Ani
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.TextDecorationCollection.Add" target="_top">.NET documentation</a>
      */
-    public void Add(IEnumerable_1 textDecorations) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public void Add(IEnumerable_1<TextDecoration> textDecorations) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

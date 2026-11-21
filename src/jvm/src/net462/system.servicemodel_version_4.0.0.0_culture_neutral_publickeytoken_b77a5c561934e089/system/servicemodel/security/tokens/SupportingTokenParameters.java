@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.servicemodel.security.tokens.SupportingTokenParameters;
 import system.collections.objectmodel.Collection_1;
+import system.servicemodel.security.tokens.SecurityTokenParameters;
 
 
 /**
@@ -229,7 +230,7 @@ public class SupportingTokenParameters extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SupportingTokenParameters.Endorsing" target="_top">.NET documentation</a>
      */
-    public Collection_1 getEndorsing() throws Throwable {
+    public Collection_1<SecurityTokenParameters> getEndorsing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEndorsing = null;
@@ -251,7 +252,7 @@ public class SupportingTokenParameters extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SupportingTokenParameters.Signed" target="_top">.NET documentation</a>
      */
-    public Collection_1 getSigned() throws Throwable {
+    public Collection_1<SecurityTokenParameters> getSigned() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSigned = null;
@@ -273,7 +274,7 @@ public class SupportingTokenParameters extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SupportingTokenParameters.SignedEncrypted" target="_top">.NET documentation</a>
      */
-    public Collection_1 getSignedEncrypted() throws Throwable {
+    public Collection_1<SecurityTokenParameters> getSignedEncrypted() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSignedEncrypted = null;
@@ -295,7 +296,7 @@ public class SupportingTokenParameters extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SupportingTokenParameters.SignedEndorsing" target="_top">.NET documentation</a>
      */
-    public Collection_1 getSignedEndorsing() throws Throwable {
+    public Collection_1<SecurityTokenParameters> getSignedEndorsing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSignedEndorsing = null;

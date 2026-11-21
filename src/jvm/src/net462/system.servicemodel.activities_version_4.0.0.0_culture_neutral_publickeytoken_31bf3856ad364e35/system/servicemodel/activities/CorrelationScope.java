@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.activities.NativeActivity;
 import system.activities.Activity;
 import system.activities.InArgument_1;
+import system.servicemodel.activities.CorrelationHandle;
 
 
 /**
@@ -243,7 +244,7 @@ public class CorrelationScope extends system.activities.NativeActivity  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.CorrelationScope.CorrelatesWith" target="_top">.NET documentation</a>
      */
-    public InArgument_1 getCorrelatesWith() throws Throwable {
+    public InArgument_1<CorrelationHandle> getCorrelatesWith() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCorrelatesWith = null;
@@ -265,7 +266,7 @@ public class CorrelationScope extends system.activities.NativeActivity  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.CorrelationScope.CorrelatesWith" target="_top">.NET documentation</a>
      */
-    public void setCorrelatesWith(InArgument_1 CorrelatesWith) throws Throwable {
+    public void setCorrelatesWith(InArgument_1<CorrelationHandle> CorrelatesWith) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.data.common.DbColumn;
 
 
 /**
@@ -116,7 +117,7 @@ public interface IDbColumnSchemaGenerator extends IJCOBridgeReflected {
 
     // Methods section
     
-    public ReadOnlyCollection_1 GetColumnSchema() throws Throwable;
+    public ReadOnlyCollection_1<DbColumn> GetColumnSchema() throws Throwable;
 
 
     

@@ -213,7 +213,7 @@ public class TypeMapping extends NetObject  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.TypeMapping.GetOrCreateProxyTypeMapping" target="_top">.NET documentation</a>
      */
-    public static <TTypeMapGroup extends IJCOBridgeReflected> IReadOnlyDictionary_2 GetOrCreateProxyTypeMapping() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.UnreachableException, system.io.FileLoadException, system.NotImplementedException, system.globalization.CultureNotFoundException {
+    public static <TTypeMapGroup extends IJCOBridgeReflected> IReadOnlyDictionary_2<NetType, NetType> GetOrCreateProxyTypeMapping() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.UnreachableException, system.io.FileLoadException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetOrCreateProxyTypeMapping = null;

@@ -43,6 +43,7 @@ import system.identitymodel.tokens.SamlConditions;
 import system.identitymodel.tokens.SamlAdvice;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.identitymodel.tokens.SamlStatement;
 import system.xml.XmlDictionaryReader;
 import system.identitymodel.tokens.SamlSerializer;
 import system.identitymodel.selectors.SecurityTokenSerializer;
@@ -197,7 +198,7 @@ public class SamlAssertion extends NetObject  {
      * @param issueInstant the argument of type {@code DateTime}
      * @param samlConditions the argument of type {@code SamlConditions}
      * @param samlAdvice the argument of type {@code SamlAdvice}
-     * @param samlStatements the argument of type {@code IEnumerable_1}
+     * @param samlStatements the argument of type {@code IEnumerable_1<SamlStatement>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -217,7 +218,7 @@ public class SamlAssertion extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlAssertion.-ctor" target="_top">.NET documentation</a>
      */
-    public SamlAssertion(java.lang.String assertionId, java.lang.String issuer, DateTime issueInstant, SamlConditions samlConditions, SamlAdvice samlAdvice, IEnumerable_1 samlStatements) throws Throwable, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException {
+    public SamlAssertion(java.lang.String assertionId, java.lang.String issuer, DateTime issueInstant, SamlConditions samlConditions, SamlAdvice samlAdvice, IEnumerable_1<SamlStatement> samlStatements) throws Throwable, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -498,7 +499,7 @@ public class SamlAssertion extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlAssertion.Statements" target="_top">.NET documentation</a>
      */
-    public IList_1 getStatements() throws Throwable {
+    public IList_1<SamlStatement> getStatements() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectStatements = null;

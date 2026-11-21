@@ -296,7 +296,7 @@ public class DbDataSource extends NetObject implements AutoCloseable {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataSource.OpenConnectionAsync" target="_top">.NET documentation</a>
      */
-    public ValueTask_1 OpenConnectionAsync(CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public ValueTask_1<DbConnection> OpenConnectionAsync(CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOpenConnectionAsync = null;

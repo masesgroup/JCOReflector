@@ -39,8 +39,16 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.generic.SynchronizedCollection_1;
+import system.servicemodel.dispatcher.IDispatchMessageInspector;
+import system.servicemodel.dispatcher.IDispatchMessageInspectorImplementation;
+import system.servicemodel.dispatcher.IInputSessionShutdown;
+import system.servicemodel.dispatcher.IInputSessionShutdownImplementation;
+import system.servicemodel.dispatcher.IInstanceContextInitializer;
+import system.servicemodel.dispatcher.IInstanceContextInitializerImplementation;
 import system.collections.generic.SynchronizedKeyedCollection_2;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.identitymodel.policy.IAuthorizationPolicy;
+import system.identitymodel.policy.IAuthorizationPolicyImplementation;
 import system.servicemodel.AuditLevel;
 import system.servicemodel.AuditLogLocation;
 import system.servicemodel.ConcurrencyMode;
@@ -679,7 +687,7 @@ public class DispatchRuntime extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors" target="_top">.NET documentation</a>
      */
-    public SynchronizedCollection_1 getMessageInspectors() throws Throwable {
+    public SynchronizedCollection_1<IDispatchMessageInspector> getMessageInspectors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectMessageInspectors = null;
@@ -701,7 +709,7 @@ public class DispatchRuntime extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.DispatchRuntime.InputSessionShutdownHandlers" target="_top">.NET documentation</a>
      */
-    public SynchronizedCollection_1 getInputSessionShutdownHandlers() throws Throwable {
+    public SynchronizedCollection_1<IInputSessionShutdown> getInputSessionShutdownHandlers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectInputSessionShutdownHandlers = null;
@@ -723,7 +731,7 @@ public class DispatchRuntime extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.DispatchRuntime.InstanceContextInitializers" target="_top">.NET documentation</a>
      */
-    public SynchronizedCollection_1 getInstanceContextInitializers() throws Throwable {
+    public SynchronizedCollection_1<IInstanceContextInitializer> getInstanceContextInitializers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectInstanceContextInitializers = null;
@@ -767,7 +775,7 @@ public class DispatchRuntime extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.DispatchRuntime.ExternalAuthorizationPolicies" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getExternalAuthorizationPolicies() throws Throwable {
+    public ReadOnlyCollection_1<IAuthorizationPolicy> getExternalAuthorizationPolicies() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExternalAuthorizationPolicies = null;
@@ -800,7 +808,7 @@ public class DispatchRuntime extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.DispatchRuntime.ExternalAuthorizationPolicies" target="_top">.NET documentation</a>
      */
-    public void setExternalAuthorizationPolicies(ReadOnlyCollection_1 ExternalAuthorizationPolicies) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
+    public void setExternalAuthorizationPolicies(ReadOnlyCollection_1<IAuthorizationPolicy> ExternalAuthorizationPolicies) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

@@ -40,8 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
-import system.activities.Activity;
 import system.activities.expressions.AssemblyReference;
+import system.activities.Activity;
 
 
 /**
@@ -288,7 +288,7 @@ public class TextExpression extends NetObject  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.TextExpression.GetReferences" target="_top">.NET documentation</a>
      */
-    public static IList_1 GetReferences(NetObject target) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
+    public static IList_1<AssemblyReference> GetReferences(NetObject target) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetReferences = null;
@@ -321,7 +321,7 @@ public class TextExpression extends NetObject  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.TextExpression.GetReferencesForImplementation" target="_top">.NET documentation</a>
      */
-    public static IList_1 GetReferencesForImplementation(NetObject target) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
+    public static IList_1<AssemblyReference> GetReferencesForImplementation(NetObject target) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetReferencesForImplementation = null;
@@ -355,7 +355,7 @@ public class TextExpression extends NetObject  {
      * @throws system.threading.ThreadAbortException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.TextExpression.GetReferencesInScope" target="_top">.NET documentation</a>
      */
-    public static IList_1 GetReferencesInScope(Activity activity) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.threading.ThreadAbortException {
+    public static IList_1<AssemblyReference> GetReferencesInScope(Activity activity) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.threading.ThreadAbortException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetReferencesInScope = null;
@@ -670,7 +670,7 @@ public class TextExpression extends NetObject  {
      * Invokes the .NET member SetReferences.
      *
      * @param target the argument of type {@code NetObject}
-     * @param references the argument of type {@code IList_1}
+     * @param references the argument of type {@code IList_1<AssemblyReference>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.threading.ThreadAbortException if the .NET member raises it
@@ -684,7 +684,7 @@ public class TextExpression extends NetObject  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.TextExpression.SetReferences" target="_top">.NET documentation</a>
      */
-    public static void SetReferences(NetObject target, IList_1 references) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
+    public static void SetReferences(NetObject target, IList_1<AssemblyReference> references) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -726,7 +726,7 @@ public class TextExpression extends NetObject  {
      * Invokes the .NET member SetReferencesForImplementation.
      *
      * @param target the argument of type {@code NetObject}
-     * @param references the argument of type {@code IList_1}
+     * @param references the argument of type {@code IList_1<AssemblyReference>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.threading.ThreadAbortException if the .NET member raises it
@@ -740,7 +740,7 @@ public class TextExpression extends NetObject  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.TextExpression.SetReferencesForImplementation" target="_top">.NET documentation</a>
      */
-    public static void SetReferencesForImplementation(NetObject target, IList_1 references) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
+    public static void SetReferencesForImplementation(NetObject target, IList_1<AssemblyReference> references) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -761,7 +761,7 @@ public class TextExpression extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.TextExpression.DefaultReferences" target="_top">.NET documentation</a>
      */
-    public static IList_1 getDefaultReferences() throws Throwable {
+    public static IList_1<AssemblyReference> getDefaultReferences() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDefaultReferences = null;

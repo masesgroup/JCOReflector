@@ -45,6 +45,7 @@ import system.threading.CancellationToken;
 import system.ArraySegment_1;
 import system.net.websockets.WebSocketMessageType;
 import system.threading.tasks.Task_1;
+import system.net.websockets.WebSocketReceiveResult;
 import system.net.websockets.WebSocketState;
 import system.Nullable_1;
 
@@ -293,7 +294,7 @@ public class AspNetWebSocket extends system.net.websockets.WebSocket  {
      * @throws system.security.SecurityException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.WebSockets.AspNetWebSocket.ReceiveAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 ReceiveAsync(ArraySegment_1 buffer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.net.websockets.WebSocketException, system.security.SecurityException {
+    public Task_1<WebSocketReceiveResult> ReceiveAsync(ArraySegment_1 buffer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.net.websockets.WebSocketException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReceiveAsync = null;

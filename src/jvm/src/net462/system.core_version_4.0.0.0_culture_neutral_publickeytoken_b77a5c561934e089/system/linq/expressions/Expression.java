@@ -46,8 +46,8 @@ import system.linq.expressions.ExpressionType;
 import system.linq.expressions.BlockExpression;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
-import system.linq.expressions.CatchBlock;
 import system.linq.expressions.ParameterExpression;
+import system.linq.expressions.CatchBlock;
 import system.linq.expressions.ConditionalExpression;
 import system.linq.expressions.ConstantExpression;
 import system.linq.expressions.DebugInfoExpression;
@@ -3461,7 +3461,7 @@ public class Expression extends NetObject  {
     /**
      * Invokes the .NET member Block.
      *
-     * @param expressions the argument of type {@code IEnumerable_1}
+     * @param expressions the argument of type {@code IEnumerable_1<Expression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -3473,7 +3473,7 @@ public class Expression extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.Block" target="_top">.NET documentation</a>
      */
-    public static BlockExpression Block(IEnumerable_1 expressions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static BlockExpression Block(IEnumerable_1<Expression> expressions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBlock = null;
@@ -3491,8 +3491,8 @@ public class Expression extends NetObject  {
     /**
      * Invokes the .NET member Block.
      *
-     * @param variables the argument of type {@code IEnumerable_1}
-     * @param expressions the argument of type {@code IEnumerable_1}
+     * @param variables the argument of type {@code IEnumerable_1<ParameterExpression>}
+     * @param expressions the argument of type {@code IEnumerable_1<Expression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -3506,7 +3506,7 @@ public class Expression extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.Block" target="_top">.NET documentation</a>
      */
-    public static BlockExpression Block(IEnumerable_1 variables, IEnumerable_1 expressions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static BlockExpression Block(IEnumerable_1<ParameterExpression> variables, IEnumerable_1<Expression> expressions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBlock = null;
@@ -3524,7 +3524,7 @@ public class Expression extends NetObject  {
     /**
      * Invokes the .NET member Block.
      *
-     * @param variables the argument of type {@code IEnumerable_1}
+     * @param variables the argument of type {@code IEnumerable_1<ParameterExpression>}
      * @param expressions the argument of type {@code Expression...}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -3537,7 +3537,7 @@ public class Expression extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.Block" target="_top">.NET documentation</a>
      */
-    public static BlockExpression Block(IEnumerable_1 variables, Expression... expressions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static BlockExpression Block(IEnumerable_1<ParameterExpression> variables, Expression... expressions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBlock = null;
@@ -3720,7 +3720,7 @@ public class Expression extends NetObject  {
      * Invokes the .NET member Block.
      *
      * @param type the argument of type {@code NetType}
-     * @param expressions the argument of type {@code IEnumerable_1}
+     * @param expressions the argument of type {@code IEnumerable_1<Expression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -3732,7 +3732,7 @@ public class Expression extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.Block" target="_top">.NET documentation</a>
      */
-    public static BlockExpression Block(NetType type, IEnumerable_1 expressions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static BlockExpression Block(NetType type, IEnumerable_1<Expression> expressions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBlock = null;
@@ -3751,8 +3751,8 @@ public class Expression extends NetObject  {
      * Invokes the .NET member Block.
      *
      * @param type the argument of type {@code NetType}
-     * @param variables the argument of type {@code IEnumerable_1}
-     * @param expressions the argument of type {@code IEnumerable_1}
+     * @param variables the argument of type {@code IEnumerable_1<ParameterExpression>}
+     * @param expressions the argument of type {@code IEnumerable_1<Expression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -3766,7 +3766,7 @@ public class Expression extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.Block" target="_top">.NET documentation</a>
      */
-    public static BlockExpression Block(NetType type, IEnumerable_1 variables, IEnumerable_1 expressions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static BlockExpression Block(NetType type, IEnumerable_1<ParameterExpression> variables, IEnumerable_1<Expression> expressions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBlock = null;
@@ -3785,7 +3785,7 @@ public class Expression extends NetObject  {
      * Invokes the .NET member Block.
      *
      * @param type the argument of type {@code NetType}
-     * @param variables the argument of type {@code IEnumerable_1}
+     * @param variables the argument of type {@code IEnumerable_1<ParameterExpression>}
      * @param expressions the argument of type {@code Expression...}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -3798,7 +3798,7 @@ public class Expression extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.Block" target="_top">.NET documentation</a>
      */
-    public static BlockExpression Block(NetType type, IEnumerable_1 variables, Expression... expressions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static BlockExpression Block(NetType type, IEnumerable_1<ParameterExpression> variables, Expression... expressions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBlock = null;
@@ -4304,7 +4304,7 @@ public class Expression extends NetObject  {
      *
      * @param binder the argument of type {@code CallSiteBinder}
      * @param returnType the argument of type {@code NetType}
-     * @param arguments the argument of type {@code IEnumerable_1}
+     * @param arguments the argument of type {@code IEnumerable_1<Expression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -4319,7 +4319,7 @@ public class Expression extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.Dynamic" target="_top">.NET documentation</a>
      */
-    public static DynamicExpression Dynamic(CallSiteBinder binder, NetType returnType, IEnumerable_1 arguments) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+    public static DynamicExpression Dynamic(CallSiteBinder binder, NetType returnType, IEnumerable_1<Expression> arguments) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDynamic = null;
@@ -4514,7 +4514,7 @@ public class Expression extends NetObject  {
      *
      * @param delegateType the argument of type {@code NetType}
      * @param binder the argument of type {@code CallSiteBinder}
-     * @param arguments the argument of type {@code IEnumerable_1}
+     * @param arguments the argument of type {@code IEnumerable_1<Expression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -4529,7 +4529,7 @@ public class Expression extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.MakeDynamic" target="_top">.NET documentation</a>
      */
-    public static DynamicExpression MakeDynamic(NetType delegateType, CallSiteBinder binder, IEnumerable_1 arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+    public static DynamicExpression MakeDynamic(NetType delegateType, CallSiteBinder binder, IEnumerable_1<Expression> arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMakeDynamic = null;
@@ -4728,7 +4728,7 @@ public class Expression extends NetObject  {
      * Invokes the .NET member ElementInit.
      *
      * @param addMethod the argument of type {@code MethodInfo}
-     * @param arguments the argument of type {@code IEnumerable_1}
+     * @param arguments the argument of type {@code IEnumerable_1<Expression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -4743,7 +4743,7 @@ public class Expression extends NetObject  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.ElementInit" target="_top">.NET documentation</a>
      */
-    public static ElementInit ElementInit(MethodInfo addMethod, IEnumerable_1 arguments) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
+    public static ElementInit ElementInit(MethodInfo addMethod, IEnumerable_1<Expression> arguments) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectElementInit = null;
@@ -4889,7 +4889,7 @@ public class Expression extends NetObject  {
      * @param <TDelegate> the type of the generic argument TDelegate
      * @param body the argument of type {@code Expression}
      * @param tailCall the argument of type {@code boolean}
-     * @param parameters the argument of type {@code IEnumerable_1}
+     * @param parameters the argument of type {@code IEnumerable_1<ParameterExpression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -4902,7 +4902,7 @@ public class Expression extends NetObject  {
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.Lambda" target="_top">.NET documentation</a>
      */
-    public static <TDelegate extends IJCOBridgeReflected> Expression_1 Lambda(Expression body, boolean tailCall, IEnumerable_1 parameters) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
+    public static <TDelegate extends IJCOBridgeReflected> Expression_1 Lambda(Expression body, boolean tailCall, IEnumerable_1<ParameterExpression> parameters) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLambda = null;
@@ -4955,7 +4955,7 @@ public class Expression extends NetObject  {
      *
      * @param <TDelegate> the type of the generic argument TDelegate
      * @param body the argument of type {@code Expression}
-     * @param parameters the argument of type {@code IEnumerable_1}
+     * @param parameters the argument of type {@code IEnumerable_1<ParameterExpression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -4968,7 +4968,7 @@ public class Expression extends NetObject  {
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.Lambda" target="_top">.NET documentation</a>
      */
-    public static <TDelegate extends IJCOBridgeReflected> Expression_1 Lambda(Expression body, IEnumerable_1 parameters) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
+    public static <TDelegate extends IJCOBridgeReflected> Expression_1 Lambda(Expression body, IEnumerable_1<ParameterExpression> parameters) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLambda = null;
@@ -5022,7 +5022,7 @@ public class Expression extends NetObject  {
      * @param body the argument of type {@code Expression}
      * @param name the argument of type {@code java.lang.String}
      * @param tailCall the argument of type {@code boolean}
-     * @param parameters the argument of type {@code IEnumerable_1}
+     * @param parameters the argument of type {@code IEnumerable_1<ParameterExpression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -5036,7 +5036,7 @@ public class Expression extends NetObject  {
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.Lambda" target="_top">.NET documentation</a>
      */
-    public static <TDelegate extends IJCOBridgeReflected> Expression_1 Lambda(Expression body, java.lang.String name, boolean tailCall, IEnumerable_1 parameters) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
+    public static <TDelegate extends IJCOBridgeReflected> Expression_1 Lambda(Expression body, java.lang.String name, boolean tailCall, IEnumerable_1<ParameterExpression> parameters) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLambda = null;
@@ -5057,7 +5057,7 @@ public class Expression extends NetObject  {
      * @param <TDelegate> the type of the generic argument TDelegate
      * @param body the argument of type {@code Expression}
      * @param name the argument of type {@code java.lang.String}
-     * @param parameters the argument of type {@code IEnumerable_1}
+     * @param parameters the argument of type {@code IEnumerable_1<ParameterExpression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -5070,7 +5070,7 @@ public class Expression extends NetObject  {
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.Lambda" target="_top">.NET documentation</a>
      */
-    public static <TDelegate extends IJCOBridgeReflected> Expression_1 Lambda(Expression body, java.lang.String name, IEnumerable_1 parameters) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
+    public static <TDelegate extends IJCOBridgeReflected> Expression_1 Lambda(Expression body, java.lang.String name, IEnumerable_1<ParameterExpression> parameters) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLambda = null;
@@ -5555,7 +5555,7 @@ public class Expression extends NetObject  {
      * Invokes the .NET member ArrayAccess.
      *
      * @param array the argument of type {@code Expression}
-     * @param indexes the argument of type {@code IEnumerable_1}
+     * @param indexes the argument of type {@code IEnumerable_1<Expression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -5569,7 +5569,7 @@ public class Expression extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.ArrayAccess" target="_top">.NET documentation</a>
      */
-    public static IndexExpression ArrayAccess(Expression array, IEnumerable_1 indexes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
+    public static IndexExpression ArrayAccess(Expression array, IEnumerable_1<Expression> indexes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectArrayAccess = null;
@@ -5621,7 +5621,7 @@ public class Expression extends NetObject  {
      *
      * @param instance the argument of type {@code Expression}
      * @param indexer the argument of type {@code PropertyInfo}
-     * @param arguments the argument of type {@code IEnumerable_1}
+     * @param arguments the argument of type {@code IEnumerable_1<Expression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -5635,7 +5635,7 @@ public class Expression extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.MakeIndex" target="_top">.NET documentation</a>
      */
-    public static IndexExpression MakeIndex(Expression instance, PropertyInfo indexer, IEnumerable_1 arguments) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException {
+    public static IndexExpression MakeIndex(Expression instance, PropertyInfo indexer, IEnumerable_1<Expression> arguments) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMakeIndex = null;
@@ -5655,7 +5655,7 @@ public class Expression extends NetObject  {
      *
      * @param instance the argument of type {@code Expression}
      * @param indexer the argument of type {@code PropertyInfo}
-     * @param arguments the argument of type {@code IEnumerable_1}
+     * @param arguments the argument of type {@code IEnumerable_1<Expression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -5669,7 +5669,7 @@ public class Expression extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.Property" target="_top">.NET documentation</a>
      */
-    public static IndexExpression Property(Expression instance, PropertyInfo indexer, IEnumerable_1 arguments) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException {
+    public static IndexExpression Property(Expression instance, PropertyInfo indexer, IEnumerable_1<Expression> arguments) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectProperty = null;
@@ -5757,7 +5757,7 @@ public class Expression extends NetObject  {
      * Invokes the .NET member Invoke.
      *
      * @param expression the argument of type {@code Expression}
-     * @param arguments the argument of type {@code IEnumerable_1}
+     * @param arguments the argument of type {@code IEnumerable_1<Expression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -5771,7 +5771,7 @@ public class Expression extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.Invoke" target="_top">.NET documentation</a>
      */
-    public static InvocationExpression Invoke(Expression expression, IEnumerable_1 arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
+    public static InvocationExpression Invoke(Expression expression, IEnumerable_1<Expression> arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectInvoke = null;
@@ -6014,7 +6014,7 @@ public class Expression extends NetObject  {
      * @param delegateType the argument of type {@code NetType}
      * @param body the argument of type {@code Expression}
      * @param tailCall the argument of type {@code boolean}
-     * @param parameters the argument of type {@code IEnumerable_1}
+     * @param parameters the argument of type {@code IEnumerable_1<ParameterExpression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -6028,7 +6028,7 @@ public class Expression extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.Lambda" target="_top">.NET documentation</a>
      */
-    public static LambdaExpression Lambda(NetType delegateType, Expression body, boolean tailCall, IEnumerable_1 parameters) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.FormatException {
+    public static LambdaExpression Lambda(NetType delegateType, Expression body, boolean tailCall, IEnumerable_1<ParameterExpression> parameters) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLambda = null;
@@ -6083,7 +6083,7 @@ public class Expression extends NetObject  {
      *
      * @param delegateType the argument of type {@code NetType}
      * @param body the argument of type {@code Expression}
-     * @param parameters the argument of type {@code IEnumerable_1}
+     * @param parameters the argument of type {@code IEnumerable_1<ParameterExpression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -6097,7 +6097,7 @@ public class Expression extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.Lambda" target="_top">.NET documentation</a>
      */
-    public static LambdaExpression Lambda(NetType delegateType, Expression body, IEnumerable_1 parameters) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.FormatException {
+    public static LambdaExpression Lambda(NetType delegateType, Expression body, IEnumerable_1<ParameterExpression> parameters) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLambda = null;
@@ -6153,7 +6153,7 @@ public class Expression extends NetObject  {
      * @param body the argument of type {@code Expression}
      * @param name the argument of type {@code java.lang.String}
      * @param tailCall the argument of type {@code boolean}
-     * @param parameters the argument of type {@code IEnumerable_1}
+     * @param parameters the argument of type {@code IEnumerable_1<ParameterExpression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -6168,7 +6168,7 @@ public class Expression extends NetObject  {
      * @throws system.MissingMethodException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.Lambda" target="_top">.NET documentation</a>
      */
-    public static LambdaExpression Lambda(NetType delegateType, Expression body, java.lang.String name, boolean tailCall, IEnumerable_1 parameters) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.MissingMethodException {
+    public static LambdaExpression Lambda(NetType delegateType, Expression body, java.lang.String name, boolean tailCall, IEnumerable_1<ParameterExpression> parameters) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.MissingMethodException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLambda = null;
@@ -6189,7 +6189,7 @@ public class Expression extends NetObject  {
      * @param delegateType the argument of type {@code NetType}
      * @param body the argument of type {@code Expression}
      * @param name the argument of type {@code java.lang.String}
-     * @param parameters the argument of type {@code IEnumerable_1}
+     * @param parameters the argument of type {@code IEnumerable_1<ParameterExpression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -6204,7 +6204,7 @@ public class Expression extends NetObject  {
      * @throws system.MissingMethodException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.Lambda" target="_top">.NET documentation</a>
      */
-    public static LambdaExpression Lambda(NetType delegateType, Expression body, java.lang.String name, IEnumerable_1 parameters) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.MissingMethodException {
+    public static LambdaExpression Lambda(NetType delegateType, Expression body, java.lang.String name, IEnumerable_1<ParameterExpression> parameters) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.MissingMethodException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLambda = null;
@@ -6223,7 +6223,7 @@ public class Expression extends NetObject  {
      * Invokes the .NET member ListInit.
      *
      * @param newExpression the argument of type {@code NewExpression}
-     * @param initializers the argument of type {@code IEnumerable_1}
+     * @param initializers the argument of type {@code IEnumerable_1<ElementInit>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -6237,7 +6237,7 @@ public class Expression extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.ListInit" target="_top">.NET documentation</a>
      */
-    public static ListInitExpression ListInit(NewExpression newExpression, IEnumerable_1 initializers) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static ListInitExpression ListInit(NewExpression newExpression, IEnumerable_1<ElementInit> initializers) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectListInit = null;
@@ -6322,7 +6322,7 @@ public class Expression extends NetObject  {
      *
      * @param newExpression the argument of type {@code NewExpression}
      * @param addMethod the argument of type {@code MethodInfo}
-     * @param initializers the argument of type {@code IEnumerable_1}
+     * @param initializers the argument of type {@code IEnumerable_1<Expression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -6336,7 +6336,7 @@ public class Expression extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.ListInit" target="_top">.NET documentation</a>
      */
-    public static ListInitExpression ListInit(NewExpression newExpression, MethodInfo addMethod, IEnumerable_1 initializers) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.NotSupportedException {
+    public static ListInitExpression ListInit(NewExpression newExpression, MethodInfo addMethod, IEnumerable_1<Expression> initializers) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectListInit = null;
@@ -6843,7 +6843,7 @@ public class Expression extends NetObject  {
      * Invokes the .NET member MemberInit.
      *
      * @param newExpression the argument of type {@code NewExpression}
-     * @param bindings the argument of type {@code IEnumerable_1}
+     * @param bindings the argument of type {@code IEnumerable_1<MemberBinding>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -6856,7 +6856,7 @@ public class Expression extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.MemberInit" target="_top">.NET documentation</a>
      */
-    public static MemberInitExpression MemberInit(NewExpression newExpression, IEnumerable_1 bindings) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public static MemberInitExpression MemberInit(NewExpression newExpression, IEnumerable_1<MemberBinding> bindings) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMemberInit = null;
@@ -6907,7 +6907,7 @@ public class Expression extends NetObject  {
      * Invokes the .NET member ListBind.
      *
      * @param member the argument of type {@code MemberInfo}
-     * @param initializers the argument of type {@code IEnumerable_1}
+     * @param initializers the argument of type {@code IEnumerable_1<ElementInit>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -6920,7 +6920,7 @@ public class Expression extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.ListBind" target="_top">.NET documentation</a>
      */
-    public static MemberListBinding ListBind(MemberInfo member, IEnumerable_1 initializers) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
+    public static MemberListBinding ListBind(MemberInfo member, IEnumerable_1<ElementInit> initializers) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectListBind = null;
@@ -6971,7 +6971,7 @@ public class Expression extends NetObject  {
      * Invokes the .NET member ListBind.
      *
      * @param propertyAccessor the argument of type {@code MethodInfo}
-     * @param initializers the argument of type {@code IEnumerable_1}
+     * @param initializers the argument of type {@code IEnumerable_1<ElementInit>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -6984,7 +6984,7 @@ public class Expression extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.ListBind" target="_top">.NET documentation</a>
      */
-    public static MemberListBinding ListBind(MethodInfo propertyAccessor, IEnumerable_1 initializers) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
+    public static MemberListBinding ListBind(MethodInfo propertyAccessor, IEnumerable_1<ElementInit> initializers) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectListBind = null;
@@ -7035,7 +7035,7 @@ public class Expression extends NetObject  {
      * Invokes the .NET member MemberBind.
      *
      * @param member the argument of type {@code MemberInfo}
-     * @param bindings the argument of type {@code IEnumerable_1}
+     * @param bindings the argument of type {@code IEnumerable_1<MemberBinding>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -7048,7 +7048,7 @@ public class Expression extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.MemberBind" target="_top">.NET documentation</a>
      */
-    public static MemberMemberBinding MemberBind(MemberInfo member, IEnumerable_1 bindings) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
+    public static MemberMemberBinding MemberBind(MemberInfo member, IEnumerable_1<MemberBinding> bindings) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMemberBind = null;
@@ -7099,7 +7099,7 @@ public class Expression extends NetObject  {
      * Invokes the .NET member MemberBind.
      *
      * @param propertyAccessor the argument of type {@code MethodInfo}
-     * @param bindings the argument of type {@code IEnumerable_1}
+     * @param bindings the argument of type {@code IEnumerable_1<MemberBinding>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -7112,7 +7112,7 @@ public class Expression extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.MemberBind" target="_top">.NET documentation</a>
      */
-    public static MemberMemberBinding MemberBind(MethodInfo propertyAccessor, IEnumerable_1 bindings) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
+    public static MemberMemberBinding MemberBind(MethodInfo propertyAccessor, IEnumerable_1<MemberBinding> bindings) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMemberBind = null;
@@ -7163,7 +7163,7 @@ public class Expression extends NetObject  {
      * Invokes the .NET member ArrayIndex.
      *
      * @param array the argument of type {@code Expression}
-     * @param indexes the argument of type {@code IEnumerable_1}
+     * @param indexes the argument of type {@code IEnumerable_1<Expression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -7177,7 +7177,7 @@ public class Expression extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.ArrayIndex" target="_top">.NET documentation</a>
      */
-    public static MethodCallExpression ArrayIndex(Expression array, IEnumerable_1 indexes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
+    public static MethodCallExpression ArrayIndex(Expression array, IEnumerable_1<Expression> indexes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectArrayIndex = null;
@@ -7262,7 +7262,7 @@ public class Expression extends NetObject  {
      *
      * @param instance the argument of type {@code Expression}
      * @param method the argument of type {@code MethodInfo}
-     * @param arguments the argument of type {@code IEnumerable_1}
+     * @param arguments the argument of type {@code IEnumerable_1<Expression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -7276,7 +7276,7 @@ public class Expression extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.Call" target="_top">.NET documentation</a>
      */
-    public static MethodCallExpression Call(Expression instance, MethodInfo method, IEnumerable_1 arguments) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.NotSupportedException {
+    public static MethodCallExpression Call(Expression instance, MethodInfo method, IEnumerable_1<Expression> arguments) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCall = null;
@@ -7435,7 +7435,7 @@ public class Expression extends NetObject  {
      * Invokes the .NET member Call.
      *
      * @param method the argument of type {@code MethodInfo}
-     * @param arguments the argument of type {@code IEnumerable_1}
+     * @param arguments the argument of type {@code IEnumerable_1<Expression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -7449,7 +7449,7 @@ public class Expression extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.Call" target="_top">.NET documentation</a>
      */
-    public static MethodCallExpression Call(MethodInfo method, IEnumerable_1 arguments) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException {
+    public static MethodCallExpression Call(MethodInfo method, IEnumerable_1<Expression> arguments) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCall = null;
@@ -7710,7 +7710,7 @@ public class Expression extends NetObject  {
      * Invokes the .NET member NewArrayBounds.
      *
      * @param type the argument of type {@code NetType}
-     * @param bounds the argument of type {@code IEnumerable_1}
+     * @param bounds the argument of type {@code IEnumerable_1<Expression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -7725,7 +7725,7 @@ public class Expression extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.NewArrayBounds" target="_top">.NET documentation</a>
      */
-    public static NewArrayExpression NewArrayBounds(NetType type, IEnumerable_1 bounds) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+    public static NewArrayExpression NewArrayBounds(NetType type, IEnumerable_1<Expression> bounds) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNewArrayBounds = null;
@@ -7777,7 +7777,7 @@ public class Expression extends NetObject  {
      * Invokes the .NET member NewArrayInit.
      *
      * @param type the argument of type {@code NetType}
-     * @param initializers the argument of type {@code IEnumerable_1}
+     * @param initializers the argument of type {@code IEnumerable_1<Expression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -7792,7 +7792,7 @@ public class Expression extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.NewArrayInit" target="_top">.NET documentation</a>
      */
-    public static NewArrayExpression NewArrayInit(NetType type, IEnumerable_1 initializers) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+    public static NewArrayExpression NewArrayInit(NetType type, IEnumerable_1<Expression> initializers) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNewArrayInit = null;
@@ -7876,7 +7876,7 @@ public class Expression extends NetObject  {
      * Invokes the .NET member New.
      *
      * @param constructor the argument of type {@code ConstructorInfo}
-     * @param arguments the argument of type {@code IEnumerable_1}
+     * @param arguments the argument of type {@code IEnumerable_1<Expression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -7890,7 +7890,7 @@ public class Expression extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.New" target="_top">.NET documentation</a>
      */
-    public static NewExpression New(ConstructorInfo constructor, IEnumerable_1 arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
+    public static NewExpression New(ConstructorInfo constructor, IEnumerable_1<Expression> arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNew = null;
@@ -7909,8 +7909,8 @@ public class Expression extends NetObject  {
      * Invokes the .NET member New.
      *
      * @param constructor the argument of type {@code ConstructorInfo}
-     * @param arguments the argument of type {@code IEnumerable_1}
-     * @param members the argument of type {@code IEnumerable_1}
+     * @param arguments the argument of type {@code IEnumerable_1<Expression>}
+     * @param members the argument of type {@code IEnumerable_1<MemberInfo>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -7924,7 +7924,7 @@ public class Expression extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.New" target="_top">.NET documentation</a>
      */
-    public static NewExpression New(ConstructorInfo constructor, IEnumerable_1 arguments, IEnumerable_1 members) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
+    public static NewExpression New(ConstructorInfo constructor, IEnumerable_1<Expression> arguments, IEnumerable_1<MemberInfo> members) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNew = null;
@@ -7943,7 +7943,7 @@ public class Expression extends NetObject  {
      * Invokes the .NET member New.
      *
      * @param constructor the argument of type {@code ConstructorInfo}
-     * @param arguments the argument of type {@code IEnumerable_1}
+     * @param arguments the argument of type {@code IEnumerable_1<Expression>}
      * @param members the argument of type {@code MemberInfo...}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -7958,7 +7958,7 @@ public class Expression extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.New" target="_top">.NET documentation</a>
      */
-    public static NewExpression New(ConstructorInfo constructor, IEnumerable_1 arguments, MemberInfo... members) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
+    public static NewExpression New(ConstructorInfo constructor, IEnumerable_1<Expression> arguments, MemberInfo... members) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNew = null;
@@ -8166,7 +8166,7 @@ public class Expression extends NetObject  {
     /**
      * Invokes the .NET member RuntimeVariables.
      *
-     * @param variables the argument of type {@code IEnumerable_1}
+     * @param variables the argument of type {@code IEnumerable_1<ParameterExpression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -8181,7 +8181,7 @@ public class Expression extends NetObject  {
      * @throws system.TypeInitializationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.RuntimeVariables" target="_top">.NET documentation</a>
      */
-    public static RuntimeVariablesExpression RuntimeVariables(IEnumerable_1 variables) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.TypeInitializationException {
+    public static RuntimeVariablesExpression RuntimeVariables(IEnumerable_1<ParameterExpression> variables) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.TypeInitializationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRuntimeVariables = null;
@@ -8231,7 +8231,7 @@ public class Expression extends NetObject  {
      * Invokes the .NET member SwitchCase.
      *
      * @param body the argument of type {@code Expression}
-     * @param testValues the argument of type {@code IEnumerable_1}
+     * @param testValues the argument of type {@code IEnumerable_1<Expression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -8244,7 +8244,7 @@ public class Expression extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.SwitchCase" target="_top">.NET documentation</a>
      */
-    public static SwitchCase SwitchCase(Expression body, IEnumerable_1 testValues) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static SwitchCase SwitchCase(Expression body, IEnumerable_1<Expression> testValues) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSwitchCase = null;
@@ -8329,7 +8329,7 @@ public class Expression extends NetObject  {
      * @param switchValue the argument of type {@code Expression}
      * @param defaultBody the argument of type {@code Expression}
      * @param comparison the argument of type {@code MethodInfo}
-     * @param cases the argument of type {@code IEnumerable_1}
+     * @param cases the argument of type {@code IEnumerable_1<SwitchCase>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -8343,7 +8343,7 @@ public class Expression extends NetObject  {
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.Switch" target="_top">.NET documentation</a>
      */
-    public static SwitchExpression Switch(Expression switchValue, Expression defaultBody, MethodInfo comparison, IEnumerable_1 cases) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
+    public static SwitchExpression Switch(Expression switchValue, Expression defaultBody, MethodInfo comparison, IEnumerable_1<SwitchCase> cases) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSwitch = null;
@@ -8431,7 +8431,7 @@ public class Expression extends NetObject  {
      * @param switchValue the argument of type {@code Expression}
      * @param defaultBody the argument of type {@code Expression}
      * @param comparison the argument of type {@code MethodInfo}
-     * @param cases the argument of type {@code IEnumerable_1}
+     * @param cases the argument of type {@code IEnumerable_1<SwitchCase>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -8445,7 +8445,7 @@ public class Expression extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.Switch" target="_top">.NET documentation</a>
      */
-    public static SwitchExpression Switch(NetType type, Expression switchValue, Expression defaultBody, MethodInfo comparison, IEnumerable_1 cases) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
+    public static SwitchExpression Switch(NetType type, Expression switchValue, Expression defaultBody, MethodInfo comparison, IEnumerable_1<SwitchCase> cases) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSwitch = null;
@@ -8605,7 +8605,7 @@ public class Expression extends NetObject  {
      * @param body the argument of type {@code Expression}
      * @param _finally the argument of type {@code Expression}
      * @param fault the argument of type {@code Expression}
-     * @param handlers the argument of type {@code IEnumerable_1}
+     * @param handlers the argument of type {@code IEnumerable_1<CatchBlock>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -8618,7 +8618,7 @@ public class Expression extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression.MakeTry" target="_top">.NET documentation</a>
      */
-    public static TryExpression MakeTry(NetType type, Expression body, Expression _finally, Expression fault, IEnumerable_1 handlers) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static TryExpression MakeTry(NetType type, Expression body, Expression _finally, Expression fault, IEnumerable_1<CatchBlock> handlers) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectMakeTry = null;

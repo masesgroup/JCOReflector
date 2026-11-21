@@ -228,7 +228,7 @@ public class Saml2Subject extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2Subject.SubjectConfirmations" target="_top">.NET documentation</a>
      */
-    public Collection_1 getSubjectConfirmations() throws Throwable {
+    public Collection_1<Saml2SubjectConfirmation> getSubjectConfirmations() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSubjectConfirmations = null;

@@ -189,7 +189,7 @@ public class ServiceConfiguration extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceConfiguration.EnableProtocol" target="_top">.NET documentation</a>
      */
-    public Collection_1 EnableProtocol(system.servicemodel.channels.Binding protocol) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NullReferenceException, system.NotSupportedException {
+    public Collection_1<ServiceEndpoint> EnableProtocol(system.servicemodel.channels.Binding protocol) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEnableProtocol = null;
@@ -585,7 +585,7 @@ public class ServiceConfiguration extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceConfiguration.BaseAddresses" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getBaseAddresses() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public ReadOnlyCollection_1<Uri> getBaseAddresses() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectBaseAddresses = null;

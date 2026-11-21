@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.activities.presentation.EditingContext;
 import system.activities.presentation.model.ModelItem;
+import system.EventHandler_1;
+import system.activities.presentation.model.EditingScopeEventArgs;
 
 
 /**
@@ -308,6 +310,40 @@ public class ModelTreeManager extends NetObject  {
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addEditingScopeCompleted.
+     *
+     * @param handler the argument of type {@code EventHandler_1<EditingScopeEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addEditingScopeCompleted(EventHandler_1<EditingScopeEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("EditingScopeCompleted", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeEditingScopeCompleted.
+     *
+     * @param handler the argument of type {@code EventHandler_1<EditingScopeEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeEditingScopeCompleted(EventHandler_1<EditingScopeEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("EditingScopeCompleted", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

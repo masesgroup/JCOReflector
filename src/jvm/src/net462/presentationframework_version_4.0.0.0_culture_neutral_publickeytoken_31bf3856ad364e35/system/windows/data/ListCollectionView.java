@@ -45,6 +45,7 @@ import system.collections.IComparer;
 import system.collections.IComparerImplementation;
 import system.collections.objectmodel.ObservableCollection_1;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.componentmodel.ItemPropertyInfo;
 import system.collections.objectmodel.ReadOnlyObservableCollection_1;
 import system.componentmodel.NewItemPlaceholderPosition;
 import system.componentmodel.SortDescriptionCollection;
@@ -1063,7 +1064,7 @@ public class ListCollectionView extends system.windows.data.CollectionView  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.ListCollectionView.ItemProperties" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getItemProperties() throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ArgumentException, system.security.SecurityException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public ReadOnlyCollection_1<ItemPropertyInfo> getItemProperties() throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ArgumentException, system.security.SecurityException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectItemProperties = null;

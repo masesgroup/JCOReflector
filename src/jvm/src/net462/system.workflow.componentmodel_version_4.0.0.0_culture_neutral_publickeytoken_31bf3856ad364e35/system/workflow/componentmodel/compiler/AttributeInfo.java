@@ -42,6 +42,7 @@ import system.Attribute;
 import system.IServiceProvider;
 import system.IServiceProviderImplementation;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.Object;
 
 
 /**
@@ -267,7 +268,7 @@ public class AttributeInfo extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.AttributeInfo.ArgumentValues" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getArgumentValues() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public ReadOnlyCollection_1<Object> getArgumentValues() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArgumentValues = null;

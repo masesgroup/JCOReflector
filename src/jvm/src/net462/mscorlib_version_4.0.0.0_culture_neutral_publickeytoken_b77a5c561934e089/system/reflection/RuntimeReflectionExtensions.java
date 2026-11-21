@@ -42,10 +42,10 @@ import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
 import system.reflection.EventInfo;
 import system.reflection.FieldInfo;
-import system.reflection.InterfaceMapping;
-import system.reflection.TypeInfo;
 import system.reflection.MethodInfo;
 import system.reflection.PropertyInfo;
+import system.reflection.InterfaceMapping;
+import system.reflection.TypeInfo;
 
 
 /**
@@ -172,7 +172,7 @@ public class RuntimeReflectionExtensions extends NetObject  {
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 GetRuntimeEvents(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static IEnumerable_1<EventInfo> GetRuntimeEvents(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetRuntimeEvents = null;
@@ -197,7 +197,7 @@ public class RuntimeReflectionExtensions extends NetObject  {
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.RuntimeReflectionExtensions.GetRuntimeFields" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 GetRuntimeFields(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static IEnumerable_1<FieldInfo> GetRuntimeFields(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetRuntimeFields = null;
@@ -222,7 +222,7 @@ public class RuntimeReflectionExtensions extends NetObject  {
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.RuntimeReflectionExtensions.GetRuntimeMethods" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 GetRuntimeMethods(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static IEnumerable_1<MethodInfo> GetRuntimeMethods(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetRuntimeMethods = null;
@@ -247,7 +247,7 @@ public class RuntimeReflectionExtensions extends NetObject  {
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 GetRuntimeProperties(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static IEnumerable_1<PropertyInfo> GetRuntimeProperties(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetRuntimeProperties = null;

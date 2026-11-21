@@ -40,19 +40,23 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.reflection.Assembly;
 import system.data.metadata.edm.EnumType;
 import system.data.metadata.edm.StructuralType;
 import system.data.metadata.edm.DataSpace;
 import system.data.metadata.edm.EntityContainer;
 import system.data.metadata.edm.ItemCollection;
 import system.data.metadata.edm.EdmType;
+import system.data.metadata.edm.EdmMember;
 import system.data.metadata.edm.EntitySetBase;
 import system.data.metadata.edm.EntityTypeBase;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.data.metadata.edm.EdmFunction;
+import system.data.metadata.edm.GlobalItem;
+import system.data.metadata.edm.PrimitiveType;
 import system.data.common.commandtrees.DbQueryCommandTree;
 import system.data.common.commandtrees.DbExpression;
 import system.data.common.entitysql.EntitySqlParser;
-import system.reflection.Assembly;
 import system.Action_1;
 
 
@@ -184,7 +188,7 @@ public class MetadataWorkspace extends NetObject  {
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param paths the argument of type {@code IEnumerable_1}
-     * @param assembliesToConsider the argument of type {@code IEnumerable_1}
+     * @param assembliesToConsider the argument of type {@code IEnumerable_1<Assembly>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -209,7 +213,7 @@ public class MetadataWorkspace extends NetObject  {
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.MetadataWorkspace.-ctor" target="_top">.NET documentation</a>
      */
-    public MetadataWorkspace(IEnumerable_1 paths, IEnumerable_1 assembliesToConsider) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.MetadataException, system.NotSupportedException, system.io.FileNotFoundException, system.NullReferenceException, system.MemberAccessException, system.data.ProviderIncompatibleException, system.configuration.ConfigurationErrorsException, system.threading.SynchronizationLockException, system.data.MappingException, system.OutOfMemoryException, system.OverflowException, system.collections.generic.KeyNotFoundException {
+    public MetadataWorkspace(IEnumerable_1 paths, IEnumerable_1<Assembly> assembliesToConsider) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.MetadataException, system.NotSupportedException, system.io.FileNotFoundException, system.NullReferenceException, system.MemberAccessException, system.data.ProviderIncompatibleException, system.configuration.ConfigurationErrorsException, system.threading.SynchronizationLockException, system.data.MappingException, system.OutOfMemoryException, system.OverflowException, system.collections.generic.KeyNotFoundException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -608,7 +612,7 @@ public class MetadataWorkspace extends NetObject  {
      * @throws system.data.MetadataException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.MetadataWorkspace.GetRequiredOriginalValueMembers" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetRequiredOriginalValueMembers(EntitySetBase entitySet, EntityTypeBase entityType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.data.MappingException, system.data.MetadataException {
+    public IEnumerable_1<EdmMember> GetRequiredOriginalValueMembers(EntitySetBase entitySet, EntityTypeBase entityType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.data.MappingException, system.data.MetadataException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetRequiredOriginalValueMembers = null;
@@ -646,7 +650,7 @@ public class MetadataWorkspace extends NetObject  {
      * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.MetadataWorkspace.GetFunctions" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 GetFunctions(java.lang.String name, java.lang.String namespaceName, DataSpace dataSpace) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.data.MappingException, system.OutOfMemoryException, system.data.MetadataException, system.NotSupportedException, system.threading.SynchronizationLockException {
+    public ReadOnlyCollection_1<EdmFunction> GetFunctions(java.lang.String name, java.lang.String namespaceName, DataSpace dataSpace) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.data.MappingException, system.OutOfMemoryException, system.data.MetadataException, system.NotSupportedException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetFunctions = null;
@@ -685,7 +689,7 @@ public class MetadataWorkspace extends NetObject  {
      * @throws system.threading.LockRecursionException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.MetadataWorkspace.GetFunctions" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 GetFunctions(java.lang.String name, java.lang.String namespaceName, DataSpace dataSpace, boolean ignoreCase) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException, system.threading.SynchronizationLockException, system.threading.LockRecursionException {
+    public ReadOnlyCollection_1<EdmFunction> GetFunctions(java.lang.String name, java.lang.String namespaceName, DataSpace dataSpace, boolean ignoreCase) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.data.MappingException, system.data.MetadataException, system.NotSupportedException, system.threading.SynchronizationLockException, system.threading.LockRecursionException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetFunctions = null;
@@ -720,7 +724,7 @@ public class MetadataWorkspace extends NetObject  {
      * @throws system.data.MetadataException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.MetadataWorkspace.GetRelevantMembersForUpdate" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 GetRelevantMembersForUpdate(EntitySetBase entitySet, EntityTypeBase entityType, boolean partialUpdateSupported) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.data.MappingException, system.data.MetadataException {
+    public ReadOnlyCollection_1<EdmMember> GetRelevantMembersForUpdate(EntitySetBase entitySet, EntityTypeBase entityType, boolean partialUpdateSupported) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.data.MappingException, system.data.MetadataException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetRelevantMembersForUpdate = null;
@@ -756,7 +760,7 @@ public class MetadataWorkspace extends NetObject  {
      * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.MetadataWorkspace.GetItems" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 GetItems(DataSpace dataSpace) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.data.MappingException, system.OutOfMemoryException, system.data.MetadataException, system.NotSupportedException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
+    public ReadOnlyCollection_1<GlobalItem> GetItems(DataSpace dataSpace) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.data.MappingException, system.OutOfMemoryException, system.data.MetadataException, system.NotSupportedException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetItems = null;
@@ -792,7 +796,7 @@ public class MetadataWorkspace extends NetObject  {
      * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.MetadataWorkspace.GetPrimitiveTypes" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 GetPrimitiveTypes(DataSpace dataSpace) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.data.MappingException, system.OutOfMemoryException, system.data.MetadataException, system.NotSupportedException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
+    public ReadOnlyCollection_1<PrimitiveType> GetPrimitiveTypes(DataSpace dataSpace) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.data.MappingException, system.OutOfMemoryException, system.data.MetadataException, system.NotSupportedException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetPrimitiveTypes = null;

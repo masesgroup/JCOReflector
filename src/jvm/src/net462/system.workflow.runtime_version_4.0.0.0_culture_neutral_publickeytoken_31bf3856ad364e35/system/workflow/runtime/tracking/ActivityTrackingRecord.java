@@ -45,6 +45,7 @@ import system.DateTime;
 import system.EventArgs;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.workflow.runtime.tracking.TrackingDataItem;
 import system.workflow.runtime.tracking.TrackingAnnotationCollection;
 
 
@@ -211,7 +212,7 @@ public class ActivityTrackingRecord extends system.workflow.runtime.tracking.Tra
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.ActivityTrackingRecord.Body" target="_top">.NET documentation</a>
      */
-    public IList_1 getBody() throws Throwable {
+    public IList_1<TrackingDataItem> getBody() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectBody = null;

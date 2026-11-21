@@ -224,7 +224,7 @@ public class JoinBlock_2<T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeRe
     /**
      * Invokes the .NET member TryReceive.
      *
-     * @param filter the argument of type {@code Predicate_1}
+     * @param filter the argument of type {@code Predicate_1<Tuple_2<T1, T2>>}
      * @param item the argument of type {@code JCORefOut<Tuple_2>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -242,7 +242,7 @@ public class JoinBlock_2<T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeRe
      * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.JoinBlock-2.TryReceive" target="_top">.NET documentation</a>
      */
-    public boolean TryReceive(Predicate_1 filter, JCORefOut<Tuple_2> item) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.LockRecursionException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.ArgumentNullException, system.threading.tasks.TaskSchedulerException {
+    public boolean TryReceive(Predicate_1<Tuple_2<T1, T2>> filter, JCORefOut<Tuple_2> item) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.LockRecursionException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.ArgumentNullException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTryReceive = null;
@@ -293,7 +293,7 @@ public class JoinBlock_2<T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeRe
     /**
      * Invokes the .NET member LinkTo.
      *
-     * @param target the argument of type {@code ITargetBlock_1}
+     * @param target the argument of type {@code ITargetBlock_1<Tuple_2<T1, T2>>}
      * @param linkOptions the argument of type {@code DataflowLinkOptions}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -311,7 +311,7 @@ public class JoinBlock_2<T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeRe
      * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.JoinBlock-2.LinkTo" target="_top">.NET documentation</a>
      */
-    public IDisposable LinkTo(ITargetBlock_1 target, DataflowLinkOptions linkOptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.threading.tasks.TaskSchedulerException {
+    public IDisposable LinkTo(ITargetBlock_1<Tuple_2<T1, T2>> target, DataflowLinkOptions linkOptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectLinkTo = null;
@@ -422,7 +422,7 @@ public class JoinBlock_2<T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeRe
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.JoinBlock-2.Target1" target="_top">.NET documentation</a>
      */
-    public ITargetBlock_1 getTarget1() throws Throwable {
+    public ITargetBlock_1<T1> getTarget1() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTarget1 = null;
@@ -444,7 +444,7 @@ public class JoinBlock_2<T1 extends IJCOBridgeReflected, T2 extends IJCOBridgeRe
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.JoinBlock-2.Target2" target="_top">.NET documentation</a>
      */
-    public ITargetBlock_1 getTarget2() throws Throwable {
+    public ITargetBlock_1<T2> getTarget2() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTarget2 = null;

@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.deployment.application.CompatibleFramework;
 import system.Uri;
 
 
@@ -171,7 +172,7 @@ public class CompatibleFrameworks extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Deployment.Application.CompatibleFrameworks.Frameworks" target="_top">.NET documentation</a>
      */
-    public IList_1 getFrameworks() throws Throwable, system.ArgumentNullException {
+    public IList_1<CompatibleFramework> getFrameworks() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFrameworks = null;

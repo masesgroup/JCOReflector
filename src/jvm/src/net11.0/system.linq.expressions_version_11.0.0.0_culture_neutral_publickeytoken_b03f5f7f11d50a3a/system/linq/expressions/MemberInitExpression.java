@@ -43,6 +43,7 @@ import system.linq.expressions.MemberInitExpression;
 import system.linq.expressions.NewExpression;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.linq.expressions.MemberBinding;
 import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.linq.expressions.ExpressionType;
 
@@ -200,7 +201,7 @@ public class MemberInitExpression extends system.linq.expressions.Expression  {
      * Invokes the .NET member Update.
      *
      * @param newExpression the argument of type {@code NewExpression}
-     * @param bindings the argument of type {@code IEnumerable_1}
+     * @param bindings the argument of type {@code IEnumerable_1<MemberBinding>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -217,7 +218,7 @@ public class MemberInitExpression extends system.linq.expressions.Expression  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.MemberInitExpression.Update" target="_top">.NET documentation</a>
      */
-    public MemberInitExpression Update(NewExpression newExpression, IEnumerable_1 bindings) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.NotSupportedException {
+    public MemberInitExpression Update(NewExpression newExpression, IEnumerable_1<MemberBinding> bindings) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUpdate = null;
@@ -243,7 +244,7 @@ public class MemberInitExpression extends system.linq.expressions.Expression  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.MemberInitExpression.Bindings" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getBindings() throws Throwable {
+    public ReadOnlyCollection_1<MemberBinding> getBindings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectBindings = null;

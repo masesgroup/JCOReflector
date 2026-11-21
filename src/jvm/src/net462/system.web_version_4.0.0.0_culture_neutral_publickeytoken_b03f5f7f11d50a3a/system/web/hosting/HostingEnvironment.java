@@ -42,7 +42,9 @@ import system.MarshalByRefObject;
 import system.IDisposable;
 import system.IDisposableImplementation;
 import system.Action_1;
+import system.threading.CancellationToken;
 import system.Func_2;
+import system.threading.tasks.Task;
 import system.web.hosting.IRegisteredObject;
 import system.web.hosting.IRegisteredObjectImplementation;
 import system.web.hosting.VirtualPathProvider;
@@ -452,7 +454,7 @@ public class HostingEnvironment extends system.MarshalByRefObject  {
     /**
      * Invokes the .NET member QueueBackgroundWorkItem.
      *
-     * @param workItem the argument of type {@code Action_1}
+     * @param workItem the argument of type {@code Action_1<CancellationToken>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
@@ -473,7 +475,7 @@ public class HostingEnvironment extends system.MarshalByRefObject  {
      * @throws system.AggregateException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.HostingEnvironment.QueueBackgroundWorkItem" target="_top">.NET documentation</a>
      */
-    public static void QueueBackgroundWorkItem(Action_1 workItem) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.web.HttpException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.AggregateException {
+    public static void QueueBackgroundWorkItem(Action_1<CancellationToken> workItem) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.security.SecurityException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.web.HttpException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.globalization.CultureNotFoundException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -486,7 +488,7 @@ public class HostingEnvironment extends system.MarshalByRefObject  {
     /**
      * Invokes the .NET member QueueBackgroundWorkItem.
      *
-     * @param workItem the argument of type {@code Func_2}
+     * @param workItem the argument of type {@code Func_2<CancellationToken, Task>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
@@ -515,7 +517,7 @@ public class HostingEnvironment extends system.MarshalByRefObject  {
      * @throws system.AggregateException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.HostingEnvironment.QueueBackgroundWorkItem" target="_top">.NET documentation</a>
      */
-    public static void QueueBackgroundWorkItem(Func_2 workItem) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.security.SecurityException, system.FormatException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.web.HttpException, system.NullReferenceException, system.io.PathTooLongException, system.MemberAccessException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.AggregateException {
+    public static void QueueBackgroundWorkItem(Func_2<CancellationToken, Task> workItem) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.security.SecurityException, system.FormatException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.web.HttpException, system.NullReferenceException, system.io.PathTooLongException, system.MemberAccessException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

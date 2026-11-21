@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.servicemodel.EndpointAddress;
 import system.xml.XmlDictionaryReader;
 import system.collections.objectmodel.Collection_1;
+import system.servicemodel.channels.AddressHeader;
 import system.servicemodel.EndpointIdentity;
 import system.Uri;
 
@@ -386,7 +387,7 @@ public class EndpointAddressBuilder extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.EndpointAddressBuilder.Headers" target="_top">.NET documentation</a>
      */
-    public Collection_1 getHeaders() throws Throwable {
+    public Collection_1<AddressHeader> getHeaders() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectHeaders = null;

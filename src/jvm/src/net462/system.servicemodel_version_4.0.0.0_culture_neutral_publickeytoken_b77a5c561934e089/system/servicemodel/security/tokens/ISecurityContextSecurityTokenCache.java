@@ -121,7 +121,7 @@ public interface ISecurityContextSecurityTokenCache extends IJCOBridgeReflected 
     
     public boolean TryAddContext(SecurityContextSecurityToken token) throws Throwable;
 
-    public Collection_1 GetAllContexts(UniqueId contextId) throws Throwable;
+    public Collection_1<SecurityContextSecurityToken> GetAllContexts(UniqueId contextId) throws Throwable;
 
     public SecurityContextSecurityToken GetContext(UniqueId contextId, UniqueId generation) throws Throwable;
 

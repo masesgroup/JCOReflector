@@ -39,9 +39,10 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.Object;
 import system.xaml.XamlType;
-import system.xaml.XamlMember;
 import system.xaml.AmbientPropertyValue;
+import system.xaml.XamlMember;
 
 
 /**
@@ -120,15 +121,15 @@ public interface IAmbientProvider extends IJCOBridgeReflected {
 
     // Methods section
     
-    public IEnumerable_1 GetAllAmbientValues(XamlType... types) throws Throwable;
+    public IEnumerable_1<Object> GetAllAmbientValues(XamlType... types) throws Throwable;
 
-    public IEnumerable_1 GetAllAmbientValues(IEnumerable_1 ceilingTypes, boolean searchLiveStackOnly, IEnumerable_1 types, XamlMember... properties) throws Throwable;
+    public IEnumerable_1<AmbientPropertyValue> GetAllAmbientValues(IEnumerable_1<XamlType> ceilingTypes, boolean searchLiveStackOnly, IEnumerable_1<XamlType> types, XamlMember... properties) throws Throwable;
 
-    public IEnumerable_1 GetAllAmbientValues(IEnumerable_1 ceilingTypes, XamlMember... properties) throws Throwable;
+    public IEnumerable_1<AmbientPropertyValue> GetAllAmbientValues(IEnumerable_1<XamlType> ceilingTypes, XamlMember... properties) throws Throwable;
 
     public NetObject GetFirstAmbientValue(XamlType... types) throws Throwable;
 
-    public AmbientPropertyValue GetFirstAmbientValue(IEnumerable_1 ceilingTypes, XamlMember... properties) throws Throwable;
+    public AmbientPropertyValue GetFirstAmbientValue(IEnumerable_1<XamlType> ceilingTypes, XamlMember... properties) throws Throwable;
 
 
     

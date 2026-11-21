@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.servicemodel.description.OperationDescription;
 import system.servicemodel.XmlSerializerFormatAttribute;
 import system.collections.objectmodel.Collection_1;
+import system.xml.serialization.XmlMapping;
 import system.servicemodel.channels.BindingParameterCollection;
 import system.servicemodel.dispatcher.ClientOperation;
 import system.servicemodel.dispatcher.DispatchOperation;
@@ -245,7 +246,7 @@ public class XmlSerializerOperationBehavior extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.XmlSerializerOperationBehavior.GetXmlMappings" target="_top">.NET documentation</a>
      */
-    public Collection_1 GetXmlMappings() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException, system.NotSupportedException {
+    public Collection_1<XmlMapping> GetXmlMappings() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetXmlMappings = null;

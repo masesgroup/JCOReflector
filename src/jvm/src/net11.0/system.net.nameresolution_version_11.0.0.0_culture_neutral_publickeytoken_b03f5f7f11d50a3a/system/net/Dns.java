@@ -43,7 +43,14 @@ import system.IAsyncResultImplementation;
 import system.AsyncCallback;
 import system.net.IPAddress;
 import system.net.DnsResult_1;
+import system.net.AddressRecord;
 import system.net.sockets.AddressFamily;
+import system.net.CNameRecord;
+import system.net.MxRecord;
+import system.net.NsRecord;
+import system.net.PtrRecord;
+import system.net.SrvRecord;
+import system.net.TxtRecord;
 import system.net.IPHostEntry;
 import system.threading.tasks.Task_1;
 import system.threading.CancellationToken;
@@ -387,7 +394,7 @@ public class Dns extends NetObject  {
      * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Dns.ResolveAddresses" target="_top">.NET documentation</a>
      */
-    public static DnsResult_1 ResolveAddresses(java.lang.String name, AddressFamily addressFamily) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.diagnostics.UnreachableException, system.OperationCanceledException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.ArrayTypeMismatchException, system.threading.tasks.TaskSchedulerException {
+    public static DnsResult_1<AddressRecord> ResolveAddresses(java.lang.String name, AddressFamily addressFamily) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.diagnostics.UnreachableException, system.OperationCanceledException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.ArrayTypeMismatchException, system.threading.tasks.TaskSchedulerException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectResolveAddresses = null;
@@ -421,7 +428,7 @@ public class Dns extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Dns.ResolveAddresses" target="_top">.NET documentation</a>
      */
-    public static DnsResult_1 ResolveAddresses(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OperationCanceledException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidOperationException {
+    public static DnsResult_1<AddressRecord> ResolveAddresses(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OperationCanceledException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectResolveAddresses = null;
@@ -456,7 +463,7 @@ public class Dns extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Dns.ResolveCName" target="_top">.NET documentation</a>
      */
-    public static DnsResult_1 ResolveCName(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NullReferenceException, system.NotSupportedException {
+    public static DnsResult_1<CNameRecord> ResolveCName(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NullReferenceException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectResolveCName = null;
@@ -491,7 +498,7 @@ public class Dns extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Dns.ResolveMx" target="_top">.NET documentation</a>
      */
-    public static DnsResult_1 ResolveMx(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NullReferenceException, system.NotSupportedException {
+    public static DnsResult_1<MxRecord> ResolveMx(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NullReferenceException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectResolveMx = null;
@@ -526,7 +533,7 @@ public class Dns extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Dns.ResolveNs" target="_top">.NET documentation</a>
      */
-    public static DnsResult_1 ResolveNs(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NullReferenceException, system.NotSupportedException {
+    public static DnsResult_1<NsRecord> ResolveNs(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NullReferenceException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectResolveNs = null;
@@ -564,7 +571,7 @@ public class Dns extends NetObject  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Dns.ResolvePtr" target="_top">.NET documentation</a>
      */
-    public static DnsResult_1 ResolvePtr(IPAddress address) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.diagnostics.UnreachableException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NullReferenceException {
+    public static DnsResult_1<PtrRecord> ResolvePtr(IPAddress address) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.diagnostics.UnreachableException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectResolvePtr = null;
@@ -599,7 +606,7 @@ public class Dns extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Dns.ResolvePtr" target="_top">.NET documentation</a>
      */
-    public static DnsResult_1 ResolvePtr(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NullReferenceException, system.NotSupportedException {
+    public static DnsResult_1<PtrRecord> ResolvePtr(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NullReferenceException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectResolvePtr = null;
@@ -633,7 +640,7 @@ public class Dns extends NetObject  {
      * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Dns.ResolveSrv" target="_top">.NET documentation</a>
      */
-    public static DnsResult_1 ResolveSrv(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.NotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException {
+    public static DnsResult_1<SrvRecord> ResolveSrv(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.NotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectResolveSrv = null;
@@ -668,7 +675,7 @@ public class Dns extends NetObject  {
      * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Dns.ResolveTxt" target="_top">.NET documentation</a>
      */
-    public static DnsResult_1 ResolveTxt(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.NotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.OperationCanceledException, system.AccessViolationException, system.diagnostics.tracing.EventSourceException {
+    public static DnsResult_1<TxtRecord> ResolveTxt(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.NotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.OperationCanceledException, system.AccessViolationException, system.diagnostics.tracing.EventSourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectResolveTxt = null;
@@ -1231,7 +1238,7 @@ public class Dns extends NetObject  {
      * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Dns.ResolveAddressesAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 ResolveAddressesAsync(java.lang.String name, AddressFamily addressFamily, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.diagnostics.UnreachableException, system.OperationCanceledException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.ArrayTypeMismatchException, system.threading.tasks.TaskSchedulerException {
+    public static Task_1<DnsResult_1<AddressRecord>> ResolveAddressesAsync(java.lang.String name, AddressFamily addressFamily, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.diagnostics.UnreachableException, system.OperationCanceledException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.ArrayTypeMismatchException, system.threading.tasks.TaskSchedulerException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectResolveAddressesAsync = null;
@@ -1266,7 +1273,7 @@ public class Dns extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Dns.ResolveAddressesAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 ResolveAddressesAsync(java.lang.String name, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OperationCanceledException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidOperationException {
+    public static Task_1<DnsResult_1<AddressRecord>> ResolveAddressesAsync(java.lang.String name, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OperationCanceledException, system.diagnostics.UnreachableException, system.OutOfMemoryException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectResolveAddressesAsync = null;
@@ -1302,7 +1309,7 @@ public class Dns extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Dns.ResolveCNameAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 ResolveCNameAsync(java.lang.String name, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NullReferenceException, system.NotSupportedException {
+    public static Task_1<DnsResult_1<CNameRecord>> ResolveCNameAsync(java.lang.String name, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NullReferenceException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectResolveCNameAsync = null;
@@ -1338,7 +1345,7 @@ public class Dns extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Dns.ResolveMxAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 ResolveMxAsync(java.lang.String name, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NullReferenceException, system.NotSupportedException {
+    public static Task_1<DnsResult_1<MxRecord>> ResolveMxAsync(java.lang.String name, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NullReferenceException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectResolveMxAsync = null;
@@ -1374,7 +1381,7 @@ public class Dns extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Dns.ResolveNsAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 ResolveNsAsync(java.lang.String name, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NullReferenceException, system.NotSupportedException {
+    public static Task_1<DnsResult_1<NsRecord>> ResolveNsAsync(java.lang.String name, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NullReferenceException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectResolveNsAsync = null;
@@ -1413,7 +1420,7 @@ public class Dns extends NetObject  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Dns.ResolvePtrAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 ResolvePtrAsync(IPAddress address, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.diagnostics.UnreachableException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NullReferenceException {
+    public static Task_1<DnsResult_1<PtrRecord>> ResolvePtrAsync(IPAddress address, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.diagnostics.UnreachableException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectResolvePtrAsync = null;
@@ -1449,7 +1456,7 @@ public class Dns extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Dns.ResolvePtrAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 ResolvePtrAsync(java.lang.String name, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NullReferenceException, system.NotSupportedException {
+    public static Task_1<DnsResult_1<PtrRecord>> ResolvePtrAsync(java.lang.String name, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.diagnostics.UnreachableException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NullReferenceException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectResolvePtrAsync = null;
@@ -1484,7 +1491,7 @@ public class Dns extends NetObject  {
      * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Dns.ResolveSrvAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 ResolveSrvAsync(java.lang.String name, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.NotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException {
+    public static Task_1<DnsResult_1<SrvRecord>> ResolveSrvAsync(java.lang.String name, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.NotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectResolveSrvAsync = null;
@@ -1520,7 +1527,7 @@ public class Dns extends NetObject  {
      * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Dns.ResolveTxtAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 ResolveTxtAsync(java.lang.String name, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.NotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.OperationCanceledException, system.AccessViolationException, system.diagnostics.tracing.EventSourceException {
+    public static Task_1<DnsResult_1<TxtRecord>> ResolveTxtAsync(java.lang.String name, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.NotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.OperationCanceledException, system.AccessViolationException, system.diagnostics.tracing.EventSourceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectResolveTxtAsync = null;
@@ -1679,7 +1686,7 @@ public class Dns extends NetObject  {
      * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Dns.GetHostEntryAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 GetHostEntryAsync(IPAddress address) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException, system.net.sockets.SocketException, system.threading.tasks.TaskSchedulerException {
+    public static Task_1<IPHostEntry> GetHostEntryAsync(IPAddress address) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException, system.net.sockets.SocketException, system.threading.tasks.TaskSchedulerException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetHostEntryAsync = null;
@@ -1721,7 +1728,7 @@ public class Dns extends NetObject  {
      * @throws system.RankException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Dns.GetHostEntryAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 GetHostEntryAsync(java.lang.String hostNameOrAddress, AddressFamily family, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.diagnostics.UnreachableException, system.globalization.CultureNotFoundException, system.net.sockets.SocketException, system.EntryPointNotFoundException, system.ObjectDisposedException, system.RankException {
+    public static Task_1<IPHostEntry> GetHostEntryAsync(java.lang.String hostNameOrAddress, AddressFamily family, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.diagnostics.UnreachableException, system.globalization.CultureNotFoundException, system.net.sockets.SocketException, system.EntryPointNotFoundException, system.ObjectDisposedException, system.RankException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetHostEntryAsync = null;
@@ -1760,7 +1767,7 @@ public class Dns extends NetObject  {
      * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Dns.GetHostEntryAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 GetHostEntryAsync(java.lang.String hostNameOrAddress, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.NullReferenceException, system.net.sockets.SocketException, system.EntryPointNotFoundException, system.diagnostics.UnreachableException, system.threading.tasks.TaskSchedulerException {
+    public static Task_1<IPHostEntry> GetHostEntryAsync(java.lang.String hostNameOrAddress, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.NullReferenceException, system.net.sockets.SocketException, system.EntryPointNotFoundException, system.diagnostics.UnreachableException, system.threading.tasks.TaskSchedulerException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetHostEntryAsync = null;
@@ -1798,7 +1805,7 @@ public class Dns extends NetObject  {
      * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Dns.GetHostEntryAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 GetHostEntryAsync(java.lang.String hostNameOrAddress) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.NullReferenceException, system.net.sockets.SocketException, system.EntryPointNotFoundException, system.diagnostics.UnreachableException, system.threading.tasks.TaskSchedulerException {
+    public static Task_1<IPHostEntry> GetHostEntryAsync(java.lang.String hostNameOrAddress) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.NullReferenceException, system.net.sockets.SocketException, system.EntryPointNotFoundException, system.diagnostics.UnreachableException, system.threading.tasks.TaskSchedulerException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetHostEntryAsync = null;

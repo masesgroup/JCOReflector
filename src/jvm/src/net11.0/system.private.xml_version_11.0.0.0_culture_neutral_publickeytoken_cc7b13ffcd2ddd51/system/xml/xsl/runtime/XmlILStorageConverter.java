@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.xml.xpath.XPathItem;
+import system.xml.xpath.XPathNavigator;
 import system.xml.schema.XmlAtomicValue;
 import system.xml.xsl.runtime.XmlQueryRuntime;
 import system.DateTime;
@@ -166,13 +168,13 @@ public class XmlILStorageConverter extends NetObject  {
     /**
      * Invokes the .NET member NavigatorsToItems.
      *
-     * @param listNavigators the argument of type {@code IList_1}
+     * @param listNavigators the argument of type {@code IList_1<XPathNavigator>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlILStorageConverter.NavigatorsToItems" target="_top">.NET documentation</a>
      */
-    public static IList_1 NavigatorsToItems(IList_1 listNavigators) throws Throwable, system.ArgumentOutOfRangeException {
+    public static IList_1<XPathItem> NavigatorsToItems(IList_1<XPathNavigator> listNavigators) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNavigatorsToItems = null;
@@ -190,14 +192,14 @@ public class XmlILStorageConverter extends NetObject  {
     /**
      * Invokes the .NET member ItemsToNavigators.
      *
-     * @param listItems the argument of type {@code IList_1}
+     * @param listItems the argument of type {@code IList_1<XPathItem>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlILStorageConverter.ItemsToNavigators" target="_top">.NET documentation</a>
      */
-    public static IList_1 ItemsToNavigators(IList_1 listItems) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static IList_1<XPathNavigator> ItemsToNavigators(IList_1<XPathItem> listItems) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectItemsToNavigators = null;

@@ -41,6 +41,9 @@ import java.util.ArrayList;
 import system.activities.LocationReferenceEnvironment;
 import system.collections.generic.IDictionary_2;
 import system.collections.generic.IDictionary_2Implementation;
+import system.collections.generic.IList_1;
+import system.collections.generic.IList_1Implementation;
+import system.activities.validation.Constraint;
 import system.threading.CancellationToken;
 
 
@@ -376,7 +379,7 @@ public class ValidationSettings extends NetObject  {
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.ValidationSettings.AdditionalConstraints" target="_top">.NET documentation</a>
      */
-    public IDictionary_2 getAdditionalConstraints() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public IDictionary_2<NetType, IList_1<Constraint>> getAdditionalConstraints() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAdditionalConstraints = null;

@@ -40,8 +40,12 @@ import java.util.ArrayList;
 // Import section
 import system.activities.Activity;
 import system.activities.InArgument_1;
+import system.servicemodel.activities.CorrelationHandle;
+import system.Uri;
 import system.collections.objectmodel.Collection_1;
+import system.servicemodel.activities.CorrelationInitializer;
 import system.Nullable_1;
+import system.net.security.ProtectionLevel;
 import system.security.principal.TokenImpersonationLevel;
 import system.servicemodel.activities.SendContent;
 import system.servicemodel.activities.SerializerOption;
@@ -194,7 +198,7 @@ public class Send extends system.activities.Activity  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Send.CorrelatesWith" target="_top">.NET documentation</a>
      */
-    public InArgument_1 getCorrelatesWith() throws Throwable {
+    public InArgument_1<CorrelationHandle> getCorrelatesWith() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCorrelatesWith = null;
@@ -216,7 +220,7 @@ public class Send extends system.activities.Activity  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Send.CorrelatesWith" target="_top">.NET documentation</a>
      */
-    public void setCorrelatesWith(InArgument_1 CorrelatesWith) throws Throwable {
+    public void setCorrelatesWith(InArgument_1<CorrelationHandle> CorrelatesWith) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -233,7 +237,7 @@ public class Send extends system.activities.Activity  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Send.EndpointAddress" target="_top">.NET documentation</a>
      */
-    public InArgument_1 getEndpointAddress() throws Throwable {
+    public InArgument_1<Uri> getEndpointAddress() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEndpointAddress = null;
@@ -255,7 +259,7 @@ public class Send extends system.activities.Activity  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Send.EndpointAddress" target="_top">.NET documentation</a>
      */
-    public void setEndpointAddress(InArgument_1 EndpointAddress) throws Throwable {
+    public void setEndpointAddress(InArgument_1<Uri> EndpointAddress) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -272,7 +276,7 @@ public class Send extends system.activities.Activity  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Send.CorrelationInitializers" target="_top">.NET documentation</a>
      */
-    public Collection_1 getCorrelationInitializers() throws Throwable {
+    public Collection_1<CorrelationInitializer> getCorrelationInitializers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCorrelationInitializers = null;
@@ -294,7 +298,7 @@ public class Send extends system.activities.Activity  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Send.KnownTypes" target="_top">.NET documentation</a>
      */
-    public Collection_1 getKnownTypes() throws Throwable {
+    public Collection_1<NetType> getKnownTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectKnownTypes = null;
@@ -316,7 +320,7 @@ public class Send extends system.activities.Activity  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Send.ProtectionLevel" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getProtectionLevel() throws Throwable {
+    public Nullable_1<ProtectionLevel> getProtectionLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectProtectionLevel = null;
@@ -338,7 +342,7 @@ public class Send extends system.activities.Activity  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Send.ProtectionLevel" target="_top">.NET documentation</a>
      */
-    public void setProtectionLevel(Nullable_1 ProtectionLevel) throws Throwable {
+    public void setProtectionLevel(Nullable_1<ProtectionLevel> ProtectionLevel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

@@ -42,6 +42,7 @@ import system.data.metadata.edm.SimpleType;
 import system.data.metadata.edm.BuiltInTypeKind;
 import system.data.metadata.edm.PrimitiveType;
 import system.data.metadata.edm.ReadOnlyMetadataCollection_1;
+import system.data.metadata.edm.EnumMember;
 
 
 /**
@@ -214,7 +215,7 @@ public class EnumType extends system.data.metadata.edm.SimpleType  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EnumType.Members" target="_top">.NET documentation</a>
      */
-    public ReadOnlyMetadataCollection_1 getMembers() throws Throwable {
+    public ReadOnlyMetadataCollection_1<EnumMember> getMembers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectMembers = null;

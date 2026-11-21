@@ -43,6 +43,7 @@ import system.componentmodel.IBindingList;
 import system.componentmodel.IBindingListImplementation;
 import system.collections.objectmodel.ObservableCollection_1;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.componentmodel.ItemPropertyInfo;
 import system.collections.objectmodel.ReadOnlyObservableCollection_1;
 import system.componentmodel.NewItemPlaceholderPosition;
 import system.componentmodel.SortDescriptionCollection;
@@ -967,7 +968,7 @@ public class BindingListCollectionView extends system.windows.data.CollectionVie
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.BindingListCollectionView.ItemProperties" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getItemProperties() throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ArgumentException, system.security.SecurityException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public ReadOnlyCollection_1<ItemPropertyInfo> getItemProperties() throws Throwable, system.NotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ArgumentException, system.security.SecurityException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectItemProperties = null;

@@ -121,7 +121,7 @@ public interface IDesignerDebugView extends IJCOBridgeReflected {
     
     public SourceLocation GetExactLocation(SourceLocation approximateLocation) throws Throwable;
 
-    public IDictionary_2 GetBreakpointLocations() throws Throwable;
+    public IDictionary_2<SourceLocation, BreakpointTypes> GetBreakpointLocations() throws Throwable;
 
     public void DeleteBreakpoint(SourceLocation sourceLocation) throws Throwable;
 

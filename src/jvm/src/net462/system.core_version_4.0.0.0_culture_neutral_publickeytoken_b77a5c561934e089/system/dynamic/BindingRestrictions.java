@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.dynamic.BindingRestrictions;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.dynamic.DynamicMetaObject;
 import system.linq.expressions.Expression;
 
 
@@ -161,13 +162,13 @@ public class BindingRestrictions extends NetObject  {
     /**
      * Invokes the .NET member Combine.
      *
-     * @param contributingObjects the argument of type {@code IList_1}
+     * @param contributingObjects the argument of type {@code IList_1<DynamicMetaObject>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Dynamic.BindingRestrictions.Combine" target="_top">.NET documentation</a>
      */
-    public static BindingRestrictions Combine(IList_1 contributingObjects) throws Throwable, system.ArgumentNullException {
+    public static BindingRestrictions Combine(IList_1<DynamicMetaObject> contributingObjects) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCombine = null;

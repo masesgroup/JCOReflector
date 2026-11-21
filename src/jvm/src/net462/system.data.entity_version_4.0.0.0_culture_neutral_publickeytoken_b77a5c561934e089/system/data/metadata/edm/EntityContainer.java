@@ -43,6 +43,8 @@ import system.data.metadata.edm.EntitySet;
 import system.data.metadata.edm.RelationshipSet;
 import system.data.metadata.edm.BuiltInTypeKind;
 import system.data.metadata.edm.ReadOnlyMetadataCollection_1;
+import system.data.metadata.edm.EdmFunction;
+import system.data.metadata.edm.EntitySetBase;
 
 
 /**
@@ -299,7 +301,7 @@ public class EntityContainer extends system.data.metadata.edm.GlobalItem  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EntityContainer.FunctionImports" target="_top">.NET documentation</a>
      */
-    public ReadOnlyMetadataCollection_1 getFunctionImports() throws Throwable {
+    public ReadOnlyMetadataCollection_1<EdmFunction> getFunctionImports() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFunctionImports = null;
@@ -321,7 +323,7 @@ public class EntityContainer extends system.data.metadata.edm.GlobalItem  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EntityContainer.BaseEntitySets" target="_top">.NET documentation</a>
      */
-    public ReadOnlyMetadataCollection_1 getBaseEntitySets() throws Throwable {
+    public ReadOnlyMetadataCollection_1<EntitySetBase> getBaseEntitySets() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectBaseEntitySets = null;

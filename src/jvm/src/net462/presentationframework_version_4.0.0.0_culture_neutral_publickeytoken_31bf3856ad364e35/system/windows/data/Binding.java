@@ -42,7 +42,9 @@ import system.windows.data.BindingBase;
 import system.xml.XmlNamespaceManager;
 import system.windows.DependencyObject;
 import system.EventHandler_1;
+import system.windows.data.DataTransferEventArgs;
 import system.collections.objectmodel.Collection_1;
+import system.windows.controls.ValidationRule;
 import system.globalization.CultureInfo;
 import system.windows.data.BindingMode;
 import system.windows.data.IValueConverter;
@@ -313,7 +315,7 @@ public class Binding extends system.windows.data.BindingBase  {
      * Invokes the .NET member AddSourceUpdatedHandler.
      *
      * @param element the argument of type {@code DependencyObject}
-     * @param handler the argument of type {@code EventHandler_1}
+     * @param handler the argument of type {@code EventHandler_1<DataTransferEventArgs>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.resources.MissingManifestResourceException if the .NET member raises it
@@ -324,7 +326,7 @@ public class Binding extends system.windows.data.BindingBase  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.Binding.AddSourceUpdatedHandler" target="_top">.NET documentation</a>
      */
-    public static void AddSourceUpdatedHandler(DependencyObject element, EventHandler_1 handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static void AddSourceUpdatedHandler(DependencyObject element, EventHandler_1<DataTransferEventArgs> handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -338,7 +340,7 @@ public class Binding extends system.windows.data.BindingBase  {
      * Invokes the .NET member AddTargetUpdatedHandler.
      *
      * @param element the argument of type {@code DependencyObject}
-     * @param handler the argument of type {@code EventHandler_1}
+     * @param handler the argument of type {@code EventHandler_1<DataTransferEventArgs>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.resources.MissingManifestResourceException if the .NET member raises it
@@ -349,7 +351,7 @@ public class Binding extends system.windows.data.BindingBase  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.Binding.AddTargetUpdatedHandler" target="_top">.NET documentation</a>
      */
-    public static void AddTargetUpdatedHandler(DependencyObject element, EventHandler_1 handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static void AddTargetUpdatedHandler(DependencyObject element, EventHandler_1<DataTransferEventArgs> handler) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -363,7 +365,7 @@ public class Binding extends system.windows.data.BindingBase  {
      * Invokes the .NET member RemoveSourceUpdatedHandler.
      *
      * @param element the argument of type {@code DependencyObject}
-     * @param handler the argument of type {@code EventHandler_1}
+     * @param handler the argument of type {@code EventHandler_1<DataTransferEventArgs>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
@@ -375,7 +377,7 @@ public class Binding extends system.windows.data.BindingBase  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.Binding.RemoveSourceUpdatedHandler" target="_top">.NET documentation</a>
      */
-    public static void RemoveSourceUpdatedHandler(DependencyObject element, EventHandler_1 handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static void RemoveSourceUpdatedHandler(DependencyObject element, EventHandler_1<DataTransferEventArgs> handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -389,7 +391,7 @@ public class Binding extends system.windows.data.BindingBase  {
      * Invokes the .NET member RemoveTargetUpdatedHandler.
      *
      * @param element the argument of type {@code DependencyObject}
-     * @param handler the argument of type {@code EventHandler_1}
+     * @param handler the argument of type {@code EventHandler_1<DataTransferEventArgs>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
@@ -401,7 +403,7 @@ public class Binding extends system.windows.data.BindingBase  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.Binding.RemoveTargetUpdatedHandler" target="_top">.NET documentation</a>
      */
-    public static void RemoveTargetUpdatedHandler(DependencyObject element, EventHandler_1 handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static void RemoveTargetUpdatedHandler(DependencyObject element, EventHandler_1<DataTransferEventArgs> handler) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -816,7 +818,7 @@ public class Binding extends system.windows.data.BindingBase  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.Binding.ValidationRules" target="_top">.NET documentation</a>
      */
-    public Collection_1 getValidationRules() throws Throwable {
+    public Collection_1<ValidationRule> getValidationRules() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValidationRules = null;

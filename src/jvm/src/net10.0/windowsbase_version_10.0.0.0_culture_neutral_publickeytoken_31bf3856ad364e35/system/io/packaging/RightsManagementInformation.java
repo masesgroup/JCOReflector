@@ -40,9 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IDictionary_2;
 import system.collections.generic.IDictionary_2Implementation;
-import system.security.rightsmanagement.PublishLicense;
-import system.security.rightsmanagement.UseLicense;
 import system.security.rightsmanagement.ContentUser;
+import system.security.rightsmanagement.UseLicense;
+import system.security.rightsmanagement.PublishLicense;
 import system.security.rightsmanagement.CryptoProvider;
 
 
@@ -185,7 +185,7 @@ public class RightsManagementInformation extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.RightsManagementInformation.GetEmbeddedUseLicenses" target="_top">.NET documentation</a>
      */
-    public IDictionary_2 GetEmbeddedUseLicenses() throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.InvalidOperationException, system.NotSupportedException, system.io.FileFormatException, system.FormatException, system.globalization.CultureNotFoundException, system.security.rightsmanagement.RightsManagementException, system.OverflowException, system.ArgumentNullException {
+    public IDictionary_2<ContentUser, UseLicense> GetEmbeddedUseLicenses() throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.InvalidOperationException, system.NotSupportedException, system.io.FileFormatException, system.FormatException, system.globalization.CultureNotFoundException, system.security.rightsmanagement.RightsManagementException, system.OverflowException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetEmbeddedUseLicenses = null;

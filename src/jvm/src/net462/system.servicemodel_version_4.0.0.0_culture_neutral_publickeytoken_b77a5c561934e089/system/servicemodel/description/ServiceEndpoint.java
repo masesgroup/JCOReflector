@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.servicemodel.description.ContractDescription;
 import system.servicemodel.EndpointAddress;
 import system.collections.generic.KeyedByTypeCollection_1;
+import system.servicemodel.description.IEndpointBehavior;
+import system.servicemodel.description.IEndpointBehaviorImplementation;
 import system.collections.objectmodel.KeyedCollection_2;
 import system.servicemodel.description.ListenUriMode;
 import system.Uri;
@@ -270,7 +272,7 @@ public class ServiceEndpoint extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceEndpoint.Behaviors" target="_top">.NET documentation</a>
      */
-    public KeyedByTypeCollection_1 getBehaviors() throws Throwable, system.ArgumentOutOfRangeException {
+    public KeyedByTypeCollection_1<IEndpointBehavior> getBehaviors() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectBehaviors = null;
@@ -293,7 +295,7 @@ public class ServiceEndpoint extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceEndpoint.EndpointBehaviors" target="_top">.NET documentation</a>
      */
-    public KeyedCollection_2 getEndpointBehaviors() throws Throwable, system.ArgumentOutOfRangeException {
+    public KeyedCollection_2<NetType, IEndpointBehavior> getEndpointBehaviors() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEndpointBehaviors = null;

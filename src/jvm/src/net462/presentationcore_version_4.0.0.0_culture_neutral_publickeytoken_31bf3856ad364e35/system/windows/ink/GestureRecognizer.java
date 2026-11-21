@@ -41,7 +41,9 @@ import java.util.ArrayList;
 import system.windows.DependencyObject;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.windows.ink.ApplicationGesture;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.windows.ink.GestureRecognitionResult;
 import system.windows.ink.StrokeCollection;
 
 
@@ -181,7 +183,7 @@ public class GestureRecognizer extends system.windows.DependencyObject implement
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param enabledApplicationGestures the argument of type {@code IEnumerable_1}
+     * @param enabledApplicationGestures the argument of type {@code IEnumerable_1<ApplicationGesture>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -195,7 +197,7 @@ public class GestureRecognizer extends system.windows.DependencyObject implement
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Ink.GestureRecognizer.-ctor" target="_top">.NET documentation</a>
      */
-    public GestureRecognizer(IEnumerable_1 enabledApplicationGestures) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.FormatException, system.ObjectDisposedException {
+    public GestureRecognizer(IEnumerable_1<ApplicationGesture> enabledApplicationGestures) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.FormatException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -223,7 +225,7 @@ public class GestureRecognizer extends system.windows.DependencyObject implement
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Ink.GestureRecognizer.GetEnabledGestures" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 GetEnabledGestures() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
+    public ReadOnlyCollection_1<ApplicationGesture> GetEnabledGestures() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetEnabledGestures = null;
@@ -256,7 +258,7 @@ public class GestureRecognizer extends system.windows.DependencyObject implement
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Ink.GestureRecognizer.Recognize" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 Recognize(StrokeCollection strokes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public ReadOnlyCollection_1<GestureRecognitionResult> Recognize(StrokeCollection strokes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRecognize = null;
@@ -297,7 +299,7 @@ public class GestureRecognizer extends system.windows.DependencyObject implement
     /**
      * Invokes the .NET member SetEnabledGestures.
      *
-     * @param applicationGestures the argument of type {@code IEnumerable_1}
+     * @param applicationGestures the argument of type {@code IEnumerable_1<ApplicationGesture>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.FormatException if the .NET member raises it
@@ -309,7 +311,7 @@ public class GestureRecognizer extends system.windows.DependencyObject implement
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Ink.GestureRecognizer.SetEnabledGestures" target="_top">.NET documentation</a>
      */
-    public void SetEnabledGestures(IEnumerable_1 applicationGestures) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public void SetEnabledGestures(IEnumerable_1<ApplicationGesture> applicationGestures) throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

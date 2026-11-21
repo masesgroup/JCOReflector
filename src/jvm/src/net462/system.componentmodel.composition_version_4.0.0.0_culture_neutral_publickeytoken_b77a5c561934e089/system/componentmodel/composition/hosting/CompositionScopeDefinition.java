@@ -41,7 +41,13 @@ import java.util.ArrayList;
 import system.componentmodel.composition.primitives.ComposablePartCatalog;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.componentmodel.composition.hosting.CompositionScopeDefinition;
+import system.componentmodel.composition.primitives.ExportDefinition;
+import system.Tuple_2;
+import system.componentmodel.composition.primitives.ComposablePartDefinition;
 import system.componentmodel.composition.primitives.ImportDefinition;
+import system.EventHandler_1;
+import system.componentmodel.composition.hosting.ComposablePartCatalogChangeEventArgs;
 
 
 /**
@@ -159,14 +165,14 @@ public class CompositionScopeDefinition extends system.componentmodel.compositio
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param catalog the argument of type {@code ComposablePartCatalog}
-     * @param children the argument of type {@code IEnumerable_1}
+     * @param children the argument of type {@code IEnumerable_1<CompositionScopeDefinition>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.resources.MissingManifestResourceException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.CompositionScopeDefinition.-ctor" target="_top">.NET documentation</a>
      */
-    public CompositionScopeDefinition(ComposablePartCatalog catalog, IEnumerable_1 children) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException {
+    public CompositionScopeDefinition(ComposablePartCatalog catalog, IEnumerable_1<CompositionScopeDefinition> children) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -180,15 +186,15 @@ public class CompositionScopeDefinition extends system.componentmodel.compositio
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param catalog the argument of type {@code ComposablePartCatalog}
-     * @param children the argument of type {@code IEnumerable_1}
-     * @param publicSurface the argument of type {@code IEnumerable_1}
+     * @param children the argument of type {@code IEnumerable_1<CompositionScopeDefinition>}
+     * @param publicSurface the argument of type {@code IEnumerable_1<ExportDefinition>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.resources.MissingManifestResourceException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.CompositionScopeDefinition.-ctor" target="_top">.NET documentation</a>
      */
-    public CompositionScopeDefinition(ComposablePartCatalog catalog, IEnumerable_1 children, IEnumerable_1 publicSurface) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException {
+    public CompositionScopeDefinition(ComposablePartCatalog catalog, IEnumerable_1<CompositionScopeDefinition> children, IEnumerable_1<ExportDefinition> publicSurface) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -220,7 +226,7 @@ public class CompositionScopeDefinition extends system.componentmodel.compositio
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.CompositionScopeDefinition.GetExports" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetExports(ImportDefinition definition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
+    public IEnumerable_1<Tuple_2<ComposablePartDefinition, ExportDefinition>> GetExports(ImportDefinition definition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetExports = null;
@@ -251,7 +257,7 @@ public class CompositionScopeDefinition extends system.componentmodel.compositio
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.CompositionScopeDefinition.Children" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getChildren() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+    public IEnumerable_1<CompositionScopeDefinition> getChildren() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectChildren = null;
@@ -278,7 +284,7 @@ public class CompositionScopeDefinition extends system.componentmodel.compositio
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.CompositionScopeDefinition.PublicSurface" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getPublicSurface() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+    public IEnumerable_1<ExportDefinition> getPublicSurface() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPublicSurface = null;
@@ -297,6 +303,74 @@ public class CompositionScopeDefinition extends system.componentmodel.compositio
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ComposablePartCatalogChangeEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addChanged(EventHandler_1<ComposablePartCatalogChangeEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("Changed", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ComposablePartCatalogChangeEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeChanged(EventHandler_1<ComposablePartCatalogChangeEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("Changed", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addChanging.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ComposablePartCatalogChangeEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addChanging(EventHandler_1<ComposablePartCatalogChangeEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("Changing", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeChanging.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ComposablePartCatalogChangeEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeChanging(EventHandler_1<ComposablePartCatalogChangeEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("Changing", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

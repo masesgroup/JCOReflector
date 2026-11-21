@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.windows.Rect;
 import system.windows.ContentElement;
 import system.windows.IInputElement;
 import system.windows.IInputElementImplementation;
@@ -159,7 +160,7 @@ public class IContentHostImplementation extends NetObject implements IContentHos
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.IContentHost.GetRectangles" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 GetRectangles(ContentElement child) throws Throwable {
+    public ReadOnlyCollection_1<Rect> GetRectangles(ContentElement child) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetRectangles = null;
@@ -225,7 +226,7 @@ public class IContentHostImplementation extends NetObject implements IContentHos
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.IContentHost.HostedElements" target="_top">.NET documentation</a>
      */
-    public IEnumerator_1 getHostedElements() throws Throwable {
+    public IEnumerator_1<IInputElement> getHostedElements() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectHostedElements = null;

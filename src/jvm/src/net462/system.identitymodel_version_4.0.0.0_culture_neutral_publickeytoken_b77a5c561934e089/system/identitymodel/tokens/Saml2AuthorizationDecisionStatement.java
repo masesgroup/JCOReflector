@@ -43,6 +43,7 @@ import system.Uri;
 import system.identitymodel.tokens.SamlAccessDecision;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.identitymodel.tokens.Saml2Action;
 import system.collections.objectmodel.Collection_1;
 import system.identitymodel.tokens.Saml2Evidence;
 
@@ -194,7 +195,7 @@ public class Saml2AuthorizationDecisionStatement extends system.identitymodel.to
      *
      * @param resource the argument of type {@code Uri}
      * @param decision the argument of type {@code SamlAccessDecision}
-     * @param actions the argument of type {@code IEnumerable_1}
+     * @param actions the argument of type {@code IEnumerable_1<Saml2Action>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -210,7 +211,7 @@ public class Saml2AuthorizationDecisionStatement extends system.identitymodel.to
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement.-ctor" target="_top">.NET documentation</a>
      */
-    public Saml2AuthorizationDecisionStatement(Uri resource, SamlAccessDecision decision, IEnumerable_1 actions) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+    public Saml2AuthorizationDecisionStatement(Uri resource, SamlAccessDecision decision, IEnumerable_1<Saml2Action> actions) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -236,7 +237,7 @@ public class Saml2AuthorizationDecisionStatement extends system.identitymodel.to
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2AuthorizationDecisionStatement.Actions" target="_top">.NET documentation</a>
      */
-    public Collection_1 getActions() throws Throwable {
+    public Collection_1<Saml2Action> getActions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectActions = null;

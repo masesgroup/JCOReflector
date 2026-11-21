@@ -41,6 +41,9 @@ import java.util.ArrayList;
 import system.web.HttpResponse;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.collections.generic.KeyValuePair_2;
+import system.web.HttpCacheValidateHandler;
+import system.Object;
 import system.web.caching.CacheDependency;
 
 
@@ -211,7 +214,7 @@ public class OutputCacheUtility extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.OutputCacheUtility.GetValidationCallbacks" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 GetValidationCallbacks(HttpResponse response) throws Throwable, system.ArgumentOutOfRangeException {
+    public static IEnumerable_1<KeyValuePair_2<HttpCacheValidateHandler, Object>> GetValidationCallbacks(HttpResponse response) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetValidationCallbacks = null;

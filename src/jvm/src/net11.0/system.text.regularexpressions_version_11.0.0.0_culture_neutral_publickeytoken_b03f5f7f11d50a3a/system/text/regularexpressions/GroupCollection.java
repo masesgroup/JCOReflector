@@ -564,7 +564,7 @@ public class GroupCollection extends NetObjectEnumerable  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.RegularExpressions.GroupCollection.Values" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getValues() throws Throwable {
+    public IEnumerable_1<Group> getValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValues = null;

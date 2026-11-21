@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.runtime.durableinstancing.InstanceStore;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.xml.linq.XName;
 import system.activities.durableinstancing.InstanceCompletionAction;
 import system.activities.durableinstancing.InstanceEncodingOption;
 import system.activities.durableinstancing.InstanceLockedExceptionAction;
@@ -230,8 +231,8 @@ public class SqlWorkflowInstanceStore extends system.runtime.durableinstancing.I
      * Invokes the .NET member Promote.
      *
      * @param name the argument of type {@code java.lang.String}
-     * @param promoteAsVariant the argument of type {@code IEnumerable_1}
-     * @param promoteAsBinary the argument of type {@code IEnumerable_1}
+     * @param promoteAsVariant the argument of type {@code IEnumerable_1<XName>}
+     * @param promoteAsBinary the argument of type {@code IEnumerable_1<XName>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -245,7 +246,7 @@ public class SqlWorkflowInstanceStore extends system.runtime.durableinstancing.I
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SqlWorkflowInstanceStore.Promote" target="_top">.NET documentation</a>
      */
-    public void Promote(java.lang.String name, IEnumerable_1 promoteAsVariant, IEnumerable_1 promoteAsBinary) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+    public void Promote(java.lang.String name, IEnumerable_1<XName> promoteAsVariant, IEnumerable_1<XName> promoteAsBinary) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

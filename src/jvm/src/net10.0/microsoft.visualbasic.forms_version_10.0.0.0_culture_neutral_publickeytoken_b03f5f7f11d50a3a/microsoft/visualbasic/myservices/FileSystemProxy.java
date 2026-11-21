@@ -2245,7 +2245,7 @@ public class FileSystemProxy extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.MyServices.FileSystemProxy.Drives" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getDrives() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentNullException {
+    public ReadOnlyCollection_1<DriveInfo> getDrives() throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDrives = null;

@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.io.Stream;
 import system.reflection.portableexecutable.DirectoryEntry;
 import system.collections.immutable.ImmutableArray_1;
+import system.reflection.portableexecutable.SectionHeader;
 import system.reflection.portableexecutable.CoffHeader;
 import system.reflection.portableexecutable.CorHeader;
 import system.reflection.portableexecutable.PEHeader;
@@ -666,7 +667,7 @@ public class PEHeaders extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEHeaders.SectionHeaders" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 getSectionHeaders() throws Throwable {
+    public ImmutableArray_1<SectionHeader> getSectionHeaders() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSectionHeaders = null;

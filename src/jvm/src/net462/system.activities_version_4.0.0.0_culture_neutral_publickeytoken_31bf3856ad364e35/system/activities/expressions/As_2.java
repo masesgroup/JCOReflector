@@ -183,7 +183,7 @@ public class As_2<TOperand extends IJCOBridgeReflected, TResult extends IJCOBrid
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.As-2.Operand" target="_top">.NET documentation</a>
      */
-    public InArgument_1 getOperand() throws Throwable {
+    public InArgument_1<TOperand> getOperand() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOperand = null;
@@ -205,7 +205,7 @@ public class As_2<TOperand extends IJCOBridgeReflected, TResult extends IJCOBrid
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.As-2.Operand" target="_top">.NET documentation</a>
      */
-    public void setOperand(InArgument_1 Operand) throws Throwable {
+    public void setOperand(InArgument_1<TOperand> Operand) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

@@ -42,6 +42,8 @@ import system.io.TextWriter;
 import system.web.HttpContext;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.Func_1;
+import system.web.ui.RenderTraceListener;
 
 
 /**
@@ -259,7 +261,7 @@ public class RenderTraceListener extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.RenderTraceListener.ListenerFactories" target="_top">.NET documentation</a>
      */
-    public static IList_1 getListenerFactories() throws Throwable {
+    public static IList_1<Func_1<RenderTraceListener>> getListenerFactories() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectListenerFactories = null;

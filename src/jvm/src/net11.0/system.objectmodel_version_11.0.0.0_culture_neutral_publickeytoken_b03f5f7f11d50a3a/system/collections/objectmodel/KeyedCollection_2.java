@@ -256,7 +256,7 @@ public class KeyedCollection_2<TKey extends IJCOBridgeReflected, TItem extends I
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.ObjectModel.KeyedCollection-2.Comparer" target="_top">.NET documentation</a>
      */
-    public IEqualityComparer_1 getComparer() throws Throwable {
+    public IEqualityComparer_1<TKey> getComparer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectComparer = null;

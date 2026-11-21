@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.windows.data.BindingBase;
 import system.collections.objectmodel.Collection_1;
+import system.windows.controls.ValidationRule;
 import system.globalization.CultureInfo;
 import system.windows.data.BindingMode;
 import system.windows.data.IMultiValueConverter;
@@ -561,7 +562,7 @@ public class MultiBinding extends system.windows.data.BindingBase  {
      * @throws system.InvalidCastException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.MultiBinding.ValidationRules" target="_top">.NET documentation</a>
      */
-    public Collection_1 getValidationRules() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException {
+    public Collection_1<ValidationRule> getValidationRules() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValidationRules = null;
@@ -583,7 +584,7 @@ public class MultiBinding extends system.windows.data.BindingBase  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.MultiBinding.Bindings" target="_top">.NET documentation</a>
      */
-    public Collection_1 getBindings() throws Throwable {
+    public Collection_1<BindingBase> getBindings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectBindings = null;

@@ -331,7 +331,7 @@ public class Connector extends NetObject implements AutoCloseable {
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.Connector.ConnectorSegments" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getConnectorSegments() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
+    public ReadOnlyCollection_1<Point> getConnectorSegments() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectConnectorSegments = null;

@@ -40,8 +40,11 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.servicemodel.description.ServiceEndpoint;
 import system.servicemodel.description.ServiceDescription;
 import system.collections.generic.KeyedByTypeCollection_1;
+import system.servicemodel.description.IServiceBehavior;
+import system.servicemodel.description.IServiceBehaviorImplementation;
 import system.servicemodel.description.ServiceEndpointCollection;
 
 
@@ -173,7 +176,7 @@ public class ServiceDescription extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param endpoints the argument of type {@code IEnumerable_1}
+     * @param endpoints the argument of type {@code IEnumerable_1<ServiceEndpoint>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -189,7 +192,7 @@ public class ServiceDescription extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceDescription.-ctor" target="_top">.NET documentation</a>
      */
-    public ServiceDescription(IEnumerable_1 endpoints) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+    public ServiceDescription(IEnumerable_1<ServiceEndpoint> endpoints) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -288,7 +291,7 @@ public class ServiceDescription extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceDescription.Behaviors" target="_top">.NET documentation</a>
      */
-    public KeyedByTypeCollection_1 getBehaviors() throws Throwable {
+    public KeyedByTypeCollection_1<IServiceBehavior> getBehaviors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectBehaviors = null;

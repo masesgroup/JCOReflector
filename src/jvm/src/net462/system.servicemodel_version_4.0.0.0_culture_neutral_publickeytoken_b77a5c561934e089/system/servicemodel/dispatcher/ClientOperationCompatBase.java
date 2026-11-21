@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.servicemodel.dispatcher.IParameterInspector;
+import system.servicemodel.dispatcher.IParameterInspectorImplementation;
 
 
 /**
@@ -169,7 +171,7 @@ public class ClientOperationCompatBase extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ClientOperationCompatBase.ParameterInspectors" target="_top">.NET documentation</a>
      */
-    public IList_1 getParameterInspectors() throws Throwable {
+    public IList_1<IParameterInspector> getParameterInspectors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectParameterInspectors = null;

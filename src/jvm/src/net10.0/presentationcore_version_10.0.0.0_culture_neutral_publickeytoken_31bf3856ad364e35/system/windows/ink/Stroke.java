@@ -43,8 +43,8 @@ import system.windows.ink.DrawingAttributes;
 import system.Guid;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
-import system.windows.ink.StylusShape;
 import system.windows.Point;
+import system.windows.ink.StylusShape;
 import system.windows.Rect;
 import system.windows.ink.Stroke;
 import system.windows.ink.StrokeCollection;
@@ -254,7 +254,7 @@ public class Stroke extends NetObject  {
     /**
      * Invokes the .NET member HitTest.
      *
-     * @param lassoPoints the argument of type {@code IEnumerable_1}
+     * @param lassoPoints the argument of type {@code IEnumerable_1<Point>}
      * @param percentageWithinLasso the argument of type {@code int}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -272,7 +272,7 @@ public class Stroke extends NetObject  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Ink.Stroke.HitTest" target="_top">.NET documentation</a>
      */
-    public boolean HitTest(IEnumerable_1 lassoPoints, int percentageWithinLasso) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.NullReferenceException {
+    public boolean HitTest(IEnumerable_1<Point> lassoPoints, int percentageWithinLasso) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectHitTest = null;
@@ -289,7 +289,7 @@ public class Stroke extends NetObject  {
     /**
      * Invokes the .NET member HitTest.
      *
-     * @param path the argument of type {@code IEnumerable_1}
+     * @param path the argument of type {@code IEnumerable_1<Point>}
      * @param stylusShape the argument of type {@code StylusShape}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -306,7 +306,7 @@ public class Stroke extends NetObject  {
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Ink.Stroke.HitTest" target="_top">.NET documentation</a>
      */
-    public boolean HitTest(IEnumerable_1 path, StylusShape stylusShape) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.NotImplementedException {
+    public boolean HitTest(IEnumerable_1<Point> path, StylusShape stylusShape) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectHitTest = null;
@@ -515,7 +515,7 @@ public class Stroke extends NetObject  {
     /**
      * Invokes the .NET member GetClipResult.
      *
-     * @param lassoPoints the argument of type {@code IEnumerable_1}
+     * @param lassoPoints the argument of type {@code IEnumerable_1<Point>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -532,7 +532,7 @@ public class Stroke extends NetObject  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Ink.Stroke.GetClipResult" target="_top">.NET documentation</a>
      */
-    public StrokeCollection GetClipResult(IEnumerable_1 lassoPoints) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.NullReferenceException {
+    public StrokeCollection GetClipResult(IEnumerable_1<Point> lassoPoints) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetClipResult = null;
@@ -581,7 +581,7 @@ public class Stroke extends NetObject  {
     /**
      * Invokes the .NET member GetEraseResult.
      *
-     * @param eraserPath the argument of type {@code IEnumerable_1}
+     * @param eraserPath the argument of type {@code IEnumerable_1<Point>}
      * @param eraserShape the argument of type {@code StylusShape}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -600,7 +600,7 @@ public class Stroke extends NetObject  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Ink.Stroke.GetEraseResult" target="_top">.NET documentation</a>
      */
-    public StrokeCollection GetEraseResult(IEnumerable_1 eraserPath, StylusShape eraserShape) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.NotImplementedException, system.MulticastNotSupportedException, system.NullReferenceException {
+    public StrokeCollection GetEraseResult(IEnumerable_1<Point> eraserPath, StylusShape eraserShape) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.NotImplementedException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetEraseResult = null;
@@ -618,7 +618,7 @@ public class Stroke extends NetObject  {
     /**
      * Invokes the .NET member GetEraseResult.
      *
-     * @param lassoPoints the argument of type {@code IEnumerable_1}
+     * @param lassoPoints the argument of type {@code IEnumerable_1<Point>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -635,7 +635,7 @@ public class Stroke extends NetObject  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Ink.Stroke.GetEraseResult" target="_top">.NET documentation</a>
      */
-    public StrokeCollection GetEraseResult(IEnumerable_1 lassoPoints) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.NullReferenceException {
+    public StrokeCollection GetEraseResult(IEnumerable_1<Point> lassoPoints) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetEraseResult = null;

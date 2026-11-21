@@ -44,6 +44,7 @@ import system.IAsyncResult;
 import system.IAsyncResultImplementation;
 import system.AsyncCallback;
 import system.threading.tasks.Task_1;
+import system.net.sockets.UdpReceiveResult;
 import system.net.IPAddress;
 import system.net.sockets.Socket;
 
@@ -1634,7 +1635,7 @@ public class UdpClient extends NetObject implements AutoCloseable {
      * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.UdpClient.ReceiveAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 ReceiveAsync() throws Throwable, system.ObjectDisposedException, system.ArgumentException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.net.sockets.SocketException, system.InvalidOperationException, system.AccessViolationException, system.security.SecurityException, system.NullReferenceException, system.IndexOutOfRangeException, system.threading.tasks.TaskSchedulerException, system.FormatException, system.diagnostics.tracing.EventSourceException {
+    public Task_1<UdpReceiveResult> ReceiveAsync() throws Throwable, system.ObjectDisposedException, system.ArgumentException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.net.sockets.SocketException, system.InvalidOperationException, system.AccessViolationException, system.security.SecurityException, system.NullReferenceException, system.IndexOutOfRangeException, system.threading.tasks.TaskSchedulerException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReceiveAsync = null;

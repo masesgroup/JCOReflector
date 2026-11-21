@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.activities.CodeActivity_1;
 import system.activities.Location_1;
 import system.activities.InArgument_1;
+import system.Array;
 import system.collections.objectmodel.Collection_1;
 
 
@@ -185,7 +186,7 @@ public class MultidimensionalArrayItemReference_1<TItem extends IJCOBridgeReflec
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.MultidimensionalArrayItemReference-1.Array" target="_top">.NET documentation</a>
      */
-    public InArgument_1 getArray() throws Throwable {
+    public InArgument_1<Array> getArray() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArray = null;
@@ -207,7 +208,7 @@ public class MultidimensionalArrayItemReference_1<TItem extends IJCOBridgeReflec
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.MultidimensionalArrayItemReference-1.Array" target="_top">.NET documentation</a>
      */
-    public void setArray(InArgument_1 Array) throws Throwable {
+    public void setArray(InArgument_1<Array> Array) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

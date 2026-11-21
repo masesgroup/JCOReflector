@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.Nullable_1;
+import system.DateTime;
 
 
 /**
@@ -190,7 +191,7 @@ public class EventLogInformation extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogInformation.CreationTime" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getCreationTime() throws Throwable {
+    public Nullable_1<DateTime> getCreationTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCreationTime = null;
@@ -212,7 +213,7 @@ public class EventLogInformation extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogInformation.LastAccessTime" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getLastAccessTime() throws Throwable {
+    public Nullable_1<DateTime> getLastAccessTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectLastAccessTime = null;
@@ -234,7 +235,7 @@ public class EventLogInformation extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogInformation.LastWriteTime" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getLastWriteTime() throws Throwable {
+    public Nullable_1<DateTime> getLastWriteTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectLastWriteTime = null;

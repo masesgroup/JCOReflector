@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.collections.objectmodel.Collection_1;
 import system.servicemodel.description.ContractDescription;
 import system.collections.generic.KeyedByTypeCollection_1;
+import system.servicemodel.description.IContractBehavior;
+import system.servicemodel.description.IContractBehaviorImplementation;
 import system.collections.objectmodel.KeyedCollection_2;
 import system.net.security.ProtectionLevel;
 import system.servicemodel.description.OperationDescriptionCollection;
@@ -252,7 +254,7 @@ public class ContractDescription extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ContractDescription.GetInheritedContracts" target="_top">.NET documentation</a>
      */
-    public Collection_1 GetInheritedContracts() throws Throwable, system.NotSupportedException {
+    public Collection_1<ContractDescription> GetInheritedContracts() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetInheritedContracts = null;
@@ -409,7 +411,7 @@ public class ContractDescription extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ContractDescription.Behaviors" target="_top">.NET documentation</a>
      */
-    public KeyedByTypeCollection_1 getBehaviors() throws Throwable {
+    public KeyedByTypeCollection_1<IContractBehavior> getBehaviors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectBehaviors = null;
@@ -431,7 +433,7 @@ public class ContractDescription extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ContractDescription.ContractBehaviors" target="_top">.NET documentation</a>
      */
-    public KeyedCollection_2 getContractBehaviors() throws Throwable {
+    public KeyedCollection_2<NetType, IContractBehavior> getContractBehaviors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContractBehaviors = null;

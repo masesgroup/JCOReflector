@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.windows.markup.MemberDefinition;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.Attribute;
 import system.xaml.XamlType;
 
 
@@ -183,7 +184,7 @@ public class PropertyDefinition extends system.windows.markup.MemberDefinition  
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.PropertyDefinition.Attributes" target="_top">.NET documentation</a>
      */
-    public IList_1 getAttributes() throws Throwable {
+    public IList_1<Attribute> getAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAttributes = null;

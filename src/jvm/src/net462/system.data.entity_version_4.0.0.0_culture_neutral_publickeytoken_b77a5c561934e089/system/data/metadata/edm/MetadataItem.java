@@ -39,10 +39,12 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.data.metadata.edm.FacetDescription;
 import system.data.metadata.edm.EdmType;
 import system.data.metadata.edm.BuiltInTypeKind;
 import system.data.metadata.edm.Documentation;
 import system.data.metadata.edm.ReadOnlyMetadataCollection_1;
+import system.data.metadata.edm.MetadataProperty;
 
 
 /**
@@ -166,7 +168,7 @@ public class MetadataItem extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.MetadataItem.GetGeneralFacetDescriptions" target="_top">.NET documentation</a>
      */
-    public static ReadOnlyCollection_1 GetGeneralFacetDescriptions() throws Throwable {
+    public static ReadOnlyCollection_1<FacetDescription> GetGeneralFacetDescriptions() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetGeneralFacetDescriptions = null;
@@ -288,7 +290,7 @@ public class MetadataItem extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.MetadataItem.MetadataProperties" target="_top">.NET documentation</a>
      */
-    public ReadOnlyMetadataCollection_1 getMetadataProperties() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException {
+    public ReadOnlyMetadataCollection_1<MetadataProperty> getMetadataProperties() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectMetadataProperties = null;

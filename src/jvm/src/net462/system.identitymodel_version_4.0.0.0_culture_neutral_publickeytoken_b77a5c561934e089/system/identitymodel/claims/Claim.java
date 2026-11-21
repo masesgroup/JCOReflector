@@ -682,7 +682,7 @@ public class Claim extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Claims.Claim.DefaultComparer" target="_top">.NET documentation</a>
      */
-    public static IEqualityComparer_1 getDefaultComparer() throws Throwable {
+    public static IEqualityComparer_1<Claim> getDefaultComparer() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDefaultComparer = null;

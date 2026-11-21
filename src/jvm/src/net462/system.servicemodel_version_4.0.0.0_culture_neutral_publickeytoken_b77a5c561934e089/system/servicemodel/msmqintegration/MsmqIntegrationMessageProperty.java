@@ -41,6 +41,12 @@ import java.util.ArrayList;
 import system.servicemodel.msmqintegration.MsmqIntegrationMessageProperty;
 import system.servicemodel.channels.Message;
 import system.Nullable_1;
+import system.DateTime;
+import system.messaging.AcknowledgeTypes;
+import system.messaging.Acknowledgment;
+import system.messaging.MessagePriority;
+import system.messaging.MessageType;
+import system.TimeSpan;
 import system.Uri;
 
 
@@ -350,7 +356,7 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.ArrivedTime" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getArrivedTime() throws Throwable {
+    public Nullable_1<DateTime> getArrivedTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArrivedTime = null;
@@ -372,7 +378,7 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.ArrivedTime" target="_top">.NET documentation</a>
      */
-    public void setArrivedTime(Nullable_1 ArrivedTime) throws Throwable {
+    public void setArrivedTime(Nullable_1<DateTime> ArrivedTime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -389,7 +395,7 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.SentTime" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getSentTime() throws Throwable {
+    public Nullable_1<DateTime> getSentTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSentTime = null;
@@ -411,7 +417,7 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.SentTime" target="_top">.NET documentation</a>
      */
-    public void setSentTime(Nullable_1 SentTime) throws Throwable {
+    public void setSentTime(Nullable_1<DateTime> SentTime) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -506,7 +512,7 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.AcknowledgeType" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getAcknowledgeType() throws Throwable {
+    public Nullable_1<AcknowledgeTypes> getAcknowledgeType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAcknowledgeType = null;
@@ -528,7 +534,7 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.AcknowledgeType" target="_top">.NET documentation</a>
      */
-    public void setAcknowledgeType(Nullable_1 AcknowledgeType) throws Throwable {
+    public void setAcknowledgeType(Nullable_1<AcknowledgeTypes> AcknowledgeType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -545,7 +551,7 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.Acknowledgment" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getAcknowledgment() throws Throwable {
+    public Nullable_1<Acknowledgment> getAcknowledgment() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAcknowledgment = null;
@@ -567,7 +573,7 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.Acknowledgment" target="_top">.NET documentation</a>
      */
-    public void setAcknowledgment(Nullable_1 Acknowledgment) throws Throwable {
+    public void setAcknowledgment(Nullable_1<Acknowledgment> Acknowledgment) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -584,7 +590,7 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.Priority" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getPriority() throws Throwable {
+    public Nullable_1<MessagePriority> getPriority() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPriority = null;
@@ -623,7 +629,7 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.Priority" target="_top">.NET documentation</a>
      */
-    public void setPriority(Nullable_1 Priority) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
+    public void setPriority(Nullable_1<MessagePriority> Priority) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -640,7 +646,7 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.MessageType" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getMessageType() throws Throwable {
+    public Nullable_1<MessageType> getMessageType() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectMessageType = null;
@@ -662,7 +668,7 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.MessageType" target="_top">.NET documentation</a>
      */
-    public void setMessageType(Nullable_1 MessageType) throws Throwable {
+    public void setMessageType(Nullable_1<MessageType> MessageType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -679,7 +685,7 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.TimeToReachQueue" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getTimeToReachQueue() throws Throwable {
+    public Nullable_1<TimeSpan> getTimeToReachQueue() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTimeToReachQueue = null;
@@ -717,7 +723,7 @@ public class MsmqIntegrationMessageProperty extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.MsmqIntegration.MsmqIntegrationMessageProperty.TimeToReachQueue" target="_top">.NET documentation</a>
      */
-    public void setTimeToReachQueue(Nullable_1 TimeToReachQueue) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
+    public void setTimeToReachQueue(Nullable_1<TimeSpan> TimeToReachQueue) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

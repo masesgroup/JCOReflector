@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.activities.NativeActivity;
 import system.activities.Activity;
 import system.activities.InArgument_1;
+import system.TimeSpan;
 import system.transactions.IsolationLevel;
 
 
@@ -311,7 +312,7 @@ public class TransactionScope extends system.activities.NativeActivity  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.TransactionScope.Timeout" target="_top">.NET documentation</a>
      */
-    public InArgument_1 getTimeout() throws Throwable {
+    public InArgument_1<TimeSpan> getTimeout() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTimeout = null;
@@ -333,7 +334,7 @@ public class TransactionScope extends system.activities.NativeActivity  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.TransactionScope.Timeout" target="_top">.NET documentation</a>
      */
-    public void setTimeout(InArgument_1 Timeout) throws Throwable {
+    public void setTimeout(InArgument_1<TimeSpan> Timeout) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

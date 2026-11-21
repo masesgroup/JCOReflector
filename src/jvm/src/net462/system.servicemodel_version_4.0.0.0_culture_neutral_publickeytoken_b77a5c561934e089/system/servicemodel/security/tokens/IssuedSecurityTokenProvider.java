@@ -44,7 +44,10 @@ import system.IAsyncResultImplementation;
 import system.AsyncCallback;
 import system.TimeSpan;
 import system.collections.generic.KeyedByTypeCollection_1;
+import system.servicemodel.description.IEndpointBehavior;
+import system.servicemodel.description.IEndpointBehaviorImplementation;
 import system.collections.objectmodel.Collection_1;
+import system.xml.XmlElement;
 import system.identitymodel.selectors.SecurityTokenSerializer;
 import system.servicemodel.CommunicationState;
 import system.servicemodel.EndpointAddress;
@@ -719,7 +722,7 @@ public class IssuedSecurityTokenProvider extends system.identitymodel.selectors.
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.IssuedSecurityTokenProvider.IssuerChannelBehaviors" target="_top">.NET documentation</a>
      */
-    public KeyedByTypeCollection_1 getIssuerChannelBehaviors() throws Throwable {
+    public KeyedByTypeCollection_1<IEndpointBehavior> getIssuerChannelBehaviors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIssuerChannelBehaviors = null;
@@ -741,7 +744,7 @@ public class IssuedSecurityTokenProvider extends system.identitymodel.selectors.
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.IssuedSecurityTokenProvider.TokenRequestParameters" target="_top">.NET documentation</a>
      */
-    public Collection_1 getTokenRequestParameters() throws Throwable {
+    public Collection_1<XmlElement> getTokenRequestParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTokenRequestParameters = null;

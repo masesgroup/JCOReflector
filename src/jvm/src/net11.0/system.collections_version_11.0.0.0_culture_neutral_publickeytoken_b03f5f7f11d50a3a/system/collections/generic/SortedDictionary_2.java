@@ -175,11 +175,11 @@ public class SortedDictionary_2<TKey extends IJCOBridgeReflected, TValue extends
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param comparer the argument of type {@code IComparer_1}
+     * @param comparer the argument of type {@code IComparer_1<TKey>}
      * @throws Throwable if the .NET constructor fails
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.SortedDictionary-2.-ctor" target="_top">.NET documentation</a>
      */
-    public SortedDictionary_2(IComparer_1 comparer) throws Throwable {
+    public SortedDictionary_2(IComparer_1<TKey> comparer) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -194,8 +194,8 @@ public class SortedDictionary_2<TKey extends IJCOBridgeReflected, TValue extends
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param dictionary the argument of type {@code IDictionary_2}
-     * @param comparer the argument of type {@code IComparer_1}
+     * @param dictionary the argument of type {@code IDictionary_2<TKey, TValue>}
+     * @param comparer the argument of type {@code IComparer_1<TKey>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -207,7 +207,7 @@ public class SortedDictionary_2<TKey extends IJCOBridgeReflected, TValue extends
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.SortedDictionary-2.-ctor" target="_top">.NET documentation</a>
      */
-    public SortedDictionary_2(IDictionary_2 dictionary, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException {
+    public SortedDictionary_2(IDictionary_2<TKey, TValue> dictionary, IComparer_1<TKey> comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -222,7 +222,7 @@ public class SortedDictionary_2<TKey extends IJCOBridgeReflected, TValue extends
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param dictionary the argument of type {@code IDictionary_2}
+     * @param dictionary the argument of type {@code IDictionary_2<TKey, TValue>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -233,7 +233,7 @@ public class SortedDictionary_2<TKey extends IJCOBridgeReflected, TValue extends
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.SortedDictionary-2.-ctor" target="_top">.NET documentation</a>
      */
-    public SortedDictionary_2(IDictionary_2 dictionary) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
+    public SortedDictionary_2(IDictionary_2<TKey, TValue> dictionary) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -546,7 +546,7 @@ public class SortedDictionary_2<TKey extends IJCOBridgeReflected, TValue extends
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.SortedDictionary-2.Comparer" target="_top">.NET documentation</a>
      */
-    public IComparer_1 getComparer() throws Throwable {
+    public IComparer_1<TKey> getComparer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectComparer = null;

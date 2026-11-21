@@ -183,7 +183,7 @@ public class IncrementalHitTester extends NetObject  {
     /**
      * Invokes the .NET member AddPoints.
      *
-     * @param points the argument of type {@code IEnumerable_1}
+     * @param points the argument of type {@code IEnumerable_1<Point>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -194,7 +194,7 @@ public class IncrementalHitTester extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Ink.IncrementalHitTester.AddPoints" target="_top">.NET documentation</a>
      */
-    public void AddPoints(IEnumerable_1 points) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public void AddPoints(IEnumerable_1<Point> points) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

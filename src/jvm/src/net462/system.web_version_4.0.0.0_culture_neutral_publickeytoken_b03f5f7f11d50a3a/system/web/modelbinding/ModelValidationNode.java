@@ -45,6 +45,9 @@ import system.web.modelbinding.ModelValidationNode;
 import system.web.modelbinding.ModelBindingExecutionContext;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.EventHandler_1;
+import system.web.modelbinding.ModelValidatedEventArgs;
+import system.web.modelbinding.ModelValidatingEventArgs;
 
 
 /**
@@ -183,13 +186,13 @@ public class ModelValidationNode extends NetObject  {
      *
      * @param modelMetadata the argument of type {@code ModelMetadata}
      * @param modelStateKey the argument of type {@code java.lang.String}
-     * @param childNodes the argument of type {@code IEnumerable_1}
+     * @param childNodes the argument of type {@code IEnumerable_1<ModelValidationNode>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelValidationNode.-ctor" target="_top">.NET documentation</a>
      */
-    public ModelValidationNode(ModelMetadata modelMetadata, java.lang.String modelStateKey, IEnumerable_1 childNodes) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public ModelValidationNode(ModelMetadata modelMetadata, java.lang.String modelStateKey, IEnumerable_1<ModelValidationNode> childNodes) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -354,7 +357,7 @@ public class ModelValidationNode extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelValidationNode.ChildNodes" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getChildNodes() throws Throwable {
+    public ICollection_1<ModelValidationNode> getChildNodes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectChildNodes = null;
@@ -376,7 +379,7 @@ public class ModelValidationNode extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelValidationNode.ChildNodes" target="_top">.NET documentation</a>
      */
-    public void setChildNodes(ICollection_1 ChildNodes) throws Throwable {
+    public void setChildNodes(ICollection_1<ModelValidationNode> ChildNodes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -467,6 +470,74 @@ public class ModelValidationNode extends NetObject  {
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addValidated.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ModelValidatedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addValidated(EventHandler_1<ModelValidatedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("Validated", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeValidated.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ModelValidatedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeValidated(EventHandler_1<ModelValidatedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("Validated", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addValidating.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ModelValidatingEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addValidating(EventHandler_1<ModelValidatingEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("Validating", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeValidating.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ModelValidatingEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeValidating(EventHandler_1<ModelValidatingEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("Validating", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

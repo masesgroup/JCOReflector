@@ -53,6 +53,7 @@ import microsoft.extensions.logging.ILoggingBuilder;
 import microsoft.extensions.logging.ILoggingBuilderImplementation;
 import system.collections.generic.IDictionary_2;
 import system.collections.generic.IDictionary_2Implementation;
+import system.Object;
 
 
 /**
@@ -298,7 +299,7 @@ public class IHostApplicationBuilderImplementation extends NetObject implements 
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Hosting.IHostApplicationBuilder.Properties" target="_top">.NET documentation</a>
      */
-    public IDictionary_2 getProperties() throws Throwable {
+    public IDictionary_2<Object, Object> getProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectProperties = null;

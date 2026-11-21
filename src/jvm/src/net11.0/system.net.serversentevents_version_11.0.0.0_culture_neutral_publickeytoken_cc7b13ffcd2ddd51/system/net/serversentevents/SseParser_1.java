@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IAsyncEnumerable_1;
 import system.collections.generic.IAsyncEnumerable_1Implementation;
+import system.net.serversentevents.SseItem_1;
 import system.threading.CancellationToken;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
@@ -170,7 +171,7 @@ public class SseParser_1<T extends IJCOBridgeReflected> extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServerSentEvents.SseParser-1.EnumerateAsync" target="_top">.NET documentation</a>
      */
-    public IAsyncEnumerable_1 EnumerateAsync(CancellationToken cancellationToken) throws Throwable {
+    public IAsyncEnumerable_1<SseItem_1<T>> EnumerateAsync(CancellationToken cancellationToken) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEnumerateAsync = null;
@@ -192,7 +193,7 @@ public class SseParser_1<T extends IJCOBridgeReflected> extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServerSentEvents.SseParser-1.Enumerate" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 Enumerate() throws Throwable {
+    public IEnumerable_1<SseItem_1<T>> Enumerate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEnumerate = null;

@@ -212,7 +212,7 @@ public class DataContractSerializerOperationBehavior extends NetObject  {
      * @param type the argument of type {@code NetType}
      * @param name the argument of type {@code java.lang.String}
      * @param ns the argument of type {@code java.lang.String}
-     * @param knownTypes the argument of type {@code IList_1}
+     * @param knownTypes the argument of type {@code IList_1<NetType>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -226,7 +226,7 @@ public class DataContractSerializerOperationBehavior extends NetObject  {
      * @throws system.threading.AbandonedMutexException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.DataContractSerializerOperationBehavior.CreateSerializer" target="_top">.NET documentation</a>
      */
-    public XmlObjectSerializer CreateSerializer(NetType type, java.lang.String name, java.lang.String ns, IList_1 knownTypes) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public XmlObjectSerializer CreateSerializer(NetType type, java.lang.String name, java.lang.String ns, IList_1<NetType> knownTypes) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCreateSerializer = null;
@@ -247,7 +247,7 @@ public class DataContractSerializerOperationBehavior extends NetObject  {
      * @param type the argument of type {@code NetType}
      * @param name the argument of type {@code XmlDictionaryString}
      * @param ns the argument of type {@code XmlDictionaryString}
-     * @param knownTypes the argument of type {@code IList_1}
+     * @param knownTypes the argument of type {@code IList_1<NetType>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -257,7 +257,7 @@ public class DataContractSerializerOperationBehavior extends NetObject  {
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.DataContractSerializerOperationBehavior.CreateSerializer" target="_top">.NET documentation</a>
      */
-    public XmlObjectSerializer CreateSerializer(NetType type, XmlDictionaryString name, XmlDictionaryString ns, IList_1 knownTypes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotImplementedException {
+    public XmlObjectSerializer CreateSerializer(NetType type, XmlDictionaryString name, XmlDictionaryString ns, IList_1<NetType> knownTypes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCreateSerializer = null;

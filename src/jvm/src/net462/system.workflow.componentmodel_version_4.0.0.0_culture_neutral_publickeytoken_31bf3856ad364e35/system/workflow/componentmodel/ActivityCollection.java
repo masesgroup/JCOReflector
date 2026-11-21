@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.List_1;
 import system.workflow.componentmodel.Activity;
+import system.EventHandler_1;
+import system.workflow.componentmodel.ActivityCollectionChangeEventArgs;
 
 
 /**
@@ -400,6 +402,40 @@ public class ActivityCollection extends system.collections.generic.List_1<Activi
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addListChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ActivityCollectionChangeEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addListChanged(EventHandler_1<ActivityCollectionChangeEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("ListChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeListChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ActivityCollectionChangeEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeListChanged(EventHandler_1<ActivityCollectionChangeEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("ListChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

@@ -234,7 +234,7 @@ public class AsyncValidateOptions_1<TOptions extends IJCOBridgeReflected> extend
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.AsyncValidateOptions-1.ValidateAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 ValidateAsync(java.lang.String name, TOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public Task_1<ValidateOptionsResult> ValidateAsync(java.lang.String name, TOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValidateAsync = null;

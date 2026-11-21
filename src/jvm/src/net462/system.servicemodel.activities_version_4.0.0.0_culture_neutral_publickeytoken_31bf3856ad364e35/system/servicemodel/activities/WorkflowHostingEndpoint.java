@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.servicemodel.description.ServiceEndpoint;
 import system.collections.objectmodel.Collection_1;
+import system.servicemodel.CorrelationQuery;
 
 
 /**
@@ -167,7 +168,7 @@ public class WorkflowHostingEndpoint extends system.servicemodel.description.Ser
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.WorkflowHostingEndpoint.CorrelationQueries" target="_top">.NET documentation</a>
      */
-    public Collection_1 getCorrelationQueries() throws Throwable {
+    public Collection_1<CorrelationQuery> getCorrelationQueries() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCorrelationQueries = null;

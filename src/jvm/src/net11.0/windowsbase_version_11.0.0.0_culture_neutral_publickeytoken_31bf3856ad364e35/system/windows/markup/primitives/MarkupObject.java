@@ -42,6 +42,7 @@ import system.windows.markup.IValueSerializerContext;
 import system.windows.markup.IValueSerializerContextImplementation;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.windows.markup.primitives.MarkupProperty;
 import system.componentmodel.AttributeCollection;
 
 
@@ -187,7 +188,7 @@ public class MarkupObject extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Markup.Primitives.MarkupObject.Properties" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getProperties() throws Throwable {
+    public IEnumerable_1<MarkupProperty> getProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectProperties = null;

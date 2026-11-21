@@ -173,12 +173,12 @@ public class ValueProviderCollection extends system.collections.objectmodel.Coll
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param list the argument of type {@code IList_1}
+     * @param list the argument of type {@code IList_1<IValueProvider>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ValueProviderCollection.-ctor" target="_top">.NET documentation</a>
      */
-    public ValueProviderCollection(IList_1 list) throws Throwable, system.ArgumentNullException {
+    public ValueProviderCollection(IList_1<IValueProvider> list) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.text.json.nodes.JsonNode;
 import system.text.json.nodes.JsonValue;
 import system.Nullable_1;
+import system.text.json.nodes.JsonNodeOptions;
 import system.SByte;
 import system.Single;
 import system.DateTime;
@@ -195,7 +196,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * Invokes the .NET member Create.
      *
      * @param value the argument of type {@code boolean}
-     * @param options the argument of type {@code Nullable_1}
+     * @param options the argument of type {@code Nullable_1<JsonNodeOptions>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -205,7 +206,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Nodes.JsonValue.Create" target="_top">.NET documentation</a>
      */
-    public static JsonValue Create(boolean value, Nullable_1 options) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static JsonValue Create(boolean value, Nullable_1<JsonNodeOptions> options) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -224,7 +225,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * Invokes the .NET member Create.
      *
      * @param value the argument of type {@code byte}
-     * @param options the argument of type {@code Nullable_1}
+     * @param options the argument of type {@code Nullable_1<JsonNodeOptions>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -234,7 +235,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Nodes.JsonValue.Create" target="_top">.NET documentation</a>
      */
-    public static JsonValue Create(byte value, Nullable_1 options) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static JsonValue Create(byte value, Nullable_1<JsonNodeOptions> options) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -253,7 +254,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * Invokes the .NET member Create.
      *
      * @param value the argument of type {@code char}
-     * @param options the argument of type {@code Nullable_1}
+     * @param options the argument of type {@code Nullable_1<JsonNodeOptions>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -263,7 +264,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Nodes.JsonValue.Create" target="_top">.NET documentation</a>
      */
-    public static JsonValue Create(char value, Nullable_1 options) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static JsonValue Create(char value, Nullable_1<JsonNodeOptions> options) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -282,7 +283,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * Invokes the .NET member Create.
      *
      * @param value the argument of type {@code double}
-     * @param options the argument of type {@code Nullable_1}
+     * @param options the argument of type {@code Nullable_1<JsonNodeOptions>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -292,7 +293,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Nodes.JsonValue.Create" target="_top">.NET documentation</a>
      */
-    public static JsonValue Create(double value, Nullable_1 options) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static JsonValue Create(double value, Nullable_1<JsonNodeOptions> options) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -311,7 +312,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * Invokes the .NET member Create.
      *
      * @param value the argument of type {@code short}
-     * @param options the argument of type {@code Nullable_1}
+     * @param options the argument of type {@code Nullable_1<JsonNodeOptions>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -321,7 +322,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Nodes.JsonValue.Create" target="_top">.NET documentation</a>
      */
-    public static JsonValue Create(short value, Nullable_1 options) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static JsonValue Create(short value, Nullable_1<JsonNodeOptions> options) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -340,7 +341,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * Invokes the .NET member Create.
      *
      * @param value the argument of type {@code int}
-     * @param options the argument of type {@code Nullable_1}
+     * @param options the argument of type {@code Nullable_1<JsonNodeOptions>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -350,7 +351,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Nodes.JsonValue.Create" target="_top">.NET documentation</a>
      */
-    public static JsonValue Create(int value, Nullable_1 options) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static JsonValue Create(int value, Nullable_1<JsonNodeOptions> options) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -369,7 +370,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * Invokes the .NET member Create.
      *
      * @param value the argument of type {@code long}
-     * @param options the argument of type {@code Nullable_1}
+     * @param options the argument of type {@code Nullable_1<JsonNodeOptions>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -379,7 +380,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Nodes.JsonValue.Create" target="_top">.NET documentation</a>
      */
-    public static JsonValue Create(long value, Nullable_1 options) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static JsonValue Create(long value, Nullable_1<JsonNodeOptions> options) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -398,7 +399,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * Invokes the .NET member Create.
      *
      * @param value the argument of type {@code SByte}
-     * @param options the argument of type {@code Nullable_1}
+     * @param options the argument of type {@code Nullable_1<JsonNodeOptions>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -408,7 +409,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Nodes.JsonValue.Create" target="_top">.NET documentation</a>
      */
-    public static JsonValue Create(SByte value, Nullable_1 options) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static JsonValue Create(SByte value, Nullable_1<JsonNodeOptions> options) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -427,7 +428,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * Invokes the .NET member Create.
      *
      * @param value the argument of type {@code Single}
-     * @param options the argument of type {@code Nullable_1}
+     * @param options the argument of type {@code Nullable_1<JsonNodeOptions>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -437,7 +438,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Nodes.JsonValue.Create" target="_top">.NET documentation</a>
      */
-    public static JsonValue Create(Single value, Nullable_1 options) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static JsonValue Create(Single value, Nullable_1<JsonNodeOptions> options) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -456,7 +457,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * Invokes the .NET member Create.
      *
      * @param value the argument of type {@code DateTime}
-     * @param options the argument of type {@code Nullable_1}
+     * @param options the argument of type {@code Nullable_1<JsonNodeOptions>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -466,7 +467,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Nodes.JsonValue.Create" target="_top">.NET documentation</a>
      */
-    public static JsonValue Create(DateTime value, Nullable_1 options) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static JsonValue Create(DateTime value, Nullable_1<JsonNodeOptions> options) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -485,7 +486,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * Invokes the .NET member Create.
      *
      * @param value the argument of type {@code DateTimeOffset}
-     * @param options the argument of type {@code Nullable_1}
+     * @param options the argument of type {@code Nullable_1<JsonNodeOptions>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -495,7 +496,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Nodes.JsonValue.Create" target="_top">.NET documentation</a>
      */
-    public static JsonValue Create(DateTimeOffset value, Nullable_1 options) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static JsonValue Create(DateTimeOffset value, Nullable_1<JsonNodeOptions> options) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -514,7 +515,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * Invokes the .NET member Create.
      *
      * @param value the argument of type {@code Decimal}
-     * @param options the argument of type {@code Nullable_1}
+     * @param options the argument of type {@code Nullable_1<JsonNodeOptions>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -524,7 +525,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Nodes.JsonValue.Create" target="_top">.NET documentation</a>
      */
-    public static JsonValue Create(Decimal value, Nullable_1 options) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static JsonValue Create(Decimal value, Nullable_1<JsonNodeOptions> options) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -543,7 +544,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * Invokes the .NET member Create.
      *
      * @param value the argument of type {@code Guid}
-     * @param options the argument of type {@code Nullable_1}
+     * @param options the argument of type {@code Nullable_1<JsonNodeOptions>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -553,7 +554,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Nodes.JsonValue.Create" target="_top">.NET documentation</a>
      */
-    public static JsonValue Create(Guid value, Nullable_1 options) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static JsonValue Create(Guid value, Nullable_1<JsonNodeOptions> options) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -572,7 +573,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * Invokes the .NET member Create.
      *
      * @param value the argument of type {@code Nullable_1}
-     * @param options the argument of type {@code Nullable_1}
+     * @param options the argument of type {@code Nullable_1<JsonNodeOptions>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -587,7 +588,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Nodes.JsonValue.Create" target="_top">.NET documentation</a>
      */
-    public static JsonValue Create(Nullable_1 value, Nullable_1 options) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public static JsonValue Create(Nullable_1 value, Nullable_1<JsonNodeOptions> options) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -606,7 +607,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * Invokes the .NET member Create.
      *
      * @param value the argument of type {@code java.lang.String}
-     * @param options the argument of type {@code Nullable_1}
+     * @param options the argument of type {@code Nullable_1<JsonNodeOptions>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -616,7 +617,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Nodes.JsonValue.Create" target="_top">.NET documentation</a>
      */
-    public static JsonValue Create(java.lang.String value, Nullable_1 options) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static JsonValue Create(java.lang.String value, Nullable_1<JsonNodeOptions> options) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -635,7 +636,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * Invokes the .NET member Create.
      *
      * @param value the argument of type {@code JsonElement}
-     * @param options the argument of type {@code Nullable_1}
+     * @param options the argument of type {@code Nullable_1<JsonNodeOptions>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ObjectDisposedException if the .NET member raises it
@@ -648,7 +649,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Nodes.JsonValue.Create" target="_top">.NET documentation</a>
      */
-    public static JsonValue Create(JsonElement value, Nullable_1 options) throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+    public static JsonValue Create(JsonElement value, Nullable_1<JsonNodeOptions> options) throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -667,7 +668,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * Invokes the .NET member Create.
      *
      * @param value the argument of type {@code UInt16}
-     * @param options the argument of type {@code Nullable_1}
+     * @param options the argument of type {@code Nullable_1<JsonNodeOptions>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -677,7 +678,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Nodes.JsonValue.Create" target="_top">.NET documentation</a>
      */
-    public static JsonValue Create(UInt16 value, Nullable_1 options) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static JsonValue Create(UInt16 value, Nullable_1<JsonNodeOptions> options) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -696,7 +697,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * Invokes the .NET member Create.
      *
      * @param value the argument of type {@code UInt32}
-     * @param options the argument of type {@code Nullable_1}
+     * @param options the argument of type {@code Nullable_1<JsonNodeOptions>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -706,7 +707,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Nodes.JsonValue.Create" target="_top">.NET documentation</a>
      */
-    public static JsonValue Create(UInt32 value, Nullable_1 options) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static JsonValue Create(UInt32 value, Nullable_1<JsonNodeOptions> options) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -725,7 +726,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * Invokes the .NET member Create.
      *
      * @param value the argument of type {@code UInt64}
-     * @param options the argument of type {@code Nullable_1}
+     * @param options the argument of type {@code Nullable_1<JsonNodeOptions>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -735,7 +736,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Nodes.JsonValue.Create" target="_top">.NET documentation</a>
      */
-    public static JsonValue Create(UInt64 value, Nullable_1 options) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static JsonValue Create(UInt64 value, Nullable_1<JsonNodeOptions> options) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -755,7 +756,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      *
      * @param <T> the type of the generic argument T
      * @param value the argument of type {@code T}
-     * @param options the argument of type {@code Nullable_1}
+     * @param options the argument of type {@code Nullable_1<JsonNodeOptions>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -772,7 +773,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Nodes.JsonValue.Create" target="_top">.NET documentation</a>
      */
-    public static <T extends IJCOBridgeReflected> JsonValue Create(T value, Nullable_1 options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.RankException, system.collections.generic.KeyNotFoundException {
+    public static <T extends IJCOBridgeReflected> JsonValue Create(T value, Nullable_1<JsonNodeOptions> options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.RankException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;
@@ -793,7 +794,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * @param <T> the type of the generic argument T
      * @param value the argument of type {@code T}
      * @param jsonTypeInfo the argument of type {@code JsonTypeInfo_1}
-     * @param options the argument of type {@code Nullable_1}
+     * @param options the argument of type {@code Nullable_1<JsonNodeOptions>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -812,7 +813,7 @@ public class JsonValue extends system.text.json.nodes.JsonNode  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Nodes.JsonValue.Create" target="_top">.NET documentation</a>
      */
-    public static <T extends IJCOBridgeReflected> JsonValue Create(T value, JsonTypeInfo_1 jsonTypeInfo, Nullable_1 options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException {
+    public static <T extends IJCOBridgeReflected> JsonValue Create(T value, JsonTypeInfo_1 jsonTypeInfo, Nullable_1<JsonNodeOptions> options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

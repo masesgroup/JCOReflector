@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.data.common.DbColumn;
 
 
 /**
@@ -151,7 +152,7 @@ public class IDbColumnSchemaGeneratorImplementation extends NetObject implements
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.IDbColumnSchemaGenerator.GetColumnSchema" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 GetColumnSchema() throws Throwable {
+    public ReadOnlyCollection_1<DbColumn> GetColumnSchema() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetColumnSchema = null;

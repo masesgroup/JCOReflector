@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.identitymodel.selectors.AudienceUriMode;
 import system.collections.objectmodel.Collection_1;
+import system.Uri;
 
 
 /**
@@ -198,7 +199,7 @@ public class AudienceRestriction extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.AudienceRestriction.AllowedAudienceUris" target="_top">.NET documentation</a>
      */
-    public Collection_1 getAllowedAudienceUris() throws Throwable {
+    public Collection_1<Uri> getAllowedAudienceUris() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAllowedAudienceUris = null;

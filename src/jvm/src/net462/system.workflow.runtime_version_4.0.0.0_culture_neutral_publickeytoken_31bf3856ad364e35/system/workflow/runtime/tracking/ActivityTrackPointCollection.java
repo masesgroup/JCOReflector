@@ -171,14 +171,14 @@ public class ActivityTrackPointCollection extends system.collections.generic.Lis
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param points the argument of type {@code IEnumerable_1}
+     * @param points the argument of type {@code IEnumerable_1<ActivityTrackPoint>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.ActivityTrackPointCollection.-ctor" target="_top">.NET documentation</a>
      */
-    public ActivityTrackPointCollection(IEnumerable_1 points) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public ActivityTrackPointCollection(IEnumerable_1<ActivityTrackPoint> points) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

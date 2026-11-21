@@ -41,12 +41,13 @@ import java.util.ArrayList;
 import system.workflow.activities.WorkflowRole;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.directoryservices.DirectoryEntry;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.security.principal.SecurityIdentifier;
 import system.workflow.activities.ActiveDirectoryRole;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
-import system.directoryservices.DirectoryEntry;
 
 
 /**
@@ -210,7 +211,7 @@ public class ActiveDirectoryRole extends system.workflow.activities.WorkflowRole
      * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.ActiveDirectoryRole.GetEntries" target="_top">.NET documentation</a>
      */
-    public ICollection_1 GetEntries() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.OverflowException {
+    public ICollection_1<DirectoryEntry> GetEntries() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetEntries = null;
@@ -251,7 +252,7 @@ public class ActiveDirectoryRole extends system.workflow.activities.WorkflowRole
      * @throws system.componentmodel.Win32Exception if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.ActiveDirectoryRole.GetSecurityIdentifiers" target="_top">.NET documentation</a>
      */
-    public IList_1 GetSecurityIdentifiers() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.InvalidOperationException, system.OverflowException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception {
+    public IList_1<SecurityIdentifier> GetSecurityIdentifiers() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.InvalidOperationException, system.OverflowException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetSecurityIdentifiers = null;

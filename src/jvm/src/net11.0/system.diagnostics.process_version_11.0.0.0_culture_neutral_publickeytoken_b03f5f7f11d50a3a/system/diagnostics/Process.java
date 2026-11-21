@@ -48,6 +48,7 @@ import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
 import system.collections.generic.IAsyncEnumerable_1;
 import system.collections.generic.IAsyncEnumerable_1Implementation;
+import system.diagnostics.ProcessOutputLine;
 import system.threading.CancellationToken;
 import system.Nullable_1;
 import system.security.SecureString;
@@ -721,7 +722,7 @@ public class Process extends system.componentmodel.Component  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Process.ReadAllLinesAsync" target="_top">.NET documentation</a>
      */
-    public IAsyncEnumerable_1 ReadAllLinesAsync(CancellationToken cancellationToken) throws Throwable {
+    public IAsyncEnumerable_1<ProcessOutputLine> ReadAllLinesAsync(CancellationToken cancellationToken) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadAllLinesAsync = null;
@@ -739,7 +740,7 @@ public class Process extends system.componentmodel.Component  {
     /**
      * Invokes the .NET member ReadAllLines.
      *
-     * @param timeout the argument of type {@code Nullable_1}
+     * @param timeout the argument of type {@code Nullable_1<TimeSpan>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -752,7 +753,7 @@ public class Process extends system.componentmodel.Component  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Process.ReadAllLines" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 ReadAllLines(Nullable_1 timeout) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException {
+    public IEnumerable_1<ProcessOutputLine> ReadAllLines(Nullable_1<TimeSpan> timeout) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadAllLines = null;
@@ -1323,7 +1324,7 @@ public class Process extends system.componentmodel.Component  {
      * Invokes the .NET member Run.
      *
      * @param startInfo the argument of type {@code ProcessStartInfo}
-     * @param timeout the argument of type {@code Nullable_1}
+     * @param timeout the argument of type {@code Nullable_1<TimeSpan>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -1343,7 +1344,7 @@ public class Process extends system.componentmodel.Component  {
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Process.Run" target="_top">.NET documentation</a>
      */
-    public static ProcessExitStatus Run(ProcessStartInfo startInfo, Nullable_1 timeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.io.IOException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
+    public static ProcessExitStatus Run(ProcessStartInfo startInfo, Nullable_1<TimeSpan> timeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.io.IOException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRun = null;
@@ -1364,7 +1365,7 @@ public class Process extends system.componentmodel.Component  {
      * @param fileName the argument of type {@code java.lang.String}
      * @param arguments the argument of type {@code IEnumerable_1}
      * @param silent the argument of type {@code boolean}
-     * @param timeout the argument of type {@code Nullable_1}
+     * @param timeout the argument of type {@code Nullable_1<TimeSpan>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -1389,7 +1390,7 @@ public class Process extends system.componentmodel.Component  {
      * @throws system.threading.AbandonedMutexException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Process.Run" target="_top">.NET documentation</a>
      */
-    public static ProcessExitStatus Run(java.lang.String fileName, IEnumerable_1 arguments, boolean silent, Nullable_1 timeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidOperationException, system.FormatException, system.io.IOException, system.ApplicationException, system.threading.ThreadStateException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.threading.AbandonedMutexException {
+    public static ProcessExitStatus Run(java.lang.String fileName, IEnumerable_1 arguments, boolean silent, Nullable_1<TimeSpan> timeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidOperationException, system.FormatException, system.io.IOException, system.ApplicationException, system.threading.ThreadStateException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRun = null;
@@ -1448,7 +1449,7 @@ public class Process extends system.componentmodel.Component  {
      * Invokes the .NET member RunAndCaptureText.
      *
      * @param startInfo the argument of type {@code ProcessStartInfo}
-     * @param timeout the argument of type {@code Nullable_1}
+     * @param timeout the argument of type {@code Nullable_1<TimeSpan>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -1475,7 +1476,7 @@ public class Process extends system.componentmodel.Component  {
      * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Process.RunAndCaptureText" target="_top">.NET documentation</a>
      */
-    public static ProcessTextOutput RunAndCaptureText(ProcessStartInfo startInfo, Nullable_1 timeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.threading.SynchronizationLockException, system.AggregateException, system.FormatException, system.threading.LockRecursionException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.threading.AbandonedMutexException, system.TimeoutException, system.IndexOutOfRangeException, system.OverflowException {
+    public static ProcessTextOutput RunAndCaptureText(ProcessStartInfo startInfo, Nullable_1<TimeSpan> timeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.threading.SynchronizationLockException, system.AggregateException, system.FormatException, system.threading.LockRecursionException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.threading.AbandonedMutexException, system.TimeoutException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRunAndCaptureText = null;
@@ -1495,7 +1496,7 @@ public class Process extends system.componentmodel.Component  {
      *
      * @param fileName the argument of type {@code java.lang.String}
      * @param arguments the argument of type {@code IEnumerable_1}
-     * @param timeout the argument of type {@code Nullable_1}
+     * @param timeout the argument of type {@code Nullable_1<TimeSpan>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -1523,7 +1524,7 @@ public class Process extends system.componentmodel.Component  {
      * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Process.RunAndCaptureText" target="_top">.NET documentation</a>
      */
-    public static ProcessTextOutput RunAndCaptureText(java.lang.String fileName, IEnumerable_1 arguments, Nullable_1 timeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.threading.LockRecursionException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.io.IOException, system.threading.SynchronizationLockException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.TimeoutException, system.OverflowException {
+    public static ProcessTextOutput RunAndCaptureText(java.lang.String fileName, IEnumerable_1 arguments, Nullable_1<TimeSpan> timeout) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.threading.LockRecursionException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.io.IOException, system.threading.SynchronizationLockException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.TimeoutException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRunAndCaptureText = null;
@@ -1614,7 +1615,7 @@ public class Process extends system.componentmodel.Component  {
      * @throws system.AggregateException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Process.RunAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 RunAsync(ProcessStartInfo startInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.io.IOException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.threading.ThreadStateException, system.threading.ThreadStartException, system.diagnostics.UnreachableException, system.threading.tasks.TaskCanceledException, system.AggregateException {
+    public static Task_1<ProcessExitStatus> RunAsync(ProcessStartInfo startInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.io.IOException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.threading.ThreadStateException, system.threading.ThreadStartException, system.diagnostics.UnreachableException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRunAsync = null;
@@ -1664,7 +1665,7 @@ public class Process extends system.componentmodel.Component  {
      * @throws system.AggregateException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Process.RunAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 RunAsync(java.lang.String fileName, IEnumerable_1 arguments, boolean silent, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidOperationException, system.FormatException, system.io.IOException, system.ApplicationException, system.threading.ThreadStateException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.threading.tasks.TaskSchedulerException, system.NotSupportedException, system.diagnostics.UnreachableException, system.threading.tasks.TaskCanceledException, system.AggregateException {
+    public static Task_1<ProcessExitStatus> RunAsync(java.lang.String fileName, IEnumerable_1 arguments, boolean silent, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidOperationException, system.FormatException, system.io.IOException, system.ApplicationException, system.threading.ThreadStateException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.threading.tasks.TaskSchedulerException, system.NotSupportedException, system.diagnostics.UnreachableException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRunAsync = null;
@@ -1711,7 +1712,7 @@ public class Process extends system.componentmodel.Component  {
      * @throws system.AggregateException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Process.WaitForExitStatusAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 WaitForExitStatusAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.DuplicateWaitObjectException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.ApplicationException, system.OverflowException, system.threading.AbandonedMutexException, system.componentmodel.Win32Exception, system.NullReferenceException, system.IndexOutOfRangeException, system.threading.ThreadStartException, system.diagnostics.UnreachableException, system.threading.tasks.TaskCanceledException, system.AggregateException {
+    public Task_1<ProcessExitStatus> WaitForExitStatusAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.DuplicateWaitObjectException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.ApplicationException, system.OverflowException, system.threading.AbandonedMutexException, system.componentmodel.Win32Exception, system.NullReferenceException, system.IndexOutOfRangeException, system.threading.ThreadStartException, system.diagnostics.UnreachableException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectWaitForExitStatusAsync = null;
@@ -1756,7 +1757,7 @@ public class Process extends system.componentmodel.Component  {
      * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Process.RunAndCaptureTextAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 RunAndCaptureTextAsync(ProcessStartInfo startInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.threading.SynchronizationLockException, system.AggregateException, system.FormatException, system.threading.LockRecursionException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.threading.tasks.TaskSchedulerException {
+    public static Task_1<ProcessTextOutput> RunAndCaptureTextAsync(ProcessStartInfo startInfo, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.threading.SynchronizationLockException, system.AggregateException, system.FormatException, system.threading.LockRecursionException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.diagnostics.UnreachableException, system.threading.tasks.TaskSchedulerException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRunAndCaptureTextAsync = null;
@@ -1803,7 +1804,7 @@ public class Process extends system.componentmodel.Component  {
      * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Process.RunAndCaptureTextAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 RunAndCaptureTextAsync(java.lang.String fileName, IEnumerable_1 arguments, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.threading.LockRecursionException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.io.IOException, system.threading.SynchronizationLockException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.threading.tasks.TaskSchedulerException {
+    public static Task_1<ProcessTextOutput> RunAndCaptureTextAsync(java.lang.String fileName, IEnumerable_1 arguments, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.AggregateException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.threading.LockRecursionException, system.MissingMethodException, system.reflection.TargetInvocationException, system.componentmodel.Win32Exception, system.io.IOException, system.threading.SynchronizationLockException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.threading.tasks.TaskSchedulerException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRunAndCaptureTextAsync = null;
@@ -1899,7 +1900,7 @@ public class Process extends system.componentmodel.Component  {
     /**
      * Invokes the .NET member ReadAllBytes.
      *
-     * @param timeout the argument of type {@code Nullable_1}
+     * @param timeout the argument of type {@code Nullable_1<TimeSpan>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -1922,7 +1923,7 @@ public class Process extends system.componentmodel.Component  {
      * @throws system.InvalidCastException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Process.ReadAllBytes" target="_top">.NET documentation</a>
      */
-    public ValueTuple_2 ReadAllBytes(Nullable_1 timeout) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.ArrayTypeMismatchException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.TimeoutException, system.RankException, system.InvalidCastException {
+    public ValueTuple_2 ReadAllBytes(Nullable_1<TimeSpan> timeout) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.ArrayTypeMismatchException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.TimeoutException, system.RankException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadAllBytes = null;
@@ -1940,7 +1941,7 @@ public class Process extends system.componentmodel.Component  {
     /**
      * Invokes the .NET member ReadAllText.
      *
-     * @param timeout the argument of type {@code Nullable_1}
+     * @param timeout the argument of type {@code Nullable_1<TimeSpan>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -1963,7 +1964,7 @@ public class Process extends system.componentmodel.Component  {
      * @throws system.InvalidCastException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Process.ReadAllText" target="_top">.NET documentation</a>
      */
-    public ValueTuple_2 ReadAllText(Nullable_1 timeout) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.ArrayTypeMismatchException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.TimeoutException, system.RankException, system.InvalidCastException {
+    public ValueTuple_2 ReadAllText(Nullable_1<TimeSpan> timeout) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.ArrayTypeMismatchException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.TimeoutException, system.RankException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadAllText = null;

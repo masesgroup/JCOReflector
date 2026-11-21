@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.data.metadata.edm.MetadataItem;
 import system.data.metadata.edm.BuiltInTypeKind;
 import system.data.metadata.edm.ReadOnlyMetadataCollection_1;
+import system.data.metadata.edm.EdmProperty;
 import system.data.metadata.edm.RelationshipEndMember;
 
 
@@ -171,7 +172,7 @@ public class ReferentialConstraint extends system.data.metadata.edm.MetadataItem
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.ReferentialConstraint.FromProperties" target="_top">.NET documentation</a>
      */
-    public ReadOnlyMetadataCollection_1 getFromProperties() throws Throwable {
+    public ReadOnlyMetadataCollection_1<EdmProperty> getFromProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFromProperties = null;
@@ -193,7 +194,7 @@ public class ReferentialConstraint extends system.data.metadata.edm.MetadataItem
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.ReferentialConstraint.ToProperties" target="_top">.NET documentation</a>
      */
-    public ReadOnlyMetadataCollection_1 getToProperties() throws Throwable {
+    public ReadOnlyMetadataCollection_1<EdmProperty> getToProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectToProperties = null;

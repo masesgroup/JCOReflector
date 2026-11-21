@@ -570,7 +570,7 @@ public class IPGlobalProperties extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.IPGlobalProperties.GetUnicastAddressesAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 GetUnicastAddressesAsync() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.NotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException {
+    public Task_1<UnicastIPAddressInformationCollection> GetUnicastAddressesAsync() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.NotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetUnicastAddressesAsync = null;

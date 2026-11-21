@@ -130,7 +130,7 @@ public interface IReceivableSourceBlock_1<TOutput extends IJCOBridgeReflected> e
     // Methods section
     
 
-    public boolean TryReceive(Predicate_1 filter, JCORefOut<TOutput> item) throws Throwable;
+    public boolean TryReceive(Predicate_1<TOutput> filter, JCORefOut<TOutput> item) throws Throwable;
 
     public boolean TryReceiveAll(JCORefOut<IList_1> items) throws Throwable;
 

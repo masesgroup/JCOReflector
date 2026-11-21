@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.EventArgs;
 import system.collections.generic.List_1;
+import system.windows.controls.DataGridCellInfo;
 import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
@@ -159,8 +160,8 @@ public class SelectedCellsChangedEventArgs extends system.EventArgs  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param addedCells the argument of type {@code List_1}
-     * @param removedCells the argument of type {@code List_1}
+     * @param addedCells the argument of type {@code List_1<DataGridCellInfo>}
+     * @param removedCells the argument of type {@code List_1<DataGridCellInfo>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -171,7 +172,7 @@ public class SelectedCellsChangedEventArgs extends system.EventArgs  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.SelectedCellsChangedEventArgs.-ctor" target="_top">.NET documentation</a>
      */
-    public SelectedCellsChangedEventArgs(List_1 addedCells, List_1 removedCells) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public SelectedCellsChangedEventArgs(List_1<DataGridCellInfo> addedCells, List_1<DataGridCellInfo> removedCells) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -184,8 +185,8 @@ public class SelectedCellsChangedEventArgs extends system.EventArgs  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param addedCells the argument of type {@code ReadOnlyCollection_1}
-     * @param removedCells the argument of type {@code ReadOnlyCollection_1}
+     * @param addedCells the argument of type {@code ReadOnlyCollection_1<DataGridCellInfo>}
+     * @param removedCells the argument of type {@code ReadOnlyCollection_1<DataGridCellInfo>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -196,7 +197,7 @@ public class SelectedCellsChangedEventArgs extends system.EventArgs  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.SelectedCellsChangedEventArgs.-ctor" target="_top">.NET documentation</a>
      */
-    public SelectedCellsChangedEventArgs(ReadOnlyCollection_1 addedCells, ReadOnlyCollection_1 removedCells) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public SelectedCellsChangedEventArgs(ReadOnlyCollection_1<DataGridCellInfo> addedCells, ReadOnlyCollection_1<DataGridCellInfo> removedCells) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -222,7 +223,7 @@ public class SelectedCellsChangedEventArgs extends system.EventArgs  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.SelectedCellsChangedEventArgs.AddedCells" target="_top">.NET documentation</a>
      */
-    public IList_1 getAddedCells() throws Throwable {
+    public IList_1<DataGridCellInfo> getAddedCells() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAddedCells = null;
@@ -244,7 +245,7 @@ public class SelectedCellsChangedEventArgs extends system.EventArgs  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.SelectedCellsChangedEventArgs.RemovedCells" target="_top">.NET documentation</a>
      */
-    public IList_1 getRemovedCells() throws Throwable {
+    public IList_1<DataGridCellInfo> getRemovedCells() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRemovedCells = null;

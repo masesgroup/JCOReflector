@@ -43,6 +43,7 @@ import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
 import system.data.DataView;
 import system.data.EnumerableRowCollection_1;
+import system.data.DataRow;
 import system.data.LoadOption;
 import system.data.FillErrorEventHandler;
 
@@ -285,7 +286,7 @@ public class DataTableExtensions extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.DataTableExtensions.AsEnumerable" target="_top">.NET documentation</a>
      */
-    public static EnumerableRowCollection_1 AsEnumerable(DataTable source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public static EnumerableRowCollection_1<DataRow> AsEnumerable(DataTable source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAsEnumerable = null;

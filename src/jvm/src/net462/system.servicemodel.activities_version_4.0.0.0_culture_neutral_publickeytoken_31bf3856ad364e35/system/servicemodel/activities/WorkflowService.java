@@ -43,9 +43,12 @@ import system.activities.validation.ValidationResults;
 import system.activities.validation.ValidationSettings;
 import system.collections.generic.IDictionary_2;
 import system.collections.generic.IDictionary_2Implementation;
-import system.activities.WorkflowIdentity;
-import system.collections.objectmodel.Collection_1;
 import system.xml.linq.XName;
+import system.servicemodel.description.ContractDescription;
+import system.activities.WorkflowIdentity;
+import system.activities.dynamicupdate.DynamicUpdateMap;
+import system.collections.objectmodel.Collection_1;
+import system.servicemodel.Endpoint;
 
 
 /**
@@ -250,7 +253,7 @@ public class WorkflowService extends NetObject  {
      * @throws system.xml.XmlException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.WorkflowService.GetContractDescriptions" target="_top">.NET documentation</a>
      */
-    public IDictionary_2 GetContractDescriptions() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.OverflowException, system.xml.XmlException {
+    public IDictionary_2<XName, ContractDescription> GetContractDescriptions() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.OverflowException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetContractDescriptions = null;
@@ -394,7 +397,7 @@ public class WorkflowService extends NetObject  {
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.WorkflowService.UpdateMaps" target="_top">.NET documentation</a>
      */
-    public IDictionary_2 getUpdateMaps() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public IDictionary_2<WorkflowIdentity, DynamicUpdateMap> getUpdateMaps() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUpdateMaps = null;
@@ -416,7 +419,7 @@ public class WorkflowService extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.WorkflowService.Endpoints" target="_top">.NET documentation</a>
      */
-    public Collection_1 getEndpoints() throws Throwable {
+    public Collection_1<Endpoint> getEndpoints() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEndpoints = null;
@@ -438,7 +441,7 @@ public class WorkflowService extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.WorkflowService.ImplementedContracts" target="_top">.NET documentation</a>
      */
-    public Collection_1 getImplementedContracts() throws Throwable {
+    public Collection_1<NetType> getImplementedContracts() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectImplementedContracts = null;

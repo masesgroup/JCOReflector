@@ -37,6 +37,9 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.EventHandler_1;
+import system.workflow.runtime.tracking.ProfileRemovedEventArgs;
+import system.workflow.runtime.tracking.ProfileUpdatedEventArgs;
 
 
 /**
@@ -123,5 +126,13 @@ public interface IProfileNotification extends IJCOBridgeReflected {
 
     // Instance Events section
     
+    public void addProfileRemoved(EventHandler_1<ProfileRemovedEventArgs> handler) throws Throwable;
+
+    public void removeProfileRemoved(EventHandler_1<ProfileRemovedEventArgs> handler) throws Throwable;
+
+    public void addProfileUpdated(EventHandler_1<ProfileUpdatedEventArgs> handler) throws Throwable;
+
+    public void removeProfileUpdated(EventHandler_1<ProfileUpdatedEventArgs> handler) throws Throwable;
+
 
 }

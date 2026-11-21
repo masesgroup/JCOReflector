@@ -49,7 +49,10 @@ import system.servicemodel.description.ServiceDescription;
 import system.servicemodel.dispatcher.ChannelDispatcherCollection;
 import system.servicemodel.IExtensionCollection_1;
 import system.servicemodel.IExtensionCollection_1Implementation;
+import system.servicemodel.ServiceHostBase;
 import system.TimeSpan;
+import system.EventHandler_1;
+import system.servicemodel.UnknownMessageReceivedEventArgs;
 
 
 /**
@@ -243,7 +246,7 @@ public class ServiceHostBase extends system.servicemodel.channels.CommunicationO
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceHostBase.AddDefaultEndpoints" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 AddDefaultEndpoints() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.OutOfMemoryException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.FormatException {
+    public ReadOnlyCollection_1<ServiceEndpoint> AddDefaultEndpoints() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.OutOfMemoryException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAddDefaultEndpoints = null;
@@ -596,7 +599,7 @@ public class ServiceHostBase extends system.servicemodel.channels.CommunicationO
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceHostBase.BaseAddresses" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getBaseAddresses() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public ReadOnlyCollection_1<Uri> getBaseAddresses() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectBaseAddresses = null;
@@ -745,7 +748,7 @@ public class ServiceHostBase extends system.servicemodel.channels.CommunicationO
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceHostBase.Extensions" target="_top">.NET documentation</a>
      */
-    public IExtensionCollection_1 getExtensions() throws Throwable {
+    public IExtensionCollection_1<ServiceHostBase> getExtensions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExtensions = null;
@@ -874,6 +877,40 @@ public class ServiceHostBase extends system.servicemodel.channels.CommunicationO
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addUnknownMessageReceived.
+     *
+     * @param handler the argument of type {@code EventHandler_1<UnknownMessageReceivedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addUnknownMessageReceived(EventHandler_1<UnknownMessageReceivedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("UnknownMessageReceived", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeUnknownMessageReceived.
+     *
+     * @param handler the argument of type {@code EventHandler_1<UnknownMessageReceivedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeUnknownMessageReceived(EventHandler_1<UnknownMessageReceivedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("UnknownMessageReceived", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

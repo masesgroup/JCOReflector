@@ -47,6 +47,9 @@ import system.windows.forms.integration.PropertyMap;
 import system.windows.media.Brush;
 import system.windows.media.FontFamily;
 import system.windows.Thickness;
+import system.EventHandler_1;
+import system.windows.forms.integration.ChildChangedEventArgs;
+import system.windows.forms.integration.LayoutExceptionEventArgs;
 
 
 /**
@@ -831,6 +834,74 @@ public class WindowsFormsHost extends system.windows.interop.HwndHost  {
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addChildChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ChildChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addChildChanged(EventHandler_1<ChildChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("ChildChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeChildChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ChildChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeChildChanged(EventHandler_1<ChildChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("ChildChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addLayoutError.
+     *
+     * @param handler the argument of type {@code EventHandler_1<LayoutExceptionEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addLayoutError(EventHandler_1<LayoutExceptionEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("LayoutError", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeLayoutError.
+     *
+     * @param handler the argument of type {@code EventHandler_1<LayoutExceptionEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeLayoutError(EventHandler_1<LayoutExceptionEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("LayoutError", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

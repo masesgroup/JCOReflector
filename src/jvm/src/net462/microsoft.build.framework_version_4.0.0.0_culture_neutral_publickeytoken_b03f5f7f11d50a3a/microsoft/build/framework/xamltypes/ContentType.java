@@ -40,7 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.Object;
 import system.collections.generic.List_1;
+import microsoft.build.framework.xamltypes.NameValuePair;
 
 
 /**
@@ -183,7 +185,7 @@ public class ContentType extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.ContentType.GetSchemaObjects" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetSchemaObjects(NetType type) throws Throwable {
+    public IEnumerable_1<Object> GetSchemaObjects(NetType type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetSchemaObjects = null;
@@ -205,7 +207,7 @@ public class ContentType extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.ContentType.GetSchemaObjectTypes" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetSchemaObjectTypes() throws Throwable {
+    public IEnumerable_1<NetType> GetSchemaObjectTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetSchemaObjectTypes = null;
@@ -330,7 +332,7 @@ public class ContentType extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.ContentType.Metadata" target="_top">.NET documentation</a>
      */
-    public List_1 getMetadata() throws Throwable {
+    public List_1<NameValuePair> getMetadata() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectMetadata = null;
@@ -352,7 +354,7 @@ public class ContentType extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.ContentType.Metadata" target="_top">.NET documentation</a>
      */
-    public void setMetadata(List_1 Metadata) throws Throwable {
+    public void setMetadata(List_1<NameValuePair> Metadata) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

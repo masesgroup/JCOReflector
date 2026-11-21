@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.Nullable_1;
+import microsoft.extensions.caching.hybrid.HybridCacheEntryFlags;
+import system.TimeSpan;
 
 
 /**
@@ -180,7 +182,7 @@ public class HybridCacheEntryOptions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Caching.Hybrid.HybridCacheEntryOptions.Flags" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getFlags() throws Throwable {
+    public Nullable_1<HybridCacheEntryFlags> getFlags() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFlags = null;
@@ -202,7 +204,7 @@ public class HybridCacheEntryOptions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Caching.Hybrid.HybridCacheEntryOptions.Flags" target="_top">.NET documentation</a>
      */
-    public void setFlags(Nullable_1 Flags) throws Throwable {
+    public void setFlags(Nullable_1<HybridCacheEntryFlags> Flags) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -258,7 +260,7 @@ public class HybridCacheEntryOptions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Caching.Hybrid.HybridCacheEntryOptions.Expiration" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getExpiration() throws Throwable {
+    public Nullable_1<TimeSpan> getExpiration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExpiration = null;
@@ -280,7 +282,7 @@ public class HybridCacheEntryOptions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Caching.Hybrid.HybridCacheEntryOptions.Expiration" target="_top">.NET documentation</a>
      */
-    public void setExpiration(Nullable_1 Expiration) throws Throwable {
+    public void setExpiration(Nullable_1<TimeSpan> Expiration) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -297,7 +299,7 @@ public class HybridCacheEntryOptions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Caching.Hybrid.HybridCacheEntryOptions.LocalCacheExpiration" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getLocalCacheExpiration() throws Throwable {
+    public Nullable_1<TimeSpan> getLocalCacheExpiration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectLocalCacheExpiration = null;
@@ -319,7 +321,7 @@ public class HybridCacheEntryOptions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Caching.Hybrid.HybridCacheEntryOptions.LocalCacheExpiration" target="_top">.NET documentation</a>
      */
-    public void setLocalCacheExpiration(Nullable_1 LocalCacheExpiration) throws Throwable {
+    public void setLocalCacheExpiration(Nullable_1<TimeSpan> LocalCacheExpiration) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

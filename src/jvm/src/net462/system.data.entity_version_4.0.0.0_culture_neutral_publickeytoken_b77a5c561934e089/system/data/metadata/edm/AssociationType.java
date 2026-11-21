@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.data.metadata.edm.RelationshipType;
 import system.data.metadata.edm.BuiltInTypeKind;
 import system.data.metadata.edm.ReadOnlyMetadataCollection_1;
+import system.data.metadata.edm.AssociationEndMember;
+import system.data.metadata.edm.ReferentialConstraint;
 
 
 /**
@@ -193,7 +195,7 @@ public class AssociationType extends system.data.metadata.edm.RelationshipType  
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.AssociationType.AssociationEndMembers" target="_top">.NET documentation</a>
      */
-    public ReadOnlyMetadataCollection_1 getAssociationEndMembers() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public ReadOnlyMetadataCollection_1<AssociationEndMember> getAssociationEndMembers() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAssociationEndMembers = null;
@@ -215,7 +217,7 @@ public class AssociationType extends system.data.metadata.edm.RelationshipType  
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.AssociationType.ReferentialConstraints" target="_top">.NET documentation</a>
      */
-    public ReadOnlyMetadataCollection_1 getReferentialConstraints() throws Throwable {
+    public ReadOnlyMetadataCollection_1<ReferentialConstraint> getReferentialConstraints() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReferentialConstraints = null;

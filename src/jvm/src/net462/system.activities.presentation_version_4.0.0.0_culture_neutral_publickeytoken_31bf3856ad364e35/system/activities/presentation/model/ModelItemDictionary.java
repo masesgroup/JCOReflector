@@ -514,7 +514,7 @@ public class ModelItemDictionary extends system.activities.presentation.model.Mo
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelItemDictionary.Keys" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getKeys() throws Throwable {
+    public ICollection_1<ModelItem> getKeys() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectKeys = null;
@@ -536,7 +536,7 @@ public class ModelItemDictionary extends system.activities.presentation.model.Mo
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Model.ModelItemDictionary.Values" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getValues() throws Throwable {
+    public ICollection_1<ModelItem> getValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValues = null;

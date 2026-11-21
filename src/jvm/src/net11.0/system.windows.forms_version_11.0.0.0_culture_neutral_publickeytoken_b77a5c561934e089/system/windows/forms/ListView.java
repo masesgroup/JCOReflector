@@ -62,6 +62,8 @@ import system.windows.forms.Padding;
 import system.windows.forms.SortOrder;
 import system.windows.forms.View;
 import system.EventHandler;
+import system.EventHandler_1;
+import system.windows.forms.ListViewGroupEventArgs;
 import system.windows.forms.CacheVirtualItemsEventHandler;
 import system.windows.forms.ColumnClickEventHandler;
 import system.windows.forms.ColumnReorderedEventHandler;
@@ -2934,6 +2936,74 @@ public class ListView extends system.windows.forms.Control  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("TextChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addGroupCollapsedStateChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ListViewGroupEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addGroupCollapsedStateChanged(EventHandler_1<ListViewGroupEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("GroupCollapsedStateChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeGroupCollapsedStateChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ListViewGroupEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeGroupCollapsedStateChanged(EventHandler_1<ListViewGroupEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("GroupCollapsedStateChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addGroupTaskLinkClick.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ListViewGroupEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addGroupTaskLinkClick(EventHandler_1<ListViewGroupEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("GroupTaskLinkClick", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeGroupTaskLinkClick.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ListViewGroupEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeGroupTaskLinkClick(EventHandler_1<ListViewGroupEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("GroupTaskLinkClick", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -42,6 +42,7 @@ import system.windows.RoutedEventArgs;
 import system.windows.ink.StrokeCollection;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.windows.ink.GestureRecognitionResult;
 import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
@@ -160,7 +161,7 @@ public class InkCanvasGestureEventArgs extends system.windows.RoutedEventArgs  {
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param strokes the argument of type {@code StrokeCollection}
-     * @param gestureRecognitionResults the argument of type {@code IEnumerable_1}
+     * @param gestureRecognitionResults the argument of type {@code IEnumerable_1<GestureRecognitionResult>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -172,7 +173,7 @@ public class InkCanvasGestureEventArgs extends system.windows.RoutedEventArgs  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.InkCanvasGestureEventArgs.-ctor" target="_top">.NET documentation</a>
      */
-    public InkCanvasGestureEventArgs(StrokeCollection strokes, IEnumerable_1 gestureRecognitionResults) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException {
+    public InkCanvasGestureEventArgs(StrokeCollection strokes, IEnumerable_1<GestureRecognitionResult> gestureRecognitionResults) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -201,7 +202,7 @@ public class InkCanvasGestureEventArgs extends system.windows.RoutedEventArgs  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.InkCanvasGestureEventArgs.GetGestureRecognitionResults" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 GetGestureRecognitionResults() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public ReadOnlyCollection_1<GestureRecognitionResult> GetGestureRecognitionResults() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetGestureRecognitionResults = null;

@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.windows.input.InputEventArgs;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.windows.input.IManipulator;
+import system.windows.input.IManipulatorImplementation;
 import system.windows.IInputElement;
 import system.windows.IInputElementImplementation;
 import system.windows.input.ManipulationDelta;
@@ -178,7 +180,7 @@ public class ManipulationBoundaryFeedbackEventArgs extends system.windows.input.
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationBoundaryFeedbackEventArgs.Manipulators" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getManipulators() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public IEnumerable_1<IManipulator> getManipulators() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectManipulators = null;

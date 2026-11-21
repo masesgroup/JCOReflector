@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.activities.validation.ValidationError;
 import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
@@ -157,12 +158,12 @@ public class ValidationResults extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param allValidationErrors the argument of type {@code IList_1}
+     * @param allValidationErrors the argument of type {@code IList_1<ValidationError>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.ValidationResults.-ctor" target="_top">.NET documentation</a>
      */
-    public ValidationResults(IList_1 allValidationErrors) throws Throwable, system.ArgumentNullException {
+    public ValidationResults(IList_1<ValidationError> allValidationErrors) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -189,7 +190,7 @@ public class ValidationResults extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.ValidationResults.Errors" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getErrors() throws Throwable, system.ArgumentNullException {
+    public ReadOnlyCollection_1<ValidationError> getErrors() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectErrors = null;
@@ -212,7 +213,7 @@ public class ValidationResults extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.ValidationResults.Warnings" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getWarnings() throws Throwable, system.ArgumentNullException {
+    public ReadOnlyCollection_1<ValidationError> getWarnings() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectWarnings = null;

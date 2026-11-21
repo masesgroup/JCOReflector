@@ -164,11 +164,11 @@ public class JsonArray extends system.text.json.nodes.JsonNode  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param options the argument of type {@code Nullable_1}
+     * @param options the argument of type {@code Nullable_1<JsonNodeOptions>}
      * @throws Throwable if the .NET constructor fails
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Nodes.JsonArray.-ctor" target="_top">.NET documentation</a>
      */
-    public JsonArray(Nullable_1 options) throws Throwable {
+    public JsonArray(Nullable_1<JsonNodeOptions> options) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -441,7 +441,7 @@ public class JsonArray extends system.text.json.nodes.JsonNode  {
      * Invokes the .NET member Create.
      *
      * @param element the argument of type {@code JsonElement}
-     * @param options the argument of type {@code Nullable_1}
+     * @param options the argument of type {@code Nullable_1<JsonNodeOptions>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ObjectDisposedException if the .NET member raises it
@@ -454,7 +454,7 @@ public class JsonArray extends system.text.json.nodes.JsonNode  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Nodes.JsonArray.Create" target="_top">.NET documentation</a>
      */
-    public static JsonArray Create(JsonElement element, Nullable_1 options) throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+    public static JsonArray Create(JsonElement element, Nullable_1<JsonNodeOptions> options) throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

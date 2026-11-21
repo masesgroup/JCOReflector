@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.workflow.componentmodel.ActivityExecutionStatus;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
 import system.workflow.runtime.tracking.TrackingConditionCollection;
@@ -192,14 +193,14 @@ public class ActivityTrackingLocation extends NetObject  {
      *
      * @param activityTypeName the argument of type {@code java.lang.String}
      * @param matchDerivedTypes the argument of type {@code boolean}
-     * @param executionStatusEvents the argument of type {@code IEnumerable_1}
+     * @param executionStatusEvents the argument of type {@code IEnumerable_1<ActivityExecutionStatus>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.ActivityTrackingLocation.-ctor" target="_top">.NET documentation</a>
      */
-    public ActivityTrackingLocation(java.lang.String activityTypeName, boolean matchDerivedTypes, IEnumerable_1 executionStatusEvents) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public ActivityTrackingLocation(java.lang.String activityTypeName, boolean matchDerivedTypes, IEnumerable_1<ActivityExecutionStatus> executionStatusEvents) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -213,14 +214,14 @@ public class ActivityTrackingLocation extends NetObject  {
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param activityTypeName the argument of type {@code java.lang.String}
-     * @param executionStatusEvents the argument of type {@code IEnumerable_1}
+     * @param executionStatusEvents the argument of type {@code IEnumerable_1<ActivityExecutionStatus>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.ActivityTrackingLocation.-ctor" target="_top">.NET documentation</a>
      */
-    public ActivityTrackingLocation(java.lang.String activityTypeName, IEnumerable_1 executionStatusEvents) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public ActivityTrackingLocation(java.lang.String activityTypeName, IEnumerable_1<ActivityExecutionStatus> executionStatusEvents) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -253,14 +254,14 @@ public class ActivityTrackingLocation extends NetObject  {
      *
      * @param activityType the argument of type {@code NetType}
      * @param matchDerivedTypes the argument of type {@code boolean}
-     * @param executionStatusEvents the argument of type {@code IEnumerable_1}
+     * @param executionStatusEvents the argument of type {@code IEnumerable_1<ActivityExecutionStatus>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.ActivityTrackingLocation.-ctor" target="_top">.NET documentation</a>
      */
-    public ActivityTrackingLocation(NetType activityType, boolean matchDerivedTypes, IEnumerable_1 executionStatusEvents) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public ActivityTrackingLocation(NetType activityType, boolean matchDerivedTypes, IEnumerable_1<ActivityExecutionStatus> executionStatusEvents) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -274,14 +275,14 @@ public class ActivityTrackingLocation extends NetObject  {
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param activityType the argument of type {@code NetType}
-     * @param executionStatusEvents the argument of type {@code IEnumerable_1}
+     * @param executionStatusEvents the argument of type {@code IEnumerable_1<ActivityExecutionStatus>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.ActivityTrackingLocation.-ctor" target="_top">.NET documentation</a>
      */
-    public ActivityTrackingLocation(NetType activityType, IEnumerable_1 executionStatusEvents) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public ActivityTrackingLocation(NetType activityType, IEnumerable_1<ActivityExecutionStatus> executionStatusEvents) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -344,7 +345,7 @@ public class ActivityTrackingLocation extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.ActivityTrackingLocation.ExecutionStatusEvents" target="_top">.NET documentation</a>
      */
-    public IList_1 getExecutionStatusEvents() throws Throwable {
+    public IList_1<ActivityExecutionStatus> getExecutionStatusEvents() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExecutionStatusEvents = null;

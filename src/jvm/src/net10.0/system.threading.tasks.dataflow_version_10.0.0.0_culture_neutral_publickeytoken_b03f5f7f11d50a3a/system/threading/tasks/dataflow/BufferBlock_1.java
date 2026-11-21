@@ -222,7 +222,7 @@ public class BufferBlock_1<T extends IJCOBridgeReflected> extends NetObject  {
     /**
      * Invokes the .NET member TryReceive.
      *
-     * @param filter the argument of type {@code Predicate_1}
+     * @param filter the argument of type {@code Predicate_1<T>}
      * @param item the argument of type {@code JCORefOut<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -240,7 +240,7 @@ public class BufferBlock_1<T extends IJCOBridgeReflected> extends NetObject  {
      * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.BufferBlock-1.TryReceive" target="_top">.NET documentation</a>
      */
-    public boolean TryReceive(Predicate_1 filter, JCORefOut<T> item) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.threading.tasks.TaskSchedulerException {
+    public boolean TryReceive(Predicate_1<T> filter, JCORefOut<T> item) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTryReceive = null;
@@ -291,7 +291,7 @@ public class BufferBlock_1<T extends IJCOBridgeReflected> extends NetObject  {
     /**
      * Invokes the .NET member LinkTo.
      *
-     * @param target the argument of type {@code ITargetBlock_1}
+     * @param target the argument of type {@code ITargetBlock_1<T>}
      * @param linkOptions the argument of type {@code DataflowLinkOptions}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -307,7 +307,7 @@ public class BufferBlock_1<T extends IJCOBridgeReflected> extends NetObject  {
      * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.BufferBlock-1.LinkTo" target="_top">.NET documentation</a>
      */
-    public IDisposable LinkTo(ITargetBlock_1 target, DataflowLinkOptions linkOptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.threading.tasks.TaskSchedulerException {
+    public IDisposable LinkTo(ITargetBlock_1<T> target, DataflowLinkOptions linkOptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectLinkTo = null;

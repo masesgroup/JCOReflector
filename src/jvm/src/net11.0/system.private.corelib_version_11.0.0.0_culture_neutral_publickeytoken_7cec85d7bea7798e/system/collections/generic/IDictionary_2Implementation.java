@@ -151,12 +151,12 @@ public class IDictionary_2Implementation<TKey extends IJCOBridgeReflected, TValu
     /**
      * Invokes the .NET member Contains.
      *
-     * @param item the argument of type {@code KeyValuePair_2}
+     * @param item the argument of type {@code KeyValuePair_2<TKey, TValue>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IDictionary-2.Contains" target="_top">.NET documentation</a>
      */
-    public boolean Contains(KeyValuePair_2 item) throws Throwable {
+    public boolean Contains(KeyValuePair_2<TKey, TValue> item) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContains = null;
@@ -195,12 +195,12 @@ public class IDictionary_2Implementation<TKey extends IJCOBridgeReflected, TValu
     /**
      * Invokes the .NET member Remove.
      *
-     * @param item the argument of type {@code KeyValuePair_2}
+     * @param item the argument of type {@code KeyValuePair_2<TKey, TValue>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IDictionary-2.Remove" target="_top">.NET documentation</a>
      */
-    public boolean Remove(KeyValuePair_2 item) throws Throwable {
+    public boolean Remove(KeyValuePair_2<TKey, TValue> item) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRemove = null;
@@ -262,11 +262,11 @@ public class IDictionary_2Implementation<TKey extends IJCOBridgeReflected, TValu
     /**
      * Invokes the .NET member Add.
      *
-     * @param item the argument of type {@code KeyValuePair_2}
+     * @param item the argument of type {@code KeyValuePair_2<TKey, TValue>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IDictionary-2.Add" target="_top">.NET documentation</a>
      */
-    public void Add(KeyValuePair_2 item) throws Throwable {
+    public void Add(KeyValuePair_2<TKey, TValue> item) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -407,7 +407,7 @@ public class IDictionary_2Implementation<TKey extends IJCOBridgeReflected, TValu
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IDictionary-2.Keys" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getKeys() throws Throwable {
+    public ICollection_1<TKey> getKeys() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectKeys = null;
@@ -429,7 +429,7 @@ public class IDictionary_2Implementation<TKey extends IJCOBridgeReflected, TValu
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IDictionary-2.Values" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getValues() throws Throwable {
+    public ICollection_1<TValue> getValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValues = null;

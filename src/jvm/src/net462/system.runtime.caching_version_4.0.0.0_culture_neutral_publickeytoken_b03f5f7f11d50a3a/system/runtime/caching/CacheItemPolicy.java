@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.objectmodel.Collection_1;
+import system.runtime.caching.ChangeMonitor;
 import system.DateTimeOffset;
 import system.runtime.caching.CacheEntryRemovedCallback;
 import system.runtime.caching.CacheEntryUpdateCallback;
@@ -185,7 +186,7 @@ public class CacheItemPolicy extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Caching.CacheItemPolicy.ChangeMonitors" target="_top">.NET documentation</a>
      */
-    public Collection_1 getChangeMonitors() throws Throwable {
+    public Collection_1<ChangeMonitor> getChangeMonitors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectChangeMonitors = null;

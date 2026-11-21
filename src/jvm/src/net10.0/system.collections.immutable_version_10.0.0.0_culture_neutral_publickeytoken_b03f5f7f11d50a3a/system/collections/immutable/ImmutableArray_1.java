@@ -176,7 +176,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * Invokes the .NET member Contains.
      *
      * @param item the argument of type {@code T}
-     * @param equalityComparer the argument of type {@code IEqualityComparer_1}
+     * @param equalityComparer the argument of type {@code IEqualityComparer_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -186,7 +186,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableArray-1.Contains" target="_top">.NET documentation</a>
      */
-    public boolean Contains(T item, IEqualityComparer_1 equalityComparer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public boolean Contains(T item, IEqualityComparer_1<T> equalityComparer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContains = null;
@@ -256,7 +256,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * @param item the argument of type {@code T}
      * @param startIndex the argument of type {@code int}
      * @param count the argument of type {@code int}
-     * @param equalityComparer the argument of type {@code IEqualityComparer_1}
+     * @param equalityComparer the argument of type {@code IEqualityComparer_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -270,7 +270,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableArray-1.IndexOf" target="_top">.NET documentation</a>
      */
-    public int IndexOf(T item, int startIndex, int count, IEqualityComparer_1 equalityComparer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public int IndexOf(T item, int startIndex, int count, IEqualityComparer_1<T> equalityComparer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIndexOf = null;
@@ -371,7 +371,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      *
      * @param item the argument of type {@code T}
      * @param startIndex the argument of type {@code int}
-     * @param equalityComparer the argument of type {@code IEqualityComparer_1}
+     * @param equalityComparer the argument of type {@code IEqualityComparer_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -382,7 +382,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableArray-1.IndexOf" target="_top">.NET documentation</a>
      */
-    public int IndexOf(T item, int startIndex, IEqualityComparer_1 equalityComparer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public int IndexOf(T item, int startIndex, IEqualityComparer_1<T> equalityComparer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIndexOf = null;
@@ -537,7 +537,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * @param item the argument of type {@code T}
      * @param startIndex the argument of type {@code int}
      * @param count the argument of type {@code int}
-     * @param equalityComparer the argument of type {@code IEqualityComparer_1}
+     * @param equalityComparer the argument of type {@code IEqualityComparer_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -551,7 +551,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableArray-1.LastIndexOf" target="_top">.NET documentation</a>
      */
-    public int LastIndexOf(T item, int startIndex, int count, IEqualityComparer_1 equalityComparer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public int LastIndexOf(T item, int startIndex, int count, IEqualityComparer_1<T> equalityComparer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectLastIndexOf = null;
@@ -802,7 +802,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableArray-1.Add" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 Add(T item) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
+    public ImmutableArray_1<T> Add(T item) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAdd = null;
@@ -824,7 +824,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableArray-1.Clear" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 Clear() throws Throwable {
+    public ImmutableArray_1<T> Clear() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectClear = null;
@@ -857,7 +857,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableArray-1.Insert" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 Insert(int index, T item) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public ImmutableArray_1<T> Insert(int index, T item) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectInsert = null;
@@ -876,7 +876,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * Invokes the .NET member InsertRange.
      *
      * @param index the argument of type {@code int}
-     * @param items the argument of type {@code IEnumerable_1}
+     * @param items the argument of type {@code IEnumerable_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -892,7 +892,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableArray-1.InsertRange" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 InsertRange(int index, IEnumerable_1 items) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+    public ImmutableArray_1<T> InsertRange(int index, IEnumerable_1<T> items) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectInsertRange = null;
@@ -911,7 +911,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * Invokes the .NET member InsertRange.
      *
      * @param index the argument of type {@code int}
-     * @param items the argument of type {@code ImmutableArray_1}
+     * @param items the argument of type {@code ImmutableArray_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -925,7 +925,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableArray-1.InsertRange" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 InsertRange(int index, ImmutableArray_1 items) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public ImmutableArray_1<T> InsertRange(int index, ImmutableArray_1<T> items) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectInsertRange = null;
@@ -958,7 +958,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableArray-1.InsertRange" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 InsertRange(int index, T[] items) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public ImmutableArray_1<T> InsertRange(int index, T[] items) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectInsertRange = null;
@@ -977,7 +977,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * Invokes the .NET member Remove.
      *
      * @param item the argument of type {@code T}
-     * @param equalityComparer the argument of type {@code IEqualityComparer_1}
+     * @param equalityComparer the argument of type {@code IEqualityComparer_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -989,7 +989,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableArray-1.Remove" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 Remove(T item, IEqualityComparer_1 equalityComparer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+    public ImmutableArray_1<T> Remove(T item, IEqualityComparer_1<T> equalityComparer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRemove = null;
@@ -1022,7 +1022,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * @throws system.InvalidCastException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableArray-1.Remove" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 Remove(T item) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
+    public ImmutableArray_1<T> Remove(T item) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRemove = null;
@@ -1040,7 +1040,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
     /**
      * Invokes the .NET member RemoveAll.
      *
-     * @param match the argument of type {@code Predicate_1}
+     * @param match the argument of type {@code Predicate_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -1054,7 +1054,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableArray-1.RemoveAll" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 RemoveAll(Predicate_1 match) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public ImmutableArray_1<T> RemoveAll(Predicate_1<T> match) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRemoveAll = null;
@@ -1083,7 +1083,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableArray-1.RemoveAt" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 RemoveAt(int index) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
+    public ImmutableArray_1<T> RemoveAt(int index) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRemoveAt = null;
@@ -1116,7 +1116,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableArray-1.RemoveRange" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 RemoveRange(int index, int length) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public ImmutableArray_1<T> RemoveRange(int index, int length) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRemoveRange = null;
@@ -1134,8 +1134,8 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
     /**
      * Invokes the .NET member RemoveRange.
      *
-     * @param items the argument of type {@code IEnumerable_1}
-     * @param equalityComparer the argument of type {@code IEqualityComparer_1}
+     * @param items the argument of type {@code IEnumerable_1<T>}
+     * @param equalityComparer the argument of type {@code IEqualityComparer_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -1149,7 +1149,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableArray-1.RemoveRange" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 RemoveRange(IEnumerable_1 items, IEqualityComparer_1 equalityComparer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public ImmutableArray_1<T> RemoveRange(IEnumerable_1<T> items, IEqualityComparer_1<T> equalityComparer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRemoveRange = null;
@@ -1167,7 +1167,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
     /**
      * Invokes the .NET member RemoveRange.
      *
-     * @param items the argument of type {@code IEnumerable_1}
+     * @param items the argument of type {@code IEnumerable_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -1178,7 +1178,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableArray-1.RemoveRange" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 RemoveRange(IEnumerable_1 items) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public ImmutableArray_1<T> RemoveRange(IEnumerable_1<T> items) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRemoveRange = null;
@@ -1196,8 +1196,8 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
     /**
      * Invokes the .NET member RemoveRange.
      *
-     * @param items the argument of type {@code ImmutableArray_1}
-     * @param equalityComparer the argument of type {@code IEqualityComparer_1}
+     * @param items the argument of type {@code ImmutableArray_1<T>}
+     * @param equalityComparer the argument of type {@code IEqualityComparer_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -1212,7 +1212,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableArray-1.RemoveRange" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 RemoveRange(ImmutableArray_1 items, IEqualityComparer_1 equalityComparer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
+    public ImmutableArray_1<T> RemoveRange(ImmutableArray_1<T> items, IEqualityComparer_1<T> equalityComparer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRemoveRange = null;
@@ -1230,7 +1230,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
     /**
      * Invokes the .NET member RemoveRange.
      *
-     * @param items the argument of type {@code ImmutableArray_1}
+     * @param items the argument of type {@code ImmutableArray_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -1242,7 +1242,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableArray-1.RemoveRange" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 RemoveRange(ImmutableArray_1 items) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
+    public ImmutableArray_1<T> RemoveRange(ImmutableArray_1<T> items) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRemoveRange = null;
@@ -1261,7 +1261,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * Invokes the .NET member RemoveRange.
      *
      * @param items the argument of type {@code T[]}
-     * @param equalityComparer the argument of type {@code IEqualityComparer_1}
+     * @param equalityComparer the argument of type {@code IEqualityComparer_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -1276,7 +1276,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableArray-1.RemoveRange" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 RemoveRange(T[] items, IEqualityComparer_1 equalityComparer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
+    public ImmutableArray_1<T> RemoveRange(T[] items, IEqualityComparer_1<T> equalityComparer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRemoveRange = null;
@@ -1296,7 +1296,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      *
      * @param oldValue the argument of type {@code T}
      * @param newValue the argument of type {@code T}
-     * @param equalityComparer the argument of type {@code IEqualityComparer_1}
+     * @param equalityComparer the argument of type {@code IEqualityComparer_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -1308,7 +1308,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableArray-1.Replace" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 Replace(T oldValue, T newValue, IEqualityComparer_1 equalityComparer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+    public ImmutableArray_1<T> Replace(T oldValue, T newValue, IEqualityComparer_1<T> equalityComparer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReplace = null;
@@ -1342,7 +1342,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * @throws system.InvalidCastException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableArray-1.Replace" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 Replace(T oldValue, T newValue) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
+    public ImmutableArray_1<T> Replace(T oldValue, T newValue) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReplace = null;
@@ -1375,7 +1375,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableArray-1.SetItem" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 SetItem(int index, T item) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public ImmutableArray_1<T> SetItem(int index, T item) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSetItem = null;
@@ -1403,7 +1403,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableArray-1.Slice" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 Slice(int start, int length) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public ImmutableArray_1<T> Slice(int start, int length) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSlice = null;
@@ -1432,7 +1432,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableArray-1.Sort" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 Sort() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException {
+    public ImmutableArray_1<T> Sort() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSort = null;
@@ -1452,7 +1452,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      *
      * @param index the argument of type {@code int}
      * @param count the argument of type {@code int}
-     * @param comparer the argument of type {@code IComparer_1}
+     * @param comparer the argument of type {@code IComparer_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -1466,7 +1466,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableArray-1.Sort" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 Sort(int index, int count, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public ImmutableArray_1<T> Sort(int index, int count, IComparer_1<T> comparer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSort = null;
@@ -1484,7 +1484,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
     /**
      * Invokes the .NET member Sort.
      *
-     * @param comparer the argument of type {@code IComparer_1}
+     * @param comparer the argument of type {@code IComparer_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -1496,7 +1496,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableArray-1.Sort" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 Sort(IComparer_1 comparer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException {
+    public ImmutableArray_1<T> Sort(IComparer_1<T> comparer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSort = null;
@@ -1514,7 +1514,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
     /**
      * Invokes the .NET member Sort.
      *
-     * @param comparison the argument of type {@code Comparison_1}
+     * @param comparison the argument of type {@code Comparison_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -1528,7 +1528,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableArray-1.Sort" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 Sort(Comparison_1 comparison) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public ImmutableArray_1<T> Sort(Comparison_1<T> comparison) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSort = null;
@@ -1596,7 +1596,7 @@ public class ImmutableArray_1<T extends IJCOBridgeReflected> extends system.Valu
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableArray-1.AsMemory" target="_top">.NET documentation</a>
      */
-    public ReadOnlyMemory_1 AsMemory() throws Throwable {
+    public ReadOnlyMemory_1<T> AsMemory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAsMemory = null;

@@ -39,8 +39,12 @@ import java.util.ArrayList;
 
 // Import section
 import system.Nullable_1;
+import system.DateTime;
+import system.DateTimeOffset;
+import system.Decimal;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.TimeSpan;
 
 
 /**
@@ -160,7 +164,7 @@ public class EntityFunctions extends NetObject  {
     /**
      * Invokes the .NET member AddDays.
      *
-     * @param dateValue the argument of type {@code Nullable_1}
+     * @param dateValue the argument of type {@code Nullable_1<DateTime>}
      * @param addValue the argument of type {@code Nullable_1}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -177,7 +181,7 @@ public class EntityFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.EntityFunctions.AddDays" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 AddDays(Nullable_1 dateValue, Nullable_1 addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1<DateTime> AddDays(Nullable_1<DateTime> dateValue, Nullable_1 addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddDays = null;
@@ -195,7 +199,7 @@ public class EntityFunctions extends NetObject  {
     /**
      * Invokes the .NET member AddHours.
      *
-     * @param timeValue the argument of type {@code Nullable_1}
+     * @param timeValue the argument of type {@code Nullable_1<DateTime>}
      * @param addValue the argument of type {@code Nullable_1}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -212,7 +216,7 @@ public class EntityFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.EntityFunctions.AddHours" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 AddHours(Nullable_1 timeValue, Nullable_1 addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1<DateTime> AddHours(Nullable_1<DateTime> timeValue, Nullable_1 addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddHours = null;
@@ -230,7 +234,7 @@ public class EntityFunctions extends NetObject  {
     /**
      * Invokes the .NET member AddMicroseconds.
      *
-     * @param timeValue the argument of type {@code Nullable_1}
+     * @param timeValue the argument of type {@code Nullable_1<DateTime>}
      * @param addValue the argument of type {@code Nullable_1}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -247,7 +251,7 @@ public class EntityFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.EntityFunctions.AddMicroseconds" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 AddMicroseconds(Nullable_1 timeValue, Nullable_1 addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1<DateTime> AddMicroseconds(Nullable_1<DateTime> timeValue, Nullable_1 addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddMicroseconds = null;
@@ -265,7 +269,7 @@ public class EntityFunctions extends NetObject  {
     /**
      * Invokes the .NET member AddMilliseconds.
      *
-     * @param timeValue the argument of type {@code Nullable_1}
+     * @param timeValue the argument of type {@code Nullable_1<DateTime>}
      * @param addValue the argument of type {@code Nullable_1}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -282,7 +286,7 @@ public class EntityFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.EntityFunctions.AddMilliseconds" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 AddMilliseconds(Nullable_1 timeValue, Nullable_1 addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1<DateTime> AddMilliseconds(Nullable_1<DateTime> timeValue, Nullable_1 addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddMilliseconds = null;
@@ -300,7 +304,7 @@ public class EntityFunctions extends NetObject  {
     /**
      * Invokes the .NET member AddMinutes.
      *
-     * @param timeValue the argument of type {@code Nullable_1}
+     * @param timeValue the argument of type {@code Nullable_1<DateTime>}
      * @param addValue the argument of type {@code Nullable_1}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -317,7 +321,7 @@ public class EntityFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.EntityFunctions.AddMinutes" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 AddMinutes(Nullable_1 timeValue, Nullable_1 addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1<DateTime> AddMinutes(Nullable_1<DateTime> timeValue, Nullable_1 addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddMinutes = null;
@@ -335,7 +339,7 @@ public class EntityFunctions extends NetObject  {
     /**
      * Invokes the .NET member AddMonths.
      *
-     * @param dateValue the argument of type {@code Nullable_1}
+     * @param dateValue the argument of type {@code Nullable_1<DateTime>}
      * @param addValue the argument of type {@code Nullable_1}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -352,7 +356,7 @@ public class EntityFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.EntityFunctions.AddMonths" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 AddMonths(Nullable_1 dateValue, Nullable_1 addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1<DateTime> AddMonths(Nullable_1<DateTime> dateValue, Nullable_1 addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddMonths = null;
@@ -370,7 +374,7 @@ public class EntityFunctions extends NetObject  {
     /**
      * Invokes the .NET member AddNanoseconds.
      *
-     * @param timeValue the argument of type {@code Nullable_1}
+     * @param timeValue the argument of type {@code Nullable_1<DateTime>}
      * @param addValue the argument of type {@code Nullable_1}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -387,7 +391,7 @@ public class EntityFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.EntityFunctions.AddNanoseconds" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 AddNanoseconds(Nullable_1 timeValue, Nullable_1 addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1<DateTime> AddNanoseconds(Nullable_1<DateTime> timeValue, Nullable_1 addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddNanoseconds = null;
@@ -405,7 +409,7 @@ public class EntityFunctions extends NetObject  {
     /**
      * Invokes the .NET member AddSeconds.
      *
-     * @param timeValue the argument of type {@code Nullable_1}
+     * @param timeValue the argument of type {@code Nullable_1<DateTime>}
      * @param addValue the argument of type {@code Nullable_1}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -422,7 +426,7 @@ public class EntityFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.EntityFunctions.AddSeconds" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 AddSeconds(Nullable_1 timeValue, Nullable_1 addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1<DateTime> AddSeconds(Nullable_1<DateTime> timeValue, Nullable_1 addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddSeconds = null;
@@ -440,7 +444,7 @@ public class EntityFunctions extends NetObject  {
     /**
      * Invokes the .NET member AddYears.
      *
-     * @param dateValue the argument of type {@code Nullable_1}
+     * @param dateValue the argument of type {@code Nullable_1<DateTime>}
      * @param addValue the argument of type {@code Nullable_1}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -457,7 +461,7 @@ public class EntityFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.EntityFunctions.AddYears" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 AddYears(Nullable_1 dateValue, Nullable_1 addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1<DateTime> AddYears(Nullable_1<DateTime> dateValue, Nullable_1 addValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddYears = null;
@@ -496,7 +500,7 @@ public class EntityFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.EntityFunctions.CreateDateTime" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 CreateDateTime(Nullable_1 year, Nullable_1 month, Nullable_1 day, Nullable_1 hour, Nullable_1 minute, Nullable_1 second) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1<DateTime> CreateDateTime(Nullable_1 year, Nullable_1 month, Nullable_1 day, Nullable_1 hour, Nullable_1 minute, Nullable_1 second) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateDateTime = null;
@@ -514,7 +518,7 @@ public class EntityFunctions extends NetObject  {
     /**
      * Invokes the .NET member TruncateTime.
      *
-     * @param dateValue the argument of type {@code Nullable_1}
+     * @param dateValue the argument of type {@code Nullable_1<DateTime>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -530,7 +534,7 @@ public class EntityFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.EntityFunctions.TruncateTime" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 TruncateTime(Nullable_1 dateValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1<DateTime> TruncateTime(Nullable_1<DateTime> dateValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTruncateTime = null;
@@ -570,7 +574,7 @@ public class EntityFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.EntityFunctions.CreateDateTimeOffset" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 CreateDateTimeOffset(Nullable_1 year, Nullable_1 month, Nullable_1 day, Nullable_1 hour, Nullable_1 minute, Nullable_1 second, Nullable_1 timeZoneOffset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1<DateTimeOffset> CreateDateTimeOffset(Nullable_1 year, Nullable_1 month, Nullable_1 day, Nullable_1 hour, Nullable_1 minute, Nullable_1 second, Nullable_1 timeZoneOffset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateDateTimeOffset = null;
@@ -588,7 +592,7 @@ public class EntityFunctions extends NetObject  {
     /**
      * Invokes the .NET member Truncate.
      *
-     * @param value the argument of type {@code Nullable_1}
+     * @param value the argument of type {@code Nullable_1<Decimal>}
      * @param digits the argument of type {@code Nullable_1}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -605,7 +609,7 @@ public class EntityFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.EntityFunctions.Truncate" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 Truncate(Nullable_1 value, Nullable_1 digits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1<Decimal> Truncate(Nullable_1<Decimal> value, Nullable_1 digits) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTruncate = null;
@@ -623,7 +627,7 @@ public class EntityFunctions extends NetObject  {
     /**
      * Invokes the .NET member StandardDeviation.
      *
-     * @param collection the argument of type {@code IEnumerable_1}
+     * @param collection the argument of type {@code IEnumerable_1<Decimal>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.NotSupportedException if the .NET member raises it
@@ -637,7 +641,7 @@ public class EntityFunctions extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.EntityFunctions.StandardDeviation" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 StandardDeviation(IEnumerable_1 collection) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static Nullable_1 StandardDeviation(IEnumerable_1<Decimal> collection) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStandardDeviation = null;
@@ -655,7 +659,7 @@ public class EntityFunctions extends NetObject  {
     /**
      * Invokes the .NET member StandardDeviationP.
      *
-     * @param collection the argument of type {@code IEnumerable_1}
+     * @param collection the argument of type {@code IEnumerable_1<Decimal>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.NotSupportedException if the .NET member raises it
@@ -669,7 +673,7 @@ public class EntityFunctions extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.EntityFunctions.StandardDeviationP" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 StandardDeviationP(IEnumerable_1 collection) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static Nullable_1 StandardDeviationP(IEnumerable_1<Decimal> collection) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStandardDeviationP = null;
@@ -687,7 +691,7 @@ public class EntityFunctions extends NetObject  {
     /**
      * Invokes the .NET member Var.
      *
-     * @param collection the argument of type {@code IEnumerable_1}
+     * @param collection the argument of type {@code IEnumerable_1<Decimal>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.NotSupportedException if the .NET member raises it
@@ -701,7 +705,7 @@ public class EntityFunctions extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.EntityFunctions.Var" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 Var(IEnumerable_1 collection) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static Nullable_1 Var(IEnumerable_1<Decimal> collection) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectVar = null;
@@ -719,7 +723,7 @@ public class EntityFunctions extends NetObject  {
     /**
      * Invokes the .NET member VarP.
      *
-     * @param collection the argument of type {@code IEnumerable_1}
+     * @param collection the argument of type {@code IEnumerable_1<Decimal>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.NotSupportedException if the .NET member raises it
@@ -733,7 +737,7 @@ public class EntityFunctions extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.EntityFunctions.VarP" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 VarP(IEnumerable_1 collection) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static Nullable_1 VarP(IEnumerable_1<Decimal> collection) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectVarP = null;
@@ -751,8 +755,8 @@ public class EntityFunctions extends NetObject  {
     /**
      * Invokes the .NET member DiffDays.
      *
-     * @param dateValue1 the argument of type {@code Nullable_1}
-     * @param dateValue2 the argument of type {@code Nullable_1}
+     * @param dateValue1 the argument of type {@code Nullable_1<DateTime>}
+     * @param dateValue2 the argument of type {@code Nullable_1<DateTime>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -768,7 +772,7 @@ public class EntityFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.EntityFunctions.DiffDays" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 DiffDays(Nullable_1 dateValue1, Nullable_1 dateValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1 DiffDays(Nullable_1<DateTime> dateValue1, Nullable_1<DateTime> dateValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDiffDays = null;
@@ -786,8 +790,8 @@ public class EntityFunctions extends NetObject  {
     /**
      * Invokes the .NET member DiffHours.
      *
-     * @param timeValue1 the argument of type {@code Nullable_1}
-     * @param timeValue2 the argument of type {@code Nullable_1}
+     * @param timeValue1 the argument of type {@code Nullable_1<DateTime>}
+     * @param timeValue2 the argument of type {@code Nullable_1<DateTime>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -803,7 +807,7 @@ public class EntityFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.EntityFunctions.DiffHours" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 DiffHours(Nullable_1 timeValue1, Nullable_1 timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1 DiffHours(Nullable_1<DateTime> timeValue1, Nullable_1<DateTime> timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDiffHours = null;
@@ -821,8 +825,8 @@ public class EntityFunctions extends NetObject  {
     /**
      * Invokes the .NET member DiffMicroseconds.
      *
-     * @param timeValue1 the argument of type {@code Nullable_1}
-     * @param timeValue2 the argument of type {@code Nullable_1}
+     * @param timeValue1 the argument of type {@code Nullable_1<DateTime>}
+     * @param timeValue2 the argument of type {@code Nullable_1<DateTime>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -838,7 +842,7 @@ public class EntityFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.EntityFunctions.DiffMicroseconds" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 DiffMicroseconds(Nullable_1 timeValue1, Nullable_1 timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1 DiffMicroseconds(Nullable_1<DateTime> timeValue1, Nullable_1<DateTime> timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDiffMicroseconds = null;
@@ -856,8 +860,8 @@ public class EntityFunctions extends NetObject  {
     /**
      * Invokes the .NET member DiffMilliseconds.
      *
-     * @param timeValue1 the argument of type {@code Nullable_1}
-     * @param timeValue2 the argument of type {@code Nullable_1}
+     * @param timeValue1 the argument of type {@code Nullable_1<DateTime>}
+     * @param timeValue2 the argument of type {@code Nullable_1<DateTime>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -873,7 +877,7 @@ public class EntityFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.EntityFunctions.DiffMilliseconds" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 DiffMilliseconds(Nullable_1 timeValue1, Nullable_1 timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1 DiffMilliseconds(Nullable_1<DateTime> timeValue1, Nullable_1<DateTime> timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDiffMilliseconds = null;
@@ -891,8 +895,8 @@ public class EntityFunctions extends NetObject  {
     /**
      * Invokes the .NET member DiffMinutes.
      *
-     * @param timeValue1 the argument of type {@code Nullable_1}
-     * @param timeValue2 the argument of type {@code Nullable_1}
+     * @param timeValue1 the argument of type {@code Nullable_1<DateTime>}
+     * @param timeValue2 the argument of type {@code Nullable_1<DateTime>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -908,7 +912,7 @@ public class EntityFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.EntityFunctions.DiffMinutes" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 DiffMinutes(Nullable_1 timeValue1, Nullable_1 timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1 DiffMinutes(Nullable_1<DateTime> timeValue1, Nullable_1<DateTime> timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDiffMinutes = null;
@@ -926,8 +930,8 @@ public class EntityFunctions extends NetObject  {
     /**
      * Invokes the .NET member DiffMonths.
      *
-     * @param dateValue1 the argument of type {@code Nullable_1}
-     * @param dateValue2 the argument of type {@code Nullable_1}
+     * @param dateValue1 the argument of type {@code Nullable_1<DateTime>}
+     * @param dateValue2 the argument of type {@code Nullable_1<DateTime>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -943,7 +947,7 @@ public class EntityFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.EntityFunctions.DiffMonths" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 DiffMonths(Nullable_1 dateValue1, Nullable_1 dateValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1 DiffMonths(Nullable_1<DateTime> dateValue1, Nullable_1<DateTime> dateValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDiffMonths = null;
@@ -961,8 +965,8 @@ public class EntityFunctions extends NetObject  {
     /**
      * Invokes the .NET member DiffNanoseconds.
      *
-     * @param timeValue1 the argument of type {@code Nullable_1}
-     * @param timeValue2 the argument of type {@code Nullable_1}
+     * @param timeValue1 the argument of type {@code Nullable_1<DateTime>}
+     * @param timeValue2 the argument of type {@code Nullable_1<DateTime>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -978,7 +982,7 @@ public class EntityFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.EntityFunctions.DiffNanoseconds" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 DiffNanoseconds(Nullable_1 timeValue1, Nullable_1 timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1 DiffNanoseconds(Nullable_1<DateTime> timeValue1, Nullable_1<DateTime> timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDiffNanoseconds = null;
@@ -996,8 +1000,8 @@ public class EntityFunctions extends NetObject  {
     /**
      * Invokes the .NET member DiffSeconds.
      *
-     * @param timeValue1 the argument of type {@code Nullable_1}
-     * @param timeValue2 the argument of type {@code Nullable_1}
+     * @param timeValue1 the argument of type {@code Nullable_1<DateTime>}
+     * @param timeValue2 the argument of type {@code Nullable_1<DateTime>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -1013,7 +1017,7 @@ public class EntityFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.EntityFunctions.DiffSeconds" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 DiffSeconds(Nullable_1 timeValue1, Nullable_1 timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1 DiffSeconds(Nullable_1<DateTime> timeValue1, Nullable_1<DateTime> timeValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDiffSeconds = null;
@@ -1031,8 +1035,8 @@ public class EntityFunctions extends NetObject  {
     /**
      * Invokes the .NET member DiffYears.
      *
-     * @param dateValue1 the argument of type {@code Nullable_1}
-     * @param dateValue2 the argument of type {@code Nullable_1}
+     * @param dateValue1 the argument of type {@code Nullable_1<DateTime>}
+     * @param dateValue2 the argument of type {@code Nullable_1<DateTime>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -1048,7 +1052,7 @@ public class EntityFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.EntityFunctions.DiffYears" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 DiffYears(Nullable_1 dateValue1, Nullable_1 dateValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1 DiffYears(Nullable_1<DateTime> dateValue1, Nullable_1<DateTime> dateValue2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDiffYears = null;
@@ -1066,7 +1070,7 @@ public class EntityFunctions extends NetObject  {
     /**
      * Invokes the .NET member GetTotalOffsetMinutes.
      *
-     * @param dateTimeOffsetArgument the argument of type {@code Nullable_1}
+     * @param dateTimeOffsetArgument the argument of type {@code Nullable_1<DateTimeOffset>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -1082,7 +1086,7 @@ public class EntityFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.EntityFunctions.GetTotalOffsetMinutes" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 GetTotalOffsetMinutes(Nullable_1 dateTimeOffsetArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1 GetTotalOffsetMinutes(Nullable_1<DateTimeOffset> dateTimeOffsetArgument) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTotalOffsetMinutes = null;
@@ -1118,7 +1122,7 @@ public class EntityFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.EntityFunctions.CreateTime" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 CreateTime(Nullable_1 hour, Nullable_1 minute, Nullable_1 second) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1<TimeSpan> CreateTime(Nullable_1 hour, Nullable_1 minute, Nullable_1 second) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateTime = null;

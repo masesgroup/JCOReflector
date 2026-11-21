@@ -41,8 +41,8 @@ import java.util.ArrayList;
 import system.xml.linq.XNode;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
-import system.xml.linq.XName;
 import system.xml.linq.XElement;
+import system.xml.linq.XName;
 import system.xml.XmlWriter;
 
 
@@ -167,7 +167,7 @@ public class XContainer extends system.xml.linq.XNode  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XContainer.Descendants" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 Descendants() throws Throwable {
+    public IEnumerable_1<XElement> Descendants() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDescendants = null;
@@ -190,7 +190,7 @@ public class XContainer extends system.xml.linq.XNode  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XContainer.Descendants" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 Descendants(XName name) throws Throwable {
+    public IEnumerable_1<XElement> Descendants(XName name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDescendants = null;
@@ -212,7 +212,7 @@ public class XContainer extends system.xml.linq.XNode  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XContainer.Elements" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 Elements() throws Throwable {
+    public IEnumerable_1<XElement> Elements() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectElements = null;
@@ -235,7 +235,7 @@ public class XContainer extends system.xml.linq.XNode  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XContainer.Elements" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 Elements(XName name) throws Throwable {
+    public IEnumerable_1<XElement> Elements(XName name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectElements = null;
@@ -257,7 +257,7 @@ public class XContainer extends system.xml.linq.XNode  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XContainer.DescendantNodes" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 DescendantNodes() throws Throwable {
+    public IEnumerable_1<XNode> DescendantNodes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDescendantNodes = null;
@@ -279,7 +279,7 @@ public class XContainer extends system.xml.linq.XNode  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XContainer.Nodes" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 Nodes() throws Throwable {
+    public IEnumerable_1<XNode> Nodes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectNodes = null;

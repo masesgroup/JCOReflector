@@ -41,10 +41,12 @@ import java.util.ArrayList;
 import system.reflection.TypeInfo;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.reflection.MethodInfo;
 import system.reflection.EventInfo;
 import system.reflection.FieldInfo;
-import system.reflection.MethodInfo;
 import system.reflection.PropertyInfo;
+import system.reflection.ConstructorInfo;
+import system.reflection.MemberInfo;
 
 
 /**
@@ -200,7 +202,7 @@ public class TypeInfo extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeInfo.GetDeclaredMethods" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetDeclaredMethods(java.lang.String name) throws Throwable {
+    public IEnumerable_1<MethodInfo> GetDeclaredMethods(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetDeclaredMethods = null;
@@ -391,7 +393,7 @@ public class TypeInfo extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeInfo.DeclaredConstructors" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getDeclaredConstructors() throws Throwable {
+    public IEnumerable_1<ConstructorInfo> getDeclaredConstructors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDeclaredConstructors = null;
@@ -413,7 +415,7 @@ public class TypeInfo extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeInfo.DeclaredEvents" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getDeclaredEvents() throws Throwable {
+    public IEnumerable_1<EventInfo> getDeclaredEvents() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDeclaredEvents = null;
@@ -435,7 +437,7 @@ public class TypeInfo extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeInfo.DeclaredFields" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getDeclaredFields() throws Throwable {
+    public IEnumerable_1<FieldInfo> getDeclaredFields() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDeclaredFields = null;
@@ -457,7 +459,7 @@ public class TypeInfo extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeInfo.DeclaredMembers" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getDeclaredMembers() throws Throwable {
+    public IEnumerable_1<MemberInfo> getDeclaredMembers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDeclaredMembers = null;
@@ -479,7 +481,7 @@ public class TypeInfo extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeInfo.DeclaredMethods" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getDeclaredMethods() throws Throwable {
+    public IEnumerable_1<MethodInfo> getDeclaredMethods() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDeclaredMethods = null;
@@ -501,7 +503,7 @@ public class TypeInfo extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeInfo.DeclaredProperties" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getDeclaredProperties() throws Throwable {
+    public IEnumerable_1<PropertyInfo> getDeclaredProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDeclaredProperties = null;
@@ -523,7 +525,7 @@ public class TypeInfo extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeInfo.DeclaredNestedTypes" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getDeclaredNestedTypes() throws Throwable {
+    public IEnumerable_1<TypeInfo> getDeclaredNestedTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDeclaredNestedTypes = null;
@@ -545,7 +547,7 @@ public class TypeInfo extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.TypeInfo.ImplementedInterfaces" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getImplementedInterfaces() throws Throwable {
+    public IEnumerable_1<NetType> getImplementedInterfaces() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectImplementedInterfaces = null;

@@ -183,7 +183,7 @@ public class Divide_3<TLeft extends IJCOBridgeReflected, TRight extends IJCOBrid
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.Divide-3.Left" target="_top">.NET documentation</a>
      */
-    public InArgument_1 getLeft() throws Throwable {
+    public InArgument_1<TLeft> getLeft() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectLeft = null;
@@ -205,7 +205,7 @@ public class Divide_3<TLeft extends IJCOBridgeReflected, TRight extends IJCOBrid
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.Divide-3.Left" target="_top">.NET documentation</a>
      */
-    public void setLeft(InArgument_1 Left) throws Throwable {
+    public void setLeft(InArgument_1<TLeft> Left) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -222,7 +222,7 @@ public class Divide_3<TLeft extends IJCOBridgeReflected, TRight extends IJCOBrid
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.Divide-3.Right" target="_top">.NET documentation</a>
      */
-    public InArgument_1 getRight() throws Throwable {
+    public InArgument_1<TRight> getRight() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRight = null;
@@ -244,7 +244,7 @@ public class Divide_3<TLeft extends IJCOBridgeReflected, TRight extends IJCOBrid
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.Divide-3.Right" target="_top">.NET documentation</a>
      */
-    public void setRight(InArgument_1 Right) throws Throwable {
+    public void setRight(InArgument_1<TRight> Right) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

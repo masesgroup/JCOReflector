@@ -39,8 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.objectmodel.Collection_1;
+import system.identitymodel.tokens.SecurityKeyIdentifier;
 import system.identitymodel.tokens.Saml2Id;
 import system.Nullable_1;
+import system.DateTime;
 import system.Uri;
 
 
@@ -183,7 +185,7 @@ public class Saml2SubjectConfirmationData extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2SubjectConfirmationData.KeyIdentifiers" target="_top">.NET documentation</a>
      */
-    public Collection_1 getKeyIdentifiers() throws Throwable {
+    public Collection_1<SecurityKeyIdentifier> getKeyIdentifiers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectKeyIdentifiers = null;
@@ -244,7 +246,7 @@ public class Saml2SubjectConfirmationData extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2SubjectConfirmationData.NotBefore" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getNotBefore() throws Throwable {
+    public Nullable_1<DateTime> getNotBefore() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectNotBefore = null;
@@ -271,7 +273,7 @@ public class Saml2SubjectConfirmationData extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2SubjectConfirmationData.NotBefore" target="_top">.NET documentation</a>
      */
-    public void setNotBefore(Nullable_1 NotBefore) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.OverflowException, system.ArgumentOutOfRangeException {
+    public void setNotBefore(Nullable_1<DateTime> NotBefore) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.OverflowException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -288,7 +290,7 @@ public class Saml2SubjectConfirmationData extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2SubjectConfirmationData.NotOnOrAfter" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getNotOnOrAfter() throws Throwable {
+    public Nullable_1<DateTime> getNotOnOrAfter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectNotOnOrAfter = null;
@@ -315,7 +317,7 @@ public class Saml2SubjectConfirmationData extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2SubjectConfirmationData.NotOnOrAfter" target="_top">.NET documentation</a>
      */
-    public void setNotOnOrAfter(Nullable_1 NotOnOrAfter) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.OverflowException, system.ArgumentOutOfRangeException {
+    public void setNotOnOrAfter(Nullable_1<DateTime> NotOnOrAfter) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.OverflowException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

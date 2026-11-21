@@ -44,7 +44,12 @@ import system.servicemodel.channels.IChannelListenerImplementation;
 import system.servicemodel.IDefaultCommunicationTimeouts;
 import system.servicemodel.IDefaultCommunicationTimeoutsImplementation;
 import system.collections.generic.SynchronizedCollection_1;
+import system.servicemodel.dispatcher.EndpointDispatcher;
+import system.servicemodel.dispatcher.IChannelInitializer;
+import system.servicemodel.dispatcher.IChannelInitializerImplementation;
 import system.collections.objectmodel.Collection_1;
+import system.servicemodel.dispatcher.IErrorHandler;
+import system.servicemodel.dispatcher.IErrorHandlerImplementation;
 import system.servicemodel.channels.MessageVersion;
 import system.servicemodel.dispatcher.ServiceThrottle;
 import system.servicemodel.ServiceHostBase;
@@ -796,7 +801,7 @@ public class ChannelDispatcher extends system.servicemodel.dispatcher.ChannelDis
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ChannelDispatcher.Endpoints" target="_top">.NET documentation</a>
      */
-    public SynchronizedCollection_1 getEndpoints() throws Throwable {
+    public SynchronizedCollection_1<EndpointDispatcher> getEndpoints() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEndpoints = null;
@@ -818,7 +823,7 @@ public class ChannelDispatcher extends system.servicemodel.dispatcher.ChannelDis
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ChannelDispatcher.ChannelInitializers" target="_top">.NET documentation</a>
      */
-    public SynchronizedCollection_1 getChannelInitializers() throws Throwable {
+    public SynchronizedCollection_1<IChannelInitializer> getChannelInitializers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectChannelInitializers = null;
@@ -840,7 +845,7 @@ public class ChannelDispatcher extends system.servicemodel.dispatcher.ChannelDis
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ChannelDispatcher.ErrorHandlers" target="_top">.NET documentation</a>
      */
-    public Collection_1 getErrorHandlers() throws Throwable {
+    public Collection_1<IErrorHandler> getErrorHandlers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectErrorHandlers = null;

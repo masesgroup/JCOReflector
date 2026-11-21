@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.activities.CodeActivity_1;
 import system.linq.expressions.Expression_1;
+import system.Func_2;
+import system.activities.ActivityContext;
 import system.windows.markup.IValueSerializerContext;
 import system.windows.markup.IValueSerializerContextImplementation;
 
@@ -158,7 +160,7 @@ public class LambdaValue_1<TResult extends IJCOBridgeReflected> extends system.a
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param lambdaValue the argument of type {@code Expression_1}
+     * @param lambdaValue the argument of type {@code Expression_1<Func_2<ActivityContext, TResult>>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -169,7 +171,7 @@ public class LambdaValue_1<TResult extends IJCOBridgeReflected> extends system.a
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.LambdaValue-1.-ctor" target="_top">.NET documentation</a>
      */
-    public LambdaValue_1(Expression_1 lambdaValue) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public LambdaValue_1(Expression_1<Func_2<ActivityContext, TResult>> lambdaValue) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

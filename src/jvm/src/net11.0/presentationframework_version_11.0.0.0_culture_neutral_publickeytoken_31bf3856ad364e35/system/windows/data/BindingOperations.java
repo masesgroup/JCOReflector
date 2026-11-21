@@ -41,9 +41,10 @@ import java.util.ArrayList;
 import system.windows.DependencyObject;
 import system.windows.DependencyProperty;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.windows.data.BindingExpressionBase;
+import system.windows.data.BindingGroup;
 import system.windows.data.BindingBase;
 import system.windows.data.BindingExpression;
-import system.windows.data.BindingExpressionBase;
 import system.windows.data.MultiBinding;
 import system.windows.data.MultiBindingExpression;
 import system.windows.data.PriorityBinding;
@@ -216,7 +217,7 @@ public class BindingOperations extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.BindingOperations.GetSourceUpdatingBindings" target="_top">.NET documentation</a>
      */
-    public static ReadOnlyCollection_1 GetSourceUpdatingBindings(DependencyObject root) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OverflowException, system.ArgumentNullException {
+    public static ReadOnlyCollection_1<BindingExpressionBase> GetSourceUpdatingBindings(DependencyObject root) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OverflowException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetSourceUpdatingBindings = null;
@@ -251,7 +252,7 @@ public class BindingOperations extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.BindingOperations.GetSourceUpdatingBindingGroups" target="_top">.NET documentation</a>
      */
-    public static ReadOnlyCollection_1 GetSourceUpdatingBindingGroups(DependencyObject root) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OverflowException, system.ArgumentNullException {
+    public static ReadOnlyCollection_1<BindingGroup> GetSourceUpdatingBindingGroups(DependencyObject root) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OverflowException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetSourceUpdatingBindingGroups = null;

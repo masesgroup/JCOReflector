@@ -42,6 +42,7 @@ import system.linq.expressions.Expression;
 import system.linq.expressions.BlockExpression;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.linq.expressions.ParameterExpression;
 import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.linq.expressions.ExpressionType;
 
@@ -165,8 +166,8 @@ public class BlockExpression extends system.linq.expressions.Expression  {
     /**
      * Invokes the .NET member Update.
      *
-     * @param variables the argument of type {@code IEnumerable_1}
-     * @param expressions the argument of type {@code IEnumerable_1}
+     * @param variables the argument of type {@code IEnumerable_1<ParameterExpression>}
+     * @param expressions the argument of type {@code IEnumerable_1<Expression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -179,7 +180,7 @@ public class BlockExpression extends system.linq.expressions.Expression  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.BlockExpression.Update" target="_top">.NET documentation</a>
      */
-    public BlockExpression Update(IEnumerable_1 variables, IEnumerable_1 expressions) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException {
+    public BlockExpression Update(IEnumerable_1<ParameterExpression> variables, IEnumerable_1<Expression> expressions) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUpdate = null;
@@ -205,7 +206,7 @@ public class BlockExpression extends system.linq.expressions.Expression  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.BlockExpression.Expressions" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getExpressions() throws Throwable {
+    public ReadOnlyCollection_1<Expression> getExpressions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExpressions = null;
@@ -227,7 +228,7 @@ public class BlockExpression extends system.linq.expressions.Expression  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.BlockExpression.Variables" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getVariables() throws Throwable {
+    public ReadOnlyCollection_1<ParameterExpression> getVariables() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectVariables = null;

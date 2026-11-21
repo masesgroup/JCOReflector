@@ -210,7 +210,7 @@ public class Argb_1<T extends IJCOBridgeReflected> extends system.ValueType  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Colors.Argb-1.ToRgba" target="_top">.NET documentation</a>
      */
-    public Rgba_1 ToRgba() throws Throwable {
+    public Rgba_1<T> ToRgba() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectToRgba = null;

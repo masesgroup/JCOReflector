@@ -162,7 +162,7 @@ public class CorrelationMessageProperty extends NetObject  {
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param correlationKey the argument of type {@code InstanceKey}
-     * @param additionalKeys the argument of type {@code IEnumerable_1}
+     * @param additionalKeys the argument of type {@code IEnumerable_1<InstanceKey>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -178,7 +178,7 @@ public class CorrelationMessageProperty extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.CorrelationMessageProperty.-ctor" target="_top">.NET documentation</a>
      */
-    public CorrelationMessageProperty(InstanceKey correlationKey, IEnumerable_1 additionalKeys) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+    public CorrelationMessageProperty(InstanceKey correlationKey, IEnumerable_1<InstanceKey> additionalKeys) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -192,8 +192,8 @@ public class CorrelationMessageProperty extends NetObject  {
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param correlationKey the argument of type {@code InstanceKey}
-     * @param additionalKeys the argument of type {@code IEnumerable_1}
-     * @param transientCorrelations the argument of type {@code IEnumerable_1}
+     * @param additionalKeys the argument of type {@code IEnumerable_1<InstanceKey>}
+     * @param transientCorrelations the argument of type {@code IEnumerable_1<InstanceKey>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -208,7 +208,7 @@ public class CorrelationMessageProperty extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.CorrelationMessageProperty.-ctor" target="_top">.NET documentation</a>
      */
-    public CorrelationMessageProperty(InstanceKey correlationKey, IEnumerable_1 additionalKeys, IEnumerable_1 transientCorrelations) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+    public CorrelationMessageProperty(InstanceKey correlationKey, IEnumerable_1<InstanceKey> additionalKeys, IEnumerable_1<InstanceKey> transientCorrelations) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -302,7 +302,7 @@ public class CorrelationMessageProperty extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.CorrelationMessageProperty.AdditionalKeys" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getAdditionalKeys() throws Throwable {
+    public ReadOnlyCollection_1<InstanceKey> getAdditionalKeys() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAdditionalKeys = null;
@@ -324,7 +324,7 @@ public class CorrelationMessageProperty extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.CorrelationMessageProperty.TransientCorrelations" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getTransientCorrelations() throws Throwable {
+    public ReadOnlyCollection_1<InstanceKey> getTransientCorrelations() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTransientCorrelations = null;

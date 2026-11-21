@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.InArgument_1;
+import system.servicemodel.activities.CorrelationHandle;
 
 
 /**
@@ -166,7 +167,7 @@ public class CorrelationInitializer extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.CorrelationInitializer.CorrelationHandle" target="_top">.NET documentation</a>
      */
-    public InArgument_1 getCorrelationHandle() throws Throwable {
+    public InArgument_1<CorrelationHandle> getCorrelationHandle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCorrelationHandle = null;
@@ -188,7 +189,7 @@ public class CorrelationInitializer extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.CorrelationInitializer.CorrelationHandle" target="_top">.NET documentation</a>
      */
-    public void setCorrelationHandle(InArgument_1 CorrelationHandle) throws Throwable {
+    public void setCorrelationHandle(InArgument_1<CorrelationHandle> CorrelationHandle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

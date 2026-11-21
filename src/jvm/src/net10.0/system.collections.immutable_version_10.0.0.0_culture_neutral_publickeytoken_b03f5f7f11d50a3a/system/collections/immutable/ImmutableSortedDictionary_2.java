@@ -168,7 +168,7 @@ public class ImmutableSortedDictionary_2<TKey extends IJCOBridgeReflected, TValu
     /**
      * Invokes the .NET member Contains.
      *
-     * @param pair the argument of type {@code KeyValuePair_2}
+     * @param pair the argument of type {@code KeyValuePair_2<TKey, TValue>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -178,7 +178,7 @@ public class ImmutableSortedDictionary_2<TKey extends IJCOBridgeReflected, TValu
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableSortedDictionary-2.Contains" target="_top">.NET documentation</a>
      */
-    public boolean Contains(KeyValuePair_2 pair) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public boolean Contains(KeyValuePair_2<TKey, TValue> pair) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContains = null;
@@ -334,7 +334,7 @@ public class ImmutableSortedDictionary_2<TKey extends IJCOBridgeReflected, TValu
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableSortedDictionary-2.Add" target="_top">.NET documentation</a>
      */
-    public ImmutableSortedDictionary_2 Add(TKey key, TValue value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public ImmutableSortedDictionary_2<TKey, TValue> Add(TKey key, TValue value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAdd = null;
@@ -352,7 +352,7 @@ public class ImmutableSortedDictionary_2<TKey extends IJCOBridgeReflected, TValu
     /**
      * Invokes the .NET member AddRange.
      *
-     * @param items the argument of type {@code IEnumerable_1}
+     * @param items the argument of type {@code IEnumerable_1<KeyValuePair_2<TKey, TValue>>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -366,7 +366,7 @@ public class ImmutableSortedDictionary_2<TKey extends IJCOBridgeReflected, TValu
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableSortedDictionary-2.AddRange" target="_top">.NET documentation</a>
      */
-    public ImmutableSortedDictionary_2 AddRange(IEnumerable_1 items) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public ImmutableSortedDictionary_2<TKey, TValue> AddRange(IEnumerable_1<KeyValuePair_2<TKey, TValue>> items) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAddRange = null;
@@ -394,7 +394,7 @@ public class ImmutableSortedDictionary_2<TKey extends IJCOBridgeReflected, TValu
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableSortedDictionary-2.Clear" target="_top">.NET documentation</a>
      */
-    public ImmutableSortedDictionary_2 Clear() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+    public ImmutableSortedDictionary_2<TKey, TValue> Clear() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectClear = null;
@@ -426,7 +426,7 @@ public class ImmutableSortedDictionary_2<TKey extends IJCOBridgeReflected, TValu
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableSortedDictionary-2.Remove" target="_top">.NET documentation</a>
      */
-    public ImmutableSortedDictionary_2 Remove(TKey value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public ImmutableSortedDictionary_2<TKey, TValue> Remove(TKey value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRemove = null;
@@ -444,7 +444,7 @@ public class ImmutableSortedDictionary_2<TKey extends IJCOBridgeReflected, TValu
     /**
      * Invokes the .NET member RemoveRange.
      *
-     * @param keys the argument of type {@code IEnumerable_1}
+     * @param keys the argument of type {@code IEnumerable_1<TKey>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -458,7 +458,7 @@ public class ImmutableSortedDictionary_2<TKey extends IJCOBridgeReflected, TValu
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableSortedDictionary-2.RemoveRange" target="_top">.NET documentation</a>
      */
-    public ImmutableSortedDictionary_2 RemoveRange(IEnumerable_1 keys) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public ImmutableSortedDictionary_2<TKey, TValue> RemoveRange(IEnumerable_1<TKey> keys) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRemoveRange = null;
@@ -491,7 +491,7 @@ public class ImmutableSortedDictionary_2<TKey extends IJCOBridgeReflected, TValu
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableSortedDictionary-2.SetItem" target="_top">.NET documentation</a>
      */
-    public ImmutableSortedDictionary_2 SetItem(TKey key, TValue value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public ImmutableSortedDictionary_2<TKey, TValue> SetItem(TKey key, TValue value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSetItem = null;
@@ -509,7 +509,7 @@ public class ImmutableSortedDictionary_2<TKey extends IJCOBridgeReflected, TValu
     /**
      * Invokes the .NET member SetItems.
      *
-     * @param items the argument of type {@code IEnumerable_1}
+     * @param items the argument of type {@code IEnumerable_1<KeyValuePair_2<TKey, TValue>>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -523,7 +523,7 @@ public class ImmutableSortedDictionary_2<TKey extends IJCOBridgeReflected, TValu
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableSortedDictionary-2.SetItems" target="_top">.NET documentation</a>
      */
-    public ImmutableSortedDictionary_2 SetItems(IEnumerable_1 items) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public ImmutableSortedDictionary_2<TKey, TValue> SetItems(IEnumerable_1<KeyValuePair_2<TKey, TValue>> items) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSetItems = null;
@@ -541,8 +541,8 @@ public class ImmutableSortedDictionary_2<TKey extends IJCOBridgeReflected, TValu
     /**
      * Invokes the .NET member WithComparers.
      *
-     * @param keyComparer the argument of type {@code IComparer_1}
-     * @param valueComparer the argument of type {@code IEqualityComparer_1}
+     * @param keyComparer the argument of type {@code IComparer_1<TKey>}
+     * @param valueComparer the argument of type {@code IEqualityComparer_1<TValue>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -555,7 +555,7 @@ public class ImmutableSortedDictionary_2<TKey extends IJCOBridgeReflected, TValu
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableSortedDictionary-2.WithComparers" target="_top">.NET documentation</a>
      */
-    public ImmutableSortedDictionary_2 WithComparers(IComparer_1 keyComparer, IEqualityComparer_1 valueComparer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+    public ImmutableSortedDictionary_2<TKey, TValue> WithComparers(IComparer_1<TKey> keyComparer, IEqualityComparer_1<TValue> valueComparer) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectWithComparers = null;
@@ -573,7 +573,7 @@ public class ImmutableSortedDictionary_2<TKey extends IJCOBridgeReflected, TValu
     /**
      * Invokes the .NET member WithComparers.
      *
-     * @param keyComparer the argument of type {@code IComparer_1}
+     * @param keyComparer the argument of type {@code IComparer_1<TKey>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.NotSupportedException if the .NET member raises it
@@ -584,7 +584,7 @@ public class ImmutableSortedDictionary_2<TKey extends IJCOBridgeReflected, TValu
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableSortedDictionary-2.WithComparers" target="_top">.NET documentation</a>
      */
-    public ImmutableSortedDictionary_2 WithComparers(IComparer_1 keyComparer) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+    public ImmutableSortedDictionary_2<TKey, TValue> WithComparers(IComparer_1<TKey> keyComparer) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectWithComparers = null;
@@ -769,7 +769,7 @@ public class ImmutableSortedDictionary_2<TKey extends IJCOBridgeReflected, TValu
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableSortedDictionary-2.KeyComparer" target="_top">.NET documentation</a>
      */
-    public IComparer_1 getKeyComparer() throws Throwable {
+    public IComparer_1<TKey> getKeyComparer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectKeyComparer = null;
@@ -796,7 +796,7 @@ public class ImmutableSortedDictionary_2<TKey extends IJCOBridgeReflected, TValu
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableSortedDictionary-2.Keys" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getKeys() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public IEnumerable_1<TKey> getKeys() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectKeys = null;
@@ -823,7 +823,7 @@ public class ImmutableSortedDictionary_2<TKey extends IJCOBridgeReflected, TValu
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableSortedDictionary-2.Values" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getValues() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public IEnumerable_1<TValue> getValues() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValues = null;
@@ -845,7 +845,7 @@ public class ImmutableSortedDictionary_2<TKey extends IJCOBridgeReflected, TValu
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Immutable.ImmutableSortedDictionary-2.ValueComparer" target="_top">.NET documentation</a>
      */
-    public IEqualityComparer_1 getValueComparer() throws Throwable {
+    public IEqualityComparer_1<TValue> getValueComparer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValueComparer = null;

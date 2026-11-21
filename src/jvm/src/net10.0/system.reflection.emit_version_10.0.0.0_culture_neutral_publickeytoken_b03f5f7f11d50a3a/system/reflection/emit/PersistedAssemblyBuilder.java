@@ -43,6 +43,7 @@ import system.reflection.AssemblyName;
 import system.reflection.Assembly;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.reflection.emit.CustomAttributeBuilder;
 import system.reflection.metadata.ecma335.MetadataBuilder;
 import system.reflection.metadata.BlobBuilder;
 import system.io.Stream;
@@ -165,7 +166,7 @@ public class PersistedAssemblyBuilder extends system.reflection.emit.AssemblyBui
      *
      * @param name the argument of type {@code AssemblyName}
      * @param coreAssembly the argument of type {@code Assembly}
-     * @param assemblyAttributes the argument of type {@code IEnumerable_1}
+     * @param assemblyAttributes the argument of type {@code IEnumerable_1<CustomAttributeBuilder>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -180,7 +181,7 @@ public class PersistedAssemblyBuilder extends system.reflection.emit.AssemblyBui
      * @throws system.reflection.metadata.ImageFormatLimitationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.PersistedAssemblyBuilder.-ctor" target="_top">.NET documentation</a>
      */
-    public PersistedAssemblyBuilder(AssemblyName name, Assembly coreAssembly, IEnumerable_1 assemblyAttributes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.reflection.metadata.ImageFormatLimitationException {
+    public PersistedAssemblyBuilder(AssemblyName name, Assembly coreAssembly, IEnumerable_1<CustomAttributeBuilder> assemblyAttributes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.reflection.metadata.ImageFormatLimitationException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

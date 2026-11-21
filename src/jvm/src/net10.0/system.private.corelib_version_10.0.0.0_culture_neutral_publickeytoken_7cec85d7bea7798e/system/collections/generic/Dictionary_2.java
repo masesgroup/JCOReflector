@@ -44,6 +44,7 @@ import system.collections.generic.IDictionary_2;
 import system.collections.generic.IDictionary_2Implementation;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.collections.generic.KeyValuePair_2;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
 import system.Array;
@@ -189,7 +190,7 @@ public class Dictionary_2<TKey extends IJCOBridgeReflected, TValue extends IJCOB
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param capacity the argument of type {@code int}
-     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1<TKey>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -203,7 +204,7 @@ public class Dictionary_2<TKey extends IJCOBridgeReflected, TValue extends IJCOB
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.Dictionary-2.-ctor" target="_top">.NET documentation</a>
      */
-    public Dictionary_2(int capacity, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public Dictionary_2(int capacity, IEqualityComparer_1<TKey> comparer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -247,8 +248,8 @@ public class Dictionary_2<TKey extends IJCOBridgeReflected, TValue extends IJCOB
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param dictionary the argument of type {@code IDictionary_2}
-     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @param dictionary the argument of type {@code IDictionary_2<TKey, TValue>}
+     * @param comparer the argument of type {@code IEqualityComparer_1<TKey>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -262,7 +263,7 @@ public class Dictionary_2<TKey extends IJCOBridgeReflected, TValue extends IJCOB
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.Dictionary-2.-ctor" target="_top">.NET documentation</a>
      */
-    public Dictionary_2(IDictionary_2 dictionary, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
+    public Dictionary_2(IDictionary_2<TKey, TValue> dictionary, IEqualityComparer_1<TKey> comparer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -277,7 +278,7 @@ public class Dictionary_2<TKey extends IJCOBridgeReflected, TValue extends IJCOB
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param dictionary the argument of type {@code IDictionary_2}
+     * @param dictionary the argument of type {@code IDictionary_2<TKey, TValue>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -288,7 +289,7 @@ public class Dictionary_2<TKey extends IJCOBridgeReflected, TValue extends IJCOB
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.Dictionary-2.-ctor" target="_top">.NET documentation</a>
      */
-    public Dictionary_2(IDictionary_2 dictionary) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException {
+    public Dictionary_2(IDictionary_2<TKey, TValue> dictionary) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -303,8 +304,8 @@ public class Dictionary_2<TKey extends IJCOBridgeReflected, TValue extends IJCOB
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param collection the argument of type {@code IEnumerable_1}
-     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @param collection the argument of type {@code IEnumerable_1<KeyValuePair_2<TKey, TValue>>}
+     * @param comparer the argument of type {@code IEqualityComparer_1<TKey>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -318,7 +319,7 @@ public class Dictionary_2<TKey extends IJCOBridgeReflected, TValue extends IJCOB
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.Dictionary-2.-ctor" target="_top">.NET documentation</a>
      */
-    public Dictionary_2(IEnumerable_1 collection, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
+    public Dictionary_2(IEnumerable_1<KeyValuePair_2<TKey, TValue>> collection, IEqualityComparer_1<TKey> comparer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -333,7 +334,7 @@ public class Dictionary_2<TKey extends IJCOBridgeReflected, TValue extends IJCOB
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param collection the argument of type {@code IEnumerable_1}
+     * @param collection the argument of type {@code IEnumerable_1<KeyValuePair_2<TKey, TValue>>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -344,7 +345,7 @@ public class Dictionary_2<TKey extends IJCOBridgeReflected, TValue extends IJCOB
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.Dictionary-2.-ctor" target="_top">.NET documentation</a>
      */
-    public Dictionary_2(IEnumerable_1 collection) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException {
+    public Dictionary_2(IEnumerable_1<KeyValuePair_2<TKey, TValue>> collection) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -359,7 +360,7 @@ public class Dictionary_2<TKey extends IJCOBridgeReflected, TValue extends IJCOB
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1<TKey>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -373,7 +374,7 @@ public class Dictionary_2<TKey extends IJCOBridgeReflected, TValue extends IJCOB
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.Dictionary-2.-ctor" target="_top">.NET documentation</a>
      */
-    public Dictionary_2(IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
+    public Dictionary_2(IEqualityComparer_1<TKey> comparer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -956,7 +957,7 @@ public class Dictionary_2<TKey extends IJCOBridgeReflected, TValue extends IJCOB
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.Dictionary-2.Comparer" target="_top">.NET documentation</a>
      */
-    public IEqualityComparer_1 getComparer() throws Throwable {
+    public IEqualityComparer_1<TKey> getComparer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectComparer = null;

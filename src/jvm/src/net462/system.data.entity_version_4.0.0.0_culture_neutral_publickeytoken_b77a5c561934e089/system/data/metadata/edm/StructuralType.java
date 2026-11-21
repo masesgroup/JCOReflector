@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.data.metadata.edm.EdmType;
 import system.data.metadata.edm.ReadOnlyMetadataCollection_1;
+import system.data.metadata.edm.EdmMember;
 
 
 /**
@@ -167,7 +168,7 @@ public class StructuralType extends system.data.metadata.edm.EdmType  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.StructuralType.Members" target="_top">.NET documentation</a>
      */
-    public ReadOnlyMetadataCollection_1 getMembers() throws Throwable {
+    public ReadOnlyMetadataCollection_1<EdmMember> getMembers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectMembers = null;

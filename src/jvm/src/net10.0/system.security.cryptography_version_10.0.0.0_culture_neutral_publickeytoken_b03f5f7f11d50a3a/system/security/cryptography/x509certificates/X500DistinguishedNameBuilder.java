@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.security.cryptography.x509certificates.X500DistinguishedName;
 import system.security.cryptography.Oid;
 import system.Nullable_1;
+import system.formats.asn1.UniversalTagNumber;
 
 
 /**
@@ -220,7 +221,7 @@ public class X500DistinguishedNameBuilder extends NetObject  {
      *
      * @param oid the argument of type {@code Oid}
      * @param value the argument of type {@code java.lang.String}
-     * @param stringEncodingType the argument of type {@code Nullable_1}
+     * @param stringEncodingType the argument of type {@code Nullable_1<UniversalTagNumber>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -235,7 +236,7 @@ public class X500DistinguishedNameBuilder extends NetObject  {
      * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.X500DistinguishedNameBuilder.Add" target="_top">.NET documentation</a>
      */
-    public void Add(Oid oid, java.lang.String value, Nullable_1 stringEncodingType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException {
+    public void Add(Oid oid, java.lang.String value, Nullable_1<UniversalTagNumber> stringEncodingType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -250,7 +251,7 @@ public class X500DistinguishedNameBuilder extends NetObject  {
      *
      * @param oidValue the argument of type {@code java.lang.String}
      * @param value the argument of type {@code java.lang.String}
-     * @param stringEncodingType the argument of type {@code Nullable_1}
+     * @param stringEncodingType the argument of type {@code Nullable_1<UniversalTagNumber>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -265,7 +266,7 @@ public class X500DistinguishedNameBuilder extends NetObject  {
      * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.X500DistinguishedNameBuilder.Add" target="_top">.NET documentation</a>
      */
-    public void Add(java.lang.String oidValue, java.lang.String value, Nullable_1 stringEncodingType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException {
+    public void Add(java.lang.String oidValue, java.lang.String value, Nullable_1<UniversalTagNumber> stringEncodingType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

@@ -254,7 +254,7 @@ public class NameValueWithParametersHeaderValue extends system.net.http.headers.
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.NameValueWithParametersHeaderValue.Parameters" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getParameters() throws Throwable {
+    public ICollection_1<NameValueHeaderValue> getParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectParameters = null;

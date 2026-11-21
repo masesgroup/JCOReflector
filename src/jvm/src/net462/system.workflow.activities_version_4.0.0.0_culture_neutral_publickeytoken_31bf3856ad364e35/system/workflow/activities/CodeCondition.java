@@ -42,6 +42,8 @@ import system.workflow.componentmodel.ActivityCondition;
 import system.workflow.componentmodel.Activity;
 import system.IServiceProvider;
 import system.IServiceProviderImplementation;
+import system.EventHandler_1;
+import system.workflow.activities.ConditionalEventArgs;
 
 
 /**
@@ -222,6 +224,40 @@ public class CodeCondition extends system.workflow.componentmodel.ActivityCondit
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addCondition.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ConditionalEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addCondition(EventHandler_1<ConditionalEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("Condition", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeCondition.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ConditionalEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeCondition(EventHandler_1<ConditionalEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("Condition", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

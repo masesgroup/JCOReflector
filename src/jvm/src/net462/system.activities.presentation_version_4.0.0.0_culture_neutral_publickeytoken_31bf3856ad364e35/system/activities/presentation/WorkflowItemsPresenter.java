@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.windows.controls.ContentControl;
 import system.collections.generic.List_1;
+import system.Object;
 import system.activities.presentation.model.ModelItem;
 import system.windows.Point;
 import system.activities.presentation.WorkflowViewElement;
@@ -189,7 +190,7 @@ public class WorkflowItemsPresenter extends system.windows.controls.ContentContr
     /**
      * Invokes the .NET member CanPasteItems.
      *
-     * @param itemsToPaste the argument of type {@code List_1}
+     * @param itemsToPaste the argument of type {@code List_1<Object>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.InvalidOperationException if the .NET member raises it
@@ -198,7 +199,7 @@ public class WorkflowItemsPresenter extends system.windows.controls.ContentContr
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowItemsPresenter.CanPasteItems" target="_top">.NET documentation</a>
      */
-    public boolean CanPasteItems(List_1 itemsToPaste) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public boolean CanPasteItems(List_1<Object> itemsToPaste) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCanPasteItems = null;
@@ -215,7 +216,7 @@ public class WorkflowItemsPresenter extends system.windows.controls.ContentContr
     /**
      * Invokes the .NET member SortSelectedItems.
      *
-     * @param selectedItems the argument of type {@code List_1}
+     * @param selectedItems the argument of type {@code List_1<ModelItem>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -228,7 +229,7 @@ public class WorkflowItemsPresenter extends system.windows.controls.ContentContr
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowItemsPresenter.SortSelectedItems" target="_top">.NET documentation</a>
      */
-    public List_1 SortSelectedItems(List_1 selectedItems) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public List_1<ModelItem> SortSelectedItems(List_1<ModelItem> selectedItems) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSortSelectedItems = null;
@@ -246,7 +247,7 @@ public class WorkflowItemsPresenter extends system.windows.controls.ContentContr
     /**
      * Invokes the .NET member OnItemsCopied.
      *
-     * @param itemsToCopy the argument of type {@code List_1}
+     * @param itemsToCopy the argument of type {@code List_1<ModelItem>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -259,7 +260,7 @@ public class WorkflowItemsPresenter extends system.windows.controls.ContentContr
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowItemsPresenter.OnItemsCopied" target="_top">.NET documentation</a>
      */
-    public NetObject OnItemsCopied(List_1 itemsToCopy) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+    public NetObject OnItemsCopied(List_1<ModelItem> itemsToCopy) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOnItemsCopied = null;
@@ -277,7 +278,7 @@ public class WorkflowItemsPresenter extends system.windows.controls.ContentContr
     /**
      * Invokes the .NET member OnItemsCut.
      *
-     * @param itemsToCut the argument of type {@code List_1}
+     * @param itemsToCut the argument of type {@code List_1<ModelItem>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -290,7 +291,7 @@ public class WorkflowItemsPresenter extends system.windows.controls.ContentContr
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowItemsPresenter.OnItemsCut" target="_top">.NET documentation</a>
      */
-    public NetObject OnItemsCut(List_1 itemsToCut) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+    public NetObject OnItemsCut(List_1<ModelItem> itemsToCut) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOnItemsCut = null;
@@ -332,7 +333,7 @@ public class WorkflowItemsPresenter extends system.windows.controls.ContentContr
     /**
      * Invokes the .NET member OnItemsDelete.
      *
-     * @param itemsToDelete the argument of type {@code List_1}
+     * @param itemsToDelete the argument of type {@code List_1<ModelItem>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.resources.MissingManifestResourceException if the .NET member raises it
@@ -342,7 +343,7 @@ public class WorkflowItemsPresenter extends system.windows.controls.ContentContr
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowItemsPresenter.OnItemsDelete" target="_top">.NET documentation</a>
      */
-    public void OnItemsDelete(List_1 itemsToDelete) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException {
+    public void OnItemsDelete(List_1<ModelItem> itemsToDelete) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -355,7 +356,7 @@ public class WorkflowItemsPresenter extends system.windows.controls.ContentContr
     /**
      * Invokes the .NET member OnItemsMoved.
      *
-     * @param movedItems the argument of type {@code List_1}
+     * @param movedItems the argument of type {@code List_1<ModelItem>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -367,7 +368,7 @@ public class WorkflowItemsPresenter extends system.windows.controls.ContentContr
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowItemsPresenter.OnItemsMoved" target="_top">.NET documentation</a>
      */
-    public void OnItemsMoved(List_1 movedItems) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public void OnItemsMoved(List_1<ModelItem> movedItems) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -380,8 +381,8 @@ public class WorkflowItemsPresenter extends system.windows.controls.ContentContr
     /**
      * Invokes the .NET member OnItemsPasted.
      *
-     * @param itemsToPaste the argument of type {@code List_1}
-     * @param metaData the argument of type {@code List_1}
+     * @param itemsToPaste the argument of type {@code List_1<Object>}
+     * @param metaData the argument of type {@code List_1<Object>}
      * @param pastePoint the argument of type {@code Point}
      * @param pastePointReference the argument of type {@code WorkflowViewElement}
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -402,7 +403,7 @@ public class WorkflowItemsPresenter extends system.windows.controls.ContentContr
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.WorkflowItemsPresenter.OnItemsPasted" target="_top">.NET documentation</a>
      */
-    public void OnItemsPasted(List_1 itemsToPaste, List_1 metaData, Point pastePoint, WorkflowViewElement pastePointReference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.InvalidCastException, system.ObjectDisposedException {
+    public void OnItemsPasted(List_1<Object> itemsToPaste, List_1<Object> metaData, Point pastePoint, WorkflowViewElement pastePointReference) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.InvalidCastException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

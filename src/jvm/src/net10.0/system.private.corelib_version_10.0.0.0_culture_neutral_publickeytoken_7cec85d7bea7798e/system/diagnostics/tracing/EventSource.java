@@ -44,13 +44,15 @@ import system.diagnostics.tracing.EventKeywords;
 import system.diagnostics.tracing.EventChannel;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.diagnostics.tracing.EventSource;
 import system.Guid;
 import system.diagnostics.tracing.EventManifestOptions;
-import system.diagnostics.tracing.EventSource;
 import system.diagnostics.tracing.EventCommand;
 import system.collections.generic.IDictionary_2;
 import system.collections.generic.IDictionary_2Implementation;
 import system.diagnostics.tracing.EventSourceOptions;
+import system.EventHandler_1;
+import system.diagnostics.tracing.EventCommandEventArgs;
 
 
 /**
@@ -357,7 +359,7 @@ public class EventSource extends NetObject implements AutoCloseable {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventSource.GetSources" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 GetSources() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.InvalidOperationException {
+    public static IEnumerable_1<EventSource> GetSources() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetSources = null;
@@ -1008,6 +1010,40 @@ public class EventSource extends NetObject implements AutoCloseable {
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addEventCommandExecuted.
+     *
+     * @param handler the argument of type {@code EventHandler_1<EventCommandEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addEventCommandExecuted(EventHandler_1<EventCommandEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("EventCommandExecuted", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeEventCommandExecuted.
+     *
+     * @param handler the argument of type {@code EventHandler_1<EventCommandEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeEventCommandExecuted(EventHandler_1<EventCommandEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("EventCommandExecuted", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

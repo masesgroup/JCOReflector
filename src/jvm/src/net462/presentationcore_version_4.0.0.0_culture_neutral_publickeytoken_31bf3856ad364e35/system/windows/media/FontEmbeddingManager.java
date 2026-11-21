@@ -251,7 +251,7 @@ public class FontEmbeddingManager extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.FontEmbeddingManager.GlyphTypefaceUris" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getGlyphTypefaceUris() throws Throwable, system.ArgumentNullException {
+    public ICollection_1<Uri> getGlyphTypefaceUris() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGlyphTypefaceUris = null;

@@ -46,9 +46,11 @@ import system.runtime.serialization.IFormatterImplementation;
 import system.workflow.componentmodel.DependencyProperty;
 import system.workflow.componentmodel.IActivityEventListener_1;
 import system.workflow.componentmodel.IActivityEventListener_1Implementation;
+import system.workflow.componentmodel.ActivityExecutionStatusChangedEventArgs;
 import system.workflow.componentmodel.ActivityExecutionResult;
 import system.workflow.componentmodel.ActivityExecutionStatus;
 import system.workflow.componentmodel.CompositeActivity;
+import system.EventHandler_1;
 
 
 /**
@@ -390,7 +392,7 @@ public class Activity extends system.workflow.componentmodel.DependencyObject  {
      * Invokes the .NET member RegisterForStatusChange.
      *
      * @param dependencyProp the argument of type {@code DependencyProperty}
-     * @param activityStatusChangeListener the argument of type {@code IActivityEventListener_1}
+     * @param activityStatusChangeListener the argument of type {@code IActivityEventListener_1<ActivityExecutionStatusChangedEventArgs>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -401,7 +403,7 @@ public class Activity extends system.workflow.componentmodel.DependencyObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Activity.RegisterForStatusChange" target="_top">.NET documentation</a>
      */
-    public void RegisterForStatusChange(DependencyProperty dependencyProp, IActivityEventListener_1 activityStatusChangeListener) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public void RegisterForStatusChange(DependencyProperty dependencyProp, IActivityEventListener_1<ActivityExecutionStatusChangedEventArgs> activityStatusChangeListener) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -473,7 +475,7 @@ public class Activity extends system.workflow.componentmodel.DependencyObject  {
      * Invokes the .NET member UnregisterForStatusChange.
      *
      * @param dependencyProp the argument of type {@code DependencyProperty}
-     * @param activityStatusChangeListener the argument of type {@code IActivityEventListener_1}
+     * @param activityStatusChangeListener the argument of type {@code IActivityEventListener_1<ActivityExecutionStatusChangedEventArgs>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -484,7 +486,7 @@ public class Activity extends system.workflow.componentmodel.DependencyObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Activity.UnregisterForStatusChange" target="_top">.NET documentation</a>
      */
-    public void UnregisterForStatusChange(DependencyProperty dependencyProp, IActivityEventListener_1 activityStatusChangeListener) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public void UnregisterForStatusChange(DependencyProperty dependencyProp, IActivityEventListener_1<ActivityExecutionStatusChangedEventArgs> activityStatusChangeListener) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -830,6 +832,210 @@ public class Activity extends system.workflow.componentmodel.DependencyObject  {
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addCanceling.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ActivityExecutionStatusChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addCanceling(EventHandler_1<ActivityExecutionStatusChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("Canceling", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeCanceling.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ActivityExecutionStatusChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeCanceling(EventHandler_1<ActivityExecutionStatusChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("Canceling", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addClosed.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ActivityExecutionStatusChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addClosed(EventHandler_1<ActivityExecutionStatusChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("Closed", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeClosed.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ActivityExecutionStatusChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeClosed(EventHandler_1<ActivityExecutionStatusChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("Closed", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addCompensating.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ActivityExecutionStatusChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addCompensating(EventHandler_1<ActivityExecutionStatusChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("Compensating", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeCompensating.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ActivityExecutionStatusChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeCompensating(EventHandler_1<ActivityExecutionStatusChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("Compensating", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addExecuting.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ActivityExecutionStatusChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addExecuting(EventHandler_1<ActivityExecutionStatusChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("Executing", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeExecuting.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ActivityExecutionStatusChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeExecuting(EventHandler_1<ActivityExecutionStatusChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("Executing", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addFaulting.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ActivityExecutionStatusChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addFaulting(EventHandler_1<ActivityExecutionStatusChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("Faulting", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeFaulting.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ActivityExecutionStatusChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeFaulting(EventHandler_1<ActivityExecutionStatusChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("Faulting", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addStatusChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ActivityExecutionStatusChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addStatusChanged(EventHandler_1<ActivityExecutionStatusChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("StatusChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeStatusChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ActivityExecutionStatusChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeStatusChanged(EventHandler_1<ActivityExecutionStatusChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("StatusChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.activities.debugger.symbol.WorkflowSymbol;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.activities.debugger.symbol.ActivitySymbol;
 
 
 /**
@@ -316,7 +317,7 @@ public class WorkflowSymbol extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Debugger.Symbol.WorkflowSymbol.Symbols" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getSymbols() throws Throwable {
+    public ICollection_1<ActivitySymbol> getSymbols() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSymbols = null;
@@ -338,7 +339,7 @@ public class WorkflowSymbol extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Debugger.Symbol.WorkflowSymbol.Symbols" target="_top">.NET documentation</a>
      */
-    public void setSymbols(ICollection_1 Symbols) throws Throwable {
+    public void setSymbols(ICollection_1<ActivitySymbol> Symbols) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

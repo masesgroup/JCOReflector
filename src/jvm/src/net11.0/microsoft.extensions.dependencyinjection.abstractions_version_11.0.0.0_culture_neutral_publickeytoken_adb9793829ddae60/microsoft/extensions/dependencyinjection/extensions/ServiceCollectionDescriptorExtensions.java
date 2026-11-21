@@ -44,6 +44,9 @@ import microsoft.extensions.dependencyinjection.ServiceDescriptor;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
 import system.Func_3;
+import system.IServiceProvider;
+import system.IServiceProviderImplementation;
+import system.Object;
 import system.Func_2;
 
 
@@ -196,7 +199,7 @@ public class ServiceCollectionDescriptorExtensions extends NetObject  {
      * Invokes the .NET member Add.
      *
      * @param collection the argument of type {@code IServiceCollection}
-     * @param descriptors the argument of type {@code IEnumerable_1}
+     * @param descriptors the argument of type {@code IEnumerable_1<ServiceDescriptor>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -208,7 +211,7 @@ public class ServiceCollectionDescriptorExtensions extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.Add" target="_top">.NET documentation</a>
      */
-    public static IServiceCollection Add(IServiceCollection collection, IEnumerable_1 descriptors) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public static IServiceCollection Add(IServiceCollection collection, IEnumerable_1<ServiceDescriptor> descriptors) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAdd = null;
@@ -405,7 +408,7 @@ public class ServiceCollectionDescriptorExtensions extends NetObject  {
      * Invokes the .NET member TryAdd.
      *
      * @param collection the argument of type {@code IServiceCollection}
-     * @param descriptors the argument of type {@code IEnumerable_1}
+     * @param descriptors the argument of type {@code IEnumerable_1<ServiceDescriptor>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -416,7 +419,7 @@ public class ServiceCollectionDescriptorExtensions extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAdd" target="_top">.NET documentation</a>
      */
-    public static void TryAdd(IServiceCollection collection, IEnumerable_1 descriptors) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public static void TryAdd(IServiceCollection collection, IEnumerable_1<ServiceDescriptor> descriptors) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -457,7 +460,7 @@ public class ServiceCollectionDescriptorExtensions extends NetObject  {
      * Invokes the .NET member TryAddEnumerable.
      *
      * @param services the argument of type {@code IServiceCollection}
-     * @param descriptors the argument of type {@code IEnumerable_1}
+     * @param descriptors the argument of type {@code IEnumerable_1<ServiceDescriptor>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -470,7 +473,7 @@ public class ServiceCollectionDescriptorExtensions extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddEnumerable" target="_top">.NET documentation</a>
      */
-    public static void TryAddEnumerable(IServiceCollection services, IEnumerable_1 descriptors) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
+    public static void TryAddEnumerable(IServiceCollection services, IEnumerable_1<ServiceDescriptor> descriptors) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -486,7 +489,7 @@ public class ServiceCollectionDescriptorExtensions extends NetObject  {
      * @param collection the argument of type {@code IServiceCollection}
      * @param service the argument of type {@code NetType}
      * @param serviceKey the argument of type {@code NetObject}
-     * @param implementationFactory the argument of type {@code Func_3}
+     * @param implementationFactory the argument of type {@code Func_3<IServiceProvider, Object, Object>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -497,7 +500,7 @@ public class ServiceCollectionDescriptorExtensions extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddKeyedScoped" target="_top">.NET documentation</a>
      */
-    public static void TryAddKeyedScoped(IServiceCollection collection, NetType service, NetObject serviceKey, Func_3 implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public static void TryAddKeyedScoped(IServiceCollection collection, NetType service, NetObject serviceKey, Func_3<IServiceProvider, Object, Object> implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -618,7 +621,7 @@ public class ServiceCollectionDescriptorExtensions extends NetObject  {
      * @param collection the argument of type {@code IServiceCollection}
      * @param service the argument of type {@code NetType}
      * @param serviceKey the argument of type {@code NetObject}
-     * @param implementationFactory the argument of type {@code Func_3}
+     * @param implementationFactory the argument of type {@code Func_3<IServiceProvider, Object, Object>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -629,7 +632,7 @@ public class ServiceCollectionDescriptorExtensions extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddKeyedSingleton" target="_top">.NET documentation</a>
      */
-    public static void TryAddKeyedSingleton(IServiceCollection collection, NetType service, NetObject serviceKey, Func_3 implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public static void TryAddKeyedSingleton(IServiceCollection collection, NetType service, NetObject serviceKey, Func_3<IServiceProvider, Object, Object> implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -777,7 +780,7 @@ public class ServiceCollectionDescriptorExtensions extends NetObject  {
      * @param collection the argument of type {@code IServiceCollection}
      * @param service the argument of type {@code NetType}
      * @param serviceKey the argument of type {@code NetObject}
-     * @param implementationFactory the argument of type {@code Func_3}
+     * @param implementationFactory the argument of type {@code Func_3<IServiceProvider, Object, Object>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -788,7 +791,7 @@ public class ServiceCollectionDescriptorExtensions extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddKeyedTransient" target="_top">.NET documentation</a>
      */
-    public static void TryAddKeyedTransient(IServiceCollection collection, NetType service, NetObject serviceKey, Func_3 implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public static void TryAddKeyedTransient(IServiceCollection collection, NetType service, NetObject serviceKey, Func_3<IServiceProvider, Object, Object> implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -908,7 +911,7 @@ public class ServiceCollectionDescriptorExtensions extends NetObject  {
      *
      * @param collection the argument of type {@code IServiceCollection}
      * @param service the argument of type {@code NetType}
-     * @param implementationFactory the argument of type {@code Func_2}
+     * @param implementationFactory the argument of type {@code Func_2<IServiceProvider, Object>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -919,7 +922,7 @@ public class ServiceCollectionDescriptorExtensions extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddScoped" target="_top">.NET documentation</a>
      */
-    public static void TryAddScoped(IServiceCollection collection, NetType service, Func_2 implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public static void TryAddScoped(IServiceCollection collection, NetType service, Func_2<IServiceProvider, Object> implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -1035,7 +1038,7 @@ public class ServiceCollectionDescriptorExtensions extends NetObject  {
      *
      * @param collection the argument of type {@code IServiceCollection}
      * @param service the argument of type {@code NetType}
-     * @param implementationFactory the argument of type {@code Func_2}
+     * @param implementationFactory the argument of type {@code Func_2<IServiceProvider, Object>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -1046,7 +1049,7 @@ public class ServiceCollectionDescriptorExtensions extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddSingleton" target="_top">.NET documentation</a>
      */
-    public static void TryAddSingleton(IServiceCollection collection, NetType service, Func_2 implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public static void TryAddSingleton(IServiceCollection collection, NetType service, Func_2<IServiceProvider, Object> implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -1188,7 +1191,7 @@ public class ServiceCollectionDescriptorExtensions extends NetObject  {
      *
      * @param collection the argument of type {@code IServiceCollection}
      * @param service the argument of type {@code NetType}
-     * @param implementationFactory the argument of type {@code Func_2}
+     * @param implementationFactory the argument of type {@code Func_2<IServiceProvider, Object>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -1199,7 +1202,7 @@ public class ServiceCollectionDescriptorExtensions extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.DependencyInjection.Extensions.ServiceCollectionDescriptorExtensions.TryAddTransient" target="_top">.NET documentation</a>
      */
-    public static void TryAddTransient(IServiceCollection collection, NetType service, Func_2 implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public static void TryAddTransient(IServiceCollection collection, NetType service, Func_2<IServiceProvider, Object> implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

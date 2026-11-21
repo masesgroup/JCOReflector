@@ -177,12 +177,12 @@ public class ModelBinderProviderCollection extends system.collections.objectmode
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param list the argument of type {@code IList_1}
+     * @param list the argument of type {@code IList_1<ModelBinderProvider>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBinderProviderCollection.-ctor" target="_top">.NET documentation</a>
      */
-    public ModelBinderProviderCollection(IList_1 list) throws Throwable, system.ArgumentNullException {
+    public ModelBinderProviderCollection(IList_1<ModelBinderProvider> list) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -323,12 +323,12 @@ public class ModelBinderProviderCollection extends system.collections.objectmode
      * Invokes the .NET member RegisterBinderForType.
      *
      * @param modelType the argument of type {@code NetType}
-     * @param modelBinderFactory the argument of type {@code Func_1}
+     * @param modelBinderFactory the argument of type {@code Func_1<IModelBinder>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelBinderProviderCollection.RegisterBinderForType" target="_top">.NET documentation</a>
      */
-    public void RegisterBinderForType(NetType modelType, Func_1 modelBinderFactory) throws Throwable, system.ArgumentNullException {
+    public void RegisterBinderForType(NetType modelType, Func_1<IModelBinder> modelBinderFactory) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

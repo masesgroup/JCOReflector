@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.workflow.componentmodel.WorkflowChangeAction;
 
 
 /**
@@ -154,7 +155,7 @@ public class IWorkflowChangeDiffImplementation extends NetObject implements IWor
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.IWorkflowChangeDiff.Diff" target="_top">.NET documentation</a>
      */
-    public IList_1 Diff(NetObject originalDefinition, NetObject changedDefinition) throws Throwable {
+    public IList_1<WorkflowChangeAction> Diff(NetObject originalDefinition, NetObject changedDefinition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDiff = null;

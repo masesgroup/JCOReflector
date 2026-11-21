@@ -42,6 +42,7 @@ import microsoft.build.framework.xamltypes.RuleSchema;
 import microsoft.build.framework.xamltypes.BaseProperty;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.Object;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
 import system.collections.specialized.OrderedDictionary;
@@ -49,6 +50,7 @@ import microsoft.build.framework.xamltypes.DataSource;
 import microsoft.build.framework.xamltypes.RuleOverrideMode;
 import system.collections.generic.Dictionary_2;
 import system.collections.generic.List_1;
+import microsoft.build.framework.xamltypes.Category;
 
 
 /**
@@ -216,7 +218,7 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.GetSchemaObjects" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetSchemaObjects(NetType type) throws Throwable {
+    public IEnumerable_1<Object> GetSchemaObjects(NetType type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetSchemaObjects = null;
@@ -238,7 +240,7 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.GetSchemaObjectTypes" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetSchemaObjectTypes() throws Throwable {
+    public IEnumerable_1<NetType> GetSchemaObjectTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetSchemaObjectTypes = null;
@@ -271,7 +273,7 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.GetPropertiesInCategory" target="_top">.NET documentation</a>
      */
-    public IList_1 GetPropertiesInCategory(java.lang.String categoryName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+    public IList_1<BaseProperty> GetPropertiesInCategory(java.lang.String categoryName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetPropertiesInCategory = null;
@@ -657,7 +659,7 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.Properties" target="_top">.NET documentation</a>
      */
-    public List_1 getProperties() throws Throwable {
+    public List_1<BaseProperty> getProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectProperties = null;
@@ -679,7 +681,7 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.Properties" target="_top">.NET documentation</a>
      */
-    public void setProperties(List_1 Properties) throws Throwable {
+    public void setProperties(List_1<BaseProperty> Properties) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -696,7 +698,7 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.Categories" target="_top">.NET documentation</a>
      */
-    public List_1 getCategories() throws Throwable {
+    public List_1<Category> getCategories() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCategories = null;
@@ -718,7 +720,7 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.Categories" target="_top">.NET documentation</a>
      */
-    public void setCategories(List_1 Categories) throws Throwable {
+    public void setCategories(List_1<Category> Categories) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -745,7 +747,7 @@ public class Rule extends microsoft.build.framework.xamltypes.RuleSchema  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.Rule.EvaluatedCategories" target="_top">.NET documentation</a>
      */
-    public List_1 getEvaluatedCategories() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
+    public List_1<Category> getEvaluatedCategories() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEvaluatedCategories = null;

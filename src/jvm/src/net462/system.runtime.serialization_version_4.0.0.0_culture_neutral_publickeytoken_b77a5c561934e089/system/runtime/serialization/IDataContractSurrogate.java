@@ -133,7 +133,7 @@ public interface IDataContractSurrogate extends IJCOBridgeReflected {
 
     public NetType GetReferencedTypeOnImport(java.lang.String typeName, java.lang.String typeNamespace, NetObject customData) throws Throwable;
 
-    public void GetKnownCustomDataTypes(Collection_1 customDataTypes) throws Throwable;
+    public void GetKnownCustomDataTypes(Collection_1<NetType> customDataTypes) throws Throwable;
 
 
     

@@ -39,6 +39,7 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.servicemodel.channels.CorrelationDataDescription;
 
 
 /**
@@ -121,7 +122,7 @@ public interface ICorrelationDataSource extends IJCOBridgeReflected {
     
     // Properties section
     
-    public ICollection_1 getDataSources() throws Throwable;
+    public ICollection_1<CorrelationDataDescription> getDataSources() throws Throwable;
 
 
 

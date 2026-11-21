@@ -40,9 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.reflection.Assembly;
 import system.collections.generic.IDictionary_2;
 import system.collections.generic.IDictionary_2Implementation;
-import system.reflection.Assembly;
 import system.EventHandler;
 
 
@@ -235,7 +235,7 @@ public class ITypeProviderImplementation extends NetObject implements ITypeProvi
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.ITypeProvider.ReferencedAssemblies" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getReferencedAssemblies() throws Throwable {
+    public ICollection_1<Assembly> getReferencedAssemblies() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReferencedAssemblies = null;

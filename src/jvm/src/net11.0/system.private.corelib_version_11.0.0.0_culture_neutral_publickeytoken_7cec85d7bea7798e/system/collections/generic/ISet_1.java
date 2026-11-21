@@ -122,28 +122,28 @@ public interface ISet_1<T extends IJCOBridgeReflected> extends IJCOBridgeReflect
     public boolean Add(T item) throws Throwable;
 
 
-    public boolean IsProperSubsetOf(IEnumerable_1 other) throws Throwable;
+    public boolean IsProperSubsetOf(IEnumerable_1<T> other) throws Throwable;
 
-    public boolean IsProperSupersetOf(IEnumerable_1 other) throws Throwable;
+    public boolean IsProperSupersetOf(IEnumerable_1<T> other) throws Throwable;
 
-    public boolean IsSubsetOf(IEnumerable_1 other) throws Throwable;
+    public boolean IsSubsetOf(IEnumerable_1<T> other) throws Throwable;
 
-    public boolean IsSupersetOf(IEnumerable_1 other) throws Throwable;
+    public boolean IsSupersetOf(IEnumerable_1<T> other) throws Throwable;
 
-    public boolean Overlaps(IEnumerable_1 other) throws Throwable;
-
-
-    public boolean SetEquals(IEnumerable_1 other) throws Throwable;
+    public boolean Overlaps(IEnumerable_1<T> other) throws Throwable;
 
 
+    public boolean SetEquals(IEnumerable_1<T> other) throws Throwable;
 
-    public void ExceptWith(IEnumerable_1 other) throws Throwable;
 
-    public void IntersectWith(IEnumerable_1 other) throws Throwable;
 
-    public void SymmetricExceptWith(IEnumerable_1 other) throws Throwable;
+    public void ExceptWith(IEnumerable_1<T> other) throws Throwable;
 
-    public void UnionWith(IEnumerable_1 other) throws Throwable;
+    public void IntersectWith(IEnumerable_1<T> other) throws Throwable;
+
+    public void SymmetricExceptWith(IEnumerable_1<T> other) throws Throwable;
+
+    public void UnionWith(IEnumerable_1<T> other) throws Throwable;
 
 
     

@@ -39,7 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.data.metadata.edm.EdmFunction;
+import system.data.metadata.edm.FacetDescription;
 import system.data.metadata.edm.EdmType;
+import system.data.metadata.edm.PrimitiveType;
 import system.data.metadata.edm.TypeUsage;
 import system.xml.XmlReader;
 
@@ -187,7 +190,7 @@ public class DbProviderManifest extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbProviderManifest.GetStoreFunctions" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 GetStoreFunctions() throws Throwable {
+    public ReadOnlyCollection_1<EdmFunction> GetStoreFunctions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetStoreFunctions = null;
@@ -210,7 +213,7 @@ public class DbProviderManifest extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbProviderManifest.GetFacetDescriptions" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 GetFacetDescriptions(EdmType edmType) throws Throwable {
+    public ReadOnlyCollection_1<FacetDescription> GetFacetDescriptions(EdmType edmType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetFacetDescriptions = null;
@@ -232,7 +235,7 @@ public class DbProviderManifest extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbProviderManifest.GetStoreTypes" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 GetStoreTypes() throws Throwable {
+    public ReadOnlyCollection_1<PrimitiveType> GetStoreTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetStoreTypes = null;

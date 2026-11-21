@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.EventArgs;
 import system.collections.generic.List_1;
+import system.windows.controls.DataGridClipboardCellContent;
 
 
 /**
@@ -339,7 +340,7 @@ public class DataGridRowClipboardEventArgs extends system.EventArgs  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.DataGridRowClipboardEventArgs.ClipboardRowContent" target="_top">.NET documentation</a>
      */
-    public List_1 getClipboardRowContent() throws Throwable {
+    public List_1<DataGridClipboardCellContent> getClipboardRowContent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectClipboardRowContent = null;

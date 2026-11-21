@@ -379,7 +379,7 @@ public class TaskCompletionSource_1<TResult extends IJCOBridgeReflected> extends
     /**
      * Invokes the .NET member TrySetFromTask.
      *
-     * @param completedTask the argument of type {@code Task_1}
+     * @param completedTask the argument of type {@code Task_1<TResult>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -399,7 +399,7 @@ public class TaskCompletionSource_1<TResult extends IJCOBridgeReflected> extends
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskCompletionSource-1.TrySetFromTask" target="_top">.NET documentation</a>
      */
-    public boolean TrySetFromTask(Task_1 completedTask) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.threading.tasks.TaskSchedulerException, system.NullReferenceException, system.threading.ThreadStateException, system.OperationCanceledException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException {
+    public boolean TrySetFromTask(Task_1<TResult> completedTask) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.threading.tasks.TaskSchedulerException, system.NullReferenceException, system.threading.ThreadStateException, system.OperationCanceledException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTrySetFromTask = null;
@@ -546,7 +546,7 @@ public class TaskCompletionSource_1<TResult extends IJCOBridgeReflected> extends
     /**
      * Invokes the .NET member SetFromTask.
      *
-     * @param completedTask the argument of type {@code Task_1}
+     * @param completedTask the argument of type {@code Task_1<TResult>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -563,7 +563,7 @@ public class TaskCompletionSource_1<TResult extends IJCOBridgeReflected> extends
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskCompletionSource-1.SetFromTask" target="_top">.NET documentation</a>
      */
-    public void SetFromTask(Task_1 completedTask) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.threading.tasks.TaskSchedulerException, system.threading.ThreadStateException, system.ObjectDisposedException, system.OperationCanceledException, system.IndexOutOfRangeException, system.NullReferenceException {
+    public void SetFromTask(Task_1<TResult> completedTask) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.threading.tasks.TaskSchedulerException, system.threading.ThreadStateException, system.ObjectDisposedException, system.OperationCanceledException, system.IndexOutOfRangeException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -609,7 +609,7 @@ public class TaskCompletionSource_1<TResult extends IJCOBridgeReflected> extends
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskCompletionSource-1.Task" target="_top">.NET documentation</a>
      */
-    public Task_1 getTask() throws Throwable {
+    public Task_1<TResult> getTask() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTask = null;

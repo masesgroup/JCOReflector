@@ -42,6 +42,7 @@ import system.collections.objectmodel.Collection_1;
 import system.windows.input.StylusPoint;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.windows.Point;
 import system.windows.input.StylusPointDescription;
 import system.windows.input.StylusPointCollection;
 import system.EventHandler;
@@ -203,7 +204,7 @@ public class StylusPointCollection extends system.collections.objectmodel.Collec
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param stylusPoints the argument of type {@code IEnumerable_1}
+     * @param stylusPoints the argument of type {@code IEnumerable_1<StylusPoint>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -215,7 +216,7 @@ public class StylusPointCollection extends system.collections.objectmodel.Collec
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.StylusPointCollection.-ctor" target="_top">.NET documentation</a>
      */
-    public StylusPointCollection(IEnumerable_1 stylusPoints) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException {
+    public StylusPointCollection(IEnumerable_1<StylusPoint> stylusPoints) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

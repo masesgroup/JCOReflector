@@ -185,7 +185,7 @@ public class ConcurrentBag_1<T extends IJCOBridgeReflected> extends NetObjectEnu
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param collection the argument of type {@code IEnumerable_1}
+     * @param collection the argument of type {@code IEnumerable_1<T>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -201,7 +201,7 @@ public class ConcurrentBag_1<T extends IJCOBridgeReflected> extends NetObjectEnu
      * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Concurrent.ConcurrentBag-1.-ctor" target="_top">.NET documentation</a>
      */
-    public ConcurrentBag_1(IEnumerable_1 collection) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.threading.LockRecursionException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException {
+    public ConcurrentBag_1(IEnumerable_1<T> collection) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.threading.LockRecursionException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

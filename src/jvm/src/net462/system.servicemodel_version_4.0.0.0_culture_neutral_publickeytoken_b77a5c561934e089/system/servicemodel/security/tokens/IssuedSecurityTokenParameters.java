@@ -41,8 +41,10 @@ import java.util.ArrayList;
 import system.servicemodel.security.tokens.SecurityTokenParameters;
 import system.servicemodel.EndpointAddress;
 import system.collections.objectmodel.Collection_1;
+import system.xml.XmlElement;
 import system.servicemodel.MessageSecurityVersion;
 import system.identitymodel.selectors.SecurityTokenSerializer;
+import system.servicemodel.security.tokens.ClaimTypeRequirement;
 import system.identitymodel.tokens.SecurityKeyType;
 
 
@@ -255,7 +257,7 @@ public class IssuedSecurityTokenParameters extends system.servicemodel.security.
      * @throws system.RankException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.CreateRequestParameters" target="_top">.NET documentation</a>
      */
-    public Collection_1 CreateRequestParameters(MessageSecurityVersion messageSecurityVersion, SecurityTokenSerializer securityTokenSerializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException, system.NullReferenceException, system.xml.XmlException, system.RankException {
+    public Collection_1<XmlElement> CreateRequestParameters(MessageSecurityVersion messageSecurityVersion, SecurityTokenSerializer securityTokenSerializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException, system.NullReferenceException, system.xml.XmlException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCreateRequestParameters = null;
@@ -398,7 +400,7 @@ public class IssuedSecurityTokenParameters extends system.servicemodel.security.
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.ClaimTypeRequirements" target="_top">.NET documentation</a>
      */
-    public Collection_1 getClaimTypeRequirements() throws Throwable {
+    public Collection_1<ClaimTypeRequirement> getClaimTypeRequirements() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectClaimTypeRequirements = null;
@@ -420,7 +422,7 @@ public class IssuedSecurityTokenParameters extends system.servicemodel.security.
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.AdditionalRequestParameters" target="_top">.NET documentation</a>
      */
-    public Collection_1 getAdditionalRequestParameters() throws Throwable {
+    public Collection_1<XmlElement> getAdditionalRequestParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAdditionalRequestParameters = null;

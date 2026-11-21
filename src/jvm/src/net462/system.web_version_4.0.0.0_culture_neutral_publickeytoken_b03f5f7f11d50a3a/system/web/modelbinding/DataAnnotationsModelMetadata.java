@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.web.modelbinding.ModelMetadata;
 import system.web.modelbinding.DataAnnotationsModelMetadataProvider;
 import system.Func_1;
+import system.Object;
 import system.componentmodel.dataannotations.DisplayColumnAttribute;
 
 
@@ -160,7 +161,7 @@ public class DataAnnotationsModelMetadata extends system.web.modelbinding.ModelM
      *
      * @param provider the argument of type {@code DataAnnotationsModelMetadataProvider}
      * @param containerType the argument of type {@code NetType}
-     * @param modelAccessor the argument of type {@code Func_1}
+     * @param modelAccessor the argument of type {@code Func_1<Object>}
      * @param modelType the argument of type {@code NetType}
      * @param propertyName the argument of type {@code java.lang.String}
      * @param displayColumnAttribute the argument of type {@code DisplayColumnAttribute}
@@ -171,7 +172,7 @@ public class DataAnnotationsModelMetadata extends system.web.modelbinding.ModelM
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.DataAnnotationsModelMetadata.-ctor" target="_top">.NET documentation</a>
      */
-    public DataAnnotationsModelMetadata(DataAnnotationsModelMetadataProvider provider, NetType containerType, Func_1 modelAccessor, NetType modelType, java.lang.String propertyName, DisplayColumnAttribute displayColumnAttribute) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException {
+    public DataAnnotationsModelMetadata(DataAnnotationsModelMetadataProvider provider, NetType containerType, Func_1<Object> modelAccessor, NetType modelType, java.lang.String propertyName, DisplayColumnAttribute displayColumnAttribute) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

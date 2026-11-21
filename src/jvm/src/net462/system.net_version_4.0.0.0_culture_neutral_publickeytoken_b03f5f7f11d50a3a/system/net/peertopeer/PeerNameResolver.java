@@ -41,6 +41,9 @@ import java.util.ArrayList;
 import system.net.peertopeer.PeerNameRecordCollection;
 import system.net.peertopeer.PeerName;
 import system.net.peertopeer.Cloud;
+import system.EventHandler_1;
+import system.net.peertopeer.ResolveCompletedEventArgs;
+import system.net.peertopeer.ResolveProgressChangedEventArgs;
 
 
 /**
@@ -599,6 +602,74 @@ public class PeerNameResolver extends NetObject  {
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addResolveCompleted.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ResolveCompletedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addResolveCompleted(EventHandler_1<ResolveCompletedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("ResolveCompleted", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeResolveCompleted.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ResolveCompletedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeResolveCompleted(EventHandler_1<ResolveCompletedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("ResolveCompleted", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addResolveProgressChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ResolveProgressChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addResolveProgressChanged(EventHandler_1<ResolveProgressChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("ResolveProgressChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeResolveProgressChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ResolveProgressChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeResolveProgressChanged(EventHandler_1<ResolveProgressChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("ResolveProgressChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

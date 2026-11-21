@@ -42,8 +42,10 @@ import system.workflow.componentmodel.DependencyObject;
 import system.workflow.componentmodel.Activity;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.workflow.runtime.CorrelationProperty;
 import system.workflow.componentmodel.IActivityEventListener_1;
 import system.workflow.componentmodel.IActivityEventListener_1Implementation;
+import system.workflow.runtime.CorrelationTokenEventArgs;
 
 
 /**
@@ -213,7 +215,7 @@ public class CorrelationToken extends system.workflow.componentmodel.DependencyO
      * Invokes the .NET member Initialize.
      *
      * @param activity the argument of type {@code Activity}
-     * @param propertyValues the argument of type {@code ICollection_1}
+     * @param propertyValues the argument of type {@code ICollection_1<CorrelationProperty>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -237,7 +239,7 @@ public class CorrelationToken extends system.workflow.componentmodel.DependencyO
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.CorrelationToken.Initialize" target="_top">.NET documentation</a>
      */
-    public void Initialize(Activity activity, ICollection_1 propertyValues) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.OverflowException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException {
+    public void Initialize(Activity activity, ICollection_1<CorrelationProperty> propertyValues) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.OverflowException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -251,7 +253,7 @@ public class CorrelationToken extends system.workflow.componentmodel.DependencyO
      * Invokes the .NET member SubscribeForCorrelationTokenInitializedEvent.
      *
      * @param activity the argument of type {@code Activity}
-     * @param dataChangeListener the argument of type {@code IActivityEventListener_1}
+     * @param dataChangeListener the argument of type {@code IActivityEventListener_1<CorrelationTokenEventArgs>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -262,7 +264,7 @@ public class CorrelationToken extends system.workflow.componentmodel.DependencyO
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.CorrelationToken.SubscribeForCorrelationTokenInitializedEvent" target="_top">.NET documentation</a>
      */
-    public void SubscribeForCorrelationTokenInitializedEvent(Activity activity, IActivityEventListener_1 dataChangeListener) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public void SubscribeForCorrelationTokenInitializedEvent(Activity activity, IActivityEventListener_1<CorrelationTokenEventArgs> dataChangeListener) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -276,7 +278,7 @@ public class CorrelationToken extends system.workflow.componentmodel.DependencyO
      * Invokes the .NET member UnsubscribeFromCorrelationTokenInitializedEvent.
      *
      * @param activity the argument of type {@code Activity}
-     * @param dataChangeListener the argument of type {@code IActivityEventListener_1}
+     * @param dataChangeListener the argument of type {@code IActivityEventListener_1<CorrelationTokenEventArgs>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -287,7 +289,7 @@ public class CorrelationToken extends system.workflow.componentmodel.DependencyO
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.CorrelationToken.UnsubscribeFromCorrelationTokenInitializedEvent" target="_top">.NET documentation</a>
      */
-    public void UnsubscribeFromCorrelationTokenInitializedEvent(Activity activity, IActivityEventListener_1 dataChangeListener) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public void UnsubscribeFromCorrelationTokenInitializedEvent(Activity activity, IActivityEventListener_1<CorrelationTokenEventArgs> dataChangeListener) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -351,7 +353,7 @@ public class CorrelationToken extends system.workflow.componentmodel.DependencyO
      * @throws system.MulticastNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.CorrelationToken.Properties" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getProperties() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
+    public ICollection_1<CorrelationProperty> getProperties() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectProperties = null;

@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.Nullable_1;
+import system.runtime.interopservices.PosixSignal;
 
 
 /**
@@ -157,11 +158,11 @@ public class ProcessExitStatus extends NetObject  {
      *
      * @param exitCode the argument of type {@code int}
      * @param canceled the argument of type {@code boolean}
-     * @param signal the argument of type {@code Nullable_1}
+     * @param signal the argument of type {@code Nullable_1<PosixSignal>}
      * @throws Throwable if the .NET constructor fails
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessExitStatus.-ctor" target="_top">.NET documentation</a>
      */
-    public ProcessExitStatus(int exitCode, boolean canceled, Nullable_1 signal) throws Throwable {
+    public ProcessExitStatus(int exitCode, boolean canceled, Nullable_1<PosixSignal> signal) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -255,7 +256,7 @@ public class ProcessExitStatus extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessExitStatus.Signal" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getSignal() throws Throwable {
+    public Nullable_1<PosixSignal> getSignal() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSignal = null;

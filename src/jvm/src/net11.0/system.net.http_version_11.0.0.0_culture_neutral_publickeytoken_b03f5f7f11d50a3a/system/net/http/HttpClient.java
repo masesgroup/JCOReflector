@@ -46,6 +46,7 @@ import system.net.http.HttpCompletionOption;
 import system.threading.CancellationToken;
 import system.threading.tasks.Task_1;
 import system.Uri;
+import system.io.Stream;
 import system.net.http.HttpContent;
 import system.net.http.headers.HttpRequestHeaders;
 import system.net.http.HttpVersionPolicy;
@@ -579,7 +580,7 @@ public class HttpClient extends system.net.http.HttpMessageInvoker  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpClient.GetStreamAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 GetStreamAsync(java.lang.String requestUri, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.net.http.HttpRequestException, system.threading.tasks.TaskSchedulerException, system.NullReferenceException {
+    public Task_1<Stream> GetStreamAsync(java.lang.String requestUri, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.net.http.HttpRequestException, system.threading.tasks.TaskSchedulerException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetStreamAsync = null;
@@ -618,7 +619,7 @@ public class HttpClient extends system.net.http.HttpMessageInvoker  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpClient.GetStreamAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 GetStreamAsync(java.lang.String requestUri) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException, system.OutOfMemoryException, system.net.http.HttpRequestException, system.threading.tasks.TaskSchedulerException, system.NullReferenceException {
+    public Task_1<Stream> GetStreamAsync(java.lang.String requestUri) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException, system.OutOfMemoryException, system.net.http.HttpRequestException, system.threading.tasks.TaskSchedulerException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetStreamAsync = null;
@@ -656,7 +657,7 @@ public class HttpClient extends system.net.http.HttpMessageInvoker  {
      * @throws system.net.http.HttpRequestException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpClient.GetStreamAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 GetStreamAsync(Uri requestUri, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.diagnostics.UnreachableException, system.UriFormatException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.threading.SynchronizationLockException, system.net.http.HttpRequestException {
+    public Task_1<Stream> GetStreamAsync(Uri requestUri, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.diagnostics.UnreachableException, system.UriFormatException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.threading.SynchronizationLockException, system.net.http.HttpRequestException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetStreamAsync = null;
@@ -694,7 +695,7 @@ public class HttpClient extends system.net.http.HttpMessageInvoker  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpClient.GetStreamAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 GetStreamAsync(Uri requestUri) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.UriFormatException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.diagnostics.tracing.EventSourceException, system.net.http.HttpRequestException, system.threading.tasks.TaskSchedulerException, system.NullReferenceException {
+    public Task_1<Stream> GetStreamAsync(Uri requestUri) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.UriFormatException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.diagnostics.tracing.EventSourceException, system.net.http.HttpRequestException, system.threading.tasks.TaskSchedulerException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetStreamAsync = null;
@@ -731,7 +732,7 @@ public class HttpClient extends system.net.http.HttpMessageInvoker  {
      * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpClient.DeleteAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 DeleteAsync(java.lang.String requestUri, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException, system.diagnostics.tracing.EventSourceException {
+    public Task_1<HttpResponseMessage> DeleteAsync(java.lang.String requestUri, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDeleteAsync = null;
@@ -766,7 +767,7 @@ public class HttpClient extends system.net.http.HttpMessageInvoker  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpClient.DeleteAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 DeleteAsync(java.lang.String requestUri) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException {
+    public Task_1<HttpResponseMessage> DeleteAsync(java.lang.String requestUri) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDeleteAsync = null;
@@ -802,7 +803,7 @@ public class HttpClient extends system.net.http.HttpMessageInvoker  {
      * @throws system.AggregateException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpClient.DeleteAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 DeleteAsync(Uri requestUri, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.diagnostics.UnreachableException, system.UriFormatException, system.diagnostics.tracing.EventSourceException, system.threading.tasks.TaskCanceledException, system.AggregateException {
+    public Task_1<HttpResponseMessage> DeleteAsync(Uri requestUri, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.diagnostics.UnreachableException, system.UriFormatException, system.diagnostics.tracing.EventSourceException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDeleteAsync = null;
@@ -835,7 +836,7 @@ public class HttpClient extends system.net.http.HttpMessageInvoker  {
      * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpClient.DeleteAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 DeleteAsync(Uri requestUri) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.UriFormatException, system.ArgumentOutOfRangeException, system.diagnostics.UnreachableException, system.diagnostics.tracing.EventSourceException {
+    public Task_1<HttpResponseMessage> DeleteAsync(Uri requestUri) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.UriFormatException, system.ArgumentOutOfRangeException, system.diagnostics.UnreachableException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDeleteAsync = null;
@@ -875,7 +876,7 @@ public class HttpClient extends system.net.http.HttpMessageInvoker  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpClient.GetAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 GetAsync(java.lang.String requestUri, HttpCompletionOption completionOption, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.NullReferenceException {
+    public Task_1<HttpResponseMessage> GetAsync(java.lang.String requestUri, HttpCompletionOption completionOption, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetAsync = null;
@@ -912,7 +913,7 @@ public class HttpClient extends system.net.http.HttpMessageInvoker  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpClient.GetAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 GetAsync(java.lang.String requestUri, HttpCompletionOption completionOption) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException, system.OutOfMemoryException {
+    public Task_1<HttpResponseMessage> GetAsync(java.lang.String requestUri, HttpCompletionOption completionOption) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetAsync = null;
@@ -949,7 +950,7 @@ public class HttpClient extends system.net.http.HttpMessageInvoker  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpClient.GetAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 GetAsync(java.lang.String requestUri, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException, system.OutOfMemoryException {
+    public Task_1<HttpResponseMessage> GetAsync(java.lang.String requestUri, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetAsync = null;
@@ -984,7 +985,7 @@ public class HttpClient extends system.net.http.HttpMessageInvoker  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpClient.GetAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 GetAsync(java.lang.String requestUri) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException {
+    public Task_1<HttpResponseMessage> GetAsync(java.lang.String requestUri) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetAsync = null;
@@ -1022,7 +1023,7 @@ public class HttpClient extends system.net.http.HttpMessageInvoker  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpClient.GetAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 GetAsync(Uri requestUri, HttpCompletionOption completionOption, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.UriFormatException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.threading.SynchronizationLockException, system.ArrayTypeMismatchException {
+    public Task_1<HttpResponseMessage> GetAsync(Uri requestUri, HttpCompletionOption completionOption, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.UriFormatException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.threading.SynchronizationLockException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetAsync = null;
@@ -1058,7 +1059,7 @@ public class HttpClient extends system.net.http.HttpMessageInvoker  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpClient.GetAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 GetAsync(Uri requestUri, HttpCompletionOption completionOption) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.UriFormatException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.ArrayTypeMismatchException, system.NullReferenceException {
+    public Task_1<HttpResponseMessage> GetAsync(Uri requestUri, HttpCompletionOption completionOption) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.UriFormatException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.ArrayTypeMismatchException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetAsync = null;
@@ -1094,7 +1095,7 @@ public class HttpClient extends system.net.http.HttpMessageInvoker  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpClient.GetAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 GetAsync(Uri requestUri, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.UriFormatException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.ArrayTypeMismatchException, system.NullReferenceException {
+    public Task_1<HttpResponseMessage> GetAsync(Uri requestUri, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.UriFormatException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.ArrayTypeMismatchException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetAsync = null;
@@ -1128,7 +1129,7 @@ public class HttpClient extends system.net.http.HttpMessageInvoker  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpClient.GetAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 GetAsync(Uri requestUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.UriFormatException, system.IndexOutOfRangeException {
+    public Task_1<HttpResponseMessage> GetAsync(Uri requestUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.UriFormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetAsync = null;
@@ -1167,7 +1168,7 @@ public class HttpClient extends system.net.http.HttpMessageInvoker  {
      * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpClient.PatchAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 PatchAsync(java.lang.String requestUri, HttpContent content, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+    public Task_1<HttpResponseMessage> PatchAsync(java.lang.String requestUri, HttpContent content, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPatchAsync = null;
@@ -1205,7 +1206,7 @@ public class HttpClient extends system.net.http.HttpMessageInvoker  {
      * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpClient.PatchAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 PatchAsync(java.lang.String requestUri, HttpContent content) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+    public Task_1<HttpResponseMessage> PatchAsync(java.lang.String requestUri, HttpContent content) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPatchAsync = null;
@@ -1243,7 +1244,7 @@ public class HttpClient extends system.net.http.HttpMessageInvoker  {
      * @throws system.AggregateException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpClient.PatchAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 PatchAsync(Uri requestUri, HttpContent content, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.diagnostics.UnreachableException, system.UriFormatException, system.threading.tasks.TaskCanceledException, system.AggregateException {
+    public Task_1<HttpResponseMessage> PatchAsync(Uri requestUri, HttpContent content, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.diagnostics.UnreachableException, system.UriFormatException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPatchAsync = null;
@@ -1278,7 +1279,7 @@ public class HttpClient extends system.net.http.HttpMessageInvoker  {
      * @throws system.diagnostics.UnreachableException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpClient.PatchAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 PatchAsync(Uri requestUri, HttpContent content) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.NotSupportedException, system.InvalidOperationException, system.UriFormatException, system.ArgumentOutOfRangeException, system.diagnostics.UnreachableException {
+    public Task_1<HttpResponseMessage> PatchAsync(Uri requestUri, HttpContent content) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.NotSupportedException, system.InvalidOperationException, system.UriFormatException, system.ArgumentOutOfRangeException, system.diagnostics.UnreachableException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPatchAsync = null;
@@ -1317,7 +1318,7 @@ public class HttpClient extends system.net.http.HttpMessageInvoker  {
      * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpClient.PostAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 PostAsync(java.lang.String requestUri, HttpContent content, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+    public Task_1<HttpResponseMessage> PostAsync(java.lang.String requestUri, HttpContent content, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPostAsync = null;
@@ -1355,7 +1356,7 @@ public class HttpClient extends system.net.http.HttpMessageInvoker  {
      * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpClient.PostAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 PostAsync(java.lang.String requestUri, HttpContent content) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+    public Task_1<HttpResponseMessage> PostAsync(java.lang.String requestUri, HttpContent content) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPostAsync = null;
@@ -1393,7 +1394,7 @@ public class HttpClient extends system.net.http.HttpMessageInvoker  {
      * @throws system.AggregateException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpClient.PostAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 PostAsync(Uri requestUri, HttpContent content, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.diagnostics.UnreachableException, system.UriFormatException, system.threading.tasks.TaskCanceledException, system.AggregateException {
+    public Task_1<HttpResponseMessage> PostAsync(Uri requestUri, HttpContent content, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.diagnostics.UnreachableException, system.UriFormatException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPostAsync = null;
@@ -1428,7 +1429,7 @@ public class HttpClient extends system.net.http.HttpMessageInvoker  {
      * @throws system.diagnostics.UnreachableException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpClient.PostAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 PostAsync(Uri requestUri, HttpContent content) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.NotSupportedException, system.InvalidOperationException, system.UriFormatException, system.ArgumentOutOfRangeException, system.diagnostics.UnreachableException {
+    public Task_1<HttpResponseMessage> PostAsync(Uri requestUri, HttpContent content) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.NotSupportedException, system.InvalidOperationException, system.UriFormatException, system.ArgumentOutOfRangeException, system.diagnostics.UnreachableException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPostAsync = null;
@@ -1467,7 +1468,7 @@ public class HttpClient extends system.net.http.HttpMessageInvoker  {
      * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpClient.PutAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 PutAsync(java.lang.String requestUri, HttpContent content, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+    public Task_1<HttpResponseMessage> PutAsync(java.lang.String requestUri, HttpContent content, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPutAsync = null;
@@ -1505,7 +1506,7 @@ public class HttpClient extends system.net.http.HttpMessageInvoker  {
      * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpClient.PutAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 PutAsync(java.lang.String requestUri, HttpContent content) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+    public Task_1<HttpResponseMessage> PutAsync(java.lang.String requestUri, HttpContent content) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.ObjectDisposedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPutAsync = null;
@@ -1543,7 +1544,7 @@ public class HttpClient extends system.net.http.HttpMessageInvoker  {
      * @throws system.AggregateException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpClient.PutAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 PutAsync(Uri requestUri, HttpContent content, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.diagnostics.UnreachableException, system.UriFormatException, system.threading.tasks.TaskCanceledException, system.AggregateException {
+    public Task_1<HttpResponseMessage> PutAsync(Uri requestUri, HttpContent content, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.diagnostics.UnreachableException, system.UriFormatException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPutAsync = null;
@@ -1578,7 +1579,7 @@ public class HttpClient extends system.net.http.HttpMessageInvoker  {
      * @throws system.diagnostics.UnreachableException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpClient.PutAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 PutAsync(Uri requestUri, HttpContent content) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.NotSupportedException, system.InvalidOperationException, system.UriFormatException, system.ArgumentOutOfRangeException, system.diagnostics.UnreachableException {
+    public Task_1<HttpResponseMessage> PutAsync(Uri requestUri, HttpContent content) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.NotSupportedException, system.InvalidOperationException, system.UriFormatException, system.ArgumentOutOfRangeException, system.diagnostics.UnreachableException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPutAsync = null;
@@ -1618,7 +1619,7 @@ public class HttpClient extends system.net.http.HttpMessageInvoker  {
      * @throws system.AggregateException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpClient.SendAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 SendAsync(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.UriFormatException, system.OutOfMemoryException, system.threading.LockRecursionException, system.AggregateException {
+    public Task_1<HttpResponseMessage> SendAsync(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.UriFormatException, system.OutOfMemoryException, system.threading.LockRecursionException, system.AggregateException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSendAsync = null;
@@ -1655,7 +1656,7 @@ public class HttpClient extends system.net.http.HttpMessageInvoker  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpClient.SendAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 SendAsync(HttpRequestMessage request, HttpCompletionOption completionOption) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.UriFormatException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.threading.SynchronizationLockException, system.ArrayTypeMismatchException {
+    public Task_1<HttpResponseMessage> SendAsync(HttpRequestMessage request, HttpCompletionOption completionOption) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.UriFormatException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.threading.SynchronizationLockException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSendAsync = null;
@@ -1692,7 +1693,7 @@ public class HttpClient extends system.net.http.HttpMessageInvoker  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpClient.SendAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 SendAsync(HttpRequestMessage request, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.UriFormatException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.threading.SynchronizationLockException, system.ArrayTypeMismatchException {
+    public Task_1<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.UriFormatException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.threading.SynchronizationLockException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSendAsync = null;
@@ -1728,7 +1729,7 @@ public class HttpClient extends system.net.http.HttpMessageInvoker  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpClient.SendAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 SendAsync(HttpRequestMessage request) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.UriFormatException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.threading.SynchronizationLockException, system.ArrayTypeMismatchException {
+    public Task_1<HttpResponseMessage> SendAsync(HttpRequestMessage request) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.UriFormatException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.diagnostics.UnreachableException, system.threading.SynchronizationLockException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSendAsync = null;

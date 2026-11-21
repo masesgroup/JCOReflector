@@ -312,7 +312,7 @@ public class WindowsClaimSet extends system.identitymodel.claims.ClaimSet implem
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Claims.WindowsClaimSet.FindClaims" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 FindClaims(java.lang.String claimType, java.lang.String right) throws Throwable {
+    public IEnumerable_1<Claim> FindClaims(java.lang.String claimType, java.lang.String right) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFindClaims = null;

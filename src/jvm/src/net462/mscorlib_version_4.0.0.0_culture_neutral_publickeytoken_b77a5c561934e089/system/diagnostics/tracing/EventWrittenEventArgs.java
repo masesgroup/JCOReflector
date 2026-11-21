@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.EventArgs;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.Object;
 import system.diagnostics.tracing.EventChannel;
 import system.diagnostics.tracing.EventKeywords;
 import system.diagnostics.tracing.EventLevel;
@@ -288,7 +289,7 @@ public class EventWrittenEventArgs extends system.EventArgs  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventWrittenEventArgs.Payload" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getPayload() throws Throwable {
+    public ReadOnlyCollection_1<Object> getPayload() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPayload = null;
@@ -310,7 +311,7 @@ public class EventWrittenEventArgs extends system.EventArgs  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Tracing.EventWrittenEventArgs.Payload" target="_top">.NET documentation</a>
      */
-    public void setPayload(ReadOnlyCollection_1 Payload) throws Throwable {
+    public void setPayload(ReadOnlyCollection_1<Object> Payload) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.Uri;
 import system.threading.tasks.Task_1;
+import system.Object;
 import system.net.ICredentials;
 import system.net.ICredentialsImplementation;
 
@@ -218,7 +219,7 @@ public class XmlResolver extends NetObject  {
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlResolver.GetEntityAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 GetEntityAsync(Uri absoluteUri, java.lang.String role, NetType ofObjectToReturn) throws Throwable, system.NotImplementedException {
+    public Task_1<Object> GetEntityAsync(Uri absoluteUri, java.lang.String role, NetType ofObjectToReturn) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetEntityAsync = null;

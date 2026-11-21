@@ -172,13 +172,13 @@ public class ActivityDesignerGlyphCollection extends system.collections.generic.
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param glyphs the argument of type {@code IEnumerable_1}
+     * @param glyphs the argument of type {@code IEnumerable_1<DesignerGlyph>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDesignerGlyphCollection.-ctor" target="_top">.NET documentation</a>
      */
-    public ActivityDesignerGlyphCollection(IEnumerable_1 glyphs) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public ActivityDesignerGlyphCollection(IEnumerable_1<DesignerGlyph> glyphs) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

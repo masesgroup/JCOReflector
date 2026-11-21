@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.security.claims.ClaimsIdentity;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.security.claims.Claim;
 
 
 /**
@@ -161,12 +162,12 @@ public class DynamicRoleClaimProvider extends NetObject  {
      * Invokes the .NET member AddDynamicRoleClaims.
      *
      * @param claimsIdentity the argument of type {@code ClaimsIdentity}
-     * @param claims the argument of type {@code IEnumerable_1}
+     * @param claims the argument of type {@code IEnumerable_1<Claim>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.DynamicRoleClaimProvider.AddDynamicRoleClaims" target="_top">.NET documentation</a>
      */
-    public static void AddDynamicRoleClaims(ClaimsIdentity claimsIdentity, IEnumerable_1 claims) throws Throwable, system.NotSupportedException {
+    public static void AddDynamicRoleClaims(ClaimsIdentity claimsIdentity, IEnumerable_1<Claim> claims) throws Throwable, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

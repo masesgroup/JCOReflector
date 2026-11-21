@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.activities.Activity;
 import system.collections.objectmodel.Collection_1;
+import system.servicemodel.activities.CorrelationInitializer;
 import system.servicemodel.activities.ReceiveContent;
 import system.servicemodel.activities.Send;
 
@@ -189,7 +190,7 @@ public class ReceiveReply extends system.activities.Activity  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.ReceiveReply.CorrelationInitializers" target="_top">.NET documentation</a>
      */
-    public Collection_1 getCorrelationInitializers() throws Throwable {
+    public Collection_1<CorrelationInitializer> getCorrelationInitializers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCorrelationInitializers = null;

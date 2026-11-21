@@ -231,7 +231,7 @@ public class ReadOnlySequenceSegment_1<T extends IJCOBridgeReflected> extends Ne
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.ReadOnlySequenceSegment-1.Next" target="_top">.NET documentation</a>
      */
-    public ReadOnlySequenceSegment_1 getNext() throws Throwable {
+    public ReadOnlySequenceSegment_1<T> getNext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectNext = null;
@@ -253,7 +253,7 @@ public class ReadOnlySequenceSegment_1<T extends IJCOBridgeReflected> extends Ne
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.ReadOnlySequenceSegment-1.Next" target="_top">.NET documentation</a>
      */
-    public void setNext(ReadOnlySequenceSegment_1 Next) throws Throwable {
+    public void setNext(ReadOnlySequenceSegment_1<T> Next) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -270,7 +270,7 @@ public class ReadOnlySequenceSegment_1<T extends IJCOBridgeReflected> extends Ne
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.ReadOnlySequenceSegment-1.Memory" target="_top">.NET documentation</a>
      */
-    public ReadOnlyMemory_1 getMemory() throws Throwable {
+    public ReadOnlyMemory_1<T> getMemory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectMemory = null;
@@ -292,7 +292,7 @@ public class ReadOnlySequenceSegment_1<T extends IJCOBridgeReflected> extends Ne
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.ReadOnlySequenceSegment-1.Memory" target="_top">.NET documentation</a>
      */
-    public void setMemory(ReadOnlyMemory_1 Memory) throws Throwable {
+    public void setMemory(ReadOnlyMemory_1<T> Memory) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

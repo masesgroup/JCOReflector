@@ -41,8 +41,10 @@ import java.util.ArrayList;
 import system.componentmodel.dataannotations.ValidationContext;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.componentmodel.dataannotations.ValidationResult;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.componentmodel.dataannotations.ValidationAttribute;
 
 
 /**
@@ -164,7 +166,7 @@ public class Validator extends NetObject  {
      *
      * @param instance the argument of type {@code NetObject}
      * @param validationContext the argument of type {@code ValidationContext}
-     * @param validationResults the argument of type {@code ICollection_1}
+     * @param validationResults the argument of type {@code ICollection_1<ValidationResult>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -181,7 +183,7 @@ public class Validator extends NetObject  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.Validator.TryValidateObject" target="_top">.NET documentation</a>
      */
-    public static boolean TryValidateObject(NetObject instance, ValidationContext validationContext, ICollection_1 validationResults) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException {
+    public static boolean TryValidateObject(NetObject instance, ValidationContext validationContext, ICollection_1<ValidationResult> validationResults) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryValidateObject = null;
@@ -200,7 +202,7 @@ public class Validator extends NetObject  {
      *
      * @param instance the argument of type {@code NetObject}
      * @param validationContext the argument of type {@code ValidationContext}
-     * @param validationResults the argument of type {@code ICollection_1}
+     * @param validationResults the argument of type {@code ICollection_1<ValidationResult>}
      * @param validateAllProperties the argument of type {@code boolean}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -222,7 +224,7 @@ public class Validator extends NetObject  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.Validator.TryValidateObject" target="_top">.NET documentation</a>
      */
-    public static boolean TryValidateObject(NetObject instance, ValidationContext validationContext, ICollection_1 validationResults, boolean validateAllProperties) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.RankException, system.NullReferenceException {
+    public static boolean TryValidateObject(NetObject instance, ValidationContext validationContext, ICollection_1<ValidationResult> validationResults, boolean validateAllProperties) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.RankException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryValidateObject = null;
@@ -241,7 +243,7 @@ public class Validator extends NetObject  {
      *
      * @param value the argument of type {@code NetObject}
      * @param validationContext the argument of type {@code ValidationContext}
-     * @param validationResults the argument of type {@code ICollection_1}
+     * @param validationResults the argument of type {@code ICollection_1<ValidationResult>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -257,7 +259,7 @@ public class Validator extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.Validator.TryValidateProperty" target="_top">.NET documentation</a>
      */
-    public static boolean TryValidateProperty(NetObject value, ValidationContext validationContext, ICollection_1 validationResults) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NotSupportedException {
+    public static boolean TryValidateProperty(NetObject value, ValidationContext validationContext, ICollection_1<ValidationResult> validationResults) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryValidateProperty = null;
@@ -276,8 +278,8 @@ public class Validator extends NetObject  {
      *
      * @param value the argument of type {@code NetObject}
      * @param validationContext the argument of type {@code ValidationContext}
-     * @param validationResults the argument of type {@code ICollection_1}
-     * @param validationAttributes the argument of type {@code IEnumerable_1}
+     * @param validationResults the argument of type {@code ICollection_1<ValidationResult>}
+     * @param validationAttributes the argument of type {@code IEnumerable_1<ValidationAttribute>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -289,7 +291,7 @@ public class Validator extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.Validator.TryValidateValue" target="_top">.NET documentation</a>
      */
-    public static boolean TryValidateValue(NetObject value, ValidationContext validationContext, ICollection_1 validationResults, IEnumerable_1 validationAttributes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static boolean TryValidateValue(NetObject value, ValidationContext validationContext, ICollection_1<ValidationResult> validationResults, IEnumerable_1<ValidationAttribute> validationAttributes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTryValidateValue = null;
@@ -405,7 +407,7 @@ public class Validator extends NetObject  {
      *
      * @param value the argument of type {@code NetObject}
      * @param validationContext the argument of type {@code ValidationContext}
-     * @param validationAttributes the argument of type {@code IEnumerable_1}
+     * @param validationAttributes the argument of type {@code IEnumerable_1<ValidationAttribute>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -417,7 +419,7 @@ public class Validator extends NetObject  {
      * @throws system.componentmodel.dataannotations.ValidationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.Validator.ValidateValue" target="_top">.NET documentation</a>
      */
-    public static void ValidateValue(NetObject value, ValidationContext validationContext, IEnumerable_1 validationAttributes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.dataannotations.ValidationException {
+    public static void ValidateValue(NetObject value, ValidationContext validationContext, IEnumerable_1<ValidationAttribute> validationAttributes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.dataannotations.ValidationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

@@ -42,7 +42,9 @@ import system.servicemodel.description.MetadataSet;
 import system.servicemodel.description.ContractDescription;
 import system.servicemodel.description.ServiceEndpoint;
 import system.collections.generic.Dictionary_2;
+import system.Object;
 import system.collections.objectmodel.Collection_1;
+import system.servicemodel.description.MetadataConversionError;
 import system.servicemodel.description.PolicyVersion;
 
 
@@ -227,7 +229,7 @@ public class MetadataExporter extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataExporter.State" target="_top">.NET documentation</a>
      */
-    public Dictionary_2 getState() throws Throwable {
+    public Dictionary_2<Object, Object> getState() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectState = null;
@@ -249,7 +251,7 @@ public class MetadataExporter extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataExporter.Errors" target="_top">.NET documentation</a>
      */
-    public Collection_1 getErrors() throws Throwable {
+    public Collection_1<MetadataConversionError> getErrors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectErrors = null;

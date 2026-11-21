@@ -44,7 +44,9 @@ import system.IDisposableImplementation;
 import system.collections.IComparer;
 import system.collections.IComparerImplementation;
 import system.collections.objectmodel.ObservableCollection_1;
+import system.componentmodel.GroupDescription;
 import system.collections.objectmodel.ReadOnlyObservableCollection_1;
+import system.Object;
 import system.componentmodel.SortDescriptionCollection;
 import system.globalization.CultureInfo;
 import system.Predicate_1;
@@ -966,7 +968,7 @@ public class CollectionView extends system.windows.threading.DispatcherObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.CollectionView.GroupDescriptions" target="_top">.NET documentation</a>
      */
-    public ObservableCollection_1 getGroupDescriptions() throws Throwable {
+    public ObservableCollection_1<GroupDescription> getGroupDescriptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGroupDescriptions = null;
@@ -988,7 +990,7 @@ public class CollectionView extends system.windows.threading.DispatcherObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.CollectionView.Groups" target="_top">.NET documentation</a>
      */
-    public ReadOnlyObservableCollection_1 getGroups() throws Throwable {
+    public ReadOnlyObservableCollection_1<Object> getGroups() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGroups = null;
@@ -1125,15 +1127,15 @@ public class CollectionView extends system.windows.threading.DispatcherObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.CollectionView.Filter" target="_top">.NET documentation</a>
      */
-    public Predicate_1 getFilter() throws Throwable {
+    public Predicate_1<Object> getFilter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFilter = null;
         try {
             retObjectFilter = classInstance.Get("Filter");
-            return (Predicate_1)retObjectFilter;
+            return (Predicate_1<Object>)retObjectFilter;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Predicate_1", retObjectFilter != null ? retObjectFilter.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Predicate_1<Object>", retObjectFilter != null ? retObjectFilter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1156,7 +1158,7 @@ public class CollectionView extends system.windows.threading.DispatcherObject  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.CollectionView.Filter" target="_top">.NET documentation</a>
      */
-    public void setFilter(Predicate_1 Filter) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NullReferenceException {
+    public void setFilter(Predicate_1<Object> Filter) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

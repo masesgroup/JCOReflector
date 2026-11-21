@@ -47,6 +47,10 @@ import system.reflection.portableexecutable.DebugDirectoryBuilder;
 import system.reflection.metadata.MethodDefinitionHandle;
 import system.reflection.portableexecutable.CorFlags;
 import system.Func_2;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.reflection.metadata.Blob;
+import system.reflection.metadata.BlobContentId;
 
 
 /**
@@ -173,7 +177,7 @@ public class ManagedPEBuilder extends system.reflection.portableexecutable.PEBui
      * @param strongNameSignatureSize the argument of type {@code int}
      * @param entryPoint the argument of type {@code MethodDefinitionHandle}
      * @param flags the argument of type {@code CorFlags}
-     * @param deterministicIdProvider the argument of type {@code Func_2}
+     * @param deterministicIdProvider the argument of type {@code Func_2<IEnumerable_1<Blob>, BlobContentId>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -187,7 +191,7 @@ public class ManagedPEBuilder extends system.reflection.portableexecutable.PEBui
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.ManagedPEBuilder.-ctor" target="_top">.NET documentation</a>
      */
-    public ManagedPEBuilder(PEHeaderBuilder header, MetadataRootBuilder metadataRootBuilder, BlobBuilder ilStream, BlobBuilder mappedFieldData, BlobBuilder managedResources, ResourceSectionBuilder nativeResources, DebugDirectoryBuilder debugDirectoryBuilder, int strongNameSignatureSize, MethodDefinitionHandle entryPoint, CorFlags flags, Func_2 deterministicIdProvider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
+    public ManagedPEBuilder(PEHeaderBuilder header, MetadataRootBuilder metadataRootBuilder, BlobBuilder ilStream, BlobBuilder mappedFieldData, BlobBuilder managedResources, ResourceSectionBuilder nativeResources, DebugDirectoryBuilder debugDirectoryBuilder, int strongNameSignatureSize, MethodDefinitionHandle entryPoint, CorFlags flags, Func_2<IEnumerable_1<Blob>, BlobContentId> deterministicIdProvider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

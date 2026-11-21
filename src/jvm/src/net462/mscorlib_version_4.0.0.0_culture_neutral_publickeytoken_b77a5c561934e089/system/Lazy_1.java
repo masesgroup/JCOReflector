@@ -192,13 +192,13 @@ public class Lazy_1<T extends IJCOBridgeReflected> extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param valueFactory the argument of type {@code Func_1}
+     * @param valueFactory the argument of type {@code Func_1<T>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Lazy-1.-ctor" target="_top">.NET documentation</a>
      */
-    public Lazy_1(Func_1 valueFactory) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public Lazy_1(Func_1<T> valueFactory) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -213,14 +213,14 @@ public class Lazy_1<T extends IJCOBridgeReflected> extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param valueFactory the argument of type {@code Func_1}
+     * @param valueFactory the argument of type {@code Func_1<T>}
      * @param isThreadSafe the argument of type {@code boolean}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Lazy-1.-ctor" target="_top">.NET documentation</a>
      */
-    public Lazy_1(Func_1 valueFactory, boolean isThreadSafe) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public Lazy_1(Func_1<T> valueFactory, boolean isThreadSafe) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -235,14 +235,14 @@ public class Lazy_1<T extends IJCOBridgeReflected> extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param valueFactory the argument of type {@code Func_1}
+     * @param valueFactory the argument of type {@code Func_1<T>}
      * @param mode the argument of type {@code LazyThreadSafetyMode}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Lazy-1.-ctor" target="_top">.NET documentation</a>
      */
-    public Lazy_1(Func_1 valueFactory, LazyThreadSafetyMode mode) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public Lazy_1(Func_1<T> valueFactory, LazyThreadSafetyMode mode) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

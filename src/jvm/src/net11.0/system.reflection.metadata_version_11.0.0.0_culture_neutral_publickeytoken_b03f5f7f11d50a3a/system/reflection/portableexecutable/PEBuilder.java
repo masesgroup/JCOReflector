@@ -41,6 +41,9 @@ import java.util.ArrayList;
 import system.reflection.metadata.BlobContentId;
 import system.reflection.metadata.BlobBuilder;
 import system.Func_2;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.reflection.metadata.Blob;
 import system.reflection.portableexecutable.PEHeaderBuilder;
 
 
@@ -229,15 +232,15 @@ public class PEBuilder extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEBuilder.IdProvider" target="_top">.NET documentation</a>
      */
-    public Func_2 getIdProvider() throws Throwable {
+    public Func_2<IEnumerable_1<Blob>, BlobContentId> getIdProvider() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIdProvider = null;
         try {
             retObjectIdProvider = classInstance.Get("IdProvider");
-            return (Func_2)retObjectIdProvider;
+            return (Func_2<IEnumerable_1<Blob>, BlobContentId>)retObjectIdProvider;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2", retObjectIdProvider != null ? retObjectIdProvider.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2<IEnumerable_1<Blob>, BlobContentId>", retObjectIdProvider != null ? retObjectIdProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

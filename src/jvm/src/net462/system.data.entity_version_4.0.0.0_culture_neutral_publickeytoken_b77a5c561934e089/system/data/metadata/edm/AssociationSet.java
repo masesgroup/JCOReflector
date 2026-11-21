@@ -42,6 +42,7 @@ import system.data.metadata.edm.RelationshipSet;
 import system.data.metadata.edm.AssociationType;
 import system.data.metadata.edm.BuiltInTypeKind;
 import system.data.metadata.edm.ReadOnlyMetadataCollection_1;
+import system.data.metadata.edm.AssociationSetEnd;
 
 
 /**
@@ -193,7 +194,7 @@ public class AssociationSet extends system.data.metadata.edm.RelationshipSet  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.AssociationSet.AssociationSetEnds" target="_top">.NET documentation</a>
      */
-    public ReadOnlyMetadataCollection_1 getAssociationSetEnds() throws Throwable {
+    public ReadOnlyMetadataCollection_1<AssociationSetEnd> getAssociationSetEnds() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAssociationSetEnds = null;

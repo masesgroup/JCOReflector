@@ -108,6 +108,18 @@ namespace MASES.JCOReflector.Engine
             return !ContainsMethodLevelGenericParameter(t);
         }
 
+        // Same reasoning as DeclaresSameNameAndArityInBaseClass, for properties: a derived setter taking
+        // ICollection_1<T> would not override a base setter taking the raw ICollection_1 (name clash).
+        static bool DeclaresSamePropertyInBaseClass(Type type, string propertyName)
+        {
+            for (var b = type.BaseType; b != null && b != typeof(object); b = b.BaseType)
+            {
+                if (b.GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly)
+                     .Any(p => p.Name == propertyName)) return true;
+            }
+            return false;
+        }
+
         static bool ContainsArrayTypeArgument(Type t)
         {
             if (t == null) return false;

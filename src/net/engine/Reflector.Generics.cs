@@ -93,7 +93,7 @@ namespace MASES.JCOReflector.Engine
         // arguments reference generic parameters in scope and that can be rendered as a parameterized
         // Java type in a member signature. Method-level parameters are excluded: they need the method's
         // own <T> declaration, which is handled by the dedicated method-generic paths.
-        static bool IsResolvableConstructedGeneric(Type t, bool allowClosed = false)
+        static bool IsResolvableConstructedGeneric(Type t, bool allowClosed = true)
         {
             if (!EnableGenerics) return false;
             if (t.IsByRef || t.IsArray || t.IsPointer) return false;
@@ -109,7 +109,26 @@ namespace MASES.JCOReflector.Engine
             // (Func<Task[],TResult>, Predicate<T[]>, ITargetBlock<T[]>...).
             if (ContainsArrayTypeArgument(t)) return false;
             if (ViolatesReflectedBound(t)) return false;
+            if (!AreTypeArgumentsExportable(t)) return false;
             return !ContainsMethodLevelGenericParameter(t);
+        }
+
+        // Every type argument that is not a generic parameter must be a class the generator really emits:
+        // managed (public, not a ref struct...), not nested and, if itself generic, recursively the same.
+        // Otherwise the parameterized name would cite a Java class that does not exist.
+        static bool AreTypeArgumentsExportable(Type t)
+        {
+            foreach (var arg in t.GetGenericArguments())
+            {
+                if (arg.IsGenericParameter) continue;
+                if (arg.IsNested) return false;
+                // Exceptions are generated as Java Throwables (System.Exception has no system.Exception class):
+                // they do not satisfy the IJCOBridgeReflected bound of a type parameter.
+                if (typeof(Exception).IsAssignableFrom(arg)) return false;
+                if (!arg.IsManagedType(0, 2)) return false;
+                if (arg.IsGenericType && !AreTypeArgumentsExportable(arg)) return false;
+            }
+            return true;
         }
 
         // Same reasoning as DeclaresSameNameAndArityInBaseClass, for properties: a derived setter taking
@@ -155,6 +174,17 @@ namespace MASES.JCOReflector.Engine
             {
                 if (b.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly)
                      .Any(m => m.Name == methodName && m.GetParameters().Length == paramCount)) return true;
+            }
+            // A type that implements the SAME generic interface more than once with different type arguments
+            // (AspNetMemoryMonitor: IObservable<RecycleLimitInfo> and IObservable<LowPhysicalMemoryInfo>) is
+            // exported by Java as one of them only: the members of that interface keep the raw parameter.
+            // Any other interface method is declared parameterized by the interface itself, and the
+            // implementing type or its "...Implementation" class must declare it the same way.
+            foreach (var group in type.GetInterfaces().Where(i => i.IsGenericType).GroupBy(i => i.GetGenericTypeDefinition()))
+            {
+                if (group.Count() < 2) continue;
+                if (group.Key.GetMethods(BindingFlags.Public | BindingFlags.Instance)
+                         .Any(m => m.Name == methodName && m.GetParameters().Length == paramCount)) return true;
             }
             return false;
         }

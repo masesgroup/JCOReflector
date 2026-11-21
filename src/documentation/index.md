@@ -58,7 +58,7 @@ Looking for expertise in applications mixing .NET and JVM™-enabled languages? 
 - [Why JCOReflector?](#why-jcoreflector): calling .NET libraries from any Java version, Java 8 included.
 - [History of the project](#history-of-the-project): how the project started and evolved.
 - [Simple example](#simple-example): a basic example in Java, Scala and Kotlin.
-- [Current state](#current-state): what the reflector implements and its limitations, including the experimental [generics support](#generics-support-experimental) with a worked example.
+- [Current state](#current-state): what the reflector implements and its limitations, including the [generics support](#generics-support) with a worked example.
 - [Java 8 Integration Use Cases](#java-8-integration-use-cases): machine learning, Azure and PDF processing from legacy Java.
 - [How to use the generator tool](#how-to-use-the-generator-tool-jcoreflector): building the reflection tool.
 - [Reflected Assemblies](#reflected-assemblies): the reflected classes and their coverage statistics.
@@ -243,7 +243,7 @@ The reflector executables, available for both Framework and CoreCLR, is limited 
 - Unsafe methods
 - Fields
 
-### Generics support (experimental)
+### Generics support
 
 .NET generic types and members (classes, interfaces, delegates) can optionally be reflected into parameterized Java generics, instead of being discarded as before. The feature is opt-in and has known limitations driven by real differences between .NET's reified generics and Java's type erasure (some .NET generic APIs — `ref struct`s, "generic math" interfaces, method-level type parameters — have no representable Java equivalent and are intentionally skipped). See [Generics support](articles/generics.md) for the full picture.
 
@@ -289,9 +289,6 @@ if (calls.get() == 0) throw new AssertionError("Scala comparison never invoked")
 ```
 
 In Clojure, where the anonymous subclass cannot be declared, a small helper generates it at runtime: see [Using generics from Clojure](articles/generics.md#using-generics-from-clojure).
-
-> [!NOTE]
-> Some generic scenarios, such as passing a `Comparison<T>` delegate to `List<T>.Sort` like in this example, require JCOBridge 2.6.10 preview 4 or later.
 
 ### Limitations
 

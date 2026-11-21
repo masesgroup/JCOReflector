@@ -9,7 +9,7 @@
   <packaging>pom</packaging>
 
   <properties>
-    <clojure.version>1.12.6</clojure.version>
+    <clojure.version>1.12.7</clojure.version>
   </properties>
 
   <dependencies>

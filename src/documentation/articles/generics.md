@@ -8,9 +8,6 @@ _description: Current state of .NET generics support in JCOReflector — what is
 > [!WARNING]
 > Support for .NET generic types and members is **experimental**. It is controlled by an engine-level `EnableGenerics` switch. Enabling it changes the shape of the generated Java code (see [Impact on non-generic output](#impact-on-non-generic-output) below) and is not yet recommended for production reflection runs. This page documents the current state as of this writing and will be updated as the feature matures.
 
-> [!NOTE]
-> Some generic scenarios depend on the JCOBridge runtime version. For example, passing a `Comparison<T>` delegate to `List<T>.Sort` requires JCOBridge 2.6.10 preview 4 or later.
-
 ## Why generics needed dedicated work
 
 Before this feature, JCOReflector discarded every .NET generic type and member during reflection: a generic class, interface, delegate, or method was simply not reflected. This kept the generated Java code simple, but excluded a large and important part of the .NET surface — collections (`List<T>`, `Dictionary<TKey,TValue>`), `Task<TResult>`, LINQ, and most modern .NET APIs are generic.
@@ -43,7 +40,34 @@ Every type parameter is declared as `<T extends IJCOBridgeReflected>`. This is n
 
 A reflected class is always a valid type argument, so the native-mapped .NET primitives can be used through their wrapper classes. The wrappers of the primitives mapped onto Java types are hand-written classes (`system.Boolean`, `system.Byte`, `system.Double`, `system.Float`, `system.Int16`, `system.Int32` and `system.Int64`), and a .NET value type that has no Java equivalent, such as `UInt32`, is generated like any other class. For example `List_1<system.Int32>` and `Dictionary_2<UInt32, UInt32>` are valid, and the CLR compares the keys by value, not by wrapper (see the [native types example](#example-native-types-with-generics) below). `System.String` is mapped onto `java.lang.String` and has no wrapper class, so it cannot be a type argument.
 
-When a .NET type fixes one of its own base type's parameters to such a type — the most common real-world case is `KeyedCollection<string, TItem>`, i.e. any "keyed by name" collection — the affected `extends`/`implements` reference is generated **raw** (unparameterized) instead of failing to compile. This is the same trade-off already accepted elsewhere (see below): the class remains usable, but loses compile-time type-safety on that specific reference.
+When a .NET type fixes one of its own base type's parameters to such a type — the most common real-world case is `KeyedCollection<string, TItem>`, i.e. any "keyed by name" collection — the affected `extends`/`implements` reference is generated **raw** (unparameterized) instead of failing to compile. This is the same trade-off already accepted elsewhere (see below): the class remains usable, but loses compile-time type-safety on that specific reference. The same rule applies to the type arguments of a generic type used in a member signature, see [Constructed generic types in member signatures](#constructed-generic-types-in-member-signatures).
+
+## Constructed generic types in member signatures
+
+A member signature can mention a generic type built from the type parameters in scope, or from reflected classes: `List<T>.AddRange(IEnumerable<T>)`, `List<T>.GetRange` (which returns `List<T>`), `IDictionary<TKey,TValue>.Keys` (an `ICollection<TKey>`), the `ConcurrentDictionary<TKey,TValue>` constructor taking an `IEnumerable<KeyValuePair<TKey,TValue>>`, or `Assembly.DefinedTypes` (an `IEnumerable<TypeInfo>`). The generated Java signature keeps the type arguments, recursively, for example `IEnumerable_1<KeyValuePair_2<TKey, TValue>>`, instead of the raw `IEnumerable_1`. This applies to:
+
+- the parameters and the return type of methods;
+- the parameters of constructors;
+- properties, for both the getter and the setter;
+- **events whose handler is a generic delegate**, either open on a class-level type parameter (`Progress<T>.ProgressChanged` is an `EventHandler<T>`) or closed (`AppDomain.FirstChanceException` is an `EventHandler<FirstChanceExceptionEventArgs>`). Events with a generic handler used to be dropped altogether, only non-generic delegate types were accepted: now `addProgressChanged` and `removeProgressChanged` are generated and take an `EventHandler_1<T>`.
+
+Only the declared type is parameterized. The instance that wraps a returned object is still created from the raw class name (for example `new ICollection_1Implementation(val)`), so the assignment is an unchecked conversion and javac reports a warning, not an error.
+
+A member declared by a generic base interface is declared in the same way by the interface itself and by the `...Implementation` class of a derived interface: otherwise the two would clash after erasure as soon as another parameter of the member is a type variable.
+
+### When the type stays raw
+
+The following cases keep the raw type, exactly as before, because a parameterized type would not compile or would not override the member it has to override:
+
+- A type argument that does not satisfy the `IJCOBridgeReflected` bound: `String` and the native primitives, as in `List<string>` (see [Bound limitations](#bound-limitations)).
+- An **array** used as a type argument, for example `Func<Task[],TResult>` or `Predicate<T[]>`.
+- A **nested** type, or a type argument that is a nested type (`ConditionalWeakTable<TKey,TValue>.CreateValueCallback`): nested types are not generated as classes of their own.
+- A type argument that is not generated as a class: a `ref struct`, a non-public type, or a delegate that is not exported.
+- An **exception** used as a type argument (`IEnumerable<Exception>`, `InArgument<Exception>`). Exceptions are generated as Java throwables, they do not implement `IJCOBridgeReflected`, and `System.Exception` itself has no generated class. The members of an exception class are never parameterized either, since the class cannot declare type variables (see [Exceptions cannot be generic classes](#exceptions-cannot-be-generic-classes)).
+- A type argument that is a **method-level** type parameter.
+- A member whose name (and, for methods, number of parameters) is already declared by a **base class**. A parameterized override of a raw base member does not override it and Java reports a name clash (`Task<TResult>.ContinueWith(Action<Task<TResult>>)` next to `Task.ContinueWith(Action<Task>)`). The same rule applies to properties and events.
+- A type that **implements the same generic interface more than once** with different type arguments (`AspNetMemoryMonitor` implements `IObservable<RecycleLimitInfo>` and `IObservable<LowPhysicalMemoryInfo>`). A Java class can implement a generic interface only once, so the members of that interface keep the raw parameter.
+- The members that are generated as deprecated stubs for an interface the class does not implement, and the `Invoke` signature of delegates, which have no constructed type in their own parameters in the .NET base class library.
 
 ## Renaming to avoid erasure collisions
 
@@ -54,7 +78,7 @@ Where two members would otherwise collide only because of erasure — not becaus
 
 ## Exceptions cannot be generic classes
 
-Java forbids a generic class from extending `java.lang.Throwable`, without exception (JLS §8.1.2) — this is not something JCOReflector can work around. A .NET generic exception type (e.g. `FaultException<TDetail>`) is therefore always generated as a **plain, non-generic** Java class. Its class-level type parameter is exposed everywhere as its bound, `IJCOBridgeReflected`, instead of a real type variable — for example `FaultException_1.getDetail()` returns `IJCOBridgeReflected`, not `TDetail`. This is the one case where the generic parameter is always erased to its bound in the public API, by necessity rather than by choice.
+Java forbids a generic class from extending `java.lang.Throwable`, without exception (JLS §8.1.2) — this is not something JCOReflector can work around. A .NET generic exception type (e.g. `FaultException<TDetail>`) is therefore always generated as a **plain, non-generic** Java class. Its class-level type parameter is exposed everywhere as its bound, `IJCOBridgeReflected`, instead of a real type variable — for example `FaultException_1.getDetail()` returns `IJCOBridgeReflected`, not `TDetail`. This is the one case where the generic parameter is always erased to its bound in the public API, by necessity rather than by choice. An exception can neither be used as a type argument of another generic type, for the reasons listed in [Constructed generic types in member signatures](#constructed-generic-types-in-member-signatures).
 
 ## `ref` and `out` parameters
 
@@ -140,11 +164,11 @@ Whole types:
 Members:
 
 - `SyndicationElementExtensionCollection.Add`
-- `ICollection<T>.Add` and `ICollection<T>.Remove` — they affect `IDictionary<TKey,TValue>`, `ISet<T>`, `IMessageFilterTable<T>` and their `Implementation` classes, and depend on the first open root cause listed below.
+- `ICollection<T>.Add` and `ICollection<T>.Remove` — they affect `IDictionary<TKey,TValue>`, `ISet<T>`, `IMessageFilterTable<T>` and their `Implementation` classes. The entry is kept pending review: see the first item of [Root causes still open](#root-causes-still-open).
 - `ImmutableArray<T>.AddRange`
 - `Sse41.Extract`
 - `TryFormat` on `Guid`, `Version`, `Rune`, `IPAddress` and `IPNetwork`
-- `GetPinnableReference` on `Span<T>` and `ReadOnlySpan<T>` — probably redundant, since both are `ref struct` types and are already excluded as whole types (see [What is intentionally not reflected](#what-is-intentionally-not-reflected)); the entries are to be reviewed.
+- `GetPinnableReference` on `Span<T>` and `ReadOnlySpan<T>` — redundant: both are `ref struct` types and, when generics are enabled, they are already excluded as whole types (see [What is intentionally not reflected](#what-is-intentionally-not-reflected)). The entries are to be removed.
 
 `SyndicationElementExtensionCollection.Add`, `ImmutableArray<T>.AddRange`, `Sse41.Extract` and `TryFormat` are genuine Java erasure collisions between distinct .NET overloads or members (an array next to a `params T[]`, or an inherited explicit-interface member next to a real public one). They cannot be fixed without misrepresenting the .NET API and are expected to stay, unless a better approach turns up.
 
@@ -152,12 +176,13 @@ A whole-type entry (one without a member list) also stops the type itself from b
 
 ### Root causes still open
 
-- **Constructed type arguments.** The recursive generic-type-name resolver does not handle a type argument that is itself a constructed generic type, for example `KeyValuePair<TKey,TValue>` inside `IDictionary<TKey,TValue> : ICollection<KeyValuePair<TKey,TValue>>`. It falls back to a raw reference instead of resolving it, and this is what forces most of the `ICollection<T>` family into the avoidance map.
+- **`ICollection<T>.Add` and `ICollection<T>.Remove`.** Resolving constructed type arguments recursively is now done for member signatures (see [Constructed generic types in member signatures](#constructed-generic-types-in-member-signatures)), and it does not remove the need for these entries. They appear to hide a Java erasure collision between a member of the derived interface and one inherited from `ICollection<KeyValuePair<TKey,TValue>>`: `IDictionary<TKey,TValue>.Remove(TKey)` and `ICollection<T>.Remove(T)` both erase to `Remove(IJCOBridgeReflected)`. The collision is not detected today, because the inherited interface exposes the substituted parameter (`KeyValuePair<TKey,TValue>`) rather than a type parameter, and the rename logic described in [Renaming](#renaming-to-avoid-erasure-collisions) is applied to classes only. `ISet<T>.Add` adds a different return type to the same signature.
 - **Transitive interface closure.** The generated `Implementation` class of an interface only collects the methods declared directly on that interface, not the full transitive interface closure. This causes the `INameScopeDictionary` `Implementation` class to miss members it inherits through `IDictionary<TKey,TValue>`.
+- **Casting to a generic type.** The static `ToIXxx(...)` method of a generic interface (for example `IDictionary_2.ToIDictionary_2(...)`) and the `cast(...)` method of a generic class fail with an `UnsupportedOperationException`, unless the source and the target are the very same type definition. Both end in `NetType.AssertCast`, which compares the `getJCOType()` of the two sides. For a generic wrapper that is the static type of the class, created from its class name, so it is the **open** generic definition (`System.Collections.Generic.Dictionary`2`) and never the closed type of the instance. In .NET `Type.IsAssignableFrom` is false between two open generic definitions (`typeof(IDictionary<,>)` is not assignable from `typeof(Dictionary<,>)`), and `IsSubclassOf` does not cover interfaces. The fix belongs to `NetType`, a class of the JCOReflector library that the generated code calls, and not to the code generator: the check has to use the runtime type of the instance and, when the target is a generic type definition, look for it among the base types and the interfaces of that type. The same code builds the error message with the assembly of `NetType` instead of the one of the target type, so a failed cast reads "cannot be casted to mscorlib" whatever the target is. Calling the members of the object through its own generated class is not affected.
 
 ## Impact on non-generic output
 
-Regenerating with `EnableGenerics` disabled reproduces the pre-generics output, with one cosmetic difference: some references are written with their fully-qualified class name where a simple name used to be. This has no effect on the behavior of the generated code, but it means the output is not byte-for-byte identical to a pre-generics build.
+Regenerating with `EnableGenerics` disabled reproduces the pre-generics output, with one cosmetic difference: some references are written with their fully-qualified class name where a simple name used to be. This has no effect on the behavior of the generated code, but it means the output is not byte-for-byte identical to a pre-generics build. The resolution of constructed generic types in member signatures and the generation of events with a generic handler are part of the same switch: with `EnableGenerics` disabled they are not applied.
 
 ## Example: sorting a list with a generic `Comparison` delegate
 

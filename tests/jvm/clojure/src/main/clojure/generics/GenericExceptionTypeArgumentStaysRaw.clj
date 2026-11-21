@@ -22,8 +22,7 @@
 
 (ns generics.GenericExceptionTypeArgumentStaysRaw
   (:gen-class)
-  (:import [java.lang.reflect ParameterizedType TypeVariable]
-           [org.mases.jcobridge.netreflection IJCOBridgeReflected JCOReflector NetObject]
+  (:import [org.mases.jcobridge.netreflection IJCOBridgeReflected JCOReflector NetObject]
            [system Console Environment]
            [system.collections.generic IEnumerable_1]
            [system.threading.tasks TaskCompletionSource_1]))

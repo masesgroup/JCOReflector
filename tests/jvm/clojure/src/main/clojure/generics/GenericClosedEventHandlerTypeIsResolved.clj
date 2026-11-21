@@ -47,10 +47,7 @@
   (let [calls (atom 0)
         ;; keep it minimal: this handler runs for every first-chance exception of the process
         handler (gs/new-generic EventHandler_1 [FirstChanceExceptionEventArgs]
-                                {"Invoke" (fn [sender e]
-                                           (try (swap! calls inc)
-                                                (catch Throwable t (.printStackTrace t)))
-                                           nil)})
+                                {"Invoke" (fn [sender e] (swap! calls inc) nil)})
         domain (AppDomain/getCurrentDomain)]
     (.addFirstChanceException domain handler)
     (try

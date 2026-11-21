@@ -23,8 +23,7 @@
 (ns generics.GenericConstructedPropertyTypeIsResolved
   (:gen-class)
   (:require [generics.GenericSupport :as gs])
-  (:import [java.lang.reflect ParameterizedType TypeVariable]
-           [org.mases.jcobridge.netreflection IJCOBridgeReflected JCOReflector NetObject]
+  (:import [org.mases.jcobridge.netreflection IJCOBridgeReflected JCOReflector NetObject]
            [system Console Environment]
            [system.collections.concurrent ConcurrentDictionary_2]
            [system.collections.generic ICollection_1 IDictionary_2]))
@@ -35,13 +34,13 @@
 ;; as ICollection_1<TKey> / ICollection_1<TValue>, not as the raw ICollection_1.
 (defn- test-generic-constructed-property-type-is-resolved []
   (gs/assert-parameterized (.getGenericReturnType (.getMethod IDictionary_2 "getKeys" (into-array Class [])))
-                        ICollection_1 IDictionary_2 "TKey")
+                           ICollection_1 IDictionary_2 "TKey")
   (gs/assert-parameterized (.getGenericReturnType (.getMethod IDictionary_2 "getValues" (into-array Class [])))
-                        ICollection_1 IDictionary_2 "TValue")
+                           ICollection_1 IDictionary_2 "TValue")
   (gs/assert-parameterized (.getGenericReturnType (.getMethod ConcurrentDictionary_2 "getKeys" (into-array Class [])))
-                        ICollection_1 ConcurrentDictionary_2 "TKey")
+                           ICollection_1 ConcurrentDictionary_2 "TKey")
   (gs/assert-parameterized (.getGenericReturnType (.getMethod ConcurrentDictionary_2 "getValues" (into-array Class [])))
-                        ICollection_1 ConcurrentDictionary_2 "TValue")
+                           ICollection_1 ConcurrentDictionary_2 "TValue")
 
   ;; the typed property is usable end to end
   (let [^ConcurrentDictionary_2 dict (gs/new-generic ConcurrentDictionary_2 [system.Object system.Object])

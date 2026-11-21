@@ -48,10 +48,11 @@ import system.runtime.durableinstancing.InstancePersistenceEvent;
 import system.runtime.durableinstancing.InstanceState;
 import system.collections.generic.IDictionary_2;
 import system.collections.generic.IDictionary_2Implementation;
-import system.runtime.durableinstancing.InstanceStoreQueryResult;
-import system.Action_1;
 import system.xml.linq.XName;
 import system.runtime.durableinstancing.InstanceValue;
+import system.runtime.durableinstancing.InstanceStoreQueryResult;
+import system.Action_1;
+import system.runtime.durableinstancing.InstancePersistenceContext;
 import system.runtime.durableinstancing.InstanceHandle;
 import system.runtime.durableinstancing.InstanceView;
 
@@ -654,10 +655,10 @@ public class InstancePersistenceContext extends NetObject  {
      * Invokes the .NET member LoadedInstance.
      *
      * @param state the argument of type {@code InstanceState}
-     * @param instanceData the argument of type {@code IDictionary_2}
-     * @param instanceMetadata the argument of type {@code IDictionary_2}
-     * @param associatedInstanceKeyMetadata the argument of type {@code IDictionary_2}
-     * @param completedInstanceKeyMetadata the argument of type {@code IDictionary_2}
+     * @param instanceData the argument of type {@code IDictionary_2<XName, InstanceValue>}
+     * @param instanceMetadata the argument of type {@code IDictionary_2<XName, InstanceValue>}
+     * @param associatedInstanceKeyMetadata the argument of type {@code IDictionary_2<Guid, IDictionary_2<XName, InstanceValue>>}
+     * @param completedInstanceKeyMetadata the argument of type {@code IDictionary_2<Guid, IDictionary_2<XName, InstanceValue>>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -673,7 +674,7 @@ public class InstancePersistenceContext extends NetObject  {
      * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstancePersistenceContext.LoadedInstance" target="_top">.NET documentation</a>
      */
-    public void LoadedInstance(InstanceState state, IDictionary_2 instanceData, IDictionary_2 instanceMetadata, IDictionary_2 associatedInstanceKeyMetadata, IDictionary_2 completedInstanceKeyMetadata) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException {
+    public void LoadedInstance(InstanceState state, IDictionary_2<XName, InstanceValue> instanceData, IDictionary_2<XName, InstanceValue> instanceMetadata, IDictionary_2<Guid, IDictionary_2<XName, InstanceValue>> associatedInstanceKeyMetadata, IDictionary_2<Guid, IDictionary_2<XName, InstanceValue>> completedInstanceKeyMetadata) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -686,7 +687,7 @@ public class InstancePersistenceContext extends NetObject  {
     /**
      * Invokes the .NET member PersistedInstance.
      *
-     * @param data the argument of type {@code IDictionary_2}
+     * @param data the argument of type {@code IDictionary_2<XName, InstanceValue>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -698,7 +699,7 @@ public class InstancePersistenceContext extends NetObject  {
      * @throws system.MulticastNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstancePersistenceContext.PersistedInstance" target="_top">.NET documentation</a>
      */
-    public void PersistedInstance(IDictionary_2 data) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException {
+    public void PersistedInstance(IDictionary_2<XName, InstanceValue> data) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -742,7 +743,7 @@ public class InstancePersistenceContext extends NetObject  {
      * Invokes the .NET member ReadInstanceKeyMetadata.
      *
      * @param key the argument of type {@code Guid}
-     * @param metadata the argument of type {@code IDictionary_2}
+     * @param metadata the argument of type {@code IDictionary_2<XName, InstanceValue>}
      * @param complete the argument of type {@code boolean}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -759,7 +760,7 @@ public class InstancePersistenceContext extends NetObject  {
      * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstancePersistenceContext.ReadInstanceKeyMetadata" target="_top">.NET documentation</a>
      */
-    public void ReadInstanceKeyMetadata(Guid key, IDictionary_2 metadata, boolean complete) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException {
+    public void ReadInstanceKeyMetadata(Guid key, IDictionary_2<XName, InstanceValue> metadata, boolean complete) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -772,7 +773,7 @@ public class InstancePersistenceContext extends NetObject  {
     /**
      * Invokes the .NET member ReadInstanceMetadata.
      *
-     * @param metadata the argument of type {@code IDictionary_2}
+     * @param metadata the argument of type {@code IDictionary_2<XName, InstanceValue>}
      * @param complete the argument of type {@code boolean}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -785,7 +786,7 @@ public class InstancePersistenceContext extends NetObject  {
      * @throws system.MulticastNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstancePersistenceContext.ReadInstanceMetadata" target="_top">.NET documentation</a>
      */
-    public void ReadInstanceMetadata(IDictionary_2 metadata, boolean complete) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException {
+    public void ReadInstanceMetadata(IDictionary_2<XName, InstanceValue> metadata, boolean complete) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -798,7 +799,7 @@ public class InstancePersistenceContext extends NetObject  {
     /**
      * Invokes the .NET member ReadInstanceOwnerMetadata.
      *
-     * @param metadata the argument of type {@code IDictionary_2}
+     * @param metadata the argument of type {@code IDictionary_2<XName, InstanceValue>}
      * @param complete the argument of type {@code boolean}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -811,7 +812,7 @@ public class InstancePersistenceContext extends NetObject  {
      * @throws system.MulticastNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstancePersistenceContext.ReadInstanceOwnerMetadata" target="_top">.NET documentation</a>
      */
-    public void ReadInstanceOwnerMetadata(IDictionary_2 metadata, boolean complete) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException {
+    public void ReadInstanceOwnerMetadata(IDictionary_2<XName, InstanceValue> metadata, boolean complete) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -824,7 +825,7 @@ public class InstancePersistenceContext extends NetObject  {
     /**
      * Invokes the .NET member SetCancellationHandler.
      *
-     * @param cancellationHandler the argument of type {@code Action_1}
+     * @param cancellationHandler the argument of type {@code Action_1<InstancePersistenceContext>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -836,7 +837,7 @@ public class InstancePersistenceContext extends NetObject  {
      * @throws system.MulticastNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstancePersistenceContext.SetCancellationHandler" target="_top">.NET documentation</a>
      */
-    public void SetCancellationHandler(Action_1 cancellationHandler) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException {
+    public void SetCancellationHandler(Action_1<InstancePersistenceContext> cancellationHandler) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

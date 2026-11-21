@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.generic.List_1;
+import system.net.security.SslApplicationProtocol;
 import system.net.security.CipherSuitesPolicy;
 import system.net.security.EncryptionPolicy;
 import system.net.security.LocalCertificateSelectionCallback;
@@ -341,7 +342,7 @@ public class SslClientAuthenticationOptions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslClientAuthenticationOptions.ApplicationProtocols" target="_top">.NET documentation</a>
      */
-    public List_1 getApplicationProtocols() throws Throwable {
+    public List_1<SslApplicationProtocol> getApplicationProtocols() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectApplicationProtocols = null;
@@ -363,7 +364,7 @@ public class SslClientAuthenticationOptions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslClientAuthenticationOptions.ApplicationProtocols" target="_top">.NET documentation</a>
      */
-    public void setApplicationProtocols(List_1 ApplicationProtocols) throws Throwable {
+    public void setApplicationProtocols(List_1<SslApplicationProtocol> ApplicationProtocols) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

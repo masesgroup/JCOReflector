@@ -41,9 +41,15 @@ import java.util.ArrayList;
 import system.servicemodel.dispatcher.ClientRuntimeCompatBase;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
-import system.collections.generic.SynchronizedCollection_1;
-import system.collections.generic.SynchronizedKeyedCollection_2;
 import system.servicemodel.dispatcher.ClientOperation;
+import system.servicemodel.dispatcher.IClientMessageInspector;
+import system.servicemodel.dispatcher.IClientMessageInspectorImplementation;
+import system.collections.generic.SynchronizedCollection_1;
+import system.servicemodel.dispatcher.IChannelInitializer;
+import system.servicemodel.dispatcher.IChannelInitializerImplementation;
+import system.servicemodel.dispatcher.IInteractiveChannelInitializer;
+import system.servicemodel.dispatcher.IInteractiveChannelInitializerImplementation;
+import system.collections.generic.SynchronizedKeyedCollection_2;
 import system.servicemodel.dispatcher.DispatchRuntime;
 import system.servicemodel.dispatcher.IClientOperationSelector;
 import system.servicemodel.dispatcher.IClientOperationSelectorImplementation;
@@ -402,7 +408,7 @@ public class ClientRuntime extends system.servicemodel.dispatcher.ClientRuntimeC
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ClientRuntime.ClientOperations" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getClientOperations() throws Throwable {
+    public ICollection_1<ClientOperation> getClientOperations() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectClientOperations = null;
@@ -424,7 +430,7 @@ public class ClientRuntime extends system.servicemodel.dispatcher.ClientRuntimeC
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ClientRuntime.ClientMessageInspectors" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getClientMessageInspectors() throws Throwable {
+    public ICollection_1<IClientMessageInspector> getClientMessageInspectors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectClientMessageInspectors = null;
@@ -446,7 +452,7 @@ public class ClientRuntime extends system.servicemodel.dispatcher.ClientRuntimeC
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ClientRuntime.ChannelInitializers" target="_top">.NET documentation</a>
      */
-    public SynchronizedCollection_1 getChannelInitializers() throws Throwable {
+    public SynchronizedCollection_1<IChannelInitializer> getChannelInitializers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectChannelInitializers = null;
@@ -490,7 +496,7 @@ public class ClientRuntime extends system.servicemodel.dispatcher.ClientRuntimeC
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ClientRuntime.InteractiveChannelInitializers" target="_top">.NET documentation</a>
      */
-    public SynchronizedCollection_1 getInteractiveChannelInitializers() throws Throwable {
+    public SynchronizedCollection_1<IInteractiveChannelInitializer> getInteractiveChannelInitializers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectInteractiveChannelInitializers = null;

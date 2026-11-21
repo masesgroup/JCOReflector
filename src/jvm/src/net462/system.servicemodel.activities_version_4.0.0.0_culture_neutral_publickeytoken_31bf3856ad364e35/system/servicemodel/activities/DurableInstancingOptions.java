@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IDictionary_2;
 import system.collections.generic.IDictionary_2Implementation;
+import system.xml.linq.XName;
+import system.Object;
 import system.runtime.durableinstancing.InstanceStore;
 
 
@@ -162,7 +164,7 @@ public class DurableInstancingOptions extends NetObject  {
     /**
      * Invokes the .NET member AddInitialInstanceValues.
      *
-     * @param writeOnlyValues the argument of type {@code IDictionary_2}
+     * @param writeOnlyValues the argument of type {@code IDictionary_2<XName, Object>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -177,7 +179,7 @@ public class DurableInstancingOptions extends NetObject  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.DurableInstancingOptions.AddInitialInstanceValues" target="_top">.NET documentation</a>
      */
-    public void AddInitialInstanceValues(IDictionary_2 writeOnlyValues) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public void AddInitialInstanceValues(IDictionary_2<XName, Object> writeOnlyValues) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -190,8 +192,8 @@ public class DurableInstancingOptions extends NetObject  {
     /**
      * Invokes the .NET member AddInstanceOwnerValues.
      *
-     * @param readWriteValues the argument of type {@code IDictionary_2}
-     * @param writeOnlyValues the argument of type {@code IDictionary_2}
+     * @param readWriteValues the argument of type {@code IDictionary_2<XName, Object>}
+     * @param writeOnlyValues the argument of type {@code IDictionary_2<XName, Object>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -206,7 +208,7 @@ public class DurableInstancingOptions extends NetObject  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.DurableInstancingOptions.AddInstanceOwnerValues" target="_top">.NET documentation</a>
      */
-    public void AddInstanceOwnerValues(IDictionary_2 readWriteValues, IDictionary_2 writeOnlyValues) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public void AddInstanceOwnerValues(IDictionary_2<XName, Object> readWriteValues, IDictionary_2<XName, Object> writeOnlyValues) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

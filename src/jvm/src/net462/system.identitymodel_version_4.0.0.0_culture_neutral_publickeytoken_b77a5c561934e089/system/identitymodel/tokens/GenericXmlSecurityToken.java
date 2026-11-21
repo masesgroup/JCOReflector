@@ -43,6 +43,8 @@ import system.xml.XmlElement;
 import system.DateTime;
 import system.identitymodel.tokens.SecurityKeyIdentifierClause;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.identitymodel.policy.IAuthorizationPolicy;
+import system.identitymodel.policy.IAuthorizationPolicyImplementation;
 
 
 /**
@@ -165,7 +167,7 @@ public class GenericXmlSecurityToken extends system.identitymodel.tokens.Securit
      * @param expirationTime the argument of type {@code DateTime}
      * @param internalTokenReference the argument of type {@code SecurityKeyIdentifierClause}
      * @param externalTokenReference the argument of type {@code SecurityKeyIdentifierClause}
-     * @param authorizationPolicies the argument of type {@code ReadOnlyCollection_1}
+     * @param authorizationPolicies the argument of type {@code ReadOnlyCollection_1<IAuthorizationPolicy>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -184,7 +186,7 @@ public class GenericXmlSecurityToken extends system.identitymodel.tokens.Securit
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.GenericXmlSecurityToken.-ctor" target="_top">.NET documentation</a>
      */
-    public GenericXmlSecurityToken(XmlElement tokenXml, SecurityToken proofToken, DateTime effectiveTime, DateTime expirationTime, SecurityKeyIdentifierClause internalTokenReference, SecurityKeyIdentifierClause externalTokenReference, ReadOnlyCollection_1 authorizationPolicies) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.NotSupportedException {
+    public GenericXmlSecurityToken(XmlElement tokenXml, SecurityToken proofToken, DateTime effectiveTime, DateTime expirationTime, SecurityKeyIdentifierClause internalTokenReference, SecurityKeyIdentifierClause externalTokenReference, ReadOnlyCollection_1<IAuthorizationPolicy> authorizationPolicies) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -254,7 +256,7 @@ public class GenericXmlSecurityToken extends system.identitymodel.tokens.Securit
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.GenericXmlSecurityToken.AuthorizationPolicies" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getAuthorizationPolicies() throws Throwable {
+    public ReadOnlyCollection_1<IAuthorizationPolicy> getAuthorizationPolicies() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAuthorizationPolicies = null;

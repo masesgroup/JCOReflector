@@ -42,6 +42,7 @@ import system.Action;
 import system.threading.CancellationToken;
 import system.threading.tasks.TaskCreationOptions;
 import system.Action_1;
+import system.Object;
 import system.TimeSpan;
 import system.threading.tasks.Task;
 import system.runtime.compilerservices.ConfiguredTaskAwaitable;
@@ -276,7 +277,7 @@ public class Task extends NetObject implements AutoCloseable {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param action the argument of type {@code Action_1}
+     * @param action the argument of type {@code Action_1<Object>}
      * @param state the argument of type {@code NetObject}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -288,7 +289,7 @@ public class Task extends NetObject implements AutoCloseable {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task.-ctor" target="_top">.NET documentation</a>
      */
-    public Task(Action_1 action, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException {
+    public Task(Action_1<Object> action, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -301,7 +302,7 @@ public class Task extends NetObject implements AutoCloseable {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param action the argument of type {@code Action_1}
+     * @param action the argument of type {@code Action_1<Object>}
      * @param state the argument of type {@code NetObject}
      * @param cancellationToken the argument of type {@code CancellationToken}
      * @throws Throwable if the .NET constructor fails
@@ -314,7 +315,7 @@ public class Task extends NetObject implements AutoCloseable {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task.-ctor" target="_top">.NET documentation</a>
      */
-    public Task(Action_1 action, NetObject state, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException {
+    public Task(Action_1<Object> action, NetObject state, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -327,7 +328,7 @@ public class Task extends NetObject implements AutoCloseable {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param action the argument of type {@code Action_1}
+     * @param action the argument of type {@code Action_1<Object>}
      * @param state the argument of type {@code NetObject}
      * @param cancellationToken the argument of type {@code CancellationToken}
      * @param creationOptions the argument of type {@code TaskCreationOptions}
@@ -341,7 +342,7 @@ public class Task extends NetObject implements AutoCloseable {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task.-ctor" target="_top">.NET documentation</a>
      */
-    public Task(Action_1 action, NetObject state, CancellationToken cancellationToken, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException {
+    public Task(Action_1<Object> action, NetObject state, CancellationToken cancellationToken, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -354,7 +355,7 @@ public class Task extends NetObject implements AutoCloseable {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param action the argument of type {@code Action_1}
+     * @param action the argument of type {@code Action_1<Object>}
      * @param state the argument of type {@code NetObject}
      * @param creationOptions the argument of type {@code TaskCreationOptions}
      * @throws Throwable if the .NET constructor fails
@@ -367,7 +368,7 @@ public class Task extends NetObject implements AutoCloseable {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task.-ctor" target="_top">.NET documentation</a>
      */
-    public Task(Action_1 action, NetObject state, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException {
+    public Task(Action_1<Object> action, NetObject state, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -959,7 +960,7 @@ public class Task extends NetObject implements AutoCloseable {
     /**
      * Invokes the .NET member ContinueWith.
      *
-     * @param continuationAction the argument of type {@code Action_1}
+     * @param continuationAction the argument of type {@code Action_1<Task>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -972,7 +973,7 @@ public class Task extends NetObject implements AutoCloseable {
      * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task.ContinueWith" target="_top">.NET documentation</a>
      */
-    public Task ContinueWith(Action_1 continuationAction) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException {
+    public Task ContinueWith(Action_1<Task> continuationAction) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContinueWith = null;
@@ -990,7 +991,7 @@ public class Task extends NetObject implements AutoCloseable {
     /**
      * Invokes the .NET member ContinueWith.
      *
-     * @param continuationAction the argument of type {@code Action_1}
+     * @param continuationAction the argument of type {@code Action_1<Task>}
      * @param cancellationToken the argument of type {@code CancellationToken}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -1004,7 +1005,7 @@ public class Task extends NetObject implements AutoCloseable {
      * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task.ContinueWith" target="_top">.NET documentation</a>
      */
-    public Task ContinueWith(Action_1 continuationAction, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException {
+    public Task ContinueWith(Action_1<Task> continuationAction, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContinueWith = null;
@@ -1022,7 +1023,7 @@ public class Task extends NetObject implements AutoCloseable {
     /**
      * Invokes the .NET member ContinueWith.
      *
-     * @param continuationAction the argument of type {@code Action_1}
+     * @param continuationAction the argument of type {@code Action_1<Task>}
      * @param cancellationToken the argument of type {@code CancellationToken}
      * @param continuationOptions the argument of type {@code TaskContinuationOptions}
      * @param scheduler the argument of type {@code TaskScheduler}
@@ -1038,7 +1039,7 @@ public class Task extends NetObject implements AutoCloseable {
      * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task.ContinueWith" target="_top">.NET documentation</a>
      */
-    public Task ContinueWith(Action_1 continuationAction, CancellationToken cancellationToken, TaskContinuationOptions continuationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException {
+    public Task ContinueWith(Action_1<Task> continuationAction, CancellationToken cancellationToken, TaskContinuationOptions continuationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContinueWith = null;
@@ -1056,7 +1057,7 @@ public class Task extends NetObject implements AutoCloseable {
     /**
      * Invokes the .NET member ContinueWith.
      *
-     * @param continuationAction the argument of type {@code Action_1}
+     * @param continuationAction the argument of type {@code Action_1<Task>}
      * @param continuationOptions the argument of type {@code TaskContinuationOptions}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -1070,7 +1071,7 @@ public class Task extends NetObject implements AutoCloseable {
      * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task.ContinueWith" target="_top">.NET documentation</a>
      */
-    public Task ContinueWith(Action_1 continuationAction, TaskContinuationOptions continuationOptions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException {
+    public Task ContinueWith(Action_1<Task> continuationAction, TaskContinuationOptions continuationOptions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContinueWith = null;
@@ -1088,7 +1089,7 @@ public class Task extends NetObject implements AutoCloseable {
     /**
      * Invokes the .NET member ContinueWith.
      *
-     * @param continuationAction the argument of type {@code Action_1}
+     * @param continuationAction the argument of type {@code Action_1<Task>}
      * @param scheduler the argument of type {@code TaskScheduler}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -1102,7 +1103,7 @@ public class Task extends NetObject implements AutoCloseable {
      * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task.ContinueWith" target="_top">.NET documentation</a>
      */
-    public Task ContinueWith(Action_1 continuationAction, TaskScheduler scheduler) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException {
+    public Task ContinueWith(Action_1<Task> continuationAction, TaskScheduler scheduler) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContinueWith = null;
@@ -1120,7 +1121,7 @@ public class Task extends NetObject implements AutoCloseable {
     /**
      * Invokes the .NET member ContinueWith.
      *
-     * @param continuationAction the argument of type {@code Action_2}
+     * @param continuationAction the argument of type {@code Action_2<Task, Object>}
      * @param state the argument of type {@code NetObject}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -1134,7 +1135,7 @@ public class Task extends NetObject implements AutoCloseable {
      * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task.ContinueWith" target="_top">.NET documentation</a>
      */
-    public Task ContinueWith(Action_2 continuationAction, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException {
+    public Task ContinueWith(Action_2<Task, Object> continuationAction, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContinueWith = null;
@@ -1152,7 +1153,7 @@ public class Task extends NetObject implements AutoCloseable {
     /**
      * Invokes the .NET member ContinueWith.
      *
-     * @param continuationAction the argument of type {@code Action_2}
+     * @param continuationAction the argument of type {@code Action_2<Task, Object>}
      * @param state the argument of type {@code NetObject}
      * @param cancellationToken the argument of type {@code CancellationToken}
      * @return the value returned by the .NET member
@@ -1167,7 +1168,7 @@ public class Task extends NetObject implements AutoCloseable {
      * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task.ContinueWith" target="_top">.NET documentation</a>
      */
-    public Task ContinueWith(Action_2 continuationAction, NetObject state, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException {
+    public Task ContinueWith(Action_2<Task, Object> continuationAction, NetObject state, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContinueWith = null;
@@ -1185,7 +1186,7 @@ public class Task extends NetObject implements AutoCloseable {
     /**
      * Invokes the .NET member ContinueWith.
      *
-     * @param continuationAction the argument of type {@code Action_2}
+     * @param continuationAction the argument of type {@code Action_2<Task, Object>}
      * @param state the argument of type {@code NetObject}
      * @param cancellationToken the argument of type {@code CancellationToken}
      * @param continuationOptions the argument of type {@code TaskContinuationOptions}
@@ -1202,7 +1203,7 @@ public class Task extends NetObject implements AutoCloseable {
      * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task.ContinueWith" target="_top">.NET documentation</a>
      */
-    public Task ContinueWith(Action_2 continuationAction, NetObject state, CancellationToken cancellationToken, TaskContinuationOptions continuationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException {
+    public Task ContinueWith(Action_2<Task, Object> continuationAction, NetObject state, CancellationToken cancellationToken, TaskContinuationOptions continuationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContinueWith = null;
@@ -1220,7 +1221,7 @@ public class Task extends NetObject implements AutoCloseable {
     /**
      * Invokes the .NET member ContinueWith.
      *
-     * @param continuationAction the argument of type {@code Action_2}
+     * @param continuationAction the argument of type {@code Action_2<Task, Object>}
      * @param state the argument of type {@code NetObject}
      * @param continuationOptions the argument of type {@code TaskContinuationOptions}
      * @return the value returned by the .NET member
@@ -1235,7 +1236,7 @@ public class Task extends NetObject implements AutoCloseable {
      * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task.ContinueWith" target="_top">.NET documentation</a>
      */
-    public Task ContinueWith(Action_2 continuationAction, NetObject state, TaskContinuationOptions continuationOptions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException {
+    public Task ContinueWith(Action_2<Task, Object> continuationAction, NetObject state, TaskContinuationOptions continuationOptions) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContinueWith = null;
@@ -1253,7 +1254,7 @@ public class Task extends NetObject implements AutoCloseable {
     /**
      * Invokes the .NET member ContinueWith.
      *
-     * @param continuationAction the argument of type {@code Action_2}
+     * @param continuationAction the argument of type {@code Action_2<Task, Object>}
      * @param state the argument of type {@code NetObject}
      * @param scheduler the argument of type {@code TaskScheduler}
      * @return the value returned by the .NET member
@@ -1268,7 +1269,7 @@ public class Task extends NetObject implements AutoCloseable {
      * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task.ContinueWith" target="_top">.NET documentation</a>
      */
-    public Task ContinueWith(Action_2 continuationAction, NetObject state, TaskScheduler scheduler) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException {
+    public Task ContinueWith(Action_2<Task, Object> continuationAction, NetObject state, TaskScheduler scheduler) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContinueWith = null;
@@ -1540,7 +1541,7 @@ public class Task extends NetObject implements AutoCloseable {
     /**
      * Invokes the .NET member Run.
      *
-     * @param function the argument of type {@code Func_1}
+     * @param function the argument of type {@code Func_1<Task>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -1556,7 +1557,7 @@ public class Task extends NetObject implements AutoCloseable {
      * @throws system.AggregateException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task.Run" target="_top">.NET documentation</a>
      */
-    public static Task Run(Func_1 function) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.threading.ThreadAbortException, system.AggregateException {
+    public static Task Run(Func_1<Task> function) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.NullReferenceException, system.NotSupportedException, system.IndexOutOfRangeException, system.threading.ThreadAbortException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRun = null;
@@ -1574,7 +1575,7 @@ public class Task extends NetObject implements AutoCloseable {
     /**
      * Invokes the .NET member Run.
      *
-     * @param function the argument of type {@code Func_1}
+     * @param function the argument of type {@code Func_1<Task>}
      * @param cancellationToken the argument of type {@code CancellationToken}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -1591,7 +1592,7 @@ public class Task extends NetObject implements AutoCloseable {
      * @throws system.AggregateException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task.Run" target="_top">.NET documentation</a>
      */
-    public static Task Run(Func_1 function, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.NotSupportedException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.ThreadAbortException, system.AggregateException {
+    public static Task Run(Func_1<Task> function, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.NotSupportedException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.ThreadAbortException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRun = null;
@@ -1609,7 +1610,7 @@ public class Task extends NetObject implements AutoCloseable {
     /**
      * Invokes the .NET member WhenAll.
      *
-     * @param tasks the argument of type {@code IEnumerable_1}
+     * @param tasks the argument of type {@code IEnumerable_1<Task>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -1619,7 +1620,7 @@ public class Task extends NetObject implements AutoCloseable {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task.WhenAll" target="_top">.NET documentation</a>
      */
-    public static Task WhenAll(IEnumerable_1 tasks) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static Task WhenAll(IEnumerable_1<Task> tasks) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectWhenAll = null;
@@ -1666,7 +1667,7 @@ public class Task extends NetObject implements AutoCloseable {
     /**
      * Invokes the .NET member WhenAny.
      *
-     * @param tasks the argument of type {@code IEnumerable_1}
+     * @param tasks the argument of type {@code IEnumerable_1<Task>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -1684,7 +1685,7 @@ public class Task extends NetObject implements AutoCloseable {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task.WhenAny" target="_top">.NET documentation</a>
      */
-    public static Task_1 WhenAny(IEnumerable_1 tasks) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException {
+    public static Task_1<Task> WhenAny(IEnumerable_1<Task> tasks) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectWhenAny = null;
@@ -1720,7 +1721,7 @@ public class Task extends NetObject implements AutoCloseable {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Task.WhenAny" target="_top">.NET documentation</a>
      */
-    public static Task_1 WhenAny(Task... tasks) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException {
+    public static Task_1<Task> WhenAny(Task... tasks) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectWhenAny = null;

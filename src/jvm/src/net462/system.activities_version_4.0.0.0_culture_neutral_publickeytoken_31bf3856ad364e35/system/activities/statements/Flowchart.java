@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.activities.NativeActivity;
 import system.activities.statements.FlowNode;
 import system.collections.objectmodel.Collection_1;
+import system.activities.Variable;
 
 
 /**
@@ -264,7 +265,7 @@ public class Flowchart extends system.activities.NativeActivity  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.Flowchart.Nodes" target="_top">.NET documentation</a>
      */
-    public Collection_1 getNodes() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+    public Collection_1<FlowNode> getNodes() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectNodes = null;
@@ -290,7 +291,7 @@ public class Flowchart extends system.activities.NativeActivity  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.Flowchart.Variables" target="_top">.NET documentation</a>
      */
-    public Collection_1 getVariables() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+    public Collection_1<Variable> getVariables() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectVariables = null;

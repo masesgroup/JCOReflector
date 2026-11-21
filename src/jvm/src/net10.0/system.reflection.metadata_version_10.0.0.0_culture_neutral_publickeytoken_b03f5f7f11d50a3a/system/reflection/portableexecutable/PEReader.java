@@ -341,7 +341,7 @@ public class PEReader extends NetObject implements AutoCloseable {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.PortableExecutable.PEReader.ReadDebugDirectory" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 ReadDebugDirectory() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.BadImageFormatException, system.globalization.CultureNotFoundException {
+    public ImmutableArray_1<DebugDirectoryEntry> ReadDebugDirectory() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.BadImageFormatException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadDebugDirectory = null;

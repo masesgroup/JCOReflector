@@ -44,6 +44,7 @@ import system.collections.generic.IDictionary_2;
 import system.collections.generic.IDictionary_2Implementation;
 import system.activities.presentation.debug.BreakpointTypes;
 import system.collections.generic.Dictionary_2;
+import system.Object;
 
 
 /**
@@ -233,7 +234,7 @@ public class DebuggerService extends NetObject  {
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Debug.DebuggerService.GetBreakpointLocations" target="_top">.NET documentation</a>
      */
-    public IDictionary_2 GetBreakpointLocations() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotImplementedException {
+    public IDictionary_2<SourceLocation, BreakpointTypes> GetBreakpointLocations() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetBreakpointLocations = null;
@@ -359,7 +360,7 @@ public class DebuggerService extends NetObject  {
     /**
      * Invokes the .NET member UpdateSourceLocations.
      *
-     * @param newSourceLocationMapping the argument of type {@code Dictionary_2}
+     * @param newSourceLocationMapping the argument of type {@code Dictionary_2<Object, SourceLocation>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -373,7 +374,7 @@ public class DebuggerService extends NetObject  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Debug.DebuggerService.UpdateSourceLocations" target="_top">.NET documentation</a>
      */
-    public void UpdateSourceLocations(Dictionary_2 newSourceLocationMapping) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.globalization.CultureNotFoundException, system.NullReferenceException {
+    public void UpdateSourceLocations(Dictionary_2<Object, SourceLocation> newSourceLocationMapping) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

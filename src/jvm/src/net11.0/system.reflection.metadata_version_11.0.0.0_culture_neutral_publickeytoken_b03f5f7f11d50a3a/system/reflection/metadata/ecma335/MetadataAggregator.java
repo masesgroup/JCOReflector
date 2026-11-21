@@ -160,7 +160,7 @@ public class MetadataAggregator extends NetObject  {
      *
      * @param baseTableRowCounts the argument of type {@code IReadOnlyList_1}
      * @param baseHeapSizes the argument of type {@code IReadOnlyList_1}
-     * @param deltaReaders the argument of type {@code IReadOnlyList_1}
+     * @param deltaReaders the argument of type {@code IReadOnlyList_1<MetadataReader>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -172,7 +172,7 @@ public class MetadataAggregator extends NetObject  {
      * @throws system.BadImageFormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataAggregator.-ctor" target="_top">.NET documentation</a>
      */
-    public MetadataAggregator(IReadOnlyList_1 baseTableRowCounts, IReadOnlyList_1 baseHeapSizes, IReadOnlyList_1 deltaReaders) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.BadImageFormatException {
+    public MetadataAggregator(IReadOnlyList_1 baseTableRowCounts, IReadOnlyList_1 baseHeapSizes, IReadOnlyList_1<MetadataReader> deltaReaders) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.BadImageFormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -186,7 +186,7 @@ public class MetadataAggregator extends NetObject  {
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param baseReader the argument of type {@code MetadataReader}
-     * @param deltaReaders the argument of type {@code IReadOnlyList_1}
+     * @param deltaReaders the argument of type {@code IReadOnlyList_1<MetadataReader>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -198,7 +198,7 @@ public class MetadataAggregator extends NetObject  {
      * @throws system.BadImageFormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataAggregator.-ctor" target="_top">.NET documentation</a>
      */
-    public MetadataAggregator(MetadataReader baseReader, IReadOnlyList_1 deltaReaders) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.BadImageFormatException {
+    public MetadataAggregator(MetadataReader baseReader, IReadOnlyList_1<MetadataReader> deltaReaders) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.BadImageFormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

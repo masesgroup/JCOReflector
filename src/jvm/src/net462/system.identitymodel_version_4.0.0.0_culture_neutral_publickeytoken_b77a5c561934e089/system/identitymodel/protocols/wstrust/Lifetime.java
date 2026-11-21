@@ -190,8 +190,8 @@ public class Lifetime extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param created the argument of type {@code Nullable_1}
-     * @param expires the argument of type {@code Nullable_1}
+     * @param created the argument of type {@code Nullable_1<DateTime>}
+     * @param expires the argument of type {@code Nullable_1<DateTime>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -210,7 +210,7 @@ public class Lifetime extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.Lifetime.-ctor" target="_top">.NET documentation</a>
      */
-    public Lifetime(Nullable_1 created, Nullable_1 expires) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
+    public Lifetime(Nullable_1<DateTime> created, Nullable_1<DateTime> expires) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -236,7 +236,7 @@ public class Lifetime extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.Lifetime.Created" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getCreated() throws Throwable {
+    public Nullable_1<DateTime> getCreated() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCreated = null;
@@ -258,7 +258,7 @@ public class Lifetime extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.Lifetime.Created" target="_top">.NET documentation</a>
      */
-    public void setCreated(Nullable_1 Created) throws Throwable {
+    public void setCreated(Nullable_1<DateTime> Created) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -275,7 +275,7 @@ public class Lifetime extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.Lifetime.Expires" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getExpires() throws Throwable {
+    public Nullable_1<DateTime> getExpires() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExpires = null;
@@ -297,7 +297,7 @@ public class Lifetime extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.Lifetime.Expires" target="_top">.NET documentation</a>
      */
-    public void setExpires(Nullable_1 Expires) throws Throwable {
+    public void setExpires(Nullable_1<DateTime> Expires) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

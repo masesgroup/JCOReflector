@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.xaml.XamlType;
 import system.reflection.MethodInfo;
 import system.EventHandler_1;
+import system.windows.markup.XamlSetMarkupExtensionEventArgs;
+import system.windows.markup.XamlSetTypeConverterEventArgs;
 import system.xaml.schema.XamlTypeInvoker;
 
 
@@ -391,15 +393,15 @@ public class XamlTypeInvoker extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.Schema.XamlTypeInvoker.SetMarkupExtensionHandler" target="_top">.NET documentation</a>
      */
-    public EventHandler_1 getSetMarkupExtensionHandler() throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.xaml.XamlSchemaException, system.collections.generic.KeyNotFoundException, system.security.SecurityException, system.ArgumentOutOfRangeException {
+    public EventHandler_1<XamlSetMarkupExtensionEventArgs> getSetMarkupExtensionHandler() throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.xaml.XamlSchemaException, system.collections.generic.KeyNotFoundException, system.security.SecurityException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSetMarkupExtensionHandler = null;
         try {
             retObjectSetMarkupExtensionHandler = classInstance.Get("SetMarkupExtensionHandler");
-            return (EventHandler_1)retObjectSetMarkupExtensionHandler;
+            return (EventHandler_1<XamlSetMarkupExtensionEventArgs>)retObjectSetMarkupExtensionHandler;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into EventHandler_1", retObjectSetMarkupExtensionHandler != null ? retObjectSetMarkupExtensionHandler.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into EventHandler_1<XamlSetMarkupExtensionEventArgs>", retObjectSetMarkupExtensionHandler != null ? retObjectSetMarkupExtensionHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -422,15 +424,15 @@ public class XamlTypeInvoker extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.Schema.XamlTypeInvoker.SetTypeConverterHandler" target="_top">.NET documentation</a>
      */
-    public EventHandler_1 getSetTypeConverterHandler() throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.xaml.XamlSchemaException, system.collections.generic.KeyNotFoundException, system.security.SecurityException, system.ArgumentOutOfRangeException {
+    public EventHandler_1<XamlSetTypeConverterEventArgs> getSetTypeConverterHandler() throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.xaml.XamlSchemaException, system.collections.generic.KeyNotFoundException, system.security.SecurityException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSetTypeConverterHandler = null;
         try {
             retObjectSetTypeConverterHandler = classInstance.Get("SetTypeConverterHandler");
-            return (EventHandler_1)retObjectSetTypeConverterHandler;
+            return (EventHandler_1<XamlSetTypeConverterEventArgs>)retObjectSetTypeConverterHandler;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into EventHandler_1", retObjectSetTypeConverterHandler != null ? retObjectSetTypeConverterHandler.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into EventHandler_1<XamlSetTypeConverterEventArgs>", retObjectSetTypeConverterHandler != null ? retObjectSetTypeConverterHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

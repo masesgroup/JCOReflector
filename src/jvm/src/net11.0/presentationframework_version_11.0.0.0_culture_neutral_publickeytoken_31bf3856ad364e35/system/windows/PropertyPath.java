@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.objectmodel.Collection_1;
+import system.Object;
 
 
 /**
@@ -249,7 +250,7 @@ public class PropertyPath extends NetObject  {
      * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.PropertyPath.PathParameters" target="_top">.NET documentation</a>
      */
-    public Collection_1 getPathParameters() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.threading.SynchronizationLockException {
+    public Collection_1<Object> getPathParameters() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPathParameters = null;

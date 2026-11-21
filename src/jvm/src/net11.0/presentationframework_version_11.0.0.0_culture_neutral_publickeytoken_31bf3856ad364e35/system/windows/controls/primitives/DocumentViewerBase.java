@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.windows.controls.Control;
 import system.windows.DependencyObject;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.windows.controls.primitives.DocumentPageView;
 import system.windows.documents.IDocumentPaginatorSource;
 import system.windows.documents.IDocumentPaginatorSourceImplementation;
 import system.EventHandler;
@@ -653,7 +654,7 @@ public class DocumentViewerBase extends system.windows.controls.Control  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.DocumentViewerBase.PageViews" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getPageViews() throws Throwable {
+    public ReadOnlyCollection_1<DocumentPageView> getPageViews() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPageViews = null;

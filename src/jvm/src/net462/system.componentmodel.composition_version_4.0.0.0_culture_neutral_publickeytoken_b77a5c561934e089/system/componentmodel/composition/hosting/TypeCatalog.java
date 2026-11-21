@@ -160,7 +160,7 @@ public class TypeCatalog extends system.componentmodel.composition.primitives.Co
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param types the argument of type {@code IEnumerable_1}
+     * @param types the argument of type {@code IEnumerable_1<NetType>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -172,7 +172,7 @@ public class TypeCatalog extends system.componentmodel.composition.primitives.Co
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.TypeCatalog.-ctor" target="_top">.NET documentation</a>
      */
-    public TypeCatalog(IEnumerable_1 types) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
+    public TypeCatalog(IEnumerable_1<NetType> types) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -185,7 +185,7 @@ public class TypeCatalog extends system.componentmodel.composition.primitives.Co
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param types the argument of type {@code IEnumerable_1}
+     * @param types the argument of type {@code IEnumerable_1<NetType>}
      * @param definitionOrigin the argument of type {@code ICompositionElement}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -198,7 +198,7 @@ public class TypeCatalog extends system.componentmodel.composition.primitives.Co
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.TypeCatalog.-ctor" target="_top">.NET documentation</a>
      */
-    public TypeCatalog(IEnumerable_1 types, ICompositionElement definitionOrigin) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
+    public TypeCatalog(IEnumerable_1<NetType> types, ICompositionElement definitionOrigin) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -211,7 +211,7 @@ public class TypeCatalog extends system.componentmodel.composition.primitives.Co
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param types the argument of type {@code IEnumerable_1}
+     * @param types the argument of type {@code IEnumerable_1<NetType>}
      * @param reflectionContext the argument of type {@code ReflectionContext}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -224,7 +224,7 @@ public class TypeCatalog extends system.componentmodel.composition.primitives.Co
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.TypeCatalog.-ctor" target="_top">.NET documentation</a>
      */
-    public TypeCatalog(IEnumerable_1 types, ReflectionContext reflectionContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
+    public TypeCatalog(IEnumerable_1<NetType> types, ReflectionContext reflectionContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -237,7 +237,7 @@ public class TypeCatalog extends system.componentmodel.composition.primitives.Co
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param types the argument of type {@code IEnumerable_1}
+     * @param types the argument of type {@code IEnumerable_1<NetType>}
      * @param reflectionContext the argument of type {@code ReflectionContext}
      * @param definitionOrigin the argument of type {@code ICompositionElement}
      * @throws Throwable if the .NET constructor fails
@@ -251,7 +251,7 @@ public class TypeCatalog extends system.componentmodel.composition.primitives.Co
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.TypeCatalog.-ctor" target="_top">.NET documentation</a>
      */
-    public TypeCatalog(IEnumerable_1 types, ReflectionContext reflectionContext, ICompositionElement definitionOrigin) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
+    public TypeCatalog(IEnumerable_1<NetType> types, ReflectionContext reflectionContext, ICompositionElement definitionOrigin) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

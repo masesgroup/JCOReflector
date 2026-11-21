@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import microsoft.build.framework.xamltypes.BaseProperty;
 import system.collections.generic.List_1;
+import microsoft.build.framework.xamltypes.NameValuePair;
 
 
 /**
@@ -181,7 +182,7 @@ public class DynamicEnumProperty extends microsoft.build.framework.xamltypes.Bas
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.DynamicEnumProperty.ProviderSettings" target="_top">.NET documentation</a>
      */
-    public List_1 getProviderSettings() throws Throwable {
+    public List_1<NameValuePair> getProviderSettings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectProviderSettings = null;
@@ -203,7 +204,7 @@ public class DynamicEnumProperty extends microsoft.build.framework.xamltypes.Bas
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.DynamicEnumProperty.ProviderSettings" target="_top">.NET documentation</a>
      */
-    public void setProviderSettings(List_1 ProviderSettings) throws Throwable {
+    public void setProviderSettings(List_1<NameValuePair> ProviderSettings) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

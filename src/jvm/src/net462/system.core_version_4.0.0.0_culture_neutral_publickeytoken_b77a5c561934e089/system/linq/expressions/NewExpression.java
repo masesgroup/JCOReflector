@@ -43,6 +43,7 @@ import system.linq.expressions.NewExpression;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.reflection.MemberInfo;
 import system.linq.expressions.ExpressionType;
 import system.reflection.ConstructorInfo;
 
@@ -166,7 +167,7 @@ public class NewExpression extends system.linq.expressions.Expression  {
     /**
      * Invokes the .NET member Update.
      *
-     * @param arguments the argument of type {@code IEnumerable_1}
+     * @param arguments the argument of type {@code IEnumerable_1<Expression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -180,7 +181,7 @@ public class NewExpression extends system.linq.expressions.Expression  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.NewExpression.Update" target="_top">.NET documentation</a>
      */
-    public NewExpression Update(IEnumerable_1 arguments) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
+    public NewExpression Update(IEnumerable_1<Expression> arguments) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUpdate = null;
@@ -222,7 +223,7 @@ public class NewExpression extends system.linq.expressions.Expression  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.NewExpression.Arguments" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getArguments() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public ReadOnlyCollection_1<Expression> getArguments() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArguments = null;
@@ -244,7 +245,7 @@ public class NewExpression extends system.linq.expressions.Expression  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.NewExpression.Members" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getMembers() throws Throwable {
+    public ReadOnlyCollection_1<MemberInfo> getMembers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectMembers = null;

@@ -167,7 +167,7 @@ public class Channel_2<TWrite extends IJCOBridgeReflected, TRead extends IJCOBri
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Channels.Channel-2.Reader" target="_top">.NET documentation</a>
      */
-    public ChannelReader_1 getReader() throws Throwable {
+    public ChannelReader_1<TRead> getReader() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReader = null;
@@ -189,7 +189,7 @@ public class Channel_2<TWrite extends IJCOBridgeReflected, TRead extends IJCOBri
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Channels.Channel-2.Reader" target="_top">.NET documentation</a>
      */
-    public void setReader(ChannelReader_1 Reader) throws Throwable {
+    public void setReader(ChannelReader_1<TRead> Reader) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -206,7 +206,7 @@ public class Channel_2<TWrite extends IJCOBridgeReflected, TRead extends IJCOBri
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Channels.Channel-2.Writer" target="_top">.NET documentation</a>
      */
-    public ChannelWriter_1 getWriter() throws Throwable {
+    public ChannelWriter_1<TWrite> getWriter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectWriter = null;
@@ -228,7 +228,7 @@ public class Channel_2<TWrite extends IJCOBridgeReflected, TRead extends IJCOBri
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Channels.Channel-2.Writer" target="_top">.NET documentation</a>
      */
-    public void setWriter(ChannelWriter_1 Writer) throws Throwable {
+    public void setWriter(ChannelWriter_1<TWrite> Writer) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

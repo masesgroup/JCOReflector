@@ -45,6 +45,9 @@ import system.text.json.serialization.metadata.JsonTypeInfo_1;
 import system.text.json.serialization.JsonConverter;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.text.json.serialization.JsonTypeClassifierFactory;
+import system.text.json.serialization.metadata.IJsonTypeInfoResolver;
+import system.text.json.serialization.metadata.IJsonTypeInfoResolverImplementation;
 import system.text.encodings.web.JavaScriptEncoder;
 import system.text.json.JsonCommentHandling;
 import system.text.json.JsonNamingPolicy;
@@ -53,8 +56,6 @@ import system.text.json.serialization.JsonNumberHandling;
 import system.text.json.serialization.JsonObjectCreationHandling;
 import system.text.json.serialization.JsonUnknownTypeHandling;
 import system.text.json.serialization.JsonUnmappedMemberHandling;
-import system.text.json.serialization.metadata.IJsonTypeInfoResolver;
-import system.text.json.serialization.metadata.IJsonTypeInfoResolverImplementation;
 import system.text.json.serialization.ReferenceHandler;
 
 
@@ -1313,7 +1314,7 @@ public class JsonSerializerOptions extends NetObject  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.Converters" target="_top">.NET documentation</a>
      */
-    public IList_1 getConverters() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+    public IList_1<JsonConverter> getConverters() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectConverters = null;
@@ -1342,7 +1343,7 @@ public class JsonSerializerOptions extends NetObject  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.TypeClassifiers" target="_top">.NET documentation</a>
      */
-    public IList_1 getTypeClassifiers() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+    public IList_1<JsonTypeClassifierFactory> getTypeClassifiers() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTypeClassifiers = null;
@@ -1366,7 +1367,7 @@ public class JsonSerializerOptions extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.JsonSerializerOptions.TypeInfoResolverChain" target="_top">.NET documentation</a>
      */
-    public IList_1 getTypeInfoResolverChain() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public IList_1<IJsonTypeInfoResolver> getTypeInfoResolverChain() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTypeInfoResolverChain = null;

@@ -160,11 +160,11 @@ public class ConfigureNamedOptions_5<TOptions extends IJCOBridgeReflected, TDep1
      * @param dependency2 the argument of type {@code TDep2}
      * @param dependency3 the argument of type {@code TDep3}
      * @param dependency4 the argument of type {@code TDep4}
-     * @param action the argument of type {@code Action_5}
+     * @param action the argument of type {@code Action_5<TOptions, TDep1, TDep2, TDep3, TDep4>}
      * @throws Throwable if the .NET constructor fails
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.ConfigureNamedOptions-5.-ctor" target="_top">.NET documentation</a>
      */
-    public ConfigureNamedOptions_5(java.lang.String name, TDep1 dependency1, TDep2 dependency2, TDep3 dependency3, TDep4 dependency4, Action_5 action) throws Throwable {
+    public ConfigureNamedOptions_5(java.lang.String name, TDep1 dependency1, TDep2 dependency2, TDep3 dependency3, TDep4 dependency4, Action_5<TOptions, TDep1, TDep2, TDep3, TDep4> action) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -239,15 +239,15 @@ public class ConfigureNamedOptions_5<TOptions extends IJCOBridgeReflected, TDep1
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.ConfigureNamedOptions-5.Action" target="_top">.NET documentation</a>
      */
-    public Action_5 getAction() throws Throwable {
+    public Action_5<TOptions, TDep1, TDep2, TDep3, TDep4> getAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAction = null;
         try {
             retObjectAction = classInstance.Get("Action");
-            return (Action_5)retObjectAction;
+            return (Action_5<TOptions, TDep1, TDep2, TDep3, TDep4>)retObjectAction;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_5", retObjectAction != null ? retObjectAction.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_5<TOptions, TDep1, TDep2, TDep3, TDep4>", retObjectAction != null ? retObjectAction.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

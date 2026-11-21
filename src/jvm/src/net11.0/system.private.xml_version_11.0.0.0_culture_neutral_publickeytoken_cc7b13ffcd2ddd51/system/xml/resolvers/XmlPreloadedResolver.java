@@ -44,6 +44,7 @@ import system.collections.generic.IEqualityComparer_1;
 import system.collections.generic.IEqualityComparer_1Implementation;
 import system.Uri;
 import system.threading.tasks.Task_1;
+import system.Object;
 import system.io.Stream;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
@@ -219,7 +220,7 @@ public class XmlPreloadedResolver extends system.xml.XmlResolver  {
      *
      * @param fallbackResolver the argument of type {@code XmlResolver}
      * @param preloadedDtds the argument of type {@code XmlKnownDtds}
-     * @param uriComparer the argument of type {@code IEqualityComparer_1}
+     * @param uriComparer the argument of type {@code IEqualityComparer_1<Uri>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -234,7 +235,7 @@ public class XmlPreloadedResolver extends system.xml.XmlResolver  {
      * @throws system.UriFormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Resolvers.XmlPreloadedResolver.-ctor" target="_top">.NET documentation</a>
      */
-    public XmlPreloadedResolver(XmlResolver fallbackResolver, XmlKnownDtds preloadedDtds, IEqualityComparer_1 uriComparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ArgumentNullException, system.UriFormatException {
+    public XmlPreloadedResolver(XmlResolver fallbackResolver, XmlKnownDtds preloadedDtds, IEqualityComparer_1<Uri> uriComparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.diagnostics.UnreachableException, system.ArgumentNullException, system.UriFormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -393,7 +394,7 @@ public class XmlPreloadedResolver extends system.xml.XmlResolver  {
      * @throws system.xml.XmlException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Resolvers.XmlPreloadedResolver.GetEntityAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 GetEntityAsync(Uri absoluteUri, java.lang.String role, NetType ofObjectToReturn) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.NotImplementedException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException {
+    public Task_1<Object> GetEntityAsync(Uri absoluteUri, java.lang.String role, NetType ofObjectToReturn) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.NotImplementedException, system.FormatException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetEntityAsync = null;
@@ -649,7 +650,7 @@ public class XmlPreloadedResolver extends system.xml.XmlResolver  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Resolvers.XmlPreloadedResolver.PreloadedUris" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getPreloadedUris() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public IEnumerable_1<Uri> getPreloadedUris() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPreloadedUris = null;

@@ -41,7 +41,9 @@ import java.util.ArrayList;
 import system.threading.tasks.ValueTask;
 import system.threading.CancellationToken;
 import system.threading.tasks.ValueTask_1;
+import system.net.quic.QuicConnection;
 import system.net.quic.QuicClientConnectionOptions;
+import system.net.quic.QuicStream;
 import system.net.quic.QuicStreamType;
 import system.net.IPEndPoint;
 import system.net.security.SslApplicationProtocol;
@@ -282,7 +284,7 @@ public class QuicConnection extends NetObject  {
      * @throws system.OperationCanceledException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicConnection.ConnectAsync" target="_top">.NET documentation</a>
      */
-    public static ValueTask_1 ConnectAsync(QuicClientConnectionOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.MissingMemberException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException, system.net.sockets.SocketException, system.AggregateException, system.diagnostics.UnreachableException, system.security.cryptography.CryptographicException, system.security.authentication.AuthenticationException, system.net.quic.QuicException, system.threading.LockRecursionException, system.EntryPointNotFoundException, system.IndexOutOfRangeException, system.OperationCanceledException {
+    public static ValueTask_1<QuicConnection> ConnectAsync(QuicClientConnectionOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.MissingMemberException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArrayTypeMismatchException, system.net.sockets.SocketException, system.AggregateException, system.diagnostics.UnreachableException, system.security.cryptography.CryptographicException, system.security.authentication.AuthenticationException, system.net.quic.QuicException, system.threading.LockRecursionException, system.EntryPointNotFoundException, system.IndexOutOfRangeException, system.OperationCanceledException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectConnectAsync = null;
@@ -321,7 +323,7 @@ public class QuicConnection extends NetObject  {
      * @throws system.diagnostics.UnreachableException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicConnection.AcceptInboundStreamAsync" target="_top">.NET documentation</a>
      */
-    public ValueTask_1 AcceptInboundStreamAsync(CancellationToken cancellationToken) throws Throwable, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NullReferenceException, system.diagnostics.tracing.EventSourceException, system.threading.tasks.TaskSchedulerException, system.threading.ThreadStateException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.diagnostics.UnreachableException {
+    public ValueTask_1<QuicStream> AcceptInboundStreamAsync(CancellationToken cancellationToken) throws Throwable, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NullReferenceException, system.diagnostics.tracing.EventSourceException, system.threading.tasks.TaskSchedulerException, system.threading.ThreadStateException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.diagnostics.UnreachableException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAcceptInboundStreamAsync = null;
@@ -363,7 +365,7 @@ public class QuicConnection extends NetObject  {
      * @throws system.diagnostics.UnreachableException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicConnection.OpenOutboundStreamAsync" target="_top">.NET documentation</a>
      */
-    public ValueTask_1 OpenOutboundStreamAsync(QuicStreamType type, CancellationToken cancellationToken) throws Throwable, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.MissingMemberException, system.NotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.threading.tasks.TaskSchedulerException, system.threading.ThreadStateException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.diagnostics.UnreachableException {
+    public ValueTask_1<QuicStream> OpenOutboundStreamAsync(QuicStreamType type, CancellationToken cancellationToken) throws Throwable, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.MissingMemberException, system.NotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.threading.tasks.TaskSchedulerException, system.threading.ThreadStateException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.diagnostics.UnreachableException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOpenOutboundStreamAsync = null;

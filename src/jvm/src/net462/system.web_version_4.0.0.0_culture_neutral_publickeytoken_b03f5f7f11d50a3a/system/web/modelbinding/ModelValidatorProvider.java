@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.web.modelbinding.ModelValidator;
 import system.web.modelbinding.ModelMetadata;
 import system.web.modelbinding.ModelBindingExecutionContext;
 
@@ -167,7 +168,7 @@ public class ModelValidatorProvider extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelValidatorProvider.GetValidators" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetValidators(ModelMetadata metadata, ModelBindingExecutionContext context) throws Throwable {
+    public IEnumerable_1<ModelValidator> GetValidators(ModelMetadata metadata, ModelBindingExecutionContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetValidators = null;

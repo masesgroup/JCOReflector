@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.data.sqlclient.SqlAuthenticationMethod;
 import system.data.sqlclient.SqlAuthenticationProvider;
 import system.threading.tasks.Task_1;
+import system.data.sqlclient.SqlAuthenticationToken;
 import system.data.sqlclient.SqlAuthenticationParameters;
 
 
@@ -246,7 +247,7 @@ public class SqlAuthenticationProvider extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.SqlClient.SqlAuthenticationProvider.AcquireTokenAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 AcquireTokenAsync(SqlAuthenticationParameters parameters) throws Throwable {
+    public Task_1<SqlAuthenticationToken> AcquireTokenAsync(SqlAuthenticationParameters parameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAcquireTokenAsync = null;

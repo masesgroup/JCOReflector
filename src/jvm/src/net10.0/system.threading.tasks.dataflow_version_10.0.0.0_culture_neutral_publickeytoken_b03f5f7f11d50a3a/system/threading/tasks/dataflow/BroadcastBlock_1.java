@@ -163,7 +163,7 @@ public class BroadcastBlock_1<T extends IJCOBridgeReflected> extends NetObject  
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param cloningFunction the argument of type {@code Func_2}
+     * @param cloningFunction the argument of type {@code Func_2<T, T>}
      * @param dataflowBlockOptions the argument of type {@code DataflowBlockOptions}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
@@ -181,7 +181,7 @@ public class BroadcastBlock_1<T extends IJCOBridgeReflected> extends NetObject  
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.BroadcastBlock-1.-ctor" target="_top">.NET documentation</a>
      */
-    public BroadcastBlock_1(Func_2 cloningFunction, DataflowBlockOptions dataflowBlockOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.FormatException {
+    public BroadcastBlock_1(Func_2<T, T> cloningFunction, DataflowBlockOptions dataflowBlockOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -196,7 +196,7 @@ public class BroadcastBlock_1<T extends IJCOBridgeReflected> extends NetObject  
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param cloningFunction the argument of type {@code Func_2}
+     * @param cloningFunction the argument of type {@code Func_2<T, T>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -211,7 +211,7 @@ public class BroadcastBlock_1<T extends IJCOBridgeReflected> extends NetObject  
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.BroadcastBlock-1.-ctor" target="_top">.NET documentation</a>
      */
-    public BroadcastBlock_1(Func_2 cloningFunction) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.NullReferenceException {
+    public BroadcastBlock_1(Func_2<T, T> cloningFunction) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.NullReferenceException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -231,7 +231,7 @@ public class BroadcastBlock_1<T extends IJCOBridgeReflected> extends NetObject  
     /**
      * Invokes the .NET member TryReceive.
      *
-     * @param filter the argument of type {@code Predicate_1}
+     * @param filter the argument of type {@code Predicate_1<T>}
      * @param item the argument of type {@code JCORefOut<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -245,7 +245,7 @@ public class BroadcastBlock_1<T extends IJCOBridgeReflected> extends NetObject  
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.BroadcastBlock-1.TryReceive" target="_top">.NET documentation</a>
      */
-    public boolean TryReceive(Predicate_1 filter, JCORefOut<T> item) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public boolean TryReceive(Predicate_1<T> filter, JCORefOut<T> item) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTryReceive = null;
@@ -262,7 +262,7 @@ public class BroadcastBlock_1<T extends IJCOBridgeReflected> extends NetObject  
     /**
      * Invokes the .NET member LinkTo.
      *
-     * @param target the argument of type {@code ITargetBlock_1}
+     * @param target the argument of type {@code ITargetBlock_1<T>}
      * @param linkOptions the argument of type {@code DataflowLinkOptions}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -276,7 +276,7 @@ public class BroadcastBlock_1<T extends IJCOBridgeReflected> extends NetObject  
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.BroadcastBlock-1.LinkTo" target="_top">.NET documentation</a>
      */
-    public IDisposable LinkTo(ITargetBlock_1 target, DataflowLinkOptions linkOptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+    public IDisposable LinkTo(ITargetBlock_1<T> target, DataflowLinkOptions linkOptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectLinkTo = null;

@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.windows.controls.primitives.ButtonBase;
 import system.Nullable_1;
+import system.componentmodel.ListSortDirection;
 import system.windows.ComponentResourceKey;
 import system.windows.controls.DataGridColumn;
 import system.windows.media.Brush;
@@ -335,7 +336,7 @@ public class DataGridColumnHeader extends system.windows.controls.primitives.But
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.Primitives.DataGridColumnHeader.SortDirection" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getSortDirection() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public Nullable_1<ListSortDirection> getSortDirection() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSortDirection = null;

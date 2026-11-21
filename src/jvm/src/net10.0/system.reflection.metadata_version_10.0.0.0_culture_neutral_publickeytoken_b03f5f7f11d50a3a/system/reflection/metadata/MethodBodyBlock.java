@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.collections.immutable.ImmutableArray_1;
 import system.reflection.metadata.BlobReader;
 import system.reflection.metadata.MethodBodyBlock;
+import system.reflection.metadata.ExceptionRegion;
 import system.reflection.metadata.StandaloneSignatureHandle;
 
 
@@ -405,7 +406,7 @@ public class MethodBodyBlock extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.MethodBodyBlock.ExceptionRegions" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 getExceptionRegions() throws Throwable {
+    public ImmutableArray_1<ExceptionRegion> getExceptionRegions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExceptionRegions = null;

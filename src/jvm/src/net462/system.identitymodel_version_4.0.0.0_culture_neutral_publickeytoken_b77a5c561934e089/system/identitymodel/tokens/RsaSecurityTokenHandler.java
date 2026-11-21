@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.identitymodel.tokens.SecurityTokenHandler;
 import system.xml.XmlReader;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.security.claims.ClaimsIdentity;
 import system.identitymodel.tokens.SecurityToken;
 import system.xml.XmlWriter;
 
@@ -226,7 +227,7 @@ public class RsaSecurityTokenHandler extends system.identitymodel.tokens.Securit
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.RsaSecurityTokenHandler.ValidateToken" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 ValidateToken(SecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
+    public ReadOnlyCollection_1<ClaimsIdentity> ValidateToken(SecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValidateToken = null;

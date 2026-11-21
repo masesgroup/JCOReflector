@@ -42,6 +42,7 @@ import system.data.common.commandtrees.DbExpression;
 import system.data.common.commandtrees.DbExpressionVisitor;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.data.common.commandtrees.DbExpressionBinding;
 
 
 /**
@@ -189,7 +190,7 @@ public class DbCrossJoinExpression extends system.data.common.commandtrees.DbExp
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbCrossJoinExpression.Inputs" target="_top">.NET documentation</a>
      */
-    public IList_1 getInputs() throws Throwable {
+    public IList_1<DbExpressionBinding> getInputs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectInputs = null;

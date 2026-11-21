@@ -42,9 +42,12 @@ import system.globalization.CultureInfo;
 import system.web.ISubscriptionToken;
 import system.web.ISubscriptionTokenImplementation;
 import system.Action_1;
+import system.web.HttpContextBase;
 import system.IDisposable;
 import system.IDisposableImplementation;
 import system.Func_2;
+import system.web.websockets.AspNetWebSocketContext;
+import system.threading.tasks.Task;
 import system.web.websockets.AspNetWebSocketOptions;
 import system.web.IHttpHandler;
 import system.web.IHttpHandlerImplementation;
@@ -337,13 +340,13 @@ public class HttpContextBase extends NetObject  {
     /**
      * Invokes the .NET member AddOnRequestCompleted.
      *
-     * @param callback the argument of type {@code Action_1}
+     * @param callback the argument of type {@code Action_1<HttpContextBase>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpContextBase.AddOnRequestCompleted" target="_top">.NET documentation</a>
      */
-    public ISubscriptionToken AddOnRequestCompleted(Action_1 callback) throws Throwable, system.NotImplementedException {
+    public ISubscriptionToken AddOnRequestCompleted(Action_1<HttpContextBase> callback) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAddOnRequestCompleted = null;
@@ -385,12 +388,12 @@ public class HttpContextBase extends NetObject  {
     /**
      * Invokes the .NET member AcceptWebSocketRequest.
      *
-     * @param userFunc the argument of type {@code Func_2}
+     * @param userFunc the argument of type {@code Func_2<AspNetWebSocketContext, Task>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpContextBase.AcceptWebSocketRequest" target="_top">.NET documentation</a>
      */
-    public void AcceptWebSocketRequest(Func_2 userFunc) throws Throwable, system.NotImplementedException {
+    public void AcceptWebSocketRequest(Func_2<AspNetWebSocketContext, Task> userFunc) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -403,13 +406,13 @@ public class HttpContextBase extends NetObject  {
     /**
      * Invokes the .NET member AcceptWebSocketRequest.
      *
-     * @param userFunc the argument of type {@code Func_2}
+     * @param userFunc the argument of type {@code Func_2<AspNetWebSocketContext, Task>}
      * @param options the argument of type {@code AspNetWebSocketOptions}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpContextBase.AcceptWebSocketRequest" target="_top">.NET documentation</a>
      */
-    public void AcceptWebSocketRequest(Func_2 userFunc, AspNetWebSocketOptions options) throws Throwable, system.NotImplementedException {
+    public void AcceptWebSocketRequest(Func_2<AspNetWebSocketContext, Task> userFunc, AspNetWebSocketOptions options) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

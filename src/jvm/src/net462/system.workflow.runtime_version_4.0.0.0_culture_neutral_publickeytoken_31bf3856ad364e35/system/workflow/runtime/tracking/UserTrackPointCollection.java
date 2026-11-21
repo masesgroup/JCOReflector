@@ -171,14 +171,14 @@ public class UserTrackPointCollection extends system.collections.generic.List_1<
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param points the argument of type {@code IEnumerable_1}
+     * @param points the argument of type {@code IEnumerable_1<UserTrackPoint>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackPointCollection.-ctor" target="_top">.NET documentation</a>
      */
-    public UserTrackPointCollection(IEnumerable_1 points) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public UserTrackPointCollection(IEnumerable_1<UserTrackPoint> points) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

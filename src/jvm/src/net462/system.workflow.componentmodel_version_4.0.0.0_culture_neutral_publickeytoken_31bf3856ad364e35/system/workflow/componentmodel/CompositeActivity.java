@@ -185,7 +185,7 @@ public class CompositeActivity extends system.workflow.componentmodel.Activity  
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param children the argument of type {@code IEnumerable_1}
+     * @param children the argument of type {@code IEnumerable_1<Activity>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -199,7 +199,7 @@ public class CompositeActivity extends system.workflow.componentmodel.Activity  
      * @throws system.RankException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.CompositeActivity.-ctor" target="_top">.NET documentation</a>
      */
-    public CompositeActivity(IEnumerable_1 children) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.NotImplementedException, system.RankException {
+    public CompositeActivity(IEnumerable_1<Activity> children) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.OutOfMemoryException, system.NotImplementedException, system.RankException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -261,7 +261,7 @@ public class CompositeActivity extends system.workflow.componentmodel.Activity  
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.CompositeActivity.EnabledActivities" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getEnabledActivities() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public ReadOnlyCollection_1<Activity> getEnabledActivities() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEnabledActivities = null;

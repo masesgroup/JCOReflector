@@ -41,9 +41,9 @@ import java.util.ArrayList;
 import system.activities.presentation.ContextItem;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.reflection.Assembly;
 import system.activities.presentation.hosting.IMultiTargetingSupportService;
 import system.activities.presentation.hosting.IMultiTargetingSupportServiceImplementation;
-import system.reflection.Assembly;
 import system.reflection.AssemblyName;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
@@ -198,7 +198,7 @@ public class AssemblyContextControlItem extends system.activities.presentation.C
      * @throws system.reflection.TargetInvocationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Hosting.AssemblyContextControlItem.GetEnvironmentAssemblies" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetEnvironmentAssemblies(IMultiTargetingSupportService multiTargetingService) throws Throwable, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public IEnumerable_1<Assembly> GetEnvironmentAssemblies(IMultiTargetingSupportService multiTargetingService) throws Throwable, system.ArgumentNullException, system.FormatException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetEnvironmentAssemblies = null;
@@ -222,7 +222,7 @@ public class AssemblyContextControlItem extends system.activities.presentation.C
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Hosting.AssemblyContextControlItem.GetEnvironmentAssemblyNames" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetEnvironmentAssemblyNames() throws Throwable, system.NotImplementedException, system.ArgumentOutOfRangeException {
+    public IEnumerable_1<AssemblyName> GetEnvironmentAssemblyNames() throws Throwable, system.NotImplementedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetEnvironmentAssemblyNames = null;
@@ -308,7 +308,7 @@ public class AssemblyContextControlItem extends system.activities.presentation.C
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Hosting.AssemblyContextControlItem.ReferencedAssemblyNames" target="_top">.NET documentation</a>
      */
-    public IList_1 getReferencedAssemblyNames() throws Throwable {
+    public IList_1<AssemblyName> getReferencedAssemblyNames() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReferencedAssemblyNames = null;
@@ -330,7 +330,7 @@ public class AssemblyContextControlItem extends system.activities.presentation.C
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Hosting.AssemblyContextControlItem.ReferencedAssemblyNames" target="_top">.NET documentation</a>
      */
-    public void setReferencedAssemblyNames(IList_1 ReferencedAssemblyNames) throws Throwable {
+    public void setReferencedAssemblyNames(IList_1<AssemblyName> ReferencedAssemblyNames) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

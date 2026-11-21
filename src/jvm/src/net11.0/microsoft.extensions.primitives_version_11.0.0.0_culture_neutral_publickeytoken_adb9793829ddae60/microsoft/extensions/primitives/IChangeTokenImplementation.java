@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.IDisposable;
 import system.IDisposableImplementation;
 import system.Action_1;
+import system.Object;
 
 
 /**
@@ -149,13 +150,13 @@ public class IChangeTokenImplementation extends NetObject implements IChangeToke
     /**
      * Invokes the .NET member RegisterChangeCallback.
      *
-     * @param callback the argument of type {@code Action_1}
+     * @param callback the argument of type {@code Action_1<Object>}
      * @param state the argument of type {@code NetObject}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Primitives.IChangeToken.RegisterChangeCallback" target="_top">.NET documentation</a>
      */
-    public IDisposable RegisterChangeCallback(Action_1 callback, NetObject state) throws Throwable {
+    public IDisposable RegisterChangeCallback(Action_1<Object> callback, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRegisterChangeCallback = null;

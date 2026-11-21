@@ -267,7 +267,7 @@ public class PageMediaSize extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Printing.PageMediaSize.PageMediaSizeName" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getPageMediaSizeName() throws Throwable {
+    public Nullable_1<PageMediaSizeName> getPageMediaSizeName() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPageMediaSizeName = null;

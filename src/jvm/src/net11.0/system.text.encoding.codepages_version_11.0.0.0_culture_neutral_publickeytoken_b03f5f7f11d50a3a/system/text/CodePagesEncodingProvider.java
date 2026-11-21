@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.text.EncodingProvider;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.text.EncodingInfo;
 import system.text.Encoding;
 
 
@@ -178,7 +179,7 @@ public class CodePagesEncodingProvider extends system.text.EncodingProvider  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.CodePagesEncodingProvider.GetEncodings" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetEncodings() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.LockRecursionException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.io.IOException, system.IndexOutOfRangeException {
+    public IEnumerable_1<EncodingInfo> GetEncodings() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.LockRecursionException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.io.IOException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetEncodings = null;

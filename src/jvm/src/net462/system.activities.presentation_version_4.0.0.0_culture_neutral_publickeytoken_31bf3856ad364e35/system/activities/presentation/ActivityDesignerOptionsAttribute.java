@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.Attribute;
 import system.Func_2;
+import system.activities.presentation.model.ModelItem;
+import system.windows.media.DrawingBrush;
 
 
 /**
@@ -257,15 +259,15 @@ public class ActivityDesignerOptionsAttribute extends system.Attribute  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ActivityDesignerOptionsAttribute.OutlineViewIconProvider" target="_top">.NET documentation</a>
      */
-    public Func_2 getOutlineViewIconProvider() throws Throwable {
+    public Func_2<ModelItem, DrawingBrush> getOutlineViewIconProvider() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOutlineViewIconProvider = null;
         try {
             retObjectOutlineViewIconProvider = classInstance.Get("OutlineViewIconProvider");
-            return (Func_2)retObjectOutlineViewIconProvider;
+            return (Func_2<ModelItem, DrawingBrush>)retObjectOutlineViewIconProvider;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2", retObjectOutlineViewIconProvider != null ? retObjectOutlineViewIconProvider.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2<ModelItem, DrawingBrush>", retObjectOutlineViewIconProvider != null ? retObjectOutlineViewIconProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,7 +280,7 @@ public class ActivityDesignerOptionsAttribute extends system.Attribute  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ActivityDesignerOptionsAttribute.OutlineViewIconProvider" target="_top">.NET documentation</a>
      */
-    public void setOutlineViewIconProvider(Func_2 OutlineViewIconProvider) throws Throwable {
+    public void setOutlineViewIconProvider(Func_2<ModelItem, DrawingBrush> OutlineViewIconProvider) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

@@ -42,6 +42,8 @@ import system.identitymodel.tokens.SecurityToken;
 import system.xml.UniqueId;
 import system.DateTime;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.identitymodel.policy.IAuthorizationPolicy;
+import system.identitymodel.policy.IAuthorizationPolicyImplementation;
 import system.identitymodel.tokens.SecurityKeyIdentifierClause;
 import system.servicemodel.security.tokens.SecurityContextSecurityToken;
 import system.servicemodel.security.SecurityStateEncoder;
@@ -225,7 +227,7 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
      * @param key the argument of type {@code byte[]}
      * @param validFrom the argument of type {@code DateTime}
      * @param validTo the argument of type {@code DateTime}
-     * @param authorizationPolicies the argument of type {@code ReadOnlyCollection_1}
+     * @param authorizationPolicies the argument of type {@code ReadOnlyCollection_1<IAuthorizationPolicy>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -243,7 +245,7 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecurityContextSecurityToken.-ctor" target="_top">.NET documentation</a>
      */
-    public SecurityContextSecurityToken(UniqueId contextId, java.lang.String id, byte[] key, DateTime validFrom, DateTime validTo, ReadOnlyCollection_1 authorizationPolicies) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.NotSupportedException {
+    public SecurityContextSecurityToken(UniqueId contextId, java.lang.String id, byte[] key, DateTime validFrom, DateTime validTo, ReadOnlyCollection_1<IAuthorizationPolicy> authorizationPolicies) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -264,7 +266,7 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
      * @param keyGeneration the argument of type {@code UniqueId}
      * @param keyEffectiveTime the argument of type {@code DateTime}
      * @param keyExpirationTime the argument of type {@code DateTime}
-     * @param authorizationPolicies the argument of type {@code ReadOnlyCollection_1}
+     * @param authorizationPolicies the argument of type {@code ReadOnlyCollection_1<IAuthorizationPolicy>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -282,7 +284,7 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecurityContextSecurityToken.-ctor" target="_top">.NET documentation</a>
      */
-    public SecurityContextSecurityToken(UniqueId contextId, java.lang.String id, byte[] key, DateTime validFrom, DateTime validTo, UniqueId keyGeneration, DateTime keyEffectiveTime, DateTime keyExpirationTime, ReadOnlyCollection_1 authorizationPolicies) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.NotSupportedException {
+    public SecurityContextSecurityToken(UniqueId contextId, java.lang.String id, byte[] key, DateTime validFrom, DateTime validTo, UniqueId keyGeneration, DateTime keyEffectiveTime, DateTime keyExpirationTime, ReadOnlyCollection_1<IAuthorizationPolicy> authorizationPolicies) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -349,7 +351,7 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
      * @param key the argument of type {@code byte[]}
      * @param validFrom the argument of type {@code DateTime}
      * @param validTo the argument of type {@code DateTime}
-     * @param authorizationPolicies the argument of type {@code ReadOnlyCollection_1}
+     * @param authorizationPolicies the argument of type {@code ReadOnlyCollection_1<IAuthorizationPolicy>}
      * @param securityStateEncoder the argument of type {@code SecurityStateEncoder}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -373,7 +375,7 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
      * @throws system.UriFormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecurityContextSecurityToken.CreateCookieSecurityContextToken" target="_top">.NET documentation</a>
      */
-    public static SecurityContextSecurityToken CreateCookieSecurityContextToken(UniqueId contextId, java.lang.String id, byte[] key, DateTime validFrom, DateTime validTo, ReadOnlyCollection_1 authorizationPolicies, SecurityStateEncoder securityStateEncoder) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.security.SecurityException, system.AccessViolationException, system.PlatformNotSupportedException, system.SystemException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.NotImplementedException, system.UriFormatException {
+    public static SecurityContextSecurityToken CreateCookieSecurityContextToken(UniqueId contextId, java.lang.String id, byte[] key, DateTime validFrom, DateTime validTo, ReadOnlyCollection_1<IAuthorizationPolicy> authorizationPolicies, SecurityStateEncoder securityStateEncoder) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.security.SecurityException, system.AccessViolationException, system.PlatformNotSupportedException, system.SystemException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.NotImplementedException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateCookieSecurityContextToken = null;
@@ -396,7 +398,7 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
      * @param dupParam2 the argument of type {@code JCORefOut}
      * @param dupParam3 the argument of type {@code DateTime}
      * @param dupParam4 the argument of type {@code DateTime}
-     * @param dupParam5 the argument of type {@code ReadOnlyCollection_1}
+     * @param dupParam5 the argument of type {@code ReadOnlyCollection_1<IAuthorizationPolicy>}
      * @param dupParam6 the argument of type {@code SecurityStateEncoder}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -420,7 +422,7 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
      * @throws system.UriFormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecurityContextSecurityToken.CreateCookieSecurityContextToken" target="_top">.NET documentation</a>
      */
-    public static SecurityContextSecurityToken CreateCookieSecurityContextToken(UniqueId dupParam0, java.lang.String dupParam1, JCORefOut dupParam2, DateTime dupParam3, DateTime dupParam4, ReadOnlyCollection_1 dupParam5, SecurityStateEncoder dupParam6) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.security.SecurityException, system.AccessViolationException, system.PlatformNotSupportedException, system.SystemException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.NotImplementedException, system.UriFormatException {
+    public static SecurityContextSecurityToken CreateCookieSecurityContextToken(UniqueId dupParam0, java.lang.String dupParam1, JCORefOut dupParam2, DateTime dupParam3, DateTime dupParam4, ReadOnlyCollection_1<IAuthorizationPolicy> dupParam5, SecurityStateEncoder dupParam6) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.OverflowException, system.collections.generic.KeyNotFoundException, system.security.SecurityException, system.AccessViolationException, system.PlatformNotSupportedException, system.SystemException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.NotImplementedException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateCookieSecurityContextToken = null;
@@ -446,7 +448,7 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
      * @param keyGeneration the argument of type {@code UniqueId}
      * @param keyEffectiveTime the argument of type {@code DateTime}
      * @param keyExpirationTime the argument of type {@code DateTime}
-     * @param authorizationPolicies the argument of type {@code ReadOnlyCollection_1}
+     * @param authorizationPolicies the argument of type {@code ReadOnlyCollection_1<IAuthorizationPolicy>}
      * @param securityStateEncoder the argument of type {@code SecurityStateEncoder}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -473,7 +475,7 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
      * @throws system.UriFormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecurityContextSecurityToken.CreateCookieSecurityContextToken" target="_top">.NET documentation</a>
      */
-    public static SecurityContextSecurityToken CreateCookieSecurityContextToken(UniqueId contextId, java.lang.String id, byte[] key, DateTime validFrom, DateTime validTo, UniqueId keyGeneration, DateTime keyEffectiveTime, DateTime keyExpirationTime, ReadOnlyCollection_1 authorizationPolicies, SecurityStateEncoder securityStateEncoder) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.PlatformNotSupportedException, system.SystemException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.NotImplementedException, system.UriFormatException {
+    public static SecurityContextSecurityToken CreateCookieSecurityContextToken(UniqueId contextId, java.lang.String id, byte[] key, DateTime validFrom, DateTime validTo, UniqueId keyGeneration, DateTime keyEffectiveTime, DateTime keyExpirationTime, ReadOnlyCollection_1<IAuthorizationPolicy> authorizationPolicies, SecurityStateEncoder securityStateEncoder) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.PlatformNotSupportedException, system.SystemException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.NotImplementedException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateCookieSecurityContextToken = null;
@@ -499,7 +501,7 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
      * @param dupParam5 the argument of type {@code UniqueId}
      * @param dupParam6 the argument of type {@code DateTime}
      * @param dupParam7 the argument of type {@code DateTime}
-     * @param dupParam8 the argument of type {@code ReadOnlyCollection_1}
+     * @param dupParam8 the argument of type {@code ReadOnlyCollection_1<IAuthorizationPolicy>}
      * @param dupParam9 the argument of type {@code SecurityStateEncoder}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -526,7 +528,7 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
      * @throws system.UriFormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecurityContextSecurityToken.CreateCookieSecurityContextToken" target="_top">.NET documentation</a>
      */
-    public static SecurityContextSecurityToken CreateCookieSecurityContextToken(UniqueId dupParam0, java.lang.String dupParam1, JCORefOut dupParam2, DateTime dupParam3, DateTime dupParam4, UniqueId dupParam5, DateTime dupParam6, DateTime dupParam7, ReadOnlyCollection_1 dupParam8, SecurityStateEncoder dupParam9) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.PlatformNotSupportedException, system.SystemException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.NotImplementedException, system.UriFormatException {
+    public static SecurityContextSecurityToken CreateCookieSecurityContextToken(UniqueId dupParam0, java.lang.String dupParam1, JCORefOut dupParam2, DateTime dupParam3, DateTime dupParam4, UniqueId dupParam5, DateTime dupParam6, DateTime dupParam7, ReadOnlyCollection_1<IAuthorizationPolicy> dupParam8, SecurityStateEncoder dupParam9) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.PlatformNotSupportedException, system.SystemException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.NotImplementedException, system.UriFormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateCookieSecurityContextToken = null;
@@ -616,7 +618,7 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecurityContextSecurityToken.AuthorizationPolicies" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getAuthorizationPolicies() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
+    public ReadOnlyCollection_1<IAuthorizationPolicy> getAuthorizationPolicies() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAuthorizationPolicies = null;
@@ -638,7 +640,7 @@ public class SecurityContextSecurityToken extends system.identitymodel.tokens.Se
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.Tokens.SecurityContextSecurityToken.AuthorizationPolicies" target="_top">.NET documentation</a>
      */
-    public void setAuthorizationPolicies(ReadOnlyCollection_1 AuthorizationPolicies) throws Throwable {
+    public void setAuthorizationPolicies(ReadOnlyCollection_1<IAuthorizationPolicy> AuthorizationPolicies) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

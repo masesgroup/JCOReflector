@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.net.http.HttpRequestMessage;
 import system.Action_1;
+import system.net.http.metrics.HttpMetricsEnrichmentContext;
 import system.net.http.HttpResponseMessage;
 
 
@@ -163,7 +164,7 @@ public class HttpMetricsEnrichmentContext extends NetObject  {
      * Invokes the .NET member AddCallback.
      *
      * @param request the argument of type {@code HttpRequestMessage}
-     * @param callback the argument of type {@code Action_1}
+     * @param callback the argument of type {@code Action_1<HttpMetricsEnrichmentContext>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -175,7 +176,7 @@ public class HttpMetricsEnrichmentContext extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Metrics.HttpMetricsEnrichmentContext.AddCallback" target="_top">.NET documentation</a>
      */
-    public static void AddCallback(HttpRequestMessage request, Action_1 callback) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException {
+    public static void AddCallback(HttpRequestMessage request, Action_1<HttpMetricsEnrichmentContext> callback) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

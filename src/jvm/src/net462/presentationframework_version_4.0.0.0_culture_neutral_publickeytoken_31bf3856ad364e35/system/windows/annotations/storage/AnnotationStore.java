@@ -40,8 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
-import system.windows.annotations.ContentLocator;
 import system.windows.annotations.Annotation;
+import system.windows.annotations.ContentLocator;
 import system.Guid;
 import system.windows.annotations.AnnotationAuthorChangedEventHandler;
 import system.windows.annotations.AnnotationResourceChangedEventHandler;
@@ -169,7 +169,7 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Annotations.Storage.AnnotationStore.GetAnnotations" target="_top">.NET documentation</a>
      */
-    public IList_1 GetAnnotations() throws Throwable {
+    public IList_1<Annotation> GetAnnotations() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetAnnotations = null;
@@ -192,7 +192,7 @@ public class AnnotationStore extends NetObject implements AutoCloseable {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Annotations.Storage.AnnotationStore.GetAnnotations" target="_top">.NET documentation</a>
      */
-    public IList_1 GetAnnotations(ContentLocator anchorLocator) throws Throwable {
+    public IList_1<Annotation> GetAnnotations(ContentLocator anchorLocator) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetAnnotations = null;

@@ -116,7 +116,7 @@ public interface IBufferWriter_1<T extends IJCOBridgeReflected> extends IJCOBrid
 
     // Methods section
     
-    public Memory_1 GetMemory(int sizeHint) throws Throwable;
+    public Memory_1<T> GetMemory(int sizeHint) throws Throwable;
 
     public void Advance(int count) throws Throwable;
 

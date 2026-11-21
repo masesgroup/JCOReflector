@@ -42,6 +42,7 @@ import system.codedom.compiler.CompilerParameters;
 import system.workflow.componentmodel.compiler.WorkflowCompilerParameters;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.codedom.CodeCompileUnit;
 import system.collections.specialized.StringCollection;
 
 
@@ -309,7 +310,7 @@ public class WorkflowCompilerParameters extends system.codedom.compiler.Compiler
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.WorkflowCompilerParameters.UserCodeCompileUnits" target="_top">.NET documentation</a>
      */
-    public IList_1 getUserCodeCompileUnits() throws Throwable {
+    public IList_1<CodeCompileUnit> getUserCodeCompileUnits() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUserCodeCompileUnits = null;

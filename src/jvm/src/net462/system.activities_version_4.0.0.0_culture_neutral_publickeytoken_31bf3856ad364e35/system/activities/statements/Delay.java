@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.activities.NativeActivity;
 import system.activities.InArgument_1;
+import system.TimeSpan;
 
 
 /**
@@ -182,7 +183,7 @@ public class Delay extends system.activities.NativeActivity  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.Delay.Duration" target="_top">.NET documentation</a>
      */
-    public InArgument_1 getDuration() throws Throwable {
+    public InArgument_1<TimeSpan> getDuration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDuration = null;
@@ -204,7 +205,7 @@ public class Delay extends system.activities.NativeActivity  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.Delay.Duration" target="_top">.NET documentation</a>
      */
-    public void setDuration(InArgument_1 Duration) throws Throwable {
+    public void setDuration(InArgument_1<TimeSpan> Duration) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

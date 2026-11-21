@@ -40,6 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.configuration.ConfigurationElement;
 import system.collections.objectmodel.Collection_1;
+import system.servicemodel.description.IPolicyImportExtension;
+import system.servicemodel.description.IPolicyImportExtensionImplementation;
+import system.servicemodel.description.IWsdlImportExtension;
+import system.servicemodel.description.IWsdlImportExtensionImplementation;
 import system.servicemodel.configuration.PolicyImporterElementCollection;
 import system.servicemodel.configuration.WsdlImporterElementCollection;
 
@@ -201,7 +205,7 @@ public class MetadataElement extends system.configuration.ConfigurationElement  
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Configuration.MetadataElement.LoadPolicyImportExtensions" target="_top">.NET documentation</a>
      */
-    public Collection_1 LoadPolicyImportExtensions() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException, system.MulticastNotSupportedException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
+    public Collection_1<IPolicyImportExtension> LoadPolicyImportExtensions() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException, system.MulticastNotSupportedException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectLoadPolicyImportExtensions = null;
@@ -241,7 +245,7 @@ public class MetadataElement extends system.configuration.ConfigurationElement  
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Configuration.MetadataElement.LoadWsdlImportExtensions" target="_top">.NET documentation</a>
      */
-    public Collection_1 LoadWsdlImportExtensions() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException, system.MulticastNotSupportedException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
+    public Collection_1<IWsdlImportExtension> LoadWsdlImportExtensions() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException, system.MulticastNotSupportedException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectLoadWsdlImportExtensions = null;

@@ -40,10 +40,13 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.reflection.CustomAttributeData;
 import system.reflection.Assembly;
 import system.reflection.MemberInfo;
 import system.reflection.Module;
 import system.reflection.ParameterInfo;
+import system.reflection.CustomAttributeNamedArgument;
+import system.reflection.CustomAttributeTypedArgument;
 import system.reflection.ConstructorInfo;
 
 
@@ -180,7 +183,7 @@ public class CustomAttributeData extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.CustomAttributeData.GetCustomAttributes" target="_top">.NET documentation</a>
      */
-    public static IList_1 GetCustomAttributes(Assembly target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static IList_1<CustomAttributeData> GetCustomAttributes(Assembly target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttributes = null;
@@ -212,7 +215,7 @@ public class CustomAttributeData extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.CustomAttributeData.GetCustomAttributes" target="_top">.NET documentation</a>
      */
-    public static IList_1 GetCustomAttributes(MemberInfo target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static IList_1<CustomAttributeData> GetCustomAttributes(MemberInfo target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttributes = null;
@@ -244,7 +247,7 @@ public class CustomAttributeData extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.CustomAttributeData.GetCustomAttributes" target="_top">.NET documentation</a>
      */
-    public static IList_1 GetCustomAttributes(Module target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static IList_1<CustomAttributeData> GetCustomAttributes(Module target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttributes = null;
@@ -276,7 +279,7 @@ public class CustomAttributeData extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.CustomAttributeData.GetCustomAttributes" target="_top">.NET documentation</a>
      */
-    public static IList_1 GetCustomAttributes(ParameterInfo target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static IList_1<CustomAttributeData> GetCustomAttributes(ParameterInfo target) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttributes = null;
@@ -302,7 +305,7 @@ public class CustomAttributeData extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.CustomAttributeData.NamedArguments" target="_top">.NET documentation</a>
      */
-    public IList_1 getNamedArguments() throws Throwable {
+    public IList_1<CustomAttributeNamedArgument> getNamedArguments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectNamedArguments = null;
@@ -324,7 +327,7 @@ public class CustomAttributeData extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.CustomAttributeData.ConstructorArguments" target="_top">.NET documentation</a>
      */
-    public IList_1 getConstructorArguments() throws Throwable {
+    public IList_1<CustomAttributeTypedArgument> getConstructorArguments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectConstructorArguments = null;

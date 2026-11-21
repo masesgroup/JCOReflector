@@ -45,6 +45,7 @@ import system.xml.schema.XmlSchema;
 import system.xml.XmlReader;
 import system.xml.XmlWriter;
 import system.collections.objectmodel.Collection_1;
+import system.windows.annotations.AnnotationResource;
 import system.windows.annotations.AnnotationAuthorChangedEventHandler;
 import system.windows.annotations.AnnotationResourceChangedEventHandler;
 
@@ -382,7 +383,7 @@ public class Annotation extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Annotations.Annotation.Anchors" target="_top">.NET documentation</a>
      */
-    public Collection_1 getAnchors() throws Throwable {
+    public Collection_1<AnnotationResource> getAnchors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAnchors = null;
@@ -404,7 +405,7 @@ public class Annotation extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Annotations.Annotation.Cargos" target="_top">.NET documentation</a>
      */
-    public Collection_1 getCargos() throws Throwable {
+    public Collection_1<AnnotationResource> getCargos() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCargos = null;

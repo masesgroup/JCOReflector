@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.generic.List_1;
+import microsoft.extensions.diagnostics.tracing.TracingRule;
 
 
 /**
@@ -180,7 +181,7 @@ public class TracingOptions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Diagnostics.Tracing.TracingOptions.Rules" target="_top">.NET documentation</a>
      */
-    public List_1 getRules() throws Throwable {
+    public List_1<TracingRule> getRules() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRules = null;

@@ -43,6 +43,7 @@ import system.activities.Activity_1;
 import system.activities.DelegateArgument;
 import system.activities.Variable;
 import system.linq.expressions.Expression_1;
+import system.Func_2;
 import system.activities.ActivityContext;
 
 
@@ -184,7 +185,7 @@ public class InArgument_1<T extends IJCOBridgeReflected> extends system.activiti
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param expression the argument of type {@code Activity_1}
+     * @param expression the argument of type {@code Activity_1<T>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -195,7 +196,7 @@ public class InArgument_1<T extends IJCOBridgeReflected> extends system.activiti
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.InArgument-1.-ctor" target="_top">.NET documentation</a>
      */
-    public InArgument_1(Activity_1 expression) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public InArgument_1(Activity_1<T> expression) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -262,7 +263,7 @@ public class InArgument_1<T extends IJCOBridgeReflected> extends system.activiti
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param expression the argument of type {@code Expression_1}
+     * @param expression the argument of type {@code Expression_1<Func_2<ActivityContext, T>>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -273,7 +274,7 @@ public class InArgument_1<T extends IJCOBridgeReflected> extends system.activiti
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.InArgument-1.-ctor" target="_top">.NET documentation</a>
      */
-    public InArgument_1(Expression_1 expression) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public InArgument_1(Expression_1<Func_2<ActivityContext, T>> expression) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

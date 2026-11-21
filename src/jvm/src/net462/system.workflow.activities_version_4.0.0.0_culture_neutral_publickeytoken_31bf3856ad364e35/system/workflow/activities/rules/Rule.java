@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.workflow.activities.rules.RuleCondition;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.workflow.activities.rules.RuleAction;
 import system.workflow.activities.rules.Rule;
 import system.workflow.activities.rules.RuleReevaluationBehavior;
 
@@ -191,11 +192,11 @@ public class Rule extends NetObject  {
      *
      * @param name the argument of type {@code java.lang.String}
      * @param condition the argument of type {@code RuleCondition}
-     * @param thenActions the argument of type {@code IList_1}
+     * @param thenActions the argument of type {@code IList_1<RuleAction>}
      * @throws Throwable if the .NET constructor fails
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.Rule.-ctor" target="_top">.NET documentation</a>
      */
-    public Rule(java.lang.String name, RuleCondition condition, IList_1 thenActions) throws Throwable {
+    public Rule(java.lang.String name, RuleCondition condition, IList_1<RuleAction> thenActions) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -210,12 +211,12 @@ public class Rule extends NetObject  {
      *
      * @param name the argument of type {@code java.lang.String}
      * @param condition the argument of type {@code RuleCondition}
-     * @param thenActions the argument of type {@code IList_1}
-     * @param elseActions the argument of type {@code IList_1}
+     * @param thenActions the argument of type {@code IList_1<RuleAction>}
+     * @param elseActions the argument of type {@code IList_1<RuleAction>}
      * @throws Throwable if the .NET constructor fails
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.Rule.-ctor" target="_top">.NET documentation</a>
      */
-    public Rule(java.lang.String name, RuleCondition condition, IList_1 thenActions, IList_1 elseActions) throws Throwable {
+    public Rule(java.lang.String name, RuleCondition condition, IList_1<RuleAction> thenActions, IList_1<RuleAction> elseActions) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -384,7 +385,7 @@ public class Rule extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.Rule.ElseActions" target="_top">.NET documentation</a>
      */
-    public IList_1 getElseActions() throws Throwable {
+    public IList_1<RuleAction> getElseActions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectElseActions = null;
@@ -406,7 +407,7 @@ public class Rule extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.Rule.ThenActions" target="_top">.NET documentation</a>
      */
-    public IList_1 getThenActions() throws Throwable {
+    public IList_1<RuleAction> getThenActions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectThenActions = null;

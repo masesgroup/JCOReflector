@@ -42,6 +42,7 @@ import system.globalization.CultureInfo;
 import system.collections.IComparer;
 import system.collections.IComparerImplementation;
 import system.collections.objectmodel.ObservableCollection_1;
+import system.Object;
 import system.componentmodel.SortDescriptionCollection;
 
 
@@ -312,7 +313,7 @@ public class GroupDescription extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.GroupDescription.GroupNames" target="_top">.NET documentation</a>
      */
-    public ObservableCollection_1 getGroupNames() throws Throwable {
+    public ObservableCollection_1<Object> getGroupNames() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGroupNames = null;

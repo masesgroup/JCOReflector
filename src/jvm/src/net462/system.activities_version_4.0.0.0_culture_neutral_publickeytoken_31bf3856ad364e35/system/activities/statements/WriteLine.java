@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.activities.CodeActivity;
 import system.activities.InArgument_1;
+import system.io.TextWriter;
 
 
 /**
@@ -181,7 +182,7 @@ public class WriteLine extends system.activities.CodeActivity  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.WriteLine.TextWriter" target="_top">.NET documentation</a>
      */
-    public InArgument_1 getTextWriter() throws Throwable {
+    public InArgument_1<TextWriter> getTextWriter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTextWriter = null;
@@ -203,7 +204,7 @@ public class WriteLine extends system.activities.CodeActivity  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.WriteLine.TextWriter" target="_top">.NET documentation</a>
      */
-    public void setTextWriter(InArgument_1 TextWriter) throws Throwable {
+    public void setTextWriter(InArgument_1<TextWriter> TextWriter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

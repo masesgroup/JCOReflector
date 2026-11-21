@@ -125,7 +125,7 @@ public interface IConfiguration extends IJCOBridgeReflected {
 
     public IChangeToken GetReloadToken() throws Throwable;
 
-    public IEnumerable_1 GetChildren() throws Throwable;
+    public IEnumerable_1<IConfigurationSection> GetChildren() throws Throwable;
 
 
     

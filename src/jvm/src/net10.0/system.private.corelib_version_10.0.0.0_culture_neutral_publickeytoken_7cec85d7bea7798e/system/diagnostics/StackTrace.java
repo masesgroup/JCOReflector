@@ -270,7 +270,7 @@ public class StackTrace extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param frames the argument of type {@code IEnumerable_1}
+     * @param frames the argument of type {@code IEnumerable_1<StackFrame>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -283,7 +283,7 @@ public class StackTrace extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.StackTrace.-ctor" target="_top">.NET documentation</a>
      */
-    public StackTrace(IEnumerable_1 frames) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public StackTrace(IEnumerable_1<StackFrame> frames) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

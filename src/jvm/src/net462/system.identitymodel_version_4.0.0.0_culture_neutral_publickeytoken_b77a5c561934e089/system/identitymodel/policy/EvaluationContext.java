@@ -276,7 +276,7 @@ public class EvaluationContext extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Policy.EvaluationContext.ClaimSets" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getClaimSets() throws Throwable {
+    public ReadOnlyCollection_1<ClaimSet> getClaimSets() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectClaimSets = null;

@@ -43,6 +43,7 @@ import system.identitymodel.selectors.AudienceUriMode;
 import system.identitymodel.tokens.SecurityToken;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.Uri;
 import system.identitymodel.selectors.X509CertificateValidator;
 
 
@@ -248,8 +249,8 @@ public class SamlSecurityTokenRequirement extends NetObject  {
     /**
      * Invokes the .NET member ValidateAudienceRestriction.
      *
-     * @param allowedAudienceUris the argument of type {@code IList_1}
-     * @param tokenAudiences the argument of type {@code IList_1}
+     * @param allowedAudienceUris the argument of type {@code IList_1<Uri>}
+     * @param tokenAudiences the argument of type {@code IList_1<Uri>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -266,7 +267,7 @@ public class SamlSecurityTokenRequirement extends NetObject  {
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlSecurityTokenRequirement.ValidateAudienceRestriction" target="_top">.NET documentation</a>
      */
-    public void ValidateAudienceRestriction(IList_1 allowedAudienceUris, IList_1 tokenAudiences) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.UriFormatException, system.collections.generic.KeyNotFoundException {
+    public void ValidateAudienceRestriction(IList_1<Uri> allowedAudienceUris, IList_1<Uri> tokenAudiences) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.UriFormatException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

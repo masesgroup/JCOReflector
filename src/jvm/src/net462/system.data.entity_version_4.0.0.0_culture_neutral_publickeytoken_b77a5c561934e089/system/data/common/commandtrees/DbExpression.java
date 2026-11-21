@@ -40,8 +40,12 @@ import java.util.ArrayList;
 // Import section
 import system.data.common.commandtrees.DbExpression;
 import system.Nullable_1;
+import system.DateTime;
+import system.DateTimeOffset;
+import system.Decimal;
 import system.data.spatial.DbGeography;
 import system.data.spatial.DbGeometry;
+import system.Guid;
 import system.data.common.commandtrees.DbExpressionVisitor;
 import system.data.common.commandtrees.DbExpressionKind;
 import system.data.metadata.edm.TypeUsage;
@@ -288,7 +292,7 @@ public class DbExpression extends NetObject  {
     /**
      * Invokes the .NET member FromDateTime.
      *
-     * @param value the argument of type {@code Nullable_1}
+     * @param value the argument of type {@code Nullable_1<DateTime>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -301,7 +305,7 @@ public class DbExpression extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpression.FromDateTime" target="_top">.NET documentation</a>
      */
-    public static DbExpression FromDateTime(Nullable_1 value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public static DbExpression FromDateTime(Nullable_1<DateTime> value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromDateTime = null;
@@ -319,7 +323,7 @@ public class DbExpression extends NetObject  {
     /**
      * Invokes the .NET member FromDateTimeOffset.
      *
-     * @param value the argument of type {@code Nullable_1}
+     * @param value the argument of type {@code Nullable_1<DateTimeOffset>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -332,7 +336,7 @@ public class DbExpression extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpression.FromDateTimeOffset" target="_top">.NET documentation</a>
      */
-    public static DbExpression FromDateTimeOffset(Nullable_1 value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public static DbExpression FromDateTimeOffset(Nullable_1<DateTimeOffset> value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromDateTimeOffset = null;
@@ -350,7 +354,7 @@ public class DbExpression extends NetObject  {
     /**
      * Invokes the .NET member FromDecimal.
      *
-     * @param value the argument of type {@code Nullable_1}
+     * @param value the argument of type {@code Nullable_1<Decimal>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -363,7 +367,7 @@ public class DbExpression extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpression.FromDecimal" target="_top">.NET documentation</a>
      */
-    public static DbExpression FromDecimal(Nullable_1 value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public static DbExpression FromDecimal(Nullable_1<Decimal> value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromDecimal = null;
@@ -474,7 +478,7 @@ public class DbExpression extends NetObject  {
     /**
      * Invokes the .NET member FromGuid.
      *
-     * @param value the argument of type {@code Nullable_1}
+     * @param value the argument of type {@code Nullable_1<Guid>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -487,7 +491,7 @@ public class DbExpression extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbExpression.FromGuid" target="_top">.NET documentation</a>
      */
-    public static DbExpression FromGuid(Nullable_1 value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public static DbExpression FromGuid(Nullable_1<Guid> value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromGuid = null;

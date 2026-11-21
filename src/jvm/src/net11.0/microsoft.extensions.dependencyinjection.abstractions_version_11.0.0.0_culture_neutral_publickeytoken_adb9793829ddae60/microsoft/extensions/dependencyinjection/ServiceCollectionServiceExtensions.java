@@ -41,6 +41,9 @@ import java.util.ArrayList;
 import microsoft.extensions.dependencyinjection.IServiceCollection;
 import microsoft.extensions.dependencyinjection.IServiceCollectionImplementation;
 import system.Func_3;
+import system.IServiceProvider;
+import system.IServiceProviderImplementation;
+import system.Object;
 import system.Func_2;
 
 
@@ -164,7 +167,7 @@ public class ServiceCollectionServiceExtensions extends NetObject  {
      * @param services the argument of type {@code IServiceCollection}
      * @param serviceType the argument of type {@code NetType}
      * @param serviceKey the argument of type {@code NetObject}
-     * @param implementationFactory the argument of type {@code Func_3}
+     * @param implementationFactory the argument of type {@code Func_3<IServiceProvider, Object, Object>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -176,7 +179,7 @@ public class ServiceCollectionServiceExtensions extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddKeyedScoped" target="_top">.NET documentation</a>
      */
-    public static IServiceCollection AddKeyedScoped(IServiceCollection services, NetType serviceType, NetObject serviceKey, Func_3 implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public static IServiceCollection AddKeyedScoped(IServiceCollection services, NetType serviceType, NetObject serviceKey, Func_3<IServiceProvider, Object, Object> implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddKeyedScoped = null;
@@ -329,7 +332,7 @@ public class ServiceCollectionServiceExtensions extends NetObject  {
      * @param services the argument of type {@code IServiceCollection}
      * @param serviceType the argument of type {@code NetType}
      * @param serviceKey the argument of type {@code NetObject}
-     * @param implementationFactory the argument of type {@code Func_3}
+     * @param implementationFactory the argument of type {@code Func_3<IServiceProvider, Object, Object>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -341,7 +344,7 @@ public class ServiceCollectionServiceExtensions extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddKeyedSingleton" target="_top">.NET documentation</a>
      */
-    public static IServiceCollection AddKeyedSingleton(IServiceCollection services, NetType serviceType, NetObject serviceKey, Func_3 implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public static IServiceCollection AddKeyedSingleton(IServiceCollection services, NetType serviceType, NetObject serviceKey, Func_3<IServiceProvider, Object, Object> implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddKeyedSingleton = null;
@@ -560,7 +563,7 @@ public class ServiceCollectionServiceExtensions extends NetObject  {
      * @param services the argument of type {@code IServiceCollection}
      * @param serviceType the argument of type {@code NetType}
      * @param serviceKey the argument of type {@code NetObject}
-     * @param implementationFactory the argument of type {@code Func_3}
+     * @param implementationFactory the argument of type {@code Func_3<IServiceProvider, Object, Object>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -572,7 +575,7 @@ public class ServiceCollectionServiceExtensions extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddKeyedTransient" target="_top">.NET documentation</a>
      */
-    public static IServiceCollection AddKeyedTransient(IServiceCollection services, NetType serviceType, NetObject serviceKey, Func_3 implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public static IServiceCollection AddKeyedTransient(IServiceCollection services, NetType serviceType, NetObject serviceKey, Func_3<IServiceProvider, Object, Object> implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddKeyedTransient = null;
@@ -724,7 +727,7 @@ public class ServiceCollectionServiceExtensions extends NetObject  {
      *
      * @param services the argument of type {@code IServiceCollection}
      * @param serviceType the argument of type {@code NetType}
-     * @param implementationFactory the argument of type {@code Func_2}
+     * @param implementationFactory the argument of type {@code Func_2<IServiceProvider, Object>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -736,7 +739,7 @@ public class ServiceCollectionServiceExtensions extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddScoped" target="_top">.NET documentation</a>
      */
-    public static IServiceCollection AddScoped(IServiceCollection services, NetType serviceType, Func_2 implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public static IServiceCollection AddScoped(IServiceCollection services, NetType serviceType, Func_2<IServiceProvider, Object> implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddScoped = null;
@@ -884,7 +887,7 @@ public class ServiceCollectionServiceExtensions extends NetObject  {
      *
      * @param services the argument of type {@code IServiceCollection}
      * @param serviceType the argument of type {@code NetType}
-     * @param implementationFactory the argument of type {@code Func_2}
+     * @param implementationFactory the argument of type {@code Func_2<IServiceProvider, Object>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -896,7 +899,7 @@ public class ServiceCollectionServiceExtensions extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddSingleton" target="_top">.NET documentation</a>
      */
-    public static IServiceCollection AddSingleton(IServiceCollection services, NetType serviceType, Func_2 implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public static IServiceCollection AddSingleton(IServiceCollection services, NetType serviceType, Func_2<IServiceProvider, Object> implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddSingleton = null;
@@ -1108,7 +1111,7 @@ public class ServiceCollectionServiceExtensions extends NetObject  {
      *
      * @param services the argument of type {@code IServiceCollection}
      * @param serviceType the argument of type {@code NetType}
-     * @param implementationFactory the argument of type {@code Func_2}
+     * @param implementationFactory the argument of type {@code Func_2<IServiceProvider, Object>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -1120,7 +1123,7 @@ public class ServiceCollectionServiceExtensions extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.DependencyInjection.ServiceCollectionServiceExtensions.AddTransient" target="_top">.NET documentation</a>
      */
-    public static IServiceCollection AddTransient(IServiceCollection services, NetType serviceType, Func_2 implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public static IServiceCollection AddTransient(IServiceCollection services, NetType serviceType, Func_2<IServiceProvider, Object> implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddTransient = null;

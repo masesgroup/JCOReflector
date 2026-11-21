@@ -42,6 +42,7 @@ import system.web.caching.OutputCacheProvider;
 import system.threading.tasks.Task;
 import system.DateTime;
 import system.threading.tasks.Task_1;
+import system.Object;
 
 
 /**
@@ -216,7 +217,7 @@ public class OutputCacheProviderAsync extends system.web.caching.OutputCacheProv
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.OutputCacheProviderAsync.AddAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 AddAsync(java.lang.String key, NetObject entry, DateTime utcExpiry) throws Throwable {
+    public Task_1<Object> AddAsync(java.lang.String key, NetObject entry, DateTime utcExpiry) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAddAsync = null;
@@ -239,7 +240,7 @@ public class OutputCacheProviderAsync extends system.web.caching.OutputCacheProv
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.OutputCacheProviderAsync.GetAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 GetAsync(java.lang.String key) throws Throwable {
+    public Task_1<Object> GetAsync(java.lang.String key) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetAsync = null;

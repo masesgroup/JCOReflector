@@ -39,9 +39,14 @@ import java.util.ArrayList;
 
 // Import section
 import system.Action_2;
+import system.Object;
 import system.Func_1;
+import system.reflection.ICustomAttributeProvider;
+import system.reflection.ICustomAttributeProviderImplementation;
 import system.Func_2;
 import system.Nullable_1;
+import system.text.json.serialization.JsonIgnoreCondition;
+import system.text.json.serialization.JsonNumberHandling;
 import system.text.json.serialization.JsonConverter_1;
 import system.text.json.serialization.metadata.JsonTypeInfo;
 
@@ -377,15 +382,15 @@ public class JsonPropertyInfoValues_1<T extends IJCOBridgeReflected> extends Net
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonPropertyInfoValues-1.Setter" target="_top">.NET documentation</a>
      */
-    public Action_2 getSetter() throws Throwable {
+    public Action_2<Object, T> getSetter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSetter = null;
         try {
             retObjectSetter = classInstance.Get("Setter");
-            return (Action_2)retObjectSetter;
+            return (Action_2<Object, T>)retObjectSetter;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_2", retObjectSetter != null ? retObjectSetter.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_2<Object, T>", retObjectSetter != null ? retObjectSetter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -398,7 +403,7 @@ public class JsonPropertyInfoValues_1<T extends IJCOBridgeReflected> extends Net
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonPropertyInfoValues-1.Setter" target="_top">.NET documentation</a>
      */
-    public void setSetter(Action_2 Setter) throws Throwable {
+    public void setSetter(Action_2<Object, T> Setter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -415,15 +420,15 @@ public class JsonPropertyInfoValues_1<T extends IJCOBridgeReflected> extends Net
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonPropertyInfoValues-1.AttributeProviderFactory" target="_top">.NET documentation</a>
      */
-    public Func_1 getAttributeProviderFactory() throws Throwable {
+    public Func_1<ICustomAttributeProvider> getAttributeProviderFactory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAttributeProviderFactory = null;
         try {
             retObjectAttributeProviderFactory = classInstance.Get("AttributeProviderFactory");
-            return (Func_1)retObjectAttributeProviderFactory;
+            return (Func_1<ICustomAttributeProvider>)retObjectAttributeProviderFactory;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_1", retObjectAttributeProviderFactory != null ? retObjectAttributeProviderFactory.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_1<ICustomAttributeProvider>", retObjectAttributeProviderFactory != null ? retObjectAttributeProviderFactory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -436,7 +441,7 @@ public class JsonPropertyInfoValues_1<T extends IJCOBridgeReflected> extends Net
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonPropertyInfoValues-1.AttributeProviderFactory" target="_top">.NET documentation</a>
      */
-    public void setAttributeProviderFactory(Func_1 AttributeProviderFactory) throws Throwable {
+    public void setAttributeProviderFactory(Func_1<ICustomAttributeProvider> AttributeProviderFactory) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -453,15 +458,15 @@ public class JsonPropertyInfoValues_1<T extends IJCOBridgeReflected> extends Net
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonPropertyInfoValues-1.Getter" target="_top">.NET documentation</a>
      */
-    public Func_2 getGetter() throws Throwable {
+    public Func_2<Object, T> getGetter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetter = null;
         try {
             retObjectGetter = classInstance.Get("Getter");
-            return (Func_2)retObjectGetter;
+            return (Func_2<Object, T>)retObjectGetter;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2", retObjectGetter != null ? retObjectGetter.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2<Object, T>", retObjectGetter != null ? retObjectGetter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -474,7 +479,7 @@ public class JsonPropertyInfoValues_1<T extends IJCOBridgeReflected> extends Net
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonPropertyInfoValues-1.Getter" target="_top">.NET documentation</a>
      */
-    public void setGetter(Func_2 Getter) throws Throwable {
+    public void setGetter(Func_2<Object, T> Getter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -491,7 +496,7 @@ public class JsonPropertyInfoValues_1<T extends IJCOBridgeReflected> extends Net
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonPropertyInfoValues-1.IgnoreCondition" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getIgnoreCondition() throws Throwable {
+    public Nullable_1<JsonIgnoreCondition> getIgnoreCondition() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIgnoreCondition = null;
@@ -513,7 +518,7 @@ public class JsonPropertyInfoValues_1<T extends IJCOBridgeReflected> extends Net
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonPropertyInfoValues-1.IgnoreCondition" target="_top">.NET documentation</a>
      */
-    public void setIgnoreCondition(Nullable_1 IgnoreCondition) throws Throwable {
+    public void setIgnoreCondition(Nullable_1<JsonIgnoreCondition> IgnoreCondition) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -530,7 +535,7 @@ public class JsonPropertyInfoValues_1<T extends IJCOBridgeReflected> extends Net
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonPropertyInfoValues-1.NumberHandling" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getNumberHandling() throws Throwable {
+    public Nullable_1<JsonNumberHandling> getNumberHandling() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectNumberHandling = null;
@@ -552,7 +557,7 @@ public class JsonPropertyInfoValues_1<T extends IJCOBridgeReflected> extends Net
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonPropertyInfoValues-1.NumberHandling" target="_top">.NET documentation</a>
      */
-    public void setNumberHandling(Nullable_1 NumberHandling) throws Throwable {
+    public void setNumberHandling(Nullable_1<JsonNumberHandling> NumberHandling) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -645,7 +650,7 @@ public class JsonPropertyInfoValues_1<T extends IJCOBridgeReflected> extends Net
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonPropertyInfoValues-1.Converter" target="_top">.NET documentation</a>
      */
-    public JsonConverter_1 getConverter() throws Throwable {
+    public JsonConverter_1<T> getConverter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectConverter = null;
@@ -667,7 +672,7 @@ public class JsonPropertyInfoValues_1<T extends IJCOBridgeReflected> extends Net
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonPropertyInfoValues-1.Converter" target="_top">.NET documentation</a>
      */
-    public void setConverter(JsonConverter_1 Converter) throws Throwable {
+    public void setConverter(JsonConverter_1<T> Converter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

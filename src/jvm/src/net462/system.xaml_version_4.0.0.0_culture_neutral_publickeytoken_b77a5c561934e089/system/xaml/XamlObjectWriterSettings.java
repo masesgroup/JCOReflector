@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.xaml.XamlWriterSettings;
 import system.xaml.XamlObjectWriterSettings;
 import system.EventHandler_1;
+import system.windows.markup.XamlSetValueEventArgs;
+import system.xaml.XamlObjectEventArgs;
 import system.Uri;
 import system.windows.markup.INameScope;
 import system.windows.markup.INameScopeImplementation;
@@ -394,15 +396,15 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.XamlSetValueHandler" target="_top">.NET documentation</a>
      */
-    public EventHandler_1 getXamlSetValueHandler() throws Throwable {
+    public EventHandler_1<XamlSetValueEventArgs> getXamlSetValueHandler() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectXamlSetValueHandler = null;
         try {
             retObjectXamlSetValueHandler = classInstance.Get("XamlSetValueHandler");
-            return (EventHandler_1)retObjectXamlSetValueHandler;
+            return (EventHandler_1<XamlSetValueEventArgs>)retObjectXamlSetValueHandler;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into EventHandler_1", retObjectXamlSetValueHandler != null ? retObjectXamlSetValueHandler.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into EventHandler_1<XamlSetValueEventArgs>", retObjectXamlSetValueHandler != null ? retObjectXamlSetValueHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -415,7 +417,7 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.XamlSetValueHandler" target="_top">.NET documentation</a>
      */
-    public void setXamlSetValueHandler(EventHandler_1 XamlSetValueHandler) throws Throwable {
+    public void setXamlSetValueHandler(EventHandler_1<XamlSetValueEventArgs> XamlSetValueHandler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -432,15 +434,15 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.AfterBeginInitHandler" target="_top">.NET documentation</a>
      */
-    public EventHandler_1 getAfterBeginInitHandler() throws Throwable {
+    public EventHandler_1<XamlObjectEventArgs> getAfterBeginInitHandler() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAfterBeginInitHandler = null;
         try {
             retObjectAfterBeginInitHandler = classInstance.Get("AfterBeginInitHandler");
-            return (EventHandler_1)retObjectAfterBeginInitHandler;
+            return (EventHandler_1<XamlObjectEventArgs>)retObjectAfterBeginInitHandler;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into EventHandler_1", retObjectAfterBeginInitHandler != null ? retObjectAfterBeginInitHandler.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into EventHandler_1<XamlObjectEventArgs>", retObjectAfterBeginInitHandler != null ? retObjectAfterBeginInitHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -453,7 +455,7 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.AfterBeginInitHandler" target="_top">.NET documentation</a>
      */
-    public void setAfterBeginInitHandler(EventHandler_1 AfterBeginInitHandler) throws Throwable {
+    public void setAfterBeginInitHandler(EventHandler_1<XamlObjectEventArgs> AfterBeginInitHandler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -470,15 +472,15 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.AfterEndInitHandler" target="_top">.NET documentation</a>
      */
-    public EventHandler_1 getAfterEndInitHandler() throws Throwable {
+    public EventHandler_1<XamlObjectEventArgs> getAfterEndInitHandler() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAfterEndInitHandler = null;
         try {
             retObjectAfterEndInitHandler = classInstance.Get("AfterEndInitHandler");
-            return (EventHandler_1)retObjectAfterEndInitHandler;
+            return (EventHandler_1<XamlObjectEventArgs>)retObjectAfterEndInitHandler;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into EventHandler_1", retObjectAfterEndInitHandler != null ? retObjectAfterEndInitHandler.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into EventHandler_1<XamlObjectEventArgs>", retObjectAfterEndInitHandler != null ? retObjectAfterEndInitHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -491,7 +493,7 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.AfterEndInitHandler" target="_top">.NET documentation</a>
      */
-    public void setAfterEndInitHandler(EventHandler_1 AfterEndInitHandler) throws Throwable {
+    public void setAfterEndInitHandler(EventHandler_1<XamlObjectEventArgs> AfterEndInitHandler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -508,15 +510,15 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.AfterPropertiesHandler" target="_top">.NET documentation</a>
      */
-    public EventHandler_1 getAfterPropertiesHandler() throws Throwable {
+    public EventHandler_1<XamlObjectEventArgs> getAfterPropertiesHandler() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAfterPropertiesHandler = null;
         try {
             retObjectAfterPropertiesHandler = classInstance.Get("AfterPropertiesHandler");
-            return (EventHandler_1)retObjectAfterPropertiesHandler;
+            return (EventHandler_1<XamlObjectEventArgs>)retObjectAfterPropertiesHandler;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into EventHandler_1", retObjectAfterPropertiesHandler != null ? retObjectAfterPropertiesHandler.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into EventHandler_1<XamlObjectEventArgs>", retObjectAfterPropertiesHandler != null ? retObjectAfterPropertiesHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -529,7 +531,7 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.AfterPropertiesHandler" target="_top">.NET documentation</a>
      */
-    public void setAfterPropertiesHandler(EventHandler_1 AfterPropertiesHandler) throws Throwable {
+    public void setAfterPropertiesHandler(EventHandler_1<XamlObjectEventArgs> AfterPropertiesHandler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -546,15 +548,15 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.BeforePropertiesHandler" target="_top">.NET documentation</a>
      */
-    public EventHandler_1 getBeforePropertiesHandler() throws Throwable {
+    public EventHandler_1<XamlObjectEventArgs> getBeforePropertiesHandler() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectBeforePropertiesHandler = null;
         try {
             retObjectBeforePropertiesHandler = classInstance.Get("BeforePropertiesHandler");
-            return (EventHandler_1)retObjectBeforePropertiesHandler;
+            return (EventHandler_1<XamlObjectEventArgs>)retObjectBeforePropertiesHandler;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into EventHandler_1", retObjectBeforePropertiesHandler != null ? retObjectBeforePropertiesHandler.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into EventHandler_1<XamlObjectEventArgs>", retObjectBeforePropertiesHandler != null ? retObjectBeforePropertiesHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -567,7 +569,7 @@ public class XamlObjectWriterSettings extends system.xaml.XamlWriterSettings  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlObjectWriterSettings.BeforePropertiesHandler" target="_top">.NET documentation</a>
      */
-    public void setBeforePropertiesHandler(EventHandler_1 BeforePropertiesHandler) throws Throwable {
+    public void setBeforePropertiesHandler(EventHandler_1<XamlObjectEventArgs> BeforePropertiesHandler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

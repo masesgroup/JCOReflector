@@ -42,6 +42,7 @@ import system.text.json.serialization.metadata.JsonTypeInfo;
 import system.text.json.JsonSerializerOptions;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.Action_1;
 
 
 /**
@@ -229,7 +230,7 @@ public class DefaultJsonTypeInfoResolver extends NetObject  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.Modifiers" target="_top">.NET documentation</a>
      */
-    public IList_1 getModifiers() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+    public IList_1<Action_1<JsonTypeInfo>> getModifiers() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectModifiers = null;

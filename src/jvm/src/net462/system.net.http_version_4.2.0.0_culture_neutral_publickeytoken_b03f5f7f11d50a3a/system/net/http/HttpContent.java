@@ -356,7 +356,7 @@ public class HttpContent extends NetObject implements AutoCloseable {
      * @throws system.security.SecurityException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpContent.ReadAsStreamAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 ReadAsStreamAsync() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.security.SecurityException {
+    public Task_1<Stream> ReadAsStreamAsync() throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.security.SecurityException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadAsStreamAsync = null;

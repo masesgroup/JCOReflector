@@ -40,7 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.data.common.DbProviderManifest;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.data.metadata.edm.EdmFunction;
+import system.data.metadata.edm.FacetDescription;
 import system.data.metadata.edm.EdmType;
+import system.data.metadata.edm.PrimitiveType;
 
 
 /**
@@ -164,7 +167,7 @@ public class DbXmlEnabledProviderManifest extends system.data.common.DbProviderM
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbXmlEnabledProviderManifest.GetStoreFunctions" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 GetStoreFunctions() throws Throwable {
+    public ReadOnlyCollection_1<EdmFunction> GetStoreFunctions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetStoreFunctions = null;
@@ -188,7 +191,7 @@ public class DbXmlEnabledProviderManifest extends system.data.common.DbProviderM
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbXmlEnabledProviderManifest.GetFacetDescriptions" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 GetFacetDescriptions(EdmType type) throws Throwable, system.ArgumentNullException {
+    public ReadOnlyCollection_1<FacetDescription> GetFacetDescriptions(EdmType type) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetFacetDescriptions = null;
@@ -210,7 +213,7 @@ public class DbXmlEnabledProviderManifest extends system.data.common.DbProviderM
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbXmlEnabledProviderManifest.GetStoreTypes" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 GetStoreTypes() throws Throwable {
+    public ReadOnlyCollection_1<PrimitiveType> GetStoreTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetStoreTypes = null;

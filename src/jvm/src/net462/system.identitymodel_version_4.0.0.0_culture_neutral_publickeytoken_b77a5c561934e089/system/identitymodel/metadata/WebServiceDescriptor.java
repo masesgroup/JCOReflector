@@ -41,6 +41,9 @@ import java.util.ArrayList;
 import system.identitymodel.metadata.RoleDescriptor;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.identitymodel.metadata.DisplayClaim;
+import system.identitymodel.protocols.wstrust.EndpointReference;
+import system.Uri;
 
 
 /**
@@ -168,7 +171,7 @@ public class WebServiceDescriptor extends system.identitymodel.metadata.RoleDesc
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.WebServiceDescriptor.ClaimTypesOffered" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getClaimTypesOffered() throws Throwable {
+    public ICollection_1<DisplayClaim> getClaimTypesOffered() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectClaimTypesOffered = null;
@@ -190,7 +193,7 @@ public class WebServiceDescriptor extends system.identitymodel.metadata.RoleDesc
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.WebServiceDescriptor.ClaimTypesRequested" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getClaimTypesRequested() throws Throwable {
+    public ICollection_1<DisplayClaim> getClaimTypesRequested() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectClaimTypesRequested = null;
@@ -212,7 +215,7 @@ public class WebServiceDescriptor extends system.identitymodel.metadata.RoleDesc
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.WebServiceDescriptor.TargetScopes" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getTargetScopes() throws Throwable {
+    public ICollection_1<EndpointReference> getTargetScopes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTargetScopes = null;
@@ -234,7 +237,7 @@ public class WebServiceDescriptor extends system.identitymodel.metadata.RoleDesc
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.WebServiceDescriptor.TokenTypesOffered" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getTokenTypesOffered() throws Throwable {
+    public ICollection_1<Uri> getTokenTypesOffered() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTokenTypesOffered = null;

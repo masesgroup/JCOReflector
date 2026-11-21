@@ -211,7 +211,7 @@ public class ChannelReader_1<T extends IJCOBridgeReflected> extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Channels.ChannelReader-1.ReadAllAsync" target="_top">.NET documentation</a>
      */
-    public IAsyncEnumerable_1 ReadAllAsync(CancellationToken cancellationToken) throws Throwable {
+    public IAsyncEnumerable_1<T> ReadAllAsync(CancellationToken cancellationToken) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadAllAsync = null;
@@ -268,7 +268,7 @@ public class ChannelReader_1<T extends IJCOBridgeReflected> extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Channels.ChannelReader-1.ReadAsync" target="_top">.NET documentation</a>
      */
-    public ValueTask_1 ReadAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.IndexOutOfRangeException {
+    public ValueTask_1<T> ReadAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadAsync = null;

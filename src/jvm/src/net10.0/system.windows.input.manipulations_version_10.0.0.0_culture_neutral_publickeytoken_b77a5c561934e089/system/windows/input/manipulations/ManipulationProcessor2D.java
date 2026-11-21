@@ -42,8 +42,13 @@ import system.windows.input.manipulations.Manipulations2D;
 import system.windows.input.manipulations.ManipulationPivot2D;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.windows.input.manipulations.Manipulator2D;
 import system.windows.input.manipulations.ManipulationParameters2D;
 import system.Single;
+import system.EventHandler_1;
+import system.windows.input.manipulations.Manipulation2DCompletedEventArgs;
+import system.windows.input.manipulations.Manipulation2DDeltaEventArgs;
+import system.windows.input.manipulations.Manipulation2DStartedEventArgs;
 
 
 /**
@@ -248,7 +253,7 @@ public class ManipulationProcessor2D extends NetObject  {
      * Invokes the .NET member ProcessManipulators.
      *
      * @param timestamp the argument of type {@code long}
-     * @param manipulators the argument of type {@code IEnumerable_1}
+     * @param manipulators the argument of type {@code IEnumerable_1<Manipulator2D>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -261,7 +266,7 @@ public class ManipulationProcessor2D extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators" target="_top">.NET documentation</a>
      */
-    public void ProcessManipulators(long timestamp, IEnumerable_1 manipulators) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.InvalidOperationException {
+    public void ProcessManipulators(long timestamp, IEnumerable_1<Manipulator2D> manipulators) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -442,6 +447,108 @@ public class ManipulationProcessor2D extends NetObject  {
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addCompleted.
+     *
+     * @param handler the argument of type {@code EventHandler_1<Manipulation2DCompletedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addCompleted(EventHandler_1<Manipulation2DCompletedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("Completed", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeCompleted.
+     *
+     * @param handler the argument of type {@code EventHandler_1<Manipulation2DCompletedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeCompleted(EventHandler_1<Manipulation2DCompletedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("Completed", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addDelta.
+     *
+     * @param handler the argument of type {@code EventHandler_1<Manipulation2DDeltaEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addDelta(EventHandler_1<Manipulation2DDeltaEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("Delta", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeDelta.
+     *
+     * @param handler the argument of type {@code EventHandler_1<Manipulation2DDeltaEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeDelta(EventHandler_1<Manipulation2DDeltaEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("Delta", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addStarted.
+     *
+     * @param handler the argument of type {@code EventHandler_1<Manipulation2DStartedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addStarted(EventHandler_1<Manipulation2DStartedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("Started", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeStarted.
+     *
+     * @param handler the argument of type {@code EventHandler_1<Manipulation2DStartedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeStarted(EventHandler_1<Manipulation2DStartedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("Started", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

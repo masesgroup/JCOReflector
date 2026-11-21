@@ -41,6 +41,7 @@ import system.componentmodel.dataannotations.IValidatableObject;
 import system.componentmodel.dataannotations.IValidatableObjectImplementation;
 import system.collections.generic.IAsyncEnumerable_1;
 import system.collections.generic.IAsyncEnumerable_1Implementation;
+import system.componentmodel.dataannotations.ValidationResult;
 import system.componentmodel.dataannotations.ValidationContext;
 import system.threading.CancellationToken;
 import system.collections.generic.IEnumerable_1;
@@ -123,7 +124,7 @@ public interface IAsyncValidatableObject extends IJCOBridgeReflected, system.com
 
     // Methods section
     
-    public IAsyncEnumerable_1 ValidateAsync(ValidationContext validationContext, CancellationToken cancellationToken) throws Throwable;
+    public IAsyncEnumerable_1<ValidationResult> ValidateAsync(ValidationContext validationContext, CancellationToken cancellationToken) throws Throwable;
 
 
 

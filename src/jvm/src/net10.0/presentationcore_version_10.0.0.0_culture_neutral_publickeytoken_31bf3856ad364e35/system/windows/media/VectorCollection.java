@@ -214,7 +214,7 @@ public class VectorCollection extends system.windows.Freezable  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param collection the argument of type {@code IEnumerable_1}
+     * @param collection the argument of type {@code IEnumerable_1<Vector>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -229,7 +229,7 @@ public class VectorCollection extends system.windows.Freezable  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.VectorCollection.-ctor" target="_top">.NET documentation</a>
      */
-    public VectorCollection(IEnumerable_1 collection) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
+    public VectorCollection(IEnumerable_1<Vector> collection) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

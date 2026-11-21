@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.generic.List_1;
+import system.windows.automation.peers.AutomationPeer;
 import system.windows.automation.peers.PatternInterface;
 import system.windows.automation.peers.AutomationControlType;
 import system.windows.automation.peers.ItemAutomationPeer;
@@ -151,12 +152,12 @@ public class IViewAutomationPeerImplementation extends NetObject implements IVie
     /**
      * Invokes the .NET member GetChildren.
      *
-     * @param children the argument of type {@code List_1}
+     * @param children the argument of type {@code List_1<AutomationPeer>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.IViewAutomationPeer.GetChildren" target="_top">.NET documentation</a>
      */
-    public List_1 GetChildren(List_1 children) throws Throwable {
+    public List_1<AutomationPeer> GetChildren(List_1<AutomationPeer> children) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetChildren = null;

@@ -39,9 +39,12 @@ import java.util.ArrayList;
 
 // Import section
 import system.Action_2;
+import system.Object;
 import system.Func_2;
 import system.Func_3;
 import system.Nullable_1;
+import system.text.json.serialization.JsonNumberHandling;
+import system.text.json.serialization.JsonObjectCreationHandling;
 import system.reflection.ICustomAttributeProvider;
 import system.reflection.ICustomAttributeProviderImplementation;
 import system.text.json.JsonSerializerOptions;
@@ -427,15 +430,15 @@ public class JsonPropertyInfo extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonPropertyInfo.Set" target="_top">.NET documentation</a>
      */
-    public Action_2 getSet() throws Throwable {
+    public Action_2<Object, Object> getSet() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSet = null;
         try {
             retObjectSet = classInstance.Get("Set");
-            return (Action_2)retObjectSet;
+            return (Action_2<Object, Object>)retObjectSet;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_2", retObjectSet != null ? retObjectSet.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_2<Object, Object>", retObjectSet != null ? retObjectSet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -453,7 +456,7 @@ public class JsonPropertyInfo extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonPropertyInfo.Set" target="_top">.NET documentation</a>
      */
-    public void setSet(Action_2 Set) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
+    public void setSet(Action_2<Object, Object> Set) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -470,15 +473,15 @@ public class JsonPropertyInfo extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonPropertyInfo.Get" target="_top">.NET documentation</a>
      */
-    public Func_2 getGet() throws Throwable {
+    public Func_2<Object, Object> getGet() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGet = null;
         try {
             retObjectGet = classInstance.Get("Get");
-            return (Func_2)retObjectGet;
+            return (Func_2<Object, Object>)retObjectGet;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2", retObjectGet != null ? retObjectGet.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2<Object, Object>", retObjectGet != null ? retObjectGet.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -496,7 +499,7 @@ public class JsonPropertyInfo extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonPropertyInfo.Get" target="_top">.NET documentation</a>
      */
-    public void setGet(Func_2 Get) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
+    public void setGet(Func_2<Object, Object> Get) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -556,7 +559,7 @@ public class JsonPropertyInfo extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonPropertyInfo.NumberHandling" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getNumberHandling() throws Throwable {
+    public Nullable_1<JsonNumberHandling> getNumberHandling() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectNumberHandling = null;
@@ -583,7 +586,7 @@ public class JsonPropertyInfo extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonPropertyInfo.NumberHandling" target="_top">.NET documentation</a>
      */
-    public void setNumberHandling(Nullable_1 NumberHandling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
+    public void setNumberHandling(Nullable_1<JsonNumberHandling> NumberHandling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -600,7 +603,7 @@ public class JsonPropertyInfo extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonPropertyInfo.ObjectCreationHandling" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getObjectCreationHandling() throws Throwable {
+    public Nullable_1<JsonObjectCreationHandling> getObjectCreationHandling() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectObjectCreationHandling = null;
@@ -628,7 +631,7 @@ public class JsonPropertyInfo extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonPropertyInfo.ObjectCreationHandling" target="_top">.NET documentation</a>
      */
-    public void setObjectCreationHandling(Nullable_1 ObjectCreationHandling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public void setObjectCreationHandling(Nullable_1<JsonObjectCreationHandling> ObjectCreationHandling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

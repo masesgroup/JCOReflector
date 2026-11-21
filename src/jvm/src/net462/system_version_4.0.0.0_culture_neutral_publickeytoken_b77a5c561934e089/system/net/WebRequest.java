@@ -672,7 +672,7 @@ public class WebRequest extends system.MarshalByRefObject  {
      * @throws system.AggregateException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebRequest.GetRequestStreamAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 GetRequestStreamAsync() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.NotSupportedException, system.diagnostics.tracing.EventSourceException, system.AggregateException {
+    public Task_1<Stream> GetRequestStreamAsync() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.NotSupportedException, system.diagnostics.tracing.EventSourceException, system.AggregateException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetRequestStreamAsync = null;
@@ -709,7 +709,7 @@ public class WebRequest extends system.MarshalByRefObject  {
      * @throws system.AggregateException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebRequest.GetResponseAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 GetResponseAsync() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.NotSupportedException, system.diagnostics.tracing.EventSourceException, system.AggregateException {
+    public Task_1<WebResponse> GetResponseAsync() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.NotSupportedException, system.diagnostics.tracing.EventSourceException, system.AggregateException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetResponseAsync = null;

@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.activities.NativeActivity;
 import system.activities.InArgument_1;
+import system.servicemodel.activities.CorrelationHandle;
 import system.collections.generic.IDictionary_2;
 import system.collections.generic.IDictionary_2Implementation;
 
@@ -183,7 +184,7 @@ public class InitializeCorrelation extends system.activities.NativeActivity  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.InitializeCorrelation.Correlation" target="_top">.NET documentation</a>
      */
-    public InArgument_1 getCorrelation() throws Throwable {
+    public InArgument_1<CorrelationHandle> getCorrelation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCorrelation = null;
@@ -205,7 +206,7 @@ public class InitializeCorrelation extends system.activities.NativeActivity  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.InitializeCorrelation.Correlation" target="_top">.NET documentation</a>
      */
-    public void setCorrelation(InArgument_1 Correlation) throws Throwable {
+    public void setCorrelation(InArgument_1<CorrelationHandle> Correlation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

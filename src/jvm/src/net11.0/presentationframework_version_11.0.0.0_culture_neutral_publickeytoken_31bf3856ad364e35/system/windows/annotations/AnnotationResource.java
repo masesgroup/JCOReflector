@@ -43,6 +43,8 @@ import system.xml.schema.XmlSchema;
 import system.xml.XmlReader;
 import system.xml.XmlWriter;
 import system.collections.objectmodel.Collection_1;
+import system.windows.annotations.ContentLocatorBase;
+import system.xml.XmlElement;
 
 
 /**
@@ -320,7 +322,7 @@ public class AnnotationResource extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Annotations.AnnotationResource.ContentLocators" target="_top">.NET documentation</a>
      */
-    public Collection_1 getContentLocators() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.NullReferenceException, system.NotSupportedException {
+    public Collection_1<ContentLocatorBase> getContentLocators() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContentLocators = null;
@@ -349,7 +351,7 @@ public class AnnotationResource extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Annotations.AnnotationResource.Contents" target="_top">.NET documentation</a>
      */
-    public Collection_1 getContents() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.NullReferenceException, system.NotSupportedException {
+    public Collection_1<XmlElement> getContents() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContents = null;

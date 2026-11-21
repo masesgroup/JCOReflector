@@ -168,7 +168,7 @@ public class HttpFileCollectionBase extends system.collections.specialized.NameO
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpFileCollectionBase.GetMultiple" target="_top">.NET documentation</a>
      */
-    public IList_1 GetMultiple(java.lang.String name) throws Throwable, system.NotImplementedException {
+    public IList_1<HttpPostedFileBase> GetMultiple(java.lang.String name) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetMultiple = null;

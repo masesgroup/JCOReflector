@@ -44,6 +44,7 @@ import system.windows.markup.INameScopeImplementation;
 import system.windows.DependencyObject;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.Object;
 
 
 /**
@@ -664,7 +665,7 @@ public class NameScope extends NetObjectEnumerable  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.NameScope.Values" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getValues() throws Throwable, system.ArgumentOutOfRangeException {
+    public ICollection_1<Object> getValues() throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValues = null;

@@ -42,6 +42,7 @@ import system.servicemodel.syndication.TextSyndicationContent;
 import system.Uri;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.servicemodel.syndication.CategoriesDocument;
 import system.collections.generic.Dictionary_2;
 import system.collections.objectmodel.Collection_1;
 import system.servicemodel.syndication.SyndicationElementExtensionCollection;
@@ -207,7 +208,7 @@ public class ResourceCollectionInfo extends NetObject  {
      *
      * @param title the argument of type {@code TextSyndicationContent}
      * @param link the argument of type {@code Uri}
-     * @param categories the argument of type {@code IEnumerable_1}
+     * @param categories the argument of type {@code IEnumerable_1<CategoriesDocument>}
      * @param allowsNewEntries the argument of type {@code boolean}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -225,7 +226,7 @@ public class ResourceCollectionInfo extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.ResourceCollectionInfo.-ctor" target="_top">.NET documentation</a>
      */
-    public ResourceCollectionInfo(TextSyndicationContent title, Uri link, IEnumerable_1 categories, boolean allowsNewEntries) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+    public ResourceCollectionInfo(TextSyndicationContent title, Uri link, IEnumerable_1<CategoriesDocument> categories, boolean allowsNewEntries) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -240,7 +241,7 @@ public class ResourceCollectionInfo extends NetObject  {
      *
      * @param title the argument of type {@code TextSyndicationContent}
      * @param link the argument of type {@code Uri}
-     * @param categories the argument of type {@code IEnumerable_1}
+     * @param categories the argument of type {@code IEnumerable_1<CategoriesDocument>}
      * @param accepts the argument of type {@code IEnumerable_1}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
@@ -257,7 +258,7 @@ public class ResourceCollectionInfo extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.ResourceCollectionInfo.-ctor" target="_top">.NET documentation</a>
      */
-    public ResourceCollectionInfo(TextSyndicationContent title, Uri link, IEnumerable_1 categories, IEnumerable_1 accepts) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+    public ResourceCollectionInfo(TextSyndicationContent title, Uri link, IEnumerable_1<CategoriesDocument> categories, IEnumerable_1 accepts) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -335,7 +336,7 @@ public class ResourceCollectionInfo extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.ResourceCollectionInfo.Categories" target="_top">.NET documentation</a>
      */
-    public Collection_1 getCategories() throws Throwable {
+    public Collection_1<CategoriesDocument> getCategories() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCategories = null;

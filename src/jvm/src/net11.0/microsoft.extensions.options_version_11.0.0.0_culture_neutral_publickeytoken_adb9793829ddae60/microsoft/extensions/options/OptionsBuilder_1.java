@@ -202,7 +202,7 @@ public class OptionsBuilder_1<TOptions extends IJCOBridgeReflected> extends NetO
     /**
      * Invokes the .NET member Configure.
      *
-     * @param configureOptions the argument of type {@code Action_1}
+     * @param configureOptions the argument of type {@code Action_1<TOptions>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -214,7 +214,7 @@ public class OptionsBuilder_1<TOptions extends IJCOBridgeReflected> extends NetO
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.OptionsBuilder-1.Configure" target="_top">.NET documentation</a>
      */
-    public OptionsBuilder_1 Configure(Action_1 configureOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public OptionsBuilder_1<TOptions> Configure(Action_1<TOptions> configureOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectConfigure = null;
@@ -245,7 +245,7 @@ public class OptionsBuilder_1<TOptions extends IJCOBridgeReflected> extends NetO
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.OptionsBuilder-1.Configure" target="_top">.NET documentation</a>
      */
-    public <TDep extends IJCOBridgeReflected> OptionsBuilder_1 Configure(Action_2 configureOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public <TDep extends IJCOBridgeReflected> OptionsBuilder_1<TOptions> Configure(Action_2 configureOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectConfigure = null;
@@ -280,7 +280,7 @@ public class OptionsBuilder_1<TOptions extends IJCOBridgeReflected> extends NetO
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.OptionsBuilder-1.Configure" target="_top">.NET documentation</a>
      */
-    public <TDep1 extends IJCOBridgeReflected, TDep2 extends IJCOBridgeReflected, TDep3 extends IJCOBridgeReflected, TDep4 extends IJCOBridgeReflected, TDep5 extends IJCOBridgeReflected> OptionsBuilder_1 Configure(Action_6 configureOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public <TDep1 extends IJCOBridgeReflected, TDep2 extends IJCOBridgeReflected, TDep3 extends IJCOBridgeReflected, TDep4 extends IJCOBridgeReflected, TDep5 extends IJCOBridgeReflected> OptionsBuilder_1<TOptions> Configure(Action_6 configureOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectConfigure = null;
@@ -314,7 +314,7 @@ public class OptionsBuilder_1<TOptions extends IJCOBridgeReflected> extends NetO
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.OptionsBuilder-1.Configure" target="_top">.NET documentation</a>
      */
-    public <TDep1 extends IJCOBridgeReflected, TDep2 extends IJCOBridgeReflected, TDep3 extends IJCOBridgeReflected, TDep4 extends IJCOBridgeReflected> OptionsBuilder_1 Configure(Action_5 configureOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public <TDep1 extends IJCOBridgeReflected, TDep2 extends IJCOBridgeReflected, TDep3 extends IJCOBridgeReflected, TDep4 extends IJCOBridgeReflected> OptionsBuilder_1<TOptions> Configure(Action_5 configureOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectConfigure = null;
@@ -347,7 +347,7 @@ public class OptionsBuilder_1<TOptions extends IJCOBridgeReflected> extends NetO
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.OptionsBuilder-1.Configure" target="_top">.NET documentation</a>
      */
-    public <TDep1 extends IJCOBridgeReflected, TDep2 extends IJCOBridgeReflected, TDep3 extends IJCOBridgeReflected> OptionsBuilder_1 Configure(Action_4 configureOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public <TDep1 extends IJCOBridgeReflected, TDep2 extends IJCOBridgeReflected, TDep3 extends IJCOBridgeReflected> OptionsBuilder_1<TOptions> Configure(Action_4 configureOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectConfigure = null;
@@ -379,7 +379,7 @@ public class OptionsBuilder_1<TOptions extends IJCOBridgeReflected> extends NetO
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.OptionsBuilder-1.Configure" target="_top">.NET documentation</a>
      */
-    public <TDep1 extends IJCOBridgeReflected, TDep2 extends IJCOBridgeReflected> OptionsBuilder_1 Configure(Action_3 configureOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public <TDep1 extends IJCOBridgeReflected, TDep2 extends IJCOBridgeReflected> OptionsBuilder_1<TOptions> Configure(Action_3 configureOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectConfigure = null;
@@ -397,7 +397,7 @@ public class OptionsBuilder_1<TOptions extends IJCOBridgeReflected> extends NetO
     /**
      * Invokes the .NET member PostConfigure.
      *
-     * @param configureOptions the argument of type {@code Action_1}
+     * @param configureOptions the argument of type {@code Action_1<TOptions>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -409,7 +409,7 @@ public class OptionsBuilder_1<TOptions extends IJCOBridgeReflected> extends NetO
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.OptionsBuilder-1.PostConfigure" target="_top">.NET documentation</a>
      */
-    public OptionsBuilder_1 PostConfigure(Action_1 configureOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public OptionsBuilder_1<TOptions> PostConfigure(Action_1<TOptions> configureOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPostConfigure = null;
@@ -440,7 +440,7 @@ public class OptionsBuilder_1<TOptions extends IJCOBridgeReflected> extends NetO
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.OptionsBuilder-1.PostConfigure" target="_top">.NET documentation</a>
      */
-    public <TDep extends IJCOBridgeReflected> OptionsBuilder_1 PostConfigure(Action_2 configureOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public <TDep extends IJCOBridgeReflected> OptionsBuilder_1<TOptions> PostConfigure(Action_2 configureOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPostConfigure = null;
@@ -475,7 +475,7 @@ public class OptionsBuilder_1<TOptions extends IJCOBridgeReflected> extends NetO
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.OptionsBuilder-1.PostConfigure" target="_top">.NET documentation</a>
      */
-    public <TDep1 extends IJCOBridgeReflected, TDep2 extends IJCOBridgeReflected, TDep3 extends IJCOBridgeReflected, TDep4 extends IJCOBridgeReflected, TDep5 extends IJCOBridgeReflected> OptionsBuilder_1 PostConfigure(Action_6 configureOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public <TDep1 extends IJCOBridgeReflected, TDep2 extends IJCOBridgeReflected, TDep3 extends IJCOBridgeReflected, TDep4 extends IJCOBridgeReflected, TDep5 extends IJCOBridgeReflected> OptionsBuilder_1<TOptions> PostConfigure(Action_6 configureOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPostConfigure = null;
@@ -509,7 +509,7 @@ public class OptionsBuilder_1<TOptions extends IJCOBridgeReflected> extends NetO
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.OptionsBuilder-1.PostConfigure" target="_top">.NET documentation</a>
      */
-    public <TDep1 extends IJCOBridgeReflected, TDep2 extends IJCOBridgeReflected, TDep3 extends IJCOBridgeReflected, TDep4 extends IJCOBridgeReflected> OptionsBuilder_1 PostConfigure(Action_5 configureOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public <TDep1 extends IJCOBridgeReflected, TDep2 extends IJCOBridgeReflected, TDep3 extends IJCOBridgeReflected, TDep4 extends IJCOBridgeReflected> OptionsBuilder_1<TOptions> PostConfigure(Action_5 configureOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPostConfigure = null;
@@ -542,7 +542,7 @@ public class OptionsBuilder_1<TOptions extends IJCOBridgeReflected> extends NetO
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.OptionsBuilder-1.PostConfigure" target="_top">.NET documentation</a>
      */
-    public <TDep1 extends IJCOBridgeReflected, TDep2 extends IJCOBridgeReflected, TDep3 extends IJCOBridgeReflected> OptionsBuilder_1 PostConfigure(Action_4 configureOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public <TDep1 extends IJCOBridgeReflected, TDep2 extends IJCOBridgeReflected, TDep3 extends IJCOBridgeReflected> OptionsBuilder_1<TOptions> PostConfigure(Action_4 configureOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPostConfigure = null;
@@ -574,7 +574,7 @@ public class OptionsBuilder_1<TOptions extends IJCOBridgeReflected> extends NetO
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.OptionsBuilder-1.PostConfigure" target="_top">.NET documentation</a>
      */
-    public <TDep1 extends IJCOBridgeReflected, TDep2 extends IJCOBridgeReflected> OptionsBuilder_1 PostConfigure(Action_3 configureOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public <TDep1 extends IJCOBridgeReflected, TDep2 extends IJCOBridgeReflected> OptionsBuilder_1<TOptions> PostConfigure(Action_3 configureOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPostConfigure = null;
@@ -605,7 +605,7 @@ public class OptionsBuilder_1<TOptions extends IJCOBridgeReflected> extends NetO
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.OptionsBuilder-1.Validate" target="_top">.NET documentation</a>
      */
-    public OptionsBuilder_1 Validate(Func_2 validation, java.lang.String failureMessage) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public OptionsBuilder_1<TOptions> Validate(Func_2 validation, java.lang.String failureMessage) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValidate = null;
@@ -633,7 +633,7 @@ public class OptionsBuilder_1<TOptions extends IJCOBridgeReflected> extends NetO
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.OptionsBuilder-1.Validate" target="_top">.NET documentation</a>
      */
-    public OptionsBuilder_1 Validate(Func_2 validation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public OptionsBuilder_1<TOptions> Validate(Func_2 validation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValidate = null;
@@ -664,7 +664,7 @@ public class OptionsBuilder_1<TOptions extends IJCOBridgeReflected> extends NetO
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.OptionsBuilder-1.Validate" target="_top">.NET documentation</a>
      */
-    public OptionsBuilder_1 Validate(Func_3 validation, java.lang.String failureMessage) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public OptionsBuilder_1<TOptions> Validate(Func_3 validation, java.lang.String failureMessage) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValidate = null;
@@ -692,7 +692,7 @@ public class OptionsBuilder_1<TOptions extends IJCOBridgeReflected> extends NetO
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.OptionsBuilder-1.Validate" target="_top">.NET documentation</a>
      */
-    public OptionsBuilder_1 Validate(Func_3 validation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public OptionsBuilder_1<TOptions> Validate(Func_3 validation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValidate = null;
@@ -724,7 +724,7 @@ public class OptionsBuilder_1<TOptions extends IJCOBridgeReflected> extends NetO
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.OptionsBuilder-1.Validate" target="_top">.NET documentation</a>
      */
-    public <TDep extends IJCOBridgeReflected> OptionsBuilder_1 Validate(Func_4 validation, java.lang.String failureMessage) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public <TDep extends IJCOBridgeReflected> OptionsBuilder_1<TOptions> Validate(Func_4 validation, java.lang.String failureMessage) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValidate = null;
@@ -756,7 +756,7 @@ public class OptionsBuilder_1<TOptions extends IJCOBridgeReflected> extends NetO
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.OptionsBuilder-1.Validate" target="_top">.NET documentation</a>
      */
-    public <TDep extends IJCOBridgeReflected> OptionsBuilder_1 Validate(Func_4 validation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+    public <TDep extends IJCOBridgeReflected> OptionsBuilder_1<TOptions> Validate(Func_4 validation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValidate = null;
@@ -792,7 +792,7 @@ public class OptionsBuilder_1<TOptions extends IJCOBridgeReflected> extends NetO
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.OptionsBuilder-1.Validate" target="_top">.NET documentation</a>
      */
-    public <TDep1 extends IJCOBridgeReflected, TDep2 extends IJCOBridgeReflected, TDep3 extends IJCOBridgeReflected, TDep4 extends IJCOBridgeReflected, TDep5 extends IJCOBridgeReflected> OptionsBuilder_1 Validate(Func_7 validation, java.lang.String failureMessage) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public <TDep1 extends IJCOBridgeReflected, TDep2 extends IJCOBridgeReflected, TDep3 extends IJCOBridgeReflected, TDep4 extends IJCOBridgeReflected, TDep5 extends IJCOBridgeReflected> OptionsBuilder_1<TOptions> Validate(Func_7 validation, java.lang.String failureMessage) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValidate = null;
@@ -828,7 +828,7 @@ public class OptionsBuilder_1<TOptions extends IJCOBridgeReflected> extends NetO
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.OptionsBuilder-1.Validate" target="_top">.NET documentation</a>
      */
-    public <TDep1 extends IJCOBridgeReflected, TDep2 extends IJCOBridgeReflected, TDep3 extends IJCOBridgeReflected, TDep4 extends IJCOBridgeReflected, TDep5 extends IJCOBridgeReflected> OptionsBuilder_1 Validate(Func_7 validation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+    public <TDep1 extends IJCOBridgeReflected, TDep2 extends IJCOBridgeReflected, TDep3 extends IJCOBridgeReflected, TDep4 extends IJCOBridgeReflected, TDep5 extends IJCOBridgeReflected> OptionsBuilder_1<TOptions> Validate(Func_7 validation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValidate = null;
@@ -864,7 +864,7 @@ public class OptionsBuilder_1<TOptions extends IJCOBridgeReflected> extends NetO
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.OptionsBuilder-1.Validate" target="_top">.NET documentation</a>
      */
-    public <TDep1 extends IJCOBridgeReflected, TDep2 extends IJCOBridgeReflected, TDep3 extends IJCOBridgeReflected, TDep4 extends IJCOBridgeReflected, TDep5 extends IJCOBridgeReflected> OptionsBuilder_1 Validate(Func_8 validation, java.lang.String failureMessage) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public <TDep1 extends IJCOBridgeReflected, TDep2 extends IJCOBridgeReflected, TDep3 extends IJCOBridgeReflected, TDep4 extends IJCOBridgeReflected, TDep5 extends IJCOBridgeReflected> OptionsBuilder_1<TOptions> Validate(Func_8 validation, java.lang.String failureMessage) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValidate = null;
@@ -900,7 +900,7 @@ public class OptionsBuilder_1<TOptions extends IJCOBridgeReflected> extends NetO
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.OptionsBuilder-1.Validate" target="_top">.NET documentation</a>
      */
-    public <TDep1 extends IJCOBridgeReflected, TDep2 extends IJCOBridgeReflected, TDep3 extends IJCOBridgeReflected, TDep4 extends IJCOBridgeReflected, TDep5 extends IJCOBridgeReflected> OptionsBuilder_1 Validate(Func_8 validation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+    public <TDep1 extends IJCOBridgeReflected, TDep2 extends IJCOBridgeReflected, TDep3 extends IJCOBridgeReflected, TDep4 extends IJCOBridgeReflected, TDep5 extends IJCOBridgeReflected> OptionsBuilder_1<TOptions> Validate(Func_8 validation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValidate = null;
@@ -935,7 +935,7 @@ public class OptionsBuilder_1<TOptions extends IJCOBridgeReflected> extends NetO
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.OptionsBuilder-1.Validate" target="_top">.NET documentation</a>
      */
-    public <TDep1 extends IJCOBridgeReflected, TDep2 extends IJCOBridgeReflected, TDep3 extends IJCOBridgeReflected, TDep4 extends IJCOBridgeReflected> OptionsBuilder_1 Validate(Func_6 validation, java.lang.String failureMessage) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public <TDep1 extends IJCOBridgeReflected, TDep2 extends IJCOBridgeReflected, TDep3 extends IJCOBridgeReflected, TDep4 extends IJCOBridgeReflected> OptionsBuilder_1<TOptions> Validate(Func_6 validation, java.lang.String failureMessage) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValidate = null;
@@ -970,7 +970,7 @@ public class OptionsBuilder_1<TOptions extends IJCOBridgeReflected> extends NetO
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.OptionsBuilder-1.Validate" target="_top">.NET documentation</a>
      */
-    public <TDep1 extends IJCOBridgeReflected, TDep2 extends IJCOBridgeReflected, TDep3 extends IJCOBridgeReflected, TDep4 extends IJCOBridgeReflected> OptionsBuilder_1 Validate(Func_6 validation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+    public <TDep1 extends IJCOBridgeReflected, TDep2 extends IJCOBridgeReflected, TDep3 extends IJCOBridgeReflected, TDep4 extends IJCOBridgeReflected> OptionsBuilder_1<TOptions> Validate(Func_6 validation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValidate = null;
@@ -1004,7 +1004,7 @@ public class OptionsBuilder_1<TOptions extends IJCOBridgeReflected> extends NetO
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.OptionsBuilder-1.Validate" target="_top">.NET documentation</a>
      */
-    public <TDep1 extends IJCOBridgeReflected, TDep2 extends IJCOBridgeReflected, TDep3 extends IJCOBridgeReflected> OptionsBuilder_1 Validate(Func_5 validation, java.lang.String failureMessage) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public <TDep1 extends IJCOBridgeReflected, TDep2 extends IJCOBridgeReflected, TDep3 extends IJCOBridgeReflected> OptionsBuilder_1<TOptions> Validate(Func_5 validation, java.lang.String failureMessage) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValidate = null;
@@ -1038,7 +1038,7 @@ public class OptionsBuilder_1<TOptions extends IJCOBridgeReflected> extends NetO
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.OptionsBuilder-1.Validate" target="_top">.NET documentation</a>
      */
-    public <TDep1 extends IJCOBridgeReflected, TDep2 extends IJCOBridgeReflected, TDep3 extends IJCOBridgeReflected> OptionsBuilder_1 Validate(Func_5 validation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+    public <TDep1 extends IJCOBridgeReflected, TDep2 extends IJCOBridgeReflected, TDep3 extends IJCOBridgeReflected> OptionsBuilder_1<TOptions> Validate(Func_5 validation) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValidate = null;
@@ -1073,7 +1073,7 @@ public class OptionsBuilder_1<TOptions extends IJCOBridgeReflected> extends NetO
      * @throws system.reflection.TargetException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.OptionsBuilder-1.Validate" target="_top">.NET documentation</a>
      */
-    public <TValidateOptions extends IJCOBridgeReflected> OptionsBuilder_1 Validate() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.reflection.TargetParameterCountException, system.MemberAccessException, system.reflection.TargetException {
+    public <TValidateOptions extends IJCOBridgeReflected> OptionsBuilder_1<TOptions> Validate() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.reflection.TargetParameterCountException, system.MemberAccessException, system.reflection.TargetException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValidate = null;

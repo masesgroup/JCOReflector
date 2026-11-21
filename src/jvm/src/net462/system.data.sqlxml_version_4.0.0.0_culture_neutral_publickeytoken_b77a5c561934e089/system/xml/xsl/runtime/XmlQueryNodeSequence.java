@@ -192,12 +192,12 @@ public class XmlQueryNodeSequence extends system.xml.xsl.runtime.XmlQuerySequenc
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param list the argument of type {@code IList_1}
+     * @param list the argument of type {@code IList_1<XPathNavigator>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryNodeSequence.-ctor" target="_top">.NET documentation</a>
      */
-    public XmlQueryNodeSequence(IList_1 list) throws Throwable, system.ArgumentOutOfRangeException {
+    public XmlQueryNodeSequence(IList_1<XPathNavigator> list) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -298,7 +298,7 @@ public class XmlQueryNodeSequence extends system.xml.xsl.runtime.XmlQuerySequenc
     /**
      * Invokes the .NET member DocOrderDistinct.
      *
-     * @param comparer the argument of type {@code IComparer_1}
+     * @param comparer the argument of type {@code IComparer_1<XPathNavigator>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -308,7 +308,7 @@ public class XmlQueryNodeSequence extends system.xml.xsl.runtime.XmlQuerySequenc
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryNodeSequence.DocOrderDistinct" target="_top">.NET documentation</a>
      */
-    public XmlQueryNodeSequence DocOrderDistinct(IComparer_1 comparer) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException {
+    public XmlQueryNodeSequence DocOrderDistinct(IComparer_1<XPathNavigator> comparer) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDocOrderDistinct = null;

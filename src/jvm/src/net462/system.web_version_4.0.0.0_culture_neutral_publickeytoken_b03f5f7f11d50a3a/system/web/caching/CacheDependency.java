@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.DateTime;
 import system.web.caching.CacheDependency;
 import system.Action_2;
+import system.Object;
+import system.EventArgs;
 
 
 /**
@@ -626,11 +628,11 @@ public class CacheDependency extends NetObject implements AutoCloseable {
     /**
      * Invokes the .NET member SetCacheDependencyChanged.
      *
-     * @param dependencyChangedAction the argument of type {@code Action_2}
+     * @param dependencyChangedAction the argument of type {@code Action_2<Object, EventArgs>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.CacheDependency.SetCacheDependencyChanged" target="_top">.NET documentation</a>
      */
-    public void SetCacheDependencyChanged(Action_2 dependencyChangedAction) throws Throwable {
+    public void SetCacheDependencyChanged(Action_2<Object, EventArgs> dependencyChangedAction) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

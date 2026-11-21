@@ -308,7 +308,7 @@ public class BindingExpressionBase extends system.windows.Expression  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.BindingExpressionBase.ValidationErrors" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getValidationErrors() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public ReadOnlyCollection_1<ValidationError> getValidationErrors() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValidationErrors = null;

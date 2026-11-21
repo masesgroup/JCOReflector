@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.data.metadata.edm.StructuralType;
 import system.data.metadata.edm.BuiltInTypeKind;
 import system.data.metadata.edm.ReadOnlyMetadataCollection_1;
+import system.data.metadata.edm.EdmProperty;
 
 
 /**
@@ -172,7 +173,7 @@ public class RowType extends system.data.metadata.edm.StructuralType  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.RowType.Properties" target="_top">.NET documentation</a>
      */
-    public ReadOnlyMetadataCollection_1 getProperties() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public ReadOnlyMetadataCollection_1<EdmProperty> getProperties() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectProperties = null;

@@ -161,7 +161,7 @@ public class SignatureDecoder_2<TType extends IJCOBridgeReflected, TGenericConte
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param provider the argument of type {@code ISignatureTypeProvider_2}
+     * @param provider the argument of type {@code ISignatureTypeProvider_2<TType, TGenericContext>}
      * @param metadataReader the argument of type {@code MetadataReader}
      * @param genericContext the argument of type {@code TGenericContext}
      * @throws Throwable if the .NET constructor fails
@@ -176,7 +176,7 @@ public class SignatureDecoder_2<TType extends IJCOBridgeReflected, TGenericConte
      * @throws system.RankException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.SignatureDecoder-2.-ctor" target="_top">.NET documentation</a>
      */
-    public SignatureDecoder_2(ISignatureTypeProvider_2 provider, MetadataReader metadataReader, TGenericContext genericContext) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException {
+    public SignatureDecoder_2(ISignatureTypeProvider_2<TType, TGenericContext> provider, MetadataReader metadataReader, TGenericContext genericContext) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -212,7 +212,7 @@ public class SignatureDecoder_2<TType extends IJCOBridgeReflected, TGenericConte
      * @throws system.InvalidCastException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.SignatureDecoder-2.DecodeLocalSignature" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 DecodeLocalSignature(JCORefOut<BlobReader> blobReader) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.BadImageFormatException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidCastException {
+    public ImmutableArray_1<TType> DecodeLocalSignature(JCORefOut<BlobReader> blobReader) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.BadImageFormatException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDecodeLocalSignature = null;
@@ -246,7 +246,7 @@ public class SignatureDecoder_2<TType extends IJCOBridgeReflected, TGenericConte
      * @throws system.InvalidCastException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.SignatureDecoder-2.DecodeMethodSpecificationSignature" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 DecodeMethodSpecificationSignature(JCORefOut<BlobReader> blobReader) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.BadImageFormatException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidCastException {
+    public ImmutableArray_1<TType> DecodeMethodSpecificationSignature(JCORefOut<BlobReader> blobReader) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.BadImageFormatException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDecodeMethodSpecificationSignature = null;
@@ -280,7 +280,7 @@ public class SignatureDecoder_2<TType extends IJCOBridgeReflected, TGenericConte
      * @throws system.InvalidCastException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.SignatureDecoder-2.DecodeMethodSignature" target="_top">.NET documentation</a>
      */
-    public MethodSignature_1 DecodeMethodSignature(JCORefOut<BlobReader> blobReader) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.BadImageFormatException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.FormatException, system.InvalidCastException {
+    public MethodSignature_1<TType> DecodeMethodSignature(JCORefOut<BlobReader> blobReader) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.BadImageFormatException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.FormatException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDecodeMethodSignature = null;

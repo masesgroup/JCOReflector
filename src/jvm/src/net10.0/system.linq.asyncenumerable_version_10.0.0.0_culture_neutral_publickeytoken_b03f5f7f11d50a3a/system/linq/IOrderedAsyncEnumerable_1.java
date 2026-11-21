@@ -127,9 +127,9 @@ public interface IOrderedAsyncEnumerable_1<TElement extends IJCOBridgeReflected>
     // Methods section
     
 
-    public <TKey extends IJCOBridgeReflected> IOrderedAsyncEnumerable_1 CreateOrderedAsyncEnumerable(Func_2 keySelector, IComparer_1 comparer, boolean descending) throws Throwable;
+    public <TKey extends IJCOBridgeReflected> IOrderedAsyncEnumerable_1<TElement> CreateOrderedAsyncEnumerable(Func_2 keySelector, IComparer_1 comparer, boolean descending) throws Throwable;
 
-    public <TKey extends IJCOBridgeReflected> IOrderedAsyncEnumerable_1 CreateOrderedAsyncEnumerable(Func_3 keySelector, IComparer_1 comparer, boolean descending) throws Throwable;
+    public <TKey extends IJCOBridgeReflected> IOrderedAsyncEnumerable_1<TElement> CreateOrderedAsyncEnumerable(Func_3 keySelector, IComparer_1 comparer, boolean descending) throws Throwable;
 
 
     

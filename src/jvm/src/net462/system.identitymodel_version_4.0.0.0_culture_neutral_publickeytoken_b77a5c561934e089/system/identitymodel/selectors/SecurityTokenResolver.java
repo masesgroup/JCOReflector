@@ -266,7 +266,7 @@ public class SecurityTokenResolver extends NetObject  {
     /**
      * Invokes the .NET member CreateDefaultSecurityTokenResolver.
      *
-     * @param tokens the argument of type {@code ReadOnlyCollection_1}
+     * @param tokens the argument of type {@code ReadOnlyCollection_1<SecurityToken>}
      * @param canMatchLocalId the argument of type {@code boolean}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -284,7 +284,7 @@ public class SecurityTokenResolver extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Selectors.SecurityTokenResolver.CreateDefaultSecurityTokenResolver" target="_top">.NET documentation</a>
      */
-    public static SecurityTokenResolver CreateDefaultSecurityTokenResolver(ReadOnlyCollection_1 tokens, boolean canMatchLocalId) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+    public static SecurityTokenResolver CreateDefaultSecurityTokenResolver(ReadOnlyCollection_1<SecurityToken> tokens, boolean canMatchLocalId) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateDefaultSecurityTokenResolver = null;

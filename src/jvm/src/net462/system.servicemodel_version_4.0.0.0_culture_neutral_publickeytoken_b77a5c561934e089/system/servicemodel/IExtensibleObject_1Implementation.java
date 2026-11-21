@@ -156,7 +156,7 @@ public class IExtensibleObject_1Implementation<T extends IJCOBridgeReflected> ex
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.IExtensibleObject-1.Extensions" target="_top">.NET documentation</a>
      */
-    public IExtensionCollection_1 getExtensions() throws Throwable {
+    public IExtensionCollection_1<T> getExtensions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExtensions = null;

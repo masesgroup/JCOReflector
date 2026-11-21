@@ -40,7 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.threading.tasks.ValueTask;
 import system.threading.tasks.ValueTask_1;
+import system.net.quic.QuicConnection;
 import system.threading.CancellationToken;
+import system.net.quic.QuicListener;
 import system.net.quic.QuicListenerOptions;
 import system.net.IPEndPoint;
 
@@ -229,7 +231,7 @@ public class QuicListener extends NetObject  {
      * @throws system.diagnostics.UnreachableException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicListener.AcceptConnectionAsync" target="_top">.NET documentation</a>
      */
-    public ValueTask_1 AcceptConnectionAsync(CancellationToken cancellationToken) throws Throwable, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NullReferenceException, system.NotSupportedException, system.threading.SynchronizationLockException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.threading.tasks.TaskSchedulerException, system.threading.ThreadStateException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.diagnostics.UnreachableException {
+    public ValueTask_1<QuicConnection> AcceptConnectionAsync(CancellationToken cancellationToken) throws Throwable, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NullReferenceException, system.NotSupportedException, system.threading.SynchronizationLockException, system.InvalidOperationException, system.diagnostics.tracing.EventSourceException, system.threading.tasks.TaskSchedulerException, system.threading.ThreadStateException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.diagnostics.UnreachableException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAcceptConnectionAsync = null;
@@ -269,7 +271,7 @@ public class QuicListener extends NetObject  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Quic.QuicListener.ListenAsync" target="_top">.NET documentation</a>
      */
-    public static ValueTask_1 ListenAsync(QuicListenerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
+    public static ValueTask_1<QuicListener> ListenAsync(QuicListenerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectListenAsync = null;

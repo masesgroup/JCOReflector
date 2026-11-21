@@ -42,6 +42,8 @@ import system.runtime.durableinstancing.InstanceStoreQueryResult;
 import system.collections.generic.IDictionary_2;
 import system.collections.generic.IDictionary_2Implementation;
 import system.Guid;
+import system.xml.linq.XName;
+import system.runtime.durableinstancing.InstanceValue;
 
 
 /**
@@ -171,14 +173,14 @@ public class InstanceOwnerQueryResult extends system.runtime.durableinstancing.I
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param instanceOwners the argument of type {@code IDictionary_2}
+     * @param instanceOwners the argument of type {@code IDictionary_2<Guid, IDictionary_2<XName, InstanceValue>>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceOwnerQueryResult.-ctor" target="_top">.NET documentation</a>
      */
-    public InstanceOwnerQueryResult(IDictionary_2 instanceOwners) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
+    public InstanceOwnerQueryResult(IDictionary_2<Guid, IDictionary_2<XName, InstanceValue>> instanceOwners) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -192,14 +194,14 @@ public class InstanceOwnerQueryResult extends system.runtime.durableinstancing.I
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param instanceOwnerId the argument of type {@code Guid}
-     * @param metadata the argument of type {@code IDictionary_2}
+     * @param metadata the argument of type {@code IDictionary_2<XName, InstanceValue>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceOwnerQueryResult.-ctor" target="_top">.NET documentation</a>
      */
-    public InstanceOwnerQueryResult(Guid instanceOwnerId, IDictionary_2 metadata) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
+    public InstanceOwnerQueryResult(Guid instanceOwnerId, IDictionary_2<XName, InstanceValue> metadata) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -224,7 +226,7 @@ public class InstanceOwnerQueryResult extends system.runtime.durableinstancing.I
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceOwnerQueryResult.InstanceOwners" target="_top">.NET documentation</a>
      */
-    public IDictionary_2 getInstanceOwners() throws Throwable {
+    public IDictionary_2<Guid, IDictionary_2<XName, InstanceValue>> getInstanceOwners() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectInstanceOwners = null;
@@ -246,7 +248,7 @@ public class InstanceOwnerQueryResult extends system.runtime.durableinstancing.I
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceOwnerQueryResult.InstanceOwners" target="_top">.NET documentation</a>
      */
-    public void setInstanceOwners(IDictionary_2 InstanceOwners) throws Throwable {
+    public void setInstanceOwners(IDictionary_2<Guid, IDictionary_2<XName, InstanceValue>> InstanceOwners) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

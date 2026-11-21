@@ -41,7 +41,9 @@ import java.util.ArrayList;
 import system.identitymodel.metadata.RoleDescriptor;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.Uri;
 import system.collections.objectmodel.Collection_1;
+import system.identitymodel.metadata.ProtocolEndpoint;
 import system.identitymodel.metadata.IndexedProtocolEndpointDictionary;
 
 
@@ -184,7 +186,7 @@ public class SingleSignOnDescriptor extends system.identitymodel.metadata.RoleDe
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.SingleSignOnDescriptor.NameIdentifierFormats" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getNameIdentifierFormats() throws Throwable {
+    public ICollection_1<Uri> getNameIdentifierFormats() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectNameIdentifierFormats = null;
@@ -206,7 +208,7 @@ public class SingleSignOnDescriptor extends system.identitymodel.metadata.RoleDe
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.SingleSignOnDescriptor.SingleLogoutServices" target="_top">.NET documentation</a>
      */
-    public Collection_1 getSingleLogoutServices() throws Throwable {
+    public Collection_1<ProtocolEndpoint> getSingleLogoutServices() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSingleLogoutServices = null;

@@ -258,7 +258,7 @@ public class NameValueWithParametersHeaderValue extends system.net.http.headers.
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.NameValueWithParametersHeaderValue.Parameters" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getParameters() throws Throwable, system.ArgumentNullException {
+    public ICollection_1<NameValueHeaderValue> getParameters() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectParameters = null;

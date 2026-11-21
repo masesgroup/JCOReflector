@@ -43,12 +43,18 @@ import microsoft.extensions.hosting.IHostImplementation;
 import microsoft.extensions.hosting.IHostBuilder;
 import microsoft.extensions.hosting.IHostBuilderImplementation;
 import system.Action_2;
+import microsoft.extensions.hosting.HostBuilderContext;
+import microsoft.extensions.configuration.IConfigurationBuilder;
+import microsoft.extensions.configuration.IConfigurationBuilderImplementation;
 import system.Action_1;
+import microsoft.extensions.dependencyinjection.IServiceCollection;
+import microsoft.extensions.dependencyinjection.IServiceCollectionImplementation;
 import microsoft.extensions.dependencyinjection.IServiceProviderFactory_1;
 import microsoft.extensions.dependencyinjection.IServiceProviderFactory_1Implementation;
 import system.Func_2;
 import system.collections.generic.IDictionary_2;
 import system.collections.generic.IDictionary_2Implementation;
+import system.Object;
 
 
 /**
@@ -179,12 +185,12 @@ public class IHostBuilderImplementation extends NetObject implements IHostBuilde
     /**
      * Invokes the .NET member ConfigureAppConfiguration.
      *
-     * @param configureDelegate the argument of type {@code Action_2}
+     * @param configureDelegate the argument of type {@code Action_2<HostBuilderContext, IConfigurationBuilder>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Hosting.IHostBuilder.ConfigureAppConfiguration" target="_top">.NET documentation</a>
      */
-    public IHostBuilder ConfigureAppConfiguration(Action_2 configureDelegate) throws Throwable {
+    public IHostBuilder ConfigureAppConfiguration(Action_2<HostBuilderContext, IConfigurationBuilder> configureDelegate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectConfigureAppConfiguration = null;
@@ -226,12 +232,12 @@ public class IHostBuilderImplementation extends NetObject implements IHostBuilde
     /**
      * Invokes the .NET member ConfigureHostConfiguration.
      *
-     * @param configureDelegate the argument of type {@code Action_1}
+     * @param configureDelegate the argument of type {@code Action_1<IConfigurationBuilder>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Hosting.IHostBuilder.ConfigureHostConfiguration" target="_top">.NET documentation</a>
      */
-    public IHostBuilder ConfigureHostConfiguration(Action_1 configureDelegate) throws Throwable {
+    public IHostBuilder ConfigureHostConfiguration(Action_1<IConfigurationBuilder> configureDelegate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectConfigureHostConfiguration = null;
@@ -249,12 +255,12 @@ public class IHostBuilderImplementation extends NetObject implements IHostBuilde
     /**
      * Invokes the .NET member ConfigureServices.
      *
-     * @param configureDelegate the argument of type {@code Action_2}
+     * @param configureDelegate the argument of type {@code Action_2<HostBuilderContext, IServiceCollection>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Hosting.IHostBuilder.ConfigureServices" target="_top">.NET documentation</a>
      */
-    public IHostBuilder ConfigureServices(Action_2 configureDelegate) throws Throwable {
+    public IHostBuilder ConfigureServices(Action_2<HostBuilderContext, IServiceCollection> configureDelegate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectConfigureServices = null;
@@ -338,7 +344,7 @@ public class IHostBuilderImplementation extends NetObject implements IHostBuilde
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Hosting.IHostBuilder.Properties" target="_top">.NET documentation</a>
      */
-    public IDictionary_2 getProperties() throws Throwable {
+    public IDictionary_2<Object, Object> getProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectProperties = null;

@@ -44,6 +44,7 @@ import system.web.modelbinding.ModelBindingExecutionContext;
 import system.componentmodel.dataannotations.ValidationAttribute;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.web.modelbinding.ModelValidationResult;
 
 
 /**
@@ -190,7 +191,7 @@ public class DataAnnotationsModelValidator extends system.web.modelbinding.Model
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.DataAnnotationsModelValidator.Validate" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 Validate(NetObject container) throws Throwable {
+    public IEnumerable_1<ModelValidationResult> Validate(NetObject container) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValidate = null;

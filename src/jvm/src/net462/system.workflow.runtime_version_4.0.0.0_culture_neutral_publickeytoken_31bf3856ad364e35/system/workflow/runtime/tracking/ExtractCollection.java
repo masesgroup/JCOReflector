@@ -171,14 +171,14 @@ public class ExtractCollection extends system.collections.generic.List_1<Trackin
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param extracts the argument of type {@code IEnumerable_1}
+     * @param extracts the argument of type {@code IEnumerable_1<TrackingExtract>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.ExtractCollection.-ctor" target="_top">.NET documentation</a>
      */
-    public ExtractCollection(IEnumerable_1 extracts) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public ExtractCollection(IEnumerable_1<TrackingExtract> extracts) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

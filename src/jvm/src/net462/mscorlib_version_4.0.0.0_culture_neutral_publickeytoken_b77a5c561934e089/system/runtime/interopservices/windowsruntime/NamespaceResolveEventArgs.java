@@ -188,7 +188,7 @@ public class NamespaceResolveEventArgs extends system.EventArgs  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.WindowsRuntime.NamespaceResolveEventArgs.ResolvedAssemblies" target="_top">.NET documentation</a>
      */
-    public Collection_1 getResolvedAssemblies() throws Throwable {
+    public Collection_1<Assembly> getResolvedAssemblies() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectResolvedAssemblies = null;

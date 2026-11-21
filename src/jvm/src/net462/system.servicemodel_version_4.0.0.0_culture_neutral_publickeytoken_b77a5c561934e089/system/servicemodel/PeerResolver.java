@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.objectmodel.ReadOnlyCollection_1;
-import system.TimeSpan;
 import system.servicemodel.PeerNodeAddress;
+import system.TimeSpan;
 import system.servicemodel.EndpointAddress;
 import system.servicemodel.description.ClientCredentials;
 import system.servicemodel.peerresolvers.PeerReferralPolicy;
@@ -170,7 +170,7 @@ public class PeerResolver extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolver.Resolve" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 Resolve(java.lang.String meshId, int maxAddresses, TimeSpan timeout) throws Throwable {
+    public ReadOnlyCollection_1<PeerNodeAddress> Resolve(java.lang.String meshId, int maxAddresses, TimeSpan timeout) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectResolve = null;

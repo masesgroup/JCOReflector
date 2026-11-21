@@ -39,6 +39,7 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.Object;
 import system.activities.hosting.WorkflowInstanceProxy;
 
 
@@ -118,7 +119,7 @@ public interface IWorkflowInstanceExtension extends IJCOBridgeReflected {
 
     // Methods section
     
-    public IEnumerable_1 GetAdditionalExtensions() throws Throwable;
+    public IEnumerable_1<Object> GetAdditionalExtensions() throws Throwable;
 
     public void SetInstance(WorkflowInstanceProxy instance) throws Throwable;
 

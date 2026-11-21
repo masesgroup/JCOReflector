@@ -46,6 +46,8 @@ import system.IAsyncResultImplementation;
 import system.TimeSpan;
 import system.AsyncCallback;
 import system.activities.hosting.WorkflowInstanceExtensionManager;
+import system.EventHandler_1;
+import system.activities.InvokeCompletedEventArgs;
 
 
 /**
@@ -962,6 +964,40 @@ public class WorkflowInvoker extends NetObject  {
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addInvokeCompleted.
+     *
+     * @param handler the argument of type {@code EventHandler_1<InvokeCompletedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addInvokeCompleted(EventHandler_1<InvokeCompletedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("InvokeCompleted", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeInvokeCompleted.
+     *
+     * @param handler the argument of type {@code EventHandler_1<InvokeCompletedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeInvokeCompleted(EventHandler_1<InvokeCompletedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("InvokeCompleted", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

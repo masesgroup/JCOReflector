@@ -43,6 +43,7 @@ import system.data.metadata.edm.EdmItemCollection;
 import system.data.metadata.edm.StoreItemCollection;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.xml.XmlReader;
 
 
 /**
@@ -161,7 +162,7 @@ public class StorageMappingItemCollection extends system.data.mapping.MappingIte
      *
      * @param edmCollection the argument of type {@code EdmItemCollection}
      * @param storeCollection the argument of type {@code StoreItemCollection}
-     * @param xmlReaders the argument of type {@code IEnumerable_1}
+     * @param xmlReaders the argument of type {@code IEnumerable_1<XmlReader>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -186,7 +187,7 @@ public class StorageMappingItemCollection extends system.data.mapping.MappingIte
      * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Mapping.StorageMappingItemCollection.-ctor" target="_top">.NET documentation</a>
      */
-    public StorageMappingItemCollection(EdmItemCollection edmCollection, StoreItemCollection storeCollection, IEnumerable_1 xmlReaders) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException, system.threading.SynchronizationLockException, system.data.MappingException, system.data.MetadataException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.OutOfMemoryException, system.UriFormatException, system.xml.XmlException, system.MulticastNotSupportedException, system.data.EntitySqlException, system.configuration.ConfigurationErrorsException {
+    public StorageMappingItemCollection(EdmItemCollection edmCollection, StoreItemCollection storeCollection, IEnumerable_1<XmlReader> xmlReaders) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException, system.threading.SynchronizationLockException, system.data.MappingException, system.data.MetadataException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.OutOfMemoryException, system.UriFormatException, system.xml.XmlException, system.MulticastNotSupportedException, system.data.EntitySqlException, system.configuration.ConfigurationErrorsException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

@@ -127,7 +127,7 @@ public interface IXpsFixedDocumentSequenceReader extends IJCOBridgeReflected {
     
     // Properties section
     
-    public ReadOnlyCollection_1 getFixedDocuments() throws Throwable;
+    public ReadOnlyCollection_1<IXpsFixedDocumentReader> getFixedDocuments() throws Throwable;
 
     public PrintTicket getPrintTicket() throws Throwable;
 

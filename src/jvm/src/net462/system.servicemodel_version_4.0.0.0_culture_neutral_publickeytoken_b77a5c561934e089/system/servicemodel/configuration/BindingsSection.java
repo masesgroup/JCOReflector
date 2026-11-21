@@ -42,9 +42,9 @@ import system.configuration.ConfigurationSection;
 import system.servicemodel.configuration.BindingsSection;
 import system.configuration.Configuration;
 import system.collections.generic.List_1;
+import system.servicemodel.configuration.BindingCollectionElement;
 import system.servicemodel.configuration.BasicHttpBindingCollectionElement;
 import system.servicemodel.configuration.BasicHttpsBindingCollectionElement;
-import system.servicemodel.configuration.BindingCollectionElement;
 import system.servicemodel.configuration.CustomBindingCollectionElement;
 import system.servicemodel.configuration.MsmqIntegrationBindingCollectionElement;
 import system.servicemodel.configuration.NetHttpBindingCollectionElement;
@@ -257,7 +257,7 @@ public class BindingsSection extends system.configuration.ConfigurationSection  
      * @throws system.configuration.ConfigurationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Configuration.BindingsSection.BindingCollections" target="_top">.NET documentation</a>
      */
-    public List_1 getBindingCollections() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
+    public List_1<BindingCollectionElement> getBindingCollections() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectBindingCollections = null;

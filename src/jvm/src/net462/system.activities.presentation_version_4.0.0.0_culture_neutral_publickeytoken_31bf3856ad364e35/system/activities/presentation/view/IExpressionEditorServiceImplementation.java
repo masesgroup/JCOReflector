@@ -43,6 +43,7 @@ import system.activities.presentation.view.IExpressionEditorInstanceImplementati
 import system.activities.presentation.hosting.AssemblyContextControlItem;
 import system.activities.presentation.hosting.ImportedNamespaceContextItem;
 import system.collections.generic.List_1;
+import system.activities.presentation.model.ModelItem;
 import system.windows.Size;
 
 
@@ -154,13 +155,13 @@ public class IExpressionEditorServiceImplementation extends NetObject implements
      *
      * @param assemblies the argument of type {@code AssemblyContextControlItem}
      * @param importedNamespaces the argument of type {@code ImportedNamespaceContextItem}
-     * @param variables the argument of type {@code List_1}
+     * @param variables the argument of type {@code List_1<ModelItem>}
      * @param text the argument of type {@code java.lang.String}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor" target="_top">.NET documentation</a>
      */
-    public IExpressionEditorInstance CreateExpressionEditor(AssemblyContextControlItem assemblies, ImportedNamespaceContextItem importedNamespaces, List_1 variables, java.lang.String text) throws Throwable {
+    public IExpressionEditorInstance CreateExpressionEditor(AssemblyContextControlItem assemblies, ImportedNamespaceContextItem importedNamespaces, List_1<ModelItem> variables, java.lang.String text) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCreateExpressionEditor = null;
@@ -180,14 +181,14 @@ public class IExpressionEditorServiceImplementation extends NetObject implements
      *
      * @param assemblies the argument of type {@code AssemblyContextControlItem}
      * @param importedNamespaces the argument of type {@code ImportedNamespaceContextItem}
-     * @param variables the argument of type {@code List_1}
+     * @param variables the argument of type {@code List_1<ModelItem>}
      * @param text the argument of type {@code java.lang.String}
      * @param expressionType the argument of type {@code NetType}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor" target="_top">.NET documentation</a>
      */
-    public IExpressionEditorInstance CreateExpressionEditor(AssemblyContextControlItem assemblies, ImportedNamespaceContextItem importedNamespaces, List_1 variables, java.lang.String text, NetType expressionType) throws Throwable {
+    public IExpressionEditorInstance CreateExpressionEditor(AssemblyContextControlItem assemblies, ImportedNamespaceContextItem importedNamespaces, List_1<ModelItem> variables, java.lang.String text, NetType expressionType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCreateExpressionEditor = null;
@@ -207,7 +208,7 @@ public class IExpressionEditorServiceImplementation extends NetObject implements
      *
      * @param assemblies the argument of type {@code AssemblyContextControlItem}
      * @param importedNamespaces the argument of type {@code ImportedNamespaceContextItem}
-     * @param variables the argument of type {@code List_1}
+     * @param variables the argument of type {@code List_1<ModelItem>}
      * @param text the argument of type {@code java.lang.String}
      * @param expressionType the argument of type {@code NetType}
      * @param initialSize the argument of type {@code Size}
@@ -215,7 +216,7 @@ public class IExpressionEditorServiceImplementation extends NetObject implements
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor" target="_top">.NET documentation</a>
      */
-    public IExpressionEditorInstance CreateExpressionEditor(AssemblyContextControlItem assemblies, ImportedNamespaceContextItem importedNamespaces, List_1 variables, java.lang.String text, NetType expressionType, Size initialSize) throws Throwable {
+    public IExpressionEditorInstance CreateExpressionEditor(AssemblyContextControlItem assemblies, ImportedNamespaceContextItem importedNamespaces, List_1<ModelItem> variables, java.lang.String text, NetType expressionType, Size initialSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCreateExpressionEditor = null;
@@ -235,14 +236,14 @@ public class IExpressionEditorServiceImplementation extends NetObject implements
      *
      * @param assemblies the argument of type {@code AssemblyContextControlItem}
      * @param importedNamespaces the argument of type {@code ImportedNamespaceContextItem}
-     * @param variables the argument of type {@code List_1}
+     * @param variables the argument of type {@code List_1<ModelItem>}
      * @param text the argument of type {@code java.lang.String}
      * @param initialSize the argument of type {@code Size}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor" target="_top">.NET documentation</a>
      */
-    public IExpressionEditorInstance CreateExpressionEditor(AssemblyContextControlItem assemblies, ImportedNamespaceContextItem importedNamespaces, List_1 variables, java.lang.String text, Size initialSize) throws Throwable {
+    public IExpressionEditorInstance CreateExpressionEditor(AssemblyContextControlItem assemblies, ImportedNamespaceContextItem importedNamespaces, List_1<ModelItem> variables, java.lang.String text, Size initialSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCreateExpressionEditor = null;

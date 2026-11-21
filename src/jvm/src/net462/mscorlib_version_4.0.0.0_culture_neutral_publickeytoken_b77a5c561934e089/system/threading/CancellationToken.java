@@ -43,6 +43,7 @@ import system.threading.CancellationToken;
 import system.threading.CancellationTokenRegistration;
 import system.Action;
 import system.Action_1;
+import system.Object;
 import system.threading.WaitHandle;
 
 
@@ -273,7 +274,7 @@ public class CancellationToken extends system.ValueType  {
     /**
      * Invokes the .NET member Register.
      *
-     * @param callback the argument of type {@code Action_1}
+     * @param callback the argument of type {@code Action_1<Object>}
      * @param state the argument of type {@code NetObject}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -290,7 +291,7 @@ public class CancellationToken extends system.ValueType  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.CancellationToken.Register" target="_top">.NET documentation</a>
      */
-    public CancellationTokenRegistration Register(Action_1 callback, NetObject state) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ObjectDisposedException {
+    public CancellationTokenRegistration Register(Action_1<Object> callback, NetObject state) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRegister = null;
@@ -308,7 +309,7 @@ public class CancellationToken extends system.ValueType  {
     /**
      * Invokes the .NET member Register.
      *
-     * @param callback the argument of type {@code Action_1}
+     * @param callback the argument of type {@code Action_1<Object>}
      * @param state the argument of type {@code NetObject}
      * @param useSynchronizationContext the argument of type {@code boolean}
      * @return the value returned by the .NET member
@@ -326,7 +327,7 @@ public class CancellationToken extends system.ValueType  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.CancellationToken.Register" target="_top">.NET documentation</a>
      */
-    public CancellationTokenRegistration Register(Action_1 callback, NetObject state, boolean useSynchronizationContext) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ObjectDisposedException {
+    public CancellationTokenRegistration Register(Action_1<Object> callback, NetObject state, boolean useSynchronizationContext) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRegister = null;

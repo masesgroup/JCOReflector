@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.reflection.CustomAttributeData;
 import system.runtime.serialization.StreamingContext;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
@@ -209,7 +210,7 @@ public class ParameterInfo extends NetObject  {
      * @throws system.RankException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.ParameterInfo.GetCustomAttributesData" target="_top">.NET documentation</a>
      */
-    public IList_1 GetCustomAttributesData() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException {
+    public IList_1<CustomAttributeData> GetCustomAttributesData() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetCustomAttributesData = null;
@@ -659,7 +660,7 @@ public class ParameterInfo extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.ParameterInfo.CustomAttributes" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getCustomAttributes() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
+    public IEnumerable_1<CustomAttributeData> getCustomAttributes() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCustomAttributes = null;

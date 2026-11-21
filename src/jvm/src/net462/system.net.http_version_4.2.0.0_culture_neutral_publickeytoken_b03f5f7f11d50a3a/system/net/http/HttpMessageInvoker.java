@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.net.http.HttpMessageHandler;
 import system.threading.tasks.Task_1;
+import system.net.http.HttpResponseMessage;
 import system.net.http.HttpRequestMessage;
 import system.threading.CancellationToken;
 
@@ -229,7 +230,7 @@ public class HttpMessageInvoker extends NetObject implements AutoCloseable {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpMessageInvoker.SendAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 SendAsync(HttpRequestMessage request, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException {
+    public Task_1<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSendAsync = null;

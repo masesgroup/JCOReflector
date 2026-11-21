@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import microsoft.build.framework.xamltypes.BaseProperty;
 import system.collections.generic.List_1;
+import microsoft.build.framework.xamltypes.EnumValue;
 
 
 /**
@@ -197,7 +198,7 @@ public class EnumProperty extends microsoft.build.framework.xamltypes.BaseProper
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.EnumProperty.AdmissibleValues" target="_top">.NET documentation</a>
      */
-    public List_1 getAdmissibleValues() throws Throwable {
+    public List_1<EnumValue> getAdmissibleValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAdmissibleValues = null;
@@ -219,7 +220,7 @@ public class EnumProperty extends microsoft.build.framework.xamltypes.BaseProper
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.EnumProperty.AdmissibleValues" target="_top">.NET documentation</a>
      */
-    public void setAdmissibleValues(List_1 AdmissibleValues) throws Throwable {
+    public void setAdmissibleValues(List_1<EnumValue> AdmissibleValues) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

@@ -42,6 +42,7 @@ import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
 import system.web.modelbinding.ModelMetadata;
 import system.Func_1;
+import system.Object;
 
 
 /**
@@ -167,7 +168,7 @@ public class ModelMetadataProvider extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadataProvider.GetMetadataForProperties" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetMetadataForProperties(NetObject container, NetType containerType) throws Throwable {
+    public IEnumerable_1<ModelMetadata> GetMetadataForProperties(NetObject container, NetType containerType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetMetadataForProperties = null;
@@ -185,14 +186,14 @@ public class ModelMetadataProvider extends NetObject  {
     /**
      * Invokes the .NET member GetMetadataForProperty.
      *
-     * @param modelAccessor the argument of type {@code Func_1}
+     * @param modelAccessor the argument of type {@code Func_1<Object>}
      * @param containerType the argument of type {@code NetType}
      * @param propertyName the argument of type {@code java.lang.String}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadataProvider.GetMetadataForProperty" target="_top">.NET documentation</a>
      */
-    public ModelMetadata GetMetadataForProperty(Func_1 modelAccessor, NetType containerType, java.lang.String propertyName) throws Throwable {
+    public ModelMetadata GetMetadataForProperty(Func_1<Object> modelAccessor, NetType containerType, java.lang.String propertyName) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetMetadataForProperty = null;
@@ -210,13 +211,13 @@ public class ModelMetadataProvider extends NetObject  {
     /**
      * Invokes the .NET member GetMetadataForType.
      *
-     * @param modelAccessor the argument of type {@code Func_1}
+     * @param modelAccessor the argument of type {@code Func_1<Object>}
      * @param modelType the argument of type {@code NetType}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadataProvider.GetMetadataForType" target="_top">.NET documentation</a>
      */
-    public ModelMetadata GetMetadataForType(Func_1 modelAccessor, NetType modelType) throws Throwable {
+    public ModelMetadata GetMetadataForType(Func_1<Object> modelAccessor, NetType modelType) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetMetadataForType = null;

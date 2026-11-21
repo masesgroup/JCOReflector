@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.Uri;
 import system.io.packaging.PackageRelationshipSelectorType;
 import system.collections.generic.List_1;
+import system.io.packaging.PackageRelationship;
 import system.io.packaging.Package;
 
 
@@ -221,7 +222,7 @@ public class PackageRelationshipSelector extends NetObject  {
      * @throws system.io.FileFormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageRelationshipSelector.Select" target="_top">.NET documentation</a>
      */
-    public List_1 Select(Package _package) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.diagnostics.UnreachableException, system.UriFormatException, system.FormatException, system.io.IOException, system.xml.XmlException, system.io.FileFormatException {
+    public List_1<PackageRelationship> Select(Package _package) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.diagnostics.UnreachableException, system.UriFormatException, system.FormatException, system.io.IOException, system.xml.XmlException, system.io.FileFormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSelect = null;

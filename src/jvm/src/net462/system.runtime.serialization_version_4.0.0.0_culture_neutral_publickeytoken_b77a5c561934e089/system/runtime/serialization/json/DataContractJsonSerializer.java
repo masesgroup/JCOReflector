@@ -195,7 +195,7 @@ public class DataContractJsonSerializer extends system.runtime.serialization.Xml
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param type the argument of type {@code NetType}
-     * @param knownTypes the argument of type {@code IEnumerable_1}
+     * @param knownTypes the argument of type {@code IEnumerable_1<NetType>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -208,7 +208,7 @@ public class DataContractJsonSerializer extends system.runtime.serialization.Xml
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Json.DataContractJsonSerializer.-ctor" target="_top">.NET documentation</a>
      */
-    public DataContractJsonSerializer(NetType type, IEnumerable_1 knownTypes) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException, system.NotImplementedException {
+    public DataContractJsonSerializer(NetType type, IEnumerable_1<NetType> knownTypes) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException, system.NotImplementedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -222,7 +222,7 @@ public class DataContractJsonSerializer extends system.runtime.serialization.Xml
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param type the argument of type {@code NetType}
-     * @param knownTypes the argument of type {@code IEnumerable_1}
+     * @param knownTypes the argument of type {@code IEnumerable_1<NetType>}
      * @param maxItemsInObjectGraph the argument of type {@code int}
      * @param ignoreExtensionDataObject the argument of type {@code boolean}
      * @param dataContractSurrogate the argument of type {@code IDataContractSurrogate}
@@ -243,7 +243,7 @@ public class DataContractJsonSerializer extends system.runtime.serialization.Xml
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Json.DataContractJsonSerializer.-ctor" target="_top">.NET documentation</a>
      */
-    public DataContractJsonSerializer(NetType type, IEnumerable_1 knownTypes, int maxItemsInObjectGraph, boolean ignoreExtensionDataObject, IDataContractSurrogate dataContractSurrogate, boolean alwaysEmitTypeInformation) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException, system.NotImplementedException {
+    public DataContractJsonSerializer(NetType type, IEnumerable_1<NetType> knownTypes, int maxItemsInObjectGraph, boolean ignoreExtensionDataObject, IDataContractSurrogate dataContractSurrogate, boolean alwaysEmitTypeInformation) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException, system.NotImplementedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -313,7 +313,7 @@ public class DataContractJsonSerializer extends system.runtime.serialization.Xml
      *
      * @param type the argument of type {@code NetType}
      * @param rootName the argument of type {@code java.lang.String}
-     * @param knownTypes the argument of type {@code IEnumerable_1}
+     * @param knownTypes the argument of type {@code IEnumerable_1<NetType>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -327,7 +327,7 @@ public class DataContractJsonSerializer extends system.runtime.serialization.Xml
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Json.DataContractJsonSerializer.-ctor" target="_top">.NET documentation</a>
      */
-    public DataContractJsonSerializer(NetType type, java.lang.String rootName, IEnumerable_1 knownTypes) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException, system.NotImplementedException {
+    public DataContractJsonSerializer(NetType type, java.lang.String rootName, IEnumerable_1<NetType> knownTypes) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException, system.NotImplementedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -342,7 +342,7 @@ public class DataContractJsonSerializer extends system.runtime.serialization.Xml
      *
      * @param type the argument of type {@code NetType}
      * @param rootName the argument of type {@code java.lang.String}
-     * @param knownTypes the argument of type {@code IEnumerable_1}
+     * @param knownTypes the argument of type {@code IEnumerable_1<NetType>}
      * @param maxItemsInObjectGraph the argument of type {@code int}
      * @param ignoreExtensionDataObject the argument of type {@code boolean}
      * @param dataContractSurrogate the argument of type {@code IDataContractSurrogate}
@@ -363,7 +363,7 @@ public class DataContractJsonSerializer extends system.runtime.serialization.Xml
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Json.DataContractJsonSerializer.-ctor" target="_top">.NET documentation</a>
      */
-    public DataContractJsonSerializer(NetType type, java.lang.String rootName, IEnumerable_1 knownTypes, int maxItemsInObjectGraph, boolean ignoreExtensionDataObject, IDataContractSurrogate dataContractSurrogate, boolean alwaysEmitTypeInformation) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException, system.NotImplementedException {
+    public DataContractJsonSerializer(NetType type, java.lang.String rootName, IEnumerable_1<NetType> knownTypes, int maxItemsInObjectGraph, boolean ignoreExtensionDataObject, IDataContractSurrogate dataContractSurrogate, boolean alwaysEmitTypeInformation) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException, system.NotImplementedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -401,7 +401,7 @@ public class DataContractJsonSerializer extends system.runtime.serialization.Xml
      *
      * @param type the argument of type {@code NetType}
      * @param rootName the argument of type {@code XmlDictionaryString}
-     * @param knownTypes the argument of type {@code IEnumerable_1}
+     * @param knownTypes the argument of type {@code IEnumerable_1<NetType>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -414,7 +414,7 @@ public class DataContractJsonSerializer extends system.runtime.serialization.Xml
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Json.DataContractJsonSerializer.-ctor" target="_top">.NET documentation</a>
      */
-    public DataContractJsonSerializer(NetType type, XmlDictionaryString rootName, IEnumerable_1 knownTypes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotSupportedException, system.InvalidOperationException, system.runtime.serialization.InvalidDataContractException, system.NotImplementedException, system.ArgumentOutOfRangeException {
+    public DataContractJsonSerializer(NetType type, XmlDictionaryString rootName, IEnumerable_1<NetType> knownTypes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.NotSupportedException, system.InvalidOperationException, system.runtime.serialization.InvalidDataContractException, system.NotImplementedException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -429,7 +429,7 @@ public class DataContractJsonSerializer extends system.runtime.serialization.Xml
      *
      * @param type the argument of type {@code NetType}
      * @param rootName the argument of type {@code XmlDictionaryString}
-     * @param knownTypes the argument of type {@code IEnumerable_1}
+     * @param knownTypes the argument of type {@code IEnumerable_1<NetType>}
      * @param maxItemsInObjectGraph the argument of type {@code int}
      * @param ignoreExtensionDataObject the argument of type {@code boolean}
      * @param dataContractSurrogate the argument of type {@code IDataContractSurrogate}
@@ -447,7 +447,7 @@ public class DataContractJsonSerializer extends system.runtime.serialization.Xml
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Json.DataContractJsonSerializer.-ctor" target="_top">.NET documentation</a>
      */
-    public DataContractJsonSerializer(NetType type, XmlDictionaryString rootName, IEnumerable_1 knownTypes, int maxItemsInObjectGraph, boolean ignoreExtensionDataObject, IDataContractSurrogate dataContractSurrogate, boolean alwaysEmitTypeInformation) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException, system.NotImplementedException, system.ArgumentOutOfRangeException {
+    public DataContractJsonSerializer(NetType type, XmlDictionaryString rootName, IEnumerable_1<NetType> knownTypes, int maxItemsInObjectGraph, boolean ignoreExtensionDataObject, IDataContractSurrogate dataContractSurrogate, boolean alwaysEmitTypeInformation) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException, system.NotImplementedException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -1057,7 +1057,7 @@ public class DataContractJsonSerializer extends system.runtime.serialization.Xml
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Json.DataContractJsonSerializer.KnownTypes" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getKnownTypes() throws Throwable, system.ArgumentNullException {
+    public ReadOnlyCollection_1<NetType> getKnownTypes() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectKnownTypes = null;

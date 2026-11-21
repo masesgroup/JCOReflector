@@ -158,7 +158,7 @@ public class AggregateExportProvider extends system.componentmodel.composition.h
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param providers the argument of type {@code IEnumerable_1}
+     * @param providers the argument of type {@code IEnumerable_1<ExportProvider>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -169,7 +169,7 @@ public class AggregateExportProvider extends system.componentmodel.composition.h
      * @throws system.componentmodel.composition.ChangeRejectedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.AggregateExportProvider.-ctor" target="_top">.NET documentation</a>
      */
-    public AggregateExportProvider(IEnumerable_1 providers) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotImplementedException, system.componentmodel.composition.CompositionException, system.componentmodel.composition.ChangeRejectedException {
+    public AggregateExportProvider(IEnumerable_1<ExportProvider> providers) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotImplementedException, system.componentmodel.composition.CompositionException, system.componentmodel.composition.ChangeRejectedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -259,7 +259,7 @@ public class AggregateExportProvider extends system.componentmodel.composition.h
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.AggregateExportProvider.Providers" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getProviders() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+    public ReadOnlyCollection_1<ExportProvider> getProviders() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectProviders = null;

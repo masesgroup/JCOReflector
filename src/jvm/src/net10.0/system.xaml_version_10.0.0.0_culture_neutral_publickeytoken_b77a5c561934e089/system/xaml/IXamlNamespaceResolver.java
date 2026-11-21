@@ -39,6 +39,7 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.xaml.NamespaceDeclaration;
 
 
 /**
@@ -117,7 +118,7 @@ public interface IXamlNamespaceResolver extends IJCOBridgeReflected {
 
     // Methods section
     
-    public IEnumerable_1 GetNamespacePrefixes() throws Throwable;
+    public IEnumerable_1<NamespaceDeclaration> GetNamespacePrefixes() throws Throwable;
 
     public java.lang.String GetNamespace(java.lang.String prefix) throws Throwable;
 

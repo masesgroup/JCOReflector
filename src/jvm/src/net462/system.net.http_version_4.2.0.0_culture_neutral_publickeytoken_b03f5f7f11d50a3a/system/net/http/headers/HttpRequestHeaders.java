@@ -42,9 +42,21 @@ import system.net.http.headers.HttpHeaders;
 import system.net.http.headers.AuthenticationHeaderValue;
 import system.net.http.headers.CacheControlHeaderValue;
 import system.net.http.headers.HttpHeaderValueCollection_1;
+import system.net.http.headers.EntityTagHeaderValue;
+import system.net.http.headers.MediaTypeWithQualityHeaderValue;
+import system.net.http.headers.NameValueHeaderValue;
+import system.net.http.headers.NameValueWithParametersHeaderValue;
+import system.net.http.headers.ProductHeaderValue;
+import system.net.http.headers.ProductInfoHeaderValue;
+import system.net.http.headers.StringWithQualityHeaderValue;
+import system.net.http.headers.TransferCodingHeaderValue;
+import system.net.http.headers.TransferCodingWithQualityHeaderValue;
+import system.net.http.headers.ViaHeaderValue;
+import system.net.http.headers.WarningHeaderValue;
 import system.net.http.headers.RangeConditionHeaderValue;
 import system.net.http.headers.RangeHeaderValue;
 import system.Nullable_1;
+import system.DateTimeOffset;
 import system.Uri;
 
 
@@ -334,7 +346,7 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.IfMatch" target="_top">.NET documentation</a>
      */
-    public HttpHeaderValueCollection_1 getIfMatch() throws Throwable {
+    public HttpHeaderValueCollection_1<EntityTagHeaderValue> getIfMatch() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIfMatch = null;
@@ -356,7 +368,7 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.IfNoneMatch" target="_top">.NET documentation</a>
      */
-    public HttpHeaderValueCollection_1 getIfNoneMatch() throws Throwable {
+    public HttpHeaderValueCollection_1<EntityTagHeaderValue> getIfNoneMatch() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIfNoneMatch = null;
@@ -378,7 +390,7 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.Accept" target="_top">.NET documentation</a>
      */
-    public HttpHeaderValueCollection_1 getAccept() throws Throwable {
+    public HttpHeaderValueCollection_1<MediaTypeWithQualityHeaderValue> getAccept() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAccept = null;
@@ -400,7 +412,7 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.Pragma" target="_top">.NET documentation</a>
      */
-    public HttpHeaderValueCollection_1 getPragma() throws Throwable {
+    public HttpHeaderValueCollection_1<NameValueHeaderValue> getPragma() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPragma = null;
@@ -422,7 +434,7 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.Expect" target="_top">.NET documentation</a>
      */
-    public HttpHeaderValueCollection_1 getExpect() throws Throwable {
+    public HttpHeaderValueCollection_1<NameValueWithParametersHeaderValue> getExpect() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExpect = null;
@@ -444,7 +456,7 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.Upgrade" target="_top">.NET documentation</a>
      */
-    public HttpHeaderValueCollection_1 getUpgrade() throws Throwable {
+    public HttpHeaderValueCollection_1<ProductHeaderValue> getUpgrade() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUpgrade = null;
@@ -466,7 +478,7 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.UserAgent" target="_top">.NET documentation</a>
      */
-    public HttpHeaderValueCollection_1 getUserAgent() throws Throwable {
+    public HttpHeaderValueCollection_1<ProductInfoHeaderValue> getUserAgent() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUserAgent = null;
@@ -488,7 +500,7 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.AcceptCharset" target="_top">.NET documentation</a>
      */
-    public HttpHeaderValueCollection_1 getAcceptCharset() throws Throwable {
+    public HttpHeaderValueCollection_1<StringWithQualityHeaderValue> getAcceptCharset() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAcceptCharset = null;
@@ -510,7 +522,7 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.AcceptEncoding" target="_top">.NET documentation</a>
      */
-    public HttpHeaderValueCollection_1 getAcceptEncoding() throws Throwable {
+    public HttpHeaderValueCollection_1<StringWithQualityHeaderValue> getAcceptEncoding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAcceptEncoding = null;
@@ -532,7 +544,7 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.AcceptLanguage" target="_top">.NET documentation</a>
      */
-    public HttpHeaderValueCollection_1 getAcceptLanguage() throws Throwable {
+    public HttpHeaderValueCollection_1<StringWithQualityHeaderValue> getAcceptLanguage() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAcceptLanguage = null;
@@ -554,7 +566,7 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.TransferEncoding" target="_top">.NET documentation</a>
      */
-    public HttpHeaderValueCollection_1 getTransferEncoding() throws Throwable {
+    public HttpHeaderValueCollection_1<TransferCodingHeaderValue> getTransferEncoding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTransferEncoding = null;
@@ -576,7 +588,7 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.TE" target="_top">.NET documentation</a>
      */
-    public HttpHeaderValueCollection_1 getTE() throws Throwable {
+    public HttpHeaderValueCollection_1<TransferCodingWithQualityHeaderValue> getTE() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTE = null;
@@ -598,7 +610,7 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.Via" target="_top">.NET documentation</a>
      */
-    public HttpHeaderValueCollection_1 getVia() throws Throwable {
+    public HttpHeaderValueCollection_1<ViaHeaderValue> getVia() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectVia = null;
@@ -620,7 +632,7 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.Warning" target="_top">.NET documentation</a>
      */
-    public HttpHeaderValueCollection_1 getWarning() throws Throwable {
+    public HttpHeaderValueCollection_1<WarningHeaderValue> getWarning() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectWarning = null;
@@ -936,7 +948,7 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.Date" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getDate() throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public Nullable_1<DateTimeOffset> getDate() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDate = null;
@@ -966,7 +978,7 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.Date" target="_top">.NET documentation</a>
      */
-    public void setDate(Nullable_1 Date) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.FormatException, system.ArgumentOutOfRangeException {
+    public void setDate(Nullable_1<DateTimeOffset> Date) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -987,7 +999,7 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.IfModifiedSince" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getIfModifiedSince() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+    public Nullable_1<DateTimeOffset> getIfModifiedSince() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIfModifiedSince = null;
@@ -1018,7 +1030,7 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.IfModifiedSince" target="_top">.NET documentation</a>
      */
-    public void setIfModifiedSince(Nullable_1 IfModifiedSince) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.ArgumentOutOfRangeException {
+    public void setIfModifiedSince(Nullable_1<DateTimeOffset> IfModifiedSince) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -1039,7 +1051,7 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.IfUnmodifiedSince" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getIfUnmodifiedSince() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+    public Nullable_1<DateTimeOffset> getIfUnmodifiedSince() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIfUnmodifiedSince = null;
@@ -1070,7 +1082,7 @@ public class HttpRequestHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpRequestHeaders.IfUnmodifiedSince" target="_top">.NET documentation</a>
      */
-    public void setIfUnmodifiedSince(Nullable_1 IfUnmodifiedSince) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.ArgumentOutOfRangeException {
+    public void setIfUnmodifiedSince(Nullable_1<DateTimeOffset> IfUnmodifiedSince) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

@@ -41,12 +41,14 @@ import java.util.ArrayList;
 import system.windows.FrameworkElement;
 import system.windows.UIElement;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.windows.ink.ApplicationGesture;
 import system.windows.controls.InkCanvasSelectionHitResult;
 import system.windows.Point;
 import system.windows.ink.StrokeCollection;
 import system.windows.Rect;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.windows.controls.InkCanvasClipboardFormat;
 import system.windows.controls.InkCanvasEditingMode;
 import system.windows.controls.UIElementCollection;
 import system.windows.ink.DrawingAttributes;
@@ -489,7 +491,7 @@ public class InkCanvas extends system.windows.FrameworkElement  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.InkCanvas.GetEnabledGestures" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 GetEnabledGestures() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException {
+    public ReadOnlyCollection_1<ApplicationGesture> GetEnabledGestures() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetEnabledGestures = null;
@@ -518,7 +520,7 @@ public class InkCanvas extends system.windows.FrameworkElement  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.InkCanvas.GetSelectedElements" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 GetSelectedElements() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
+    public ReadOnlyCollection_1<UIElement> GetSelectedElements() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetSelectedElements = null;
@@ -745,7 +747,7 @@ public class InkCanvas extends system.windows.FrameworkElement  {
     /**
      * Invokes the .NET member Select.
      *
-     * @param selectedElements the argument of type {@code IEnumerable_1}
+     * @param selectedElements the argument of type {@code IEnumerable_1<UIElement>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -760,7 +762,7 @@ public class InkCanvas extends system.windows.FrameworkElement  {
      * @throws system.MulticastNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.InkCanvas.Select" target="_top">.NET documentation</a>
      */
-    public void Select(IEnumerable_1 selectedElements) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException {
+    public void Select(IEnumerable_1<UIElement> selectedElements) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -774,7 +776,7 @@ public class InkCanvas extends system.windows.FrameworkElement  {
      * Invokes the .NET member Select.
      *
      * @param selectedStrokes the argument of type {@code StrokeCollection}
-     * @param selectedElements the argument of type {@code IEnumerable_1}
+     * @param selectedElements the argument of type {@code IEnumerable_1<UIElement>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -792,7 +794,7 @@ public class InkCanvas extends system.windows.FrameworkElement  {
      * @throws system.componentmodel.Win32Exception if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.InkCanvas.Select" target="_top">.NET documentation</a>
      */
-    public void Select(StrokeCollection selectedStrokes, IEnumerable_1 selectedElements) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.componentmodel.Win32Exception {
+    public void Select(StrokeCollection selectedStrokes, IEnumerable_1<UIElement> selectedElements) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -862,7 +864,7 @@ public class InkCanvas extends system.windows.FrameworkElement  {
     /**
      * Invokes the .NET member SetEnabledGestures.
      *
-     * @param applicationGestures the argument of type {@code IEnumerable_1}
+     * @param applicationGestures the argument of type {@code IEnumerable_1<ApplicationGesture>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -874,7 +876,7 @@ public class InkCanvas extends system.windows.FrameworkElement  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.InkCanvas.SetEnabledGestures" target="_top">.NET documentation</a>
      */
-    public void SetEnabledGestures(IEnumerable_1 applicationGestures) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException {
+    public void SetEnabledGestures(IEnumerable_1<ApplicationGesture> applicationGestures) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -1194,7 +1196,7 @@ public class InkCanvas extends system.windows.FrameworkElement  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.InkCanvas.PreferredPasteFormats" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getPreferredPasteFormats() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+    public IEnumerable_1<InkCanvasClipboardFormat> getPreferredPasteFormats() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPreferredPasteFormats = null;
@@ -1226,7 +1228,7 @@ public class InkCanvas extends system.windows.FrameworkElement  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.InkCanvas.PreferredPasteFormats" target="_top">.NET documentation</a>
      */
-    public void setPreferredPasteFormats(IEnumerable_1 PreferredPasteFormats) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+    public void setPreferredPasteFormats(IEnumerable_1<InkCanvasClipboardFormat> PreferredPasteFormats) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

@@ -42,8 +42,8 @@ import system.windows.media.animation.ParallelTimeline;
 import system.windows.FrameworkContentElement;
 import system.windows.FrameworkElement;
 import system.Nullable_1;
-import system.windows.DependencyObject;
 import system.TimeSpan;
+import system.windows.DependencyObject;
 import system.windows.media.animation.ClockState;
 import system.windows.media.animation.Storyboard;
 import system.windows.PropertyPath;
@@ -662,7 +662,7 @@ public class Storyboard extends system.windows.media.animation.ParallelTimeline 
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.Storyboard.GetCurrentTime" target="_top">.NET documentation</a>
      */
-    public Nullable_1 GetCurrentTime(FrameworkContentElement containingObject) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public Nullable_1<TimeSpan> GetCurrentTime(FrameworkContentElement containingObject) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetCurrentTime = null;
@@ -695,7 +695,7 @@ public class Storyboard extends system.windows.media.animation.ParallelTimeline 
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.Storyboard.GetCurrentTime" target="_top">.NET documentation</a>
      */
-    public Nullable_1 GetCurrentTime(FrameworkElement containingObject) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public Nullable_1<TimeSpan> GetCurrentTime(FrameworkElement containingObject) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetCurrentTime = null;

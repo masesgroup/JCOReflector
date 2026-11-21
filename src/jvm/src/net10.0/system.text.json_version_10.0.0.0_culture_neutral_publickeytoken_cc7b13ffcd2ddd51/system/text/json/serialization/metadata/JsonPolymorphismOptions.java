@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.text.json.serialization.metadata.JsonDerivedType;
 import system.text.json.serialization.JsonUnknownDerivedTypeHandling;
 
 
@@ -232,7 +233,7 @@ public class JsonPolymorphismOptions extends NetObject  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonPolymorphismOptions.DerivedTypes" target="_top">.NET documentation</a>
      */
-    public IList_1 getDerivedTypes() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+    public IList_1<JsonDerivedType> getDerivedTypes() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDerivedTypes = null;

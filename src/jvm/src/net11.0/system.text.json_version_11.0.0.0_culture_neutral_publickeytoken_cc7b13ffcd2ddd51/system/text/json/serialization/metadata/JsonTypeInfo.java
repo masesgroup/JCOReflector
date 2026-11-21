@@ -43,12 +43,18 @@ import system.text.json.serialization.metadata.JsonTypeInfo;
 import system.text.json.JsonSerializerOptions;
 import system.text.json.serialization.metadata.JsonTypeInfo_1;
 import system.Action_1;
+import system.Object;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.text.json.serialization.metadata.JsonUnionCaseInfo;
 import system.Func_1;
 import system.Func_2;
+import system.ValueTuple_2;
 import system.Func_3;
 import system.Nullable_1;
+import system.text.json.serialization.JsonNumberHandling;
+import system.text.json.serialization.JsonObjectCreationHandling;
+import system.text.json.serialization.JsonUnmappedMemberHandling;
 import system.reflection.ICustomAttributeProvider;
 import system.reflection.ICustomAttributeProviderImplementation;
 import system.text.json.serialization.JsonConverter;
@@ -341,15 +347,15 @@ public class JsonTypeInfo extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.OnDeserialized" target="_top">.NET documentation</a>
      */
-    public Action_1 getOnDeserialized() throws Throwable {
+    public Action_1<Object> getOnDeserialized() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOnDeserialized = null;
         try {
             retObjectOnDeserialized = classInstance.Get("OnDeserialized");
-            return (Action_1)retObjectOnDeserialized;
+            return (Action_1<Object>)retObjectOnDeserialized;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_1", retObjectOnDeserialized != null ? retObjectOnDeserialized.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_1<Object>", retObjectOnDeserialized != null ? retObjectOnDeserialized.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -368,7 +374,7 @@ public class JsonTypeInfo extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.OnDeserialized" target="_top">.NET documentation</a>
      */
-    public void setOnDeserialized(Action_1 OnDeserialized) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+    public void setOnDeserialized(Action_1<Object> OnDeserialized) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -385,15 +391,15 @@ public class JsonTypeInfo extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.OnDeserializing" target="_top">.NET documentation</a>
      */
-    public Action_1 getOnDeserializing() throws Throwable {
+    public Action_1<Object> getOnDeserializing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOnDeserializing = null;
         try {
             retObjectOnDeserializing = classInstance.Get("OnDeserializing");
-            return (Action_1)retObjectOnDeserializing;
+            return (Action_1<Object>)retObjectOnDeserializing;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_1", retObjectOnDeserializing != null ? retObjectOnDeserializing.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_1<Object>", retObjectOnDeserializing != null ? retObjectOnDeserializing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -412,7 +418,7 @@ public class JsonTypeInfo extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.OnDeserializing" target="_top">.NET documentation</a>
      */
-    public void setOnDeserializing(Action_1 OnDeserializing) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+    public void setOnDeserializing(Action_1<Object> OnDeserializing) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -429,15 +435,15 @@ public class JsonTypeInfo extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.OnSerialized" target="_top">.NET documentation</a>
      */
-    public Action_1 getOnSerialized() throws Throwable {
+    public Action_1<Object> getOnSerialized() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOnSerialized = null;
         try {
             retObjectOnSerialized = classInstance.Get("OnSerialized");
-            return (Action_1)retObjectOnSerialized;
+            return (Action_1<Object>)retObjectOnSerialized;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_1", retObjectOnSerialized != null ? retObjectOnSerialized.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_1<Object>", retObjectOnSerialized != null ? retObjectOnSerialized.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -456,7 +462,7 @@ public class JsonTypeInfo extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.OnSerialized" target="_top">.NET documentation</a>
      */
-    public void setOnSerialized(Action_1 OnSerialized) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+    public void setOnSerialized(Action_1<Object> OnSerialized) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -473,15 +479,15 @@ public class JsonTypeInfo extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.OnSerializing" target="_top">.NET documentation</a>
      */
-    public Action_1 getOnSerializing() throws Throwable {
+    public Action_1<Object> getOnSerializing() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOnSerializing = null;
         try {
             retObjectOnSerializing = classInstance.Get("OnSerializing");
-            return (Action_1)retObjectOnSerializing;
+            return (Action_1<Object>)retObjectOnSerializing;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_1", retObjectOnSerializing != null ? retObjectOnSerializing.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_1<Object>", retObjectOnSerializing != null ? retObjectOnSerializing.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -500,7 +506,7 @@ public class JsonTypeInfo extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.OnSerializing" target="_top">.NET documentation</a>
      */
-    public void setOnSerializing(Action_1 OnSerializing) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+    public void setOnSerializing(Action_1<Object> OnSerializing) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -527,7 +533,7 @@ public class JsonTypeInfo extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.Properties" target="_top">.NET documentation</a>
      */
-    public IList_1 getProperties() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.collections.generic.KeyNotFoundException, system.ArrayTypeMismatchException, system.NullReferenceException, system.NotSupportedException {
+    public IList_1<JsonPropertyInfo> getProperties() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.collections.generic.KeyNotFoundException, system.ArrayTypeMismatchException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectProperties = null;
@@ -553,7 +559,7 @@ public class JsonTypeInfo extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.UnionCases" target="_top">.NET documentation</a>
      */
-    public IList_1 getUnionCases() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException {
+    public IList_1<JsonUnionCaseInfo> getUnionCases() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUnionCases = null;
@@ -575,15 +581,15 @@ public class JsonTypeInfo extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.CreateObject" target="_top">.NET documentation</a>
      */
-    public Func_1 getCreateObject() throws Throwable {
+    public Func_1<Object> getCreateObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCreateObject = null;
         try {
             retObjectCreateObject = classInstance.Get("CreateObject");
-            return (Func_1)retObjectCreateObject;
+            return (Func_1<Object>)retObjectCreateObject;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_1", retObjectCreateObject != null ? retObjectCreateObject.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_1<Object>", retObjectCreateObject != null ? retObjectCreateObject.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -596,7 +602,7 @@ public class JsonTypeInfo extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.CreateObject" target="_top">.NET documentation</a>
      */
-    public void setCreateObject(Func_1 CreateObject) throws Throwable {
+    public void setCreateObject(Func_1<Object> CreateObject) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -613,15 +619,15 @@ public class JsonTypeInfo extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.UnionDeconstructor" target="_top">.NET documentation</a>
      */
-    public Func_2 getUnionDeconstructor() throws Throwable {
+    public Func_2<Object, ValueTuple_2<NetType, Object>> getUnionDeconstructor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUnionDeconstructor = null;
         try {
             retObjectUnionDeconstructor = classInstance.Get("UnionDeconstructor");
-            return (Func_2)retObjectUnionDeconstructor;
+            return (Func_2<Object, ValueTuple_2<NetType, Object>>)retObjectUnionDeconstructor;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2", retObjectUnionDeconstructor != null ? retObjectUnionDeconstructor.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2<Object, ValueTuple_2<NetType, Object>>", retObjectUnionDeconstructor != null ? retObjectUnionDeconstructor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -640,7 +646,7 @@ public class JsonTypeInfo extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.UnionDeconstructor" target="_top">.NET documentation</a>
      */
-    public void setUnionDeconstructor(Func_2 UnionDeconstructor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+    public void setUnionDeconstructor(Func_2<Object, ValueTuple_2<NetType, Object>> UnionDeconstructor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -657,15 +663,15 @@ public class JsonTypeInfo extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.UnionConstructor" target="_top">.NET documentation</a>
      */
-    public Func_3 getUnionConstructor() throws Throwable {
+    public Func_3<NetType, Object, Object> getUnionConstructor() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUnionConstructor = null;
         try {
             retObjectUnionConstructor = classInstance.Get("UnionConstructor");
-            return (Func_3)retObjectUnionConstructor;
+            return (Func_3<NetType, Object, Object>)retObjectUnionConstructor;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_3", retObjectUnionConstructor != null ? retObjectUnionConstructor.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_3<NetType, Object, Object>", retObjectUnionConstructor != null ? retObjectUnionConstructor.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -684,7 +690,7 @@ public class JsonTypeInfo extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.UnionConstructor" target="_top">.NET documentation</a>
      */
-    public void setUnionConstructor(Func_3 UnionConstructor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+    public void setUnionConstructor(Func_3<NetType, Object, Object> UnionConstructor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -701,7 +707,7 @@ public class JsonTypeInfo extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.NumberHandling" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getNumberHandling() throws Throwable {
+    public Nullable_1<JsonNumberHandling> getNumberHandling() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectNumberHandling = null;
@@ -729,7 +735,7 @@ public class JsonTypeInfo extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.NumberHandling" target="_top">.NET documentation</a>
      */
-    public void setNumberHandling(Nullable_1 NumberHandling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+    public void setNumberHandling(Nullable_1<JsonNumberHandling> NumberHandling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -746,7 +752,7 @@ public class JsonTypeInfo extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.PreferredPropertyObjectCreationHandling" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getPreferredPropertyObjectCreationHandling() throws Throwable {
+    public Nullable_1<JsonObjectCreationHandling> getPreferredPropertyObjectCreationHandling() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPreferredPropertyObjectCreationHandling = null;
@@ -774,7 +780,7 @@ public class JsonTypeInfo extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.PreferredPropertyObjectCreationHandling" target="_top">.NET documentation</a>
      */
-    public void setPreferredPropertyObjectCreationHandling(Nullable_1 PreferredPropertyObjectCreationHandling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+    public void setPreferredPropertyObjectCreationHandling(Nullable_1<JsonObjectCreationHandling> PreferredPropertyObjectCreationHandling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -791,7 +797,7 @@ public class JsonTypeInfo extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.UnmappedMemberHandling" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getUnmappedMemberHandling() throws Throwable {
+    public Nullable_1<JsonUnmappedMemberHandling> getUnmappedMemberHandling() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUnmappedMemberHandling = null;
@@ -819,7 +825,7 @@ public class JsonTypeInfo extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo.UnmappedMemberHandling" target="_top">.NET documentation</a>
      */
-    public void setUnmappedMemberHandling(Nullable_1 UnmappedMemberHandling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+    public void setUnmappedMemberHandling(Nullable_1<JsonUnmappedMemberHandling> UnmappedMemberHandling) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

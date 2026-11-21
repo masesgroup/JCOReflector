@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.runtime.durableinstancing.InstanceStoreQueryResult;
 import system.collections.generic.IDictionary_2;
 import system.collections.generic.IDictionary_2Implementation;
+import system.xml.linq.XName;
+import system.Object;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
 import system.collections.generic.List_1;
@@ -174,14 +176,14 @@ public class ActivatableWorkflowsQueryResult extends system.runtime.durableinsta
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param parameters the argument of type {@code IDictionary_2}
+     * @param parameters the argument of type {@code IDictionary_2<XName, Object>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.ActivatableWorkflowsQueryResult.-ctor" target="_top">.NET documentation</a>
      */
-    public ActivatableWorkflowsQueryResult(IDictionary_2 parameters) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
+    public ActivatableWorkflowsQueryResult(IDictionary_2<XName, Object> parameters) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -194,14 +196,14 @@ public class ActivatableWorkflowsQueryResult extends system.runtime.durableinsta
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param parameters the argument of type {@code IEnumerable_1}
+     * @param parameters the argument of type {@code IEnumerable_1<IDictionary_2<XName, Object>>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.ActivatableWorkflowsQueryResult.-ctor" target="_top">.NET documentation</a>
      */
-    public ActivatableWorkflowsQueryResult(IEnumerable_1 parameters) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
+    public ActivatableWorkflowsQueryResult(IEnumerable_1<IDictionary_2<XName, Object>> parameters) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -226,7 +228,7 @@ public class ActivatableWorkflowsQueryResult extends system.runtime.durableinsta
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.ActivatableWorkflowsQueryResult.ActivationParameters" target="_top">.NET documentation</a>
      */
-    public List_1 getActivationParameters() throws Throwable {
+    public List_1<IDictionary_2<XName, Object>> getActivationParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectActivationParameters = null;
@@ -248,7 +250,7 @@ public class ActivatableWorkflowsQueryResult extends system.runtime.durableinsta
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.ActivatableWorkflowsQueryResult.ActivationParameters" target="_top">.NET documentation</a>
      */
-    public void setActivationParameters(List_1 ActivationParameters) throws Throwable {
+    public void setActivationParameters(List_1<IDictionary_2<XName, Object>> ActivationParameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

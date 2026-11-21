@@ -45,6 +45,7 @@ import system.collections.generic.IDictionary_2;
 import system.collections.generic.IDictionary_2Implementation;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.runtime.interopservices.SafeHandle;
 import system.collections.objectmodel.Collection_1;
 import system.collections.specialized.StringDictionary;
 import system.diagnostics.ProcessWindowStyle;
@@ -870,7 +871,7 @@ public class ProcessStartInfo extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.InheritedHandles" target="_top">.NET documentation</a>
      */
-    public IList_1 getInheritedHandles() throws Throwable {
+    public IList_1<SafeHandle> getInheritedHandles() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectInheritedHandles = null;
@@ -892,7 +893,7 @@ public class ProcessStartInfo extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.ProcessStartInfo.InheritedHandles" target="_top">.NET documentation</a>
      */
-    public void setInheritedHandles(IList_1 InheritedHandles) throws Throwable {
+    public void setInheritedHandles(IList_1<SafeHandle> InheritedHandles) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

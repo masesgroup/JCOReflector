@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.EventHandler_1;
+import system.componentmodel.DataErrorsChangedEventArgs;
 
 
 /**
@@ -195,6 +197,40 @@ public class INotifyDataErrorInfoImplementation extends NetObject implements INo
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addErrorsChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataErrorsChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addErrorsChanged(EventHandler_1<DataErrorsChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("ErrorsChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeErrorsChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<DataErrorsChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeErrorsChanged(EventHandler_1<DataErrorsChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("ErrorsChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

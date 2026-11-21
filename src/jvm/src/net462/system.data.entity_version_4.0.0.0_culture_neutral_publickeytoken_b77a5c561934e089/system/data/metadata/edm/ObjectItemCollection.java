@@ -43,6 +43,7 @@ import system.data.metadata.edm.EnumType;
 import system.data.metadata.edm.StructuralType;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.data.metadata.edm.PrimitiveType;
 import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.reflection.Assembly;
 import system.data.metadata.edm.EdmItemCollection;
@@ -260,7 +261,7 @@ public class ObjectItemCollection extends system.data.metadata.edm.ItemCollectio
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.ObjectItemCollection.GetPrimitiveTypes" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetPrimitiveTypes() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public IEnumerable_1<PrimitiveType> GetPrimitiveTypes() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetPrimitiveTypes = null;

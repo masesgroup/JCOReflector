@@ -45,6 +45,7 @@ import system.net.http.headers.ContentDispositionHeaderValue;
 import system.net.http.headers.ContentRangeHeaderValue;
 import system.net.http.headers.MediaTypeHeaderValue;
 import system.Nullable_1;
+import system.DateTimeOffset;
 import system.Uri;
 
 
@@ -488,7 +489,7 @@ public class HttpContentHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpContentHeaders.Expires" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getExpires() throws Throwable, system.ArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public Nullable_1<DateTimeOffset> getExpires() throws Throwable, system.ArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExpires = null;
@@ -519,7 +520,7 @@ public class HttpContentHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpContentHeaders.Expires" target="_top">.NET documentation</a>
      */
-    public void setExpires(Nullable_1 Expires) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
+    public void setExpires(Nullable_1<DateTimeOffset> Expires) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -543,7 +544,7 @@ public class HttpContentHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpContentHeaders.LastModified" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getLastModified() throws Throwable, system.ArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public Nullable_1<DateTimeOffset> getLastModified() throws Throwable, system.ArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectLastModified = null;
@@ -574,7 +575,7 @@ public class HttpContentHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpContentHeaders.LastModified" target="_top">.NET documentation</a>
      */
-    public void setLastModified(Nullable_1 LastModified) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
+    public void setLastModified(Nullable_1<DateTimeOffset> LastModified) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.web.modelbinding.ModelValidatorProvider;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.web.modelbinding.ModelValidator;
 import system.web.modelbinding.ModelMetadata;
 import system.web.modelbinding.ModelBindingExecutionContext;
 
@@ -178,7 +179,7 @@ public class AssociatedValidatorProvider extends system.web.modelbinding.ModelVa
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.AssociatedValidatorProvider.GetValidators" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetValidators(ModelMetadata metadata, ModelBindingExecutionContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public IEnumerable_1<ModelValidator> GetValidators(ModelMetadata metadata, ModelBindingExecutionContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetValidators = null;

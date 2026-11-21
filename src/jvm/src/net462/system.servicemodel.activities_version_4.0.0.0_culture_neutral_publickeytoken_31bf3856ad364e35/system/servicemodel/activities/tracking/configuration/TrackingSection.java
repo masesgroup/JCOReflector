@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.configuration.ConfigurationSection;
 import system.collections.objectmodel.Collection_1;
+import system.activities.tracking.TrackingProfile;
 import system.servicemodel.activities.tracking.configuration.ProfileElementCollection;
 
 
@@ -200,7 +201,7 @@ public class TrackingSection extends system.configuration.ConfigurationSection  
      * @throws system.configuration.ConfigurationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Tracking.Configuration.TrackingSection.TrackingProfiles" target="_top">.NET documentation</a>
      */
-    public Collection_1 getTrackingProfiles() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
+    public Collection_1<TrackingProfile> getTrackingProfiles() throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTrackingProfiles = null;

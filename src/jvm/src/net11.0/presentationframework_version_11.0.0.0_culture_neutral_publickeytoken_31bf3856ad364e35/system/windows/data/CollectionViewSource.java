@@ -45,6 +45,7 @@ import system.IDisposable;
 import system.IDisposableImplementation;
 import system.EventArgs;
 import system.collections.objectmodel.ObservableCollection_1;
+import system.componentmodel.GroupDescription;
 import system.componentmodel.SortDescriptionCollection;
 import system.globalization.CultureInfo;
 import system.Nullable_1;
@@ -653,7 +654,7 @@ public class CollectionViewSource extends system.windows.DependencyObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.CollectionViewSource.GroupDescriptions" target="_top">.NET documentation</a>
      */
-    public ObservableCollection_1 getGroupDescriptions() throws Throwable {
+    public ObservableCollection_1<GroupDescription> getGroupDescriptions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGroupDescriptions = null;

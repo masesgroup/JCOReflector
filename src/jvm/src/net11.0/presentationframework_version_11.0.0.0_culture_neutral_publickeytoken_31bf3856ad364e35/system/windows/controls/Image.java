@@ -42,6 +42,8 @@ import system.windows.FrameworkElement;
 import system.windows.controls.StretchDirection;
 import system.windows.media.ImageSource;
 import system.windows.media.Stretch;
+import system.EventHandler_1;
+import system.windows.ExceptionRoutedEventArgs;
 import system.windows.DpiChangedEventHandler;
 
 
@@ -362,6 +364,40 @@ public class Image extends system.windows.FrameworkElement  {
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addImageFailed.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ExceptionRoutedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addImageFailed(EventHandler_1<ExceptionRoutedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("ImageFailed", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeImageFailed.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ExceptionRoutedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeImageFailed(EventHandler_1<ExceptionRoutedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("ImageFailed", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
     /**
      * Invokes the .NET member addDpiChanged.

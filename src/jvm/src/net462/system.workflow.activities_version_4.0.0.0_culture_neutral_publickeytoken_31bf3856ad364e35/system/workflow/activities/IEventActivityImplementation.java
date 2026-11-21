@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.workflow.componentmodel.ActivityExecutionContext;
 import system.workflow.componentmodel.IActivityEventListener_1;
 import system.workflow.componentmodel.IActivityEventListener_1Implementation;
+import system.workflow.componentmodel.QueueEventArgs;
 import system.IComparable;
 import system.IComparableImplementation;
 
@@ -152,11 +153,11 @@ public class IEventActivityImplementation extends NetObject implements IEventAct
      * Invokes the .NET member Subscribe.
      *
      * @param parentContext the argument of type {@code ActivityExecutionContext}
-     * @param parentEventHandler the argument of type {@code IActivityEventListener_1}
+     * @param parentEventHandler the argument of type {@code IActivityEventListener_1<QueueEventArgs>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.IEventActivity.Subscribe" target="_top">.NET documentation</a>
      */
-    public void Subscribe(ActivityExecutionContext parentContext, IActivityEventListener_1 parentEventHandler) throws Throwable {
+    public void Subscribe(ActivityExecutionContext parentContext, IActivityEventListener_1<QueueEventArgs> parentEventHandler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -170,11 +171,11 @@ public class IEventActivityImplementation extends NetObject implements IEventAct
      * Invokes the .NET member Unsubscribe.
      *
      * @param parentContext the argument of type {@code ActivityExecutionContext}
-     * @param parentEventHandler the argument of type {@code IActivityEventListener_1}
+     * @param parentEventHandler the argument of type {@code IActivityEventListener_1<QueueEventArgs>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.IEventActivity.Unsubscribe" target="_top">.NET documentation</a>
      */
-    public void Unsubscribe(ActivityExecutionContext parentContext, IActivityEventListener_1 parentEventHandler) throws Throwable {
+    public void Unsubscribe(ActivityExecutionContext parentContext, IActivityEventListener_1<QueueEventArgs> parentEventHandler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

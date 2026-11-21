@@ -183,7 +183,7 @@ public class Catch_1<TException extends IJCOBridgeReflected> extends system.acti
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.Catch-1.Action" target="_top">.NET documentation</a>
      */
-    public ActivityAction_1 getAction() throws Throwable {
+    public ActivityAction_1<TException> getAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAction = null;
@@ -205,7 +205,7 @@ public class Catch_1<TException extends IJCOBridgeReflected> extends system.acti
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.Catch-1.Action" target="_top">.NET documentation</a>
      */
-    public void setAction(ActivityAction_1 Action) throws Throwable {
+    public void setAction(ActivityAction_1<TException> Action) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

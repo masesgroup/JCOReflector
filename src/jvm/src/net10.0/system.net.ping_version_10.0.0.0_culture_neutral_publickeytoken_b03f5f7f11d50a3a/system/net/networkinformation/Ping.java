@@ -934,7 +934,7 @@ public class Ping extends system.componentmodel.Component  {
      * @throws system.net.sockets.SocketException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.Ping.SendPingAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 SendPingAsync(IPAddress address, int timeout, byte[] buffer, PingOptions options) throws Throwable, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
+    public Task_1<PingReply> SendPingAsync(IPAddress address, int timeout, byte[] buffer, PingOptions options) throws Throwable, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSendPingAsync = null;
@@ -968,7 +968,7 @@ public class Ping extends system.componentmodel.Component  {
      * @throws system.net.sockets.SocketException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.Ping.SendPingAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 SendPingAsync(IPAddress dupParam0, int dupParam1, JCORefOut dupParam2, PingOptions dupParam3) throws Throwable, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
+    public Task_1<PingReply> SendPingAsync(IPAddress dupParam0, int dupParam1, JCORefOut dupParam2, PingOptions dupParam3) throws Throwable, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSendPingAsync = null;
@@ -1002,7 +1002,7 @@ public class Ping extends system.componentmodel.Component  {
      * @throws system.net.sockets.SocketException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.Ping.SendPingAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 SendPingAsync(IPAddress address, int timeout, byte[] buffer) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
+    public Task_1<PingReply> SendPingAsync(IPAddress address, int timeout, byte[] buffer) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSendPingAsync = null;
@@ -1036,7 +1036,7 @@ public class Ping extends system.componentmodel.Component  {
      * @throws system.net.sockets.SocketException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.Ping.SendPingAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 SendPingAsync(IPAddress dupParam0, int dupParam1, JCORefOut dupParam2) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
+    public Task_1<PingReply> SendPingAsync(IPAddress dupParam0, int dupParam1, JCORefOut dupParam2) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSendPingAsync = null;
@@ -1069,7 +1069,7 @@ public class Ping extends system.componentmodel.Component  {
      * @throws system.net.sockets.SocketException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.Ping.SendPingAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 SendPingAsync(IPAddress address, int timeout) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
+    public Task_1<PingReply> SendPingAsync(IPAddress address, int timeout) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSendPingAsync = null;
@@ -1108,7 +1108,7 @@ public class Ping extends system.componentmodel.Component  {
      * @throws system.net.sockets.SocketException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.Ping.SendPingAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 SendPingAsync(IPAddress address, TimeSpan timeout, byte[] buffer, PingOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.net.sockets.SocketException {
+    public Task_1<PingReply> SendPingAsync(IPAddress address, TimeSpan timeout, byte[] buffer, PingOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSendPingAsync = null;
@@ -1147,7 +1147,7 @@ public class Ping extends system.componentmodel.Component  {
      * @throws system.net.sockets.SocketException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.Ping.SendPingAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 SendPingAsync(IPAddress dupParam0, TimeSpan dupParam1, JCORefOut dupParam2, PingOptions dupParam3, CancellationToken dupParam4) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.net.sockets.SocketException {
+    public Task_1<PingReply> SendPingAsync(IPAddress dupParam0, TimeSpan dupParam1, JCORefOut dupParam2, PingOptions dupParam3, CancellationToken dupParam4) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSendPingAsync = null;
@@ -1179,7 +1179,7 @@ public class Ping extends system.componentmodel.Component  {
      * @throws system.net.sockets.SocketException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.Ping.SendPingAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 SendPingAsync(IPAddress address) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
+    public Task_1<PingReply> SendPingAsync(IPAddress address) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSendPingAsync = null;
@@ -1218,7 +1218,7 @@ public class Ping extends system.componentmodel.Component  {
      * @throws system.net.sockets.SocketException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.Ping.SendPingAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 SendPingAsync(java.lang.String hostNameOrAddress, int timeout, byte[] buffer, PingOptions options) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.net.sockets.SocketException {
+    public Task_1<PingReply> SendPingAsync(java.lang.String hostNameOrAddress, int timeout, byte[] buffer, PingOptions options) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSendPingAsync = null;
@@ -1257,7 +1257,7 @@ public class Ping extends system.componentmodel.Component  {
      * @throws system.net.sockets.SocketException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.Ping.SendPingAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 SendPingAsync(java.lang.String dupParam0, int dupParam1, JCORefOut dupParam2, PingOptions dupParam3) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.net.sockets.SocketException {
+    public Task_1<PingReply> SendPingAsync(java.lang.String dupParam0, int dupParam1, JCORefOut dupParam2, PingOptions dupParam3) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSendPingAsync = null;
@@ -1294,7 +1294,7 @@ public class Ping extends system.componentmodel.Component  {
      * @throws system.net.sockets.SocketException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.Ping.SendPingAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 SendPingAsync(java.lang.String hostNameOrAddress, int timeout, byte[] buffer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.FormatException, system.net.sockets.SocketException {
+    public Task_1<PingReply> SendPingAsync(java.lang.String hostNameOrAddress, int timeout, byte[] buffer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.FormatException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSendPingAsync = null;
@@ -1331,7 +1331,7 @@ public class Ping extends system.componentmodel.Component  {
      * @throws system.net.sockets.SocketException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.Ping.SendPingAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 SendPingAsync(java.lang.String dupParam0, int dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.FormatException, system.net.sockets.SocketException {
+    public Task_1<PingReply> SendPingAsync(java.lang.String dupParam0, int dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.FormatException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSendPingAsync = null;
@@ -1367,7 +1367,7 @@ public class Ping extends system.componentmodel.Component  {
      * @throws system.net.sockets.SocketException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.Ping.SendPingAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 SendPingAsync(java.lang.String hostNameOrAddress, int timeout) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.FormatException, system.net.sockets.SocketException {
+    public Task_1<PingReply> SendPingAsync(java.lang.String hostNameOrAddress, int timeout) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.FormatException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSendPingAsync = null;
@@ -1407,7 +1407,7 @@ public class Ping extends system.componentmodel.Component  {
      * @throws system.net.sockets.SocketException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.Ping.SendPingAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 SendPingAsync(java.lang.String hostNameOrAddress, TimeSpan timeout, byte[] buffer, PingOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.net.sockets.SocketException {
+    public Task_1<PingReply> SendPingAsync(java.lang.String hostNameOrAddress, TimeSpan timeout, byte[] buffer, PingOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSendPingAsync = null;
@@ -1447,7 +1447,7 @@ public class Ping extends system.componentmodel.Component  {
      * @throws system.net.sockets.SocketException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.Ping.SendPingAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 SendPingAsync(java.lang.String dupParam0, TimeSpan dupParam1, JCORefOut dupParam2, PingOptions dupParam3, CancellationToken dupParam4) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.net.sockets.SocketException {
+    public Task_1<PingReply> SendPingAsync(java.lang.String dupParam0, TimeSpan dupParam1, JCORefOut dupParam2, PingOptions dupParam3, CancellationToken dupParam4) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSendPingAsync = null;
@@ -1482,7 +1482,7 @@ public class Ping extends system.componentmodel.Component  {
      * @throws system.net.sockets.SocketException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.NetworkInformation.Ping.SendPingAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 SendPingAsync(java.lang.String hostNameOrAddress) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.FormatException, system.net.sockets.SocketException {
+    public Task_1<PingReply> SendPingAsync(java.lang.String hostNameOrAddress) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.FormatException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSendPingAsync = null;

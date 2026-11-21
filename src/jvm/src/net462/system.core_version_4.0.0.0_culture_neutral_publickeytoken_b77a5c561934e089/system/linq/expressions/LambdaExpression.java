@@ -42,6 +42,7 @@ import system.linq.expressions.Expression;
 import system.reflection.emit.MethodBuilder;
 import system.runtime.compilerservices.DebugInfoGenerator;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.linq.expressions.ParameterExpression;
 import system.linq.expressions.ExpressionType;
 
 
@@ -244,7 +245,7 @@ public class LambdaExpression extends system.linq.expressions.Expression  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.LambdaExpression.Parameters" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getParameters() throws Throwable {
+    public ReadOnlyCollection_1<ParameterExpression> getParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectParameters = null;

@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.xml.xpath.XPathItem;
 import system.xml.xpath.XPathNavigator;
 import system.xml.XmlNameTable;
 
@@ -214,7 +215,7 @@ public class XmlQueryContext extends NetObject  {
      * @throws system.InvalidCastException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryContext.InvokeXsltLateBoundFunction" target="_top">.NET documentation</a>
      */
-    public IList_1 InvokeXsltLateBoundFunction(java.lang.String name, java.lang.String namespaceUri, IList_1[] args) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.OverflowException, system.InvalidCastException {
+    public IList_1<XPathItem> InvokeXsltLateBoundFunction(java.lang.String name, java.lang.String namespaceUri, IList_1[] args) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.OverflowException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectInvokeXsltLateBoundFunction = null;

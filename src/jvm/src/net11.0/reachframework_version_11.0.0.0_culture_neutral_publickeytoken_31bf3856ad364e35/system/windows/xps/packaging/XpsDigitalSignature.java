@@ -45,6 +45,7 @@ import system.security.cryptography.x509certificates.X509Certificate;
 import system.security.cryptography.x509certificates.X509ChainStatusFlags;
 import system.DateTime;
 import system.Nullable_1;
+import system.Guid;
 import system.windows.xps.packaging.IXpsFixedDocumentSequenceReader;
 import system.windows.xps.packaging.IXpsFixedDocumentSequenceReaderImplementation;
 
@@ -587,7 +588,7 @@ public class XpsDigitalSignature extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.XpsDigitalSignature.Id" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getId() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.io.IOException, system.NotSupportedException, system.security.SecurityException, system.io.FileFormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.xml.xpath.XPathException, system.FormatException, system.NullReferenceException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException, system.OverflowException, system.diagnostics.UnreachableException, system.OutOfMemoryException {
+    public Nullable_1<Guid> getId() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.io.IOException, system.NotSupportedException, system.security.SecurityException, system.io.FileFormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.xml.xpath.XPathException, system.FormatException, system.NullReferenceException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException, system.OverflowException, system.diagnostics.UnreachableException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectId = null;

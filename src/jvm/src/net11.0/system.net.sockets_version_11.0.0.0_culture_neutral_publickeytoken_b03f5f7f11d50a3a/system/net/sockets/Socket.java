@@ -65,6 +65,8 @@ import system.net.sockets.TransmitFileOptions;
 import system.threading.tasks.Task;
 import system.threading.tasks.Task_1;
 import system.ArraySegment_1;
+import system.net.sockets.SocketReceiveFromResult;
+import system.net.sockets.SocketReceiveMessageFromResult;
 import system.threading.tasks.ValueTask;
 import system.threading.CancellationToken;
 import system.ReadOnlyMemory_1;
@@ -5542,7 +5544,7 @@ public class Socket extends NetObject implements AutoCloseable {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.Socket.AcceptAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 AcceptAsync() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.FormatException {
+    public Task_1<Socket> AcceptAsync() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAcceptAsync = null;
@@ -5578,7 +5580,7 @@ public class Socket extends NetObject implements AutoCloseable {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.Socket.AcceptAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 AcceptAsync(Socket acceptSocket) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.FormatException {
+    public Task_1<Socket> AcceptAsync(Socket acceptSocket) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAcceptAsync = null;
@@ -5612,7 +5614,7 @@ public class Socket extends NetObject implements AutoCloseable {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.Socket.ReceiveFromAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 ReceiveFromAsync(ArraySegment_1 buffer, EndPoint remoteEndPoint) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NullReferenceException {
+    public Task_1<SocketReceiveFromResult> ReceiveFromAsync(ArraySegment_1 buffer, EndPoint remoteEndPoint) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReceiveFromAsync = null;
@@ -5650,7 +5652,7 @@ public class Socket extends NetObject implements AutoCloseable {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.Socket.ReceiveFromAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 ReceiveFromAsync(ArraySegment_1 buffer, SocketFlags socketFlags, EndPoint remoteEndPoint) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.net.sockets.SocketException, system.NullReferenceException, system.OutOfMemoryException {
+    public Task_1<SocketReceiveFromResult> ReceiveFromAsync(ArraySegment_1 buffer, SocketFlags socketFlags, EndPoint remoteEndPoint) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.net.sockets.SocketException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReceiveFromAsync = null;
@@ -5685,7 +5687,7 @@ public class Socket extends NetObject implements AutoCloseable {
      * @throws system.net.sockets.SocketException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.Socket.ReceiveMessageFromAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 ReceiveMessageFromAsync(ArraySegment_1 buffer, EndPoint remoteEndPoint) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NullReferenceException, system.net.sockets.SocketException {
+    public Task_1<SocketReceiveMessageFromResult> ReceiveMessageFromAsync(ArraySegment_1 buffer, EndPoint remoteEndPoint) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.NullReferenceException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReceiveMessageFromAsync = null;
@@ -5723,7 +5725,7 @@ public class Socket extends NetObject implements AutoCloseable {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.Socket.ReceiveMessageFromAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 ReceiveMessageFromAsync(ArraySegment_1 buffer, SocketFlags socketFlags, EndPoint remoteEndPoint) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.net.sockets.SocketException, system.NullReferenceException, system.OutOfMemoryException {
+    public Task_1<SocketReceiveMessageFromResult> ReceiveMessageFromAsync(ArraySegment_1 buffer, SocketFlags socketFlags, EndPoint remoteEndPoint) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.net.sockets.SocketException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReceiveMessageFromAsync = null;
@@ -6339,7 +6341,7 @@ public class Socket extends NetObject implements AutoCloseable {
      * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.Socket.AcceptAsync" target="_top">.NET documentation</a>
      */
-    public ValueTask_1 AcceptAsync(Socket acceptSocket, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.net.sockets.SocketException, system.OverflowException {
+    public ValueTask_1<Socket> AcceptAsync(Socket acceptSocket, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.net.sockets.SocketException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAcceptAsync = null;
@@ -6375,7 +6377,7 @@ public class Socket extends NetObject implements AutoCloseable {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.Socket.AcceptAsync" target="_top">.NET documentation</a>
      */
-    public ValueTask_1 AcceptAsync(CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.FormatException {
+    public ValueTask_1<Socket> AcceptAsync(CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAcceptAsync = null;
@@ -6413,7 +6415,7 @@ public class Socket extends NetObject implements AutoCloseable {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.Socket.ReceiveFromAsync" target="_top">.NET documentation</a>
      */
-    public ValueTask_1 ReceiveFromAsync(Memory_1 buffer, EndPoint remoteEndPoint, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.net.sockets.SocketException, system.InvalidOperationException, system.NullReferenceException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.FormatException {
+    public ValueTask_1<SocketReceiveFromResult> ReceiveFromAsync(Memory_1 buffer, EndPoint remoteEndPoint, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.net.sockets.SocketException, system.InvalidOperationException, system.NullReferenceException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReceiveFromAsync = null;
@@ -6452,7 +6454,7 @@ public class Socket extends NetObject implements AutoCloseable {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.Socket.ReceiveFromAsync" target="_top">.NET documentation</a>
      */
-    public ValueTask_1 ReceiveFromAsync(Memory_1 buffer, SocketFlags socketFlags, EndPoint remoteEndPoint, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.net.sockets.SocketException, system.NullReferenceException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
+    public ValueTask_1<SocketReceiveFromResult> ReceiveFromAsync(Memory_1 buffer, SocketFlags socketFlags, EndPoint remoteEndPoint, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.net.sockets.SocketException, system.NullReferenceException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReceiveFromAsync = null;
@@ -6490,7 +6492,7 @@ public class Socket extends NetObject implements AutoCloseable {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.Socket.ReceiveMessageFromAsync" target="_top">.NET documentation</a>
      */
-    public ValueTask_1 ReceiveMessageFromAsync(Memory_1 buffer, EndPoint remoteEndPoint, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.net.sockets.SocketException, system.InvalidOperationException, system.NullReferenceException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.FormatException {
+    public ValueTask_1<SocketReceiveMessageFromResult> ReceiveMessageFromAsync(Memory_1 buffer, EndPoint remoteEndPoint, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.net.sockets.SocketException, system.InvalidOperationException, system.NullReferenceException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReceiveMessageFromAsync = null;
@@ -6529,7 +6531,7 @@ public class Socket extends NetObject implements AutoCloseable {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.Socket.ReceiveMessageFromAsync" target="_top">.NET documentation</a>
      */
-    public ValueTask_1 ReceiveMessageFromAsync(Memory_1 buffer, SocketFlags socketFlags, EndPoint remoteEndPoint, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.net.sockets.SocketException, system.NullReferenceException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
+    public ValueTask_1<SocketReceiveMessageFromResult> ReceiveMessageFromAsync(Memory_1 buffer, SocketFlags socketFlags, EndPoint remoteEndPoint, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.net.sockets.SocketException, system.NullReferenceException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReceiveMessageFromAsync = null;

@@ -42,6 +42,7 @@ import system.runtime.serialization.datacontracts.DataContract;
 import system.xml.XmlQualifiedName;
 import system.collections.generic.Dictionary_2;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.runtime.serialization.datacontracts.DataMember;
 import system.xml.XmlDictionaryString;
 
 
@@ -441,7 +442,7 @@ public class DataContract extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContract.KnownDataContracts" target="_top">.NET documentation</a>
      */
-    public Dictionary_2 getKnownDataContracts() throws Throwable {
+    public Dictionary_2<XmlQualifiedName, DataContract> getKnownDataContracts() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectKnownDataContracts = null;
@@ -463,7 +464,7 @@ public class DataContract extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContract.KnownDataContracts" target="_top">.NET documentation</a>
      */
-    public void setKnownDataContracts(Dictionary_2 KnownDataContracts) throws Throwable {
+    public void setKnownDataContracts(Dictionary_2<XmlQualifiedName, DataContract> KnownDataContracts) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -480,7 +481,7 @@ public class DataContract extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContract.DataMembers" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getDataMembers() throws Throwable {
+    public ReadOnlyCollection_1<DataMember> getDataMembers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDataMembers = null;

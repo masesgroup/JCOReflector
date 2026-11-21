@@ -42,6 +42,8 @@ import system.windows.DependencyObject;
 import system.collections.IList;
 import system.collections.IListImplementation;
 import system.windows.VisualState;
+import system.EventHandler_1;
+import system.windows.VisualStateChangedEventArgs;
 
 
 /**
@@ -323,6 +325,74 @@ public class VisualStateGroup extends system.windows.DependencyObject  {
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addCurrentStateChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<VisualStateChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addCurrentStateChanged(EventHandler_1<VisualStateChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("CurrentStateChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeCurrentStateChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<VisualStateChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeCurrentStateChanged(EventHandler_1<VisualStateChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("CurrentStateChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addCurrentStateChanging.
+     *
+     * @param handler the argument of type {@code EventHandler_1<VisualStateChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addCurrentStateChanging(EventHandler_1<VisualStateChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("CurrentStateChanging", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeCurrentStateChanging.
+     *
+     * @param handler the argument of type {@code EventHandler_1<VisualStateChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeCurrentStateChanging(EventHandler_1<VisualStateChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("CurrentStateChanging", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

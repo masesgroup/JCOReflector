@@ -184,7 +184,7 @@ public class InvokeFunc_2<T extends IJCOBridgeReflected, TResult extends IJCOBri
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.InvokeFunc-2.Func" target="_top">.NET documentation</a>
      */
-    public ActivityFunc_2 getFunc() throws Throwable {
+    public ActivityFunc_2<T, TResult> getFunc() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFunc = null;
@@ -206,7 +206,7 @@ public class InvokeFunc_2<T extends IJCOBridgeReflected, TResult extends IJCOBri
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.InvokeFunc-2.Func" target="_top">.NET documentation</a>
      */
-    public void setFunc(ActivityFunc_2 Func) throws Throwable {
+    public void setFunc(ActivityFunc_2<T, TResult> Func) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -223,7 +223,7 @@ public class InvokeFunc_2<T extends IJCOBridgeReflected, TResult extends IJCOBri
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.InvokeFunc-2.Argument" target="_top">.NET documentation</a>
      */
-    public InArgument_1 getArgument() throws Throwable {
+    public InArgument_1<T> getArgument() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArgument = null;
@@ -245,7 +245,7 @@ public class InvokeFunc_2<T extends IJCOBridgeReflected, TResult extends IJCOBri
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.InvokeFunc-2.Argument" target="_top">.NET documentation</a>
      */
-    public void setArgument(InArgument_1 Argument) throws Throwable {
+    public void setArgument(InArgument_1<T> Argument) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

@@ -40,6 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.collections.generic.KeyValuePair_2;
+import system.UriTemplate;
+import system.Object;
 import system.Uri;
 import system.collections.objectmodel.Collection_1;
 import system.UriTemplateMatch;
@@ -191,7 +194,7 @@ public class UriTemplateTable extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param keyValuePairs the argument of type {@code IEnumerable_1}
+     * @param keyValuePairs the argument of type {@code IEnumerable_1<KeyValuePair_2<UriTemplate, Object>>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -212,7 +215,7 @@ public class UriTemplateTable extends NetObject  {
      * @throws system.UriFormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.UriTemplateTable.-ctor" target="_top">.NET documentation</a>
      */
-    public UriTemplateTable(IEnumerable_1 keyValuePairs) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.UriFormatException {
+    public UriTemplateTable(IEnumerable_1<KeyValuePair_2<UriTemplate, Object>> keyValuePairs) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.UriFormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -260,7 +263,7 @@ public class UriTemplateTable extends NetObject  {
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param baseAddress the argument of type {@code Uri}
-     * @param keyValuePairs the argument of type {@code IEnumerable_1}
+     * @param keyValuePairs the argument of type {@code IEnumerable_1<KeyValuePair_2<UriTemplate, Object>>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -281,7 +284,7 @@ public class UriTemplateTable extends NetObject  {
      * @throws system.UriFormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.UriTemplateTable.-ctor" target="_top">.NET documentation</a>
      */
-    public UriTemplateTable(Uri baseAddress, IEnumerable_1 keyValuePairs) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.UriFormatException {
+    public UriTemplateTable(Uri baseAddress, IEnumerable_1<KeyValuePair_2<UriTemplate, Object>> keyValuePairs) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.UriFormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -318,7 +321,7 @@ public class UriTemplateTable extends NetObject  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.UriTemplateTable.Match" target="_top">.NET documentation</a>
      */
-    public Collection_1 Match(Uri uri) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.UriFormatException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.globalization.CultureNotFoundException {
+    public Collection_1<UriTemplateMatch> Match(Uri uri) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.UriFormatException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectMatch = null;
@@ -441,7 +444,7 @@ public class UriTemplateTable extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.UriTemplateTable.KeyValuePairs" target="_top">.NET documentation</a>
      */
-    public IList_1 getKeyValuePairs() throws Throwable {
+    public IList_1<KeyValuePair_2<UriTemplate, Object>> getKeyValuePairs() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectKeyValuePairs = null;

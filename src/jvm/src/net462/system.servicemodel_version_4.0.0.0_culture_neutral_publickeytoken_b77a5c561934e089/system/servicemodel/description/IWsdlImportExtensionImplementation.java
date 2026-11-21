@@ -42,6 +42,7 @@ import system.web.services.description.ServiceDescriptionCollection;
 import system.xml.schema.XmlSchemaSet;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.xml.XmlElement;
 import system.servicemodel.description.WsdlImporter;
 import system.servicemodel.description.WsdlContractConversionContext;
 import system.servicemodel.description.WsdlEndpointConversionContext;
@@ -155,11 +156,11 @@ public class IWsdlImportExtensionImplementation extends NetObject implements IWs
      *
      * @param wsdlDocuments the argument of type {@code ServiceDescriptionCollection}
      * @param xmlSchemas the argument of type {@code XmlSchemaSet}
-     * @param policy the argument of type {@code ICollection_1}
+     * @param policy the argument of type {@code ICollection_1<XmlElement>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.IWsdlImportExtension.BeforeImport" target="_top">.NET documentation</a>
      */
-    public void BeforeImport(ServiceDescriptionCollection wsdlDocuments, XmlSchemaSet xmlSchemas, ICollection_1 policy) throws Throwable {
+    public void BeforeImport(ServiceDescriptionCollection wsdlDocuments, XmlSchemaSet xmlSchemas, ICollection_1<XmlElement> policy) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

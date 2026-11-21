@@ -169,7 +169,7 @@ public class SecureConversationServiceCredential extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Security.SecureConversationServiceCredential.SecurityContextClaimTypes" target="_top">.NET documentation</a>
      */
-    public Collection_1 getSecurityContextClaimTypes() throws Throwable {
+    public Collection_1<NetType> getSecurityContextClaimTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSecurityContextClaimTypes = null;

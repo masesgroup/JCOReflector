@@ -214,7 +214,7 @@ public class EdmFunction extends system.data.metadata.edm.EdmType  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EdmFunction.Parameters" target="_top">.NET documentation</a>
      */
-    public ReadOnlyMetadataCollection_1 getParameters() throws Throwable {
+    public ReadOnlyMetadataCollection_1<FunctionParameter> getParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectParameters = null;
@@ -236,7 +236,7 @@ public class EdmFunction extends system.data.metadata.edm.EdmType  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EdmFunction.ReturnParameters" target="_top">.NET documentation</a>
      */
-    public ReadOnlyMetadataCollection_1 getReturnParameters() throws Throwable {
+    public ReadOnlyMetadataCollection_1<FunctionParameter> getReturnParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReturnParameters = null;

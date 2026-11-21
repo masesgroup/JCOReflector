@@ -42,6 +42,7 @@ import system.formats.asn1.AsnEncodingRules;
 import system.formats.asn1.AsnWriter;
 import system.Action_2;
 import system.Nullable_1;
+import system.formats.asn1.Asn1Tag;
 import system.formats.asn1.UniversalTagNumber;
 import system.Enum;
 import system.DateTimeOffset;
@@ -398,7 +399,7 @@ public class AsnWriter extends NetObject  {
     /**
      * Invokes the .NET member PopOctetString.
      *
-     * @param tag the argument of type {@code Nullable_1}
+     * @param tag the argument of type {@code Nullable_1<Asn1Tag>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -411,7 +412,7 @@ public class AsnWriter extends NetObject  {
      * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnWriter.PopOctetString" target="_top">.NET documentation</a>
      */
-    public void PopOctetString(Nullable_1 tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OverflowException {
+    public void PopOctetString(Nullable_1<Asn1Tag> tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -424,7 +425,7 @@ public class AsnWriter extends NetObject  {
     /**
      * Invokes the .NET member PopSequence.
      *
-     * @param tag the argument of type {@code Nullable_1}
+     * @param tag the argument of type {@code Nullable_1<Asn1Tag>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -437,7 +438,7 @@ public class AsnWriter extends NetObject  {
      * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnWriter.PopSequence" target="_top">.NET documentation</a>
      */
-    public void PopSequence(Nullable_1 tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.formats.asn1.AsnContentException, system.IndexOutOfRangeException, system.OverflowException {
+    public void PopSequence(Nullable_1<Asn1Tag> tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.formats.asn1.AsnContentException, system.IndexOutOfRangeException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -450,7 +451,7 @@ public class AsnWriter extends NetObject  {
     /**
      * Invokes the .NET member PopSetOf.
      *
-     * @param tag the argument of type {@code Nullable_1}
+     * @param tag the argument of type {@code Nullable_1<Asn1Tag>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -463,7 +464,7 @@ public class AsnWriter extends NetObject  {
      * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnWriter.PopSetOf" target="_top">.NET documentation</a>
      */
-    public void PopSetOf(Nullable_1 tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.formats.asn1.AsnContentException, system.IndexOutOfRangeException, system.OverflowException {
+    public void PopSetOf(Nullable_1<Asn1Tag> tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.formats.asn1.AsnContentException, system.IndexOutOfRangeException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -502,7 +503,7 @@ public class AsnWriter extends NetObject  {
      * Invokes the .NET member WriteBoolean.
      *
      * @param value the argument of type {@code boolean}
-     * @param tag the argument of type {@code Nullable_1}
+     * @param tag the argument of type {@code Nullable_1<Asn1Tag>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -514,7 +515,7 @@ public class AsnWriter extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnWriter.WriteBoolean" target="_top">.NET documentation</a>
      */
-    public void WriteBoolean(boolean value, Nullable_1 tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.IndexOutOfRangeException {
+    public void WriteBoolean(boolean value, Nullable_1<Asn1Tag> tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -529,7 +530,7 @@ public class AsnWriter extends NetObject  {
      *
      * @param encodingType the argument of type {@code UniversalTagNumber}
      * @param value the argument of type {@code java.lang.String}
-     * @param tag the argument of type {@code Nullable_1}
+     * @param tag the argument of type {@code Nullable_1<Asn1Tag>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -542,7 +543,7 @@ public class AsnWriter extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnWriter.WriteCharacterString" target="_top">.NET documentation</a>
      */
-    public void WriteCharacterString(UniversalTagNumber encodingType, java.lang.String value, Nullable_1 tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.OverflowException, system.IndexOutOfRangeException {
+    public void WriteCharacterString(UniversalTagNumber encodingType, java.lang.String value, Nullable_1<Asn1Tag> tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.OverflowException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -556,7 +557,7 @@ public class AsnWriter extends NetObject  {
      * Invokes the .NET member WriteEnumeratedValue.
      *
      * @param value the argument of type {@code Enum}
-     * @param tag the argument of type {@code Nullable_1}
+     * @param tag the argument of type {@code Nullable_1<Asn1Tag>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -569,7 +570,7 @@ public class AsnWriter extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnWriter.WriteEnumeratedValue" target="_top">.NET documentation</a>
      */
-    public void WriteEnumeratedValue(Enum value, Nullable_1 tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.OverflowException, system.IndexOutOfRangeException {
+    public void WriteEnumeratedValue(Enum value, Nullable_1<Asn1Tag> tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.OverflowException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -584,7 +585,7 @@ public class AsnWriter extends NetObject  {
      *
      * @param <TEnum> the type of the generic argument TEnum
      * @param value the argument of type {@code TEnum}
-     * @param tag the argument of type {@code Nullable_1}
+     * @param tag the argument of type {@code Nullable_1<Asn1Tag>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -596,7 +597,7 @@ public class AsnWriter extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnWriter.WriteEnumeratedValue" target="_top">.NET documentation</a>
      */
-    public <TEnum extends IJCOBridgeReflected> void WriteEnumeratedValue(TEnum value, Nullable_1 tag) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
+    public <TEnum extends IJCOBridgeReflected> void WriteEnumeratedValue(TEnum value, Nullable_1<Asn1Tag> tag) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -611,7 +612,7 @@ public class AsnWriter extends NetObject  {
      *
      * @param value the argument of type {@code DateTimeOffset}
      * @param omitFractionalSeconds the argument of type {@code boolean}
-     * @param tag the argument of type {@code Nullable_1}
+     * @param tag the argument of type {@code Nullable_1<Asn1Tag>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -625,7 +626,7 @@ public class AsnWriter extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnWriter.WriteGeneralizedTime" target="_top">.NET documentation</a>
      */
-    public void WriteGeneralizedTime(DateTimeOffset value, boolean omitFractionalSeconds, Nullable_1 tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.DivideByZeroException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException {
+    public void WriteGeneralizedTime(DateTimeOffset value, boolean omitFractionalSeconds, Nullable_1<Asn1Tag> tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.DivideByZeroException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -639,7 +640,7 @@ public class AsnWriter extends NetObject  {
      * Invokes the .NET member WriteInteger.
      *
      * @param value the argument of type {@code long}
-     * @param tag the argument of type {@code Nullable_1}
+     * @param tag the argument of type {@code Nullable_1<Asn1Tag>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -651,7 +652,7 @@ public class AsnWriter extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnWriter.WriteInteger" target="_top">.NET documentation</a>
      */
-    public void WriteInteger(long value, Nullable_1 tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.IndexOutOfRangeException {
+    public void WriteInteger(long value, Nullable_1<Asn1Tag> tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -665,7 +666,7 @@ public class AsnWriter extends NetObject  {
      * Invokes the .NET member WriteInteger.
      *
      * @param value the argument of type {@code BigInteger}
-     * @param tag the argument of type {@code Nullable_1}
+     * @param tag the argument of type {@code Nullable_1<Asn1Tag>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -677,7 +678,7 @@ public class AsnWriter extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnWriter.WriteInteger" target="_top">.NET documentation</a>
      */
-    public void WriteInteger(BigInteger value, Nullable_1 tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.IndexOutOfRangeException {
+    public void WriteInteger(BigInteger value, Nullable_1<Asn1Tag> tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -691,7 +692,7 @@ public class AsnWriter extends NetObject  {
      * Invokes the .NET member WriteInteger.
      *
      * @param value the argument of type {@code UInt64}
-     * @param tag the argument of type {@code Nullable_1}
+     * @param tag the argument of type {@code Nullable_1<Asn1Tag>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -703,7 +704,7 @@ public class AsnWriter extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnWriter.WriteInteger" target="_top">.NET documentation</a>
      */
-    public void WriteInteger(UInt64 value, Nullable_1 tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.IndexOutOfRangeException {
+    public void WriteInteger(UInt64 value, Nullable_1<Asn1Tag> tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -717,7 +718,7 @@ public class AsnWriter extends NetObject  {
      * Invokes the .NET member WriteNamedBitList.
      *
      * @param value the argument of type {@code BitArray}
-     * @param tag the argument of type {@code Nullable_1}
+     * @param tag the argument of type {@code Nullable_1<Asn1Tag>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -731,7 +732,7 @@ public class AsnWriter extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnWriter.WriteNamedBitList" target="_top">.NET documentation</a>
      */
-    public void WriteNamedBitList(BitArray value, Nullable_1 tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException {
+    public void WriteNamedBitList(BitArray value, Nullable_1<Asn1Tag> tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -745,7 +746,7 @@ public class AsnWriter extends NetObject  {
      * Invokes the .NET member WriteNamedBitList.
      *
      * @param value the argument of type {@code Enum}
-     * @param tag the argument of type {@code Nullable_1}
+     * @param tag the argument of type {@code Nullable_1<Asn1Tag>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -758,7 +759,7 @@ public class AsnWriter extends NetObject  {
      * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnWriter.WriteNamedBitList" target="_top">.NET documentation</a>
      */
-    public void WriteNamedBitList(Enum value, Nullable_1 tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException {
+    public void WriteNamedBitList(Enum value, Nullable_1<Asn1Tag> tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -773,7 +774,7 @@ public class AsnWriter extends NetObject  {
      *
      * @param <TEnum> the type of the generic argument TEnum
      * @param value the argument of type {@code TEnum}
-     * @param tag the argument of type {@code Nullable_1}
+     * @param tag the argument of type {@code Nullable_1<Asn1Tag>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -785,7 +786,7 @@ public class AsnWriter extends NetObject  {
      * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnWriter.WriteNamedBitList" target="_top">.NET documentation</a>
      */
-    public <TEnum extends IJCOBridgeReflected> void WriteNamedBitList(TEnum value, Nullable_1 tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OverflowException {
+    public <TEnum extends IJCOBridgeReflected> void WriteNamedBitList(TEnum value, Nullable_1<Asn1Tag> tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -798,7 +799,7 @@ public class AsnWriter extends NetObject  {
     /**
      * Invokes the .NET member WriteNull.
      *
-     * @param tag the argument of type {@code Nullable_1}
+     * @param tag the argument of type {@code Nullable_1<Asn1Tag>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -810,7 +811,7 @@ public class AsnWriter extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnWriter.WriteNull" target="_top">.NET documentation</a>
      */
-    public void WriteNull(Nullable_1 tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.IndexOutOfRangeException {
+    public void WriteNull(Nullable_1<Asn1Tag> tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -824,7 +825,7 @@ public class AsnWriter extends NetObject  {
      * Invokes the .NET member WriteObjectIdentifier.
      *
      * @param oidValue the argument of type {@code java.lang.String}
-     * @param tag the argument of type {@code Nullable_1}
+     * @param tag the argument of type {@code Nullable_1<Asn1Tag>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -837,7 +838,7 @@ public class AsnWriter extends NetObject  {
      * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnWriter.WriteObjectIdentifier" target="_top">.NET documentation</a>
      */
-    public void WriteObjectIdentifier(java.lang.String oidValue, Nullable_1 tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException {
+    public void WriteObjectIdentifier(java.lang.String oidValue, Nullable_1<Asn1Tag> tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -852,7 +853,7 @@ public class AsnWriter extends NetObject  {
      *
      * @param value the argument of type {@code DateTimeOffset}
      * @param twoDigitYearMax the argument of type {@code int}
-     * @param tag the argument of type {@code Nullable_1}
+     * @param tag the argument of type {@code Nullable_1<Asn1Tag>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -865,7 +866,7 @@ public class AsnWriter extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnWriter.WriteUtcTime" target="_top">.NET documentation</a>
      */
-    public void WriteUtcTime(DateTimeOffset value, int twoDigitYearMax, Nullable_1 tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException {
+    public void WriteUtcTime(DateTimeOffset value, int twoDigitYearMax, Nullable_1<Asn1Tag> tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -879,7 +880,7 @@ public class AsnWriter extends NetObject  {
      * Invokes the .NET member WriteUtcTime.
      *
      * @param value the argument of type {@code DateTimeOffset}
-     * @param tag the argument of type {@code Nullable_1}
+     * @param tag the argument of type {@code Nullable_1<Asn1Tag>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -892,7 +893,7 @@ public class AsnWriter extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnWriter.WriteUtcTime" target="_top">.NET documentation</a>
      */
-    public void WriteUtcTime(DateTimeOffset value, Nullable_1 tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException {
+    public void WriteUtcTime(DateTimeOffset value, Nullable_1<Asn1Tag> tag) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

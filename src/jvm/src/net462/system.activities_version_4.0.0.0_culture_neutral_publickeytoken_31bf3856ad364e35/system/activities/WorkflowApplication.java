@@ -52,12 +52,22 @@ import system.activities.WorkflowApplicationInstance;
 import system.Guid;
 import system.runtime.durableinstancing.InstanceStore;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.activities.hosting.BookmarkInfo;
 import system.AsyncCallback;
 import system.activities.WorkflowIdentityFilter;
 import system.activities.dynamicupdate.DynamicUpdateMap;
+import system.xml.linq.XName;
+import system.Object;
 import system.Action_1;
+import system.activities.WorkflowApplicationAbortedEventArgs;
+import system.activities.WorkflowApplicationCompletedEventArgs;
+import system.activities.WorkflowApplicationEventArgs;
+import system.activities.WorkflowApplicationIdleEventArgs;
 import system.activities.hosting.WorkflowInstanceExtensionManager;
 import system.Func_2;
+import system.activities.PersistableIdleAction;
+import system.activities.WorkflowApplicationUnhandledExceptionEventArgs;
+import system.activities.UnhandledExceptionAction;
 
 
 /**
@@ -712,7 +722,7 @@ public class WorkflowApplication extends system.activities.hosting.WorkflowInsta
      * @throws system.activities.ValidationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.WorkflowApplication.GetBookmarks" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 GetBookmarks() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.activities.ValidationException {
+    public ReadOnlyCollection_1<BookmarkInfo> GetBookmarks() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.activities.ValidationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetBookmarks = null;
@@ -746,7 +756,7 @@ public class WorkflowApplication extends system.activities.hosting.WorkflowInsta
      * @throws system.activities.ValidationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.WorkflowApplication.GetBookmarks" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 GetBookmarks(TimeSpan timeout) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.activities.ValidationException {
+    public ReadOnlyCollection_1<BookmarkInfo> GetBookmarks(TimeSpan timeout) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.activities.ValidationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetBookmarks = null;
@@ -2104,7 +2114,7 @@ public class WorkflowApplication extends system.activities.hosting.WorkflowInsta
     /**
      * Invokes the .NET member AddInitialInstanceValues.
      *
-     * @param writeOnlyValues the argument of type {@code IDictionary_2}
+     * @param writeOnlyValues the argument of type {@code IDictionary_2<XName, Object>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -2118,7 +2128,7 @@ public class WorkflowApplication extends system.activities.hosting.WorkflowInsta
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.WorkflowApplication.AddInitialInstanceValues" target="_top">.NET documentation</a>
      */
-    public void AddInitialInstanceValues(IDictionary_2 writeOnlyValues) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+    public void AddInitialInstanceValues(IDictionary_2<XName, Object> writeOnlyValues) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -3231,15 +3241,15 @@ public class WorkflowApplication extends system.activities.hosting.WorkflowInsta
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.WorkflowApplication.Aborted" target="_top">.NET documentation</a>
      */
-    public Action_1 getAborted() throws Throwable {
+    public Action_1<WorkflowApplicationAbortedEventArgs> getAborted() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAborted = null;
         try {
             retObjectAborted = classInstance.Get("Aborted");
-            return (Action_1)retObjectAborted;
+            return (Action_1<WorkflowApplicationAbortedEventArgs>)retObjectAborted;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_1", retObjectAborted != null ? retObjectAborted.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_1<WorkflowApplicationAbortedEventArgs>", retObjectAborted != null ? retObjectAborted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -3262,7 +3272,7 @@ public class WorkflowApplication extends system.activities.hosting.WorkflowInsta
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.WorkflowApplication.Aborted" target="_top">.NET documentation</a>
      */
-    public void setAborted(Action_1 Aborted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+    public void setAborted(Action_1<WorkflowApplicationAbortedEventArgs> Aborted) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -3279,15 +3289,15 @@ public class WorkflowApplication extends system.activities.hosting.WorkflowInsta
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.WorkflowApplication.Completed" target="_top">.NET documentation</a>
      */
-    public Action_1 getCompleted() throws Throwable {
+    public Action_1<WorkflowApplicationCompletedEventArgs> getCompleted() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCompleted = null;
         try {
             retObjectCompleted = classInstance.Get("Completed");
-            return (Action_1)retObjectCompleted;
+            return (Action_1<WorkflowApplicationCompletedEventArgs>)retObjectCompleted;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_1", retObjectCompleted != null ? retObjectCompleted.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_1<WorkflowApplicationCompletedEventArgs>", retObjectCompleted != null ? retObjectCompleted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -3310,7 +3320,7 @@ public class WorkflowApplication extends system.activities.hosting.WorkflowInsta
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.WorkflowApplication.Completed" target="_top">.NET documentation</a>
      */
-    public void setCompleted(Action_1 Completed) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+    public void setCompleted(Action_1<WorkflowApplicationCompletedEventArgs> Completed) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -3327,15 +3337,15 @@ public class WorkflowApplication extends system.activities.hosting.WorkflowInsta
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.WorkflowApplication.Unloaded" target="_top">.NET documentation</a>
      */
-    public Action_1 getUnloaded() throws Throwable {
+    public Action_1<WorkflowApplicationEventArgs> getUnloaded() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUnloaded = null;
         try {
             retObjectUnloaded = classInstance.Get("Unloaded");
-            return (Action_1)retObjectUnloaded;
+            return (Action_1<WorkflowApplicationEventArgs>)retObjectUnloaded;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_1", retObjectUnloaded != null ? retObjectUnloaded.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_1<WorkflowApplicationEventArgs>", retObjectUnloaded != null ? retObjectUnloaded.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -3358,7 +3368,7 @@ public class WorkflowApplication extends system.activities.hosting.WorkflowInsta
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.WorkflowApplication.Unloaded" target="_top">.NET documentation</a>
      */
-    public void setUnloaded(Action_1 Unloaded) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+    public void setUnloaded(Action_1<WorkflowApplicationEventArgs> Unloaded) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -3375,15 +3385,15 @@ public class WorkflowApplication extends system.activities.hosting.WorkflowInsta
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.WorkflowApplication.Idle" target="_top">.NET documentation</a>
      */
-    public Action_1 getIdle() throws Throwable {
+    public Action_1<WorkflowApplicationIdleEventArgs> getIdle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIdle = null;
         try {
             retObjectIdle = classInstance.Get("Idle");
-            return (Action_1)retObjectIdle;
+            return (Action_1<WorkflowApplicationIdleEventArgs>)retObjectIdle;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_1", retObjectIdle != null ? retObjectIdle.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_1<WorkflowApplicationIdleEventArgs>", retObjectIdle != null ? retObjectIdle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -3406,7 +3416,7 @@ public class WorkflowApplication extends system.activities.hosting.WorkflowInsta
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.WorkflowApplication.Idle" target="_top">.NET documentation</a>
      */
-    public void setIdle(Action_1 Idle) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+    public void setIdle(Action_1<WorkflowApplicationIdleEventArgs> Idle) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -3452,15 +3462,15 @@ public class WorkflowApplication extends system.activities.hosting.WorkflowInsta
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.WorkflowApplication.PersistableIdle" target="_top">.NET documentation</a>
      */
-    public Func_2 getPersistableIdle() throws Throwable {
+    public Func_2<WorkflowApplicationIdleEventArgs, PersistableIdleAction> getPersistableIdle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPersistableIdle = null;
         try {
             retObjectPersistableIdle = classInstance.Get("PersistableIdle");
-            return (Func_2)retObjectPersistableIdle;
+            return (Func_2<WorkflowApplicationIdleEventArgs, PersistableIdleAction>)retObjectPersistableIdle;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2", retObjectPersistableIdle != null ? retObjectPersistableIdle.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2<WorkflowApplicationIdleEventArgs, PersistableIdleAction>", retObjectPersistableIdle != null ? retObjectPersistableIdle.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -3483,7 +3493,7 @@ public class WorkflowApplication extends system.activities.hosting.WorkflowInsta
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.WorkflowApplication.PersistableIdle" target="_top">.NET documentation</a>
      */
-    public void setPersistableIdle(Func_2 PersistableIdle) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+    public void setPersistableIdle(Func_2<WorkflowApplicationIdleEventArgs, PersistableIdleAction> PersistableIdle) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -3500,15 +3510,15 @@ public class WorkflowApplication extends system.activities.hosting.WorkflowInsta
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.WorkflowApplication.OnUnhandledException" target="_top">.NET documentation</a>
      */
-    public Func_2 getOnUnhandledException() throws Throwable {
+    public Func_2<WorkflowApplicationUnhandledExceptionEventArgs, UnhandledExceptionAction> getOnUnhandledException() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOnUnhandledException = null;
         try {
             retObjectOnUnhandledException = classInstance.Get("OnUnhandledException");
-            return (Func_2)retObjectOnUnhandledException;
+            return (Func_2<WorkflowApplicationUnhandledExceptionEventArgs, UnhandledExceptionAction>)retObjectOnUnhandledException;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2", retObjectOnUnhandledException != null ? retObjectOnUnhandledException.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2<WorkflowApplicationUnhandledExceptionEventArgs, UnhandledExceptionAction>", retObjectOnUnhandledException != null ? retObjectOnUnhandledException.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -3531,7 +3541,7 @@ public class WorkflowApplication extends system.activities.hosting.WorkflowInsta
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.WorkflowApplication.OnUnhandledException" target="_top">.NET documentation</a>
      */
-    public void setOnUnhandledException(Func_2 OnUnhandledException) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+    public void setOnUnhandledException(Func_2<WorkflowApplicationUnhandledExceptionEventArgs, UnhandledExceptionAction> OnUnhandledException) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

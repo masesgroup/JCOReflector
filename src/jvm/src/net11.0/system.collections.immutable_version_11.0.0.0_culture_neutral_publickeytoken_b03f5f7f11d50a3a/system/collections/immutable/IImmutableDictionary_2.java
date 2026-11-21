@@ -124,25 +124,25 @@ public interface IImmutableDictionary_2<TKey extends IJCOBridgeReflected, TValue
 
     // Methods section
     
-    public boolean Contains(KeyValuePair_2 pair) throws Throwable;
+    public boolean Contains(KeyValuePair_2<TKey, TValue> pair) throws Throwable;
 
 
     public boolean TryGetKey(TKey equalKey, JCORefOut<TKey> actualKey) throws Throwable;
 
 
-    public IImmutableDictionary_2 Add(TKey key, TValue value) throws Throwable;
+    public IImmutableDictionary_2<TKey, TValue> Add(TKey key, TValue value) throws Throwable;
 
-    public IImmutableDictionary_2 AddRange(IEnumerable_1 pairs) throws Throwable;
+    public IImmutableDictionary_2<TKey, TValue> AddRange(IEnumerable_1<KeyValuePair_2<TKey, TValue>> pairs) throws Throwable;
 
-    public IImmutableDictionary_2 Clear() throws Throwable;
+    public IImmutableDictionary_2<TKey, TValue> Clear() throws Throwable;
 
-    public IImmutableDictionary_2 Remove(TKey key) throws Throwable;
+    public IImmutableDictionary_2<TKey, TValue> Remove(TKey key) throws Throwable;
 
-    public IImmutableDictionary_2 RemoveRange(IEnumerable_1 keys) throws Throwable;
+    public IImmutableDictionary_2<TKey, TValue> RemoveRange(IEnumerable_1<TKey> keys) throws Throwable;
 
-    public IImmutableDictionary_2 SetItem(TKey key, TValue value) throws Throwable;
+    public IImmutableDictionary_2<TKey, TValue> SetItem(TKey key, TValue value) throws Throwable;
 
-    public IImmutableDictionary_2 SetItems(IEnumerable_1 items) throws Throwable;
+    public IImmutableDictionary_2<TKey, TValue> SetItems(IEnumerable_1<KeyValuePair_2<TKey, TValue>> items) throws Throwable;
 
 
     

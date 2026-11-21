@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.reflection.EventInfo;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.reflection.CustomAttributeData;
 import system.reflection.MethodInfo;
 import system.reflection.EventAttributes;
 import system.reflection.Module;
@@ -216,7 +217,7 @@ public class ComAwareEventInfo extends system.reflection.EventInfo  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.ComAwareEventInfo.GetCustomAttributesData" target="_top">.NET documentation</a>
      */
-    public IList_1 GetCustomAttributesData() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
+    public IList_1<CustomAttributeData> GetCustomAttributesData() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetCustomAttributesData = null;

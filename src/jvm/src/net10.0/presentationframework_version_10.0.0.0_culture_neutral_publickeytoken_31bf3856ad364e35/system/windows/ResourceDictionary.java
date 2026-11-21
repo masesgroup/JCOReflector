@@ -43,6 +43,7 @@ import system.Array;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
 import system.collections.objectmodel.Collection_1;
+import system.windows.ResourceDictionary;
 import system.Uri;
 import system.windows.DeferrableContent;
 
@@ -704,7 +705,7 @@ public class ResourceDictionary extends NetObjectEnumerable  {
      * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.ResourceDictionary.MergedDictionaries" target="_top">.NET documentation</a>
      */
-    public Collection_1 getMergedDictionaries() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.MulticastNotSupportedException, system.NullReferenceException, system.componentmodel.Win32Exception, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException {
+    public Collection_1<ResourceDictionary> getMergedDictionaries() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException, system.UnauthorizedAccessException, system.InvalidOperationException, system.NotSupportedException, system.RankException, system.MulticastNotSupportedException, system.NullReferenceException, system.componentmodel.Win32Exception, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectMergedDictionaries = null;

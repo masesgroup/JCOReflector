@@ -289,15 +289,15 @@ public class MultipartContent extends system.net.http.HttpContent  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.MultipartContent.HeaderEncodingSelector" target="_top">.NET documentation</a>
      */
-    public HeaderEncodingSelector_1 getHeaderEncodingSelector() throws Throwable {
+    public HeaderEncodingSelector_1<HttpContent> getHeaderEncodingSelector() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectHeaderEncodingSelector = null;
         try {
             retObjectHeaderEncodingSelector = classInstance.Get("HeaderEncodingSelector");
-            return (HeaderEncodingSelector_1)retObjectHeaderEncodingSelector;
+            return (HeaderEncodingSelector_1<HttpContent>)retObjectHeaderEncodingSelector;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into HeaderEncodingSelector_1", retObjectHeaderEncodingSelector != null ? retObjectHeaderEncodingSelector.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into HeaderEncodingSelector_1<HttpContent>", retObjectHeaderEncodingSelector != null ? retObjectHeaderEncodingSelector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,7 +310,7 @@ public class MultipartContent extends system.net.http.HttpContent  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.MultipartContent.HeaderEncodingSelector" target="_top">.NET documentation</a>
      */
-    public void setHeaderEncodingSelector(HeaderEncodingSelector_1 HeaderEncodingSelector) throws Throwable {
+    public void setHeaderEncodingSelector(HeaderEncodingSelector_1<HttpContent> HeaderEncodingSelector) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

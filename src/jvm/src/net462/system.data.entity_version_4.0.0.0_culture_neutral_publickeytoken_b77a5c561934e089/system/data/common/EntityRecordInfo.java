@@ -42,6 +42,7 @@ import system.data.common.DataRecordInfo;
 import system.data.metadata.edm.EntityType;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.data.metadata.edm.EdmMember;
 import system.data.EntityKey;
 import system.data.metadata.edm.EntitySet;
 
@@ -161,7 +162,7 @@ public class EntityRecordInfo extends system.data.common.DataRecordInfo  {
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param metadata the argument of type {@code EntityType}
-     * @param memberInfo the argument of type {@code IEnumerable_1}
+     * @param memberInfo the argument of type {@code IEnumerable_1<EdmMember>}
      * @param entityKey the argument of type {@code EntityKey}
      * @param entitySet the argument of type {@code EntitySet}
      * @throws Throwable if the .NET constructor fails
@@ -176,7 +177,7 @@ public class EntityRecordInfo extends system.data.common.DataRecordInfo  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.EntityRecordInfo.-ctor" target="_top">.NET documentation</a>
      */
-    public EntityRecordInfo(EntityType metadata, IEnumerable_1 memberInfo, EntityKey entityKey, EntitySet entitySet) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public EntityRecordInfo(EntityType metadata, IEnumerable_1<EdmMember> memberInfo, EntityKey entityKey, EntitySet entitySet) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

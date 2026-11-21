@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.generic.List_1;
+import microsoft.build.framework.xamltypes.Argument;
+import microsoft.build.framework.xamltypes.NameValuePair;
 
 
 /**
@@ -218,7 +220,7 @@ public class EnumValue extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.EnumValue.Arguments" target="_top">.NET documentation</a>
      */
-    public List_1 getArguments() throws Throwable {
+    public List_1<Argument> getArguments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArguments = null;
@@ -240,7 +242,7 @@ public class EnumValue extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.EnumValue.Arguments" target="_top">.NET documentation</a>
      */
-    public void setArguments(List_1 Arguments) throws Throwable {
+    public void setArguments(List_1<Argument> Arguments) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -257,7 +259,7 @@ public class EnumValue extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.EnumValue.Metadata" target="_top">.NET documentation</a>
      */
-    public List_1 getMetadata() throws Throwable {
+    public List_1<NameValuePair> getMetadata() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectMetadata = null;
@@ -279,7 +281,7 @@ public class EnumValue extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.EnumValue.Metadata" target="_top">.NET documentation</a>
      */
-    public void setMetadata(List_1 Metadata) throws Throwable {
+    public void setMetadata(List_1<NameValuePair> Metadata) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

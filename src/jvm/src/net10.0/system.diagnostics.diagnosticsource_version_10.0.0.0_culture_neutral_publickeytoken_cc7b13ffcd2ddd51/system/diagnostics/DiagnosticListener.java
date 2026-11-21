@@ -45,10 +45,12 @@ import system.IObserver_1;
 import system.IObserver_1Implementation;
 import system.Func_4;
 import system.Action_2;
-import system.Predicate_1;
 import system.diagnostics.Activity;
+import system.Object;
+import system.Predicate_1;
 import system.IObservable_1;
 import system.IObservable_1Implementation;
+import system.diagnostics.DiagnosticListener;
 
 
 /**
@@ -266,8 +268,8 @@ public class DiagnosticListener extends system.diagnostics.DiagnosticSource impl
      *
      * @param observer the argument of type {@code IObserver_1}
      * @param isEnabled the argument of type {@code Func_4}
-     * @param onActivityImport the argument of type {@code Action_2}
-     * @param onActivityExport the argument of type {@code Action_2}
+     * @param onActivityImport the argument of type {@code Action_2<Activity, Object>}
+     * @param onActivityExport the argument of type {@code Action_2<Activity, Object>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -278,7 +280,7 @@ public class DiagnosticListener extends system.diagnostics.DiagnosticSource impl
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DiagnosticListener.Subscribe" target="_top">.NET documentation</a>
      */
-    public IDisposable Subscribe(IObserver_1 observer, Func_4 isEnabled, Action_2 onActivityImport, Action_2 onActivityExport) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException {
+    public IDisposable Subscribe(IObserver_1 observer, Func_4 isEnabled, Action_2<Activity, Object> onActivityImport, Action_2<Activity, Object> onActivityExport) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSubscribe = null;
@@ -497,7 +499,7 @@ public class DiagnosticListener extends system.diagnostics.DiagnosticSource impl
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.DiagnosticListener.AllListeners" target="_top">.NET documentation</a>
      */
-    public static IObservable_1 getAllListeners() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException {
+    public static IObservable_1<DiagnosticListener> getAllListeners() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAllListeners = null;

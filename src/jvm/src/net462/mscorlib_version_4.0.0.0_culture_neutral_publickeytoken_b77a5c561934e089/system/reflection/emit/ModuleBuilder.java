@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.reflection.Module;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.reflection.CustomAttributeData;
 import system.diagnostics.symbolstore.ISymbolDocumentWriter;
 import system.diagnostics.symbolstore.ISymbolDocumentWriterImplementation;
 import system.Guid;
@@ -306,7 +307,7 @@ public class ModuleBuilder extends system.reflection.Module  {
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.GetCustomAttributesData" target="_top">.NET documentation</a>
      */
-    public IList_1 GetCustomAttributesData() throws Throwable, system.NotImplementedException {
+    public IList_1<CustomAttributeData> GetCustomAttributesData() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetCustomAttributesData = null;
@@ -813,7 +814,7 @@ public class ModuleBuilder extends system.reflection.Module  {
      * Invokes the .NET member GetConstructorToken.
      *
      * @param constructor the argument of type {@code ConstructorInfo}
-     * @param optionalParameterTypes the argument of type {@code IEnumerable_1}
+     * @param optionalParameterTypes the argument of type {@code IEnumerable_1<NetType>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -824,7 +825,7 @@ public class ModuleBuilder extends system.reflection.Module  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.GetConstructorToken" target="_top">.NET documentation</a>
      */
-    public MethodToken GetConstructorToken(ConstructorInfo constructor, IEnumerable_1 optionalParameterTypes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public MethodToken GetConstructorToken(ConstructorInfo constructor, IEnumerable_1<NetType> optionalParameterTypes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetConstructorToken = null;
@@ -877,7 +878,7 @@ public class ModuleBuilder extends system.reflection.Module  {
      * Invokes the .NET member GetMethodToken.
      *
      * @param method the argument of type {@code MethodInfo}
-     * @param optionalParameterTypes the argument of type {@code IEnumerable_1}
+     * @param optionalParameterTypes the argument of type {@code IEnumerable_1<NetType>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -888,7 +889,7 @@ public class ModuleBuilder extends system.reflection.Module  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.ModuleBuilder.GetMethodToken" target="_top">.NET documentation</a>
      */
-    public MethodToken GetMethodToken(MethodInfo method, IEnumerable_1 optionalParameterTypes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public MethodToken GetMethodToken(MethodInfo method, IEnumerable_1<NetType> optionalParameterTypes) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetMethodToken = null;

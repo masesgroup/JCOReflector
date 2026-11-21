@@ -46,10 +46,10 @@ import system.reflection.AssemblyName;
 import system.reflection.emit.AssemblyBuilderAccess;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.reflection.emit.CustomAttributeBuilder;
 import system.reflection.emit.ModuleBuilder;
 import system.reflection.ManifestResourceInfo;
 import system.reflection.ConstructorInfo;
-import system.reflection.emit.CustomAttributeBuilder;
 import system.reflection.MethodInfo;
 
 
@@ -319,7 +319,7 @@ public class AssemblyBuilder extends system.reflection.Assembly  {
      *
      * @param name the argument of type {@code AssemblyName}
      * @param access the argument of type {@code AssemblyBuilderAccess}
-     * @param assemblyAttributes the argument of type {@code IEnumerable_1}
+     * @param assemblyAttributes the argument of type {@code IEnumerable_1<CustomAttributeBuilder>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -333,7 +333,7 @@ public class AssemblyBuilder extends system.reflection.Assembly  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.AssemblyBuilder.DefineDynamicAssembly" target="_top">.NET documentation</a>
      */
-    public static AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, IEnumerable_1 assemblyAttributes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, IEnumerable_1<CustomAttributeBuilder> assemblyAttributes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDefineDynamicAssembly = null;

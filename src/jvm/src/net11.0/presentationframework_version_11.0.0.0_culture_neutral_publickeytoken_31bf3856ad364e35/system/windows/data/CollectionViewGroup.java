@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.objectmodel.ReadOnlyObservableCollection_1;
+import system.Object;
 
 
 /**
@@ -234,7 +235,7 @@ public class CollectionViewGroup extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.CollectionViewGroup.Items" target="_top">.NET documentation</a>
      */
-    public ReadOnlyObservableCollection_1 getItems() throws Throwable {
+    public ReadOnlyObservableCollection_1<Object> getItems() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectItems = null;

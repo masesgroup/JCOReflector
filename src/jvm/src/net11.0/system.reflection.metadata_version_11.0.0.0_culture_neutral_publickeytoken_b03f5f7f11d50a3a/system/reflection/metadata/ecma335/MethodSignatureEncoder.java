@@ -183,8 +183,8 @@ public class MethodSignatureEncoder extends system.ValueType  {
      * Invokes the .NET member Parameters.
      *
      * @param parameterCount the argument of type {@code int}
-     * @param returnType the argument of type {@code Action_1}
-     * @param parameters the argument of type {@code Action_1}
+     * @param returnType the argument of type {@code Action_1<ReturnTypeEncoder>}
+     * @param parameters the argument of type {@code Action_1<ParametersEncoder>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -197,7 +197,7 @@ public class MethodSignatureEncoder extends system.ValueType  {
      * @throws system.RankException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MethodSignatureEncoder.Parameters" target="_top">.NET documentation</a>
      */
-    public void Parameters(int parameterCount, Action_1 returnType, Action_1 parameters) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException {
+    public void Parameters(int parameterCount, Action_1<ReturnTypeEncoder> returnType, Action_1<ParametersEncoder> parameters) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

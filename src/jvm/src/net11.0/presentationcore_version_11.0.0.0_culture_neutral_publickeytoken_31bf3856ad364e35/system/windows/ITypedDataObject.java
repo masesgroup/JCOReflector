@@ -40,6 +40,7 @@ import org.mases.jcobridge.netreflection.*;
 import system.windows.IDataObject;
 import system.windows.IDataObjectImplementation;
 import system.Func_2;
+import system.reflection.metadata.TypeName;
 
 
 /**
@@ -123,7 +124,7 @@ public interface ITypedDataObject extends IJCOBridgeReflected, system.windows.ID
 
     public <T extends IJCOBridgeReflected> boolean TryGetData(java.lang.String format, boolean autoConvert, JCORefOut<T> data) throws Throwable;
 
-    public <T extends IJCOBridgeReflected> boolean TryGetData(java.lang.String format, Func_2 resolver, boolean autoConvert, JCORefOut<T> data) throws Throwable;
+    public <T extends IJCOBridgeReflected> boolean TryGetData(java.lang.String format, Func_2<TypeName, NetType> resolver, boolean autoConvert, JCORefOut<T> data) throws Throwable;
 
     public <T extends IJCOBridgeReflected> boolean TryGetData(java.lang.String format, JCORefOut<T> data) throws Throwable;
 

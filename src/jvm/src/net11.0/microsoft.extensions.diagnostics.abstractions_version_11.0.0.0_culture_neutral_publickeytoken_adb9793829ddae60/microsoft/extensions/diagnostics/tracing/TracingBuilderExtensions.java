@@ -41,7 +41,10 @@ import java.util.ArrayList;
 import microsoft.extensions.diagnostics.tracing.ITracingBuilder;
 import microsoft.extensions.diagnostics.tracing.ITracingBuilderImplementation;
 import system.Action_1;
+import microsoft.extensions.diagnostics.tracing.ActivityListenerBuilder;
 import system.Action_2;
+import system.IServiceProvider;
+import system.IServiceProviderImplementation;
 import microsoft.extensions.diagnostics.tracing.ActivitySourceScopes;
 import microsoft.extensions.diagnostics.tracing.TracingOptions;
 
@@ -165,7 +168,7 @@ public class TracingBuilderExtensions extends NetObject  {
      *
      * @param builder the argument of type {@code ITracingBuilder}
      * @param name the argument of type {@code java.lang.String}
-     * @param configure the argument of type {@code Action_1}
+     * @param configure the argument of type {@code Action_1<ActivityListenerBuilder>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -177,7 +180,7 @@ public class TracingBuilderExtensions extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Diagnostics.Tracing.TracingBuilderExtensions.AddListener" target="_top">.NET documentation</a>
      */
-    public static ITracingBuilder AddListener(ITracingBuilder builder, java.lang.String name, Action_1 configure) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public static ITracingBuilder AddListener(ITracingBuilder builder, java.lang.String name, Action_1<ActivityListenerBuilder> configure) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddListener = null;
@@ -197,7 +200,7 @@ public class TracingBuilderExtensions extends NetObject  {
      *
      * @param builder the argument of type {@code ITracingBuilder}
      * @param name the argument of type {@code java.lang.String}
-     * @param configure the argument of type {@code Action_2}
+     * @param configure the argument of type {@code Action_2<IServiceProvider, ActivityListenerBuilder>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -209,7 +212,7 @@ public class TracingBuilderExtensions extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Diagnostics.Tracing.TracingBuilderExtensions.AddListener" target="_top">.NET documentation</a>
      */
-    public static ITracingBuilder AddListener(ITracingBuilder builder, java.lang.String name, Action_2 configure) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public static ITracingBuilder AddListener(ITracingBuilder builder, java.lang.String name, Action_2<IServiceProvider, ActivityListenerBuilder> configure) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAddListener = null;

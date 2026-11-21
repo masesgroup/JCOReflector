@@ -46,6 +46,7 @@ import system.servicemodel.channels.BindingContext;
 import system.servicemodel.channels.IChannelListener_1;
 import system.servicemodel.channels.IChannelListener_1Implementation;
 import system.collections.objectmodel.Collection_1;
+import system.security.principal.SecurityIdentifier;
 import system.servicemodel.channels.NamedPipeConnectionPoolSettings;
 import system.servicemodel.channels.NamedPipeSettings;
 
@@ -289,7 +290,7 @@ public class NamedPipeTransportBindingElement extends system.servicemodel.channe
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.NamedPipeTransportBindingElement.AllowedSecurityIdentifiers" target="_top">.NET documentation</a>
      */
-    public Collection_1 getAllowedSecurityIdentifiers() throws Throwable, system.ArgumentNullException {
+    public Collection_1<SecurityIdentifier> getAllowedSecurityIdentifiers() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAllowedSecurityIdentifiers = null;

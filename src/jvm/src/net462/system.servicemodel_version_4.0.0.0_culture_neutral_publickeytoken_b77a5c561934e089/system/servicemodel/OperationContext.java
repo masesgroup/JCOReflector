@@ -42,6 +42,7 @@ import system.servicemodel.IContextChannel;
 import system.servicemodel.IContextChannelImplementation;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.servicemodel.security.SupportingTokenSpecification;
 import system.security.claims.ClaimsPrincipal;
 import system.servicemodel.channels.MessageHeaders;
 import system.servicemodel.channels.MessageProperties;
@@ -50,8 +51,8 @@ import system.servicemodel.channels.RequestContext;
 import system.servicemodel.dispatcher.EndpointDispatcher;
 import system.servicemodel.IExtensionCollection_1;
 import system.servicemodel.IExtensionCollection_1Implementation;
-import system.servicemodel.InstanceContext;
 import system.servicemodel.OperationContext;
+import system.servicemodel.InstanceContext;
 import system.servicemodel.ServiceHostBase;
 import system.servicemodel.ServiceSecurityContext;
 import system.EventHandler;
@@ -309,7 +310,7 @@ public class OperationContext extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationContext.SupportingTokens" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getSupportingTokens() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
+    public ICollection_1<SupportingTokenSpecification> getSupportingTokens() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSupportingTokens = null;
@@ -600,7 +601,7 @@ public class OperationContext extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.OperationContext.Extensions" target="_top">.NET documentation</a>
      */
-    public IExtensionCollection_1 getExtensions() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+    public IExtensionCollection_1<OperationContext> getExtensions() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExtensions = null;

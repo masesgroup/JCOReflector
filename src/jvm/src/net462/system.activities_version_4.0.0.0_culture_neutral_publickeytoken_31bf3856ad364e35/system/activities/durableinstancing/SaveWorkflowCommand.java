@@ -41,8 +41,11 @@ import java.util.ArrayList;
 import system.runtime.durableinstancing.InstancePersistenceCommand;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.Guid;
 import system.collections.generic.IDictionary_2;
 import system.collections.generic.IDictionary_2Implementation;
+import system.xml.linq.XName;
+import system.runtime.durableinstancing.InstanceValue;
 
 
 /**
@@ -268,7 +271,7 @@ public class SaveWorkflowCommand extends system.runtime.durableinstancing.Instan
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceKeysToComplete" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getInstanceKeysToComplete() throws Throwable {
+    public ICollection_1<Guid> getInstanceKeysToComplete() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectInstanceKeysToComplete = null;
@@ -290,7 +293,7 @@ public class SaveWorkflowCommand extends system.runtime.durableinstancing.Instan
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceKeysToFree" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getInstanceKeysToFree() throws Throwable {
+    public ICollection_1<Guid> getInstanceKeysToFree() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectInstanceKeysToFree = null;
@@ -314,7 +317,7 @@ public class SaveWorkflowCommand extends system.runtime.durableinstancing.Instan
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceKeyMetadataChanges" target="_top">.NET documentation</a>
      */
-    public IDictionary_2 getInstanceKeyMetadataChanges() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public IDictionary_2<Guid, IDictionary_2<XName, InstanceValue>> getInstanceKeyMetadataChanges() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectInstanceKeyMetadataChanges = null;
@@ -338,7 +341,7 @@ public class SaveWorkflowCommand extends system.runtime.durableinstancing.Instan
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceKeysToAssociate" target="_top">.NET documentation</a>
      */
-    public IDictionary_2 getInstanceKeysToAssociate() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public IDictionary_2<Guid, IDictionary_2<XName, InstanceValue>> getInstanceKeysToAssociate() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectInstanceKeysToAssociate = null;
@@ -362,7 +365,7 @@ public class SaveWorkflowCommand extends system.runtime.durableinstancing.Instan
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceData" target="_top">.NET documentation</a>
      */
-    public IDictionary_2 getInstanceData() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public IDictionary_2<XName, InstanceValue> getInstanceData() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectInstanceData = null;
@@ -386,7 +389,7 @@ public class SaveWorkflowCommand extends system.runtime.durableinstancing.Instan
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceMetadataChanges" target="_top">.NET documentation</a>
      */
-    public IDictionary_2 getInstanceMetadataChanges() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public IDictionary_2<XName, InstanceValue> getInstanceMetadataChanges() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectInstanceMetadataChanges = null;

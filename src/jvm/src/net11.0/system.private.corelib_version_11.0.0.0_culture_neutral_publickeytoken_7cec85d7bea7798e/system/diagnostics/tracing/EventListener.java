@@ -43,6 +43,9 @@ import system.diagnostics.tracing.EventLevel;
 import system.diagnostics.tracing.EventKeywords;
 import system.collections.generic.IDictionary_2;
 import system.collections.generic.IDictionary_2Implementation;
+import system.EventHandler_1;
+import system.diagnostics.tracing.EventSourceCreatedEventArgs;
+import system.diagnostics.tracing.EventWrittenEventArgs;
 
 
 /**
@@ -357,6 +360,74 @@ public class EventListener extends NetObject implements AutoCloseable {
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addEventSourceCreated.
+     *
+     * @param handler the argument of type {@code EventHandler_1<EventSourceCreatedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addEventSourceCreated(EventHandler_1<EventSourceCreatedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("EventSourceCreated", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeEventSourceCreated.
+     *
+     * @param handler the argument of type {@code EventHandler_1<EventSourceCreatedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeEventSourceCreated(EventHandler_1<EventSourceCreatedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("EventSourceCreated", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addEventWritten.
+     *
+     * @param handler the argument of type {@code EventHandler_1<EventWrittenEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addEventWritten(EventHandler_1<EventWrittenEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("EventWritten", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeEventWritten.
+     *
+     * @param handler the argument of type {@code EventHandler_1<EventWrittenEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeEventWritten(EventHandler_1<EventWrittenEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("EventWritten", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

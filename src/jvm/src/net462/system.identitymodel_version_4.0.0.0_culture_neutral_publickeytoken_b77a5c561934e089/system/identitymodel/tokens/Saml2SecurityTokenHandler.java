@@ -43,6 +43,7 @@ import system.identitymodel.tokens.SamlSecurityTokenRequirement;
 import system.xml.XmlReader;
 import system.identitymodel.tokens.SecurityKeyIdentifierClause;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.security.claims.ClaimsIdentity;
 import system.identitymodel.tokens.SecurityToken;
 import system.identitymodel.tokens.SecurityTokenDescriptor;
 import system.xml.XmlNodeList;
@@ -312,7 +313,7 @@ public class Saml2SecurityTokenHandler extends system.identitymodel.tokens.Secur
      * @throws system.xml.XmlException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2SecurityTokenHandler.ValidateToken" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 ValidateToken(SecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.UriFormatException, system.security.SecurityException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.xml.XmlException {
+    public ReadOnlyCollection_1<ClaimsIdentity> ValidateToken(SecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.UriFormatException, system.security.SecurityException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.xml.XmlException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValidateToken = null;

@@ -166,7 +166,7 @@ public class DataContractSerializer extends system.runtime.serialization.XmlObje
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param type the argument of type {@code NetType}
-     * @param knownTypes the argument of type {@code IEnumerable_1}
+     * @param knownTypes the argument of type {@code IEnumerable_1<NetType>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -177,7 +177,7 @@ public class DataContractSerializer extends system.runtime.serialization.XmlObje
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContractSerializer.-ctor" target="_top">.NET documentation</a>
      */
-    public DataContractSerializer(NetType type, IEnumerable_1 knownTypes) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException {
+    public DataContractSerializer(NetType type, IEnumerable_1<NetType> knownTypes) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -218,7 +218,7 @@ public class DataContractSerializer extends system.runtime.serialization.XmlObje
      * @param type the argument of type {@code NetType}
      * @param rootName the argument of type {@code java.lang.String}
      * @param rootNamespace the argument of type {@code java.lang.String}
-     * @param knownTypes the argument of type {@code IEnumerable_1}
+     * @param knownTypes the argument of type {@code IEnumerable_1<NetType>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -231,7 +231,7 @@ public class DataContractSerializer extends system.runtime.serialization.XmlObje
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContractSerializer.-ctor" target="_top">.NET documentation</a>
      */
-    public DataContractSerializer(NetType type, java.lang.String rootName, java.lang.String rootNamespace, IEnumerable_1 knownTypes) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.FormatException, system.RankException, system.ArrayTypeMismatchException {
+    public DataContractSerializer(NetType type, java.lang.String rootName, java.lang.String rootNamespace, IEnumerable_1<NetType> knownTypes) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.FormatException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -275,7 +275,7 @@ public class DataContractSerializer extends system.runtime.serialization.XmlObje
      * @param type the argument of type {@code NetType}
      * @param rootName the argument of type {@code XmlDictionaryString}
      * @param rootNamespace the argument of type {@code XmlDictionaryString}
-     * @param knownTypes the argument of type {@code IEnumerable_1}
+     * @param knownTypes the argument of type {@code IEnumerable_1<NetType>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -286,7 +286,7 @@ public class DataContractSerializer extends system.runtime.serialization.XmlObje
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContractSerializer.-ctor" target="_top">.NET documentation</a>
      */
-    public DataContractSerializer(NetType type, XmlDictionaryString rootName, XmlDictionaryString rootNamespace, IEnumerable_1 knownTypes) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException {
+    public DataContractSerializer(NetType type, XmlDictionaryString rootName, XmlDictionaryString rootNamespace, IEnumerable_1<NetType> knownTypes) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -894,7 +894,7 @@ public class DataContractSerializer extends system.runtime.serialization.XmlObje
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContractSerializer.KnownTypes" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getKnownTypes() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public ReadOnlyCollection_1<NetType> getKnownTypes() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectKnownTypes = null;

@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.activities.presentation.validation.ValidationErrorInfo;
 
 
 /**
@@ -148,11 +149,11 @@ public class IValidationErrorServiceImplementation extends NetObject implements 
     /**
      * Invokes the .NET member ShowValidationErrors.
      *
-     * @param errors the argument of type {@code IList_1}
+     * @param errors the argument of type {@code IList_1<ValidationErrorInfo>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors" target="_top">.NET documentation</a>
      */
-    public void ShowValidationErrors(IList_1 errors) throws Throwable {
+    public void ShowValidationErrors(IList_1<ValidationErrorInfo> errors) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

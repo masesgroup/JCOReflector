@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.text.json.serialization.metadata.JsonTypeInfo;
 import system.Action_2;
+import system.text.json.Utf8JsonWriter;
 import system.Func_1;
 
 
@@ -170,15 +171,15 @@ public class JsonTypeInfo_1<T extends IJCOBridgeReflected> extends system.text.j
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo-1.SerializeHandler" target="_top">.NET documentation</a>
      */
-    public Action_2 getSerializeHandler() throws Throwable {
+    public Action_2<Utf8JsonWriter, T> getSerializeHandler() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSerializeHandler = null;
         try {
             retObjectSerializeHandler = classInstance.Get("SerializeHandler");
-            return (Action_2)retObjectSerializeHandler;
+            return (Action_2<Utf8JsonWriter, T>)retObjectSerializeHandler;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_2", retObjectSerializeHandler != null ? retObjectSerializeHandler.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_2<Utf8JsonWriter, T>", retObjectSerializeHandler != null ? retObjectSerializeHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +192,7 @@ public class JsonTypeInfo_1<T extends IJCOBridgeReflected> extends system.text.j
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfo-1.SerializeHandler" target="_top">.NET documentation</a>
      */
-    public void setSerializeHandler(Action_2 SerializeHandler) throws Throwable {
+    public void setSerializeHandler(Action_2<Utf8JsonWriter, T> SerializeHandler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

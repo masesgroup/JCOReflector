@@ -40,6 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.Tuple_2;
+import system.componentmodel.composition.primitives.ComposablePartDefinition;
+import system.componentmodel.composition.primitives.ExportDefinition;
 import system.componentmodel.composition.primitives.ImportDefinition;
 import system.linq.IQueryable_1;
 import system.linq.IQueryable_1Implementation;
@@ -176,7 +179,7 @@ public class ComposablePartCatalog extends NetObjectEnumerable implements AutoCl
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Primitives.ComposablePartCatalog.GetExports" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetExports(ImportDefinition definition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
+    public IEnumerable_1<Tuple_2<ComposablePartDefinition, ExportDefinition>> GetExports(ImportDefinition definition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetExports = null;
@@ -237,7 +240,7 @@ public class ComposablePartCatalog extends NetObjectEnumerable implements AutoCl
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Primitives.ComposablePartCatalog.Parts" target="_top">.NET documentation</a>
      */
-    public IQueryable_1 getParts() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+    public IQueryable_1<ComposablePartDefinition> getParts() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectParts = null;

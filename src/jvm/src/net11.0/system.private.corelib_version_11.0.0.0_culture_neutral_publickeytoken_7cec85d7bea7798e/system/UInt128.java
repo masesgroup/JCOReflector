@@ -1185,7 +1185,7 @@ public class UInt128 extends system.ValueType  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.UInt128.DivRem" target="_top">.NET documentation</a>
      */
-    public static ValueTuple_2 DivRem(UInt128 left, UInt128 right) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.DivideByZeroException, system.IndexOutOfRangeException {
+    public static ValueTuple_2<UInt128, UInt128> DivRem(UInt128 left, UInt128 right) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.DivideByZeroException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDivRem = null;

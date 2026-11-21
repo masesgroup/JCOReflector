@@ -42,9 +42,10 @@ import system.IDisposable;
 import system.IDisposableImplementation;
 import system.IObserver_1;
 import system.IObserver_1Implementation;
+import system.web.hosting.LowPhysicalMemoryInfo;
+import system.web.hosting.RecycleLimitInfo;
 import system.IObservable_1;
 import system.IObservable_1Implementation;
-import system.web.hosting.RecycleLimitInfo;
 
 
 /**
@@ -290,7 +291,7 @@ public class AspNetMemoryMonitor extends NetObject implements system.IObservable
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.AspNetMemoryMonitor.DefaultLowPhysicalMemoryObserver" target="_top">.NET documentation</a>
      */
-    public IObserver_1 getDefaultLowPhysicalMemoryObserver() throws Throwable {
+    public IObserver_1<LowPhysicalMemoryInfo> getDefaultLowPhysicalMemoryObserver() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDefaultLowPhysicalMemoryObserver = null;
@@ -315,7 +316,7 @@ public class AspNetMemoryMonitor extends NetObject implements system.IObservable
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.AspNetMemoryMonitor.DefaultLowPhysicalMemoryObserver" target="_top">.NET documentation</a>
      */
-    public void setDefaultLowPhysicalMemoryObserver(IObserver_1 DefaultLowPhysicalMemoryObserver) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public void setDefaultLowPhysicalMemoryObserver(IObserver_1<LowPhysicalMemoryInfo> DefaultLowPhysicalMemoryObserver) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -332,7 +333,7 @@ public class AspNetMemoryMonitor extends NetObject implements system.IObservable
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.AspNetMemoryMonitor.DefaultRecycleLimitObserver" target="_top">.NET documentation</a>
      */
-    public IObserver_1 getDefaultRecycleLimitObserver() throws Throwable {
+    public IObserver_1<RecycleLimitInfo> getDefaultRecycleLimitObserver() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDefaultRecycleLimitObserver = null;
@@ -357,7 +358,7 @@ public class AspNetMemoryMonitor extends NetObject implements system.IObservable
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Hosting.AspNetMemoryMonitor.DefaultRecycleLimitObserver" target="_top">.NET documentation</a>
      */
-    public void setDefaultRecycleLimitObserver(IObserver_1 DefaultRecycleLimitObserver) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public void setDefaultRecycleLimitObserver(IObserver_1<RecycleLimitInfo> DefaultRecycleLimitObserver) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

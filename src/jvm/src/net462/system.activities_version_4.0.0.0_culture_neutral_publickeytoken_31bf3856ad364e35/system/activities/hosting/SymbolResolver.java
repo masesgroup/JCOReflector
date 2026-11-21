@@ -42,6 +42,7 @@ import system.collections.generic.KeyValuePair_2;
 import system.activities.LocationReferenceEnvironment;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.Object;
 
 
 /**
@@ -533,7 +534,7 @@ public class SymbolResolver extends NetObjectEnumerable  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Hosting.SymbolResolver.Values" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getValues() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException {
+    public ICollection_1<Object> getValues() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValues = null;

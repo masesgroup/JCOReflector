@@ -41,7 +41,12 @@ import java.util.ArrayList;
 import microsoft.extensions.caching.memory.CacheItemPriority;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import microsoft.extensions.caching.memory.PostEvictionCallbackRegistration;
+import microsoft.extensions.primitives.IChangeToken;
+import microsoft.extensions.primitives.IChangeTokenImplementation;
 import system.Nullable_1;
+import system.DateTimeOffset;
+import system.TimeSpan;
 
 
 /**
@@ -222,7 +227,7 @@ public class MemoryCacheEntryOptions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions.PostEvictionCallbacks" target="_top">.NET documentation</a>
      */
-    public IList_1 getPostEvictionCallbacks() throws Throwable {
+    public IList_1<PostEvictionCallbackRegistration> getPostEvictionCallbacks() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPostEvictionCallbacks = null;
@@ -244,7 +249,7 @@ public class MemoryCacheEntryOptions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions.ExpirationTokens" target="_top">.NET documentation</a>
      */
-    public IList_1 getExpirationTokens() throws Throwable {
+    public IList_1<IChangeToken> getExpirationTokens() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExpirationTokens = null;
@@ -266,7 +271,7 @@ public class MemoryCacheEntryOptions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions.AbsoluteExpiration" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getAbsoluteExpiration() throws Throwable {
+    public Nullable_1<DateTimeOffset> getAbsoluteExpiration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAbsoluteExpiration = null;
@@ -288,7 +293,7 @@ public class MemoryCacheEntryOptions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions.AbsoluteExpiration" target="_top">.NET documentation</a>
      */
-    public void setAbsoluteExpiration(Nullable_1 AbsoluteExpiration) throws Throwable {
+    public void setAbsoluteExpiration(Nullable_1<DateTimeOffset> AbsoluteExpiration) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -353,7 +358,7 @@ public class MemoryCacheEntryOptions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions.AbsoluteExpirationRelativeToNow" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getAbsoluteExpirationRelativeToNow() throws Throwable {
+    public Nullable_1<TimeSpan> getAbsoluteExpirationRelativeToNow() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAbsoluteExpirationRelativeToNow = null;
@@ -384,7 +389,7 @@ public class MemoryCacheEntryOptions extends NetObject  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions.AbsoluteExpirationRelativeToNow" target="_top">.NET documentation</a>
      */
-    public void setAbsoluteExpirationRelativeToNow(Nullable_1 AbsoluteExpirationRelativeToNow) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public void setAbsoluteExpirationRelativeToNow(Nullable_1<TimeSpan> AbsoluteExpirationRelativeToNow) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -401,7 +406,7 @@ public class MemoryCacheEntryOptions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions.SlidingExpiration" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getSlidingExpiration() throws Throwable {
+    public Nullable_1<TimeSpan> getSlidingExpiration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSlidingExpiration = null;
@@ -432,7 +437,7 @@ public class MemoryCacheEntryOptions extends NetObject  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Caching.Memory.MemoryCacheEntryOptions.SlidingExpiration" target="_top">.NET documentation</a>
      */
-    public void setSlidingExpiration(Nullable_1 SlidingExpiration) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public void setSlidingExpiration(Nullable_1<TimeSpan> SlidingExpiration) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

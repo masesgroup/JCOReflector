@@ -196,7 +196,7 @@ public class DynamicUpdateServices extends NetObject  {
      * Invokes the .NET member CreateUpdateMap.
      *
      * @param updatedWorkflowDefinition the argument of type {@code Activity}
-     * @param disallowUpdateInsideActivities the argument of type {@code IEnumerable_1}
+     * @param disallowUpdateInsideActivities the argument of type {@code IEnumerable_1<Activity>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -211,7 +211,7 @@ public class DynamicUpdateServices extends NetObject  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap" target="_top">.NET documentation</a>
      */
-    public static DynamicUpdateMap CreateUpdateMap(Activity updatedWorkflowDefinition, IEnumerable_1 disallowUpdateInsideActivities) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.threading.ThreadAbortException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException {
+    public static DynamicUpdateMap CreateUpdateMap(Activity updatedWorkflowDefinition, IEnumerable_1<Activity> disallowUpdateInsideActivities) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.threading.ThreadAbortException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateUpdateMap = null;
@@ -230,7 +230,7 @@ public class DynamicUpdateServices extends NetObject  {
      * Invokes the .NET member CreateUpdateMap.
      *
      * @param updatedWorkflowDefinition the argument of type {@code Activity}
-     * @param disallowUpdateInsideActivities the argument of type {@code IEnumerable_1}
+     * @param disallowUpdateInsideActivities the argument of type {@code IEnumerable_1<Activity>}
      * @param activitiesBlockingUpdate the argument of type {@code JCORefOut<IList_1>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -249,7 +249,7 @@ public class DynamicUpdateServices extends NetObject  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap" target="_top">.NET documentation</a>
      */
-    public static DynamicUpdateMap CreateUpdateMap(Activity updatedWorkflowDefinition, IEnumerable_1 disallowUpdateInsideActivities, JCORefOut<IList_1> activitiesBlockingUpdate) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.NullReferenceException {
+    public static DynamicUpdateMap CreateUpdateMap(Activity updatedWorkflowDefinition, IEnumerable_1<Activity> disallowUpdateInsideActivities, JCORefOut<IList_1> activitiesBlockingUpdate) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateUpdateMap = null;
@@ -300,7 +300,7 @@ public class DynamicUpdateServices extends NetObject  {
      * Invokes the .NET member CreateUpdateMap.
      *
      * @param updatedActivityDefinition the argument of type {@code ActivityBuilder}
-     * @param disallowUpdateInsideActivities the argument of type {@code IEnumerable_1}
+     * @param disallowUpdateInsideActivities the argument of type {@code IEnumerable_1<Activity>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -315,7 +315,7 @@ public class DynamicUpdateServices extends NetObject  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap" target="_top">.NET documentation</a>
      */
-    public static DynamicUpdateMap CreateUpdateMap(ActivityBuilder updatedActivityDefinition, IEnumerable_1 disallowUpdateInsideActivities) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.threading.ThreadAbortException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException {
+    public static DynamicUpdateMap CreateUpdateMap(ActivityBuilder updatedActivityDefinition, IEnumerable_1<Activity> disallowUpdateInsideActivities) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.threading.ThreadAbortException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateUpdateMap = null;
@@ -334,7 +334,7 @@ public class DynamicUpdateServices extends NetObject  {
      * Invokes the .NET member CreateUpdateMap.
      *
      * @param updatedActivityDefinition the argument of type {@code ActivityBuilder}
-     * @param disallowUpdateInsideActivities the argument of type {@code IEnumerable_1}
+     * @param disallowUpdateInsideActivities the argument of type {@code IEnumerable_1<Activity>}
      * @param activitiesBlockingUpdate the argument of type {@code JCORefOut<IList_1>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -353,7 +353,7 @@ public class DynamicUpdateServices extends NetObject  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap" target="_top">.NET documentation</a>
      */
-    public static DynamicUpdateMap CreateUpdateMap(ActivityBuilder updatedActivityDefinition, IEnumerable_1 disallowUpdateInsideActivities, JCORefOut<IList_1> activitiesBlockingUpdate) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.NullReferenceException {
+    public static DynamicUpdateMap CreateUpdateMap(ActivityBuilder updatedActivityDefinition, IEnumerable_1<Activity> disallowUpdateInsideActivities, JCORefOut<IList_1> activitiesBlockingUpdate) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateUpdateMap = null;

@@ -352,7 +352,7 @@ public class WarningHeaderValue extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.WarningHeaderValue.Date" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getDate() throws Throwable {
+    public Nullable_1<DateTimeOffset> getDate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDate = null;

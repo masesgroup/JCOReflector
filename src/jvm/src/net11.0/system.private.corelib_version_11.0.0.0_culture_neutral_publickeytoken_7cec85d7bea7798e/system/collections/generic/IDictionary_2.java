@@ -137,9 +137,9 @@ public interface IDictionary_2<TKey extends IJCOBridgeReflected, TValue extends 
     
     // Properties section
     
-    public ICollection_1 getKeys() throws Throwable;
+    public ICollection_1<TKey> getKeys() throws Throwable;
 
-    public ICollection_1 getValues() throws Throwable;
+    public ICollection_1<TValue> getValues() throws Throwable;
 
 
 

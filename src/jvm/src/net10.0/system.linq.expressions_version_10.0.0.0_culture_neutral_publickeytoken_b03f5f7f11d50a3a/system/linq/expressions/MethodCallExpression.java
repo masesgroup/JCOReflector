@@ -200,7 +200,7 @@ public class MethodCallExpression extends system.linq.expressions.Expression  {
      * Invokes the .NET member Update.
      *
      * @param object the argument of type {@code Expression}
-     * @param arguments the argument of type {@code IEnumerable_1}
+     * @param arguments the argument of type {@code IEnumerable_1<Expression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -216,7 +216,7 @@ public class MethodCallExpression extends system.linq.expressions.Expression  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.MethodCallExpression.Update" target="_top">.NET documentation</a>
      */
-    public MethodCallExpression Update(Expression object, IEnumerable_1 arguments) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.InvalidOperationException {
+    public MethodCallExpression Update(Expression object, IEnumerable_1<Expression> arguments) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUpdate = null;
@@ -308,7 +308,7 @@ public class MethodCallExpression extends system.linq.expressions.Expression  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.MethodCallExpression.Arguments" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getArguments() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public ReadOnlyCollection_1<Expression> getArguments() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArguments = null;

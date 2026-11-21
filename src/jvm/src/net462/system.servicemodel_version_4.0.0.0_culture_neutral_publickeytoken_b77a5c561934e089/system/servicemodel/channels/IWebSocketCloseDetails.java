@@ -123,7 +123,7 @@ public interface IWebSocketCloseDetails extends IJCOBridgeReflected {
     
     // Properties section
     
-    public Nullable_1 getInputCloseStatus() throws Throwable;
+    public Nullable_1<WebSocketCloseStatus> getInputCloseStatus() throws Throwable;
 
     public java.lang.String getInputCloseStatusDescription() throws Throwable;
 

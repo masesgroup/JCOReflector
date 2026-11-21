@@ -43,6 +43,7 @@ import microsoft.csharp.runtimebinder.CSharpBinderFlags;
 import system.linq.expressions.ExpressionType;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import microsoft.csharp.runtimebinder.CSharpArgumentInfo;
 
 
 /**
@@ -165,7 +166,7 @@ public class Binder extends NetObject  {
      * @param flags the argument of type {@code CSharpBinderFlags}
      * @param operation the argument of type {@code ExpressionType}
      * @param context the argument of type {@code NetType}
-     * @param argumentInfo the argument of type {@code IEnumerable_1}
+     * @param argumentInfo the argument of type {@code IEnumerable_1<CSharpArgumentInfo>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -179,7 +180,7 @@ public class Binder extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.CSharp.RuntimeBinder.Binder.BinaryOperation" target="_top">.NET documentation</a>
      */
-    public static CallSiteBinder BinaryOperation(CSharpBinderFlags flags, ExpressionType operation, NetType context, IEnumerable_1 argumentInfo) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException {
+    public static CallSiteBinder BinaryOperation(CSharpBinderFlags flags, ExpressionType operation, NetType context, IEnumerable_1<CSharpArgumentInfo> argumentInfo) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBinaryOperation = null;
@@ -231,7 +232,7 @@ public class Binder extends NetObject  {
      *
      * @param flags the argument of type {@code CSharpBinderFlags}
      * @param context the argument of type {@code NetType}
-     * @param argumentInfo the argument of type {@code IEnumerable_1}
+     * @param argumentInfo the argument of type {@code IEnumerable_1<CSharpArgumentInfo>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -247,7 +248,7 @@ public class Binder extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.CSharp.RuntimeBinder.Binder.GetIndex" target="_top">.NET documentation</a>
      */
-    public static CallSiteBinder GetIndex(CSharpBinderFlags flags, NetType context, IEnumerable_1 argumentInfo) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.FormatException {
+    public static CallSiteBinder GetIndex(CSharpBinderFlags flags, NetType context, IEnumerable_1<CSharpArgumentInfo> argumentInfo) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetIndex = null;
@@ -268,7 +269,7 @@ public class Binder extends NetObject  {
      * @param flags the argument of type {@code CSharpBinderFlags}
      * @param name the argument of type {@code java.lang.String}
      * @param context the argument of type {@code NetType}
-     * @param argumentInfo the argument of type {@code IEnumerable_1}
+     * @param argumentInfo the argument of type {@code IEnumerable_1<CSharpArgumentInfo>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.NotSupportedException if the .NET member raises it
@@ -282,7 +283,7 @@ public class Binder extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.CSharp.RuntimeBinder.Binder.GetMember" target="_top">.NET documentation</a>
      */
-    public static CallSiteBinder GetMember(CSharpBinderFlags flags, java.lang.String name, NetType context, IEnumerable_1 argumentInfo) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+    public static CallSiteBinder GetMember(CSharpBinderFlags flags, java.lang.String name, NetType context, IEnumerable_1<CSharpArgumentInfo> argumentInfo) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetMember = null;
@@ -302,7 +303,7 @@ public class Binder extends NetObject  {
      *
      * @param flags the argument of type {@code CSharpBinderFlags}
      * @param context the argument of type {@code NetType}
-     * @param argumentInfo the argument of type {@code IEnumerable_1}
+     * @param argumentInfo the argument of type {@code IEnumerable_1<CSharpArgumentInfo>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -318,7 +319,7 @@ public class Binder extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.CSharp.RuntimeBinder.Binder.Invoke" target="_top">.NET documentation</a>
      */
-    public static CallSiteBinder Invoke(CSharpBinderFlags flags, NetType context, IEnumerable_1 argumentInfo) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.FormatException {
+    public static CallSiteBinder Invoke(CSharpBinderFlags flags, NetType context, IEnumerable_1<CSharpArgumentInfo> argumentInfo) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectInvoke = null;
@@ -338,7 +339,7 @@ public class Binder extends NetObject  {
      *
      * @param flags the argument of type {@code CSharpBinderFlags}
      * @param context the argument of type {@code NetType}
-     * @param argumentInfo the argument of type {@code IEnumerable_1}
+     * @param argumentInfo the argument of type {@code IEnumerable_1<CSharpArgumentInfo>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -352,7 +353,7 @@ public class Binder extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.CSharp.RuntimeBinder.Binder.InvokeConstructor" target="_top">.NET documentation</a>
      */
-    public static CallSiteBinder InvokeConstructor(CSharpBinderFlags flags, NetType context, IEnumerable_1 argumentInfo) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException {
+    public static CallSiteBinder InvokeConstructor(CSharpBinderFlags flags, NetType context, IEnumerable_1<CSharpArgumentInfo> argumentInfo) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectInvokeConstructor = null;
@@ -372,9 +373,9 @@ public class Binder extends NetObject  {
      *
      * @param flags the argument of type {@code CSharpBinderFlags}
      * @param name the argument of type {@code java.lang.String}
-     * @param typeArguments the argument of type {@code IEnumerable_1}
+     * @param typeArguments the argument of type {@code IEnumerable_1<NetType>}
      * @param context the argument of type {@code NetType}
-     * @param argumentInfo the argument of type {@code IEnumerable_1}
+     * @param argumentInfo the argument of type {@code IEnumerable_1<CSharpArgumentInfo>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -390,7 +391,7 @@ public class Binder extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.CSharp.RuntimeBinder.Binder.InvokeMember" target="_top">.NET documentation</a>
      */
-    public static CallSiteBinder InvokeMember(CSharpBinderFlags flags, java.lang.String name, IEnumerable_1 typeArguments, NetType context, IEnumerable_1 argumentInfo) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.FormatException {
+    public static CallSiteBinder InvokeMember(CSharpBinderFlags flags, java.lang.String name, IEnumerable_1<NetType> typeArguments, NetType context, IEnumerable_1<CSharpArgumentInfo> argumentInfo) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectInvokeMember = null;
@@ -444,7 +445,7 @@ public class Binder extends NetObject  {
      *
      * @param flags the argument of type {@code CSharpBinderFlags}
      * @param context the argument of type {@code NetType}
-     * @param argumentInfo the argument of type {@code IEnumerable_1}
+     * @param argumentInfo the argument of type {@code IEnumerable_1<CSharpArgumentInfo>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -460,7 +461,7 @@ public class Binder extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.CSharp.RuntimeBinder.Binder.SetIndex" target="_top">.NET documentation</a>
      */
-    public static CallSiteBinder SetIndex(CSharpBinderFlags flags, NetType context, IEnumerable_1 argumentInfo) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.FormatException {
+    public static CallSiteBinder SetIndex(CSharpBinderFlags flags, NetType context, IEnumerable_1<CSharpArgumentInfo> argumentInfo) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSetIndex = null;
@@ -481,7 +482,7 @@ public class Binder extends NetObject  {
      * @param flags the argument of type {@code CSharpBinderFlags}
      * @param name the argument of type {@code java.lang.String}
      * @param context the argument of type {@code NetType}
-     * @param argumentInfo the argument of type {@code IEnumerable_1}
+     * @param argumentInfo the argument of type {@code IEnumerable_1<CSharpArgumentInfo>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.NotSupportedException if the .NET member raises it
@@ -495,7 +496,7 @@ public class Binder extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.CSharp.RuntimeBinder.Binder.SetMember" target="_top">.NET documentation</a>
      */
-    public static CallSiteBinder SetMember(CSharpBinderFlags flags, java.lang.String name, NetType context, IEnumerable_1 argumentInfo) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+    public static CallSiteBinder SetMember(CSharpBinderFlags flags, java.lang.String name, NetType context, IEnumerable_1<CSharpArgumentInfo> argumentInfo) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSetMember = null;
@@ -516,7 +517,7 @@ public class Binder extends NetObject  {
      * @param flags the argument of type {@code CSharpBinderFlags}
      * @param operation the argument of type {@code ExpressionType}
      * @param context the argument of type {@code NetType}
-     * @param argumentInfo the argument of type {@code IEnumerable_1}
+     * @param argumentInfo the argument of type {@code IEnumerable_1<CSharpArgumentInfo>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -530,7 +531,7 @@ public class Binder extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.CSharp.RuntimeBinder.Binder.UnaryOperation" target="_top">.NET documentation</a>
      */
-    public static CallSiteBinder UnaryOperation(CSharpBinderFlags flags, ExpressionType operation, NetType context, IEnumerable_1 argumentInfo) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException {
+    public static CallSiteBinder UnaryOperation(CSharpBinderFlags flags, ExpressionType operation, NetType context, IEnumerable_1<CSharpArgumentInfo> argumentInfo) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUnaryOperation = null;

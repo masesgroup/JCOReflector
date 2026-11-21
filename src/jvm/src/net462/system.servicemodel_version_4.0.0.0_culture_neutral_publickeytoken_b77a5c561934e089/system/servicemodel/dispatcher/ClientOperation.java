@@ -42,7 +42,10 @@ import system.servicemodel.dispatcher.ClientOperationCompatBase;
 import system.servicemodel.dispatcher.ClientRuntime;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.servicemodel.dispatcher.IParameterInspector;
+import system.servicemodel.dispatcher.IParameterInspectorImplementation;
 import system.collections.generic.SynchronizedCollection_1;
+import system.servicemodel.dispatcher.FaultContractInfo;
 import system.reflection.MethodInfo;
 import system.servicemodel.dispatcher.IClientMessageFormatter;
 import system.servicemodel.dispatcher.IClientMessageFormatterImplementation;
@@ -482,7 +485,7 @@ public class ClientOperation extends system.servicemodel.dispatcher.ClientOperat
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ClientOperation.ClientParameterInspectors" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getClientParameterInspectors() throws Throwable {
+    public ICollection_1<IParameterInspector> getClientParameterInspectors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectClientParameterInspectors = null;
@@ -504,7 +507,7 @@ public class ClientOperation extends system.servicemodel.dispatcher.ClientOperat
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ClientOperation.FaultContractInfos" target="_top">.NET documentation</a>
      */
-    public SynchronizedCollection_1 getFaultContractInfos() throws Throwable {
+    public SynchronizedCollection_1<FaultContractInfo> getFaultContractInfos() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFaultContractInfos = null;

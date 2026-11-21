@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.xml.XmlQualifiedName;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.xml.xpath.XPathItem;
 import system.xml.xpath.XPathNavigator;
 
 
@@ -186,15 +187,15 @@ public class XsltLibrary extends NetObject  {
      * Invokes the .NET member EqualityOperator.
      *
      * @param opCode the argument of type {@code double}
-     * @param left the argument of type {@code IList_1}
-     * @param right the argument of type {@code IList_1}
+     * @param left the argument of type {@code IList_1<XPathItem>}
+     * @param right the argument of type {@code IList_1<XPathItem>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XsltLibrary.EqualityOperator" target="_top">.NET documentation</a>
      */
-    public boolean EqualityOperator(double opCode, IList_1 left, IList_1 right) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public boolean EqualityOperator(double opCode, IList_1<XPathItem> left, IList_1<XPathItem> right) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEqualityOperator = null;
@@ -268,15 +269,15 @@ public class XsltLibrary extends NetObject  {
      * Invokes the .NET member RelationalOperator.
      *
      * @param opCode the argument of type {@code double}
-     * @param left the argument of type {@code IList_1}
-     * @param right the argument of type {@code IList_1}
+     * @param left the argument of type {@code IList_1<XPathItem>}
+     * @param right the argument of type {@code IList_1<XPathItem>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XsltLibrary.RelationalOperator" target="_top">.NET documentation</a>
      */
-    public boolean RelationalOperator(double opCode, IList_1 left, IList_1 right) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public boolean RelationalOperator(double opCode, IList_1<XPathItem> left, IList_1<XPathItem> right) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRelationalOperator = null;
@@ -624,7 +625,7 @@ public class XsltLibrary extends NetObject  {
     /**
      * Invokes the .NET member NumberFormat.
      *
-     * @param value the argument of type {@code IList_1}
+     * @param value the argument of type {@code IList_1<XPathItem>}
      * @param formatString the argument of type {@code java.lang.String}
      * @param lang the argument of type {@code double}
      * @param letterValue the argument of type {@code java.lang.String}
@@ -639,7 +640,7 @@ public class XsltLibrary extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Xsl.Runtime.XsltLibrary.NumberFormat" target="_top">.NET documentation</a>
      */
-    public java.lang.String NumberFormat(IList_1 value, java.lang.String formatString, double lang, java.lang.String letterValue, java.lang.String groupingSeparator, double groupingSize) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.OutOfMemoryException {
+    public java.lang.String NumberFormat(IList_1<XPathItem> value, java.lang.String formatString, double lang, java.lang.String letterValue, java.lang.String groupingSeparator, double groupingSize) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectNumberFormat = null;

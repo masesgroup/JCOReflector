@@ -42,8 +42,17 @@ import system.net.http.headers.HttpHeaders;
 import system.net.http.headers.CacheControlHeaderValue;
 import system.net.http.headers.EntityTagHeaderValue;
 import system.net.http.headers.HttpHeaderValueCollection_1;
+import system.net.http.headers.AuthenticationHeaderValue;
+import system.net.http.headers.NameValueHeaderValue;
+import system.net.http.headers.ProductHeaderValue;
+import system.net.http.headers.ProductInfoHeaderValue;
+import system.net.http.headers.TransferCodingHeaderValue;
+import system.net.http.headers.ViaHeaderValue;
+import system.net.http.headers.WarningHeaderValue;
 import system.net.http.headers.RetryConditionHeaderValue;
 import system.Nullable_1;
+import system.DateTimeOffset;
+import system.TimeSpan;
 import system.Uri;
 
 
@@ -279,7 +288,7 @@ public class HttpResponseHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpResponseHeaders.ProxyAuthenticate" target="_top">.NET documentation</a>
      */
-    public HttpHeaderValueCollection_1 getProxyAuthenticate() throws Throwable {
+    public HttpHeaderValueCollection_1<AuthenticationHeaderValue> getProxyAuthenticate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectProxyAuthenticate = null;
@@ -301,7 +310,7 @@ public class HttpResponseHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpResponseHeaders.WwwAuthenticate" target="_top">.NET documentation</a>
      */
-    public HttpHeaderValueCollection_1 getWwwAuthenticate() throws Throwable {
+    public HttpHeaderValueCollection_1<AuthenticationHeaderValue> getWwwAuthenticate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectWwwAuthenticate = null;
@@ -323,7 +332,7 @@ public class HttpResponseHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpResponseHeaders.Pragma" target="_top">.NET documentation</a>
      */
-    public HttpHeaderValueCollection_1 getPragma() throws Throwable {
+    public HttpHeaderValueCollection_1<NameValueHeaderValue> getPragma() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPragma = null;
@@ -345,7 +354,7 @@ public class HttpResponseHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpResponseHeaders.Upgrade" target="_top">.NET documentation</a>
      */
-    public HttpHeaderValueCollection_1 getUpgrade() throws Throwable {
+    public HttpHeaderValueCollection_1<ProductHeaderValue> getUpgrade() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUpgrade = null;
@@ -367,7 +376,7 @@ public class HttpResponseHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpResponseHeaders.Server" target="_top">.NET documentation</a>
      */
-    public HttpHeaderValueCollection_1 getServer() throws Throwable {
+    public HttpHeaderValueCollection_1<ProductInfoHeaderValue> getServer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectServer = null;
@@ -389,7 +398,7 @@ public class HttpResponseHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpResponseHeaders.TransferEncoding" target="_top">.NET documentation</a>
      */
-    public HttpHeaderValueCollection_1 getTransferEncoding() throws Throwable {
+    public HttpHeaderValueCollection_1<TransferCodingHeaderValue> getTransferEncoding() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTransferEncoding = null;
@@ -411,7 +420,7 @@ public class HttpResponseHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpResponseHeaders.Via" target="_top">.NET documentation</a>
      */
-    public HttpHeaderValueCollection_1 getVia() throws Throwable {
+    public HttpHeaderValueCollection_1<ViaHeaderValue> getVia() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectVia = null;
@@ -433,7 +442,7 @@ public class HttpResponseHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpResponseHeaders.Warning" target="_top">.NET documentation</a>
      */
-    public HttpHeaderValueCollection_1 getWarning() throws Throwable {
+    public HttpHeaderValueCollection_1<WarningHeaderValue> getWarning() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectWarning = null;
@@ -691,7 +700,7 @@ public class HttpResponseHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpResponseHeaders.Date" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getDate() throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public Nullable_1<DateTimeOffset> getDate() throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDate = null;
@@ -721,7 +730,7 @@ public class HttpResponseHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpResponseHeaders.Date" target="_top">.NET documentation</a>
      */
-    public void setDate(Nullable_1 Date) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.FormatException, system.ArgumentOutOfRangeException {
+    public void setDate(Nullable_1<DateTimeOffset> Date) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -742,7 +751,7 @@ public class HttpResponseHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpResponseHeaders.Age" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getAge() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+    public Nullable_1<TimeSpan> getAge() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAge = null;
@@ -773,7 +782,7 @@ public class HttpResponseHeaders extends system.net.http.headers.HttpHeaders  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.HttpResponseHeaders.Age" target="_top">.NET documentation</a>
      */
-    public void setAge(Nullable_1 Age) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.ArgumentOutOfRangeException {
+    public void setAge(Nullable_1<TimeSpan> Age) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

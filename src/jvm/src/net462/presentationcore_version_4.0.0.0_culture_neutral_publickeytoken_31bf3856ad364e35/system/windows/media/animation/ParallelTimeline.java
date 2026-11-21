@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.windows.media.animation.TimelineGroup;
 import system.Nullable_1;
+import system.TimeSpan;
 import system.windows.Duration;
 import system.windows.media.animation.RepeatBehavior;
 import system.windows.media.animation.ParallelTimeline;
@@ -174,7 +175,7 @@ public class ParallelTimeline extends system.windows.media.animation.TimelineGro
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param beginTime the argument of type {@code Nullable_1}
+     * @param beginTime the argument of type {@code Nullable_1<TimeSpan>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.resources.MissingManifestResourceException if the .NET member raises it
@@ -184,7 +185,7 @@ public class ParallelTimeline extends system.windows.media.animation.TimelineGro
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.ParallelTimeline.-ctor" target="_top">.NET documentation</a>
      */
-    public ParallelTimeline(Nullable_1 beginTime) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException {
+    public ParallelTimeline(Nullable_1<TimeSpan> beginTime) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -197,7 +198,7 @@ public class ParallelTimeline extends system.windows.media.animation.TimelineGro
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param beginTime the argument of type {@code Nullable_1}
+     * @param beginTime the argument of type {@code Nullable_1<TimeSpan>}
      * @param duration the argument of type {@code Duration}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -208,7 +209,7 @@ public class ParallelTimeline extends system.windows.media.animation.TimelineGro
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.ParallelTimeline.-ctor" target="_top">.NET documentation</a>
      */
-    public ParallelTimeline(Nullable_1 beginTime, Duration duration) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException {
+    public ParallelTimeline(Nullable_1<TimeSpan> beginTime, Duration duration) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -221,7 +222,7 @@ public class ParallelTimeline extends system.windows.media.animation.TimelineGro
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param beginTime the argument of type {@code Nullable_1}
+     * @param beginTime the argument of type {@code Nullable_1<TimeSpan>}
      * @param duration the argument of type {@code Duration}
      * @param repeatBehavior the argument of type {@code RepeatBehavior}
      * @throws Throwable if the .NET constructor fails
@@ -233,7 +234,7 @@ public class ParallelTimeline extends system.windows.media.animation.TimelineGro
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.ParallelTimeline.-ctor" target="_top">.NET documentation</a>
      */
-    public ParallelTimeline(Nullable_1 beginTime, Duration duration, RepeatBehavior repeatBehavior) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException {
+    public ParallelTimeline(Nullable_1<TimeSpan> beginTime, Duration duration, RepeatBehavior repeatBehavior) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

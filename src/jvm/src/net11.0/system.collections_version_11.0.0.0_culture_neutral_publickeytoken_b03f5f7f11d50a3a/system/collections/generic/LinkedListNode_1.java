@@ -188,7 +188,7 @@ public class LinkedListNode_1<T extends IJCOBridgeReflected> extends NetObject  
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.LinkedListNode-1.List" target="_top">.NET documentation</a>
      */
-    public LinkedList_1 getList() throws Throwable {
+    public LinkedList_1<T> getList() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectList = null;
@@ -210,7 +210,7 @@ public class LinkedListNode_1<T extends IJCOBridgeReflected> extends NetObject  
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.LinkedListNode-1.Next" target="_top">.NET documentation</a>
      */
-    public LinkedListNode_1 getNext() throws Throwable {
+    public LinkedListNode_1<T> getNext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectNext = null;
@@ -232,7 +232,7 @@ public class LinkedListNode_1<T extends IJCOBridgeReflected> extends NetObject  
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.LinkedListNode-1.Previous" target="_top">.NET documentation</a>
      */
-    public LinkedListNode_1 getPrevious() throws Throwable {
+    public LinkedListNode_1<T> getPrevious() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPrevious = null;

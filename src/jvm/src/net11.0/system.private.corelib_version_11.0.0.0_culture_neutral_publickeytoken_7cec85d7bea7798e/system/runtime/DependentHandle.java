@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.ValueType;
 import system.ValueTuple_2;
+import system.Object;
 
 
 /**
@@ -365,7 +366,7 @@ public class DependentHandle extends system.ValueType implements AutoCloseable {
      * @throws system.RankException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DependentHandle.TargetAndDependent" target="_top">.NET documentation</a>
      */
-    public ValueTuple_2 getTargetAndDependent() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException {
+    public ValueTuple_2<Object, Object> getTargetAndDependent() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTargetAndDependent = null;

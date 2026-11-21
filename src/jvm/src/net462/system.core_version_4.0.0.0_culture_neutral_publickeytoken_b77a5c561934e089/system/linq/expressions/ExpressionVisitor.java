@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.objectmodel.ReadOnlyCollection_1;
-import system.Func_2;
 import system.linq.expressions.Expression;
+import system.Func_2;
 
 
 /**
@@ -160,7 +160,7 @@ public class ExpressionVisitor extends NetObject  {
     /**
      * Invokes the .NET member Visit.
      *
-     * @param nodes the argument of type {@code ReadOnlyCollection_1}
+     * @param nodes the argument of type {@code ReadOnlyCollection_1<Expression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -168,7 +168,7 @@ public class ExpressionVisitor extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.ExpressionVisitor.Visit" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 Visit(ReadOnlyCollection_1 nodes) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
+    public ReadOnlyCollection_1<Expression> Visit(ReadOnlyCollection_1<Expression> nodes) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectVisit = null;

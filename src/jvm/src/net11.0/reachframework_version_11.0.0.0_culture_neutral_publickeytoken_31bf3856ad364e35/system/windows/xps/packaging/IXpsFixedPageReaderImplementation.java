@@ -352,7 +352,7 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageReader.ColorContexts" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getColorContexts() throws Throwable {
+    public ICollection_1<XpsColorContext> getColorContexts() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectColorContexts = null;
@@ -374,7 +374,7 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageReader.Fonts" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getFonts() throws Throwable {
+    public ICollection_1<XpsFont> getFonts() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFonts = null;
@@ -396,7 +396,7 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageReader.Images" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getImages() throws Throwable {
+    public ICollection_1<XpsImage> getImages() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectImages = null;
@@ -418,7 +418,7 @@ public class IXpsFixedPageReaderImplementation extends NetObject implements IXps
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Xps.Packaging.IXpsFixedPageReader.ResourceDictionaries" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getResourceDictionaries() throws Throwable {
+    public ICollection_1<XpsResourceDictionary> getResourceDictionaries() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectResourceDictionaries = null;

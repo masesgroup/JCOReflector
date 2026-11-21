@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.Object;
 
 
 /**
@@ -153,7 +154,7 @@ public class IProjectSchemaNodeImplementation extends NetObject implements IProj
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.IProjectSchemaNode.GetSchemaObjects" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetSchemaObjects(NetType type) throws Throwable {
+    public IEnumerable_1<Object> GetSchemaObjects(NetType type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetSchemaObjects = null;
@@ -175,7 +176,7 @@ public class IProjectSchemaNodeImplementation extends NetObject implements IProj
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Build.Framework.XamlTypes.IProjectSchemaNode.GetSchemaObjectTypes" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetSchemaObjectTypes() throws Throwable {
+    public IEnumerable_1<NetType> GetSchemaObjectTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetSchemaObjectTypes = null;

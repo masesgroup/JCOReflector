@@ -43,6 +43,7 @@ import system.security.cryptography.x509certificates.X500DistinguishedName;
 import system.security.cryptography.x509certificates.X500DistinguishedNameFlags;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.security.cryptography.x509certificates.X500RelativeDistinguishedName;
 
 
 /**
@@ -302,7 +303,7 @@ public class X500DistinguishedName extends system.security.cryptography.AsnEncod
      * @throws system.security.cryptography.CryptographicException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.X500DistinguishedName.EnumerateRelativeDistinguishedNames" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 EnumerateRelativeDistinguishedNames(boolean reversed) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.diagnostics.UnreachableException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.security.cryptography.CryptographicException {
+    public IEnumerable_1<X500RelativeDistinguishedName> EnumerateRelativeDistinguishedNames(boolean reversed) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.diagnostics.UnreachableException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEnumerateRelativeDistinguishedNames = null;

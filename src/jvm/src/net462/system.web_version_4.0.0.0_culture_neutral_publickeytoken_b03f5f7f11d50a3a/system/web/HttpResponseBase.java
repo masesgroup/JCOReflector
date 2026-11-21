@@ -45,6 +45,7 @@ import system.threading.tasks.Task;
 import system.web.ISubscriptionToken;
 import system.web.ISubscriptionTokenImplementation;
 import system.Action_1;
+import system.web.HttpContextBase;
 import system.web.caching.CacheDependency;
 import system.web.HttpCookie;
 import system.collections.specialized.NameValueCollection;
@@ -247,13 +248,13 @@ public class HttpResponseBase extends NetObject  {
     /**
      * Invokes the .NET member AddOnSendingHeaders.
      *
-     * @param callback the argument of type {@code Action_1}
+     * @param callback the argument of type {@code Action_1<HttpContextBase>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpResponseBase.AddOnSendingHeaders" target="_top">.NET documentation</a>
      */
-    public ISubscriptionToken AddOnSendingHeaders(Action_1 callback) throws Throwable, system.NotImplementedException {
+    public ISubscriptionToken AddOnSendingHeaders(Action_1<HttpContextBase> callback) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAddOnSendingHeaders = null;

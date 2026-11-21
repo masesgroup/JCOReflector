@@ -223,7 +223,7 @@ public class HandleScope_1<THandle extends IJCOBridgeReflected> extends system.a
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.HandleScope-1.Handle" target="_top">.NET documentation</a>
      */
-    public InArgument_1 getHandle() throws Throwable {
+    public InArgument_1<THandle> getHandle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectHandle = null;
@@ -245,7 +245,7 @@ public class HandleScope_1<THandle extends IJCOBridgeReflected> extends system.a
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.HandleScope-1.Handle" target="_top">.NET documentation</a>
      */
-    public void setHandle(InArgument_1 Handle) throws Throwable {
+    public void setHandle(InArgument_1<THandle> Handle) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

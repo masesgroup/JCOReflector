@@ -43,8 +43,8 @@ import system.workflow.componentmodel.design.HitTestInfo;
 import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.workflow.componentmodel.design.DesignerNavigationDirection;
 import system.workflow.componentmodel.design.ActivityDesigner;
-import system.drawing.Size;
 import system.workflow.componentmodel.design.DesignerView;
+import system.drawing.Size;
 
 
 /**
@@ -368,7 +368,7 @@ public class StructuredCompositeActivityDesigner extends system.workflow.compone
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.StructuredCompositeActivityDesigner.Views" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getViews() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.TypeLoadException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
+    public ReadOnlyCollection_1<DesignerView> getViews() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.TypeLoadException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectViews = null;

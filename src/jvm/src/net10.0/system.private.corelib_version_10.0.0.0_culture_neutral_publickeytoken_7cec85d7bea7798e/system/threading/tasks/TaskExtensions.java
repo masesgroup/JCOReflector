@@ -159,7 +159,7 @@ public class TaskExtensions extends NetObject  {
     /**
      * Invokes the .NET member Unwrap.
      *
-     * @param task the argument of type {@code Task_1}
+     * @param task the argument of type {@code Task_1<Task>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -180,7 +180,7 @@ public class TaskExtensions extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskExtensions.Unwrap" target="_top">.NET documentation</a>
      */
-    public static Task Unwrap(Task_1 task) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException, system.NullReferenceException, system.threading.ThreadStateException, system.OperationCanceledException, system.IndexOutOfRangeException, system.FormatException {
+    public static Task Unwrap(Task_1<Task> task) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException, system.NullReferenceException, system.threading.ThreadStateException, system.OperationCanceledException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUnwrap = null;

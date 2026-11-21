@@ -363,7 +363,7 @@ public class DataContractSerializerSettings extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContractSerializerSettings.KnownTypes" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getKnownTypes() throws Throwable {
+    public IEnumerable_1<NetType> getKnownTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectKnownTypes = null;
@@ -385,7 +385,7 @@ public class DataContractSerializerSettings extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContractSerializerSettings.KnownTypes" target="_top">.NET documentation</a>
      */
-    public void setKnownTypes(IEnumerable_1 KnownTypes) throws Throwable {
+    public void setKnownTypes(IEnumerable_1<NetType> KnownTypes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

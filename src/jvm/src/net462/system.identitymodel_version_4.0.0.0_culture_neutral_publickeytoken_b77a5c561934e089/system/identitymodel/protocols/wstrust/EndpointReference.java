@@ -43,6 +43,7 @@ import system.xml.XmlDictionaryReader;
 import system.xml.XmlReader;
 import system.xml.XmlWriter;
 import system.collections.objectmodel.Collection_1;
+import system.xml.XmlElement;
 import system.Uri;
 
 
@@ -316,7 +317,7 @@ public class EndpointReference extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Protocols.WSTrust.EndpointReference.Details" target="_top">.NET documentation</a>
      */
-    public Collection_1 getDetails() throws Throwable {
+    public Collection_1<XmlElement> getDetails() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDetails = null;

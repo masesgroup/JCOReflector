@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.identitymodel.metadata.MetadataBase;
 import system.collections.objectmodel.Collection_1;
+import system.identitymodel.metadata.EntitiesDescriptor;
+import system.identitymodel.metadata.EntityDescriptor;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
 
@@ -171,11 +173,11 @@ public class EntitiesDescriptor extends system.identitymodel.metadata.MetadataBa
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param entityGroupList the argument of type {@code Collection_1}
+     * @param entityGroupList the argument of type {@code Collection_1<EntitiesDescriptor>}
      * @throws Throwable if the .NET constructor fails
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.EntitiesDescriptor.-ctor" target="_top">.NET documentation</a>
      */
-    public EntitiesDescriptor(Collection_1 entityGroupList) throws Throwable {
+    public EntitiesDescriptor(Collection_1<EntitiesDescriptor> entityGroupList) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -188,12 +190,12 @@ public class EntitiesDescriptor extends system.identitymodel.metadata.MetadataBa
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param entityList the argument of type {@code Collection_1}
-     * @param entityGroupList the argument of type {@code Collection_1}
+     * @param entityList the argument of type {@code Collection_1<EntityDescriptor>}
+     * @param entityGroupList the argument of type {@code Collection_1<EntitiesDescriptor>}
      * @throws Throwable if the .NET constructor fails
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.EntitiesDescriptor.-ctor" target="_top">.NET documentation</a>
      */
-    public EntitiesDescriptor(Collection_1 entityList, Collection_1 entityGroupList) throws Throwable {
+    public EntitiesDescriptor(Collection_1<EntityDescriptor> entityList, Collection_1<EntitiesDescriptor> entityGroupList) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -218,7 +220,7 @@ public class EntitiesDescriptor extends system.identitymodel.metadata.MetadataBa
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.EntitiesDescriptor.ChildEntityGroups" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getChildEntityGroups() throws Throwable {
+    public ICollection_1<EntitiesDescriptor> getChildEntityGroups() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectChildEntityGroups = null;
@@ -240,7 +242,7 @@ public class EntitiesDescriptor extends system.identitymodel.metadata.MetadataBa
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.EntitiesDescriptor.ChildEntities" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getChildEntities() throws Throwable {
+    public ICollection_1<EntityDescriptor> getChildEntities() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectChildEntities = null;

@@ -171,14 +171,14 @@ public class UserTrackingLocationCollection extends system.collections.generic.L
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param locations the argument of type {@code IEnumerable_1}
+     * @param locations the argument of type {@code IEnumerable_1<UserTrackingLocation>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.UserTrackingLocationCollection.-ctor" target="_top">.NET documentation</a>
      */
-    public UserTrackingLocationCollection(IEnumerable_1 locations) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public UserTrackingLocationCollection(IEnumerable_1<UserTrackingLocation> locations) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

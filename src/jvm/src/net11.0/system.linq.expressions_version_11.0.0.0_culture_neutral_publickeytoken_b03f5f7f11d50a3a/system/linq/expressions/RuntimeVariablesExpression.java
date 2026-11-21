@@ -42,6 +42,7 @@ import system.linq.expressions.Expression;
 import system.linq.expressions.RuntimeVariablesExpression;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.linq.expressions.ParameterExpression;
 import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.linq.expressions.ExpressionType;
 
@@ -165,7 +166,7 @@ public class RuntimeVariablesExpression extends system.linq.expressions.Expressi
     /**
      * Invokes the .NET member Update.
      *
-     * @param variables the argument of type {@code IEnumerable_1}
+     * @param variables the argument of type {@code IEnumerable_1<ParameterExpression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -182,7 +183,7 @@ public class RuntimeVariablesExpression extends system.linq.expressions.Expressi
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.RuntimeVariablesExpression.Update" target="_top">.NET documentation</a>
      */
-    public RuntimeVariablesExpression Update(IEnumerable_1 variables) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.NotSupportedException, system.InvalidOperationException, system.FormatException {
+    public RuntimeVariablesExpression Update(IEnumerable_1<ParameterExpression> variables) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.NotSupportedException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUpdate = null;
@@ -208,7 +209,7 @@ public class RuntimeVariablesExpression extends system.linq.expressions.Expressi
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.RuntimeVariablesExpression.Variables" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getVariables() throws Throwable {
+    public ReadOnlyCollection_1<ParameterExpression> getVariables() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectVariables = null;

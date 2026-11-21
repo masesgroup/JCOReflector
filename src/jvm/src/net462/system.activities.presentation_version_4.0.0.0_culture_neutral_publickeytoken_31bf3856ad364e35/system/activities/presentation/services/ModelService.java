@@ -43,6 +43,8 @@ import system.StringComparison;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
 import system.Predicate_1;
+import system.EventHandler_1;
+import system.activities.presentation.services.ModelChangedEventArgs;
 
 
 /**
@@ -212,12 +214,12 @@ public class ModelService extends NetObject  {
      * Invokes the .NET member Find.
      *
      * @param startingItem the argument of type {@code ModelItem}
-     * @param match the argument of type {@code Predicate_1}
+     * @param match the argument of type {@code Predicate_1<NetType>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Services.ModelService.Find" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 Find(ModelItem startingItem, Predicate_1 match) throws Throwable {
+    public IEnumerable_1<ModelItem> Find(ModelItem startingItem, Predicate_1<NetType> match) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFind = null;
@@ -241,7 +243,7 @@ public class ModelService extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Services.ModelService.Find" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 Find(ModelItem startingItem, NetType type) throws Throwable {
+    public IEnumerable_1<ModelItem> Find(ModelItem startingItem, NetType type) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFind = null;
@@ -286,6 +288,40 @@ public class ModelService extends NetObject  {
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addModelChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ModelChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addModelChanged(EventHandler_1<ModelChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("ModelChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeModelChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ModelChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeModelChanged(EventHandler_1<ModelChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("ModelChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

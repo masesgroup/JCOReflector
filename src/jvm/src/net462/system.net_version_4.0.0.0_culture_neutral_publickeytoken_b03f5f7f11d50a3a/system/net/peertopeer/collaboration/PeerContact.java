@@ -51,6 +51,11 @@ import system.net.peertopeer.collaboration.PeerEndPointCollection;
 import system.net.peertopeer.collaboration.SubscriptionType;
 import system.net.peertopeer.PeerName;
 import system.security.cryptography.x509certificates.X509Certificate2;
+import system.EventHandler_1;
+import system.net.peertopeer.collaboration.ApplicationChangedEventArgs;
+import system.net.peertopeer.collaboration.ObjectChangedEventArgs;
+import system.net.peertopeer.collaboration.PresenceChangedEventArgs;
+import system.net.peertopeer.collaboration.SubscribeCompletedEventArgs;
 
 
 /**
@@ -1583,6 +1588,142 @@ public class PeerContact extends system.net.peertopeer.collaboration.Peer  {
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addApplicationChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ApplicationChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addApplicationChanged(EventHandler_1<ApplicationChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("ApplicationChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeApplicationChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ApplicationChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeApplicationChanged(EventHandler_1<ApplicationChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("ApplicationChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addObjectChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ObjectChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addObjectChanged(EventHandler_1<ObjectChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("ObjectChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeObjectChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ObjectChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeObjectChanged(EventHandler_1<ObjectChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("ObjectChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addPresenceChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<PresenceChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addPresenceChanged(EventHandler_1<PresenceChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("PresenceChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removePresenceChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<PresenceChangedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removePresenceChanged(EventHandler_1<PresenceChangedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("PresenceChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addSubscribeCompleted.
+     *
+     * @param handler the argument of type {@code EventHandler_1<SubscribeCompletedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addSubscribeCompleted(EventHandler_1<SubscribeCompletedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("SubscribeCompleted", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeSubscribeCompleted.
+     *
+     * @param handler the argument of type {@code EventHandler_1<SubscribeCompletedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeSubscribeCompleted(EventHandler_1<SubscribeCompletedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("SubscribeCompleted", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

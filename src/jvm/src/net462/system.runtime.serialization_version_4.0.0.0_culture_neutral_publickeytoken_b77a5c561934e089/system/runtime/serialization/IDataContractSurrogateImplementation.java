@@ -318,11 +318,11 @@ public class IDataContractSurrogateImplementation extends NetObject implements I
     /**
      * Invokes the .NET member GetKnownCustomDataTypes.
      *
-     * @param customDataTypes the argument of type {@code Collection_1}
+     * @param customDataTypes the argument of type {@code Collection_1<NetType>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.IDataContractSurrogate.GetKnownCustomDataTypes" target="_top">.NET documentation</a>
      */
-    public void GetKnownCustomDataTypes(Collection_1 customDataTypes) throws Throwable {
+    public void GetKnownCustomDataTypes(Collection_1<NetType> customDataTypes) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

@@ -397,7 +397,7 @@ public class XDocument extends system.xml.linq.XContainer  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.LoadAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 LoadAsync(Stream stream, LoadOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public static Task_1<XDocument> LoadAsync(Stream stream, LoadOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoadAsync = null;
@@ -428,7 +428,7 @@ public class XDocument extends system.xml.linq.XContainer  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.LoadAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 LoadAsync(TextReader textReader, LoadOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public static Task_1<XDocument> LoadAsync(TextReader textReader, LoadOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoadAsync = null;
@@ -462,7 +462,7 @@ public class XDocument extends system.xml.linq.XContainer  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.XDocument.LoadAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 LoadAsync(XmlReader reader, LoadOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public static Task_1<XDocument> LoadAsync(XmlReader reader, LoadOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLoadAsync = null;

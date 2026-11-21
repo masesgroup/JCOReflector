@@ -40,6 +40,11 @@ import java.util.ArrayList;
 // Import section
 import system.servicemodel.dispatcher.DispatchRuntime;
 import system.collections.generic.SynchronizedCollection_1;
+import system.servicemodel.dispatcher.FaultContractInfo;
+import system.servicemodel.dispatcher.ICallContextInitializer;
+import system.servicemodel.dispatcher.ICallContextInitializerImplementation;
+import system.servicemodel.dispatcher.IParameterInspector;
+import system.servicemodel.dispatcher.IParameterInspectorImplementation;
 import system.servicemodel.dispatcher.IDispatchMessageFormatter;
 import system.servicemodel.dispatcher.IDispatchMessageFormatterImplementation;
 import system.servicemodel.dispatcher.IOperationInvoker;
@@ -698,7 +703,7 @@ public class DispatchOperation extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.DispatchOperation.FaultContractInfos" target="_top">.NET documentation</a>
      */
-    public SynchronizedCollection_1 getFaultContractInfos() throws Throwable {
+    public SynchronizedCollection_1<FaultContractInfo> getFaultContractInfos() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFaultContractInfos = null;
@@ -720,7 +725,7 @@ public class DispatchOperation extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.DispatchOperation.CallContextInitializers" target="_top">.NET documentation</a>
      */
-    public SynchronizedCollection_1 getCallContextInitializers() throws Throwable {
+    public SynchronizedCollection_1<ICallContextInitializer> getCallContextInitializers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCallContextInitializers = null;
@@ -742,7 +747,7 @@ public class DispatchOperation extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors" target="_top">.NET documentation</a>
      */
-    public SynchronizedCollection_1 getParameterInspectors() throws Throwable {
+    public SynchronizedCollection_1<IParameterInspector> getParameterInspectors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectParameterInspectors = null;

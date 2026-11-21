@@ -40,8 +40,12 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.windows.Application;
 import system.windows.ResourceDictionary;
+import system.windows.FrameworkContentElement;
+import system.windows.FrameworkElement;
 import system.Uri;
+import system.windows.diagnostics.ResourceDictionaryInfo;
 
 
 /**
@@ -178,7 +182,7 @@ public class ResourceDictionaryDiagnostics extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetApplicationOwners" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 GetApplicationOwners(ResourceDictionary dictionary) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.ArgumentNullException {
+    public static IEnumerable_1<Application> GetApplicationOwners(ResourceDictionary dictionary) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetApplicationOwners = null;
@@ -213,7 +217,7 @@ public class ResourceDictionaryDiagnostics extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetFrameworkContentElementOwners" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 GetFrameworkContentElementOwners(ResourceDictionary dictionary) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.ArgumentNullException {
+    public static IEnumerable_1<FrameworkContentElement> GetFrameworkContentElementOwners(ResourceDictionary dictionary) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetFrameworkContentElementOwners = null;
@@ -248,7 +252,7 @@ public class ResourceDictionaryDiagnostics extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetFrameworkElementOwners" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 GetFrameworkElementOwners(ResourceDictionary dictionary) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.ArgumentNullException {
+    public static IEnumerable_1<FrameworkElement> GetFrameworkElementOwners(ResourceDictionary dictionary) throws Throwable, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetFrameworkElementOwners = null;
@@ -285,7 +289,7 @@ public class ResourceDictionaryDiagnostics extends NetObject  {
      * @throws system.threading.AbandonedMutexException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetResourceDictionariesForSource" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 GetResourceDictionariesForSource(Uri uri) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.threading.LockRecursionException, system.NullReferenceException, system.OutOfMemoryException, system.DuplicateWaitObjectException, system.threading.AbandonedMutexException {
+    public static IEnumerable_1<ResourceDictionary> GetResourceDictionariesForSource(Uri uri) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.threading.LockRecursionException, system.NullReferenceException, system.OutOfMemoryException, system.DuplicateWaitObjectException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetResourceDictionariesForSource = null;
@@ -321,7 +325,7 @@ public class ResourceDictionaryDiagnostics extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GenericResourceDictionaries" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 getGenericResourceDictionaries() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.LockRecursionException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException {
+    public static IEnumerable_1<ResourceDictionaryInfo> getGenericResourceDictionaries() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.LockRecursionException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGenericResourceDictionaries = null;
@@ -353,7 +357,7 @@ public class ResourceDictionaryDiagnostics extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Diagnostics.ResourceDictionaryDiagnostics.ThemedResourceDictionaries" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 getThemedResourceDictionaries() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.LockRecursionException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException {
+    public static IEnumerable_1<ResourceDictionaryInfo> getThemedResourceDictionaries() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.LockRecursionException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectThemedResourceDictionaries = null;

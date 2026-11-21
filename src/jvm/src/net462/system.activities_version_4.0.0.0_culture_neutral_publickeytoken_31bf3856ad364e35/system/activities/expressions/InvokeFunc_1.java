@@ -183,7 +183,7 @@ public class InvokeFunc_1<TResult extends IJCOBridgeReflected> extends system.ac
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.InvokeFunc-1.Func" target="_top">.NET documentation</a>
      */
-    public ActivityFunc_1 getFunc() throws Throwable {
+    public ActivityFunc_1<TResult> getFunc() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFunc = null;
@@ -205,7 +205,7 @@ public class InvokeFunc_1<TResult extends IJCOBridgeReflected> extends system.ac
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Expressions.InvokeFunc-1.Func" target="_top">.NET documentation</a>
      */
-    public void setFunc(ActivityFunc_1 Func) throws Throwable {
+    public void setFunc(ActivityFunc_1<TResult> Func) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

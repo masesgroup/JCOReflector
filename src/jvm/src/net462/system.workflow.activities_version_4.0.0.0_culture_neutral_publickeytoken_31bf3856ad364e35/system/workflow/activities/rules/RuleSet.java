@@ -43,6 +43,7 @@ import system.workflow.activities.rules.RuleSet;
 import system.workflow.activities.rules.RuleExecution;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.workflow.activities.rules.Rule;
 import system.workflow.activities.rules.RuleChainingBehavior;
 
 
@@ -317,7 +318,7 @@ public class RuleSet extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.Rules.RuleSet.Rules" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getRules() throws Throwable {
+    public ICollection_1<Rule> getRules() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRules = null;

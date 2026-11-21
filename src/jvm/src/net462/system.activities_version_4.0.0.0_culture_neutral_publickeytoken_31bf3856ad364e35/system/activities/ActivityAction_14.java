@@ -183,7 +183,7 @@ public class ActivityAction_14<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-14.Argument1" target="_top">.NET documentation</a>
      */
-    public DelegateInArgument_1 getArgument1() throws Throwable {
+    public DelegateInArgument_1<T1> getArgument1() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArgument1 = null;
@@ -205,7 +205,7 @@ public class ActivityAction_14<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-14.Argument1" target="_top">.NET documentation</a>
      */
-    public void setArgument1(DelegateInArgument_1 Argument1) throws Throwable {
+    public void setArgument1(DelegateInArgument_1<T1> Argument1) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -222,7 +222,7 @@ public class ActivityAction_14<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-14.Argument10" target="_top">.NET documentation</a>
      */
-    public DelegateInArgument_1 getArgument10() throws Throwable {
+    public DelegateInArgument_1<T10> getArgument10() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArgument10 = null;
@@ -244,7 +244,7 @@ public class ActivityAction_14<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-14.Argument10" target="_top">.NET documentation</a>
      */
-    public void setArgument10(DelegateInArgument_1 Argument10) throws Throwable {
+    public void setArgument10(DelegateInArgument_1<T10> Argument10) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -261,7 +261,7 @@ public class ActivityAction_14<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-14.Argument11" target="_top">.NET documentation</a>
      */
-    public DelegateInArgument_1 getArgument11() throws Throwable {
+    public DelegateInArgument_1<T11> getArgument11() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArgument11 = null;
@@ -283,7 +283,7 @@ public class ActivityAction_14<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-14.Argument11" target="_top">.NET documentation</a>
      */
-    public void setArgument11(DelegateInArgument_1 Argument11) throws Throwable {
+    public void setArgument11(DelegateInArgument_1<T11> Argument11) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -300,7 +300,7 @@ public class ActivityAction_14<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-14.Argument12" target="_top">.NET documentation</a>
      */
-    public DelegateInArgument_1 getArgument12() throws Throwable {
+    public DelegateInArgument_1<T12> getArgument12() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArgument12 = null;
@@ -322,7 +322,7 @@ public class ActivityAction_14<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-14.Argument12" target="_top">.NET documentation</a>
      */
-    public void setArgument12(DelegateInArgument_1 Argument12) throws Throwable {
+    public void setArgument12(DelegateInArgument_1<T12> Argument12) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -339,7 +339,7 @@ public class ActivityAction_14<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-14.Argument13" target="_top">.NET documentation</a>
      */
-    public DelegateInArgument_1 getArgument13() throws Throwable {
+    public DelegateInArgument_1<T13> getArgument13() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArgument13 = null;
@@ -361,7 +361,7 @@ public class ActivityAction_14<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-14.Argument13" target="_top">.NET documentation</a>
      */
-    public void setArgument13(DelegateInArgument_1 Argument13) throws Throwable {
+    public void setArgument13(DelegateInArgument_1<T13> Argument13) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -378,7 +378,7 @@ public class ActivityAction_14<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-14.Argument14" target="_top">.NET documentation</a>
      */
-    public DelegateInArgument_1 getArgument14() throws Throwable {
+    public DelegateInArgument_1<T14> getArgument14() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArgument14 = null;
@@ -400,7 +400,7 @@ public class ActivityAction_14<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-14.Argument14" target="_top">.NET documentation</a>
      */
-    public void setArgument14(DelegateInArgument_1 Argument14) throws Throwable {
+    public void setArgument14(DelegateInArgument_1<T14> Argument14) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -417,7 +417,7 @@ public class ActivityAction_14<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-14.Argument2" target="_top">.NET documentation</a>
      */
-    public DelegateInArgument_1 getArgument2() throws Throwable {
+    public DelegateInArgument_1<T2> getArgument2() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArgument2 = null;
@@ -439,7 +439,7 @@ public class ActivityAction_14<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-14.Argument2" target="_top">.NET documentation</a>
      */
-    public void setArgument2(DelegateInArgument_1 Argument2) throws Throwable {
+    public void setArgument2(DelegateInArgument_1<T2> Argument2) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -456,7 +456,7 @@ public class ActivityAction_14<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-14.Argument3" target="_top">.NET documentation</a>
      */
-    public DelegateInArgument_1 getArgument3() throws Throwable {
+    public DelegateInArgument_1<T3> getArgument3() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArgument3 = null;
@@ -478,7 +478,7 @@ public class ActivityAction_14<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-14.Argument3" target="_top">.NET documentation</a>
      */
-    public void setArgument3(DelegateInArgument_1 Argument3) throws Throwable {
+    public void setArgument3(DelegateInArgument_1<T3> Argument3) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -495,7 +495,7 @@ public class ActivityAction_14<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-14.Argument4" target="_top">.NET documentation</a>
      */
-    public DelegateInArgument_1 getArgument4() throws Throwable {
+    public DelegateInArgument_1<T4> getArgument4() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArgument4 = null;
@@ -517,7 +517,7 @@ public class ActivityAction_14<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-14.Argument4" target="_top">.NET documentation</a>
      */
-    public void setArgument4(DelegateInArgument_1 Argument4) throws Throwable {
+    public void setArgument4(DelegateInArgument_1<T4> Argument4) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -534,7 +534,7 @@ public class ActivityAction_14<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-14.Argument5" target="_top">.NET documentation</a>
      */
-    public DelegateInArgument_1 getArgument5() throws Throwable {
+    public DelegateInArgument_1<T5> getArgument5() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArgument5 = null;
@@ -556,7 +556,7 @@ public class ActivityAction_14<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-14.Argument5" target="_top">.NET documentation</a>
      */
-    public void setArgument5(DelegateInArgument_1 Argument5) throws Throwable {
+    public void setArgument5(DelegateInArgument_1<T5> Argument5) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -573,7 +573,7 @@ public class ActivityAction_14<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-14.Argument6" target="_top">.NET documentation</a>
      */
-    public DelegateInArgument_1 getArgument6() throws Throwable {
+    public DelegateInArgument_1<T6> getArgument6() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArgument6 = null;
@@ -595,7 +595,7 @@ public class ActivityAction_14<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-14.Argument6" target="_top">.NET documentation</a>
      */
-    public void setArgument6(DelegateInArgument_1 Argument6) throws Throwable {
+    public void setArgument6(DelegateInArgument_1<T6> Argument6) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -612,7 +612,7 @@ public class ActivityAction_14<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-14.Argument7" target="_top">.NET documentation</a>
      */
-    public DelegateInArgument_1 getArgument7() throws Throwable {
+    public DelegateInArgument_1<T7> getArgument7() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArgument7 = null;
@@ -634,7 +634,7 @@ public class ActivityAction_14<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-14.Argument7" target="_top">.NET documentation</a>
      */
-    public void setArgument7(DelegateInArgument_1 Argument7) throws Throwable {
+    public void setArgument7(DelegateInArgument_1<T7> Argument7) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -651,7 +651,7 @@ public class ActivityAction_14<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-14.Argument8" target="_top">.NET documentation</a>
      */
-    public DelegateInArgument_1 getArgument8() throws Throwable {
+    public DelegateInArgument_1<T8> getArgument8() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArgument8 = null;
@@ -673,7 +673,7 @@ public class ActivityAction_14<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-14.Argument8" target="_top">.NET documentation</a>
      */
-    public void setArgument8(DelegateInArgument_1 Argument8) throws Throwable {
+    public void setArgument8(DelegateInArgument_1<T8> Argument8) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -690,7 +690,7 @@ public class ActivityAction_14<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-14.Argument9" target="_top">.NET documentation</a>
      */
-    public DelegateInArgument_1 getArgument9() throws Throwable {
+    public DelegateInArgument_1<T9> getArgument9() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArgument9 = null;
@@ -712,7 +712,7 @@ public class ActivityAction_14<T1 extends IJCOBridgeReflected, T2 extends IJCOBr
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityAction-14.Argument9" target="_top">.NET documentation</a>
      */
-    public void setArgument9(DelegateInArgument_1 Argument9) throws Throwable {
+    public void setArgument9(DelegateInArgument_1<T9> Argument9) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

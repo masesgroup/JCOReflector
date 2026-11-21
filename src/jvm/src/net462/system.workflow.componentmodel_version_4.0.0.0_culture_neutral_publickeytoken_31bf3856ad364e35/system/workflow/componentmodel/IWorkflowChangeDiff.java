@@ -39,6 +39,7 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.workflow.componentmodel.WorkflowChangeAction;
 
 
 /**
@@ -117,7 +118,7 @@ public interface IWorkflowChangeDiff extends IJCOBridgeReflected {
 
     // Methods section
     
-    public IList_1 Diff(NetObject originalDefinition, NetObject changedDefinition) throws Throwable;
+    public IList_1<WorkflowChangeAction> Diff(NetObject originalDefinition, NetObject changedDefinition) throws Throwable;
 
 
     

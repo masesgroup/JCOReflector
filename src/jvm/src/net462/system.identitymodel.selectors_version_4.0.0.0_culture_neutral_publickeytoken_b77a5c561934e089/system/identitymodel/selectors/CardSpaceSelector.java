@@ -211,7 +211,7 @@ public class CardSpaceSelector extends NetObject  {
      * Invokes the .NET member GetToken.
      *
      * @param endpoint the argument of type {@code XmlElement}
-     * @param policy the argument of type {@code IEnumerable_1}
+     * @param policy the argument of type {@code IEnumerable_1<XmlElement>}
      * @param requiredRemoteTokenIssuer the argument of type {@code XmlElement}
      * @param tokenSerializer the argument of type {@code SecurityTokenSerializer}
      * @return the value returned by the .NET member
@@ -241,7 +241,7 @@ public class CardSpaceSelector extends NetObject  {
      * @throws system.xml.schema.XmlSchemaException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Selectors.CardSpaceSelector.GetToken" target="_top">.NET documentation</a>
      */
-    public static GenericXmlSecurityToken GetToken(XmlElement endpoint, IEnumerable_1 policy, XmlElement requiredRemoteTokenIssuer, SecurityTokenSerializer tokenSerializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.security.SecurityException, system.AccessViolationException, system.collections.generic.KeyNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.xml.XmlException, system.xml.schema.XmlSchemaException {
+    public static GenericXmlSecurityToken GetToken(XmlElement endpoint, IEnumerable_1<XmlElement> policy, XmlElement requiredRemoteTokenIssuer, SecurityTokenSerializer tokenSerializer) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.security.SecurityException, system.AccessViolationException, system.collections.generic.KeyNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.xml.XmlException, system.xml.schema.XmlSchemaException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetToken = null;

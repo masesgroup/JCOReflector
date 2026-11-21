@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.Nullable_1;
+import system.SequencePosition;
 import system.buffers.ReadOnlySequence_1;
 import system.buffers.IBufferWriter_1;
 import system.buffers.IBufferWriter_1Implementation;
@@ -173,7 +174,7 @@ public class BuffersExtensions extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.BuffersExtensions.PositionOf" target="_top">.NET documentation</a>
      */
-    public static <T extends IJCOBridgeReflected> Nullable_1 PositionOf(JCORefOut<ReadOnlySequence_1> source, T value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException {
+    public static <T extends IJCOBridgeReflected> Nullable_1<SequencePosition> PositionOf(JCORefOut<ReadOnlySequence_1> source, T value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPositionOf = null;

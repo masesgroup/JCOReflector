@@ -172,7 +172,7 @@ public class DnsResult_1<T extends IJCOBridgeReflected> extends system.ValueType
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.DnsResult-1.Records" target="_top">.NET documentation</a>
      */
-    public IReadOnlyList_1 getRecords() throws Throwable {
+    public IReadOnlyList_1<T> getRecords() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRecords = null;

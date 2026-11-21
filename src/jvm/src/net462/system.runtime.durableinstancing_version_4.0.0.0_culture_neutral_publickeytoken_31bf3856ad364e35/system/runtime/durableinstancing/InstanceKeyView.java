@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IDictionary_2;
 import system.collections.generic.IDictionary_2Implementation;
+import system.xml.linq.XName;
+import system.runtime.durableinstancing.InstanceValue;
 import system.Guid;
 import system.runtime.durableinstancing.InstanceKeyState;
 import system.runtime.durableinstancing.InstanceValueConsistency;
@@ -181,7 +183,7 @@ public class InstanceKeyView extends NetObject  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceKeyView.InstanceKeyMetadata" target="_top">.NET documentation</a>
      */
-    public IDictionary_2 getInstanceKeyMetadata() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException {
+    public IDictionary_2<XName, InstanceValue> getInstanceKeyMetadata() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectInstanceKeyMetadata = null;
@@ -203,7 +205,7 @@ public class InstanceKeyView extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceKeyView.InstanceKeyMetadata" target="_top">.NET documentation</a>
      */
-    public void setInstanceKeyMetadata(IDictionary_2 InstanceKeyMetadata) throws Throwable {
+    public void setInstanceKeyMetadata(IDictionary_2<XName, InstanceValue> InstanceKeyMetadata) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

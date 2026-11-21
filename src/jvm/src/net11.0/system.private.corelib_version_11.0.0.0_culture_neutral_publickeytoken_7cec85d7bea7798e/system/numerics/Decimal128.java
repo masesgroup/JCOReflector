@@ -3359,7 +3359,7 @@ public class Decimal128 extends system.ValueType  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Decimal128.SinCos" target="_top">.NET documentation</a>
      */
-    public static ValueTuple_2 SinCos(Decimal128 x) throws Throwable, system.ArgumentOutOfRangeException, system.OverflowException, system.NotSupportedException, system.DivideByZeroException, system.PlatformNotSupportedException, system.ArgumentException, system.ArrayTypeMismatchException {
+    public static ValueTuple_2<Decimal128, Decimal128> SinCos(Decimal128 x) throws Throwable, system.ArgumentOutOfRangeException, system.OverflowException, system.NotSupportedException, system.DivideByZeroException, system.PlatformNotSupportedException, system.ArgumentException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSinCos = null;
@@ -3387,7 +3387,7 @@ public class Decimal128 extends system.ValueType  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Decimal128.SinCosPi" target="_top">.NET documentation</a>
      */
-    public static ValueTuple_2 SinCosPi(Decimal128 x) throws Throwable, system.ArgumentOutOfRangeException, system.OverflowException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static ValueTuple_2<Decimal128, Decimal128> SinCosPi(Decimal128 x) throws Throwable, system.ArgumentOutOfRangeException, system.OverflowException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSinCosPi = null;

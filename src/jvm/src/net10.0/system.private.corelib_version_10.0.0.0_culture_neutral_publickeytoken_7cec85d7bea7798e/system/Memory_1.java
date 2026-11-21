@@ -238,14 +238,14 @@ public class Memory_1<T extends IJCOBridgeReflected> extends system.ValueType  {
     /**
      * Invokes the .NET member TryCopyTo.
      *
-     * @param destination the argument of type {@code Memory_1}
+     * @param destination the argument of type {@code Memory_1<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Memory-1.TryCopyTo" target="_top">.NET documentation</a>
      */
-    public boolean TryCopyTo(Memory_1 destination) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public boolean TryCopyTo(Memory_1<T> destination) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTryCopyTo = null;
@@ -310,7 +310,7 @@ public class Memory_1<T extends IJCOBridgeReflected> extends system.ValueType  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Memory-1.Slice" target="_top">.NET documentation</a>
      */
-    public Memory_1 Slice(int start, int length) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public Memory_1<T> Slice(int start, int length) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSlice = null;
@@ -343,7 +343,7 @@ public class Memory_1<T extends IJCOBridgeReflected> extends system.ValueType  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Memory-1.Slice" target="_top">.NET documentation</a>
      */
-    public Memory_1 Slice(int start) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public Memory_1<T> Slice(int start) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSlice = null;
@@ -393,14 +393,14 @@ public T[] ToArray() throws Throwable, system.PlatformNotSupportedException, sys
     /**
      * Invokes the .NET member CopyTo.
      *
-     * @param destination the argument of type {@code Memory_1}
+     * @param destination the argument of type {@code Memory_1<T>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Memory-1.CopyTo" target="_top">.NET documentation</a>
      */
-    public void CopyTo(Memory_1 destination) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public void CopyTo(Memory_1<T> destination) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

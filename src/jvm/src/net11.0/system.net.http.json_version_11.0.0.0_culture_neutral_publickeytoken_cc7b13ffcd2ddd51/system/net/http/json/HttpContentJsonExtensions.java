@@ -45,6 +45,7 @@ import system.text.json.JsonSerializerOptions;
 import system.threading.CancellationToken;
 import system.text.json.serialization.metadata.JsonTypeInfo_1;
 import system.threading.tasks.Task_1;
+import system.Object;
 import system.text.json.serialization.JsonSerializerContext;
 
 
@@ -282,7 +283,7 @@ public class HttpContentJsonExtensions extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpContentJsonExtensions.ReadFromJsonAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 ReadFromJsonAsync(HttpContent content, NetType type, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public static Task_1<Object> ReadFromJsonAsync(HttpContent content, NetType type, JsonSerializerOptions options, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReadFromJsonAsync = null;
@@ -315,7 +316,7 @@ public class HttpContentJsonExtensions extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpContentJsonExtensions.ReadFromJsonAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 ReadFromJsonAsync(HttpContent content, NetType type, JsonSerializerContext context, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public static Task_1<Object> ReadFromJsonAsync(HttpContent content, NetType type, JsonSerializerContext context, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReadFromJsonAsync = null;
@@ -346,7 +347,7 @@ public class HttpContentJsonExtensions extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Json.HttpContentJsonExtensions.ReadFromJsonAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 ReadFromJsonAsync(HttpContent content, NetType type, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public static Task_1<Object> ReadFromJsonAsync(HttpContent content, NetType type, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReadFromJsonAsync = null;

@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.EventHandler_1;
+import system.net.NetworkProgressChangedEventArgs;
 
 
 /**
@@ -123,5 +125,17 @@ public interface INetworkProgress extends IJCOBridgeReflected {
 
     // Instance Events section
     
+    public void addProgressChanged(EventHandler_1<NetworkProgressChangedEventArgs> handler) throws Throwable;
+
+    public void removeProgressChanged(EventHandler_1<NetworkProgressChangedEventArgs> handler) throws Throwable;
+
+    public void addProgressCompleted(EventHandler_1<NetworkProgressChangedEventArgs> handler) throws Throwable;
+
+    public void removeProgressCompleted(EventHandler_1<NetworkProgressChangedEventArgs> handler) throws Throwable;
+
+    public void addProgressFailed(EventHandler_1<NetworkProgressChangedEventArgs> handler) throws Throwable;
+
+    public void removeProgressFailed(EventHandler_1<NetworkProgressChangedEventArgs> handler) throws Throwable;
+
 
 }

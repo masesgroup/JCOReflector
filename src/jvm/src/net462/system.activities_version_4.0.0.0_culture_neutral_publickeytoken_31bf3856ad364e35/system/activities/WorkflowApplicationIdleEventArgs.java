@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.activities.WorkflowApplicationEventArgs;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.activities.hosting.BookmarkInfo;
 
 
 /**
@@ -180,7 +181,7 @@ public class WorkflowApplicationIdleEventArgs extends system.activities.Workflow
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.WorkflowApplicationIdleEventArgs.Bookmarks" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getBookmarks() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public ReadOnlyCollection_1<BookmarkInfo> getBookmarks() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectBookmarks = null;

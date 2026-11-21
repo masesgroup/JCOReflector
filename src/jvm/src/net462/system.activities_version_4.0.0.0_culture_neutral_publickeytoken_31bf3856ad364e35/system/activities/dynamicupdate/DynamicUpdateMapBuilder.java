@@ -46,6 +46,8 @@ import system.activities.LocationReferenceEnvironment;
 import system.collections.generic.ISet_1;
 import system.collections.generic.ISet_1Implementation;
 import system.Func_2;
+import system.Object;
+import system.activities.dynamicupdate.DynamicUpdateMapItem;
 
 
 /**
@@ -453,7 +455,7 @@ public class DynamicUpdateMapBuilder extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMapBuilder.DisallowUpdateInside" target="_top">.NET documentation</a>
      */
-    public ISet_1 getDisallowUpdateInside() throws Throwable {
+    public ISet_1<Activity> getDisallowUpdateInside() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDisallowUpdateInside = null;
@@ -475,15 +477,15 @@ public class DynamicUpdateMapBuilder extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMapBuilder.LookupImplementationMap" target="_top">.NET documentation</a>
      */
-    public Func_2 getLookupImplementationMap() throws Throwable {
+    public Func_2<Activity, DynamicUpdateMap> getLookupImplementationMap() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectLookupImplementationMap = null;
         try {
             retObjectLookupImplementationMap = classInstance.Get("LookupImplementationMap");
-            return (Func_2)retObjectLookupImplementationMap;
+            return (Func_2<Activity, DynamicUpdateMap>)retObjectLookupImplementationMap;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2", retObjectLookupImplementationMap != null ? retObjectLookupImplementationMap.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2<Activity, DynamicUpdateMap>", retObjectLookupImplementationMap != null ? retObjectLookupImplementationMap.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -496,7 +498,7 @@ public class DynamicUpdateMapBuilder extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMapBuilder.LookupImplementationMap" target="_top">.NET documentation</a>
      */
-    public void setLookupImplementationMap(Func_2 LookupImplementationMap) throws Throwable {
+    public void setLookupImplementationMap(Func_2<Activity, DynamicUpdateMap> LookupImplementationMap) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -513,15 +515,15 @@ public class DynamicUpdateMapBuilder extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMapBuilder.LookupMapItem" target="_top">.NET documentation</a>
      */
-    public Func_2 getLookupMapItem() throws Throwable {
+    public Func_2<Object, DynamicUpdateMapItem> getLookupMapItem() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectLookupMapItem = null;
         try {
             retObjectLookupMapItem = classInstance.Get("LookupMapItem");
-            return (Func_2)retObjectLookupMapItem;
+            return (Func_2<Object, DynamicUpdateMapItem>)retObjectLookupMapItem;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2", retObjectLookupMapItem != null ? retObjectLookupMapItem.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2<Object, DynamicUpdateMapItem>", retObjectLookupMapItem != null ? retObjectLookupMapItem.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -534,7 +536,7 @@ public class DynamicUpdateMapBuilder extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicUpdate.DynamicUpdateMapBuilder.LookupMapItem" target="_top">.NET documentation</a>
      */
-    public void setLookupMapItem(Func_2 LookupMapItem) throws Throwable {
+    public void setLookupMapItem(Func_2<Object, DynamicUpdateMapItem> LookupMapItem) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

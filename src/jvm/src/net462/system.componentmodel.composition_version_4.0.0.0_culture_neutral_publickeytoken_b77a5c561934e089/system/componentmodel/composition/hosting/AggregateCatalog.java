@@ -41,9 +41,14 @@ import java.util.ArrayList;
 import system.componentmodel.composition.primitives.ComposablePartCatalog;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.Tuple_2;
+import system.componentmodel.composition.primitives.ComposablePartDefinition;
+import system.componentmodel.composition.primitives.ExportDefinition;
 import system.componentmodel.composition.primitives.ImportDefinition;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.EventHandler_1;
+import system.componentmodel.composition.hosting.ComposablePartCatalogChangeEventArgs;
 
 
 /**
@@ -176,7 +181,7 @@ public class AggregateCatalog extends system.componentmodel.composition.primitiv
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param catalogs the argument of type {@code IEnumerable_1}
+     * @param catalogs the argument of type {@code IEnumerable_1<ComposablePartCatalog>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.resources.MissingManifestResourceException if the .NET member raises it
@@ -184,7 +189,7 @@ public class AggregateCatalog extends system.componentmodel.composition.primitiv
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.AggregateCatalog.-ctor" target="_top">.NET documentation</a>
      */
-    public AggregateCatalog(IEnumerable_1 catalogs) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.ArgumentOutOfRangeException {
+    public AggregateCatalog(IEnumerable_1<ComposablePartCatalog> catalogs) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -236,7 +241,7 @@ public class AggregateCatalog extends system.componentmodel.composition.primitiv
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.AggregateCatalog.GetExports" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetExports(ImportDefinition definition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.threading.LockRecursionException, system.NotImplementedException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
+    public IEnumerable_1<Tuple_2<ComposablePartDefinition, ExportDefinition>> GetExports(ImportDefinition definition) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.threading.LockRecursionException, system.NotImplementedException, system.NotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetExports = null;
@@ -267,7 +272,7 @@ public class AggregateCatalog extends system.componentmodel.composition.primitiv
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.AggregateCatalog.Catalogs" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getCatalogs() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+    public ICollection_1<ComposablePartCatalog> getCatalogs() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCatalogs = null;
@@ -286,6 +291,74 @@ public class AggregateCatalog extends system.componentmodel.composition.primitiv
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ComposablePartCatalogChangeEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addChanged(EventHandler_1<ComposablePartCatalogChangeEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("Changed", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeChanged.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ComposablePartCatalogChangeEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeChanged(EventHandler_1<ComposablePartCatalogChangeEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("Changed", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addChanging.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ComposablePartCatalogChangeEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addChanging(EventHandler_1<ComposablePartCatalogChangeEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("Changing", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeChanging.
+     *
+     * @param handler the argument of type {@code EventHandler_1<ComposablePartCatalogChangeEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeChanging(EventHandler_1<ComposablePartCatalogChangeEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("Changing", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

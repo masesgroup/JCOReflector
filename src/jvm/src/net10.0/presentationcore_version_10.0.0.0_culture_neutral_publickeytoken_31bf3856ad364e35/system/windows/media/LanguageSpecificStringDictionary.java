@@ -516,7 +516,7 @@ public class LanguageSpecificStringDictionary extends NetObjectEnumerable  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.LanguageSpecificStringDictionary.Keys" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getKeys() throws Throwable {
+    public ICollection_1<XmlLanguage> getKeys() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectKeys = null;

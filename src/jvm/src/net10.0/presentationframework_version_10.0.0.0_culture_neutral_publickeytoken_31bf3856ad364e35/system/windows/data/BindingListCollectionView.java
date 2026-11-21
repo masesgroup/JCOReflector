@@ -43,6 +43,7 @@ import system.componentmodel.IBindingList;
 import system.componentmodel.IBindingListImplementation;
 import system.collections.objectmodel.ObservableCollection_1;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.componentmodel.ItemPropertyInfo;
 import system.collections.objectmodel.ReadOnlyObservableCollection_1;
 import system.componentmodel.NewItemPlaceholderPosition;
 import system.componentmodel.SortDescriptionCollection;
@@ -1003,7 +1004,7 @@ public class BindingListCollectionView extends system.windows.data.CollectionVie
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.BindingListCollectionView.ItemProperties" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getItemProperties() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException {
+    public ReadOnlyCollection_1<ItemPropertyInfo> getItemProperties() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectItemProperties = null;

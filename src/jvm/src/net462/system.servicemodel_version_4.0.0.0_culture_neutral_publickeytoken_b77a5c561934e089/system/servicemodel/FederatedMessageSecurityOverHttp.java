@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.objectmodel.Collection_1;
+import system.servicemodel.security.tokens.ClaimTypeRequirement;
+import system.xml.XmlElement;
 import system.identitymodel.tokens.SecurityKeyType;
 import system.servicemodel.EndpointAddress;
 import system.servicemodel.security.SecurityAlgorithmSuite;
@@ -385,7 +387,7 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.FederatedMessageSecurityOverHttp.ClaimTypeRequirements" target="_top">.NET documentation</a>
      */
-    public Collection_1 getClaimTypeRequirements() throws Throwable {
+    public Collection_1<ClaimTypeRequirement> getClaimTypeRequirements() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectClaimTypeRequirements = null;
@@ -407,7 +409,7 @@ public class FederatedMessageSecurityOverHttp extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.FederatedMessageSecurityOverHttp.TokenRequestParameters" target="_top">.NET documentation</a>
      */
-    public Collection_1 getTokenRequestParameters() throws Throwable {
+    public Collection_1<XmlElement> getTokenRequestParameters() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTokenRequestParameters = null;

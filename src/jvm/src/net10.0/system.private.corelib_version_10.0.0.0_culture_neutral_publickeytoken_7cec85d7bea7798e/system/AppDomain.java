@@ -56,6 +56,8 @@ import system.security.PermissionSet;
 import system.TimeSpan;
 import system.AssemblyLoadEventHandler;
 import system.EventHandler;
+import system.EventHandler_1;
+import system.runtime.exceptionservices.FirstChanceExceptionEventArgs;
 import system.ResolveEventHandler;
 import system.UnhandledExceptionEventHandler;
 
@@ -2559,6 +2561,40 @@ public class AppDomain extends system.MarshalByRefObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("ProcessExit", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addFirstChanceException.
+     *
+     * @param handler the argument of type {@code EventHandler_1<FirstChanceExceptionEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addFirstChanceException(EventHandler_1<FirstChanceExceptionEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("FirstChanceException", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeFirstChanceException.
+     *
+     * @param handler the argument of type {@code EventHandler_1<FirstChanceExceptionEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeFirstChanceException(EventHandler_1<FirstChanceExceptionEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("FirstChanceException", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

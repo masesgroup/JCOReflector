@@ -40,11 +40,12 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.reflection.Assembly;
 import system.xaml.XamlSchemaContextSettings;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
-import system.xaml.XamlDirective;
 import system.xaml.XamlType;
+import system.xaml.XamlDirective;
 import system.xaml.schema.XamlTypeName;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
@@ -187,7 +188,7 @@ public class XamlSchemaContext extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param referenceAssemblies the argument of type {@code IEnumerable_1}
+     * @param referenceAssemblies the argument of type {@code IEnumerable_1<Assembly>}
      * @param settings the argument of type {@code XamlSchemaContextSettings}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
@@ -201,7 +202,7 @@ public class XamlSchemaContext extends NetObject  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlSchemaContext.-ctor" target="_top">.NET documentation</a>
      */
-    public XamlSchemaContext(IEnumerable_1 referenceAssemblies, XamlSchemaContextSettings settings) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.NullReferenceException {
+    public XamlSchemaContext(IEnumerable_1<Assembly> referenceAssemblies, XamlSchemaContextSettings settings) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.NullReferenceException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -214,7 +215,7 @@ public class XamlSchemaContext extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param referenceAssemblies the argument of type {@code IEnumerable_1}
+     * @param referenceAssemblies the argument of type {@code IEnumerable_1<Assembly>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -228,7 +229,7 @@ public class XamlSchemaContext extends NetObject  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlSchemaContext.-ctor" target="_top">.NET documentation</a>
      */
-    public XamlSchemaContext(IEnumerable_1 referenceAssemblies) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException {
+    public XamlSchemaContext(IEnumerable_1<Assembly> referenceAssemblies) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -330,7 +331,7 @@ public class XamlSchemaContext extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlSchemaContext.GetAllXamlTypes" target="_top">.NET documentation</a>
      */
-    public ICollection_1 GetAllXamlTypes(java.lang.String xamlNamespace) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.LockRecursionException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.io.FileLoadException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.xaml.XamlSchemaException, system.ArgumentNullException {
+    public ICollection_1<XamlType> GetAllXamlTypes(java.lang.String xamlNamespace) throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.LockRecursionException, system.OutOfMemoryException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.io.FileLoadException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.xaml.XamlSchemaException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetAllXamlTypes = null;
@@ -580,7 +581,7 @@ public class XamlSchemaContext extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlSchemaContext.ReferenceAssemblies" target="_top">.NET documentation</a>
      */
-    public IList_1 getReferenceAssemblies() throws Throwable {
+    public IList_1<Assembly> getReferenceAssemblies() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReferenceAssemblies = null;

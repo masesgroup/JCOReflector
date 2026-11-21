@@ -42,6 +42,7 @@ import system.text.json.nodes.JsonNode;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
 import system.Nullable_1;
+import system.text.json.nodes.JsonNodeOptions;
 import system.collections.generic.KeyValuePair_2;
 import system.text.json.nodes.JsonObject;
 import system.text.json.JsonElement;
@@ -164,7 +165,7 @@ public class JsonObject extends system.text.json.nodes.JsonNode  {
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param properties the argument of type {@code IEnumerable_1}
-     * @param options the argument of type {@code Nullable_1}
+     * @param options the argument of type {@code Nullable_1<JsonNodeOptions>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -175,7 +176,7 @@ public class JsonObject extends system.text.json.nodes.JsonNode  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Nodes.JsonObject.-ctor" target="_top">.NET documentation</a>
      */
-    public JsonObject(IEnumerable_1 properties, Nullable_1 options) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+    public JsonObject(IEnumerable_1 properties, Nullable_1<JsonNodeOptions> options) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -188,11 +189,11 @@ public class JsonObject extends system.text.json.nodes.JsonNode  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param options the argument of type {@code Nullable_1}
+     * @param options the argument of type {@code Nullable_1<JsonNodeOptions>}
      * @throws Throwable if the .NET constructor fails
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Nodes.JsonObject.-ctor" target="_top">.NET documentation</a>
      */
-    public JsonObject(Nullable_1 options) throws Throwable {
+    public JsonObject(Nullable_1<JsonNodeOptions> options) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -497,7 +498,7 @@ public class JsonObject extends system.text.json.nodes.JsonNode  {
      * Invokes the .NET member Create.
      *
      * @param element the argument of type {@code JsonElement}
-     * @param options the argument of type {@code Nullable_1}
+     * @param options the argument of type {@code Nullable_1<JsonNodeOptions>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ObjectDisposedException if the .NET member raises it
@@ -510,7 +511,7 @@ public class JsonObject extends system.text.json.nodes.JsonNode  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Nodes.JsonObject.Create" target="_top">.NET documentation</a>
      */
-    public static JsonObject Create(JsonElement element, Nullable_1 options) throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+    public static JsonObject Create(JsonElement element, Nullable_1<JsonNodeOptions> options) throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.ArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreate = null;

@@ -40,11 +40,11 @@ import java.util.ArrayList;
 // Import section
 import system.ValueType;
 import system.collections.objectmodel.Collection_1;
-import system.activities.RuntimeArgument;
 import system.activities.Activity;
-import system.Func_1;
 import system.activities.ActivityDelegate;
+import system.activities.RuntimeArgument;
 import system.activities.Variable;
+import system.Func_1;
 import system.activities.validation.ValidationError;
 import system.activities.Argument;
 import system.activities.LocationReferenceEnvironment;
@@ -184,7 +184,7 @@ public class NativeActivityMetadata extends system.ValueType  {
      * @throws system.reflection.TargetInvocationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.NativeActivityMetadata.GetChildrenWithReflection" target="_top">.NET documentation</a>
      */
-    public Collection_1 GetChildrenWithReflection() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.RankException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public Collection_1<Activity> GetChildrenWithReflection() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.RankException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetChildrenWithReflection = null;
@@ -217,7 +217,7 @@ public class NativeActivityMetadata extends system.ValueType  {
      * @throws system.reflection.TargetInvocationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.NativeActivityMetadata.GetDelegatesWithReflection" target="_top">.NET documentation</a>
      */
-    public Collection_1 GetDelegatesWithReflection() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.RankException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public Collection_1<ActivityDelegate> GetDelegatesWithReflection() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.RankException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetDelegatesWithReflection = null;
@@ -250,7 +250,7 @@ public class NativeActivityMetadata extends system.ValueType  {
      * @throws system.reflection.TargetInvocationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.NativeActivityMetadata.GetArgumentsWithReflection" target="_top">.NET documentation</a>
      */
-    public Collection_1 GetArgumentsWithReflection() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.RankException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public Collection_1<RuntimeArgument> GetArgumentsWithReflection() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.RankException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetArgumentsWithReflection = null;
@@ -283,7 +283,7 @@ public class NativeActivityMetadata extends system.ValueType  {
      * @throws system.reflection.TargetInvocationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.NativeActivityMetadata.GetVariablesWithReflection" target="_top">.NET documentation</a>
      */
-    public Collection_1 GetVariablesWithReflection() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.RankException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public Collection_1<Variable> GetVariablesWithReflection() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.RankException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetVariablesWithReflection = null;
@@ -788,7 +788,7 @@ public class NativeActivityMetadata extends system.ValueType  {
     /**
      * Invokes the .NET member SetArgumentsCollection.
      *
-     * @param arguments the argument of type {@code Collection_1}
+     * @param arguments the argument of type {@code Collection_1<RuntimeArgument>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -803,7 +803,7 @@ public class NativeActivityMetadata extends system.ValueType  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.NativeActivityMetadata.SetArgumentsCollection" target="_top">.NET documentation</a>
      */
-    public void SetArgumentsCollection(Collection_1 arguments) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.RankException, system.NullReferenceException {
+    public void SetArgumentsCollection(Collection_1<RuntimeArgument> arguments) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.RankException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -816,7 +816,7 @@ public class NativeActivityMetadata extends system.ValueType  {
     /**
      * Invokes the .NET member SetChildrenCollection.
      *
-     * @param children the argument of type {@code Collection_1}
+     * @param children the argument of type {@code Collection_1<Activity>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -825,7 +825,7 @@ public class NativeActivityMetadata extends system.ValueType  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.NativeActivityMetadata.SetChildrenCollection" target="_top">.NET documentation</a>
      */
-    public void SetChildrenCollection(Collection_1 children) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public void SetChildrenCollection(Collection_1<Activity> children) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -838,7 +838,7 @@ public class NativeActivityMetadata extends system.ValueType  {
     /**
      * Invokes the .NET member SetDelegatesCollection.
      *
-     * @param delegates the argument of type {@code Collection_1}
+     * @param delegates the argument of type {@code Collection_1<ActivityDelegate>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -847,7 +847,7 @@ public class NativeActivityMetadata extends system.ValueType  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.NativeActivityMetadata.SetDelegatesCollection" target="_top">.NET documentation</a>
      */
-    public void SetDelegatesCollection(Collection_1 delegates) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public void SetDelegatesCollection(Collection_1<ActivityDelegate> delegates) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -860,7 +860,7 @@ public class NativeActivityMetadata extends system.ValueType  {
     /**
      * Invokes the .NET member SetImplementationChildrenCollection.
      *
-     * @param implementationChildren the argument of type {@code Collection_1}
+     * @param implementationChildren the argument of type {@code Collection_1<Activity>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -869,7 +869,7 @@ public class NativeActivityMetadata extends system.ValueType  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.NativeActivityMetadata.SetImplementationChildrenCollection" target="_top">.NET documentation</a>
      */
-    public void SetImplementationChildrenCollection(Collection_1 implementationChildren) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public void SetImplementationChildrenCollection(Collection_1<Activity> implementationChildren) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -882,7 +882,7 @@ public class NativeActivityMetadata extends system.ValueType  {
     /**
      * Invokes the .NET member SetImplementationDelegatesCollection.
      *
-     * @param implementationDelegates the argument of type {@code Collection_1}
+     * @param implementationDelegates the argument of type {@code Collection_1<ActivityDelegate>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -891,7 +891,7 @@ public class NativeActivityMetadata extends system.ValueType  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.NativeActivityMetadata.SetImplementationDelegatesCollection" target="_top">.NET documentation</a>
      */
-    public void SetImplementationDelegatesCollection(Collection_1 implementationDelegates) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public void SetImplementationDelegatesCollection(Collection_1<ActivityDelegate> implementationDelegates) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -904,7 +904,7 @@ public class NativeActivityMetadata extends system.ValueType  {
     /**
      * Invokes the .NET member SetImplementationVariablesCollection.
      *
-     * @param implementationVariables the argument of type {@code Collection_1}
+     * @param implementationVariables the argument of type {@code Collection_1<Variable>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -913,7 +913,7 @@ public class NativeActivityMetadata extends system.ValueType  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.NativeActivityMetadata.SetImplementationVariablesCollection" target="_top">.NET documentation</a>
      */
-    public void SetImplementationVariablesCollection(Collection_1 implementationVariables) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public void SetImplementationVariablesCollection(Collection_1<Variable> implementationVariables) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -926,7 +926,7 @@ public class NativeActivityMetadata extends system.ValueType  {
     /**
      * Invokes the .NET member SetImportedChildrenCollection.
      *
-     * @param importedChildren the argument of type {@code Collection_1}
+     * @param importedChildren the argument of type {@code Collection_1<Activity>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -935,7 +935,7 @@ public class NativeActivityMetadata extends system.ValueType  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.NativeActivityMetadata.SetImportedChildrenCollection" target="_top">.NET documentation</a>
      */
-    public void SetImportedChildrenCollection(Collection_1 importedChildren) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public void SetImportedChildrenCollection(Collection_1<Activity> importedChildren) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -948,7 +948,7 @@ public class NativeActivityMetadata extends system.ValueType  {
     /**
      * Invokes the .NET member SetImportedDelegatesCollection.
      *
-     * @param importedDelegates the argument of type {@code Collection_1}
+     * @param importedDelegates the argument of type {@code Collection_1<ActivityDelegate>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -957,7 +957,7 @@ public class NativeActivityMetadata extends system.ValueType  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.NativeActivityMetadata.SetImportedDelegatesCollection" target="_top">.NET documentation</a>
      */
-    public void SetImportedDelegatesCollection(Collection_1 importedDelegates) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public void SetImportedDelegatesCollection(Collection_1<ActivityDelegate> importedDelegates) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -970,7 +970,7 @@ public class NativeActivityMetadata extends system.ValueType  {
     /**
      * Invokes the .NET member SetValidationErrorsCollection.
      *
-     * @param validationErrors the argument of type {@code Collection_1}
+     * @param validationErrors the argument of type {@code Collection_1<ValidationError>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -979,7 +979,7 @@ public class NativeActivityMetadata extends system.ValueType  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.NativeActivityMetadata.SetValidationErrorsCollection" target="_top">.NET documentation</a>
      */
-    public void SetValidationErrorsCollection(Collection_1 validationErrors) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public void SetValidationErrorsCollection(Collection_1<ValidationError> validationErrors) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -992,7 +992,7 @@ public class NativeActivityMetadata extends system.ValueType  {
     /**
      * Invokes the .NET member SetVariablesCollection.
      *
-     * @param variables the argument of type {@code Collection_1}
+     * @param variables the argument of type {@code Collection_1<Variable>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -1001,7 +1001,7 @@ public class NativeActivityMetadata extends system.ValueType  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.NativeActivityMetadata.SetVariablesCollection" target="_top">.NET documentation</a>
      */
-    public void SetVariablesCollection(Collection_1 variables) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public void SetVariablesCollection(Collection_1<Variable> variables) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

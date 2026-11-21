@@ -126,7 +126,7 @@ public interface IDesignerGlyphProviderService extends IJCOBridgeReflected {
     
     // Properties section
     
-    public ReadOnlyCollection_1 getGlyphProviders() throws Throwable;
+    public ReadOnlyCollection_1<IDesignerGlyphProvider> getGlyphProviders() throws Throwable;
 
 
 

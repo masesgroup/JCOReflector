@@ -39,6 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.Func_2;
+import system.IServiceProvider;
+import system.IServiceProviderImplementation;
+import system.Object;
 import microsoft.extensions.dependencyinjection.ServiceLifetime;
 import system.Func_3;
 import microsoft.extensions.dependencyinjection.ServiceDescriptor;
@@ -159,7 +162,7 @@ public class ServiceDescriptor extends NetObject  {
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param serviceType the argument of type {@code NetType}
-     * @param factory the argument of type {@code Func_2}
+     * @param factory the argument of type {@code Func_2<IServiceProvider, Object>}
      * @param lifetime the argument of type {@code ServiceLifetime}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
@@ -171,7 +174,7 @@ public class ServiceDescriptor extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.DependencyInjection.ServiceDescriptor.-ctor" target="_top">.NET documentation</a>
      */
-    public ServiceDescriptor(NetType serviceType, Func_2 factory, ServiceLifetime lifetime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public ServiceDescriptor(NetType serviceType, Func_2<IServiceProvider, Object> factory, ServiceLifetime lifetime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -186,7 +189,7 @@ public class ServiceDescriptor extends NetObject  {
      *
      * @param serviceType the argument of type {@code NetType}
      * @param serviceKey the argument of type {@code NetObject}
-     * @param factory the argument of type {@code Func_3}
+     * @param factory the argument of type {@code Func_3<IServiceProvider, Object, Object>}
      * @param lifetime the argument of type {@code ServiceLifetime}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
@@ -198,7 +201,7 @@ public class ServiceDescriptor extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.DependencyInjection.ServiceDescriptor.-ctor" target="_top">.NET documentation</a>
      */
-    public ServiceDescriptor(NetType serviceType, NetObject serviceKey, Func_3 factory, ServiceLifetime lifetime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public ServiceDescriptor(NetType serviceType, NetObject serviceKey, Func_3<IServiceProvider, Object, Object> factory, ServiceLifetime lifetime) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -317,7 +320,7 @@ public class ServiceDescriptor extends NetObject  {
      * Invokes the .NET member Describe.
      *
      * @param serviceType the argument of type {@code NetType}
-     * @param implementationFactory the argument of type {@code Func_2}
+     * @param implementationFactory the argument of type {@code Func_2<IServiceProvider, Object>}
      * @param lifetime the argument of type {@code ServiceLifetime}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -328,7 +331,7 @@ public class ServiceDescriptor extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.DependencyInjection.ServiceDescriptor.Describe" target="_top">.NET documentation</a>
      */
-    public static ServiceDescriptor Describe(NetType serviceType, Func_2 implementationFactory, ServiceLifetime lifetime) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public static ServiceDescriptor Describe(NetType serviceType, Func_2<IServiceProvider, Object> implementationFactory, ServiceLifetime lifetime) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDescribe = null;
@@ -376,7 +379,7 @@ public class ServiceDescriptor extends NetObject  {
      *
      * @param serviceType the argument of type {@code NetType}
      * @param serviceKey the argument of type {@code NetObject}
-     * @param implementationFactory the argument of type {@code Func_3}
+     * @param implementationFactory the argument of type {@code Func_3<IServiceProvider, Object, Object>}
      * @param lifetime the argument of type {@code ServiceLifetime}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -387,7 +390,7 @@ public class ServiceDescriptor extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.DependencyInjection.ServiceDescriptor.DescribeKeyed" target="_top">.NET documentation</a>
      */
-    public static ServiceDescriptor DescribeKeyed(NetType serviceType, NetObject serviceKey, Func_3 implementationFactory, ServiceLifetime lifetime) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public static ServiceDescriptor DescribeKeyed(NetType serviceType, NetObject serviceKey, Func_3<IServiceProvider, Object, Object> implementationFactory, ServiceLifetime lifetime) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDescribeKeyed = null;
@@ -438,7 +441,7 @@ public class ServiceDescriptor extends NetObject  {
      *
      * @param service the argument of type {@code NetType}
      * @param serviceKey the argument of type {@code NetObject}
-     * @param implementationFactory the argument of type {@code Func_3}
+     * @param implementationFactory the argument of type {@code Func_3<IServiceProvider, Object, Object>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -450,7 +453,7 @@ public class ServiceDescriptor extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.DependencyInjection.ServiceDescriptor.KeyedScoped" target="_top">.NET documentation</a>
      */
-    public static ServiceDescriptor KeyedScoped(NetType service, NetObject serviceKey, Func_3 implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public static ServiceDescriptor KeyedScoped(NetType service, NetObject serviceKey, Func_3<IServiceProvider, Object, Object> implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectKeyedScoped = null;
@@ -557,7 +560,7 @@ public class ServiceDescriptor extends NetObject  {
      *
      * @param serviceType the argument of type {@code NetType}
      * @param serviceKey the argument of type {@code NetObject}
-     * @param implementationFactory the argument of type {@code Func_3}
+     * @param implementationFactory the argument of type {@code Func_3<IServiceProvider, Object, Object>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -569,7 +572,7 @@ public class ServiceDescriptor extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.DependencyInjection.ServiceDescriptor.KeyedSingleton" target="_top">.NET documentation</a>
      */
-    public static ServiceDescriptor KeyedSingleton(NetType serviceType, NetObject serviceKey, Func_3 implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public static ServiceDescriptor KeyedSingleton(NetType serviceType, NetObject serviceKey, Func_3<IServiceProvider, Object, Object> implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectKeyedSingleton = null;
@@ -744,7 +747,7 @@ public class ServiceDescriptor extends NetObject  {
      *
      * @param service the argument of type {@code NetType}
      * @param serviceKey the argument of type {@code NetObject}
-     * @param implementationFactory the argument of type {@code Func_3}
+     * @param implementationFactory the argument of type {@code Func_3<IServiceProvider, Object, Object>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -756,7 +759,7 @@ public class ServiceDescriptor extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.DependencyInjection.ServiceDescriptor.KeyedTransient" target="_top">.NET documentation</a>
      */
-    public static ServiceDescriptor KeyedTransient(NetType service, NetObject serviceKey, Func_3 implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public static ServiceDescriptor KeyedTransient(NetType service, NetObject serviceKey, Func_3<IServiceProvider, Object, Object> implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectKeyedTransient = null;
@@ -866,7 +869,7 @@ public class ServiceDescriptor extends NetObject  {
      * Invokes the .NET member Scoped.
      *
      * @param service the argument of type {@code NetType}
-     * @param implementationFactory the argument of type {@code Func_2}
+     * @param implementationFactory the argument of type {@code Func_2<IServiceProvider, Object>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -878,7 +881,7 @@ public class ServiceDescriptor extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.DependencyInjection.ServiceDescriptor.Scoped" target="_top">.NET documentation</a>
      */
-    public static ServiceDescriptor Scoped(NetType service, Func_2 implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public static ServiceDescriptor Scoped(NetType service, Func_2<IServiceProvider, Object> implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectScoped = null;
@@ -979,7 +982,7 @@ public class ServiceDescriptor extends NetObject  {
      * Invokes the .NET member Singleton.
      *
      * @param serviceType the argument of type {@code NetType}
-     * @param implementationFactory the argument of type {@code Func_2}
+     * @param implementationFactory the argument of type {@code Func_2<IServiceProvider, Object>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -991,7 +994,7 @@ public class ServiceDescriptor extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.DependencyInjection.ServiceDescriptor.Singleton" target="_top">.NET documentation</a>
      */
-    public static ServiceDescriptor Singleton(NetType serviceType, Func_2 implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public static ServiceDescriptor Singleton(NetType serviceType, Func_2<IServiceProvider, Object> implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSingleton = null;
@@ -1160,7 +1163,7 @@ public class ServiceDescriptor extends NetObject  {
      * Invokes the .NET member Transient.
      *
      * @param service the argument of type {@code NetType}
-     * @param implementationFactory the argument of type {@code Func_2}
+     * @param implementationFactory the argument of type {@code Func_2<IServiceProvider, Object>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -1172,7 +1175,7 @@ public class ServiceDescriptor extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.DependencyInjection.ServiceDescriptor.Transient" target="_top">.NET documentation</a>
      */
-    public static ServiceDescriptor Transient(NetType service, Func_2 implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public static ServiceDescriptor Transient(NetType service, Func_2<IServiceProvider, Object> implementationFactory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTransient = null;
@@ -1329,15 +1332,15 @@ public class ServiceDescriptor extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.DependencyInjection.ServiceDescriptor.ImplementationFactory" target="_top">.NET documentation</a>
      */
-    public Func_2 getImplementationFactory() throws Throwable {
+    public Func_2<IServiceProvider, Object> getImplementationFactory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectImplementationFactory = null;
         try {
             retObjectImplementationFactory = classInstance.Get("ImplementationFactory");
-            return (Func_2)retObjectImplementationFactory;
+            return (Func_2<IServiceProvider, Object>)retObjectImplementationFactory;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2", retObjectImplementationFactory != null ? retObjectImplementationFactory.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2<IServiceProvider, Object>", retObjectImplementationFactory != null ? retObjectImplementationFactory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1358,15 +1361,15 @@ public class ServiceDescriptor extends NetObject  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.DependencyInjection.ServiceDescriptor.KeyedImplementationFactory" target="_top">.NET documentation</a>
      */
-    public Func_3 getKeyedImplementationFactory() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
+    public Func_3<IServiceProvider, Object, Object> getKeyedImplementationFactory() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectKeyedImplementationFactory = null;
         try {
             retObjectKeyedImplementationFactory = classInstance.Get("KeyedImplementationFactory");
-            return (Func_3)retObjectKeyedImplementationFactory;
+            return (Func_3<IServiceProvider, Object, Object>)retObjectKeyedImplementationFactory;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_3", retObjectKeyedImplementationFactory != null ? retObjectKeyedImplementationFactory.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_3<IServiceProvider, Object, Object>", retObjectKeyedImplementationFactory != null ? retObjectKeyedImplementationFactory.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

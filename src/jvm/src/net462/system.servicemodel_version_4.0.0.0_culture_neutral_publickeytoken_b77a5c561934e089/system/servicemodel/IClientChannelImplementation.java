@@ -62,6 +62,8 @@ import system.servicemodel.IExtensionCollection_1;
 import system.servicemodel.IExtensionCollection_1Implementation;
 import system.Uri;
 import system.EventHandler;
+import system.EventHandler_1;
+import system.servicemodel.UnknownMessageReceivedEventArgs;
 
 
 /**
@@ -672,7 +674,7 @@ public class IClientChannelImplementation extends NetObject implements IClientCh
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.IClientChannel.Extensions" target="_top">.NET documentation</a>
      */
-    public IExtensionCollection_1 getExtensions() throws Throwable {
+    public IExtensionCollection_1<IContextChannel> getExtensions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExtensions = null;
@@ -939,6 +941,40 @@ public class IClientChannelImplementation extends NetObject implements IClientCh
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("Opening", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addUnknownMessageReceived.
+     *
+     * @param handler the argument of type {@code EventHandler_1<UnknownMessageReceivedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addUnknownMessageReceived(EventHandler_1<UnknownMessageReceivedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("UnknownMessageReceived", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeUnknownMessageReceived.
+     *
+     * @param handler the argument of type {@code EventHandler_1<UnknownMessageReceivedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeUnknownMessageReceived(EventHandler_1<UnknownMessageReceivedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("UnknownMessageReceived", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

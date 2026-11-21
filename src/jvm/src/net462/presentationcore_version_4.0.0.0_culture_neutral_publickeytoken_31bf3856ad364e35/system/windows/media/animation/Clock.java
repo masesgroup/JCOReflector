@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.windows.threading.DispatcherObject;
 import system.Nullable_1;
+import system.TimeSpan;
 import system.windows.Duration;
 import system.windows.media.animation.Clock;
 import system.windows.media.animation.ClockController;
@@ -283,7 +284,7 @@ public class Clock extends system.windows.threading.DispatcherObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.Clock.CurrentTime" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getCurrentTime() throws Throwable {
+    public Nullable_1<TimeSpan> getCurrentTime() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCurrentTime = null;

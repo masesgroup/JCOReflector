@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.identitymodel.metadata.WebServiceDescriptor;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.identitymodel.protocols.wstrust.EndpointReference;
 
 
 /**
@@ -182,7 +183,7 @@ public class ApplicationServiceDescriptor extends system.identitymodel.metadata.
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.ApplicationServiceDescriptor.Endpoints" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getEndpoints() throws Throwable {
+    public ICollection_1<EndpointReference> getEndpoints() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEndpoints = null;
@@ -204,7 +205,7 @@ public class ApplicationServiceDescriptor extends system.identitymodel.metadata.
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.ApplicationServiceDescriptor.PassiveRequestorEndpoints" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getPassiveRequestorEndpoints() throws Throwable {
+    public ICollection_1<EndpointReference> getPassiveRequestorEndpoints() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectPassiveRequestorEndpoints = null;

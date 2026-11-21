@@ -50,6 +50,8 @@ import system.io.TextReader;
 import system.threading.tasks.Task;
 import system.threading.tasks.Task_1;
 import system.threading.CancellationToken;
+import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.data.common.DbColumn;
 import system.threading.tasks.ValueTask;
 
 
@@ -1430,7 +1432,7 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetColumnSchemaAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 GetColumnSchemaAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException {
+    public Task_1<ReadOnlyCollection_1<DbColumn>> GetColumnSchemaAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetColumnSchemaAsync = null;
@@ -1464,7 +1466,7 @@ public class DbDataReader extends system.MarshalByRefObject implements AutoClose
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReader.GetSchemaTableAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 GetSchemaTableAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.IndexOutOfRangeException {
+    public Task_1<DataTable> GetSchemaTableAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetSchemaTableAsync = null;

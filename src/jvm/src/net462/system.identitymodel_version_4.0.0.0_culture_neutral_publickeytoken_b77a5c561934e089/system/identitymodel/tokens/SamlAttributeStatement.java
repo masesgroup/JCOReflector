@@ -42,6 +42,7 @@ import system.identitymodel.tokens.SamlSubjectStatement;
 import system.identitymodel.tokens.SamlSubject;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.identitymodel.tokens.SamlAttribute;
 import system.xml.XmlDictionaryReader;
 import system.identitymodel.tokens.SamlSerializer;
 import system.identitymodel.selectors.SecurityTokenSerializer;
@@ -179,7 +180,7 @@ public class SamlAttributeStatement extends system.identitymodel.tokens.SamlSubj
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param samlSubject the argument of type {@code SamlSubject}
-     * @param attributes the argument of type {@code IEnumerable_1}
+     * @param attributes the argument of type {@code IEnumerable_1<SamlAttribute>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -198,7 +199,7 @@ public class SamlAttributeStatement extends system.identitymodel.tokens.SamlSubj
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlAttributeStatement.-ctor" target="_top">.NET documentation</a>
      */
-    public SamlAttributeStatement(SamlSubject samlSubject, IEnumerable_1 attributes) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException {
+    public SamlAttributeStatement(SamlSubject samlSubject, IEnumerable_1<SamlAttribute> attributes) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -309,7 +310,7 @@ public class SamlAttributeStatement extends system.identitymodel.tokens.SamlSubj
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlAttributeStatement.Attributes" target="_top">.NET documentation</a>
      */
-    public IList_1 getAttributes() throws Throwable {
+    public IList_1<SamlAttribute> getAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAttributes = null;

@@ -39,6 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.Func_2;
+import system.activities.Activity;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.activities.presentation.ArgumentAccessor;
 
 
 /**
@@ -159,7 +163,7 @@ public class ActivityArgumentHelper extends NetObject  {
      * Invokes the .NET member RegisterAccessorsGenerator.
      *
      * @param activityType the argument of type {@code NetType}
-     * @param argumentAccessorsGenerator the argument of type {@code Func_2}
+     * @param argumentAccessorsGenerator the argument of type {@code Func_2<Activity, IEnumerable_1<ArgumentAccessor>>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -170,7 +174,7 @@ public class ActivityArgumentHelper extends NetObject  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Metadata.ActivityArgumentHelper.RegisterAccessorsGenerator" target="_top">.NET documentation</a>
      */
-    public static void RegisterAccessorsGenerator(NetType activityType, Func_2 argumentAccessorsGenerator) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static void RegisterAccessorsGenerator(NetType activityType, Func_2<Activity, IEnumerable_1<ArgumentAccessor>> argumentAccessorsGenerator) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

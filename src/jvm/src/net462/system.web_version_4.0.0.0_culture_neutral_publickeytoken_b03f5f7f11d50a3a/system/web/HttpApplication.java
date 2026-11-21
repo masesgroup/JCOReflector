@@ -42,6 +42,8 @@ import system.web.HttpContext;
 import system.web.BeginEventHandler;
 import system.web.EndEventHandler;
 import system.Action_2;
+import system.web.HttpContextBase;
+import system.Action;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
 import system.AsyncCallback;
@@ -1408,7 +1410,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
     /**
      * Invokes the .NET member OnExecuteRequestStep.
      *
-     * @param callback the argument of type {@code Action_2}
+     * @param callback the argument of type {@code Action_2<HttpContextBase, Action>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -1424,7 +1426,7 @@ public class HttpApplication extends NetObject implements AutoCloseable {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.HttpApplication.OnExecuteRequestStep" target="_top">.NET documentation</a>
      */
-    public void OnExecuteRequestStep(Action_2 callback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException {
+    public void OnExecuteRequestStep(Action_2<HttpContextBase, Action> callback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

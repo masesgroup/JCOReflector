@@ -18,6 +18,7 @@
 # -----------------------------------------------------------------------------
 
 # --- generics ----------------------------------------------------------------
+[java] generics.GenericAlternateEqualityComparerIsReflected
 [java] generics.GenericCastToGenericTypes
 generics.GenericConstructedEventHandlerTypeIsResolved
 generics.GenericClosedEventHandlerTypeIsResolved

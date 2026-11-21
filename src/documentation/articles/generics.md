@@ -1,12 +1,12 @@
 ---
-title: Generics support (experimental)
+title: Generics support
 _description: Current state of .NET generics support in JCOReflector — what is reflected, what is intentionally skipped, and the Java-language limits behind those choices.
 ---
 
-# Generics support (experimental)
+# Generics support
 
-> [!WARNING]
-> Support for .NET generic types and members is **experimental**. It is controlled by an engine-level `EnableGenerics` switch. Enabling it changes the shape of the generated Java code (see [Impact on non-generic output](#impact-on-non-generic-output) below) and is not yet recommended for production reflection runs. This page documents the current state as of this writing and will be updated as the feature matures.
+> [!NOTE]
+> Support for .NET generic types and members is controlled by an engine-level `EnableGenerics` switch. The switch is off by default in the tool, while the CI that generates the published artifacts, runs the tests and deploys keeps it on. Enabling it changes the shape of the generated Java code (see [Impact on non-generic output](#impact-on-non-generic-output) below).
 
 ## Why generics needed dedicated work
 
@@ -150,7 +150,7 @@ The helper builds the subclass bytecode with the ASM copy that ships inside Cloj
 - **Overload resolution is done by Clojure, not by `javac`.** Clojure sees only the erased signatures, so a call that `javac` resolves through the generic parameter (`Add(T)`) can be bound by Clojure to a more specific overload, for example an explicit-interface `Add(...)`, which throws `UnsupportedOperationException`. Hinting the arguments as `IJCOBridgeReflected`, as in the example above, forces the intended overload. When no hint is enough (for example `List_1.Sort` with a `Comparison_1`), select the method by reflection.
 - **Instances only.** The helper does not make static members or method-level type parameters reachable; the [exclusions listed above](#what-is-intentionally-not-reflected) are the same for every language.
 - **Java versions.** The Clojure generics tests pass on Java 8, 11, 17, 21 and 25.
-- **Experimental.** Like the feature it supports, the helper lives in the test sources and may change.
+- **Test-only helper.** The helper lives in the test sources and may change.
 
 ## Known gaps
 
@@ -168,7 +168,6 @@ Members:
 - `ImmutableArray<T>.AddRange`
 - `Sse41.Extract`
 - `TryFormat` on `Guid`, `Version`, `Rune`, `IPAddress` and `IPNetwork`
-- `GetPinnableReference` on `Span<T>` and `ReadOnlySpan<T>` — redundant: both are `ref struct` types and, when generics are enabled, they are already excluded as whole types (see [What is intentionally not reflected](#what-is-intentionally-not-reflected)). The entries are to be removed.
 
 `SyndicationElementExtensionCollection.Add`, `ImmutableArray<T>.AddRange`, `Sse41.Extract` and `TryFormat` are genuine Java erasure collisions between distinct .NET overloads or members (an array next to a `params T[]`, or an inherited explicit-interface member next to a real public one). They cannot be fixed without misrepresenting the .NET API and are expected to stay, unless a better approach turns up.
 

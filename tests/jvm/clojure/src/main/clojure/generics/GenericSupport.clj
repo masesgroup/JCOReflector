@@ -27,7 +27,8 @@
   an anonymous generic subclass: a public no-arg subclass whose Signature is
   Super<TypeArg1, ...>. Methods named in `impls` are overridden and forwarded to Clojure fns."
   (:import [clojure.asm ClassWriter Opcodes Type]
-           [java.lang.reflect Method Modifier]))
+           [java.lang.reflect Method Modifier]
+		   [java.lang.reflect ParameterizedType TypeVariable]))
 
 (def ^:private cache (atom {}))
 (def ^:private counter (atom 0))
@@ -175,6 +176,25 @@
               cls   (define-in-loader super cname bytes)]
           (swap! cache assoc k cls)
           cls))))
+
+(defn assert-closed [tp raw argument]
+  (when-not (instance? ParameterizedType tp)
+    (throw (AssertionError. (str "Expected " (.getSimpleName ^Class raw) "<" (.getSimpleName ^Class argument) ">, got " tp))))
+  (when-not (identical? (.getRawType ^ParameterizedType tp) raw)
+    (throw (AssertionError. (str "Expected raw type " (.getSimpleName ^Class raw) ", got " (.getRawType ^ParameterizedType tp)))))
+  (when-not (identical? (aget (.getActualTypeArguments ^ParameterizedType tp) 0) argument)
+    (throw (AssertionError. (str "Expected type argument " (.getSimpleName ^Class argument) ", got " (aget (.getActualTypeArguments ^ParameterizedType tp) 0))))))
+
+(defn assert-parameterized [tp raw declaring variable-name]
+  (when-not (instance? ParameterizedType tp)
+    (throw (AssertionError. (str "Expected " (.getSimpleName ^Class raw) "<" variable-name ">, got " tp))))
+  (when-not (identical? (.getRawType ^ParameterizedType tp) raw)
+    (throw (AssertionError. (str "Expected raw type " (.getSimpleName ^Class raw) ", got " (.getRawType ^ParameterizedType tp)))))
+  (let [argument (aget (.getActualTypeArguments ^ParameterizedType tp) 0)]
+    (when-not (and (instance? TypeVariable argument)
+                   (identical? (.getGenericDeclaration ^TypeVariable argument) declaring)
+                   (= (.getName ^TypeVariable argument) variable-name))
+      (throw (AssertionError. (str "Expected type variable " variable-name " of " (.getSimpleName ^Class declaring) ", got " argument))))))
 
 (defn new-generic
   "Creates an instance of an anonymous-like subclass of super parameterized with type-args

@@ -143,8 +143,6 @@ namespace MASES.JCOReflector.Engine
                 Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Text\.Rune$", new string[] { "TryFormat" });
                 Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Net\.IPAddress$", new string[] { "TryFormat" });
                 Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Net\.IPNetwork$", new string[] { "TryFormat" });
-                Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Span`1$", new string[] { "GetPinnableReference" });
-                Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.ReadOnlySpan`1$", new string[] { "GetPinnableReference" });
                 Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Collections\.Generic\.IAlternateEqualityComparer`2$", null);
                 Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Windows\.Markup\.INameScopeDictionary$", null);
             }

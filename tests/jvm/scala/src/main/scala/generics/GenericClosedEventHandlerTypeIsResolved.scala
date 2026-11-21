@@ -64,7 +64,8 @@ object GenericClosedEventHandlerTypeIsResolved {
   @throws[Throwable]
   private[generics] def testGenericClosedEventHandlerTypeIsResolved(): Unit = {
     // the signature carries the closed type argument...
-      classOf[AppDomain].getMethod("addFirstChanceException", classOf[EventHandler_1[_ <: R]]).getGenericParameterTypes()(0) match {
+    AppDomain.getClass // keep the import explicit for readers: AppDomain is a reflected class
+    classOf[AppDomain].getMethod("addFirstChanceException", classOf[EventHandler_1[_ <: R]]).getGenericParameterTypes()(0) match {
       case parameterized: java.lang.reflect.ParameterizedType =>
         if (parameterized.getRawType ne classOf[EventHandler_1[_ <: R]])
           throw new AssertionError("Expected an EventHandler_1, got " + parameterized.getRawType)
@@ -79,8 +80,13 @@ object GenericClosedEventHandlerTypeIsResolved {
 
     val handler = new EventHandler_1[FirstChanceExceptionEventArgs]() {
       override def Invoke(sender: NetObject, e: FirstChanceExceptionEventArgs): Unit = {
-        // keep it minimal: this handler runs for every first-chance exception of the process
-        calls.incrementAndGet()
+        // keep it minimal: this handler runs for every first-chance exception of the process,
+        // and it must not raise one itself or it would re-enter
+        try {
+          calls.incrementAndGet()
+        } catch {
+          case t: Throwable => t.printStackTrace()
+        }
       }
     }
 

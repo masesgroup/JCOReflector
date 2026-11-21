@@ -132,7 +132,8 @@ namespace MASES.JCOReflector.Engine
             {
                 // TEMPORARY: parked here to unblock compilation. Each of these is either a genuine Java
                 // erasure limit (two .NET members that can't coexist once type arguments are erased) or a
-                // bug not yet root-caused — revisit before removing.
+                // bug not yet root-caused. The types involved are rarely used, so for now they stay in this
+                // list: revisit them only if a real need comes up.
                 Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.ServiceModel\.Syndication\.SyndicationElementExtensionCollection$", new string[] { "Add" });
                 Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Collections\.Generic\.ICollection`1$", new string[] { "Add", "Remove" });
                 Const.SpecialNames.ExportingAvoidanceMap.Add(@"^System\.Collections\.Immutable\.ImmutableArray`1$", new string[] { "AddRange" });

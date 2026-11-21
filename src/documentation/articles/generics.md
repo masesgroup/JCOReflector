@@ -152,14 +152,17 @@ The helper builds the subclass bytecode with the ASM copy that ships inside Cloj
 - **Java versions.** The Clojure generics tests pass on Java 8, 11, 17, 21 and 25.
 - **Test-only helper.** The helper lives in the test sources and may change.
 
+## Generic constraints
+
+The constraints a .NET generic declares with `where` (`class`, `struct`, `new()`, `notnull`, a base class or interfaces, `allows ref struct`) are not reflected. The generator does not read them: every type parameter of a class, an interface, a delegate, an enumerator or a method is declared in Java as `T extends IJCOBridgeReflected` and nothing else. Java therefore accepts any reflected type as a type argument, including types that .NET would refuse. The constraint is still enforced by the CLR when the closed type is built, so a violation is reported at runtime and not at compile time.
+
 ## Known gaps
 
-A number of types and members are currently excluded through the exporting avoidance map, pending further investigation. The entries are temporary: each is either a genuine Java erasure limit (two .NET members that cannot coexist once type arguments are erased) or a bug not yet root-caused, and they are expected to be revisited in a future iteration.
+A number of types and members are excluded through the exporting avoidance map. Each is either a genuine Java erasure limit (two .NET members that cannot coexist once type arguments are erased) or a consequence of the type arguments the bound allows (see [Bound limitations](#bound-limitations)). The types involved are rarely used, so the entries stay in the list for now and are revisited only if a real need comes up.
 
 Whole types:
 
-- `System.Collections.Generic.IAlternateEqualityComparer<TAlternate,T>` (.NET 9+) — its `Equals(TAlternate, T)` collides with `NetObject.Equals` similarly to the cases above, but on two *different* type parameters, which the current renaming logic does not yet detect.
-- `System.Windows.Markup.INameScopeDictionary` — its `Implementation` class is missing members it inherits transitively through `IDictionary<TKey,TValue>`; the class-generation step currently only collects members declared directly on the interface being processed, not the full transitive interface closure.
+- `System.Windows.Markup.INameScopeDictionary` — it extends `IDictionary<string, object>`. The type arguments are native types, which the bound does not allow, so the Java interface extends the raw `IDictionary_2`. Its `Implementation` class declares the members with the native types and does not implement the erased abstract methods of the raw base interface: javac reports that `INameScopeDictionaryImplementation` does not override `Add(IJCOBridgeReflected,IJCOBridgeReflected)` of `IDictionary_2`. It is a WPF/XAML markup interface.
 
 Members:
 
@@ -176,7 +179,7 @@ A whole-type entry (one without a member list) also stops the type itself from b
 ### Root causes still open
 
 - **`ICollection<T>.Add` and `ICollection<T>.Remove`.** Resolving constructed type arguments recursively is now done for member signatures (see [Constructed generic types in member signatures](#constructed-generic-types-in-member-signatures)), and it does not remove the need for these entries. They appear to hide a Java erasure collision between a member of the derived interface and one inherited from `ICollection<KeyValuePair<TKey,TValue>>`: `IDictionary<TKey,TValue>.Remove(TKey)` and `ICollection<T>.Remove(T)` both erase to `Remove(IJCOBridgeReflected)`. The collision is not detected today, because the inherited interface exposes the substituted parameter (`KeyValuePair<TKey,TValue>`) rather than a type parameter, and the rename logic described in [Renaming](#renaming-to-avoid-erasure-collisions) is applied to classes only. `ISet<T>.Add` adds a different return type to the same signature.
-- **Transitive interface closure.** The generated `Implementation` class of an interface only collects the methods declared directly on that interface, not the full transitive interface closure. This causes the `INameScopeDictionary` `Implementation` class to miss members it inherits through `IDictionary<TKey,TValue>`.
+- **Interfaces that extend a generic interface closed over native types.** An interface such as `INameScopeDictionary : IDictionary<string, object>` cannot name its base interface with type arguments, because `string` and `object` are not allowed by the bound, so the Java interface extends the raw one and the generated `Implementation` class would have to implement the erased abstract methods of that raw base. It is the same trade-off described in [Bound limitations](#bound-limitations), and the type is left out of the reflected ones.
 
 ## Impact on non-generic output
 

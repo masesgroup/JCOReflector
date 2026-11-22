@@ -142,7 +142,7 @@ namespace MASES.JCOReflector.Engine
             if (EnableGenerics && item.IsGenericTypeDefinition)
             {
                 Type[] genericArguments = item.GetGenericArguments();
-                string classParameters = BuildTypeParameters(genericArguments, imports);
+                string classParameters = string.Join(", ", genericArguments.Select(t => $"{t.Name} extends IJCOBridgeReflected"));
                 enumeratorStr = enumeratorStr.Replace(Const.Class.GENERIC_CLASS_PARAMETERS, classParameters);
             }
 

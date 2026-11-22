@@ -314,7 +314,7 @@ namespace MASES.JCOReflector.Engine
                             if (methodGenericArgs.Length > 0)
                             {
                                 // Compiles the exact Java declarationLayout: "<T extends IJCOBridgeReflected>"
-                                methodGenericMarker = $"<{BuildTypeParameters(methodGenericArgs, imports)}> ";
+                                methodGenericMarker = $"<{string.Join(", ", methodGenericArgs.Select(t => $"{t.Name} extends IJCOBridgeReflected"))}> ";
                             }
                         }
 
@@ -631,7 +631,7 @@ namespace MASES.JCOReflector.Engine
                                 Type[] methodGenericArgs = item.GetGenericArguments();
                                 if (methodGenericArgs.Length > 0)
                                 {
-                                    interfaceGenericMarker = $"<{BuildTypeParameters(methodGenericArgs, imports)}> ";
+                                    interfaceGenericMarker = $"<{string.Join(", ", methodGenericArgs.Select(t => $"{t.Name} extends IJCOBridgeReflected"))}> ";
                                 }
                             }
 

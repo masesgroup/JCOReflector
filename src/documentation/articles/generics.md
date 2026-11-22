@@ -156,6 +156,16 @@ The helper builds the subclass bytecode with the ASM copy that ships inside Cloj
 
 The constraints a .NET generic declares with `where` (`class`, `struct`, `new()`, `notnull`, a base class or interfaces, `allows ref struct`) are not reflected. The generator does not read them: every type parameter of a class, an interface, a delegate, an enumerator or a method is declared in Java as `T extends IJCOBridgeReflected` and nothing else. Java therefore accepts any reflected type as a type argument, including types that .NET would refuse. The constraint is still enforced by the CLR when the closed type is built, so a violation is reported at runtime and not at compile time.
 
+Carrying the constraints to the Java bound of the type parameter was tried, and it does not work for the constraints that name a class:
+
+- **The enum wrappers do not extend `ValueType`.** `where T : struct` is recorded by the compiler as a `ValueType` constraint, and a bound on that class would reject `Nullable<T>` over an enum, which is the most common use of `struct` in the base class library: the generated enum classes extend `NetEnum`, not `Enum` or `ValueType`. The same applies to `where T : Enum`.
+- **A class bound changes the erasure of the type parameter.** With `T extends IJCOBridgeReflected` the erasure is `IJCOBridgeReflected`. With a base class bound it is that class, so a member such as `CopyTo(T[], int)` of a generic collection collides with the `CopyTo(ConfigurationElement[], int)` of its non-generic base class, and javac reports a name clash.
+
+The other constraints have no usable Java counterpart:
+
+- **Interface constraints** could be added as further bounds after `IJCOBridgeReflected` (`T extends IJCOBridgeReflected & IComparable_1<T>`), which does not change the erasure. A generated wrapper implements an interface only if all its members are public, so a valid type argument could still be rejected by javac. A use-site check repeating the decision made for the `implements` clause would be needed.
+- **`class`, `new()` and `notnull`** say nothing Java can express.
+
 ## Known gaps
 
 A number of types and members are excluded through the exporting avoidance map. Each is either a genuine Java erasure limit (two .NET members that cannot coexist once type arguments are erased) or a consequence of the type arguments the bound allows (see [Bound limitations](#bound-limitations)). The types involved are rarely used, so the entries stay in the list for now and are revisited only if a real need comes up.

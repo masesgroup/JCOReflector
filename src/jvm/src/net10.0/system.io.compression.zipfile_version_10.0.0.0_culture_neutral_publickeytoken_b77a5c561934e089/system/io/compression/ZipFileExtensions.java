@@ -375,7 +375,7 @@ public class ZipFileExtensions extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Compression.ZipFileExtensions.CreateEntryFromFileAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 CreateEntryFromFileAsync(ZipArchive destination, java.lang.String sourceFileName, java.lang.String entryName, CompressionLevel compressionLevel, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public static Task_1<ZipArchiveEntry> CreateEntryFromFileAsync(ZipArchive destination, java.lang.String sourceFileName, java.lang.String entryName, CompressionLevel compressionLevel, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateEntryFromFileAsync = null;
@@ -405,7 +405,7 @@ public class ZipFileExtensions extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Compression.ZipFileExtensions.CreateEntryFromFileAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 CreateEntryFromFileAsync(ZipArchive destination, java.lang.String sourceFileName, java.lang.String entryName, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public static Task_1<ZipArchiveEntry> CreateEntryFromFileAsync(ZipArchive destination, java.lang.String sourceFileName, java.lang.String entryName, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateEntryFromFileAsync = null;

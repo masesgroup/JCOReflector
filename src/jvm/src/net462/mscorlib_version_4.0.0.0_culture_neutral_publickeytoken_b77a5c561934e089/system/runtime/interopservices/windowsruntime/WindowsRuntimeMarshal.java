@@ -42,6 +42,7 @@ import system.runtime.interopservices.windowsruntime.IActivationFactory;
 import system.runtime.interopservices.windowsruntime.IActivationFactoryImplementation;
 import system.Func_2;
 import system.Action_1;
+import system.runtime.interopservices.windowsruntime.EventRegistrationToken;
 
 
 /**
@@ -194,7 +195,7 @@ public class WindowsRuntimeMarshal extends NetObject  {
      *
      * @param <T> the type of the generic argument T
      * @param addMethod the argument of type {@code Func_2}
-     * @param removeMethod the argument of type {@code Action_1}
+     * @param removeMethod the argument of type {@code Action_1<EventRegistrationToken>}
      * @param handler the argument of type {@code T}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -215,7 +216,7 @@ public class WindowsRuntimeMarshal extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMarshal.AddEventHandler" target="_top">.NET documentation</a>
      */
-    public static <T extends IJCOBridgeReflected> void AddEventHandler(Func_2 addMethod, Action_1 removeMethod, T handler) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException {
+    public static <T extends IJCOBridgeReflected> void AddEventHandler(Func_2 addMethod, Action_1<EventRegistrationToken> removeMethod, T handler) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -228,7 +229,7 @@ public class WindowsRuntimeMarshal extends NetObject  {
     /**
      * Invokes the .NET member RemoveAllEventHandlers.
      *
-     * @param removeMethod the argument of type {@code Action_1}
+     * @param removeMethod the argument of type {@code Action_1<EventRegistrationToken>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -249,7 +250,7 @@ public class WindowsRuntimeMarshal extends NetObject  {
      * @throws system.AggregateException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMarshal.RemoveAllEventHandlers" target="_top">.NET documentation</a>
      */
-    public static void RemoveAllEventHandlers(Action_1 removeMethod) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.AggregateException {
+    public static void RemoveAllEventHandlers(Action_1<EventRegistrationToken> removeMethod) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.AggregateException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -263,7 +264,7 @@ public class WindowsRuntimeMarshal extends NetObject  {
      * Invokes the .NET member RemoveEventHandler.
      *
      * @param <T> the type of the generic argument T
-     * @param removeMethod the argument of type {@code Action_1}
+     * @param removeMethod the argument of type {@code Action_1<EventRegistrationToken>}
      * @param handler the argument of type {@code T}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -284,7 +285,7 @@ public class WindowsRuntimeMarshal extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMarshal.RemoveEventHandler" target="_top">.NET documentation</a>
      */
-    public static <T extends IJCOBridgeReflected> void RemoveEventHandler(Action_1 removeMethod, T handler) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException {
+    public static <T extends IJCOBridgeReflected> void RemoveEventHandler(Action_1<EventRegistrationToken> removeMethod, T handler) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

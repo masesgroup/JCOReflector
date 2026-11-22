@@ -119,7 +119,7 @@ public interface IObservable_1<T extends IJCOBridgeReflected> extends IJCOBridge
 
     // Methods section
     
-    public IDisposable Subscribe(IObserver_1 observer) throws Throwable;
+    public IDisposable Subscribe(IObserver_1<T> observer) throws Throwable;
 
 
     

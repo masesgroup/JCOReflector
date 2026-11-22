@@ -154,7 +154,7 @@ public class IAsyncEnumerable_1Implementation<T extends IJCOBridgeReflected> ext
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.IAsyncEnumerable-1.GetAsyncEnumerator" target="_top">.NET documentation</a>
      */
-    public IAsyncEnumerator_1 GetAsyncEnumerator(CancellationToken cancellationToken) throws Throwable {
+    public IAsyncEnumerator_1<T> GetAsyncEnumerator(CancellationToken cancellationToken) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetAsyncEnumerator = null;

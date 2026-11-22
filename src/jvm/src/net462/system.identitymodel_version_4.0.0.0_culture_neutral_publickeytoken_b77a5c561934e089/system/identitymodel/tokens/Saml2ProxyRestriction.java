@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.objectmodel.Collection_1;
+import system.Uri;
 import system.Nullable_1;
 
 
@@ -181,7 +182,7 @@ public class Saml2ProxyRestriction extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2ProxyRestriction.Audiences" target="_top">.NET documentation</a>
      */
-    public Collection_1 getAudiences() throws Throwable {
+    public Collection_1<Uri> getAudiences() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAudiences = null;

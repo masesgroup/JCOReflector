@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.Action_2;
+import system.activities.Activity;
+import system.activities.Argument;
 import system.Func_2;
 
 
@@ -181,15 +183,15 @@ public class ArgumentAccessor extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ArgumentAccessor.Setter" target="_top">.NET documentation</a>
      */
-    public Action_2 getSetter() throws Throwable {
+    public Action_2<Activity, Argument> getSetter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSetter = null;
         try {
             retObjectSetter = classInstance.Get("Setter");
-            return (Action_2)retObjectSetter;
+            return (Action_2<Activity, Argument>)retObjectSetter;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_2", retObjectSetter != null ? retObjectSetter.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_2<Activity, Argument>", retObjectSetter != null ? retObjectSetter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,7 +204,7 @@ public class ArgumentAccessor extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ArgumentAccessor.Setter" target="_top">.NET documentation</a>
      */
-    public void setSetter(Action_2 Setter) throws Throwable {
+    public void setSetter(Action_2<Activity, Argument> Setter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -219,15 +221,15 @@ public class ArgumentAccessor extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ArgumentAccessor.Getter" target="_top">.NET documentation</a>
      */
-    public Func_2 getGetter() throws Throwable {
+    public Func_2<Activity, Argument> getGetter() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetter = null;
         try {
             retObjectGetter = classInstance.Get("Getter");
-            return (Func_2)retObjectGetter;
+            return (Func_2<Activity, Argument>)retObjectGetter;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2", retObjectGetter != null ? retObjectGetter.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2<Activity, Argument>", retObjectGetter != null ? retObjectGetter.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +242,7 @@ public class ArgumentAccessor extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ArgumentAccessor.Getter" target="_top">.NET documentation</a>
      */
-    public void setGetter(Func_2 Getter) throws Throwable {
+    public void setGetter(Func_2<Activity, Argument> Getter) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

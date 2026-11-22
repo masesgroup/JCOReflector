@@ -227,8 +227,8 @@ public class LiteralEncoder extends system.ValueType  {
     /**
      * Invokes the .NET member TaggedScalar.
      *
-     * @param type the argument of type {@code Action_1}
-     * @param scalar the argument of type {@code Action_1}
+     * @param type the argument of type {@code Action_1<CustomAttributeElementTypeEncoder>}
+     * @param scalar the argument of type {@code Action_1<ScalarEncoder>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -241,7 +241,7 @@ public class LiteralEncoder extends system.ValueType  {
      * @throws system.RankException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.LiteralEncoder.TaggedScalar" target="_top">.NET documentation</a>
      */
-    public void TaggedScalar(Action_1 type, Action_1 scalar) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException {
+    public void TaggedScalar(Action_1<CustomAttributeElementTypeEncoder> type, Action_1<ScalarEncoder> scalar) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -272,8 +272,8 @@ public class LiteralEncoder extends system.ValueType  {
     /**
      * Invokes the .NET member TaggedVector.
      *
-     * @param arrayType the argument of type {@code Action_1}
-     * @param vector the argument of type {@code Action_1}
+     * @param arrayType the argument of type {@code Action_1<CustomAttributeArrayTypeEncoder>}
+     * @param vector the argument of type {@code Action_1<VectorEncoder>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -286,7 +286,7 @@ public class LiteralEncoder extends system.ValueType  {
      * @throws system.RankException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.LiteralEncoder.TaggedVector" target="_top">.NET documentation</a>
      */
-    public void TaggedVector(Action_1 arrayType, Action_1 vector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException {
+    public void TaggedVector(Action_1<CustomAttributeArrayTypeEncoder> arrayType, Action_1<VectorEncoder> vector) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

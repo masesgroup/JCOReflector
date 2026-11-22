@@ -369,7 +369,7 @@ public class Form extends system.windows.forms.ContainerControl  {
      * @throws system.componentmodel.Win32Exception if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Form.ShowDialogAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 ShowDialogAsync() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.threading.LockRecursionException, system.NullReferenceException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception {
+    public Task_1<DialogResult> ShowDialogAsync() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.threading.LockRecursionException, system.NullReferenceException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectShowDialogAsync = null;
@@ -405,7 +405,7 @@ public class Form extends system.windows.forms.ContainerControl  {
      * @throws system.componentmodel.Win32Exception if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Forms.Form.ShowDialogAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 ShowDialogAsync(IWin32Window owner) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.threading.LockRecursionException, system.NullReferenceException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception {
+    public Task_1<DialogResult> ShowDialogAsync(IWin32Window owner) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.threading.LockRecursionException, system.NullReferenceException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectShowDialogAsync = null;

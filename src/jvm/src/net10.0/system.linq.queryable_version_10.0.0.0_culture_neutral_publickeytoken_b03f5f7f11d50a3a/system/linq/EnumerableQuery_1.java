@@ -160,11 +160,11 @@ public class EnumerableQuery_1<T extends IJCOBridgeReflected> extends system.lin
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param enumerable the argument of type {@code IEnumerable_1}
+     * @param enumerable the argument of type {@code IEnumerable_1<T>}
      * @throws Throwable if the .NET constructor fails
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.EnumerableQuery-1.-ctor" target="_top">.NET documentation</a>
      */
-    public EnumerableQuery_1(IEnumerable_1 enumerable) throws Throwable {
+    public EnumerableQuery_1(IEnumerable_1<T> enumerable) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

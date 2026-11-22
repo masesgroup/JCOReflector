@@ -201,7 +201,7 @@ public class ReadOnlyCollectionBuilder_1<T extends IJCOBridgeReflected> extends 
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param collection the argument of type {@code IEnumerable_1}
+     * @param collection the argument of type {@code IEnumerable_1<T>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -214,7 +214,7 @@ public class ReadOnlyCollectionBuilder_1<T extends IJCOBridgeReflected> extends 
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.ReadOnlyCollectionBuilder-1.-ctor" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollectionBuilder_1(IEnumerable_1 collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public ReadOnlyCollectionBuilder_1(IEnumerable_1<T> collection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -339,7 +339,7 @@ public class ReadOnlyCollectionBuilder_1<T extends IJCOBridgeReflected> extends 
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.CompilerServices.ReadOnlyCollectionBuilder-1.ToReadOnlyCollection" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 ToReadOnlyCollection() throws Throwable, system.ArgumentNullException {
+    public ReadOnlyCollection_1<T> ToReadOnlyCollection() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectToReadOnlyCollection = null;

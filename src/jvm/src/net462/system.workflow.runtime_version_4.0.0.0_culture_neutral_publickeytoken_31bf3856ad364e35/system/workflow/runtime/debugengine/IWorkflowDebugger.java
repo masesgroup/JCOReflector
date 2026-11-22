@@ -139,7 +139,7 @@ public interface IWorkflowDebugger extends IJCOBridgeReflected {
 
     public void SetInitialActivityStatus(Guid programId, Guid scheduleTypeId, Guid instanceId, java.lang.String activityQualifiedName, java.lang.String hierarchicalActivityId, ActivityExecutionStatus status, int stateReaderId) throws Throwable;
 
-    public void UpdateHandlerMethodsForActivity(Guid programId, Guid scheduleTypeId, java.lang.String activityQualifiedName, List_1 handlerMethods) throws Throwable;
+    public void UpdateHandlerMethodsForActivity(Guid programId, Guid scheduleTypeId, java.lang.String activityQualifiedName, List_1<ActivityHandlerDescriptor> handlerMethods) throws Throwable;
 
 
     

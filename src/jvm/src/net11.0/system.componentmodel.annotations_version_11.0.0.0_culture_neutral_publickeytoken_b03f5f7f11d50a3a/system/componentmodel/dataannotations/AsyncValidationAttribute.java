@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.componentmodel.dataannotations.ValidationAttribute;
 import system.threading.tasks.Task_1;
+import system.componentmodel.dataannotations.ValidationResult;
 import system.componentmodel.dataannotations.ValidationContext;
 import system.threading.CancellationToken;
 
@@ -211,7 +212,7 @@ public class AsyncValidationAttribute extends system.componentmodel.dataannotati
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.AsyncValidationAttribute.GetValidationResultAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 GetValidationResultAsync(NetObject value, ValidationContext validationContext, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.globalization.CultureNotFoundException, system.NullReferenceException {
+    public Task_1<ValidationResult> GetValidationResultAsync(NetObject value, ValidationContext validationContext, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetValidationResultAsync = null;

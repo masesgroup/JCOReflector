@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.EventArgs;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.componentmodel.composition.primitives.ComposablePartDefinition;
 import system.componentmodel.composition.hosting.AtomicComposition;
 
 
@@ -158,14 +159,14 @@ public class ComposablePartCatalogChangeEventArgs extends system.EventArgs  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param addedDefinitions the argument of type {@code IEnumerable_1}
-     * @param removedDefinitions the argument of type {@code IEnumerable_1}
+     * @param addedDefinitions the argument of type {@code IEnumerable_1<ComposablePartDefinition>}
+     * @param removedDefinitions the argument of type {@code IEnumerable_1<ComposablePartDefinition>}
      * @param atomicComposition the argument of type {@code AtomicComposition}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs.-ctor" target="_top">.NET documentation</a>
      */
-    public ComposablePartCatalogChangeEventArgs(IEnumerable_1 addedDefinitions, IEnumerable_1 removedDefinitions, AtomicComposition atomicComposition) throws Throwable, system.ArgumentNullException {
+    public ComposablePartCatalogChangeEventArgs(IEnumerable_1<ComposablePartDefinition> addedDefinitions, IEnumerable_1<ComposablePartDefinition> removedDefinitions, AtomicComposition atomicComposition) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -191,7 +192,7 @@ public class ComposablePartCatalogChangeEventArgs extends system.EventArgs  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs.AddedDefinitions" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getAddedDefinitions() throws Throwable {
+    public IEnumerable_1<ComposablePartDefinition> getAddedDefinitions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAddedDefinitions = null;
@@ -213,7 +214,7 @@ public class ComposablePartCatalogChangeEventArgs extends system.EventArgs  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.ComposablePartCatalogChangeEventArgs.RemovedDefinitions" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getRemovedDefinitions() throws Throwable {
+    public IEnumerable_1<ComposablePartDefinition> getRemovedDefinitions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRemovedDefinitions = null;

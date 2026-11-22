@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.data.metadata.edm.EdmMember;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.data.metadata.edm.EdmProperty;
 import system.data.metadata.edm.BuiltInTypeKind;
 import system.data.metadata.edm.RelationshipEndMember;
 import system.data.metadata.edm.RelationshipType;
@@ -171,7 +172,7 @@ public class NavigationProperty extends system.data.metadata.edm.EdmMember  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.NavigationProperty.GetDependentProperties" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetDependentProperties() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public IEnumerable_1<EdmProperty> GetDependentProperties() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetDependentProperties = null;

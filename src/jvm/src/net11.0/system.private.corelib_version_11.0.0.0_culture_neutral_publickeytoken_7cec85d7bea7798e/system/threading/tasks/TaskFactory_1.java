@@ -46,6 +46,8 @@ import system.threading.tasks.Task_1;
 import system.threading.tasks.Task;
 import system.Func_2;
 import system.Func_3;
+import system.AsyncCallback;
+import system.Object;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
 import system.Func_6;
@@ -306,7 +308,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.ContinueWhenAll" target="_top">.NET documentation</a>
      */
-    public Task_1 ContinueWhenAll(Task[] tasks, Func_2 continuationFunction, CancellationToken cancellationToken, TaskContinuationOptions continuationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+    public Task_1<TResult> ContinueWhenAll(Task[] tasks, Func_2 continuationFunction, CancellationToken cancellationToken, TaskContinuationOptions continuationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContinueWhenAll = null;
@@ -343,7 +345,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.ContinueWhenAll" target="_top">.NET documentation</a>
      */
-    public Task_1 ContinueWhenAll(Task[] tasks, Func_2 continuationFunction, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+    public Task_1<TResult> ContinueWhenAll(Task[] tasks, Func_2 continuationFunction, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContinueWhenAll = null;
@@ -380,7 +382,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.ContinueWhenAll" target="_top">.NET documentation</a>
      */
-    public Task_1 ContinueWhenAll(Task[] tasks, Func_2 continuationFunction, TaskContinuationOptions continuationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+    public Task_1<TResult> ContinueWhenAll(Task[] tasks, Func_2 continuationFunction, TaskContinuationOptions continuationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContinueWhenAll = null;
@@ -416,7 +418,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.ContinueWhenAll" target="_top">.NET documentation</a>
      */
-    public Task_1 ContinueWhenAll(Task[] tasks, Func_2 continuationFunction) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+    public Task_1<TResult> ContinueWhenAll(Task[] tasks, Func_2 continuationFunction) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContinueWhenAll = null;
@@ -456,7 +458,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.ContinueWhenAll" target="_top">.NET documentation</a>
      */
-    public <TAntecedentResult extends IJCOBridgeReflected> Task_1 ContinueWhenAll(Task_1[] tasks, Func_2 continuationFunction, CancellationToken cancellationToken, TaskContinuationOptions continuationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+    public <TAntecedentResult extends IJCOBridgeReflected> Task_1<TResult> ContinueWhenAll(Task_1[] tasks, Func_2 continuationFunction, CancellationToken cancellationToken, TaskContinuationOptions continuationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContinueWhenAll = null;
@@ -494,7 +496,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.ContinueWhenAll" target="_top">.NET documentation</a>
      */
-    public <TAntecedentResult extends IJCOBridgeReflected> Task_1 ContinueWhenAll(Task_1[] tasks, Func_2 continuationFunction, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+    public <TAntecedentResult extends IJCOBridgeReflected> Task_1<TResult> ContinueWhenAll(Task_1[] tasks, Func_2 continuationFunction, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContinueWhenAll = null;
@@ -532,7 +534,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.ContinueWhenAll" target="_top">.NET documentation</a>
      */
-    public <TAntecedentResult extends IJCOBridgeReflected> Task_1 ContinueWhenAll(Task_1[] tasks, Func_2 continuationFunction, TaskContinuationOptions continuationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+    public <TAntecedentResult extends IJCOBridgeReflected> Task_1<TResult> ContinueWhenAll(Task_1[] tasks, Func_2 continuationFunction, TaskContinuationOptions continuationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContinueWhenAll = null;
@@ -569,7 +571,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.ContinueWhenAll" target="_top">.NET documentation</a>
      */
-    public <TAntecedentResult extends IJCOBridgeReflected> Task_1 ContinueWhenAll(Task_1[] tasks, Func_2 continuationFunction) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+    public <TAntecedentResult extends IJCOBridgeReflected> Task_1<TResult> ContinueWhenAll(Task_1[] tasks, Func_2 continuationFunction) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContinueWhenAll = null;
@@ -588,7 +590,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * Invokes the .NET member ContinueWhenAny.
      *
      * @param tasks the argument of type {@code Task[]}
-     * @param continuationFunction the argument of type {@code Func_2}
+     * @param continuationFunction the argument of type {@code Func_2<Task, TResult>}
      * @param cancellationToken the argument of type {@code CancellationToken}
      * @param continuationOptions the argument of type {@code TaskContinuationOptions}
      * @param scheduler the argument of type {@code TaskScheduler}
@@ -608,7 +610,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.ContinueWhenAny" target="_top">.NET documentation</a>
      */
-    public Task_1 ContinueWhenAny(Task[] tasks, Func_2 continuationFunction, CancellationToken cancellationToken, TaskContinuationOptions continuationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+    public Task_1<TResult> ContinueWhenAny(Task[] tasks, Func_2<Task, TResult> continuationFunction, CancellationToken cancellationToken, TaskContinuationOptions continuationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContinueWhenAny = null;
@@ -627,7 +629,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * Invokes the .NET member ContinueWhenAny.
      *
      * @param tasks the argument of type {@code Task[]}
-     * @param continuationFunction the argument of type {@code Func_2}
+     * @param continuationFunction the argument of type {@code Func_2<Task, TResult>}
      * @param cancellationToken the argument of type {@code CancellationToken}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -645,7 +647,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.ContinueWhenAny" target="_top">.NET documentation</a>
      */
-    public Task_1 ContinueWhenAny(Task[] tasks, Func_2 continuationFunction, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+    public Task_1<TResult> ContinueWhenAny(Task[] tasks, Func_2<Task, TResult> continuationFunction, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContinueWhenAny = null;
@@ -664,7 +666,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * Invokes the .NET member ContinueWhenAny.
      *
      * @param tasks the argument of type {@code Task[]}
-     * @param continuationFunction the argument of type {@code Func_2}
+     * @param continuationFunction the argument of type {@code Func_2<Task, TResult>}
      * @param continuationOptions the argument of type {@code TaskContinuationOptions}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -682,7 +684,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.ContinueWhenAny" target="_top">.NET documentation</a>
      */
-    public Task_1 ContinueWhenAny(Task[] tasks, Func_2 continuationFunction, TaskContinuationOptions continuationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+    public Task_1<TResult> ContinueWhenAny(Task[] tasks, Func_2<Task, TResult> continuationFunction, TaskContinuationOptions continuationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContinueWhenAny = null;
@@ -701,7 +703,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * Invokes the .NET member ContinueWhenAny.
      *
      * @param tasks the argument of type {@code Task[]}
-     * @param continuationFunction the argument of type {@code Func_2}
+     * @param continuationFunction the argument of type {@code Func_2<Task, TResult>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -718,7 +720,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.ContinueWhenAny" target="_top">.NET documentation</a>
      */
-    public Task_1 ContinueWhenAny(Task[] tasks, Func_2 continuationFunction) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+    public Task_1<TResult> ContinueWhenAny(Task[] tasks, Func_2<Task, TResult> continuationFunction) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContinueWhenAny = null;
@@ -758,7 +760,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.ContinueWhenAny" target="_top">.NET documentation</a>
      */
-    public <TAntecedentResult extends IJCOBridgeReflected> Task_1 ContinueWhenAny(Task_1[] tasks, Func_2 continuationFunction, CancellationToken cancellationToken, TaskContinuationOptions continuationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+    public <TAntecedentResult extends IJCOBridgeReflected> Task_1<TResult> ContinueWhenAny(Task_1[] tasks, Func_2 continuationFunction, CancellationToken cancellationToken, TaskContinuationOptions continuationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContinueWhenAny = null;
@@ -796,7 +798,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.ContinueWhenAny" target="_top">.NET documentation</a>
      */
-    public <TAntecedentResult extends IJCOBridgeReflected> Task_1 ContinueWhenAny(Task_1[] tasks, Func_2 continuationFunction, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+    public <TAntecedentResult extends IJCOBridgeReflected> Task_1<TResult> ContinueWhenAny(Task_1[] tasks, Func_2 continuationFunction, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContinueWhenAny = null;
@@ -834,7 +836,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.ContinueWhenAny" target="_top">.NET documentation</a>
      */
-    public <TAntecedentResult extends IJCOBridgeReflected> Task_1 ContinueWhenAny(Task_1[] tasks, Func_2 continuationFunction, TaskContinuationOptions continuationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+    public <TAntecedentResult extends IJCOBridgeReflected> Task_1<TResult> ContinueWhenAny(Task_1[] tasks, Func_2 continuationFunction, TaskContinuationOptions continuationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContinueWhenAny = null;
@@ -871,7 +873,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.ContinueWhenAny" target="_top">.NET documentation</a>
      */
-    public <TAntecedentResult extends IJCOBridgeReflected> Task_1 ContinueWhenAny(Task_1[] tasks, Func_2 continuationFunction) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+    public <TAntecedentResult extends IJCOBridgeReflected> Task_1<TResult> ContinueWhenAny(Task_1[] tasks, Func_2 continuationFunction) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.NullReferenceException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContinueWhenAny = null;
@@ -889,8 +891,8 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
     /**
      * Invokes the .NET member FromAsync.
      *
-     * @param beginMethod the argument of type {@code Func_3}
-     * @param endMethod the argument of type {@code Func_2}
+     * @param beginMethod the argument of type {@code Func_3<AsyncCallback, Object, IAsyncResult>}
+     * @param endMethod the argument of type {@code Func_2<IAsyncResult, TResult>}
      * @param state the argument of type {@code NetObject}
      * @param creationOptions the argument of type {@code TaskCreationOptions}
      * @return the value returned by the .NET member
@@ -906,7 +908,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.FromAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 FromAsync(Func_3 beginMethod, Func_2 endMethod, NetObject state, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+    public Task_1<TResult> FromAsync(Func_3<AsyncCallback, Object, IAsyncResult> beginMethod, Func_2<IAsyncResult, TResult> endMethod, NetObject state, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFromAsync = null;
@@ -924,8 +926,8 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
     /**
      * Invokes the .NET member FromAsync.
      *
-     * @param beginMethod the argument of type {@code Func_3}
-     * @param endMethod the argument of type {@code Func_2}
+     * @param beginMethod the argument of type {@code Func_3<AsyncCallback, Object, IAsyncResult>}
+     * @param endMethod the argument of type {@code Func_2<IAsyncResult, TResult>}
      * @param state the argument of type {@code NetObject}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -940,7 +942,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.FromAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 FromAsync(Func_3 beginMethod, Func_2 endMethod, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+    public Task_1<TResult> FromAsync(Func_3<AsyncCallback, Object, IAsyncResult> beginMethod, Func_2<IAsyncResult, TResult> endMethod, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFromAsync = null;
@@ -959,7 +961,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * Invokes the .NET member FromAsync.
      *
      * @param asyncResult the argument of type {@code IAsyncResult}
-     * @param endMethod the argument of type {@code Func_2}
+     * @param endMethod the argument of type {@code Func_2<IAsyncResult, TResult>}
      * @param creationOptions the argument of type {@code TaskCreationOptions}
      * @param scheduler the argument of type {@code TaskScheduler}
      * @return the value returned by the .NET member
@@ -982,7 +984,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.FromAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 FromAsync(IAsyncResult asyncResult, Func_2 endMethod, TaskCreationOptions creationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.ThreadStateException, system.OperationCanceledException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException, system.threading.tasks.TaskSchedulerException {
+    public Task_1<TResult> FromAsync(IAsyncResult asyncResult, Func_2<IAsyncResult, TResult> endMethod, TaskCreationOptions creationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.ThreadStateException, system.OperationCanceledException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFromAsync = null;
@@ -1001,7 +1003,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * Invokes the .NET member FromAsync.
      *
      * @param asyncResult the argument of type {@code IAsyncResult}
-     * @param endMethod the argument of type {@code Func_2}
+     * @param endMethod the argument of type {@code Func_2<IAsyncResult, TResult>}
      * @param creationOptions the argument of type {@code TaskCreationOptions}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -1023,7 +1025,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.FromAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 FromAsync(IAsyncResult asyncResult, Func_2 endMethod, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.ThreadStateException, system.OperationCanceledException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException, system.threading.tasks.TaskSchedulerException {
+    public Task_1<TResult> FromAsync(IAsyncResult asyncResult, Func_2<IAsyncResult, TResult> endMethod, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.ThreadStateException, system.OperationCanceledException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFromAsync = null;
@@ -1042,7 +1044,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * Invokes the .NET member FromAsync.
      *
      * @param asyncResult the argument of type {@code IAsyncResult}
-     * @param endMethod the argument of type {@code Func_2}
+     * @param endMethod the argument of type {@code Func_2<IAsyncResult, TResult>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -1063,7 +1065,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.threading.tasks.TaskSchedulerException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.FromAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 FromAsync(IAsyncResult asyncResult, Func_2 endMethod) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.ThreadStateException, system.OperationCanceledException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException, system.threading.tasks.TaskSchedulerException {
+    public Task_1<TResult> FromAsync(IAsyncResult asyncResult, Func_2<IAsyncResult, TResult> endMethod) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.ThreadStateException, system.OperationCanceledException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFromAsync = null;
@@ -1085,7 +1087,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @param <TArg2> the type of the generic argument TArg2
      * @param <TArg3> the type of the generic argument TArg3
      * @param beginMethod the argument of type {@code Func_6}
-     * @param endMethod the argument of type {@code Func_2}
+     * @param endMethod the argument of type {@code Func_2<IAsyncResult, TResult>}
      * @param arg1 the argument of type {@code TArg1}
      * @param arg2 the argument of type {@code TArg2}
      * @param arg3 the argument of type {@code TArg3}
@@ -1104,7 +1106,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.FromAsync" target="_top">.NET documentation</a>
      */
-    public <TArg1 extends IJCOBridgeReflected, TArg2 extends IJCOBridgeReflected, TArg3 extends IJCOBridgeReflected> Task_1 FromAsync(Func_6 beginMethod, Func_2 endMethod, TArg1 arg1, TArg2 arg2, TArg3 arg3, NetObject state, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+    public <TArg1 extends IJCOBridgeReflected, TArg2 extends IJCOBridgeReflected, TArg3 extends IJCOBridgeReflected> Task_1<TResult> FromAsync(Func_6 beginMethod, Func_2<IAsyncResult, TResult> endMethod, TArg1 arg1, TArg2 arg2, TArg3 arg3, NetObject state, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFromAsync = null;
@@ -1126,7 +1128,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @param <TArg2> the type of the generic argument TArg2
      * @param <TArg3> the type of the generic argument TArg3
      * @param beginMethod the argument of type {@code Func_6}
-     * @param endMethod the argument of type {@code Func_2}
+     * @param endMethod the argument of type {@code Func_2<IAsyncResult, TResult>}
      * @param arg1 the argument of type {@code TArg1}
      * @param arg2 the argument of type {@code TArg2}
      * @param arg3 the argument of type {@code TArg3}
@@ -1144,7 +1146,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.FromAsync" target="_top">.NET documentation</a>
      */
-    public <TArg1 extends IJCOBridgeReflected, TArg2 extends IJCOBridgeReflected, TArg3 extends IJCOBridgeReflected> Task_1 FromAsync(Func_6 beginMethod, Func_2 endMethod, TArg1 arg1, TArg2 arg2, TArg3 arg3, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+    public <TArg1 extends IJCOBridgeReflected, TArg2 extends IJCOBridgeReflected, TArg3 extends IJCOBridgeReflected> Task_1<TResult> FromAsync(Func_6 beginMethod, Func_2<IAsyncResult, TResult> endMethod, TArg1 arg1, TArg2 arg2, TArg3 arg3, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFromAsync = null;
@@ -1165,7 +1167,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @param <TArg1> the type of the generic argument TArg1
      * @param <TArg2> the type of the generic argument TArg2
      * @param beginMethod the argument of type {@code Func_5}
-     * @param endMethod the argument of type {@code Func_2}
+     * @param endMethod the argument of type {@code Func_2<IAsyncResult, TResult>}
      * @param arg1 the argument of type {@code TArg1}
      * @param arg2 the argument of type {@code TArg2}
      * @param state the argument of type {@code NetObject}
@@ -1183,7 +1185,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.FromAsync" target="_top">.NET documentation</a>
      */
-    public <TArg1 extends IJCOBridgeReflected, TArg2 extends IJCOBridgeReflected> Task_1 FromAsync(Func_5 beginMethod, Func_2 endMethod, TArg1 arg1, TArg2 arg2, NetObject state, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+    public <TArg1 extends IJCOBridgeReflected, TArg2 extends IJCOBridgeReflected> Task_1<TResult> FromAsync(Func_5 beginMethod, Func_2<IAsyncResult, TResult> endMethod, TArg1 arg1, TArg2 arg2, NetObject state, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFromAsync = null;
@@ -1204,7 +1206,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @param <TArg1> the type of the generic argument TArg1
      * @param <TArg2> the type of the generic argument TArg2
      * @param beginMethod the argument of type {@code Func_5}
-     * @param endMethod the argument of type {@code Func_2}
+     * @param endMethod the argument of type {@code Func_2<IAsyncResult, TResult>}
      * @param arg1 the argument of type {@code TArg1}
      * @param arg2 the argument of type {@code TArg2}
      * @param state the argument of type {@code NetObject}
@@ -1221,7 +1223,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.FromAsync" target="_top">.NET documentation</a>
      */
-    public <TArg1 extends IJCOBridgeReflected, TArg2 extends IJCOBridgeReflected> Task_1 FromAsync(Func_5 beginMethod, Func_2 endMethod, TArg1 arg1, TArg2 arg2, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+    public <TArg1 extends IJCOBridgeReflected, TArg2 extends IJCOBridgeReflected> Task_1<TResult> FromAsync(Func_5 beginMethod, Func_2<IAsyncResult, TResult> endMethod, TArg1 arg1, TArg2 arg2, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFromAsync = null;
@@ -1241,7 +1243,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      *
      * @param <TArg1> the type of the generic argument TArg1
      * @param beginMethod the argument of type {@code Func_4}
-     * @param endMethod the argument of type {@code Func_2}
+     * @param endMethod the argument of type {@code Func_2<IAsyncResult, TResult>}
      * @param arg1 the argument of type {@code TArg1}
      * @param state the argument of type {@code NetObject}
      * @param creationOptions the argument of type {@code TaskCreationOptions}
@@ -1258,7 +1260,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.FromAsync" target="_top">.NET documentation</a>
      */
-    public <TArg1 extends IJCOBridgeReflected> Task_1 FromAsync(Func_4 beginMethod, Func_2 endMethod, TArg1 arg1, NetObject state, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+    public <TArg1 extends IJCOBridgeReflected> Task_1<TResult> FromAsync(Func_4 beginMethod, Func_2<IAsyncResult, TResult> endMethod, TArg1 arg1, NetObject state, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFromAsync = null;
@@ -1278,7 +1280,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      *
      * @param <TArg1> the type of the generic argument TArg1
      * @param beginMethod the argument of type {@code Func_4}
-     * @param endMethod the argument of type {@code Func_2}
+     * @param endMethod the argument of type {@code Func_2<IAsyncResult, TResult>}
      * @param arg1 the argument of type {@code TArg1}
      * @param state the argument of type {@code NetObject}
      * @return the value returned by the .NET member
@@ -1294,7 +1296,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.FromAsync" target="_top">.NET documentation</a>
      */
-    public <TArg1 extends IJCOBridgeReflected> Task_1 FromAsync(Func_4 beginMethod, Func_2 endMethod, TArg1 arg1, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
+    public <TArg1 extends IJCOBridgeReflected> Task_1<TResult> FromAsync(Func_4 beginMethod, Func_2<IAsyncResult, TResult> endMethod, TArg1 arg1, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFromAsync = null;
@@ -1312,7 +1314,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
     /**
      * Invokes the .NET member StartNew.
      *
-     * @param function the argument of type {@code Func_1}
+     * @param function the argument of type {@code Func_1<TResult>}
      * @param cancellationToken the argument of type {@code CancellationToken}
      * @param creationOptions the argument of type {@code TaskCreationOptions}
      * @param scheduler the argument of type {@code TaskScheduler}
@@ -1330,7 +1332,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.StartNew" target="_top">.NET documentation</a>
      */
-    public Task_1 StartNew(Func_1 function, CancellationToken cancellationToken, TaskCreationOptions creationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+    public Task_1<TResult> StartNew(Func_1<TResult> function, CancellationToken cancellationToken, TaskCreationOptions creationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectStartNew = null;
@@ -1348,7 +1350,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
     /**
      * Invokes the .NET member StartNew.
      *
-     * @param function the argument of type {@code Func_1}
+     * @param function the argument of type {@code Func_1<TResult>}
      * @param cancellationToken the argument of type {@code CancellationToken}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -1364,7 +1366,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.StartNew" target="_top">.NET documentation</a>
      */
-    public Task_1 StartNew(Func_1 function, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+    public Task_1<TResult> StartNew(Func_1<TResult> function, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectStartNew = null;
@@ -1382,7 +1384,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
     /**
      * Invokes the .NET member StartNew.
      *
-     * @param function the argument of type {@code Func_1}
+     * @param function the argument of type {@code Func_1<TResult>}
      * @param creationOptions the argument of type {@code TaskCreationOptions}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -1398,7 +1400,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.StartNew" target="_top">.NET documentation</a>
      */
-    public Task_1 StartNew(Func_1 function, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+    public Task_1<TResult> StartNew(Func_1<TResult> function, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectStartNew = null;
@@ -1416,7 +1418,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
     /**
      * Invokes the .NET member StartNew.
      *
-     * @param function the argument of type {@code Func_1}
+     * @param function the argument of type {@code Func_1<TResult>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -1431,7 +1433,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.StartNew" target="_top">.NET documentation</a>
      */
-    public Task_1 StartNew(Func_1 function) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+    public Task_1<TResult> StartNew(Func_1<TResult> function) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectStartNew = null;
@@ -1449,7 +1451,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
     /**
      * Invokes the .NET member StartNew.
      *
-     * @param function the argument of type {@code Func_2}
+     * @param function the argument of type {@code Func_2<Object, TResult>}
      * @param state the argument of type {@code NetObject}
      * @param cancellationToken the argument of type {@code CancellationToken}
      * @param creationOptions the argument of type {@code TaskCreationOptions}
@@ -1468,7 +1470,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.StartNew" target="_top">.NET documentation</a>
      */
-    public Task_1 StartNew(Func_2 function, NetObject state, CancellationToken cancellationToken, TaskCreationOptions creationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+    public Task_1<TResult> StartNew(Func_2<Object, TResult> function, NetObject state, CancellationToken cancellationToken, TaskCreationOptions creationOptions, TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectStartNew = null;
@@ -1486,7 +1488,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
     /**
      * Invokes the .NET member StartNew.
      *
-     * @param function the argument of type {@code Func_2}
+     * @param function the argument of type {@code Func_2<Object, TResult>}
      * @param state the argument of type {@code NetObject}
      * @param cancellationToken the argument of type {@code CancellationToken}
      * @return the value returned by the .NET member
@@ -1503,7 +1505,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.StartNew" target="_top">.NET documentation</a>
      */
-    public Task_1 StartNew(Func_2 function, NetObject state, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+    public Task_1<TResult> StartNew(Func_2<Object, TResult> function, NetObject state, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectStartNew = null;
@@ -1521,7 +1523,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
     /**
      * Invokes the .NET member StartNew.
      *
-     * @param function the argument of type {@code Func_2}
+     * @param function the argument of type {@code Func_2<Object, TResult>}
      * @param state the argument of type {@code NetObject}
      * @param creationOptions the argument of type {@code TaskCreationOptions}
      * @return the value returned by the .NET member
@@ -1538,7 +1540,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.StartNew" target="_top">.NET documentation</a>
      */
-    public Task_1 StartNew(Func_2 function, NetObject state, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+    public Task_1<TResult> StartNew(Func_2<Object, TResult> function, NetObject state, TaskCreationOptions creationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectStartNew = null;
@@ -1556,7 +1558,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
     /**
      * Invokes the .NET member StartNew.
      *
-     * @param function the argument of type {@code Func_2}
+     * @param function the argument of type {@code Func_2<Object, TResult>}
      * @param state the argument of type {@code NetObject}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -1572,7 +1574,7 @@ public class TaskFactory_1<TResult extends IJCOBridgeReflected> extends NetObjec
      * @throws system.diagnostics.tracing.EventSourceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskFactory-1.StartNew" target="_top">.NET documentation</a>
      */
-    public Task_1 StartNew(Func_2 function, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+    public Task_1<TResult> StartNew(Func_2<Object, TResult> function, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectStartNew = null;

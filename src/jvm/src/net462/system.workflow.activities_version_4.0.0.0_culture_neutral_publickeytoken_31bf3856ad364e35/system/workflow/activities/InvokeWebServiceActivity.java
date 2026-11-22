@@ -43,6 +43,8 @@ import system.IServiceProvider;
 import system.IServiceProviderImplementation;
 import system.workflow.componentmodel.compiler.AccessTypes;
 import system.workflow.componentmodel.WorkflowParameterBindingCollection;
+import system.EventHandler_1;
+import system.workflow.activities.InvokeWebServiceEventArgs;
 
 
 /**
@@ -462,6 +464,74 @@ public class InvokeWebServiceActivity extends system.workflow.componentmodel.Act
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addInvoked.
+     *
+     * @param handler the argument of type {@code EventHandler_1<InvokeWebServiceEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addInvoked(EventHandler_1<InvokeWebServiceEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("Invoked", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeInvoked.
+     *
+     * @param handler the argument of type {@code EventHandler_1<InvokeWebServiceEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeInvoked(EventHandler_1<InvokeWebServiceEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("Invoked", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addInvoking.
+     *
+     * @param handler the argument of type {@code EventHandler_1<InvokeWebServiceEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addInvoking(EventHandler_1<InvokeWebServiceEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("Invoking", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeInvoking.
+     *
+     * @param handler the argument of type {@code EventHandler_1<InvokeWebServiceEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeInvoking(EventHandler_1<InvokeWebServiceEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("Invoking", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

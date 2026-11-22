@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.data.common.entitysql.FunctionDefinition;
 import system.data.common.commandtrees.DbCommandTree;
 
 
@@ -169,7 +170,7 @@ public class ParseResult extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.EntitySql.ParseResult.FunctionDefinitions" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getFunctionDefinitions() throws Throwable {
+    public ReadOnlyCollection_1<FunctionDefinition> getFunctionDefinitions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFunctionDefinitions = null;

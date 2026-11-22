@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.windows.threading.DispatcherObject;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.windows.media.Color;
 import system.windows.media.imaging.BitmapSource;
 
 
@@ -158,7 +159,7 @@ public class BitmapPalette extends system.windows.threading.DispatcherObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param colors the argument of type {@code IList_1}
+     * @param colors the argument of type {@code IList_1<Color>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -179,7 +180,7 @@ public class BitmapPalette extends system.windows.threading.DispatcherObject  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.BitmapPalette.-ctor" target="_top">.NET documentation</a>
      */
-    public BitmapPalette(IList_1 colors) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.ArgumentOutOfRangeException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.TimeoutException, system.NullReferenceException, system.NotSupportedException, system.globalization.CultureNotFoundException {
+    public BitmapPalette(IList_1<Color> colors) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.ArgumentOutOfRangeException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidCastException, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.TimeoutException, system.NullReferenceException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -241,7 +242,7 @@ public class BitmapPalette extends system.windows.threading.DispatcherObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Imaging.BitmapPalette.Colors" target="_top">.NET documentation</a>
      */
-    public IList_1 getColors() throws Throwable {
+    public IList_1<Color> getColors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectColors = null;

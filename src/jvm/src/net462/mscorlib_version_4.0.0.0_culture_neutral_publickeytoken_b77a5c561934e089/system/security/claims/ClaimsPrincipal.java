@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.security.claims.ClaimsIdentity;
 import system.io.BinaryReader;
 import system.security.principal.IIdentity;
 import system.security.principal.IIdentityImplementation;
@@ -48,7 +49,6 @@ import system.security.principal.IPrincipalImplementation;
 import system.Predicate_1;
 import system.security.claims.Claim;
 import system.security.claims.ClaimsPrincipal;
-import system.security.claims.ClaimsIdentity;
 import system.io.BinaryWriter;
 import system.Func_1;
 import system.Func_2;
@@ -181,14 +181,14 @@ public class ClaimsPrincipal extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param identities the argument of type {@code IEnumerable_1}
+     * @param identities the argument of type {@code IEnumerable_1<ClaimsIdentity>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.ClaimsPrincipal.-ctor" target="_top">.NET documentation</a>
      */
-    public ClaimsPrincipal(IEnumerable_1 identities) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public ClaimsPrincipal(IEnumerable_1<ClaimsIdentity> identities) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -274,14 +274,14 @@ public class ClaimsPrincipal extends NetObject  {
     /**
      * Invokes the .NET member HasClaim.
      *
-     * @param match the argument of type {@code Predicate_1}
+     * @param match the argument of type {@code Predicate_1<Claim>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.ClaimsPrincipal.HasClaim" target="_top">.NET documentation</a>
      */
-    public boolean HasClaim(Predicate_1 match) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public boolean HasClaim(Predicate_1<Claim> match) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectHasClaim = null;
@@ -359,14 +359,14 @@ public class ClaimsPrincipal extends NetObject  {
     /**
      * Invokes the .NET member FindAll.
      *
-     * @param match the argument of type {@code Predicate_1}
+     * @param match the argument of type {@code Predicate_1<Claim>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.ClaimsPrincipal.FindAll" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 FindAll(Predicate_1 match) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public IEnumerable_1<Claim> FindAll(Predicate_1<Claim> match) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFindAll = null;
@@ -397,7 +397,7 @@ public class ClaimsPrincipal extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.ClaimsPrincipal.FindAll" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 FindAll(java.lang.String type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException {
+    public IEnumerable_1<Claim> FindAll(java.lang.String type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFindAll = null;
@@ -415,13 +415,13 @@ public class ClaimsPrincipal extends NetObject  {
     /**
      * Invokes the .NET member FindFirst.
      *
-     * @param match the argument of type {@code Predicate_1}
+     * @param match the argument of type {@code Predicate_1<Claim>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.ClaimsPrincipal.FindFirst" target="_top">.NET documentation</a>
      */
-    public Claim FindFirst(Predicate_1 match) throws Throwable, system.ArgumentNullException {
+    public Claim FindFirst(Predicate_1<Claim> match) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFindFirst = null;
@@ -495,14 +495,14 @@ public class ClaimsPrincipal extends NetObject  {
     /**
      * Invokes the .NET member AddIdentities.
      *
-     * @param identities the argument of type {@code IEnumerable_1}
+     * @param identities the argument of type {@code IEnumerable_1<ClaimsIdentity>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.ClaimsPrincipal.AddIdentities" target="_top">.NET documentation</a>
      */
-    public void AddIdentities(IEnumerable_1 identities) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public void AddIdentities(IEnumerable_1<ClaimsIdentity> identities) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -566,7 +566,7 @@ public class ClaimsPrincipal extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.ClaimsPrincipal.Claims" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getClaims() throws Throwable {
+    public IEnumerable_1<Claim> getClaims() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectClaims = null;
@@ -589,7 +589,7 @@ public class ClaimsPrincipal extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.ClaimsPrincipal.Identities" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getIdentities() throws Throwable, system.ArgumentNullException {
+    public IEnumerable_1<ClaimsIdentity> getIdentities() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIdentities = null;
@@ -611,15 +611,15 @@ public class ClaimsPrincipal extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.ClaimsPrincipal.ClaimsPrincipalSelector" target="_top">.NET documentation</a>
      */
-    public static Func_1 getClaimsPrincipalSelector() throws Throwable {
+    public static Func_1<ClaimsPrincipal> getClaimsPrincipalSelector() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectClaimsPrincipalSelector = null;
         try {
             retObjectClaimsPrincipalSelector = classType.Get("ClaimsPrincipalSelector");
-            return (Func_1)retObjectClaimsPrincipalSelector;
+            return (Func_1<ClaimsPrincipal>)retObjectClaimsPrincipalSelector;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_1", retObjectClaimsPrincipalSelector != null ? retObjectClaimsPrincipalSelector.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_1<ClaimsPrincipal>", retObjectClaimsPrincipalSelector != null ? retObjectClaimsPrincipalSelector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -632,7 +632,7 @@ public class ClaimsPrincipal extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.ClaimsPrincipal.ClaimsPrincipalSelector" target="_top">.NET documentation</a>
      */
-    public static void setClaimsPrincipalSelector(Func_1 ClaimsPrincipalSelector) throws Throwable {
+    public static void setClaimsPrincipalSelector(Func_1<ClaimsPrincipal> ClaimsPrincipalSelector) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -649,15 +649,15 @@ public class ClaimsPrincipal extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.ClaimsPrincipal.PrimaryIdentitySelector" target="_top">.NET documentation</a>
      */
-    public static Func_2 getPrimaryIdentitySelector() throws Throwable {
+    public static Func_2<IEnumerable_1<ClaimsIdentity>, ClaimsIdentity> getPrimaryIdentitySelector() throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectPrimaryIdentitySelector = null;
         try {
             retObjectPrimaryIdentitySelector = classType.Get("PrimaryIdentitySelector");
-            return (Func_2)retObjectPrimaryIdentitySelector;
+            return (Func_2<IEnumerable_1<ClaimsIdentity>, ClaimsIdentity>)retObjectPrimaryIdentitySelector;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2", retObjectPrimaryIdentitySelector != null ? retObjectPrimaryIdentitySelector.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2<IEnumerable_1<ClaimsIdentity>, ClaimsIdentity>", retObjectPrimaryIdentitySelector != null ? retObjectPrimaryIdentitySelector.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -670,7 +670,7 @@ public class ClaimsPrincipal extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.ClaimsPrincipal.PrimaryIdentitySelector" target="_top">.NET documentation</a>
      */
-    public static void setPrimaryIdentitySelector(Func_2 PrimaryIdentitySelector) throws Throwable {
+    public static void setPrimaryIdentitySelector(Func_2<IEnumerable_1<ClaimsIdentity>, ClaimsIdentity> PrimaryIdentitySelector) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

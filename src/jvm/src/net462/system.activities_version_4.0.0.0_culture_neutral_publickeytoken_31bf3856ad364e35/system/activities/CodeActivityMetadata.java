@@ -181,7 +181,7 @@ public class CodeActivityMetadata extends system.ValueType  {
      * @throws system.reflection.TargetInvocationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.CodeActivityMetadata.GetArgumentsWithReflection" target="_top">.NET documentation</a>
      */
-    public Collection_1 GetArgumentsWithReflection() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.RankException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public Collection_1<RuntimeArgument> GetArgumentsWithReflection() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.RankException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetArgumentsWithReflection = null;
@@ -370,7 +370,7 @@ public class CodeActivityMetadata extends system.ValueType  {
     /**
      * Invokes the .NET member SetArgumentsCollection.
      *
-     * @param arguments the argument of type {@code Collection_1}
+     * @param arguments the argument of type {@code Collection_1<RuntimeArgument>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -385,7 +385,7 @@ public class CodeActivityMetadata extends system.ValueType  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.CodeActivityMetadata.SetArgumentsCollection" target="_top">.NET documentation</a>
      */
-    public void SetArgumentsCollection(Collection_1 arguments) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.RankException, system.NullReferenceException {
+    public void SetArgumentsCollection(Collection_1<RuntimeArgument> arguments) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.RankException, system.NullReferenceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -398,7 +398,7 @@ public class CodeActivityMetadata extends system.ValueType  {
     /**
      * Invokes the .NET member SetValidationErrorsCollection.
      *
-     * @param validationErrors the argument of type {@code Collection_1}
+     * @param validationErrors the argument of type {@code Collection_1<ValidationError>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -407,7 +407,7 @@ public class CodeActivityMetadata extends system.ValueType  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.CodeActivityMetadata.SetValidationErrorsCollection" target="_top">.NET documentation</a>
      */
-    public void SetValidationErrorsCollection(Collection_1 validationErrors) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public void SetValidationErrorsCollection(Collection_1<ValidationError> validationErrors) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

@@ -42,6 +42,7 @@ import system.componentmodel.dataannotations.IValidatableObject;
 import system.componentmodel.dataannotations.IValidatableObjectImplementation;
 import system.collections.generic.IAsyncEnumerable_1;
 import system.collections.generic.IAsyncEnumerable_1Implementation;
+import system.componentmodel.dataannotations.ValidationResult;
 import system.componentmodel.dataannotations.ValidationContext;
 import system.threading.CancellationToken;
 import system.collections.generic.IEnumerable_1;
@@ -160,7 +161,7 @@ public class IAsyncValidatableObjectImplementation extends NetObject implements 
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.IAsyncValidatableObject.ValidateAsync" target="_top">.NET documentation</a>
      */
-    public IAsyncEnumerable_1 ValidateAsync(ValidationContext validationContext, CancellationToken cancellationToken) throws Throwable {
+    public IAsyncEnumerable_1<ValidationResult> ValidateAsync(ValidationContext validationContext, CancellationToken cancellationToken) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValidateAsync = null;
@@ -183,7 +184,7 @@ public class IAsyncValidatableObjectImplementation extends NetObject implements 
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.IAsyncValidatableObject.Validate" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 Validate(ValidationContext validationContext) throws Throwable {
+    public IEnumerable_1<ValidationResult> Validate(ValidationContext validationContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValidate = null;

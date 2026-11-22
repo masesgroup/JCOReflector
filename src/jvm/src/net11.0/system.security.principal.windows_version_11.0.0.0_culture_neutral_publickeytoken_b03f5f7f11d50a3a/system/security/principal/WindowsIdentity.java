@@ -50,6 +50,7 @@ import system.threading.tasks.Task_1;
 import system.Action;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.security.claims.Claim;
 import system.security.principal.IdentityReferenceCollection;
 import system.security.principal.SecurityIdentifier;
 import system.security.principal.TokenImpersonationLevel;
@@ -408,7 +409,7 @@ public class WindowsIdentity extends system.security.claims.ClaimsIdentity imple
      * Invokes the .NET member RunImpersonatedAsync.
      *
      * @param safeAccessTokenHandle the argument of type {@code SafeAccessTokenHandle}
-     * @param func the argument of type {@code Func_1}
+     * @param func the argument of type {@code Func_1<Task>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -423,7 +424,7 @@ public class WindowsIdentity extends system.security.claims.ClaimsIdentity imple
      * @throws system.security.SecurityException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Principal.WindowsIdentity.RunImpersonatedAsync" target="_top">.NET documentation</a>
      */
-    public static Task RunImpersonatedAsync(SafeAccessTokenHandle safeAccessTokenHandle, Func_1 func) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.PlatformNotSupportedException, system.security.SecurityException {
+    public static Task RunImpersonatedAsync(SafeAccessTokenHandle safeAccessTokenHandle, Func_1<Task> func) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.PlatformNotSupportedException, system.security.SecurityException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRunImpersonatedAsync = null;
@@ -668,7 +669,7 @@ public class WindowsIdentity extends system.security.claims.ClaimsIdentity imple
      * @throws system.diagnostics.UnreachableException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Principal.WindowsIdentity.DeviceClaims" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getDeviceClaims() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.SecurityException, system.InvalidOperationException, system.AccessViolationException, system.ArrayTypeMismatchException, system.FormatException, system.diagnostics.UnreachableException {
+    public IEnumerable_1<Claim> getDeviceClaims() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.SecurityException, system.InvalidOperationException, system.AccessViolationException, system.ArrayTypeMismatchException, system.FormatException, system.diagnostics.UnreachableException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDeviceClaims = null;
@@ -704,7 +705,7 @@ public class WindowsIdentity extends system.security.claims.ClaimsIdentity imple
      * @throws system.diagnostics.UnreachableException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Principal.WindowsIdentity.UserClaims" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getUserClaims() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.SecurityException, system.InvalidOperationException, system.AccessViolationException, system.ArrayTypeMismatchException, system.FormatException, system.diagnostics.UnreachableException {
+    public IEnumerable_1<Claim> getUserClaims() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.SecurityException, system.InvalidOperationException, system.AccessViolationException, system.ArrayTypeMismatchException, system.FormatException, system.diagnostics.UnreachableException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUserClaims = null;

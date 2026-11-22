@@ -158,7 +158,7 @@ public class ActionBlock_1<TInput extends IJCOBridgeReflected> extends NetObject
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param action the argument of type {@code Action_1}
+     * @param action the argument of type {@code Action_1<TInput>}
      * @param dataflowBlockOptions the argument of type {@code ExecutionDataflowBlockOptions}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
@@ -173,7 +173,7 @@ public class ActionBlock_1<TInput extends IJCOBridgeReflected> extends NetObject
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.ActionBlock-1.-ctor" target="_top">.NET documentation</a>
      */
-    public ActionBlock_1(Action_1 action, ExecutionDataflowBlockOptions dataflowBlockOptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.threading.tasks.TaskSchedulerException, system.diagnostics.tracing.EventSourceException, system.NullReferenceException, system.FormatException {
+    public ActionBlock_1(Action_1<TInput> action, ExecutionDataflowBlockOptions dataflowBlockOptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.threading.tasks.TaskSchedulerException, system.diagnostics.tracing.EventSourceException, system.NullReferenceException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -188,7 +188,7 @@ public class ActionBlock_1<TInput extends IJCOBridgeReflected> extends NetObject
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param action the argument of type {@code Action_1}
+     * @param action the argument of type {@code Action_1<TInput>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -202,7 +202,7 @@ public class ActionBlock_1<TInput extends IJCOBridgeReflected> extends NetObject
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.ActionBlock-1.-ctor" target="_top">.NET documentation</a>
      */
-    public ActionBlock_1(Action_1 action) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.threading.tasks.TaskSchedulerException, system.diagnostics.tracing.EventSourceException, system.NullReferenceException, system.FormatException {
+    public ActionBlock_1(Action_1<TInput> action) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.threading.tasks.TaskSchedulerException, system.diagnostics.tracing.EventSourceException, system.NullReferenceException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -217,7 +217,7 @@ public class ActionBlock_1<TInput extends IJCOBridgeReflected> extends NetObject
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param action the argument of type {@code Func_2}
+     * @param action the argument of type {@code Func_2<TInput, Task>}
      * @param dataflowBlockOptions the argument of type {@code ExecutionDataflowBlockOptions}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
@@ -232,7 +232,7 @@ public class ActionBlock_1<TInput extends IJCOBridgeReflected> extends NetObject
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.ActionBlock-1.-ctor" target="_top">.NET documentation</a>
      */
-    public ActionBlock_1(Func_2 action, ExecutionDataflowBlockOptions dataflowBlockOptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.threading.tasks.TaskSchedulerException, system.diagnostics.tracing.EventSourceException, system.NullReferenceException, system.FormatException {
+    public ActionBlock_1(Func_2<TInput, Task> action, ExecutionDataflowBlockOptions dataflowBlockOptions) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.threading.tasks.TaskSchedulerException, system.diagnostics.tracing.EventSourceException, system.NullReferenceException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -247,7 +247,7 @@ public class ActionBlock_1<TInput extends IJCOBridgeReflected> extends NetObject
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param action the argument of type {@code Func_2}
+     * @param action the argument of type {@code Func_2<TInput, Task>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -261,7 +261,7 @@ public class ActionBlock_1<TInput extends IJCOBridgeReflected> extends NetObject
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Dataflow.ActionBlock-1.-ctor" target="_top">.NET documentation</a>
      */
-    public ActionBlock_1(Func_2 action) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.threading.tasks.TaskSchedulerException, system.diagnostics.tracing.EventSourceException, system.NullReferenceException, system.FormatException {
+    public ActionBlock_1(Func_2<TInput, Task> action) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.threading.tasks.TaskSchedulerException, system.diagnostics.tracing.EventSourceException, system.NullReferenceException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

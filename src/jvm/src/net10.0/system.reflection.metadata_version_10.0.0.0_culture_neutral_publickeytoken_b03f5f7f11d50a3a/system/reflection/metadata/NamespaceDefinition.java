@@ -40,7 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.ValueType;
 import system.collections.immutable.ImmutableArray_1;
+import system.reflection.metadata.ExportedTypeHandle;
 import system.reflection.metadata.NamespaceDefinitionHandle;
+import system.reflection.metadata.TypeDefinitionHandle;
 import system.reflection.metadata.StringHandle;
 
 
@@ -171,7 +173,7 @@ public class NamespaceDefinition extends system.ValueType  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.NamespaceDefinition.ExportedTypes" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 getExportedTypes() throws Throwable {
+    public ImmutableArray_1<ExportedTypeHandle> getExportedTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExportedTypes = null;
@@ -193,7 +195,7 @@ public class NamespaceDefinition extends system.ValueType  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.NamespaceDefinition.NamespaceDefinitions" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 getNamespaceDefinitions() throws Throwable {
+    public ImmutableArray_1<NamespaceDefinitionHandle> getNamespaceDefinitions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectNamespaceDefinitions = null;
@@ -215,7 +217,7 @@ public class NamespaceDefinition extends system.ValueType  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.NamespaceDefinition.TypeDefinitions" target="_top">.NET documentation</a>
      */
-    public ImmutableArray_1 getTypeDefinitions() throws Throwable {
+    public ImmutableArray_1<TypeDefinitionHandle> getTypeDefinitions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTypeDefinitions = null;

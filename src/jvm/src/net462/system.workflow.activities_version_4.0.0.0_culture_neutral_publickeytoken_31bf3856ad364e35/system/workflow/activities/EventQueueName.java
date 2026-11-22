@@ -40,8 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
-import system.workflow.activities.EventQueueName;
 import system.workflow.runtime.CorrelationProperty;
+import system.workflow.activities.EventQueueName;
 
 
 /**
@@ -179,12 +179,12 @@ public class EventQueueName extends NetObject  {
      *
      * @param interfaceType the argument of type {@code NetType}
      * @param operation the argument of type {@code java.lang.String}
-     * @param propertyValues the argument of type {@code ICollection_1}
+     * @param propertyValues the argument of type {@code ICollection_1<CorrelationProperty>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.EventQueueName.-ctor" target="_top">.NET documentation</a>
      */
-    public EventQueueName(NetType interfaceType, java.lang.String operation, ICollection_1 propertyValues) throws Throwable, system.ArgumentNullException {
+    public EventQueueName(NetType interfaceType, java.lang.String operation, ICollection_1<CorrelationProperty> propertyValues) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

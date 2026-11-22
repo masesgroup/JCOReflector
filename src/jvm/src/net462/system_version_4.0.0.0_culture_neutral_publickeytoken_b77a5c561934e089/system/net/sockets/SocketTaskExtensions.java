@@ -47,6 +47,8 @@ import system.ArraySegment_1;
 import system.net.sockets.SocketFlags;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.net.sockets.SocketReceiveFromResult;
+import system.net.sockets.SocketReceiveMessageFromResult;
 
 
 /**
@@ -567,7 +569,7 @@ public class SocketTaskExtensions extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketTaskExtensions.AcceptAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 AcceptAsync(Socket socket) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.threading.tasks.TaskSchedulerException, system.ArgumentException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.net.sockets.SocketException, system.threading.AbandonedMutexException, system.NotSupportedException, system.AccessViolationException, system.security.SecurityException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
+    public static Task_1<Socket> AcceptAsync(Socket socket) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.threading.tasks.TaskSchedulerException, system.ArgumentException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.net.sockets.SocketException, system.threading.AbandonedMutexException, system.NotSupportedException, system.AccessViolationException, system.security.SecurityException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAcceptAsync = null;
@@ -612,7 +614,7 @@ public class SocketTaskExtensions extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketTaskExtensions.AcceptAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 AcceptAsync(Socket socket, Socket acceptSocket) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.threading.tasks.TaskSchedulerException, system.ArgumentException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.net.sockets.SocketException, system.threading.AbandonedMutexException, system.NotSupportedException, system.AccessViolationException, system.security.SecurityException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
+    public static Task_1<Socket> AcceptAsync(Socket socket, Socket acceptSocket) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.threading.tasks.TaskSchedulerException, system.ArgumentException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.net.sockets.SocketException, system.threading.AbandonedMutexException, system.NotSupportedException, system.AccessViolationException, system.security.SecurityException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAcceptAsync = null;
@@ -654,7 +656,7 @@ public class SocketTaskExtensions extends NetObject  {
      * @throws system.AccessViolationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketTaskExtensions.ReceiveFromAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 ReceiveFromAsync(Socket socket, ArraySegment_1 buffer, SocketFlags socketFlags, EndPoint remoteEndPoint) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ArgumentException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.ObjectDisposedException, system.NotImplementedException, system.NotSupportedException, system.net.sockets.SocketException, system.threading.WaitHandleCannotBeOpenedException, system.security.SecurityException, system.IndexOutOfRangeException, system.AccessViolationException {
+    public static Task_1<SocketReceiveFromResult> ReceiveFromAsync(Socket socket, ArraySegment_1 buffer, SocketFlags socketFlags, EndPoint remoteEndPoint) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ArgumentException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.ObjectDisposedException, system.NotImplementedException, system.NotSupportedException, system.net.sockets.SocketException, system.threading.WaitHandleCannotBeOpenedException, system.security.SecurityException, system.IndexOutOfRangeException, system.AccessViolationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReceiveFromAsync = null;
@@ -695,7 +697,7 @@ public class SocketTaskExtensions extends NetObject  {
      * @throws system.AccessViolationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.SocketTaskExtensions.ReceiveMessageFromAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 ReceiveMessageFromAsync(Socket socket, ArraySegment_1 buffer, SocketFlags socketFlags, EndPoint remoteEndPoint) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.ObjectDisposedException, system.NotImplementedException, system.NotSupportedException, system.net.sockets.SocketException, system.threading.WaitHandleCannotBeOpenedException, system.security.SecurityException, system.IndexOutOfRangeException, system.AccessViolationException {
+    public static Task_1<SocketReceiveMessageFromResult> ReceiveMessageFromAsync(Socket socket, ArraySegment_1 buffer, SocketFlags socketFlags, EndPoint remoteEndPoint) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.ObjectDisposedException, system.NotImplementedException, system.NotSupportedException, system.net.sockets.SocketException, system.threading.WaitHandleCannotBeOpenedException, system.security.SecurityException, system.IndexOutOfRangeException, system.AccessViolationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectReceiveMessageFromAsync = null;

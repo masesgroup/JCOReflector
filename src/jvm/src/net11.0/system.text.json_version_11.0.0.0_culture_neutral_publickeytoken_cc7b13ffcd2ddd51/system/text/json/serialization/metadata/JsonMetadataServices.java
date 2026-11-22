@@ -49,6 +49,29 @@ import system.text.json.serialization.metadata.JsonUnionInfoValues_1;
 import system.text.json.serialization.JsonConverter;
 import system.Func_2;
 import system.Action_2;
+import system.DateOnly;
+import system.DateTime;
+import system.DateTimeOffset;
+import system.Decimal;
+import system.Guid;
+import system.Half;
+import system.Int128;
+import system.numerics.BFloat16;
+import system.numerics.Decimal128;
+import system.numerics.Decimal32;
+import system.numerics.Decimal64;
+import system.Object;
+import system.text.json.JsonDocument;
+import system.text.json.JsonElement;
+import system.text.json.nodes.JsonArray;
+import system.text.json.nodes.JsonNode;
+import system.text.json.nodes.JsonObject;
+import system.text.json.nodes.JsonValue;
+import system.TimeOnly;
+import system.TimeSpan;
+import system.UInt128;
+import system.Uri;
+import system.Version;
 
 
 /**
@@ -1230,7 +1253,7 @@ public class JsonMetadataServices extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.DateOnlyConverter" target="_top">.NET documentation</a>
      */
-    public static JsonConverter_1 getDateOnlyConverter() throws Throwable, system.PlatformNotSupportedException {
+    public static JsonConverter_1<DateOnly> getDateOnlyConverter() throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDateOnlyConverter = null;
@@ -1253,7 +1276,7 @@ public class JsonMetadataServices extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.DateTimeConverter" target="_top">.NET documentation</a>
      */
-    public static JsonConverter_1 getDateTimeConverter() throws Throwable, system.PlatformNotSupportedException {
+    public static JsonConverter_1<DateTime> getDateTimeConverter() throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDateTimeConverter = null;
@@ -1276,7 +1299,7 @@ public class JsonMetadataServices extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.DateTimeOffsetConverter" target="_top">.NET documentation</a>
      */
-    public static JsonConverter_1 getDateTimeOffsetConverter() throws Throwable, system.PlatformNotSupportedException {
+    public static JsonConverter_1<DateTimeOffset> getDateTimeOffsetConverter() throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDateTimeOffsetConverter = null;
@@ -1299,7 +1322,7 @@ public class JsonMetadataServices extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.DecimalConverter" target="_top">.NET documentation</a>
      */
-    public static JsonConverter_1 getDecimalConverter() throws Throwable, system.PlatformNotSupportedException {
+    public static JsonConverter_1<Decimal> getDecimalConverter() throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDecimalConverter = null;
@@ -1345,7 +1368,7 @@ public class JsonMetadataServices extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.GuidConverter" target="_top">.NET documentation</a>
      */
-    public static JsonConverter_1 getGuidConverter() throws Throwable, system.PlatformNotSupportedException {
+    public static JsonConverter_1<Guid> getGuidConverter() throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGuidConverter = null;
@@ -1368,7 +1391,7 @@ public class JsonMetadataServices extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.HalfConverter" target="_top">.NET documentation</a>
      */
-    public static JsonConverter_1 getHalfConverter() throws Throwable, system.PlatformNotSupportedException {
+    public static JsonConverter_1<Half> getHalfConverter() throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectHalfConverter = null;
@@ -1391,7 +1414,7 @@ public class JsonMetadataServices extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.Int128Converter" target="_top">.NET documentation</a>
      */
-    public static JsonConverter_1 getInt128Converter() throws Throwable, system.PlatformNotSupportedException {
+    public static JsonConverter_1<Int128> getInt128Converter() throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectInt128Converter = null;
@@ -1506,7 +1529,7 @@ public class JsonMetadataServices extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.BFloat16Converter" target="_top">.NET documentation</a>
      */
-    public static JsonConverter_1 getBFloat16Converter() throws Throwable, system.PlatformNotSupportedException {
+    public static JsonConverter_1<BFloat16> getBFloat16Converter() throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBFloat16Converter = null;
@@ -1529,7 +1552,7 @@ public class JsonMetadataServices extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.Decimal128Converter" target="_top">.NET documentation</a>
      */
-    public static JsonConverter_1 getDecimal128Converter() throws Throwable, system.PlatformNotSupportedException {
+    public static JsonConverter_1<Decimal128> getDecimal128Converter() throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDecimal128Converter = null;
@@ -1552,7 +1575,7 @@ public class JsonMetadataServices extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.Decimal32Converter" target="_top">.NET documentation</a>
      */
-    public static JsonConverter_1 getDecimal32Converter() throws Throwable, system.PlatformNotSupportedException {
+    public static JsonConverter_1<Decimal32> getDecimal32Converter() throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDecimal32Converter = null;
@@ -1575,7 +1598,7 @@ public class JsonMetadataServices extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.Decimal64Converter" target="_top">.NET documentation</a>
      */
-    public static JsonConverter_1 getDecimal64Converter() throws Throwable, system.PlatformNotSupportedException {
+    public static JsonConverter_1<Decimal64> getDecimal64Converter() throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDecimal64Converter = null;
@@ -1598,7 +1621,7 @@ public class JsonMetadataServices extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.ObjectConverter" target="_top">.NET documentation</a>
      */
-    public static JsonConverter_1 getObjectConverter() throws Throwable, system.PlatformNotSupportedException {
+    public static JsonConverter_1<Object> getObjectConverter() throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectObjectConverter = null;
@@ -1713,7 +1736,7 @@ public class JsonMetadataServices extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.JsonDocumentConverter" target="_top">.NET documentation</a>
      */
-    public static JsonConverter_1 getJsonDocumentConverter() throws Throwable, system.PlatformNotSupportedException {
+    public static JsonConverter_1<JsonDocument> getJsonDocumentConverter() throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectJsonDocumentConverter = null;
@@ -1736,7 +1759,7 @@ public class JsonMetadataServices extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.JsonElementConverter" target="_top">.NET documentation</a>
      */
-    public static JsonConverter_1 getJsonElementConverter() throws Throwable, system.PlatformNotSupportedException {
+    public static JsonConverter_1<JsonElement> getJsonElementConverter() throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectJsonElementConverter = null;
@@ -1759,7 +1782,7 @@ public class JsonMetadataServices extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.JsonArrayConverter" target="_top">.NET documentation</a>
      */
-    public static JsonConverter_1 getJsonArrayConverter() throws Throwable, system.PlatformNotSupportedException {
+    public static JsonConverter_1<JsonArray> getJsonArrayConverter() throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectJsonArrayConverter = null;
@@ -1782,7 +1805,7 @@ public class JsonMetadataServices extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.JsonNodeConverter" target="_top">.NET documentation</a>
      */
-    public static JsonConverter_1 getJsonNodeConverter() throws Throwable, system.PlatformNotSupportedException {
+    public static JsonConverter_1<JsonNode> getJsonNodeConverter() throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectJsonNodeConverter = null;
@@ -1805,7 +1828,7 @@ public class JsonMetadataServices extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.JsonObjectConverter" target="_top">.NET documentation</a>
      */
-    public static JsonConverter_1 getJsonObjectConverter() throws Throwable, system.PlatformNotSupportedException {
+    public static JsonConverter_1<JsonObject> getJsonObjectConverter() throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectJsonObjectConverter = null;
@@ -1828,7 +1851,7 @@ public class JsonMetadataServices extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.JsonValueConverter" target="_top">.NET documentation</a>
      */
-    public static JsonConverter_1 getJsonValueConverter() throws Throwable, system.PlatformNotSupportedException {
+    public static JsonConverter_1<JsonValue> getJsonValueConverter() throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectJsonValueConverter = null;
@@ -1851,7 +1874,7 @@ public class JsonMetadataServices extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.TimeOnlyConverter" target="_top">.NET documentation</a>
      */
-    public static JsonConverter_1 getTimeOnlyConverter() throws Throwable, system.PlatformNotSupportedException {
+    public static JsonConverter_1<TimeOnly> getTimeOnlyConverter() throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTimeOnlyConverter = null;
@@ -1874,7 +1897,7 @@ public class JsonMetadataServices extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.TimeSpanConverter" target="_top">.NET documentation</a>
      */
-    public static JsonConverter_1 getTimeSpanConverter() throws Throwable, system.PlatformNotSupportedException {
+    public static JsonConverter_1<TimeSpan> getTimeSpanConverter() throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTimeSpanConverter = null;
@@ -1897,7 +1920,7 @@ public class JsonMetadataServices extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.UInt128Converter" target="_top">.NET documentation</a>
      */
-    public static JsonConverter_1 getUInt128Converter() throws Throwable, system.PlatformNotSupportedException {
+    public static JsonConverter_1<UInt128> getUInt128Converter() throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUInt128Converter = null;
@@ -1989,7 +2012,7 @@ public class JsonMetadataServices extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.UriConverter" target="_top">.NET documentation</a>
      */
-    public static JsonConverter_1 getUriConverter() throws Throwable, system.PlatformNotSupportedException {
+    public static JsonConverter_1<Uri> getUriConverter() throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectUriConverter = null;
@@ -2012,7 +2035,7 @@ public class JsonMetadataServices extends NetObject  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonMetadataServices.VersionConverter" target="_top">.NET documentation</a>
      */
-    public static JsonConverter_1 getVersionConverter() throws Throwable, system.PlatformNotSupportedException {
+    public static JsonConverter_1<Version> getVersionConverter() throws Throwable, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectVersionConverter = null;

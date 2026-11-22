@@ -564,7 +564,7 @@ public class TcpListener extends NetObject implements AutoCloseable {
      * @throws system.net.sockets.SocketException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.TcpListener.AcceptSocketAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 AcceptSocketAsync() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.NullReferenceException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
+    public Task_1<Socket> AcceptSocketAsync() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.NullReferenceException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAcceptSocketAsync = null;
@@ -598,7 +598,7 @@ public class TcpListener extends NetObject implements AutoCloseable {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.TcpListener.AcceptTcpClientAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 AcceptTcpClientAsync() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NullReferenceException, system.NotSupportedException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.net.sockets.SocketException, system.IndexOutOfRangeException {
+    public Task_1<TcpClient> AcceptTcpClientAsync() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NullReferenceException, system.NotSupportedException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.net.sockets.SocketException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAcceptTcpClientAsync = null;
@@ -634,7 +634,7 @@ public class TcpListener extends NetObject implements AutoCloseable {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.TcpListener.AcceptSocketAsync" target="_top">.NET documentation</a>
      */
-    public ValueTask_1 AcceptSocketAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.net.sockets.SocketException, system.IndexOutOfRangeException {
+    public ValueTask_1<Socket> AcceptSocketAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.net.sockets.SocketException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAcceptSocketAsync = null;
@@ -668,7 +668,7 @@ public class TcpListener extends NetObject implements AutoCloseable {
      * @throws system.net.sockets.SocketException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Sockets.TcpListener.AcceptTcpClientAsync" target="_top">.NET documentation</a>
      */
-    public ValueTask_1 AcceptTcpClientAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.NullReferenceException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
+    public ValueTask_1<TcpClient> AcceptTcpClientAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.NullReferenceException, system.ArrayTypeMismatchException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAcceptTcpClientAsync = null;

@@ -177,7 +177,7 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.Debug.IDesignerDebugView.GetBreakpointLocations" target="_top">.NET documentation</a>
      */
-    public IDictionary_2 GetBreakpointLocations() throws Throwable {
+    public IDictionary_2<SourceLocation, BreakpointTypes> GetBreakpointLocations() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetBreakpointLocations = null;

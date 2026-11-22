@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.windows.input.InputEventArgs;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.windows.input.IManipulator;
+import system.windows.input.IManipulatorImplementation;
 import system.windows.IInputElement;
 import system.windows.IInputElementImplementation;
 import system.windows.input.ManipulationDelta;
@@ -236,7 +238,7 @@ public class ManipulationCompletedEventArgs extends system.windows.input.InputEv
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Input.ManipulationCompletedEventArgs.Manipulators" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getManipulators() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public IEnumerable_1<IManipulator> getManipulators() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectManipulators = null;

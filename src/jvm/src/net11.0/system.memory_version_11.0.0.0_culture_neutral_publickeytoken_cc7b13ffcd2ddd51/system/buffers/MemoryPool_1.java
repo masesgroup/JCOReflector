@@ -164,7 +164,7 @@ public class MemoryPool_1<T extends IJCOBridgeReflected> extends NetObject imple
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.MemoryPool-1.Rent" target="_top">.NET documentation</a>
      */
-    public IMemoryOwner_1 Rent(int minBufferSize) throws Throwable {
+    public IMemoryOwner_1<T> Rent(int minBufferSize) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRent = null;

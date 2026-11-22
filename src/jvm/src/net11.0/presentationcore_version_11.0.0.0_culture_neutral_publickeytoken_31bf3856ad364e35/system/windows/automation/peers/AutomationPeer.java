@@ -41,12 +41,12 @@ import java.util.ArrayList;
 import system.windows.threading.DispatcherObject;
 import system.windows.automation.peers.AutomationEvents;
 import system.collections.generic.List_1;
+import system.windows.automation.peers.AutomationPeer;
 import system.windows.automation.peers.PatternInterface;
 import system.windows.automation.AutomationHeadingLevel;
 import system.windows.automation.AutomationLiveSetting;
 import system.windows.automation.peers.AutomationControlType;
 import system.windows.automation.peers.AutomationOrientation;
-import system.windows.automation.peers.AutomationPeer;
 import system.windows.Point;
 import system.windows.Rect;
 import system.windows.automation.AsyncContentLoadedEventArgs;
@@ -586,7 +586,7 @@ public class AutomationPeer extends system.windows.threading.DispatcherObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.AutomationPeer.GetChildren" target="_top">.NET documentation</a>
      */
-    public List_1 GetChildren() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
+    public List_1<AutomationPeer> GetChildren() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetChildren = null;
@@ -616,7 +616,7 @@ public class AutomationPeer extends system.windows.threading.DispatcherObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Automation.Peers.AutomationPeer.GetControlledPeers" target="_top">.NET documentation</a>
      */
-    public List_1 GetControlledPeers() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
+    public List_1<AutomationPeer> GetControlledPeers() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetControlledPeers = null;

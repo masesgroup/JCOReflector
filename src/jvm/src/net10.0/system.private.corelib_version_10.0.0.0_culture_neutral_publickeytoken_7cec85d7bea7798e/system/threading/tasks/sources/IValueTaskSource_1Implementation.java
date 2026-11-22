@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.threading.tasks.sources.ValueTaskSourceStatus;
 import system.Action_1;
+import system.Object;
 import system.threading.tasks.sources.ValueTaskSourceOnCompletedFlags;
 
 
@@ -194,14 +195,14 @@ public class IValueTaskSource_1Implementation<TResult extends IJCOBridgeReflecte
     /**
      * Invokes the .NET member OnCompleted.
      *
-     * @param continuation the argument of type {@code Action_1}
+     * @param continuation the argument of type {@code Action_1<Object>}
      * @param state the argument of type {@code NetObject}
      * @param token the argument of type {@code short}
      * @param flags the argument of type {@code ValueTaskSourceOnCompletedFlags}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Sources.IValueTaskSource-1.OnCompleted" target="_top">.NET documentation</a>
      */
-    public void OnCompleted(Action_1 continuation, NetObject state, short token, ValueTaskSourceOnCompletedFlags flags) throws Throwable {
+    public void OnCompleted(Action_1<Object> continuation, NetObject state, short token, ValueTaskSourceOnCompletedFlags flags) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

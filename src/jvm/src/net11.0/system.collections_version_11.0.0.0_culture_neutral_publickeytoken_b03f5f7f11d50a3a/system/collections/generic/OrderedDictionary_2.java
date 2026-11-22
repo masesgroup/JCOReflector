@@ -186,7 +186,7 @@ public class OrderedDictionary_2<TKey extends IJCOBridgeReflected, TValue extend
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param capacity the argument of type {@code int}
-     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1<TKey>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -200,7 +200,7 @@ public class OrderedDictionary_2<TKey extends IJCOBridgeReflected, TValue extend
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.OrderedDictionary-2.-ctor" target="_top">.NET documentation</a>
      */
-    public OrderedDictionary_2(int capacity, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public OrderedDictionary_2(int capacity, IEqualityComparer_1<TKey> comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -242,8 +242,8 @@ public class OrderedDictionary_2<TKey extends IJCOBridgeReflected, TValue extend
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param dictionary the argument of type {@code IDictionary_2}
-     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @param dictionary the argument of type {@code IDictionary_2<TKey, TValue>}
+     * @param comparer the argument of type {@code IEqualityComparer_1<TKey>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -255,7 +255,7 @@ public class OrderedDictionary_2<TKey extends IJCOBridgeReflected, TValue extend
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.OrderedDictionary-2.-ctor" target="_top">.NET documentation</a>
      */
-    public OrderedDictionary_2(IDictionary_2 dictionary, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
+    public OrderedDictionary_2(IDictionary_2<TKey, TValue> dictionary, IEqualityComparer_1<TKey> comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -270,7 +270,7 @@ public class OrderedDictionary_2<TKey extends IJCOBridgeReflected, TValue extend
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param dictionary the argument of type {@code IDictionary_2}
+     * @param dictionary the argument of type {@code IDictionary_2<TKey, TValue>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -284,7 +284,7 @@ public class OrderedDictionary_2<TKey extends IJCOBridgeReflected, TValue extend
      * @throws system.InvalidCastException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.OrderedDictionary-2.-ctor" target="_top">.NET documentation</a>
      */
-    public OrderedDictionary_2(IDictionary_2 dictionary) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
+    public OrderedDictionary_2(IDictionary_2<TKey, TValue> dictionary) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -299,8 +299,8 @@ public class OrderedDictionary_2<TKey extends IJCOBridgeReflected, TValue extend
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param collection the argument of type {@code IEnumerable_1}
-     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @param collection the argument of type {@code IEnumerable_1<KeyValuePair_2<TKey, TValue>>}
+     * @param comparer the argument of type {@code IEqualityComparer_1<TKey>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -312,7 +312,7 @@ public class OrderedDictionary_2<TKey extends IJCOBridgeReflected, TValue extend
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.OrderedDictionary-2.-ctor" target="_top">.NET documentation</a>
      */
-    public OrderedDictionary_2(IEnumerable_1 collection, IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
+    public OrderedDictionary_2(IEnumerable_1<KeyValuePair_2<TKey, TValue>> collection, IEqualityComparer_1<TKey> comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -327,7 +327,7 @@ public class OrderedDictionary_2<TKey extends IJCOBridgeReflected, TValue extend
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param collection the argument of type {@code IEnumerable_1}
+     * @param collection the argument of type {@code IEnumerable_1<KeyValuePair_2<TKey, TValue>>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -341,7 +341,7 @@ public class OrderedDictionary_2<TKey extends IJCOBridgeReflected, TValue extend
      * @throws system.InvalidCastException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.OrderedDictionary-2.-ctor" target="_top">.NET documentation</a>
      */
-    public OrderedDictionary_2(IEnumerable_1 collection) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
+    public OrderedDictionary_2(IEnumerable_1<KeyValuePair_2<TKey, TValue>> collection) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -356,7 +356,7 @@ public class OrderedDictionary_2<TKey extends IJCOBridgeReflected, TValue extend
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param comparer the argument of type {@code IEqualityComparer_1}
+     * @param comparer the argument of type {@code IEqualityComparer_1<TKey>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -368,7 +368,7 @@ public class OrderedDictionary_2<TKey extends IJCOBridgeReflected, TValue extend
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.OrderedDictionary-2.-ctor" target="_top">.NET documentation</a>
      */
-    public OrderedDictionary_2(IEqualityComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
+    public OrderedDictionary_2(IEqualityComparer_1<TKey> comparer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -748,7 +748,7 @@ public class OrderedDictionary_2<TKey extends IJCOBridgeReflected, TValue extend
      * @throws system.RankException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.OrderedDictionary-2.GetAt" target="_top">.NET documentation</a>
      */
-    public KeyValuePair_2 GetAt(int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException {
+    public KeyValuePair_2<TKey, TValue> GetAt(int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetAt = null;
@@ -1180,7 +1180,7 @@ public class OrderedDictionary_2<TKey extends IJCOBridgeReflected, TValue extend
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.OrderedDictionary-2.Comparer" target="_top">.NET documentation</a>
      */
-    public IEqualityComparer_1 getComparer() throws Throwable {
+    public IEqualityComparer_1<TKey> getComparer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectComparer = null;

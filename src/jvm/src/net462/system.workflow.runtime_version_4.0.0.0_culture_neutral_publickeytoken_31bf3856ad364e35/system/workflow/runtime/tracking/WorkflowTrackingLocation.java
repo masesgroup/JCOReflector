@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.workflow.runtime.tracking.TrackingWorkflowEvent;
 
 
 /**
@@ -169,11 +170,11 @@ public class WorkflowTrackingLocation extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param events the argument of type {@code IList_1}
+     * @param events the argument of type {@code IList_1<TrackingWorkflowEvent>}
      * @throws Throwable if the .NET constructor fails
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.WorkflowTrackingLocation.-ctor" target="_top">.NET documentation</a>
      */
-    public WorkflowTrackingLocation(IList_1 events) throws Throwable {
+    public WorkflowTrackingLocation(IList_1<TrackingWorkflowEvent> events) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -198,7 +199,7 @@ public class WorkflowTrackingLocation extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.WorkflowTrackingLocation.Events" target="_top">.NET documentation</a>
      */
-    public IList_1 getEvents() throws Throwable {
+    public IList_1<TrackingWorkflowEvent> getEvents() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEvents = null;

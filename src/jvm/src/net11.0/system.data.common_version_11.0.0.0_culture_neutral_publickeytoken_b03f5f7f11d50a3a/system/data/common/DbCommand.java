@@ -45,6 +45,7 @@ import system.data.common.DbParameter;
 import system.threading.tasks.Task;
 import system.threading.CancellationToken;
 import system.threading.tasks.Task_1;
+import system.Object;
 import system.threading.tasks.ValueTask;
 import system.data.CommandType;
 import system.data.common.DbConnection;
@@ -350,7 +351,7 @@ public class DbCommand extends system.componentmodel.Component  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.ExecuteReaderAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 ExecuteReaderAsync() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException {
+    public Task_1<DbDataReader> ExecuteReaderAsync() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExecuteReaderAsync = null;
@@ -381,7 +382,7 @@ public class DbCommand extends system.componentmodel.Component  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.ExecuteReaderAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentNullException, system.InvalidOperationException {
+    public Task_1<DbDataReader> ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExecuteReaderAsync = null;
@@ -412,7 +413,7 @@ public class DbCommand extends system.componentmodel.Component  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.ExecuteReaderAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 ExecuteReaderAsync(CommandBehavior behavior) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException {
+    public Task_1<DbDataReader> ExecuteReaderAsync(CommandBehavior behavior) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExecuteReaderAsync = null;
@@ -443,7 +444,7 @@ public class DbCommand extends system.componentmodel.Component  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.ExecuteReaderAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 ExecuteReaderAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException {
+    public Task_1<DbDataReader> ExecuteReaderAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.NullReferenceException, system.NotSupportedException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExecuteReaderAsync = null;
@@ -532,7 +533,7 @@ public class DbCommand extends system.componentmodel.Component  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.ExecuteScalarAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 ExecuteScalarAsync() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentNullException, system.InvalidOperationException {
+    public Task_1<Object> ExecuteScalarAsync() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExecuteScalarAsync = null;
@@ -563,7 +564,7 @@ public class DbCommand extends system.componentmodel.Component  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.ExecuteScalarAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 ExecuteScalarAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentNullException, system.IndexOutOfRangeException {
+    public Task_1<Object> ExecuteScalarAsync(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NullReferenceException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExecuteScalarAsync = null;

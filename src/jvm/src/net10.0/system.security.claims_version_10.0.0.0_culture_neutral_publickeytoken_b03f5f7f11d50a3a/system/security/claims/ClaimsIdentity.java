@@ -40,12 +40,12 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.security.claims.Claim;
 import system.io.BinaryReader;
 import system.StringComparison;
 import system.security.principal.IIdentity;
 import system.security.principal.IIdentityImplementation;
 import system.Predicate_1;
-import system.security.claims.Claim;
 import system.security.claims.ClaimsIdentity;
 import system.io.BinaryWriter;
 
@@ -188,7 +188,7 @@ public class ClaimsIdentity extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param claims the argument of type {@code IEnumerable_1}
+     * @param claims the argument of type {@code IEnumerable_1<Claim>}
      * @param authenticationType the argument of type {@code java.lang.String}
      * @param nameType the argument of type {@code java.lang.String}
      * @param roleType the argument of type {@code java.lang.String}
@@ -206,7 +206,7 @@ public class ClaimsIdentity extends NetObject  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.ClaimsIdentity.-ctor" target="_top">.NET documentation</a>
      */
-    public ClaimsIdentity(IEnumerable_1 claims, java.lang.String authenticationType, java.lang.String nameType, java.lang.String roleType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+    public ClaimsIdentity(IEnumerable_1<Claim> claims, java.lang.String authenticationType, java.lang.String nameType, java.lang.String roleType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -219,7 +219,7 @@ public class ClaimsIdentity extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param claims the argument of type {@code IEnumerable_1}
+     * @param claims the argument of type {@code IEnumerable_1<Claim>}
      * @param authenticationType the argument of type {@code java.lang.String}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -235,7 +235,7 @@ public class ClaimsIdentity extends NetObject  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.ClaimsIdentity.-ctor" target="_top">.NET documentation</a>
      */
-    public ClaimsIdentity(IEnumerable_1 claims, java.lang.String authenticationType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+    public ClaimsIdentity(IEnumerable_1<Claim> claims, java.lang.String authenticationType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -248,7 +248,7 @@ public class ClaimsIdentity extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param claims the argument of type {@code IEnumerable_1}
+     * @param claims the argument of type {@code IEnumerable_1<Claim>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -263,7 +263,7 @@ public class ClaimsIdentity extends NetObject  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.ClaimsIdentity.-ctor" target="_top">.NET documentation</a>
      */
-    public ClaimsIdentity(IEnumerable_1 claims) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+    public ClaimsIdentity(IEnumerable_1<Claim> claims) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -336,7 +336,7 @@ public class ClaimsIdentity extends NetObject  {
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param identity the argument of type {@code IIdentity}
-     * @param claims the argument of type {@code IEnumerable_1}
+     * @param claims the argument of type {@code IEnumerable_1<Claim>}
      * @param authenticationType the argument of type {@code java.lang.String}
      * @param nameType the argument of type {@code java.lang.String}
      * @param roleType the argument of type {@code java.lang.String}
@@ -355,7 +355,7 @@ public class ClaimsIdentity extends NetObject  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.ClaimsIdentity.-ctor" target="_top">.NET documentation</a>
      */
-    public ClaimsIdentity(IIdentity identity, IEnumerable_1 claims, java.lang.String authenticationType, java.lang.String nameType, java.lang.String roleType, StringComparison stringComparison) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+    public ClaimsIdentity(IIdentity identity, IEnumerable_1<Claim> claims, java.lang.String authenticationType, java.lang.String nameType, java.lang.String roleType, StringComparison stringComparison) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -369,7 +369,7 @@ public class ClaimsIdentity extends NetObject  {
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param identity the argument of type {@code IIdentity}
-     * @param claims the argument of type {@code IEnumerable_1}
+     * @param claims the argument of type {@code IEnumerable_1<Claim>}
      * @param authenticationType the argument of type {@code java.lang.String}
      * @param nameType the argument of type {@code java.lang.String}
      * @param roleType the argument of type {@code java.lang.String}
@@ -388,7 +388,7 @@ public class ClaimsIdentity extends NetObject  {
      * @throws system.InvalidCastException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.ClaimsIdentity.-ctor" target="_top">.NET documentation</a>
      */
-    public ClaimsIdentity(IIdentity identity, IEnumerable_1 claims, java.lang.String authenticationType, java.lang.String nameType, java.lang.String roleType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
+    public ClaimsIdentity(IIdentity identity, IEnumerable_1<Claim> claims, java.lang.String authenticationType, java.lang.String nameType, java.lang.String roleType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -402,7 +402,7 @@ public class ClaimsIdentity extends NetObject  {
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param identity the argument of type {@code IIdentity}
-     * @param claims the argument of type {@code IEnumerable_1}
+     * @param claims the argument of type {@code IEnumerable_1<Claim>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -417,7 +417,7 @@ public class ClaimsIdentity extends NetObject  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.ClaimsIdentity.-ctor" target="_top">.NET documentation</a>
      */
-    public ClaimsIdentity(IIdentity identity, IEnumerable_1 claims) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+    public ClaimsIdentity(IIdentity identity, IEnumerable_1<Claim> claims) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -520,7 +520,7 @@ public class ClaimsIdentity extends NetObject  {
     /**
      * Invokes the .NET member HasClaim.
      *
-     * @param match the argument of type {@code Predicate_1}
+     * @param match the argument of type {@code Predicate_1<Claim>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -534,7 +534,7 @@ public class ClaimsIdentity extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.ClaimsIdentity.HasClaim" target="_top">.NET documentation</a>
      */
-    public boolean HasClaim(Predicate_1 match) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public boolean HasClaim(Predicate_1<Claim> match) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectHasClaim = null;
@@ -611,7 +611,7 @@ public class ClaimsIdentity extends NetObject  {
     /**
      * Invokes the .NET member FindAll.
      *
-     * @param match the argument of type {@code Predicate_1}
+     * @param match the argument of type {@code Predicate_1<Claim>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -625,7 +625,7 @@ public class ClaimsIdentity extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.ClaimsIdentity.FindAll" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 FindAll(Predicate_1 match) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public IEnumerable_1<Claim> FindAll(Predicate_1<Claim> match) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFindAll = null;
@@ -657,7 +657,7 @@ public class ClaimsIdentity extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.ClaimsIdentity.FindAll" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 FindAll(java.lang.String type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public IEnumerable_1<Claim> FindAll(java.lang.String type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFindAll = null;
@@ -675,7 +675,7 @@ public class ClaimsIdentity extends NetObject  {
     /**
      * Invokes the .NET member FindFirst.
      *
-     * @param match the argument of type {@code Predicate_1}
+     * @param match the argument of type {@code Predicate_1<Claim>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -689,7 +689,7 @@ public class ClaimsIdentity extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.ClaimsIdentity.FindFirst" target="_top">.NET documentation</a>
      */
-    public Claim FindFirst(Predicate_1 match) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public Claim FindFirst(Predicate_1<Claim> match) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFindFirst = null;
@@ -797,7 +797,7 @@ public class ClaimsIdentity extends NetObject  {
     /**
      * Invokes the .NET member AddClaims.
      *
-     * @param claims the argument of type {@code IEnumerable_1}
+     * @param claims the argument of type {@code IEnumerable_1<Claim>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -811,7 +811,7 @@ public class ClaimsIdentity extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.ClaimsIdentity.AddClaims" target="_top">.NET documentation</a>
      */
-    public void AddClaims(IEnumerable_1 claims) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
+    public void AddClaims(IEnumerable_1<Claim> claims) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -905,7 +905,7 @@ public class ClaimsIdentity extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.ClaimsIdentity.Claims" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getClaims() throws Throwable {
+    public IEnumerable_1<Claim> getClaims() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectClaims = null;

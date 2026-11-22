@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.EventHandler_1;
+import system.componentmodel.composition.hosting.ComposablePartCatalogChangeEventArgs;
 
 
 /**
@@ -123,5 +125,13 @@ public interface INotifyComposablePartCatalogChanged extends IJCOBridgeReflected
 
     // Instance Events section
     
+    public void addChanged(EventHandler_1<ComposablePartCatalogChangeEventArgs> handler) throws Throwable;
+
+    public void removeChanged(EventHandler_1<ComposablePartCatalogChangeEventArgs> handler) throws Throwable;
+
+    public void addChanging(EventHandler_1<ComposablePartCatalogChangeEventArgs> handler) throws Throwable;
+
+    public void removeChanging(EventHandler_1<ComposablePartCatalogChangeEventArgs> handler) throws Throwable;
+
 
 }

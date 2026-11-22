@@ -40,10 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
-import system.data.objects.dataclasses.EntityCollection_1;
-import system.data.objects.dataclasses.EntityReference_1;
 import system.data.objects.dataclasses.IRelatedEnd;
 import system.data.objects.dataclasses.IRelatedEndImplementation;
+import system.data.objects.dataclasses.EntityCollection_1;
+import system.data.objects.dataclasses.EntityReference_1;
 import system.data.objects.dataclasses.RelationshipManager;
 import system.data.objects.dataclasses.IEntityWithRelationships;
 import system.data.objects.dataclasses.IEntityWithRelationshipsImplementation;
@@ -173,7 +173,7 @@ public class RelationshipManager extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.DataClasses.RelationshipManager.GetAllRelatedEnds" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetAllRelatedEnds() throws Throwable {
+    public IEnumerable_1<IRelatedEnd> GetAllRelatedEnds() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetAllRelatedEnds = null;

@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.windows.media.imaging.BitmapSource;
 import system.Nullable_1;
+import system.windows.Int32Rect;
 
 
 /**
@@ -193,7 +194,7 @@ public class InteropBitmap extends system.windows.media.imaging.BitmapSource  {
     /**
      * Invokes the .NET member Invalidate.
      *
-     * @param dirtyRect the argument of type {@code Nullable_1}
+     * @param dirtyRect the argument of type {@code Nullable_1<Int32Rect>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -215,7 +216,7 @@ public class InteropBitmap extends system.windows.media.imaging.BitmapSource  {
      * @throws system.MulticastNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Interop.InteropBitmap.Invalidate" target="_top">.NET documentation</a>
      */
-    public void Invalidate(Nullable_1 dirtyRect) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OverflowException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.TimeoutException, system.RankException, system.MulticastNotSupportedException {
+    public void Invalidate(Nullable_1<Int32Rect> dirtyRect) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OverflowException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.TimeoutException, system.RankException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

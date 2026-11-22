@@ -49,6 +49,8 @@ import system.windows.forms.TaskDialogProgressBar;
 import system.windows.forms.TaskDialogRadioButtonCollection;
 import system.windows.forms.TaskDialogVerificationCheckBox;
 import system.EventHandler;
+import system.EventHandler_1;
+import system.windows.forms.TaskDialogLinkClickedEventArgs;
 
 
 /**
@@ -1069,6 +1071,40 @@ public class TaskDialogPage extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("HelpRequest", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addLinkClicked.
+     *
+     * @param handler the argument of type {@code EventHandler_1<TaskDialogLinkClickedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addLinkClicked(EventHandler_1<TaskDialogLinkClickedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("LinkClicked", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeLinkClicked.
+     *
+     * @param handler the argument of type {@code EventHandler_1<TaskDialogLinkClickedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeLinkClicked(EventHandler_1<TaskDialogLinkClickedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("LinkClicked", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

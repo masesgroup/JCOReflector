@@ -91,10 +91,10 @@ import system.reflection.ParameterAttributes;
 import system.reflection.metadata.PropertyDefinitionHandle;
 import system.reflection.PropertyAttributes;
 import system.reflection.metadata.ReservedBlob_1;
+import system.reflection.metadata.UserStringHandle;
 import system.reflection.metadata.StandaloneSignatureHandle;
 import system.reflection.metadata.TypeReferenceHandle;
 import system.reflection.metadata.TypeSpecificationHandle;
-import system.reflection.metadata.UserStringHandle;
 import system.reflection.metadata.ecma335.EditAndContinueOperation;
 import system.reflection.MethodImportAttributes;
 import system.reflection.MethodSemanticsAttributes;
@@ -1642,7 +1642,7 @@ public class MetadataBuilder extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataBuilder.ReserveGuid" target="_top">.NET documentation</a>
      */
-    public ReservedBlob_1 ReserveGuid() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
+    public ReservedBlob_1<GuidHandle> ReserveGuid() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReserveGuid = null;
@@ -1677,7 +1677,7 @@ public class MetadataBuilder extends NetObject  {
      * @throws system.reflection.metadata.ImageFormatLimitationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataBuilder.ReserveUserString" target="_top">.NET documentation</a>
      */
-    public ReservedBlob_1 ReserveUserString(int length) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.reflection.metadata.ImageFormatLimitationException {
+    public ReservedBlob_1<UserStringHandle> ReserveUserString(int length) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.reflection.metadata.ImageFormatLimitationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReserveUserString = null;

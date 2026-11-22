@@ -47,6 +47,7 @@ import system.windows.DragEventArgs;
 import system.activities.presentation.model.ModelItem;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.Object;
 import system.windows.DependencyObject;
 import system.windows.DragDropEffects;
 import system.activities.presentation.WorkflowViewElement;
@@ -262,7 +263,7 @@ public class DragDropHelper extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DragDropHelper.GetDraggedModelItems" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 GetDraggedModelItems(DragEventArgs e) throws Throwable {
+    public static IEnumerable_1<ModelItem> GetDraggedModelItems(DragEventArgs e) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDraggedModelItems = null;
@@ -309,7 +310,7 @@ public class DragDropHelper extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.DragDropHelper.GetDroppedObjects" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 GetDroppedObjects(DependencyObject dropTarget, DragEventArgs e, EditingContext context) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.NullReferenceException, system.OverflowException, system.NotImplementedException, system.ObjectDisposedException, system.io.IOException, system.reflection.AmbiguousMatchException, system.windows.markup.XamlParseException, system.MulticastNotSupportedException, system.RankException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.OutOfMemoryException {
+    public static IEnumerable_1<Object> GetDroppedObjects(DependencyObject dropTarget, DragEventArgs e, EditingContext context) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.NullReferenceException, system.OverflowException, system.NotImplementedException, system.ObjectDisposedException, system.io.IOException, system.reflection.AmbiguousMatchException, system.windows.markup.XamlParseException, system.MulticastNotSupportedException, system.RankException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDroppedObjects = null;

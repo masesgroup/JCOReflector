@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.security.cryptography.x509certificates.X509Extension;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.net.IPAddress;
 import system.security.cryptography.AsnEncodedData;
 
 
@@ -233,7 +234,7 @@ public class X509SubjectAlternativeNameExtension extends system.security.cryptog
      * @throws system.InvalidCastException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.X509SubjectAlternativeNameExtension.EnumerateIPAddresses" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 EnumerateIPAddresses() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.formats.asn1.AsnContentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
+    public IEnumerable_1<IPAddress> EnumerateIPAddresses() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.formats.asn1.AsnContentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEnumerateIPAddresses = null;

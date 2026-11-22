@@ -47,6 +47,7 @@ import microsoft.extensions.dependencyinjection.IServiceScope;
 import microsoft.extensions.dependencyinjection.IServiceScopeImplementation;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.Object;
 
 
 /**
@@ -268,7 +269,7 @@ public class ServiceProviderServiceExtensions extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetServices" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 GetServices(IServiceProvider provider, NetType serviceType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public static IEnumerable_1<Object> GetServices(IServiceProvider provider, NetType serviceType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetServices = null;

@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.activities.presentation.EditingContext;
 import system.Guid;
+import system.EventHandler_1;
+import system.activities.presentation.SourceLocationUpdatedEventArgs;
 
 
 /**
@@ -304,6 +306,40 @@ public class ObjectReferenceService extends NetObject  {
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addSourceLocationUpdated.
+     *
+     * @param handler the argument of type {@code EventHandler_1<SourceLocationUpdatedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addSourceLocationUpdated(EventHandler_1<SourceLocationUpdatedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("SourceLocationUpdated", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeSourceLocationUpdated.
+     *
+     * @param handler the argument of type {@code EventHandler_1<SourceLocationUpdatedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeSourceLocationUpdated(EventHandler_1<SourceLocationUpdatedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("SourceLocationUpdated", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

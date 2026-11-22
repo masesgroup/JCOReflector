@@ -164,7 +164,7 @@ public class NewArrayExpression extends system.linq.expressions.Expression  {
     /**
      * Invokes the .NET member Update.
      *
-     * @param expressions the argument of type {@code IEnumerable_1}
+     * @param expressions the argument of type {@code IEnumerable_1<Expression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -178,7 +178,7 @@ public class NewArrayExpression extends system.linq.expressions.Expression  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.NewArrayExpression.Update" target="_top">.NET documentation</a>
      */
-    public NewArrayExpression Update(IEnumerable_1 expressions) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
+    public NewArrayExpression Update(IEnumerable_1<Expression> expressions) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUpdate = null;
@@ -204,7 +204,7 @@ public class NewArrayExpression extends system.linq.expressions.Expression  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.NewArrayExpression.Expressions" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getExpressions() throws Throwable {
+    public ReadOnlyCollection_1<Expression> getExpressions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExpressions = null;

@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.net.security.TlsCipherSuite;
 
 
 /**
@@ -156,7 +157,7 @@ public class CipherSuitesPolicy extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param allowedCipherSuites the argument of type {@code IEnumerable_1}
+     * @param allowedCipherSuites the argument of type {@code IEnumerable_1<TlsCipherSuite>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -169,7 +170,7 @@ public class CipherSuitesPolicy extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.CipherSuitesPolicy.-ctor" target="_top">.NET documentation</a>
      */
-    public CipherSuitesPolicy(IEnumerable_1 allowedCipherSuites) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public CipherSuitesPolicy(IEnumerable_1<TlsCipherSuite> allowedCipherSuites) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -195,7 +196,7 @@ public class CipherSuitesPolicy extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.CipherSuitesPolicy.AllowedCipherSuites" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getAllowedCipherSuites() throws Throwable {
+    public IEnumerable_1<TlsCipherSuite> getAllowedCipherSuites() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAllowedCipherSuites = null;

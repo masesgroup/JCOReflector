@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.activities.CodeActivity_1;
 import system.activities.InArgument_1;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 
 
 /**
@@ -183,7 +185,7 @@ public class RemoveFromCollection_1<T extends IJCOBridgeReflected> extends syste
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.RemoveFromCollection-1.Collection" target="_top">.NET documentation</a>
      */
-    public InArgument_1 getCollection() throws Throwable {
+    public InArgument_1<ICollection_1<T>> getCollection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCollection = null;
@@ -205,7 +207,7 @@ public class RemoveFromCollection_1<T extends IJCOBridgeReflected> extends syste
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.RemoveFromCollection-1.Collection" target="_top">.NET documentation</a>
      */
-    public void setCollection(InArgument_1 Collection) throws Throwable {
+    public void setCollection(InArgument_1<ICollection_1<T>> Collection) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -222,7 +224,7 @@ public class RemoveFromCollection_1<T extends IJCOBridgeReflected> extends syste
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.RemoveFromCollection-1.Item" target="_top">.NET documentation</a>
      */
-    public InArgument_1 getItem() throws Throwable {
+    public InArgument_1<T> getItem() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectItem = null;
@@ -244,7 +246,7 @@ public class RemoveFromCollection_1<T extends IJCOBridgeReflected> extends syste
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.RemoveFromCollection-1.Item" target="_top">.NET documentation</a>
      */
-    public void setItem(InArgument_1 Item) throws Throwable {
+    public void setItem(InArgument_1<T> Item) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

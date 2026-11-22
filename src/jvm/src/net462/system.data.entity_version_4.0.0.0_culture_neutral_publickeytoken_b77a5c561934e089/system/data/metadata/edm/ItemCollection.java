@@ -43,6 +43,7 @@ import system.data.metadata.edm.GlobalItem;
 import system.data.metadata.edm.EntityContainer;
 import system.data.metadata.edm.EdmType;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.data.metadata.edm.EdmFunction;
 import system.data.metadata.edm.DataSpace;
 
 
@@ -368,7 +369,7 @@ public class ItemCollection extends system.data.metadata.edm.ReadOnlyMetadataCol
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.ItemCollection.GetFunctions" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 GetFunctions(java.lang.String functionName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.threading.SynchronizationLockException, system.ObjectDisposedException, system.threading.LockRecursionException, system.InvalidOperationException {
+    public ReadOnlyCollection_1<EdmFunction> GetFunctions(java.lang.String functionName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.threading.SynchronizationLockException, system.ObjectDisposedException, system.threading.LockRecursionException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetFunctions = null;
@@ -400,7 +401,7 @@ public class ItemCollection extends system.data.metadata.edm.ReadOnlyMetadataCol
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.ItemCollection.GetFunctions" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 GetFunctions(java.lang.String functionName, boolean ignoreCase) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.InvalidOperationException {
+    public ReadOnlyCollection_1<EdmFunction> GetFunctions(java.lang.String functionName, boolean ignoreCase) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetFunctions = null;

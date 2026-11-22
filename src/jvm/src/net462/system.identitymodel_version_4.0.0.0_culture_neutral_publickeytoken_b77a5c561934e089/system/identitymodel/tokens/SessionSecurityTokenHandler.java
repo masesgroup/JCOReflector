@@ -40,9 +40,11 @@ import java.util.ArrayList;
 // Import section
 import system.identitymodel.tokens.SecurityTokenHandler;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.identitymodel.CookieTransform;
 import system.TimeSpan;
 import system.xml.XmlReader;
 import system.identitymodel.tokens.SessionSecurityToken;
+import system.security.claims.ClaimsIdentity;
 import system.identitymodel.tokens.SecurityToken;
 import system.identitymodel.tokens.SecurityTokenDescriptor;
 import system.identitymodel.selectors.SecurityTokenResolver;
@@ -185,7 +187,7 @@ public class SessionSecurityTokenHandler extends system.identitymodel.tokens.Sec
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param transforms the argument of type {@code ReadOnlyCollection_1}
+     * @param transforms the argument of type {@code ReadOnlyCollection_1<CookieTransform>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -201,7 +203,7 @@ public class SessionSecurityTokenHandler extends system.identitymodel.tokens.Sec
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SessionSecurityTokenHandler.-ctor" target="_top">.NET documentation</a>
      */
-    public SessionSecurityTokenHandler(ReadOnlyCollection_1 transforms) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+    public SessionSecurityTokenHandler(ReadOnlyCollection_1<CookieTransform> transforms) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -214,7 +216,7 @@ public class SessionSecurityTokenHandler extends system.identitymodel.tokens.Sec
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param transforms the argument of type {@code ReadOnlyCollection_1}
+     * @param transforms the argument of type {@code ReadOnlyCollection_1<CookieTransform>}
      * @param tokenLifetime the argument of type {@code TimeSpan}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
@@ -230,7 +232,7 @@ public class SessionSecurityTokenHandler extends system.identitymodel.tokens.Sec
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SessionSecurityTokenHandler.-ctor" target="_top">.NET documentation</a>
      */
-    public SessionSecurityTokenHandler(ReadOnlyCollection_1 transforms, TimeSpan tokenLifetime) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+    public SessionSecurityTokenHandler(ReadOnlyCollection_1<CookieTransform> transforms, TimeSpan tokenLifetime) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -340,7 +342,7 @@ public class SessionSecurityTokenHandler extends system.identitymodel.tokens.Sec
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SessionSecurityTokenHandler.ValidateToken" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 ValidateToken(SecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
+    public ReadOnlyCollection_1<ClaimsIdentity> ValidateToken(SecurityToken token) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValidateToken = null;
@@ -375,7 +377,7 @@ public class SessionSecurityTokenHandler extends system.identitymodel.tokens.Sec
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SessionSecurityTokenHandler.ValidateToken" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 ValidateToken(SessionSecurityToken token, java.lang.String endpointId) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+    public ReadOnlyCollection_1<ClaimsIdentity> ValidateToken(SessionSecurityToken token, java.lang.String endpointId) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValidateToken = null;
@@ -714,7 +716,7 @@ public class SessionSecurityTokenHandler extends system.identitymodel.tokens.Sec
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SessionSecurityTokenHandler.Transforms" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getTransforms() throws Throwable {
+    public ReadOnlyCollection_1<CookieTransform> getTransforms() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTransforms = null;

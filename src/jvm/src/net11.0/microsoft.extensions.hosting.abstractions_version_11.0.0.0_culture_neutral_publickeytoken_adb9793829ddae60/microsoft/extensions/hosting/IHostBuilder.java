@@ -42,12 +42,18 @@ import microsoft.extensions.hosting.IHostImplementation;
 import microsoft.extensions.hosting.IHostBuilder;
 import microsoft.extensions.hosting.IHostBuilderImplementation;
 import system.Action_2;
+import microsoft.extensions.hosting.HostBuilderContext;
+import microsoft.extensions.configuration.IConfigurationBuilder;
+import microsoft.extensions.configuration.IConfigurationBuilderImplementation;
 import system.Action_1;
+import microsoft.extensions.dependencyinjection.IServiceCollection;
+import microsoft.extensions.dependencyinjection.IServiceCollectionImplementation;
 import microsoft.extensions.dependencyinjection.IServiceProviderFactory_1;
 import microsoft.extensions.dependencyinjection.IServiceProviderFactory_1Implementation;
 import system.Func_2;
 import system.collections.generic.IDictionary_2;
 import system.collections.generic.IDictionary_2Implementation;
+import system.Object;
 
 
 /**
@@ -128,13 +134,13 @@ public interface IHostBuilder extends IJCOBridgeReflected {
     
     public IHost Build() throws Throwable;
 
-    public IHostBuilder ConfigureAppConfiguration(Action_2 configureDelegate) throws Throwable;
+    public IHostBuilder ConfigureAppConfiguration(Action_2<HostBuilderContext, IConfigurationBuilder> configureDelegate) throws Throwable;
 
     public <TContainerBuilder extends IJCOBridgeReflected> IHostBuilder ConfigureContainer(Action_2 configureDelegate) throws Throwable;
 
-    public IHostBuilder ConfigureHostConfiguration(Action_1 configureDelegate) throws Throwable;
+    public IHostBuilder ConfigureHostConfiguration(Action_1<IConfigurationBuilder> configureDelegate) throws Throwable;
 
-    public IHostBuilder ConfigureServices(Action_2 configureDelegate) throws Throwable;
+    public IHostBuilder ConfigureServices(Action_2<HostBuilderContext, IServiceCollection> configureDelegate) throws Throwable;
 
     public <TContainerBuilder extends IJCOBridgeReflected> IHostBuilder UseServiceProviderFactory(IServiceProviderFactory_1 factory) throws Throwable;
 
@@ -144,7 +150,7 @@ public interface IHostBuilder extends IJCOBridgeReflected {
     
     // Properties section
     
-    public IDictionary_2 getProperties() throws Throwable;
+    public IDictionary_2<Object, Object> getProperties() throws Throwable;
 
 
 

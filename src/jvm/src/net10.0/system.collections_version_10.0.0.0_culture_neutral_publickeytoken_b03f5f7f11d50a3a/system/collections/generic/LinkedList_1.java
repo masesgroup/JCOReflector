@@ -175,7 +175,7 @@ public class LinkedList_1<T extends IJCOBridgeReflected> extends NetObjectEnumer
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param collection the argument of type {@code IEnumerable_1}
+     * @param collection the argument of type {@code IEnumerable_1<T>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -188,7 +188,7 @@ public class LinkedList_1<T extends IJCOBridgeReflected> extends NetObjectEnumer
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.LinkedList-1.-ctor" target="_top">.NET documentation</a>
      */
-    public LinkedList_1(IEnumerable_1 collection) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
+    public LinkedList_1(IEnumerable_1<T> collection) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -251,7 +251,7 @@ public class LinkedList_1<T extends IJCOBridgeReflected> extends NetObjectEnumer
     /**
      * Invokes the .NET member AddAfter.
      *
-     * @param node the argument of type {@code LinkedListNode_1}
+     * @param node the argument of type {@code LinkedListNode_1<T>}
      * @param value the argument of type {@code T}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -262,7 +262,7 @@ public class LinkedList_1<T extends IJCOBridgeReflected> extends NetObjectEnumer
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.LinkedList-1.AddAfter" target="_top">.NET documentation</a>
      */
-    public LinkedListNode_1 AddAfter(LinkedListNode_1 node, T value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public LinkedListNode_1<T> AddAfter(LinkedListNode_1<T> node, T value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAddAfter = null;
@@ -280,7 +280,7 @@ public class LinkedList_1<T extends IJCOBridgeReflected> extends NetObjectEnumer
     /**
      * Invokes the .NET member AddBefore.
      *
-     * @param node the argument of type {@code LinkedListNode_1}
+     * @param node the argument of type {@code LinkedListNode_1<T>}
      * @param value the argument of type {@code T}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -291,7 +291,7 @@ public class LinkedList_1<T extends IJCOBridgeReflected> extends NetObjectEnumer
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.LinkedList-1.AddBefore" target="_top">.NET documentation</a>
      */
-    public LinkedListNode_1 AddBefore(LinkedListNode_1 node, T value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public LinkedListNode_1<T> AddBefore(LinkedListNode_1<T> node, T value) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAddBefore = null;
@@ -314,7 +314,7 @@ public class LinkedList_1<T extends IJCOBridgeReflected> extends NetObjectEnumer
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.LinkedList-1.AddFirst" target="_top">.NET documentation</a>
      */
-    public LinkedListNode_1 AddFirst(T value) throws Throwable {
+    public LinkedListNode_1<T> AddFirst(T value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAddFirst = null;
@@ -337,7 +337,7 @@ public class LinkedList_1<T extends IJCOBridgeReflected> extends NetObjectEnumer
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.LinkedList-1.AddLast" target="_top">.NET documentation</a>
      */
-    public LinkedListNode_1 AddLast(T value) throws Throwable {
+    public LinkedListNode_1<T> AddLast(T value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAddLast = null;
@@ -360,7 +360,7 @@ public class LinkedList_1<T extends IJCOBridgeReflected> extends NetObjectEnumer
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.LinkedList-1.Find" target="_top">.NET documentation</a>
      */
-    public LinkedListNode_1 Find(T value) throws Throwable {
+    public LinkedListNode_1<T> Find(T value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFind = null;
@@ -383,7 +383,7 @@ public class LinkedList_1<T extends IJCOBridgeReflected> extends NetObjectEnumer
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.LinkedList-1.FindLast" target="_top">.NET documentation</a>
      */
-    public LinkedListNode_1 FindLast(T value) throws Throwable {
+    public LinkedListNode_1<T> FindLast(T value) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFindLast = null;
@@ -401,8 +401,8 @@ public class LinkedList_1<T extends IJCOBridgeReflected> extends NetObjectEnumer
     /**
      * Invokes the .NET member AddAfter.
      *
-     * @param node the argument of type {@code LinkedListNode_1}
-     * @param newNode the argument of type {@code LinkedListNode_1}
+     * @param node the argument of type {@code LinkedListNode_1<T>}
+     * @param newNode the argument of type {@code LinkedListNode_1<T>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -411,7 +411,7 @@ public class LinkedList_1<T extends IJCOBridgeReflected> extends NetObjectEnumer
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.LinkedList-1.AddAfter" target="_top">.NET documentation</a>
      */
-    public void AddAfter(LinkedListNode_1 node, LinkedListNode_1 newNode) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public void AddAfter(LinkedListNode_1<T> node, LinkedListNode_1<T> newNode) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -424,8 +424,8 @@ public class LinkedList_1<T extends IJCOBridgeReflected> extends NetObjectEnumer
     /**
      * Invokes the .NET member AddBefore.
      *
-     * @param node the argument of type {@code LinkedListNode_1}
-     * @param newNode the argument of type {@code LinkedListNode_1}
+     * @param node the argument of type {@code LinkedListNode_1<T>}
+     * @param newNode the argument of type {@code LinkedListNode_1<T>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -434,7 +434,7 @@ public class LinkedList_1<T extends IJCOBridgeReflected> extends NetObjectEnumer
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.LinkedList-1.AddBefore" target="_top">.NET documentation</a>
      */
-    public void AddBefore(LinkedListNode_1 node, LinkedListNode_1 newNode) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public void AddBefore(LinkedListNode_1<T> node, LinkedListNode_1<T> newNode) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -447,7 +447,7 @@ public class LinkedList_1<T extends IJCOBridgeReflected> extends NetObjectEnumer
     /**
      * Invokes the .NET member AddFirst.
      *
-     * @param node the argument of type {@code LinkedListNode_1}
+     * @param node the argument of type {@code LinkedListNode_1<T>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -456,7 +456,7 @@ public class LinkedList_1<T extends IJCOBridgeReflected> extends NetObjectEnumer
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.LinkedList-1.AddFirst" target="_top">.NET documentation</a>
      */
-    public void AddFirst(LinkedListNode_1 node) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public void AddFirst(LinkedListNode_1<T> node) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -469,7 +469,7 @@ public class LinkedList_1<T extends IJCOBridgeReflected> extends NetObjectEnumer
     /**
      * Invokes the .NET member AddLast.
      *
-     * @param node the argument of type {@code LinkedListNode_1}
+     * @param node the argument of type {@code LinkedListNode_1<T>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -478,7 +478,7 @@ public class LinkedList_1<T extends IJCOBridgeReflected> extends NetObjectEnumer
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.LinkedList-1.AddLast" target="_top">.NET documentation</a>
      */
-    public void AddLast(LinkedListNode_1 node) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public void AddLast(LinkedListNode_1<T> node) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -590,7 +590,7 @@ public class LinkedList_1<T extends IJCOBridgeReflected> extends NetObjectEnumer
     /**
      * Invokes the .NET member Remove.
      *
-     * @param node the argument of type {@code LinkedListNode_1}
+     * @param node the argument of type {@code LinkedListNode_1<T>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -599,7 +599,7 @@ public class LinkedList_1<T extends IJCOBridgeReflected> extends NetObjectEnumer
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.LinkedList-1.Remove" target="_top">.NET documentation</a>
      */
-    public void Remove(LinkedListNode_1 node) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public void Remove(LinkedListNode_1<T> node) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -729,7 +729,7 @@ public class LinkedList_1<T extends IJCOBridgeReflected> extends NetObjectEnumer
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.LinkedList-1.First" target="_top">.NET documentation</a>
      */
-    public LinkedListNode_1 getFirst() throws Throwable {
+    public LinkedListNode_1<T> getFirst() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFirst = null;
@@ -751,7 +751,7 @@ public class LinkedList_1<T extends IJCOBridgeReflected> extends NetObjectEnumer
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.LinkedList-1.Last" target="_top">.NET documentation</a>
      */
-    public LinkedListNode_1 getLast() throws Throwable {
+    public LinkedListNode_1<T> getLast() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectLast = null;

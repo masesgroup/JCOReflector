@@ -189,7 +189,7 @@ public class DbCaseExpression extends system.data.common.commandtrees.DbExpressi
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbCaseExpression.Then" target="_top">.NET documentation</a>
      */
-    public IList_1 getThen() throws Throwable {
+    public IList_1<DbExpression> getThen() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectThen = null;
@@ -211,7 +211,7 @@ public class DbCaseExpression extends system.data.common.commandtrees.DbExpressi
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbCaseExpression.When" target="_top">.NET documentation</a>
      */
-    public IList_1 getWhen() throws Throwable {
+    public IList_1<DbExpression> getWhen() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectWhen = null;

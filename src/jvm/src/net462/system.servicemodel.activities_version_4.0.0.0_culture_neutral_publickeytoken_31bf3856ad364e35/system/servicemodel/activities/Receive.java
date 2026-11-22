@@ -42,8 +42,11 @@ import system.activities.Activity;
 import system.servicemodel.activities.Receive;
 import system.servicemodel.description.OperationDescription;
 import system.activities.InArgument_1;
+import system.servicemodel.activities.CorrelationHandle;
 import system.collections.objectmodel.Collection_1;
+import system.servicemodel.activities.CorrelationInitializer;
 import system.Nullable_1;
+import system.net.security.ProtectionLevel;
 import system.servicemodel.activities.ReceiveContent;
 import system.servicemodel.activities.SerializerOption;
 import system.servicemodel.MessageQuerySet;
@@ -290,7 +293,7 @@ public class Receive extends system.activities.Activity  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Receive.CorrelatesWith" target="_top">.NET documentation</a>
      */
-    public InArgument_1 getCorrelatesWith() throws Throwable {
+    public InArgument_1<CorrelationHandle> getCorrelatesWith() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCorrelatesWith = null;
@@ -312,7 +315,7 @@ public class Receive extends system.activities.Activity  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Receive.CorrelatesWith" target="_top">.NET documentation</a>
      */
-    public void setCorrelatesWith(InArgument_1 CorrelatesWith) throws Throwable {
+    public void setCorrelatesWith(InArgument_1<CorrelationHandle> CorrelatesWith) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -329,7 +332,7 @@ public class Receive extends system.activities.Activity  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Receive.CorrelationInitializers" target="_top">.NET documentation</a>
      */
-    public Collection_1 getCorrelationInitializers() throws Throwable {
+    public Collection_1<CorrelationInitializer> getCorrelationInitializers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCorrelationInitializers = null;
@@ -351,7 +354,7 @@ public class Receive extends system.activities.Activity  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Receive.KnownTypes" target="_top">.NET documentation</a>
      */
-    public Collection_1 getKnownTypes() throws Throwable {
+    public Collection_1<NetType> getKnownTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectKnownTypes = null;
@@ -373,7 +376,7 @@ public class Receive extends system.activities.Activity  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Receive.ProtectionLevel" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getProtectionLevel() throws Throwable {
+    public Nullable_1<ProtectionLevel> getProtectionLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectProtectionLevel = null;
@@ -395,7 +398,7 @@ public class Receive extends system.activities.Activity  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Receive.ProtectionLevel" target="_top">.NET documentation</a>
      */
-    public void setProtectionLevel(Nullable_1 ProtectionLevel) throws Throwable {
+    public void setProtectionLevel(Nullable_1<ProtectionLevel> ProtectionLevel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

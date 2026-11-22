@@ -43,6 +43,7 @@ import system.windows.RoutedEvent;
 import system.windows.controls.UndoAction;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.windows.controls.TextChange;
 
 
 /**
@@ -161,7 +162,7 @@ public class TextChangedEventArgs extends system.windows.RoutedEventArgs  {
      *
      * @param id the argument of type {@code RoutedEvent}
      * @param action the argument of type {@code UndoAction}
-     * @param changes the argument of type {@code ICollection_1}
+     * @param changes the argument of type {@code ICollection_1<TextChange>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -177,7 +178,7 @@ public class TextChangedEventArgs extends system.windows.RoutedEventArgs  {
      * @throws system.componentmodel.InvalidEnumArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.TextChangedEventArgs.-ctor" target="_top">.NET documentation</a>
      */
-    public TextChangedEventArgs(RoutedEvent id, UndoAction action, ICollection_1 changes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
+    public TextChangedEventArgs(RoutedEvent id, UndoAction action, ICollection_1<TextChange> changes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -230,7 +231,7 @@ public class TextChangedEventArgs extends system.windows.RoutedEventArgs  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.TextChangedEventArgs.Changes" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getChanges() throws Throwable {
+    public ICollection_1<TextChange> getChanges() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectChanges = null;

@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.xaml.NamespaceDeclaration;
 
 
 /**
@@ -152,7 +153,7 @@ public class IXamlNamespaceResolverImplementation extends NetObject implements I
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.IXamlNamespaceResolver.GetNamespacePrefixes" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetNamespacePrefixes() throws Throwable {
+    public IEnumerable_1<NamespaceDeclaration> GetNamespacePrefixes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetNamespacePrefixes = null;

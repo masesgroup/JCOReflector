@@ -46,6 +46,7 @@ import system.Uri;
 import system.ArraySegment_1;
 import system.net.websockets.WebSocketMessageType;
 import system.threading.tasks.Task_1;
+import system.net.websockets.WebSocketReceiveResult;
 import system.net.websockets.ClientWebSocketOptions;
 import system.net.websockets.WebSocketState;
 import system.Nullable_1;
@@ -355,7 +356,7 @@ public class ClientWebSocket extends system.net.websockets.WebSocket  {
      * @throws system.resources.MissingManifestResourceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.ClientWebSocket.ReceiveAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 ReceiveAsync(ArraySegment_1 buffer, CancellationToken cancellationToken) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException {
+    public Task_1<WebSocketReceiveResult> ReceiveAsync(ArraySegment_1 buffer, CancellationToken cancellationToken) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReceiveAsync = null;

@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.security.claims.ClaimsPrincipal;
 import system.collections.objectmodel.Collection_1;
+import system.security.claims.Claim;
 
 
 /**
@@ -157,8 +158,8 @@ public class AuthorizationContext extends NetObject  {
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param principal the argument of type {@code ClaimsPrincipal}
-     * @param resource the argument of type {@code Collection_1}
-     * @param action the argument of type {@code Collection_1}
+     * @param resource the argument of type {@code Collection_1<Claim>}
+     * @param action the argument of type {@code Collection_1<Claim>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -173,7 +174,7 @@ public class AuthorizationContext extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.AuthorizationContext.-ctor" target="_top">.NET documentation</a>
      */
-    public AuthorizationContext(ClaimsPrincipal principal, Collection_1 resource, Collection_1 action) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+    public AuthorizationContext(ClaimsPrincipal principal, Collection_1<Claim> resource, Collection_1<Claim> action) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -230,7 +231,7 @@ public class AuthorizationContext extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.AuthorizationContext.Action" target="_top">.NET documentation</a>
      */
-    public Collection_1 getAction() throws Throwable {
+    public Collection_1<Claim> getAction() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAction = null;
@@ -252,7 +253,7 @@ public class AuthorizationContext extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Claims.AuthorizationContext.Resource" target="_top">.NET documentation</a>
      */
-    public Collection_1 getResource() throws Throwable {
+    public Collection_1<Claim> getResource() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectResource = null;

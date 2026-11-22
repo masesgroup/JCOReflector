@@ -42,6 +42,7 @@ import system.data.common.commandtrees.DbExpression;
 import system.data.common.commandtrees.DbExpressionVisitor;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.data.common.commandtrees.DbSortClause;
 import system.data.common.commandtrees.DbExpressionBinding;
 
 
@@ -190,7 +191,7 @@ public class DbSkipExpression extends system.data.common.commandtrees.DbExpressi
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbSkipExpression.SortOrder" target="_top">.NET documentation</a>
      */
-    public IList_1 getSortOrder() throws Throwable {
+    public IList_1<DbSortClause> getSortOrder() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSortOrder = null;

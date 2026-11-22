@@ -165,7 +165,7 @@ public class ElementInit extends NetObject  {
     /**
      * Invokes the .NET member Update.
      *
-     * @param arguments the argument of type {@code IEnumerable_1}
+     * @param arguments the argument of type {@code IEnumerable_1<Expression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -185,7 +185,7 @@ public class ElementInit extends NetObject  {
      * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.ElementInit.Update" target="_top">.NET documentation</a>
      */
-    public ElementInit Update(IEnumerable_1 arguments) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.FormatException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.runtime.interopservices.ExternalException {
+    public ElementInit Update(IEnumerable_1<Expression> arguments) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.FormatException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUpdate = null;
@@ -281,7 +281,7 @@ public class ElementInit extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.ElementInit.Arguments" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getArguments() throws Throwable {
+    public ReadOnlyCollection_1<Expression> getArguments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArguments = null;

@@ -44,6 +44,7 @@ import system.text.Encoding;
 import system.io.compression.ZipArchiveEntry;
 import system.io.compression.CompressionLevel;
 import system.threading.tasks.Task_1;
+import system.io.compression.ZipArchive;
 import system.threading.CancellationToken;
 import system.threading.tasks.ValueTask;
 import system.collections.objectmodel.ReadOnlyCollection_1;
@@ -408,7 +409,7 @@ public class ZipArchive extends NetObject implements AutoCloseable {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Compression.ZipArchive.CreateAsync" target="_top">.NET documentation</a>
      */
-    public static Task_1 CreateAsync(Stream stream, ZipArchiveMode mode, boolean leaveOpen, Encoding entryNameEncoding, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public static Task_1<ZipArchive> CreateAsync(Stream stream, ZipArchiveMode mode, boolean leaveOpen, Encoding entryNameEncoding, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateAsync = null;
@@ -516,7 +517,7 @@ public class ZipArchive extends NetObject implements AutoCloseable {
      * @throws system.io.InvalidDataException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Compression.ZipArchive.Entries" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getEntries() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.io.IOException, system.io.InvalidDataException {
+    public ReadOnlyCollection_1<ZipArchiveEntry> getEntries() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.io.IOException, system.io.InvalidDataException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEntries = null;

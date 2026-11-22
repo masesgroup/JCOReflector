@@ -40,10 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.xaml.schema.XamlTypeName;
 import system.xaml.XamlType;
 import system.xaml.IXamlNamespaceResolver;
 import system.xaml.IXamlNamespaceResolverImplementation;
-import system.xaml.schema.XamlTypeName;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
 import system.xaml.INamespacePrefixLookup;
@@ -199,13 +199,13 @@ public class XamlTypeName extends NetObject  {
      *
      * @param xamlNamespace the argument of type {@code java.lang.String}
      * @param name the argument of type {@code java.lang.String}
-     * @param typeArguments the argument of type {@code IEnumerable_1}
+     * @param typeArguments the argument of type {@code IEnumerable_1<XamlTypeName>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.Schema.XamlTypeName.-ctor" target="_top">.NET documentation</a>
      */
-    public XamlTypeName(java.lang.String xamlNamespace, java.lang.String name, IEnumerable_1 typeArguments) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public XamlTypeName(java.lang.String xamlNamespace, java.lang.String name, IEnumerable_1<XamlTypeName> typeArguments) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -323,7 +323,7 @@ public class XamlTypeName extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.Schema.XamlTypeName.ParseList" target="_top">.NET documentation</a>
      */
-    public static IList_1 ParseList(java.lang.String typeNameList, IXamlNamespaceResolver namespaceResolver) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
+    public static IList_1<XamlTypeName> ParseList(java.lang.String typeNameList, IXamlNamespaceResolver namespaceResolver) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectParseList = null;
@@ -341,7 +341,7 @@ public class XamlTypeName extends NetObject  {
     /**
      * Invokes the .NET member ToString.
      *
-     * @param typeNameList the argument of type {@code IList_1}
+     * @param typeNameList the argument of type {@code IList_1<XamlTypeName>}
      * @param prefixLookup the argument of type {@code INamespacePrefixLookup}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -355,7 +355,7 @@ public class XamlTypeName extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.Schema.XamlTypeName.ToString" target="_top">.NET documentation</a>
      */
-    public static java.lang.String ToString(IList_1 typeNameList, INamespacePrefixLookup prefixLookup) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static java.lang.String ToString(IList_1<XamlTypeName> typeNameList, INamespacePrefixLookup prefixLookup) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectToString = null;
@@ -443,7 +443,7 @@ public class XamlTypeName extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.Schema.XamlTypeName.TypeArguments" target="_top">.NET documentation</a>
      */
-    public IList_1 getTypeArguments() throws Throwable {
+    public IList_1<XamlTypeName> getTypeArguments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTypeArguments = null;

@@ -42,6 +42,7 @@ import system.data.common.commandtrees.DbExpression;
 import system.data.common.commandtrees.DbExpressionVisitor;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.data.common.commandtrees.DbAggregate;
 import system.data.common.commandtrees.DbGroupExpressionBinding;
 
 
@@ -190,7 +191,7 @@ public class DbGroupByExpression extends system.data.common.commandtrees.DbExpre
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbGroupByExpression.Aggregates" target="_top">.NET documentation</a>
      */
-    public IList_1 getAggregates() throws Throwable {
+    public IList_1<DbAggregate> getAggregates() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAggregates = null;
@@ -212,7 +213,7 @@ public class DbGroupByExpression extends system.data.common.commandtrees.DbExpre
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbGroupByExpression.Keys" target="_top">.NET documentation</a>
      */
-    public IList_1 getKeys() throws Throwable {
+    public IList_1<DbExpression> getKeys() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectKeys = null;

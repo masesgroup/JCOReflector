@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.activities.presentation.propertyediting.PropertyFilterPredicate;
 import system.activities.presentation.propertyediting.IPropertyFilterTarget;
 import system.activities.presentation.propertyediting.IPropertyFilterTargetImplementation;
 
@@ -158,12 +159,12 @@ public class PropertyFilter extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param predicates the argument of type {@code IEnumerable_1}
+     * @param predicates the argument of type {@code IEnumerable_1<PropertyFilterPredicate>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.PropertyEditing.PropertyFilter.-ctor" target="_top">.NET documentation</a>
      */
-    public PropertyFilter(IEnumerable_1 predicates) throws Throwable, system.ArgumentOutOfRangeException {
+    public PropertyFilter(IEnumerable_1<PropertyFilterPredicate> predicates) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

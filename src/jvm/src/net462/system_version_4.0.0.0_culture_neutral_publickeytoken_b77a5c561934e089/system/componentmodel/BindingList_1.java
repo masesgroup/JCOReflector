@@ -183,7 +183,7 @@ public class BindingList_1<T extends IJCOBridgeReflected> extends system.collect
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param list the argument of type {@code IList_1}
+     * @param list the argument of type {@code IList_1<T>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.InvalidOperationException if the .NET member raises it
@@ -194,7 +194,7 @@ public class BindingList_1<T extends IJCOBridgeReflected> extends system.collect
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.BindingList-1.-ctor" target="_top">.NET documentation</a>
      */
-    public BindingList_1(IList_1 list) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NullReferenceException {
+    public BindingList_1(IList_1<T> list) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NullReferenceException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

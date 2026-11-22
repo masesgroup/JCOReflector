@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.text.json.serialization.metadata.IJsonTypeInfoResolver;
 import system.text.json.serialization.metadata.IJsonTypeInfoResolverImplementation;
 import system.Action_1;
+import system.text.json.serialization.metadata.JsonTypeInfo;
 
 
 /**
@@ -192,7 +193,7 @@ public class JsonTypeInfoResolver extends NetObject  {
      * Invokes the .NET member WithAddedModifier.
      *
      * @param resolver the argument of type {@code IJsonTypeInfoResolver}
-     * @param modifier the argument of type {@code Action_1}
+     * @param modifier the argument of type {@code Action_1<JsonTypeInfo>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -205,7 +206,7 @@ public class JsonTypeInfoResolver extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonTypeInfoResolver.WithAddedModifier" target="_top">.NET documentation</a>
      */
-    public static IJsonTypeInfoResolver WithAddedModifier(IJsonTypeInfoResolver resolver, Action_1 modifier) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException {
+    public static IJsonTypeInfoResolver WithAddedModifier(IJsonTypeInfoResolver resolver, Action_1<JsonTypeInfo> modifier) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectWithAddedModifier = null;

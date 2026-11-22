@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.reflection.ExceptionHandlingClause;
+import system.reflection.LocalVariableInfo;
 
 
 /**
@@ -315,7 +317,7 @@ public class MethodBody extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBody.ExceptionHandlingClauses" target="_top">.NET documentation</a>
      */
-    public IList_1 getExceptionHandlingClauses() throws Throwable, system.ArgumentNullException {
+    public IList_1<ExceptionHandlingClause> getExceptionHandlingClauses() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExceptionHandlingClauses = null;
@@ -338,7 +340,7 @@ public class MethodBody extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.MethodBody.LocalVariables" target="_top">.NET documentation</a>
      */
-    public IList_1 getLocalVariables() throws Throwable, system.ArgumentNullException {
+    public IList_1<LocalVariableInfo> getLocalVariables() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectLocalVariables = null;

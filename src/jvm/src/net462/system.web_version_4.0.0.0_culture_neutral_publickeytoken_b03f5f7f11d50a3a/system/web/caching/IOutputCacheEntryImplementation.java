@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.generic.List_1;
+import system.web.caching.HeaderElement;
+import system.web.caching.ResponseElement;
 
 
 /**
@@ -155,7 +157,7 @@ public class IOutputCacheEntryImplementation extends NetObject implements IOutpu
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.IOutputCacheEntry.HeaderElements" target="_top">.NET documentation</a>
      */
-    public List_1 getHeaderElements() throws Throwable {
+    public List_1<HeaderElement> getHeaderElements() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectHeaderElements = null;
@@ -177,7 +179,7 @@ public class IOutputCacheEntryImplementation extends NetObject implements IOutpu
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.IOutputCacheEntry.HeaderElements" target="_top">.NET documentation</a>
      */
-    public void setHeaderElements(List_1 HeaderElements) throws Throwable {
+    public void setHeaderElements(List_1<HeaderElement> HeaderElements) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -194,7 +196,7 @@ public class IOutputCacheEntryImplementation extends NetObject implements IOutpu
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.IOutputCacheEntry.ResponseElements" target="_top">.NET documentation</a>
      */
-    public List_1 getResponseElements() throws Throwable {
+    public List_1<ResponseElement> getResponseElements() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectResponseElements = null;
@@ -216,7 +218,7 @@ public class IOutputCacheEntryImplementation extends NetObject implements IOutpu
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.Caching.IOutputCacheEntry.ResponseElements" target="_top">.NET documentation</a>
      */
-    public void setResponseElements(List_1 ResponseElements) throws Throwable {
+    public void setResponseElements(List_1<ResponseElement> ResponseElements) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

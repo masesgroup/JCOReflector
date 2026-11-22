@@ -40,11 +40,15 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.windows.shell.JumpItem;
 import system.windows.shell.JumpList;
 import system.windows.Application;
 import system.windows.shell.JumpPath;
 import system.windows.shell.JumpTask;
 import system.collections.generic.List_1;
+import system.EventHandler_1;
+import system.windows.shell.JumpItemsRejectedEventArgs;
+import system.windows.shell.JumpItemsRemovedEventArgs;
 
 
 /**
@@ -176,7 +180,7 @@ public class JumpList extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param items the argument of type {@code IEnumerable_1}
+     * @param items the argument of type {@code IEnumerable_1<JumpItem>}
      * @param showFrequent the argument of type {@code boolean}
      * @param showRecent the argument of type {@code boolean}
      * @throws Throwable if the .NET constructor fails
@@ -184,7 +188,7 @@ public class JumpList extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Shell.JumpList.-ctor" target="_top">.NET documentation</a>
      */
-    public JumpList(IEnumerable_1 items, boolean showFrequent, boolean showRecent) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public JumpList(IEnumerable_1<JumpItem> items, boolean showFrequent, boolean showRecent) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -522,7 +526,7 @@ public class JumpList extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Shell.JumpList.JumpItems" target="_top">.NET documentation</a>
      */
-    public List_1 getJumpItems() throws Throwable {
+    public List_1<JumpItem> getJumpItems() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectJumpItems = null;
@@ -541,6 +545,74 @@ public class JumpList extends NetObject  {
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addJumpItemsRejected.
+     *
+     * @param handler the argument of type {@code EventHandler_1<JumpItemsRejectedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addJumpItemsRejected(EventHandler_1<JumpItemsRejectedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("JumpItemsRejected", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeJumpItemsRejected.
+     *
+     * @param handler the argument of type {@code EventHandler_1<JumpItemsRejectedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeJumpItemsRejected(EventHandler_1<JumpItemsRejectedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("JumpItemsRejected", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addJumpItemsRemovedByUser.
+     *
+     * @param handler the argument of type {@code EventHandler_1<JumpItemsRemovedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addJumpItemsRemovedByUser(EventHandler_1<JumpItemsRemovedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("JumpItemsRemovedByUser", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeJumpItemsRemovedByUser.
+     *
+     * @param handler the argument of type {@code EventHandler_1<JumpItemsRemovedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeJumpItemsRemovedByUser(EventHandler_1<JumpItemsRemovedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("JumpItemsRemovedByUser", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

@@ -43,6 +43,7 @@ import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
 import system.xaml.XamlType;
 import system.xaml.schema.XamlValueConverter_1;
+import system.componentmodel.TypeConverter;
 import system.xaml.schema.AllowedMemberLocations;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
@@ -165,7 +166,7 @@ public class XamlDirective extends system.xaml.XamlMember  {
      * @param xamlNamespaces the argument of type {@code IEnumerable_1}
      * @param name the argument of type {@code java.lang.String}
      * @param xamlType the argument of type {@code XamlType}
-     * @param typeConverter the argument of type {@code XamlValueConverter_1}
+     * @param typeConverter the argument of type {@code XamlValueConverter_1<TypeConverter>}
      * @param allowedLocation the argument of type {@code AllowedMemberLocations}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
@@ -181,7 +182,7 @@ public class XamlDirective extends system.xaml.XamlMember  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlDirective.-ctor" target="_top">.NET documentation</a>
      */
-    public XamlDirective(IEnumerable_1 xamlNamespaces, java.lang.String name, XamlType xamlType, XamlValueConverter_1 typeConverter, AllowedMemberLocations allowedLocation) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
+    public XamlDirective(IEnumerable_1 xamlNamespaces, java.lang.String name, XamlType xamlType, XamlValueConverter_1<TypeConverter> typeConverter, AllowedMemberLocations allowedLocation) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

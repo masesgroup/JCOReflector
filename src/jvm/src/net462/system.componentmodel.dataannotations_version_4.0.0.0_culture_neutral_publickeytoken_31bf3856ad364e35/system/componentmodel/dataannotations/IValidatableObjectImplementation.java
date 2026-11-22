@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.componentmodel.dataannotations.ValidationResult;
 import system.componentmodel.dataannotations.ValidationContext;
 
 
@@ -154,7 +155,7 @@ public class IValidatableObjectImplementation extends NetObject implements IVali
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.IValidatableObject.Validate" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 Validate(ValidationContext validationContext) throws Throwable {
+    public IEnumerable_1<ValidationResult> Validate(ValidationContext validationContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValidate = null;

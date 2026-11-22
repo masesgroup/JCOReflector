@@ -3308,7 +3308,7 @@ public class Decimal64 extends system.ValueType  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Decimal64.SinCos" target="_top">.NET documentation</a>
      */
-    public static ValueTuple_2 SinCos(Decimal64 x) throws Throwable, system.ArgumentOutOfRangeException, system.OverflowException, system.NotSupportedException, system.DivideByZeroException, system.PlatformNotSupportedException, system.ArgumentException, system.ArrayTypeMismatchException {
+    public static ValueTuple_2<Decimal64, Decimal64> SinCos(Decimal64 x) throws Throwable, system.ArgumentOutOfRangeException, system.OverflowException, system.NotSupportedException, system.DivideByZeroException, system.PlatformNotSupportedException, system.ArgumentException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSinCos = null;
@@ -3336,7 +3336,7 @@ public class Decimal64 extends system.ValueType  {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Numerics.Decimal64.SinCosPi" target="_top">.NET documentation</a>
      */
-    public static ValueTuple_2 SinCosPi(Decimal64 x) throws Throwable, system.ArgumentOutOfRangeException, system.OverflowException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
+    public static ValueTuple_2<Decimal64, Decimal64> SinCosPi(Decimal64 x) throws Throwable, system.ArgumentOutOfRangeException, system.OverflowException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSinCosPi = null;

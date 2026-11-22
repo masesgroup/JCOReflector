@@ -122,7 +122,7 @@ public interface IOrderedEnumerable_1<TElement extends IJCOBridgeReflected> exte
 
     // Methods section
     
-    public <TKey extends IJCOBridgeReflected> IOrderedEnumerable_1 CreateOrderedEnumerable(Func_2 keySelector, IComparer_1 comparer, boolean descending) throws Throwable;
+    public <TKey extends IJCOBridgeReflected> IOrderedEnumerable_1<TElement> CreateOrderedEnumerable(Func_2 keySelector, IComparer_1 comparer, boolean descending) throws Throwable;
 
 
     

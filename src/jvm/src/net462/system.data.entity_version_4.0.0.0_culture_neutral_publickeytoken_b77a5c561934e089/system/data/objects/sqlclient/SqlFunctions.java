@@ -39,6 +39,11 @@ import java.util.ArrayList;
 
 // Import section
 import system.Nullable_1;
+import system.DateTime;
+import system.DateTimeOffset;
+import system.Decimal;
+import system.Guid;
+import system.TimeSpan;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
 
@@ -175,7 +180,7 @@ public class SqlFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.SqlClient.SqlFunctions.CurrentTimestamp" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 CurrentTimestamp() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1<DateTime> CurrentTimestamp() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCurrentTimestamp = null;
@@ -195,7 +200,7 @@ public class SqlFunctions extends NetObject  {
      *
      * @param datePartArg the argument of type {@code java.lang.String}
      * @param number the argument of type {@code Nullable_1}
-     * @param date the argument of type {@code Nullable_1}
+     * @param date the argument of type {@code Nullable_1<DateTime>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -211,7 +216,7 @@ public class SqlFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.SqlClient.SqlFunctions.DateAdd" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 DateAdd(java.lang.String datePartArg, Nullable_1 number, Nullable_1 date) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1<DateTime> DateAdd(java.lang.String datePartArg, Nullable_1 number, Nullable_1<DateTime> date) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDateAdd = null;
@@ -247,7 +252,7 @@ public class SqlFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.SqlClient.SqlFunctions.DateAdd" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 DateAdd(java.lang.String datePartArg, Nullable_1 number, java.lang.String date) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1<DateTime> DateAdd(java.lang.String datePartArg, Nullable_1 number, java.lang.String date) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDateAdd = null;
@@ -280,7 +285,7 @@ public class SqlFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.SqlClient.SqlFunctions.GetDate" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 GetDate() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1<DateTime> GetDate() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetDate = null;
@@ -313,7 +318,7 @@ public class SqlFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.SqlClient.SqlFunctions.GetUtcDate" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 GetUtcDate() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1<DateTime> GetUtcDate() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetUtcDate = null;
@@ -331,7 +336,7 @@ public class SqlFunctions extends NetObject  {
     /**
      * Invokes the .NET member Degrees.
      *
-     * @param arg1 the argument of type {@code Nullable_1}
+     * @param arg1 the argument of type {@code Nullable_1<Decimal>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -347,7 +352,7 @@ public class SqlFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.SqlClient.SqlFunctions.Degrees" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 Degrees(Nullable_1 arg1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1<Decimal> Degrees(Nullable_1<Decimal> arg1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDegrees = null;
@@ -365,7 +370,7 @@ public class SqlFunctions extends NetObject  {
     /**
      * Invokes the .NET member Radians.
      *
-     * @param arg the argument of type {@code Nullable_1}
+     * @param arg the argument of type {@code Nullable_1<Decimal>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -381,7 +386,7 @@ public class SqlFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.SqlClient.SqlFunctions.Radians" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 Radians(Nullable_1 arg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1<Decimal> Radians(Nullable_1<Decimal> arg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectRadians = null;
@@ -399,7 +404,7 @@ public class SqlFunctions extends NetObject  {
     /**
      * Invokes the .NET member Sign.
      *
-     * @param arg the argument of type {@code Nullable_1}
+     * @param arg the argument of type {@code Nullable_1<Decimal>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -415,7 +420,7 @@ public class SqlFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.SqlClient.SqlFunctions.Sign" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 Sign(Nullable_1 arg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1<Decimal> Sign(Nullable_1<Decimal> arg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSign = null;
@@ -433,7 +438,7 @@ public class SqlFunctions extends NetObject  {
     /**
      * Invokes the .NET member Acos.
      *
-     * @param arg1 the argument of type {@code Nullable_1}
+     * @param arg1 the argument of type {@code Nullable_1<Decimal>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -449,7 +454,7 @@ public class SqlFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.SqlClient.SqlFunctions.Acos" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 Acos(Nullable_1 arg1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1 Acos(Nullable_1<Decimal> arg1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAcos = null;
@@ -467,7 +472,7 @@ public class SqlFunctions extends NetObject  {
     /**
      * Invokes the .NET member Asin.
      *
-     * @param arg the argument of type {@code Nullable_1}
+     * @param arg the argument of type {@code Nullable_1<Decimal>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -483,7 +488,7 @@ public class SqlFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.SqlClient.SqlFunctions.Asin" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 Asin(Nullable_1 arg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1 Asin(Nullable_1<Decimal> arg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAsin = null;
@@ -501,7 +506,7 @@ public class SqlFunctions extends NetObject  {
     /**
      * Invokes the .NET member Atan.
      *
-     * @param arg the argument of type {@code Nullable_1}
+     * @param arg the argument of type {@code Nullable_1<Decimal>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -517,7 +522,7 @@ public class SqlFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.SqlClient.SqlFunctions.Atan" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 Atan(Nullable_1 arg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1 Atan(Nullable_1<Decimal> arg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAtan = null;
@@ -535,8 +540,8 @@ public class SqlFunctions extends NetObject  {
     /**
      * Invokes the .NET member Atan2.
      *
-     * @param arg1 the argument of type {@code Nullable_1}
-     * @param arg2 the argument of type {@code Nullable_1}
+     * @param arg1 the argument of type {@code Nullable_1<Decimal>}
+     * @param arg2 the argument of type {@code Nullable_1<Decimal>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -552,7 +557,7 @@ public class SqlFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.SqlClient.SqlFunctions.Atan2" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 Atan2(Nullable_1 arg1, Nullable_1 arg2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1 Atan2(Nullable_1<Decimal> arg1, Nullable_1<Decimal> arg2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAtan2 = null;
@@ -570,7 +575,7 @@ public class SqlFunctions extends NetObject  {
     /**
      * Invokes the .NET member Cos.
      *
-     * @param arg the argument of type {@code Nullable_1}
+     * @param arg the argument of type {@code Nullable_1<Decimal>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -586,7 +591,7 @@ public class SqlFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.SqlClient.SqlFunctions.Cos" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 Cos(Nullable_1 arg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1 Cos(Nullable_1<Decimal> arg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCos = null;
@@ -604,7 +609,7 @@ public class SqlFunctions extends NetObject  {
     /**
      * Invokes the .NET member Cot.
      *
-     * @param arg the argument of type {@code Nullable_1}
+     * @param arg the argument of type {@code Nullable_1<Decimal>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -620,7 +625,7 @@ public class SqlFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.SqlClient.SqlFunctions.Cot" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 Cot(Nullable_1 arg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1 Cot(Nullable_1<Decimal> arg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCot = null;
@@ -638,7 +643,7 @@ public class SqlFunctions extends NetObject  {
     /**
      * Invokes the .NET member Exp.
      *
-     * @param arg the argument of type {@code Nullable_1}
+     * @param arg the argument of type {@code Nullable_1<Decimal>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -654,7 +659,7 @@ public class SqlFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.SqlClient.SqlFunctions.Exp" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 Exp(Nullable_1 arg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1 Exp(Nullable_1<Decimal> arg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectExp = null;
@@ -672,7 +677,7 @@ public class SqlFunctions extends NetObject  {
     /**
      * Invokes the .NET member Log.
      *
-     * @param arg the argument of type {@code Nullable_1}
+     * @param arg the argument of type {@code Nullable_1<Decimal>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -688,7 +693,7 @@ public class SqlFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.SqlClient.SqlFunctions.Log" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 Log(Nullable_1 arg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1 Log(Nullable_1<Decimal> arg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog = null;
@@ -706,7 +711,7 @@ public class SqlFunctions extends NetObject  {
     /**
      * Invokes the .NET member Log10.
      *
-     * @param arg the argument of type {@code Nullable_1}
+     * @param arg the argument of type {@code Nullable_1<Decimal>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -722,7 +727,7 @@ public class SqlFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.SqlClient.SqlFunctions.Log10" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 Log10(Nullable_1 arg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1 Log10(Nullable_1<Decimal> arg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLog10 = null;
@@ -840,7 +845,7 @@ public class SqlFunctions extends NetObject  {
     /**
      * Invokes the .NET member Sin.
      *
-     * @param arg the argument of type {@code Nullable_1}
+     * @param arg the argument of type {@code Nullable_1<Decimal>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -856,7 +861,7 @@ public class SqlFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.SqlClient.SqlFunctions.Sin" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 Sin(Nullable_1 arg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1 Sin(Nullable_1<Decimal> arg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSin = null;
@@ -874,7 +879,7 @@ public class SqlFunctions extends NetObject  {
     /**
      * Invokes the .NET member Square.
      *
-     * @param arg1 the argument of type {@code Nullable_1}
+     * @param arg1 the argument of type {@code Nullable_1<Decimal>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -890,7 +895,7 @@ public class SqlFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.SqlClient.SqlFunctions.Square" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 Square(Nullable_1 arg1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1 Square(Nullable_1<Decimal> arg1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSquare = null;
@@ -908,7 +913,7 @@ public class SqlFunctions extends NetObject  {
     /**
      * Invokes the .NET member SquareRoot.
      *
-     * @param arg the argument of type {@code Nullable_1}
+     * @param arg the argument of type {@code Nullable_1<Decimal>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -924,7 +929,7 @@ public class SqlFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.SqlClient.SqlFunctions.SquareRoot" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 SquareRoot(Nullable_1 arg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1 SquareRoot(Nullable_1<Decimal> arg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSquareRoot = null;
@@ -942,7 +947,7 @@ public class SqlFunctions extends NetObject  {
     /**
      * Invokes the .NET member Tan.
      *
-     * @param arg the argument of type {@code Nullable_1}
+     * @param arg the argument of type {@code Nullable_1<Decimal>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -958,7 +963,7 @@ public class SqlFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.SqlClient.SqlFunctions.Tan" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 Tan(Nullable_1 arg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1 Tan(Nullable_1<Decimal> arg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectTan = null;
@@ -1812,8 +1817,8 @@ public class SqlFunctions extends NetObject  {
      * Invokes the .NET member DateDiff.
      *
      * @param datePartArg the argument of type {@code java.lang.String}
-     * @param startDate the argument of type {@code Nullable_1}
-     * @param endDate the argument of type {@code Nullable_1}
+     * @param startDate the argument of type {@code Nullable_1<DateTime>}
+     * @param endDate the argument of type {@code Nullable_1<DateTime>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -1829,7 +1834,7 @@ public class SqlFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.SqlClient.SqlFunctions.DateDiff" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 DateDiff(java.lang.String datePartArg, Nullable_1 startDate, Nullable_1 endDate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1 DateDiff(java.lang.String datePartArg, Nullable_1<DateTime> startDate, Nullable_1<DateTime> endDate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDateDiff = null;
@@ -1848,7 +1853,7 @@ public class SqlFunctions extends NetObject  {
      * Invokes the .NET member DateDiff.
      *
      * @param datePartArg the argument of type {@code java.lang.String}
-     * @param startDate the argument of type {@code Nullable_1}
+     * @param startDate the argument of type {@code Nullable_1<DateTime>}
      * @param endDate the argument of type {@code java.lang.String}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -1865,7 +1870,7 @@ public class SqlFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.SqlClient.SqlFunctions.DateDiff" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 DateDiff(java.lang.String datePartArg, Nullable_1 startDate, java.lang.String endDate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1 DateDiff(java.lang.String datePartArg, Nullable_1<DateTime> startDate, java.lang.String endDate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDateDiff = null;
@@ -1885,7 +1890,7 @@ public class SqlFunctions extends NetObject  {
      *
      * @param datePartArg the argument of type {@code java.lang.String}
      * @param startDate the argument of type {@code java.lang.String}
-     * @param endDate the argument of type {@code Nullable_1}
+     * @param endDate the argument of type {@code Nullable_1<DateTime>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -1901,7 +1906,7 @@ public class SqlFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.SqlClient.SqlFunctions.DateDiff" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 DateDiff(java.lang.String datePartArg, java.lang.String startDate, Nullable_1 endDate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1 DateDiff(java.lang.String datePartArg, java.lang.String startDate, Nullable_1<DateTime> endDate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDateDiff = null;
@@ -1956,7 +1961,7 @@ public class SqlFunctions extends NetObject  {
      * Invokes the .NET member DatePart.
      *
      * @param datePartArg the argument of type {@code java.lang.String}
-     * @param date the argument of type {@code Nullable_1}
+     * @param date the argument of type {@code Nullable_1<DateTime>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -1972,7 +1977,7 @@ public class SqlFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.SqlClient.SqlFunctions.DatePart" target="_top">.NET documentation</a>
      */
-    public static Nullable_1 DatePart(java.lang.String datePartArg, Nullable_1 date) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static Nullable_1 DatePart(java.lang.String datePartArg, Nullable_1<DateTime> date) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDatePart = null;
@@ -2263,7 +2268,7 @@ public class SqlFunctions extends NetObject  {
      * Invokes the .NET member DateName.
      *
      * @param datePartArg the argument of type {@code java.lang.String}
-     * @param date the argument of type {@code Nullable_1}
+     * @param date the argument of type {@code Nullable_1<DateTime>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -2279,7 +2284,7 @@ public class SqlFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.SqlClient.SqlFunctions.DateName" target="_top">.NET documentation</a>
      */
-    public static java.lang.String DateName(java.lang.String datePartArg, Nullable_1 date) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static java.lang.String DateName(java.lang.String datePartArg, Nullable_1<DateTime> date) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDateName = null;
@@ -2562,7 +2567,7 @@ public class SqlFunctions extends NetObject  {
     /**
      * Invokes the .NET member StringConvert.
      *
-     * @param number the argument of type {@code Nullable_1}
+     * @param number the argument of type {@code Nullable_1<Decimal>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -2578,7 +2583,7 @@ public class SqlFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.SqlClient.SqlFunctions.StringConvert" target="_top">.NET documentation</a>
      */
-    public static java.lang.String StringConvert(Nullable_1 number) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static java.lang.String StringConvert(Nullable_1<Decimal> number) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStringConvert = null;
@@ -2595,7 +2600,7 @@ public class SqlFunctions extends NetObject  {
     /**
      * Invokes the .NET member StringConvert.
      *
-     * @param number the argument of type {@code Nullable_1}
+     * @param number the argument of type {@code Nullable_1<Decimal>}
      * @param length the argument of type {@code Nullable_1}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -2612,7 +2617,7 @@ public class SqlFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.SqlClient.SqlFunctions.StringConvert" target="_top">.NET documentation</a>
      */
-    public static java.lang.String StringConvert(Nullable_1 number, Nullable_1 length) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static java.lang.String StringConvert(Nullable_1<Decimal> number, Nullable_1 length) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStringConvert = null;
@@ -2629,7 +2634,7 @@ public class SqlFunctions extends NetObject  {
     /**
      * Invokes the .NET member StringConvert.
      *
-     * @param number the argument of type {@code Nullable_1}
+     * @param number the argument of type {@code Nullable_1<Decimal>}
      * @param length the argument of type {@code Nullable_1}
      * @param decimalArg the argument of type {@code Nullable_1}
      * @return the value returned by the .NET member
@@ -2647,7 +2652,7 @@ public class SqlFunctions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.SqlClient.SqlFunctions.StringConvert" target="_top">.NET documentation</a>
      */
-    public static java.lang.String StringConvert(Nullable_1 number, Nullable_1 length, Nullable_1 decimalArg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public static java.lang.String StringConvert(Nullable_1<Decimal> number, Nullable_1 length, Nullable_1 decimalArg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectStringConvert = null;

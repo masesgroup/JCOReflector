@@ -44,11 +44,13 @@ import system.runtime.serialization.ISerializationSurrogateProviderImplementatio
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
 import system.collections.generic.List_1;
-import system.xml.schema.XmlSchemaSet;
-import system.runtime.serialization.datacontracts.DataContract;
 import system.xml.XmlQualifiedName;
+import system.xml.schema.XmlSchemaSet;
+import system.xml.schema.XmlSchemaElement;
+import system.runtime.serialization.datacontracts.DataContract;
 import system.Nullable_1;
 import system.collections.generic.Dictionary_2;
+import system.Object;
 import system.collections.Hashtable;
 
 
@@ -196,8 +198,8 @@ public class DataContractSet extends NetObject  {
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param dataContractSurrogate the argument of type {@code ISerializationSurrogateProvider}
-     * @param referencedTypes the argument of type {@code IEnumerable_1}
-     * @param referencedCollectionTypes the argument of type {@code IEnumerable_1}
+     * @param referencedTypes the argument of type {@code IEnumerable_1<NetType>}
+     * @param referencedCollectionTypes the argument of type {@code IEnumerable_1<NetType>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -209,7 +211,7 @@ public class DataContractSet extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContractSet.-ctor" target="_top">.NET documentation</a>
      */
-    public DataContractSet(ISerializationSurrogateProvider dataContractSurrogate, IEnumerable_1 referencedTypes, IEnumerable_1 referencedCollectionTypes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException {
+    public DataContractSet(ISerializationSurrogateProvider dataContractSurrogate, IEnumerable_1<NetType> referencedTypes, IEnumerable_1<NetType> referencedCollectionTypes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -228,7 +230,7 @@ public class DataContractSet extends NetObject  {
      * Invokes the .NET member ImportSchemaSet.
      *
      * @param schemaSet the argument of type {@code XmlSchemaSet}
-     * @param elements the argument of type {@code IEnumerable_1}
+     * @param elements the argument of type {@code IEnumerable_1<XmlSchemaElement>}
      * @param importXmlDataType the argument of type {@code boolean}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -253,7 +255,7 @@ public class DataContractSet extends NetObject  {
      * @throws system.runtime.serialization.SerializationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContractSet.ImportSchemaSet" target="_top">.NET documentation</a>
      */
-    public List_1 ImportSchemaSet(XmlSchemaSet schemaSet, IEnumerable_1 elements, boolean importXmlDataType) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.threading.ThreadStateException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.xml.schema.XmlSchemaException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.xml.XmlException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.runtime.serialization.InvalidDataContractException, system.runtime.serialization.SerializationException {
+    public List_1<XmlQualifiedName> ImportSchemaSet(XmlSchemaSet schemaSet, IEnumerable_1<XmlSchemaElement> elements, boolean importXmlDataType) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.threading.ThreadStateException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.xml.schema.XmlSchemaException, system.diagnostics.UnreachableException, system.InvalidOperationException, system.UriFormatException, system.xml.XmlException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.NotSupportedException, system.FormatException, system.runtime.serialization.InvalidDataContractException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectImportSchemaSet = null;
@@ -390,7 +392,7 @@ public class DataContractSet extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContractSet.ProcessedContracts" target="_top">.NET documentation</a>
      */
-    public Dictionary_2 getProcessedContracts() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+    public Dictionary_2<DataContract, Object> getProcessedContracts() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectProcessedContracts = null;
@@ -418,7 +420,7 @@ public class DataContractSet extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContractSet.Contracts" target="_top">.NET documentation</a>
      */
-    public Dictionary_2 getContracts() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+    public Dictionary_2<XmlQualifiedName, DataContract> getContracts() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContracts = null;
@@ -440,7 +442,7 @@ public class DataContractSet extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContractSet.KnownTypesForObject" target="_top">.NET documentation</a>
      */
-    public Dictionary_2 getKnownTypesForObject() throws Throwable {
+    public Dictionary_2<XmlQualifiedName, DataContract> getKnownTypesForObject() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectKnownTypesForObject = null;
@@ -462,7 +464,7 @@ public class DataContractSet extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.DataContracts.DataContractSet.KnownTypesForObject" target="_top">.NET documentation</a>
      */
-    public void setKnownTypesForObject(Dictionary_2 KnownTypesForObject) throws Throwable {
+    public void setKnownTypesForObject(Dictionary_2<XmlQualifiedName, DataContract> KnownTypesForObject) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

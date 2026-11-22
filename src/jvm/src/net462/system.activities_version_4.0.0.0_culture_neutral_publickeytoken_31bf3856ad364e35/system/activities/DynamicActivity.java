@@ -47,6 +47,7 @@ import system.componentmodel.PropertyDescriptor;
 import system.componentmodel.PropertyDescriptorCollection;
 import system.componentmodel.TypeConverter;
 import system.collections.objectmodel.Collection_1;
+import system.activities.validation.Constraint;
 import system.collections.objectmodel.KeyedCollection_2;
 import system.Func_1;
 import system.Version;
@@ -352,7 +353,7 @@ public class DynamicActivity extends system.activities.Activity  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicActivity.Constraints" target="_top">.NET documentation</a>
      */
-    public Collection_1 getConstraints() throws Throwable {
+    public Collection_1<Constraint> getConstraints() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectConstraints = null;
@@ -374,7 +375,7 @@ public class DynamicActivity extends system.activities.Activity  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicActivity.Attributes" target="_top">.NET documentation</a>
      */
-    public Collection_1 getAttributes() throws Throwable {
+    public Collection_1<Attribute> getAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAttributes = null;
@@ -418,15 +419,15 @@ public class DynamicActivity extends system.activities.Activity  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicActivity.Implementation" target="_top">.NET documentation</a>
      */
-    public Func_1 getImplementation() throws Throwable {
+    public Func_1<Activity> getImplementation() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectImplementation = null;
         try {
             retObjectImplementation = classInstance.Get("Implementation");
-            return (Func_1)retObjectImplementation;
+            return (Func_1<Activity>)retObjectImplementation;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_1", retObjectImplementation != null ? retObjectImplementation.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_1<Activity>", retObjectImplementation != null ? retObjectImplementation.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -439,7 +440,7 @@ public class DynamicActivity extends system.activities.Activity  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.DynamicActivity.Implementation" target="_top">.NET documentation</a>
      */
-    public void setImplementation(Func_1 Implementation) throws Throwable {
+    public void setImplementation(Func_1<Activity> Implementation) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

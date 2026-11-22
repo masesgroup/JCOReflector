@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.componentmodel.design.DesignerVerbCollection;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.workflow.componentmodel.design.ActivityDesignerVerb;
 
 
 /**
@@ -170,12 +171,12 @@ public class ActivityDesignerVerbCollection extends system.componentmodel.design
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param verbs the argument of type {@code IEnumerable_1}
+     * @param verbs the argument of type {@code IEnumerable_1<ActivityDesignerVerb>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDesignerVerbCollection.-ctor" target="_top">.NET documentation</a>
      */
-    public ActivityDesignerVerbCollection(IEnumerable_1 verbs) throws Throwable, system.ArgumentNullException {
+    public ActivityDesignerVerbCollection(IEnumerable_1<ActivityDesignerVerb> verbs) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

@@ -43,6 +43,7 @@ import system.windows.DependencyObject;
 import system.windows.controls.ItemsControl;
 import system.windows.DependencyProperty;
 import system.collections.objectmodel.ObservableCollection_1;
+import system.windows.controls.GroupStyle;
 import system.windows.controls.DataTemplateSelector;
 import system.windows.controls.GroupStyleSelector;
 import system.windows.controls.ItemCollection;
@@ -887,7 +888,7 @@ public class ItemsControl extends system.windows.controls.Control  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.ItemsControl.GroupStyle" target="_top">.NET documentation</a>
      */
-    public ObservableCollection_1 getGroupStyle() throws Throwable {
+    public ObservableCollection_1<GroupStyle> getGroupStyle() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGroupStyle = null;

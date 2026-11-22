@@ -61,6 +61,8 @@ import system.servicemodel.IExtensionCollection_1;
 import system.servicemodel.IExtensionCollection_1Implementation;
 import system.Uri;
 import system.EventHandler;
+import system.EventHandler_1;
+import system.servicemodel.UnknownMessageReceivedEventArgs;
 
 
 /**
@@ -173,5 +175,9 @@ public interface IClientChannel extends IJCOBridgeReflected, system.servicemodel
 
     // Instance Events section
     
+    public void addUnknownMessageReceived(EventHandler_1<UnknownMessageReceivedEventArgs> handler) throws Throwable;
+
+    public void removeUnknownMessageReceived(EventHandler_1<UnknownMessageReceivedEventArgs> handler) throws Throwable;
+
 
 }

@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.identitymodel.policy.IAuthorizationPolicy;
+import system.identitymodel.policy.IAuthorizationPolicyImplementation;
 import system.Uri;
 import system.servicemodel.channels.Message;
 
@@ -174,14 +176,14 @@ public class ServiceAuthenticationManager extends NetObject  {
     /**
      * Invokes the .NET member Authenticate.
      *
-     * @param authPolicy the argument of type {@code ReadOnlyCollection_1}
+     * @param authPolicy the argument of type {@code ReadOnlyCollection_1<IAuthorizationPolicy>}
      * @param listenUri the argument of type {@code Uri}
      * @param message the argument of type {@code JCORefOut<Message>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceAuthenticationManager.Authenticate" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 Authenticate(ReadOnlyCollection_1 authPolicy, Uri listenUri, JCORefOut<Message> message) throws Throwable {
+    public ReadOnlyCollection_1<IAuthorizationPolicy> Authenticate(ReadOnlyCollection_1<IAuthorizationPolicy> authPolicy, Uri listenUri, JCORefOut<Message> message) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAuthenticate = null;

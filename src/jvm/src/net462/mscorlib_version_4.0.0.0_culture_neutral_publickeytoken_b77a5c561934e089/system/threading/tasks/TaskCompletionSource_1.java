@@ -531,7 +531,7 @@ public class TaskCompletionSource_1<TResult extends IJCOBridgeReflected> extends
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.TaskCompletionSource-1.Task" target="_top">.NET documentation</a>
      */
-    public Task_1 getTask() throws Throwable {
+    public Task_1<TResult> getTask() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTask = null;

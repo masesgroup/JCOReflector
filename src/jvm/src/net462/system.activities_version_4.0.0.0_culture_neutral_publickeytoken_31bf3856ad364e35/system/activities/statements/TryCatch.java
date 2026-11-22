@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.activities.NativeActivity;
 import system.activities.Activity;
 import system.collections.objectmodel.Collection_1;
+import system.activities.statements.Catch;
+import system.activities.Variable;
 
 
 /**
@@ -267,7 +269,7 @@ public class TryCatch extends system.activities.NativeActivity  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.TryCatch.Catches" target="_top">.NET documentation</a>
      */
-    public Collection_1 getCatches() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public Collection_1<Catch> getCatches() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCatches = null;
@@ -293,7 +295,7 @@ public class TryCatch extends system.activities.NativeActivity  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.TryCatch.Variables" target="_top">.NET documentation</a>
      */
-    public Collection_1 getVariables() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+    public Collection_1<Variable> getVariables() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectVariables = null;

@@ -41,7 +41,9 @@ import java.util.ArrayList;
 import microsoft.win32.CommonDialog;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import microsoft.win32.FileDialogCustomPlace;
 import system.Nullable_1;
+import system.Guid;
 
 
 /**
@@ -337,7 +339,7 @@ public class CommonItemDialog extends microsoft.win32.CommonDialog  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.CommonItemDialog.CustomPlaces" target="_top">.NET documentation</a>
      */
-    public IList_1 getCustomPlaces() throws Throwable {
+    public IList_1<FileDialogCustomPlace> getCustomPlaces() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCustomPlaces = null;
@@ -359,7 +361,7 @@ public class CommonItemDialog extends microsoft.win32.CommonDialog  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.CommonItemDialog.CustomPlaces" target="_top">.NET documentation</a>
      */
-    public void setCustomPlaces(IList_1 CustomPlaces) throws Throwable {
+    public void setCustomPlaces(IList_1<FileDialogCustomPlace> CustomPlaces) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -376,7 +378,7 @@ public class CommonItemDialog extends microsoft.win32.CommonDialog  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.CommonItemDialog.ClientGuid" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getClientGuid() throws Throwable {
+    public Nullable_1<Guid> getClientGuid() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectClientGuid = null;
@@ -398,7 +400,7 @@ public class CommonItemDialog extends microsoft.win32.CommonDialog  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.CommonItemDialog.ClientGuid" target="_top">.NET documentation</a>
      */
-    public void setClientGuid(Nullable_1 ClientGuid) throws Throwable {
+    public void setClientGuid(Nullable_1<Guid> ClientGuid) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

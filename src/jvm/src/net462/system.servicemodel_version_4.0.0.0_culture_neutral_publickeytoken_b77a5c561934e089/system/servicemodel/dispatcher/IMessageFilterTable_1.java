@@ -131,17 +131,17 @@ public interface IMessageFilterTable_1<TFilterData extends IJCOBridgeReflected> 
 
     public boolean GetMatchingFilter(MessageBuffer messageBuffer, JCORefOut<MessageFilter> filter) throws Throwable;
 
-    public boolean GetMatchingFilters(Message message, ICollection_1 results) throws Throwable;
+    public boolean GetMatchingFilters(Message message, ICollection_1<MessageFilter> results) throws Throwable;
 
-    public boolean GetMatchingFilters(MessageBuffer messageBuffer, ICollection_1 results) throws Throwable;
+    public boolean GetMatchingFilters(MessageBuffer messageBuffer, ICollection_1<MessageFilter> results) throws Throwable;
 
     public boolean GetMatchingValue(Message message, JCORefOut<TFilterData> value) throws Throwable;
 
     public boolean GetMatchingValue(MessageBuffer messageBuffer, JCORefOut<TFilterData> value) throws Throwable;
 
-    public boolean GetMatchingValues(Message message, ICollection_1 results) throws Throwable;
+    public boolean GetMatchingValues(Message message, ICollection_1<TFilterData> results) throws Throwable;
 
-    public boolean GetMatchingValues(MessageBuffer messageBuffer, ICollection_1 results) throws Throwable;
+    public boolean GetMatchingValues(MessageBuffer messageBuffer, ICollection_1<TFilterData> results) throws Throwable;
 
 
 

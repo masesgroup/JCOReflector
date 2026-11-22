@@ -126,7 +126,7 @@ public interface IDesignerVerbProviderService extends IJCOBridgeReflected {
     
     // Properties section
     
-    public ReadOnlyCollection_1 getVerbProviders() throws Throwable;
+    public ReadOnlyCollection_1<IDesignerVerbProvider> getVerbProviders() throws Throwable;
 
 
 

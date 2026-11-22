@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.Action_2;
+import system.text.json.Utf8JsonWriter;
 import system.Func_1;
 import system.text.json.serialization.JsonNumberHandling;
 import system.text.json.serialization.JsonTypeClassifierFactory;
@@ -187,15 +188,15 @@ public class JsonCollectionInfoValues_1<TCollection extends IJCOBridgeReflected>
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonCollectionInfoValues-1.SerializeHandler" target="_top">.NET documentation</a>
      */
-    public Action_2 getSerializeHandler() throws Throwable {
+    public Action_2<Utf8JsonWriter, TCollection> getSerializeHandler() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSerializeHandler = null;
         try {
             retObjectSerializeHandler = classInstance.Get("SerializeHandler");
-            return (Action_2)retObjectSerializeHandler;
+            return (Action_2<Utf8JsonWriter, TCollection>)retObjectSerializeHandler;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_2", retObjectSerializeHandler != null ? retObjectSerializeHandler.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_2<Utf8JsonWriter, TCollection>", retObjectSerializeHandler != null ? retObjectSerializeHandler.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,7 +209,7 @@ public class JsonCollectionInfoValues_1<TCollection extends IJCOBridgeReflected>
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonCollectionInfoValues-1.SerializeHandler" target="_top">.NET documentation</a>
      */
-    public void setSerializeHandler(Action_2 SerializeHandler) throws Throwable {
+    public void setSerializeHandler(Action_2<Utf8JsonWriter, TCollection> SerializeHandler) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -225,15 +226,15 @@ public class JsonCollectionInfoValues_1<TCollection extends IJCOBridgeReflected>
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonCollectionInfoValues-1.ObjectCreator" target="_top">.NET documentation</a>
      */
-    public Func_1 getObjectCreator() throws Throwable {
+    public Func_1<TCollection> getObjectCreator() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectObjectCreator = null;
         try {
             retObjectObjectCreator = classInstance.Get("ObjectCreator");
-            return (Func_1)retObjectObjectCreator;
+            return (Func_1<TCollection>)retObjectObjectCreator;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_1", retObjectObjectCreator != null ? retObjectObjectCreator.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_1<TCollection>", retObjectObjectCreator != null ? retObjectObjectCreator.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +247,7 @@ public class JsonCollectionInfoValues_1<TCollection extends IJCOBridgeReflected>
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Text.Json.Serialization.Metadata.JsonCollectionInfoValues-1.ObjectCreator" target="_top">.NET documentation</a>
      */
-    public void setObjectCreator(Func_1 ObjectCreator) throws Throwable {
+    public void setObjectCreator(Func_1<TCollection> ObjectCreator) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

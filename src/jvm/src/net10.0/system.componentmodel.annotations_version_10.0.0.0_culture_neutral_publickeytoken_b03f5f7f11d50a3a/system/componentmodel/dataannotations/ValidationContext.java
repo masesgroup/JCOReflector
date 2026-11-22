@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IDictionary_2;
 import system.collections.generic.IDictionary_2Implementation;
+import system.Object;
 import system.IServiceProvider;
 import system.IServiceProviderImplementation;
 import system.Func_2;
@@ -160,7 +161,7 @@ public class ValidationContext extends NetObject  {
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param instance the argument of type {@code NetObject}
-     * @param items the argument of type {@code IDictionary_2}
+     * @param items the argument of type {@code IDictionary_2<Object, Object>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -171,7 +172,7 @@ public class ValidationContext extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.ValidationContext.-ctor" target="_top">.NET documentation</a>
      */
-    public ValidationContext(NetObject instance, IDictionary_2 items) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+    public ValidationContext(NetObject instance, IDictionary_2<Object, Object> items) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -186,7 +187,7 @@ public class ValidationContext extends NetObject  {
      *
      * @param instance the argument of type {@code NetObject}
      * @param serviceProvider the argument of type {@code IServiceProvider}
-     * @param items the argument of type {@code IDictionary_2}
+     * @param items the argument of type {@code IDictionary_2<Object, Object>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -200,7 +201,7 @@ public class ValidationContext extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.ValidationContext.-ctor" target="_top">.NET documentation</a>
      */
-    public ValidationContext(NetObject instance, IServiceProvider serviceProvider, IDictionary_2 items) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
+    public ValidationContext(NetObject instance, IServiceProvider serviceProvider, IDictionary_2<Object, Object> items) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -216,7 +217,7 @@ public class ValidationContext extends NetObject  {
      * @param instance the argument of type {@code NetObject}
      * @param displayName the argument of type {@code java.lang.String}
      * @param serviceProvider the argument of type {@code IServiceProvider}
-     * @param items the argument of type {@code IDictionary_2}
+     * @param items the argument of type {@code IDictionary_2<Object, Object>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.NotSupportedException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -229,7 +230,7 @@ public class ValidationContext extends NetObject  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.ValidationContext.-ctor" target="_top">.NET documentation</a>
      */
-    public ValidationContext(NetObject instance, java.lang.String displayName, IServiceProvider serviceProvider, IDictionary_2 items) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public ValidationContext(NetObject instance, java.lang.String displayName, IServiceProvider serviceProvider, IDictionary_2<Object, Object> items) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -294,11 +295,11 @@ public class ValidationContext extends NetObject  {
     /**
      * Invokes the .NET member InitializeServiceProvider.
      *
-     * @param serviceProvider the argument of type {@code Func_2}
+     * @param serviceProvider the argument of type {@code Func_2<NetType, Object>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.ValidationContext.InitializeServiceProvider" target="_top">.NET documentation</a>
      */
-    public void InitializeServiceProvider(Func_2 serviceProvider) throws Throwable {
+    public void InitializeServiceProvider(Func_2<NetType, Object> serviceProvider) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -319,7 +320,7 @@ public class ValidationContext extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.DataAnnotations.ValidationContext.Items" target="_top">.NET documentation</a>
      */
-    public IDictionary_2 getItems() throws Throwable {
+    public IDictionary_2<Object, Object> getItems() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectItems = null;

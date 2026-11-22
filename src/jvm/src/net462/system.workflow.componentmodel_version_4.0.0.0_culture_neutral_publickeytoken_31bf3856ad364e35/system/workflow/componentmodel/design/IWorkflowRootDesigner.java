@@ -47,6 +47,7 @@ import system.componentmodel.design.ViewTechnology;
 import system.componentmodel.IComponent;
 import system.componentmodel.IComponentImplementation;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.workflow.componentmodel.design.WorkflowDesignerMessageFilter;
 import system.componentmodel.design.DesignerVerbCollection;
 import system.workflow.componentmodel.design.CompositeActivityDesigner;
 
@@ -139,7 +140,7 @@ public interface IWorkflowRootDesigner extends IJCOBridgeReflected, system.compo
     
     public boolean getSupportsLayoutPersistence() throws Throwable;
 
-    public ReadOnlyCollection_1 getMessageFilters() throws Throwable;
+    public ReadOnlyCollection_1<WorkflowDesignerMessageFilter> getMessageFilters() throws Throwable;
 
     public CompositeActivityDesigner getInvokingDesigner() throws Throwable;
 

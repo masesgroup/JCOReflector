@@ -173,7 +173,7 @@ public class AddressHeaderCollection extends system.collections.objectmodel.Read
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param addressHeaders the argument of type {@code IEnumerable_1}
+     * @param addressHeaders the argument of type {@code IEnumerable_1<AddressHeader>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -192,7 +192,7 @@ public class AddressHeaderCollection extends system.collections.objectmodel.Read
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.AddressHeaderCollection.-ctor" target="_top">.NET documentation</a>
      */
-    public AddressHeaderCollection(IEnumerable_1 addressHeaders) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
+    public AddressHeaderCollection(IEnumerable_1<AddressHeader> addressHeaders) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

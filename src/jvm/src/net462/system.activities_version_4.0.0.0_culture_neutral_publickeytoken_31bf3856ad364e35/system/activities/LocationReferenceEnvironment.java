@@ -211,7 +211,7 @@ public class LocationReferenceEnvironment extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.LocationReferenceEnvironment.GetLocationReferences" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetLocationReferences() throws Throwable {
+    public IEnumerable_1<LocationReference> GetLocationReferences() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetLocationReferences = null;

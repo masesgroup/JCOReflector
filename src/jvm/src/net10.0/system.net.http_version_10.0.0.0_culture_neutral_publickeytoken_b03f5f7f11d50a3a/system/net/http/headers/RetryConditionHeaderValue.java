@@ -284,7 +284,7 @@ public class RetryConditionHeaderValue extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.RetryConditionHeaderValue.Date" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getDate() throws Throwable {
+    public Nullable_1<DateTimeOffset> getDate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDate = null;
@@ -306,7 +306,7 @@ public class RetryConditionHeaderValue extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.Headers.RetryConditionHeaderValue.Delta" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getDelta() throws Throwable {
+    public Nullable_1<TimeSpan> getDelta() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectDelta = null;

@@ -53,6 +53,8 @@ import system.security.cryptography.x509certificates.CertificateRequestLoadOptio
 import system.security.cryptography.x509certificates.X509Certificate2;
 import system.DateTimeOffset;
 import system.collections.objectmodel.Collection_1;
+import system.security.cryptography.AsnEncodedData;
+import system.security.cryptography.x509certificates.X509Extension;
 
 
 /**
@@ -1012,7 +1014,7 @@ public class CertificateRequest extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.CertificateRequest.OtherRequestAttributes" target="_top">.NET documentation</a>
      */
-    public Collection_1 getOtherRequestAttributes() throws Throwable {
+    public Collection_1<AsnEncodedData> getOtherRequestAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOtherRequestAttributes = null;
@@ -1034,7 +1036,7 @@ public class CertificateRequest extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.CertificateRequest.CertificateExtensions" target="_top">.NET documentation</a>
      */
-    public Collection_1 getCertificateExtensions() throws Throwable {
+    public Collection_1<X509Extension> getCertificateExtensions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCertificateExtensions = null;

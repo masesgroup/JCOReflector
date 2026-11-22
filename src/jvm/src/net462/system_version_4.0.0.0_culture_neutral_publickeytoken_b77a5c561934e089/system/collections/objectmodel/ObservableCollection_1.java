@@ -174,12 +174,12 @@ public class ObservableCollection_1<T extends IJCOBridgeReflected> extends syste
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param collection the argument of type {@code IEnumerable_1}
+     * @param collection the argument of type {@code IEnumerable_1<T>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.ObjectModel.ObservableCollection-1.-ctor" target="_top">.NET documentation</a>
      */
-    public ObservableCollection_1(IEnumerable_1 collection) throws Throwable, system.ArgumentNullException {
+    public ObservableCollection_1(IEnumerable_1<T> collection) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -194,13 +194,13 @@ public class ObservableCollection_1<T extends IJCOBridgeReflected> extends syste
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param list the argument of type {@code List_1}
+     * @param list the argument of type {@code List_1<T>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.ObjectModel.ObservableCollection-1.-ctor" target="_top">.NET documentation</a>
      */
-    public ObservableCollection_1(List_1 list) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public ObservableCollection_1(List_1<T> list) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

@@ -320,7 +320,7 @@ public class SerializerProvider extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Documents.Serialization.SerializerProvider.InstalledSerializers" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getInstalledSerializers() throws Throwable {
+    public ReadOnlyCollection_1<SerializerDescriptor> getInstalledSerializers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectInstalledSerializers = null;

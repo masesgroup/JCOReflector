@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.data.common.DbDataReader;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.data.common.DbColumn;
 
 
 /**
@@ -194,7 +195,7 @@ public class DbDataReaderExtensions extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbDataReaderExtensions.GetColumnSchema" target="_top">.NET documentation</a>
      */
-    public static ReadOnlyCollection_1 GetColumnSchema(DbDataReader reader) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException {
+    public static ReadOnlyCollection_1<DbColumn> GetColumnSchema(DbDataReader reader) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetColumnSchema = null;

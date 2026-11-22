@@ -146,13 +146,13 @@ public interface IXpsFixedPageReader extends IJCOBridgeReflected, system.windows
     
     public int getPageNumber() throws Throwable;
 
-    public ICollection_1 getColorContexts() throws Throwable;
+    public ICollection_1<XpsColorContext> getColorContexts() throws Throwable;
 
-    public ICollection_1 getFonts() throws Throwable;
+    public ICollection_1<XpsFont> getFonts() throws Throwable;
 
-    public ICollection_1 getImages() throws Throwable;
+    public ICollection_1<XpsImage> getImages() throws Throwable;
 
-    public ICollection_1 getResourceDictionaries() throws Throwable;
+    public ICollection_1<XpsResourceDictionary> getResourceDictionaries() throws Throwable;
 
     public PrintTicket getPrintTicket() throws Throwable;
 

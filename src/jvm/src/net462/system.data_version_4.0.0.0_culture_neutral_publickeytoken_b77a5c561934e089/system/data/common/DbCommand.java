@@ -44,6 +44,7 @@ import system.data.CommandBehavior;
 import system.data.common.DbParameter;
 import system.threading.tasks.Task_1;
 import system.threading.CancellationToken;
+import system.Object;
 import system.data.CommandType;
 import system.data.common.DbConnection;
 import system.data.common.DbParameterCollection;
@@ -313,7 +314,7 @@ public class DbCommand extends system.componentmodel.Component  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.ExecuteReaderAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 ExecuteReaderAsync() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.NullReferenceException, system.ObjectDisposedException {
+    public Task_1<DbDataReader> ExecuteReaderAsync() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.NullReferenceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExecuteReaderAsync = null;
@@ -341,7 +342,7 @@ public class DbCommand extends system.componentmodel.Component  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.ExecuteReaderAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 ExecuteReaderAsync(CommandBehavior behavior) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.NullReferenceException, system.ObjectDisposedException {
+    public Task_1<DbDataReader> ExecuteReaderAsync(CommandBehavior behavior) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.NullReferenceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExecuteReaderAsync = null;
@@ -374,7 +375,7 @@ public class DbCommand extends system.componentmodel.Component  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.ExecuteReaderAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ObjectDisposedException {
+    public Task_1<DbDataReader> ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExecuteReaderAsync = null;
@@ -402,7 +403,7 @@ public class DbCommand extends system.componentmodel.Component  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.ExecuteReaderAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 ExecuteReaderAsync(CancellationToken cancellationToken) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.NullReferenceException, system.ObjectDisposedException {
+    public Task_1<DbDataReader> ExecuteReaderAsync(CancellationToken cancellationToken) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.NullReferenceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExecuteReaderAsync = null;
@@ -496,7 +497,7 @@ public class DbCommand extends system.componentmodel.Component  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.ExecuteScalarAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 ExecuteScalarAsync() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ObjectDisposedException {
+    public Task_1<Object> ExecuteScalarAsync() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExecuteScalarAsync = null;
@@ -528,7 +529,7 @@ public class DbCommand extends system.componentmodel.Component  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DbCommand.ExecuteScalarAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 ExecuteScalarAsync(CancellationToken cancellationToken) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ObjectDisposedException {
+    public Task_1<Object> ExecuteScalarAsync(CancellationToken cancellationToken) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectExecuteScalarAsync = null;

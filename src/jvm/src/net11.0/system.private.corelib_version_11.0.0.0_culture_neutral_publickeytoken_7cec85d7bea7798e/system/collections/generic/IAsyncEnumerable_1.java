@@ -118,7 +118,7 @@ public interface IAsyncEnumerable_1<T extends IJCOBridgeReflected> extends IJCOB
 
     // Methods section
     
-    public IAsyncEnumerator_1 GetAsyncEnumerator(CancellationToken cancellationToken) throws Throwable;
+    public IAsyncEnumerator_1<T> GetAsyncEnumerator(CancellationToken cancellationToken) throws Throwable;
 
 
     

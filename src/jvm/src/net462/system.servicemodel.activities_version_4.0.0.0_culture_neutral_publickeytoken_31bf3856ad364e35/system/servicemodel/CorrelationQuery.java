@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.objectmodel.Collection_1;
-import system.servicemodel.dispatcher.MessageFilter;
 import system.servicemodel.MessageQuerySet;
+import system.servicemodel.dispatcher.MessageFilter;
 
 
 /**
@@ -182,7 +182,7 @@ public class CorrelationQuery extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.CorrelationQuery.SelectAdditional" target="_top">.NET documentation</a>
      */
-    public Collection_1 getSelectAdditional() throws Throwable {
+    public Collection_1<MessageQuerySet> getSelectAdditional() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSelectAdditional = null;

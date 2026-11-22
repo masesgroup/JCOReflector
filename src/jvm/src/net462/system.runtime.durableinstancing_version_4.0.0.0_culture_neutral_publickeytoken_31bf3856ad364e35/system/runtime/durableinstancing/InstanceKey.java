@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.Guid;
 import system.collections.generic.IDictionary_2;
 import system.collections.generic.IDictionary_2Implementation;
+import system.xml.linq.XName;
+import system.runtime.durableinstancing.InstanceValue;
 import system.runtime.durableinstancing.InstanceKey;
 
 
@@ -184,7 +186,7 @@ public class InstanceKey extends NetObject  {
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param value the argument of type {@code Guid}
-     * @param metadata the argument of type {@code IDictionary_2}
+     * @param metadata the argument of type {@code IDictionary_2<XName, InstanceValue>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -200,7 +202,7 @@ public class InstanceKey extends NetObject  {
      * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceKey.-ctor" target="_top">.NET documentation</a>
      */
-    public InstanceKey(Guid value, IDictionary_2 metadata) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException {
+    public InstanceKey(Guid value, IDictionary_2<XName, InstanceValue> metadata) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.OutOfMemoryException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -247,7 +249,7 @@ public class InstanceKey extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceKey.Metadata" target="_top">.NET documentation</a>
      */
-    public IDictionary_2 getMetadata() throws Throwable {
+    public IDictionary_2<XName, InstanceValue> getMetadata() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectMetadata = null;
@@ -269,7 +271,7 @@ public class InstanceKey extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.DurableInstancing.InstanceKey.Metadata" target="_top">.NET documentation</a>
      */
-    public void setMetadata(IDictionary_2 Metadata) throws Throwable {
+    public void setMetadata(IDictionary_2<XName, InstanceValue> Metadata) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

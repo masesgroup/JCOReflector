@@ -43,6 +43,7 @@ import system.identitymodel.tokens.SamlSubject;
 import system.DateTime;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.identitymodel.tokens.SamlAuthorityBinding;
 import system.xml.XmlDictionaryReader;
 import system.identitymodel.tokens.SamlSerializer;
 import system.identitymodel.selectors.SecurityTokenSerializer;
@@ -195,7 +196,7 @@ public class SamlAuthenticationStatement extends system.identitymodel.tokens.Sam
      * @param authenticationInstant the argument of type {@code DateTime}
      * @param dnsAddress the argument of type {@code java.lang.String}
      * @param ipAddress the argument of type {@code java.lang.String}
-     * @param authorityBindings the argument of type {@code IEnumerable_1}
+     * @param authorityBindings the argument of type {@code IEnumerable_1<SamlAuthorityBinding>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -211,7 +212,7 @@ public class SamlAuthenticationStatement extends system.identitymodel.tokens.Sam
      * @throws system.MulticastNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlAuthenticationStatement.-ctor" target="_top">.NET documentation</a>
      */
-    public SamlAuthenticationStatement(SamlSubject samlSubject, java.lang.String authenticationMethod, DateTime authenticationInstant, java.lang.String dnsAddress, java.lang.String ipAddress, IEnumerable_1 authorityBindings) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.MulticastNotSupportedException {
+    public SamlAuthenticationStatement(SamlSubject samlSubject, java.lang.String authenticationMethod, DateTime authenticationInstant, java.lang.String dnsAddress, java.lang.String ipAddress, IEnumerable_1<SamlAuthorityBinding> authorityBindings) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -322,7 +323,7 @@ public class SamlAuthenticationStatement extends system.identitymodel.tokens.Sam
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlAuthenticationStatement.AuthorityBindings" target="_top">.NET documentation</a>
      */
-    public IList_1 getAuthorityBindings() throws Throwable {
+    public IList_1<SamlAuthorityBinding> getAuthorityBindings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAuthorityBindings = null;

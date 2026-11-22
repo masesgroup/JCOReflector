@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.EventArgs;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.workflow.componentmodel.WorkflowChangeAction;
 import system.workflow.componentmodel.Activity;
 
 
@@ -171,7 +172,7 @@ public class TrackingWorkflowChangedEventArgs extends system.EventArgs  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.TrackingWorkflowChangedEventArgs.Changes" target="_top">.NET documentation</a>
      */
-    public IList_1 getChanges() throws Throwable {
+    public IList_1<WorkflowChangeAction> getChanges() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectChanges = null;

@@ -43,12 +43,13 @@ import system.collections.specialized.NameValueCollection;
 import system.TimeSpan;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.workflow.runtime.hosting.SqlPersistenceWorkflowInstanceDescription;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.Guid;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
 import system.transactions.Transaction;
-import system.Guid;
 
 
 /**
@@ -295,7 +296,7 @@ public class SqlWorkflowPersistenceService extends system.workflow.runtime.hosti
      * @throws system.data.sqltypes.SqlTypeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService.GetAllWorkflows" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetAllWorkflows() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.NullReferenceException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.InvalidCastException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.data.sqltypes.SqlTypeException {
+    public IEnumerable_1<SqlPersistenceWorkflowInstanceDescription> GetAllWorkflows() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.NullReferenceException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.InvalidCastException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.data.sqltypes.SqlTypeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetAllWorkflows = null;
@@ -330,7 +331,7 @@ public class SqlWorkflowPersistenceService extends system.workflow.runtime.hosti
      * @throws system.data.sqltypes.SqlTypeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService.LoadExpiredTimerWorkflowIds" target="_top">.NET documentation</a>
      */
-    public IList_1 LoadExpiredTimerWorkflowIds() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.ArgumentException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.data.sqltypes.SqlTypeException {
+    public IList_1<Guid> LoadExpiredTimerWorkflowIds() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.ArgumentException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.data.sqltypes.SqlTypeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectLoadExpiredTimerWorkflowIds = null;

@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.Uri;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.windows.media.Typeface;
 import system.windows.media.FamilyTypefaceCollection;
 import system.windows.media.FontFamilyMapCollection;
 import system.windows.media.LanguageSpecificStringDictionary;
@@ -263,7 +264,7 @@ public class FontFamily extends NetObject  {
      * @throws system.net.WebException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.FontFamily.GetTypefaces" target="_top">.NET documentation</a>
      */
-    public ICollection_1 GetTypefaces() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.OutOfMemoryException, system.InvalidOperationException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.FileFormatException, system.net.WebException {
+    public ICollection_1<Typeface> GetTypefaces() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.OutOfMemoryException, system.InvalidOperationException, system.ObjectDisposedException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.FileFormatException, system.net.WebException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetTypefaces = null;

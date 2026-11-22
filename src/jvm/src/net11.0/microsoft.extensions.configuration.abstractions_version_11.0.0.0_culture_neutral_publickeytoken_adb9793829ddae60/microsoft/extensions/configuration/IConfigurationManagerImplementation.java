@@ -258,7 +258,7 @@ public class IConfigurationManagerImplementation extends NetObject implements IC
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Configuration.IConfigurationManager.GetChildren" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetChildren() throws Throwable {
+    public IEnumerable_1<IConfigurationSection> GetChildren() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetChildren = null;
@@ -306,7 +306,7 @@ public class IConfigurationManagerImplementation extends NetObject implements IC
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Configuration.IConfigurationManager.Sources" target="_top">.NET documentation</a>
      */
-    public IList_1 getSources() throws Throwable {
+    public IList_1<IConfigurationSource> getSources() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSources = null;

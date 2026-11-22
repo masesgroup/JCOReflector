@@ -170,7 +170,7 @@ public class DataContractJsonSerializer extends system.runtime.serialization.Xml
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param type the argument of type {@code NetType}
-     * @param knownTypes the argument of type {@code IEnumerable_1}
+     * @param knownTypes the argument of type {@code IEnumerable_1<NetType>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -182,7 +182,7 @@ public class DataContractJsonSerializer extends system.runtime.serialization.Xml
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Json.DataContractJsonSerializer.-ctor" target="_top">.NET documentation</a>
      */
-    public DataContractJsonSerializer(NetType type, IEnumerable_1 knownTypes) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException {
+    public DataContractJsonSerializer(NetType type, IEnumerable_1<NetType> knownTypes) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -229,7 +229,7 @@ public class DataContractJsonSerializer extends system.runtime.serialization.Xml
      *
      * @param type the argument of type {@code NetType}
      * @param rootName the argument of type {@code java.lang.String}
-     * @param knownTypes the argument of type {@code IEnumerable_1}
+     * @param knownTypes the argument of type {@code IEnumerable_1<NetType>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -245,7 +245,7 @@ public class DataContractJsonSerializer extends system.runtime.serialization.Xml
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Json.DataContractJsonSerializer.-ctor" target="_top">.NET documentation</a>
      */
-    public DataContractJsonSerializer(NetType type, java.lang.String rootName, IEnumerable_1 knownTypes) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException, system.OutOfMemoryException {
+    public DataContractJsonSerializer(NetType type, java.lang.String rootName, IEnumerable_1<NetType> knownTypes) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -289,7 +289,7 @@ public class DataContractJsonSerializer extends system.runtime.serialization.Xml
      *
      * @param type the argument of type {@code NetType}
      * @param rootName the argument of type {@code XmlDictionaryString}
-     * @param knownTypes the argument of type {@code IEnumerable_1}
+     * @param knownTypes the argument of type {@code IEnumerable_1<NetType>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.NotSupportedException if the .NET member raises it
@@ -301,7 +301,7 @@ public class DataContractJsonSerializer extends system.runtime.serialization.Xml
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Json.DataContractJsonSerializer.-ctor" target="_top">.NET documentation</a>
      */
-    public DataContractJsonSerializer(NetType type, XmlDictionaryString rootName, IEnumerable_1 knownTypes) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException {
+    public DataContractJsonSerializer(NetType type, XmlDictionaryString rootName, IEnumerable_1<NetType> knownTypes) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -994,7 +994,7 @@ public class DataContractJsonSerializer extends system.runtime.serialization.Xml
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Runtime.Serialization.Json.DataContractJsonSerializer.KnownTypes" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getKnownTypes() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
+    public ReadOnlyCollection_1<NetType> getKnownTypes() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectKnownTypes = null;

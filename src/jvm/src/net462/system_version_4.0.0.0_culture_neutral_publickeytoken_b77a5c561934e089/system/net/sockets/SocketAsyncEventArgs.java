@@ -50,6 +50,8 @@ import system.net.sockets.SocketClientAccessPolicyProtocol;
 import system.net.sockets.SocketError;
 import system.net.sockets.SocketFlags;
 import system.net.sockets.TransmitFileOptions;
+import system.EventHandler_1;
+import system.net.sockets.SocketAsyncEventArgs;
 
 
 /**
@@ -1064,6 +1066,40 @@ public class SocketAsyncEventArgs extends system.EventArgs implements AutoClosea
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addCompleted.
+     *
+     * @param handler the argument of type {@code EventHandler_1<SocketAsyncEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addCompleted(EventHandler_1<SocketAsyncEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("Completed", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeCompleted.
+     *
+     * @param handler the argument of type {@code EventHandler_1<SocketAsyncEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeCompleted(EventHandler_1<SocketAsyncEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("Completed", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

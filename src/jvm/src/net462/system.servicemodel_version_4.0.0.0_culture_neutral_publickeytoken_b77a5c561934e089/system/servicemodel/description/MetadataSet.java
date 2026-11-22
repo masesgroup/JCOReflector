@@ -40,11 +40,13 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.servicemodel.description.MetadataSection;
 import system.servicemodel.description.MetadataSet;
 import system.xml.XmlReader;
 import system.xml.XmlWriter;
 import system.xml.schema.XmlSchema;
 import system.collections.objectmodel.Collection_1;
+import system.xml.XmlAttribute;
 
 
 /**
@@ -174,12 +176,12 @@ public class MetadataSet extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param sections the argument of type {@code IEnumerable_1}
+     * @param sections the argument of type {@code IEnumerable_1<MetadataSection>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataSet.-ctor" target="_top">.NET documentation</a>
      */
-    public MetadataSet(IEnumerable_1 sections) throws Throwable, system.NotSupportedException {
+    public MetadataSet(IEnumerable_1<MetadataSection> sections) throws Throwable, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -313,7 +315,7 @@ public class MetadataSet extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataSet.MetadataSections" target="_top">.NET documentation</a>
      */
-    public Collection_1 getMetadataSections() throws Throwable {
+    public Collection_1<MetadataSection> getMetadataSections() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectMetadataSections = null;
@@ -335,7 +337,7 @@ public class MetadataSet extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataSet.Attributes" target="_top">.NET documentation</a>
      */
-    public Collection_1 getAttributes() throws Throwable {
+    public Collection_1<XmlAttribute> getAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAttributes = null;

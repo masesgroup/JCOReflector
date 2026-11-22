@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.servicemodel.syndication.SyndicationItem;
 import system.Uri;
 import system.DateTimeOffset;
 import system.servicemodel.syndication.Atom10FeedFormatter;
@@ -49,6 +50,9 @@ import system.xml.XmlReader;
 import system.xml.XmlWriter;
 import system.collections.generic.Dictionary_2;
 import system.collections.objectmodel.Collection_1;
+import system.servicemodel.syndication.SyndicationCategory;
+import system.servicemodel.syndication.SyndicationLink;
+import system.servicemodel.syndication.SyndicationPerson;
 import system.servicemodel.syndication.SyndicationElementExtensionCollection;
 import system.servicemodel.syndication.TextSyndicationContent;
 
@@ -185,7 +189,7 @@ public class SyndicationFeed extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param items the argument of type {@code IEnumerable_1}
+     * @param items the argument of type {@code IEnumerable_1<SyndicationItem>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -195,7 +199,7 @@ public class SyndicationFeed extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.SyndicationFeed.-ctor" target="_top">.NET documentation</a>
      */
-    public SyndicationFeed(IEnumerable_1 items) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public SyndicationFeed(IEnumerable_1<SyndicationItem> items) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -236,7 +240,7 @@ public class SyndicationFeed extends NetObject  {
      * @param title the argument of type {@code java.lang.String}
      * @param description the argument of type {@code java.lang.String}
      * @param feedAlternateLink the argument of type {@code Uri}
-     * @param items the argument of type {@code IEnumerable_1}
+     * @param items the argument of type {@code IEnumerable_1<SyndicationItem>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -248,7 +252,7 @@ public class SyndicationFeed extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.SyndicationFeed.-ctor" target="_top">.NET documentation</a>
      */
-    public SyndicationFeed(java.lang.String title, java.lang.String description, Uri feedAlternateLink, IEnumerable_1 items) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public SyndicationFeed(java.lang.String title, java.lang.String description, Uri feedAlternateLink, IEnumerable_1<SyndicationItem> items) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -295,7 +299,7 @@ public class SyndicationFeed extends NetObject  {
      * @param feedAlternateLink the argument of type {@code Uri}
      * @param id the argument of type {@code java.lang.String}
      * @param lastUpdatedTime the argument of type {@code DateTimeOffset}
-     * @param items the argument of type {@code IEnumerable_1}
+     * @param items the argument of type {@code IEnumerable_1<SyndicationItem>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -310,7 +314,7 @@ public class SyndicationFeed extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.SyndicationFeed.-ctor" target="_top">.NET documentation</a>
      */
-    public SyndicationFeed(java.lang.String title, java.lang.String description, Uri feedAlternateLink, java.lang.String id, DateTimeOffset lastUpdatedTime, IEnumerable_1 items) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+    public SyndicationFeed(java.lang.String title, java.lang.String description, Uri feedAlternateLink, java.lang.String id, DateTimeOffset lastUpdatedTime, IEnumerable_1<SyndicationItem> items) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -557,7 +561,7 @@ public class SyndicationFeed extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.SyndicationFeed.Items" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getItems() throws Throwable {
+    public IEnumerable_1<SyndicationItem> getItems() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectItems = null;
@@ -590,7 +594,7 @@ public class SyndicationFeed extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.SyndicationFeed.Items" target="_top">.NET documentation</a>
      */
-    public void setItems(IEnumerable_1 Items) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+    public void setItems(IEnumerable_1<SyndicationItem> Items) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -607,7 +611,7 @@ public class SyndicationFeed extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.SyndicationFeed.Categories" target="_top">.NET documentation</a>
      */
-    public Collection_1 getCategories() throws Throwable {
+    public Collection_1<SyndicationCategory> getCategories() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCategories = null;
@@ -629,7 +633,7 @@ public class SyndicationFeed extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.SyndicationFeed.Links" target="_top">.NET documentation</a>
      */
-    public Collection_1 getLinks() throws Throwable {
+    public Collection_1<SyndicationLink> getLinks() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectLinks = null;
@@ -651,7 +655,7 @@ public class SyndicationFeed extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.SyndicationFeed.Authors" target="_top">.NET documentation</a>
      */
-    public Collection_1 getAuthors() throws Throwable {
+    public Collection_1<SyndicationPerson> getAuthors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAuthors = null;
@@ -673,7 +677,7 @@ public class SyndicationFeed extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Syndication.SyndicationFeed.Contributors" target="_top">.NET documentation</a>
      */
-    public Collection_1 getContributors() throws Throwable {
+    public Collection_1<SyndicationPerson> getContributors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContributors = null;

@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.EventHandler_1;
+import system.componentmodel.DataErrorsChangedEventArgs;
 
 
 /**
@@ -127,5 +129,9 @@ public interface INotifyDataErrorInfo extends IJCOBridgeReflected {
 
     // Instance Events section
     
+    public void addErrorsChanged(EventHandler_1<DataErrorsChangedEventArgs> handler) throws Throwable;
+
+    public void removeErrorsChanged(EventHandler_1<DataErrorsChangedEventArgs> handler) throws Throwable;
+
 
 }

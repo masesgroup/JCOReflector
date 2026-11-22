@@ -42,6 +42,7 @@ import system.windows.media.animation.Animatable;
 import system.windows.Point;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.windows.media.PathSegment;
 import system.IFormatProvider;
 import system.IFormatProviderImplementation;
 import system.windows.media.PathFigure;
@@ -183,7 +184,7 @@ public class PathFigure extends system.windows.media.animation.Animatable  {
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param start the argument of type {@code Point}
-     * @param segments the argument of type {@code IEnumerable_1}
+     * @param segments the argument of type {@code IEnumerable_1<PathSegment>}
      * @param closed the argument of type {@code boolean}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
@@ -195,7 +196,7 @@ public class PathFigure extends system.windows.media.animation.Animatable  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.PathFigure.-ctor" target="_top">.NET documentation</a>
      */
-    public PathFigure(Point start, IEnumerable_1 segments, boolean closed) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.NotSupportedException {
+    public PathFigure(Point start, IEnumerable_1<PathSegment> segments, boolean closed) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

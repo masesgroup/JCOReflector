@@ -39,8 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.Action_1;
+import system.diagnostics.Activity;
 import system.diagnostics.ExceptionRecorder;
 import system.diagnostics.SampleActivity_1;
+import system.diagnostics.ActivityContext;
 
 
 /**
@@ -170,15 +172,15 @@ public class ActivityListenerBuilder extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Diagnostics.Tracing.ActivityListenerBuilder.ActivityStarted" target="_top">.NET documentation</a>
      */
-    public Action_1 getActivityStarted() throws Throwable {
+    public Action_1<Activity> getActivityStarted() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectActivityStarted = null;
         try {
             retObjectActivityStarted = classInstance.Get("ActivityStarted");
-            return (Action_1)retObjectActivityStarted;
+            return (Action_1<Activity>)retObjectActivityStarted;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_1", retObjectActivityStarted != null ? retObjectActivityStarted.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_1<Activity>", retObjectActivityStarted != null ? retObjectActivityStarted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,7 +193,7 @@ public class ActivityListenerBuilder extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Diagnostics.Tracing.ActivityListenerBuilder.ActivityStarted" target="_top">.NET documentation</a>
      */
-    public void setActivityStarted(Action_1 ActivityStarted) throws Throwable {
+    public void setActivityStarted(Action_1<Activity> ActivityStarted) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -208,15 +210,15 @@ public class ActivityListenerBuilder extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Diagnostics.Tracing.ActivityListenerBuilder.ActivityStopped" target="_top">.NET documentation</a>
      */
-    public Action_1 getActivityStopped() throws Throwable {
+    public Action_1<Activity> getActivityStopped() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectActivityStopped = null;
         try {
             retObjectActivityStopped = classInstance.Get("ActivityStopped");
-            return (Action_1)retObjectActivityStopped;
+            return (Action_1<Activity>)retObjectActivityStopped;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_1", retObjectActivityStopped != null ? retObjectActivityStopped.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_1<Activity>", retObjectActivityStopped != null ? retObjectActivityStopped.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,7 +231,7 @@ public class ActivityListenerBuilder extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Diagnostics.Tracing.ActivityListenerBuilder.ActivityStopped" target="_top">.NET documentation</a>
      */
-    public void setActivityStopped(Action_1 ActivityStopped) throws Throwable {
+    public void setActivityStopped(Action_1<Activity> ActivityStopped) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -284,15 +286,15 @@ public class ActivityListenerBuilder extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Diagnostics.Tracing.ActivityListenerBuilder.Sample" target="_top">.NET documentation</a>
      */
-    public SampleActivity_1 getSample() throws Throwable {
+    public SampleActivity_1<ActivityContext> getSample() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSample = null;
         try {
             retObjectSample = classInstance.Get("Sample");
-            return (SampleActivity_1)retObjectSample;
+            return (SampleActivity_1<ActivityContext>)retObjectSample;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into SampleActivity_1", retObjectSample != null ? retObjectSample.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into SampleActivity_1<ActivityContext>", retObjectSample != null ? retObjectSample.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -305,7 +307,7 @@ public class ActivityListenerBuilder extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Diagnostics.Tracing.ActivityListenerBuilder.Sample" target="_top">.NET documentation</a>
      */
-    public void setSample(SampleActivity_1 Sample) throws Throwable {
+    public void setSample(SampleActivity_1<ActivityContext> Sample) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

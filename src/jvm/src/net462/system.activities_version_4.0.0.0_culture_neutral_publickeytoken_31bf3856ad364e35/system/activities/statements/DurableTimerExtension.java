@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.activities.statements.TimerExtension;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.Object;
 import system.activities.hosting.WorkflowInstanceProxy;
 
 
@@ -189,7 +190,7 @@ public class DurableTimerExtension extends system.activities.statements.TimerExt
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.DurableTimerExtension.GetAdditionalExtensions" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetAdditionalExtensions() throws Throwable {
+    public IEnumerable_1<Object> GetAdditionalExtensions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetAdditionalExtensions = null;

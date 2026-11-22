@@ -220,7 +220,7 @@ public class ResolveResponseInfo extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolvers.ResolveResponseInfo.Addresses" target="_top">.NET documentation</a>
      */
-    public IList_1 getAddresses() throws Throwable {
+    public IList_1<PeerNodeAddress> getAddresses() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAddresses = null;
@@ -242,7 +242,7 @@ public class ResolveResponseInfo extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.PeerResolvers.ResolveResponseInfo.Addresses" target="_top">.NET documentation</a>
      */
-    public void setAddresses(IList_1 Addresses) throws Throwable {
+    public void setAddresses(IList_1<PeerNodeAddress> Addresses) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

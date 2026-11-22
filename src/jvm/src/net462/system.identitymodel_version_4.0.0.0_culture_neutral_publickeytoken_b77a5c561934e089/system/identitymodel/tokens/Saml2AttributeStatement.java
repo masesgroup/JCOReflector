@@ -172,7 +172,7 @@ public class Saml2AttributeStatement extends system.identitymodel.tokens.Saml2St
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param attributes the argument of type {@code IEnumerable_1}
+     * @param attributes the argument of type {@code IEnumerable_1<Saml2Attribute>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -188,7 +188,7 @@ public class Saml2AttributeStatement extends system.identitymodel.tokens.Saml2St
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2AttributeStatement.-ctor" target="_top">.NET documentation</a>
      */
-    public Saml2AttributeStatement(IEnumerable_1 attributes) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+    public Saml2AttributeStatement(IEnumerable_1<Saml2Attribute> attributes) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -243,7 +243,7 @@ public class Saml2AttributeStatement extends system.identitymodel.tokens.Saml2St
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2AttributeStatement.Attributes" target="_top">.NET documentation</a>
      */
-    public Collection_1 getAttributes() throws Throwable {
+    public Collection_1<Saml2Attribute> getAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAttributes = null;

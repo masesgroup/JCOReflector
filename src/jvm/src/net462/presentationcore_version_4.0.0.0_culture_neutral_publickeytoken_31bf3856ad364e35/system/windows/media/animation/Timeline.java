@@ -42,6 +42,7 @@ import system.windows.media.animation.Animatable;
 import system.Nullable_1;
 import system.windows.media.animation.Timeline;
 import system.windows.media.animation.Clock;
+import system.TimeSpan;
 import system.windows.Duration;
 import system.windows.media.animation.FillBehavior;
 import system.windows.media.animation.RepeatBehavior;
@@ -666,7 +667,7 @@ public class Timeline extends system.windows.media.animation.Animatable  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.Timeline.BeginTime" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getBeginTime() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public Nullable_1<TimeSpan> getBeginTime() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectBeginTime = null;
@@ -696,7 +697,7 @@ public class Timeline extends system.windows.media.animation.Animatable  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.Animation.Timeline.BeginTime" target="_top">.NET documentation</a>
      */
-    public void setBeginTime(Nullable_1 BeginTime) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public void setBeginTime(Nullable_1<TimeSpan> BeginTime) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

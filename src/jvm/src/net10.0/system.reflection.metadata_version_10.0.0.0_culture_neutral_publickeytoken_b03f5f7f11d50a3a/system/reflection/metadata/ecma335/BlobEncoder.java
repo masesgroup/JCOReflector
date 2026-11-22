@@ -474,8 +474,8 @@ public class BlobEncoder extends system.ValueType  {
     /**
      * Invokes the .NET member CustomAttributeSignature.
      *
-     * @param fixedArguments the argument of type {@code Action_1}
-     * @param namedArguments the argument of type {@code Action_1}
+     * @param fixedArguments the argument of type {@code Action_1<FixedArgumentsEncoder>}
+     * @param namedArguments the argument of type {@code Action_1<CustomAttributeNamedArgumentsEncoder>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -489,7 +489,7 @@ public class BlobEncoder extends system.ValueType  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.BlobEncoder.CustomAttributeSignature" target="_top">.NET documentation</a>
      */
-    public void CustomAttributeSignature(Action_1 fixedArguments, Action_1 namedArguments) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public void CustomAttributeSignature(Action_1<FixedArgumentsEncoder> fixedArguments, Action_1<CustomAttributeNamedArgumentsEncoder> namedArguments) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

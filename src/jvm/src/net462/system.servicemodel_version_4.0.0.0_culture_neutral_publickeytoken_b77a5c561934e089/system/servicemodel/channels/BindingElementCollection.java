@@ -172,7 +172,7 @@ public class BindingElementCollection extends system.collections.objectmodel.Col
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param elements the argument of type {@code IEnumerable_1}
+     * @param elements the argument of type {@code IEnumerable_1<BindingElement>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -188,7 +188,7 @@ public class BindingElementCollection extends system.collections.objectmodel.Col
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Channels.BindingElementCollection.-ctor" target="_top">.NET documentation</a>
      */
-    public BindingElementCollection(IEnumerable_1 elements) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+    public BindingElementCollection(IEnumerable_1<BindingElement> elements) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

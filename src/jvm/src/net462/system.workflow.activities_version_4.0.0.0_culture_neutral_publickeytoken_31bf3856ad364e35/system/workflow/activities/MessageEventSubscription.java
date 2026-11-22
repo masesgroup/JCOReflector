@@ -43,6 +43,7 @@ import system.IComparableImplementation;
 import system.Guid;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.workflow.runtime.CorrelationProperty;
 
 
 /**
@@ -250,7 +251,7 @@ public class MessageEventSubscription extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Activities.MessageEventSubscription.CorrelationProperties" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getCorrelationProperties() throws Throwable {
+    public ICollection_1<CorrelationProperty> getCorrelationProperties() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCorrelationProperties = null;

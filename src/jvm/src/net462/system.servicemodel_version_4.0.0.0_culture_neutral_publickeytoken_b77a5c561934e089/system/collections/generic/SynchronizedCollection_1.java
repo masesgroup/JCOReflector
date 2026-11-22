@@ -203,7 +203,7 @@ public class SynchronizedCollection_1<T extends IJCOBridgeReflected> extends Net
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param syncRoot the argument of type {@code NetObject}
-     * @param list the argument of type {@code IEnumerable_1}
+     * @param list the argument of type {@code IEnumerable_1<T>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -218,7 +218,7 @@ public class SynchronizedCollection_1<T extends IJCOBridgeReflected> extends Net
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.SynchronizedCollection-1.-ctor" target="_top">.NET documentation</a>
      */
-    public SynchronizedCollection_1(NetObject syncRoot, IEnumerable_1 list) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
+    public SynchronizedCollection_1(NetObject syncRoot, IEnumerable_1<T> list) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

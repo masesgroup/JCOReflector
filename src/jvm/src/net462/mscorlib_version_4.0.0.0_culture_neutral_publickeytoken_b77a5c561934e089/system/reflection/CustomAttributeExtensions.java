@@ -520,7 +520,7 @@ public class CustomAttributeExtensions extends NetObject  {
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.CustomAttributeExtensions.GetCustomAttributes" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 GetCustomAttributes(Assembly element) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
+    public static IEnumerable_1<Attribute> GetCustomAttributes(Assembly element) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttributes = null;
@@ -547,7 +547,7 @@ public class CustomAttributeExtensions extends NetObject  {
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.CustomAttributeExtensions.GetCustomAttributes" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 GetCustomAttributes(Assembly element, NetType attributeType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException {
+    public static IEnumerable_1<Attribute> GetCustomAttributes(Assembly element, NetType attributeType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttributes = null;
@@ -576,7 +576,7 @@ public class CustomAttributeExtensions extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.CustomAttributeExtensions.GetCustomAttributes" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 GetCustomAttributes(MemberInfo element) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotSupportedException, system.InvalidOperationException {
+    public static IEnumerable_1<Attribute> GetCustomAttributes(MemberInfo element) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttributes = null;
@@ -606,7 +606,7 @@ public class CustomAttributeExtensions extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.CustomAttributeExtensions.GetCustomAttributes" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 GetCustomAttributes(MemberInfo element, boolean inherit) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotSupportedException, system.InvalidOperationException {
+    public static IEnumerable_1<Attribute> GetCustomAttributes(MemberInfo element, boolean inherit) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttributes = null;
@@ -636,7 +636,7 @@ public class CustomAttributeExtensions extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.CustomAttributeExtensions.GetCustomAttributes" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 GetCustomAttributes(MemberInfo element, NetType attributeType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException {
+    public static IEnumerable_1<Attribute> GetCustomAttributes(MemberInfo element, NetType attributeType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttributes = null;
@@ -667,7 +667,7 @@ public class CustomAttributeExtensions extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.CustomAttributeExtensions.GetCustomAttributes" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 GetCustomAttributes(MemberInfo element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException {
+    public static IEnumerable_1<Attribute> GetCustomAttributes(MemberInfo element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttributes = null;
@@ -692,7 +692,7 @@ public class CustomAttributeExtensions extends NetObject  {
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.CustomAttributeExtensions.GetCustomAttributes" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 GetCustomAttributes(Module element) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
+    public static IEnumerable_1<Attribute> GetCustomAttributes(Module element) throws Throwable, system.ArgumentNullException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttributes = null;
@@ -719,7 +719,7 @@ public class CustomAttributeExtensions extends NetObject  {
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.CustomAttributeExtensions.GetCustomAttributes" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 GetCustomAttributes(Module element, NetType attributeType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException {
+    public static IEnumerable_1<Attribute> GetCustomAttributes(Module element, NetType attributeType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttributes = null;
@@ -748,7 +748,7 @@ public class CustomAttributeExtensions extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.CustomAttributeExtensions.GetCustomAttributes" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 GetCustomAttributes(ParameterInfo element) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException {
+    public static IEnumerable_1<Attribute> GetCustomAttributes(ParameterInfo element) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttributes = null;
@@ -778,7 +778,7 @@ public class CustomAttributeExtensions extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.CustomAttributeExtensions.GetCustomAttributes" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 GetCustomAttributes(ParameterInfo element, boolean inherit) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException {
+    public static IEnumerable_1<Attribute> GetCustomAttributes(ParameterInfo element, boolean inherit) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttributes = null;
@@ -808,7 +808,7 @@ public class CustomAttributeExtensions extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.CustomAttributeExtensions.GetCustomAttributes" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 GetCustomAttributes(ParameterInfo element, NetType attributeType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException {
+    public static IEnumerable_1<Attribute> GetCustomAttributes(ParameterInfo element, NetType attributeType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttributes = null;
@@ -839,7 +839,7 @@ public class CustomAttributeExtensions extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.CustomAttributeExtensions.GetCustomAttributes" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 GetCustomAttributes(ParameterInfo element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException {
+    public static IEnumerable_1<Attribute> GetCustomAttributes(ParameterInfo element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetCustomAttributes = null;

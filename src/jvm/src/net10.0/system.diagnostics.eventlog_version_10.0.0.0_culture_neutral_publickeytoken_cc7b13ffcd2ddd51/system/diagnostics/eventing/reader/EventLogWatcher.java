@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.diagnostics.eventing.reader.EventLogQuery;
 import system.diagnostics.eventing.reader.EventBookmark;
+import system.EventHandler_1;
+import system.diagnostics.eventing.reader.EventRecordWrittenEventArgs;
 
 
 /**
@@ -373,6 +375,40 @@ public class EventLogWatcher extends NetObject implements AutoCloseable {
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addEventRecordWritten.
+     *
+     * @param handler the argument of type {@code EventHandler_1<EventRecordWrittenEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addEventRecordWritten(EventHandler_1<EventRecordWrittenEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("EventRecordWritten", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeEventRecordWritten.
+     *
+     * @param handler the argument of type {@code EventHandler_1<EventRecordWrittenEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeEventRecordWritten(EventHandler_1<EventRecordWrittenEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("EventRecordWritten", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

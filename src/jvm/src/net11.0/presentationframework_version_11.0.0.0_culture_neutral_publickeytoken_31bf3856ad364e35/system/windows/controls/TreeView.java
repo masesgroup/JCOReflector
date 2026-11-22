@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.controls.ItemsControl;
+import system.windows.RoutedPropertyChangedEventHandler_1;
+import system.Object;
 
 
 /**
@@ -298,6 +300,40 @@ public class TreeView extends system.windows.controls.ItemsControl  {
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addSelectedItemChanged.
+     *
+     * @param handler the argument of type {@code RoutedPropertyChangedEventHandler_1<Object>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addSelectedItemChanged(RoutedPropertyChangedEventHandler_1<Object> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("SelectedItemChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeSelectedItemChanged.
+     *
+     * @param handler the argument of type {@code RoutedPropertyChangedEventHandler_1<Object>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeSelectedItemChanged(RoutedPropertyChangedEventHandler_1<Object> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("SelectedItemChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

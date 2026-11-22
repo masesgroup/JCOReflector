@@ -41,7 +41,9 @@ import java.util.ArrayList;
 import system.data.metadata.edm.TypeUsage;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.data.metadata.edm.EdmMember;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.data.common.FieldMetadata;
 
 
 /**
@@ -159,7 +161,7 @@ public class DataRecordInfo extends NetObject  {
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param metadata the argument of type {@code TypeUsage}
-     * @param memberInfo the argument of type {@code IEnumerable_1}
+     * @param memberInfo the argument of type {@code IEnumerable_1<EdmMember>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -173,7 +175,7 @@ public class DataRecordInfo extends NetObject  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataRecordInfo.-ctor" target="_top">.NET documentation</a>
      */
-    public DataRecordInfo(TypeUsage metadata, IEnumerable_1 memberInfo) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public DataRecordInfo(TypeUsage metadata, IEnumerable_1<EdmMember> memberInfo) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -199,7 +201,7 @@ public class DataRecordInfo extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.DataRecordInfo.FieldMetadata" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getFieldMetadata() throws Throwable {
+    public ReadOnlyCollection_1<FieldMetadata> getFieldMetadata() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFieldMetadata = null;

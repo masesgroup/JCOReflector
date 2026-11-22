@@ -659,7 +659,7 @@ public class ObjectContext extends NetObject implements AutoCloseable {
      * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.GetKnownProxyTypes" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 GetKnownProxyTypes() throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.threading.LockRecursionException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.SynchronizationLockException {
+    public static IEnumerable_1<NetType> GetKnownProxyTypes() throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.threading.LockRecursionException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetKnownProxyTypes = null;
@@ -1334,7 +1334,7 @@ public class ObjectContext extends NetObject implements AutoCloseable {
     /**
      * Invokes the .NET member CreateProxyTypes.
      *
-     * @param types the argument of type {@code IEnumerable_1}
+     * @param types the argument of type {@code IEnumerable_1<NetType>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -1361,7 +1361,7 @@ public class ObjectContext extends NetObject implements AutoCloseable {
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Objects.ObjectContext.CreateProxyTypes" target="_top">.NET documentation</a>
      */
-    public void CreateProxyTypes(IEnumerable_1 types) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.data.MappingException, system.OutOfMemoryException, system.InvalidOperationException, system.data.MetadataException, system.threading.SynchronizationLockException, system.ObjectDisposedException, system.threading.LockRecursionException, system.NotImplementedException, system.NotSupportedException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException, system.collections.generic.KeyNotFoundException {
+    public void CreateProxyTypes(IEnumerable_1<NetType> types) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.data.MappingException, system.OutOfMemoryException, system.InvalidOperationException, system.data.MetadataException, system.threading.SynchronizationLockException, system.ObjectDisposedException, system.threading.LockRecursionException, system.NotImplementedException, system.NotSupportedException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

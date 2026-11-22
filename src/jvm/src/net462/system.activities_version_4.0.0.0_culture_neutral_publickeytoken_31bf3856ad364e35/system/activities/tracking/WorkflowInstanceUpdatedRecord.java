@@ -43,6 +43,7 @@ import system.Guid;
 import system.activities.WorkflowIdentity;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.activities.dynamicupdate.ActivityBlockingUpdate;
 
 
 /**
@@ -194,7 +195,7 @@ public class WorkflowInstanceUpdatedRecord extends system.activities.tracking.Wo
      * @param activityDefinitionId the argument of type {@code java.lang.String}
      * @param originalDefinitionIdentity the argument of type {@code WorkflowIdentity}
      * @param updatedDefinitionIdentity the argument of type {@code WorkflowIdentity}
-     * @param blockingActivities the argument of type {@code IList_1}
+     * @param blockingActivities the argument of type {@code IList_1<ActivityBlockingUpdate>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -207,7 +208,7 @@ public class WorkflowInstanceUpdatedRecord extends system.activities.tracking.Wo
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceUpdatedRecord.-ctor" target="_top">.NET documentation</a>
      */
-    public WorkflowInstanceUpdatedRecord(Guid instanceId, long recordNumber, java.lang.String activityDefinitionId, WorkflowIdentity originalDefinitionIdentity, WorkflowIdentity updatedDefinitionIdentity, IList_1 blockingActivities) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public WorkflowInstanceUpdatedRecord(Guid instanceId, long recordNumber, java.lang.String activityDefinitionId, WorkflowIdentity originalDefinitionIdentity, WorkflowIdentity updatedDefinitionIdentity, IList_1<ActivityBlockingUpdate> blockingActivities) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -254,7 +255,7 @@ public class WorkflowInstanceUpdatedRecord extends system.activities.tracking.Wo
      * @param activityDefinitionId the argument of type {@code java.lang.String}
      * @param originalDefinitionIdentity the argument of type {@code WorkflowIdentity}
      * @param updatedDefinitionIdentity the argument of type {@code WorkflowIdentity}
-     * @param blockingActivities the argument of type {@code IList_1}
+     * @param blockingActivities the argument of type {@code IList_1<ActivityBlockingUpdate>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -268,7 +269,7 @@ public class WorkflowInstanceUpdatedRecord extends system.activities.tracking.Wo
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceUpdatedRecord.-ctor" target="_top">.NET documentation</a>
      */
-    public WorkflowInstanceUpdatedRecord(Guid instanceId, java.lang.String activityDefinitionId, WorkflowIdentity originalDefinitionIdentity, WorkflowIdentity updatedDefinitionIdentity, IList_1 blockingActivities) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public WorkflowInstanceUpdatedRecord(Guid instanceId, java.lang.String activityDefinitionId, WorkflowIdentity originalDefinitionIdentity, WorkflowIdentity updatedDefinitionIdentity, IList_1<ActivityBlockingUpdate> blockingActivities) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -354,7 +355,7 @@ public class WorkflowInstanceUpdatedRecord extends system.activities.tracking.Wo
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceUpdatedRecord.BlockingActivities" target="_top">.NET documentation</a>
      */
-    public IList_1 getBlockingActivities() throws Throwable {
+    public IList_1<ActivityBlockingUpdate> getBlockingActivities() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectBlockingActivities = null;
@@ -376,7 +377,7 @@ public class WorkflowInstanceUpdatedRecord extends system.activities.tracking.Wo
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Tracking.WorkflowInstanceUpdatedRecord.BlockingActivities" target="_top">.NET documentation</a>
      */
-    public void setBlockingActivities(IList_1 BlockingActivities) throws Throwable {
+    public void setBlockingActivities(IList_1<ActivityBlockingUpdate> BlockingActivities) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

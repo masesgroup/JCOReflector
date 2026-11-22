@@ -177,7 +177,7 @@ public class SortedList_2<TKey extends IJCOBridgeReflected, TValue extends IJCOB
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param capacity the argument of type {@code int}
-     * @param comparer the argument of type {@code IComparer_1}
+     * @param comparer the argument of type {@code IComparer_1<TKey>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -193,7 +193,7 @@ public class SortedList_2<TKey extends IJCOBridgeReflected, TValue extends IJCOB
      * @throws system.InvalidCastException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.SortedList-2.-ctor" target="_top">.NET documentation</a>
      */
-    public SortedList_2(int capacity, IComparer_1 comparer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
+    public SortedList_2(int capacity, IComparer_1<TKey> comparer) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.InvalidCastException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -237,11 +237,11 @@ public class SortedList_2<TKey extends IJCOBridgeReflected, TValue extends IJCOB
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param comparer the argument of type {@code IComparer_1}
+     * @param comparer the argument of type {@code IComparer_1<TKey>}
      * @throws Throwable if the .NET constructor fails
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.SortedList-2.-ctor" target="_top">.NET documentation</a>
      */
-    public SortedList_2(IComparer_1 comparer) throws Throwable {
+    public SortedList_2(IComparer_1<TKey> comparer) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -256,8 +256,8 @@ public class SortedList_2<TKey extends IJCOBridgeReflected, TValue extends IJCOB
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param dictionary the argument of type {@code IDictionary_2}
-     * @param comparer the argument of type {@code IComparer_1}
+     * @param dictionary the argument of type {@code IDictionary_2<TKey, TValue>}
+     * @param comparer the argument of type {@code IComparer_1<TKey>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -270,7 +270,7 @@ public class SortedList_2<TKey extends IJCOBridgeReflected, TValue extends IJCOB
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.SortedList-2.-ctor" target="_top">.NET documentation</a>
      */
-    public SortedList_2(IDictionary_2 dictionary, IComparer_1 comparer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public SortedList_2(IDictionary_2<TKey, TValue> dictionary, IComparer_1<TKey> comparer) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -285,7 +285,7 @@ public class SortedList_2<TKey extends IJCOBridgeReflected, TValue extends IJCOB
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param dictionary the argument of type {@code IDictionary_2}
+     * @param dictionary the argument of type {@code IDictionary_2<TKey, TValue>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -300,7 +300,7 @@ public class SortedList_2<TKey extends IJCOBridgeReflected, TValue extends IJCOB
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.SortedList-2.-ctor" target="_top">.NET documentation</a>
      */
-    public SortedList_2(IDictionary_2 dictionary) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
+    public SortedList_2(IDictionary_2<TKey, TValue> dictionary) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -925,7 +925,7 @@ public class SortedList_2<TKey extends IJCOBridgeReflected, TValue extends IJCOB
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.SortedList-2.Comparer" target="_top">.NET documentation</a>
      */
-    public IComparer_1 getComparer() throws Throwable {
+    public IComparer_1<TKey> getComparer() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectComparer = null;
@@ -947,7 +947,7 @@ public class SortedList_2<TKey extends IJCOBridgeReflected, TValue extends IJCOB
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.SortedList-2.Keys" target="_top">.NET documentation</a>
      */
-    public IList_1 getKeys() throws Throwable {
+    public IList_1<TKey> getKeys() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectKeys = null;
@@ -969,7 +969,7 @@ public class SortedList_2<TKey extends IJCOBridgeReflected, TValue extends IJCOB
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Collections.Generic.SortedList-2.Values" target="_top">.NET documentation</a>
      */
-    public IList_1 getValues() throws Throwable {
+    public IList_1<TValue> getValues() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValues = null;

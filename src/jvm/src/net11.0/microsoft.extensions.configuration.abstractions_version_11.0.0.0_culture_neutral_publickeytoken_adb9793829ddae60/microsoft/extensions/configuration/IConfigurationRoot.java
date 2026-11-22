@@ -45,6 +45,8 @@ import microsoft.extensions.primitives.IChangeToken;
 import microsoft.extensions.primitives.IChangeTokenImplementation;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import microsoft.extensions.configuration.IConfigurationProvider;
+import microsoft.extensions.configuration.IConfigurationProviderImplementation;
 
 
 /**
@@ -132,7 +134,7 @@ public interface IConfigurationRoot extends IJCOBridgeReflected, microsoft.exten
     
     // Properties section
     
-    public IEnumerable_1 getProviders() throws Throwable;
+    public IEnumerable_1<IConfigurationProvider> getProviders() throws Throwable;
 
 
 

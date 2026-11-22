@@ -226,7 +226,7 @@ public class XamlLanguage extends NetObject  {
      * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlLanguage.AllDirectives" target="_top">.NET documentation</a>
      */
-    public static ReadOnlyCollection_1 getAllDirectives() throws Throwable, system.MissingMethodException, system.reflection.TargetInvocationException, system.PlatformNotSupportedException, system.MissingMemberException, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
+    public static ReadOnlyCollection_1<XamlDirective> getAllDirectives() throws Throwable, system.MissingMethodException, system.reflection.TargetInvocationException, system.PlatformNotSupportedException, system.MissingMemberException, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAllDirectives = null;
@@ -260,7 +260,7 @@ public class XamlLanguage extends NetObject  {
      * @throws system.threading.SynchronizationLockException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xaml.XamlLanguage.AllTypes" target="_top">.NET documentation</a>
      */
-    public static ReadOnlyCollection_1 getAllTypes() throws Throwable, system.MissingMethodException, system.reflection.TargetInvocationException, system.PlatformNotSupportedException, system.MissingMemberException, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
+    public static ReadOnlyCollection_1<XamlType> getAllTypes() throws Throwable, system.MissingMethodException, system.reflection.TargetInvocationException, system.PlatformNotSupportedException, system.MissingMemberException, system.InvalidOperationException, system.ArgumentNullException, system.NullReferenceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAllTypes = null;

@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.reflection.Assembly;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.reflection.CustomAttributeData;
 import system.io.FileStream;
 import system.io.Stream;
 import system.globalization.CultureInfo;
@@ -50,6 +51,7 @@ import system.reflection.emit.AssemblyBuilder;
 import system.reflection.emit.AssemblyBuilderAccess;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.reflection.emit.CustomAttributeBuilder;
 import system.reflection.emit.ModuleBuilder;
 import system.reflection.ManifestResourceInfo;
 import system.reflection.Module;
@@ -59,7 +61,6 @@ import system.reflection.ResourceAttributes;
 import system.reflection.PortableExecutableKinds;
 import system.reflection.ImageFileMachine;
 import system.reflection.ConstructorInfo;
-import system.reflection.emit.CustomAttributeBuilder;
 import system.reflection.MethodInfo;
 import system.reflection.emit.PEFileKinds;
 import system.Guid;
@@ -217,7 +218,7 @@ public class AssemblyBuilder extends system.reflection.Assembly  {
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.AssemblyBuilder.GetCustomAttributesData" target="_top">.NET documentation</a>
      */
-    public IList_1 GetCustomAttributesData() throws Throwable, system.NotImplementedException {
+    public IList_1<CustomAttributeData> GetCustomAttributesData() throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetCustomAttributesData = null;
@@ -561,7 +562,7 @@ public class AssemblyBuilder extends system.reflection.Assembly  {
      *
      * @param name the argument of type {@code AssemblyName}
      * @param access the argument of type {@code AssemblyBuilderAccess}
-     * @param assemblyAttributes the argument of type {@code IEnumerable_1}
+     * @param assemblyAttributes the argument of type {@code IEnumerable_1<CustomAttributeBuilder>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.InvalidOperationException if the .NET member raises it
@@ -582,7 +583,7 @@ public class AssemblyBuilder extends system.reflection.Assembly  {
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.AssemblyBuilder.DefineDynamicAssembly" target="_top">.NET documentation</a>
      */
-    public static AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, IEnumerable_1 assemblyAttributes) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotImplementedException {
+    public static AssemblyBuilder DefineDynamicAssembly(AssemblyName name, AssemblyBuilderAccess access, IEnumerable_1<CustomAttributeBuilder> assemblyAttributes) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotImplementedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDefineDynamicAssembly = null;

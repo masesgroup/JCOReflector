@@ -45,6 +45,7 @@ import system.collections.generic.IEqualityComparer_1;
 import system.collections.generic.IEqualityComparer_1Implementation;
 import system.Func_3;
 import system.Func_4;
+import system.Object;
 import system.Range;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
@@ -54,6 +55,8 @@ import system.collections.generic.IComparer_1;
 import system.collections.generic.IComparer_1Implementation;
 import system.threading.tasks.ValueTask_1;
 import system.threading.CancellationToken;
+import system.Decimal;
+import system.Nullable_1;
 import system.Index;
 
 
@@ -1098,7 +1101,7 @@ public class AsyncEnumerable extends NetObject  {
      * Invokes the .NET member Cast.
      *
      * @param <TResult> the type of the generic argument TResult
-     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param source the argument of type {@code IAsyncEnumerable_1<Object>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -1110,7 +1113,7 @@ public class AsyncEnumerable extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.Cast" target="_top">.NET documentation</a>
      */
-    public static <TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 Cast(IAsyncEnumerable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public static <TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 Cast(IAsyncEnumerable_1<Object> source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCast = null;
@@ -1612,7 +1615,7 @@ public class AsyncEnumerable extends NetObject  {
      * Invokes the .NET member OfType.
      *
      * @param <TResult> the type of the generic argument TResult
-     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param source the argument of type {@code IAsyncEnumerable_1<Object>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -1624,7 +1627,7 @@ public class AsyncEnumerable extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.OfType" target="_top">.NET documentation</a>
      */
-    public static <TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 OfType(IAsyncEnumerable_1 source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public static <TResult extends IJCOBridgeReflected> IAsyncEnumerable_1 OfType(IAsyncEnumerable_1<Object> source) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOfType = null;
@@ -4140,7 +4143,7 @@ public class AsyncEnumerable extends NetObject  {
     /**
      * Invokes the .NET member AverageAsync.
      *
-     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param source the argument of type {@code IAsyncEnumerable_1<Decimal>}
      * @param cancellationToken the argument of type {@code CancellationToken}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -4153,7 +4156,7 @@ public class AsyncEnumerable extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.AverageAsync" target="_top">.NET documentation</a>
      */
-    public static ValueTask_1 AverageAsync(IAsyncEnumerable_1 source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public static ValueTask_1<Decimal> AverageAsync(IAsyncEnumerable_1<Decimal> source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAverageAsync = null;
@@ -4171,7 +4174,7 @@ public class AsyncEnumerable extends NetObject  {
     /**
      * Invokes the .NET member SumAsync.
      *
-     * @param source the argument of type {@code IAsyncEnumerable_1}
+     * @param source the argument of type {@code IAsyncEnumerable_1<Decimal>}
      * @param cancellationToken the argument of type {@code CancellationToken}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -4184,7 +4187,7 @@ public class AsyncEnumerable extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.AsyncEnumerable.SumAsync" target="_top">.NET documentation</a>
      */
-    public static ValueTask_1 SumAsync(IAsyncEnumerable_1 source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public static ValueTask_1<Decimal> SumAsync(IAsyncEnumerable_1<Decimal> source, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSumAsync = null;

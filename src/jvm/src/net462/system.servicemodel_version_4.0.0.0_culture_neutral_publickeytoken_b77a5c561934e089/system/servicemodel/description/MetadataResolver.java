@@ -42,6 +42,7 @@ import system.IAsyncResult;
 import system.IAsyncResultImplementation;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.servicemodel.description.ContractDescription;
 import system.servicemodel.EndpointAddress;
 import system.AsyncCallback;
 import system.servicemodel.description.MetadataExchangeClient;
@@ -167,7 +168,7 @@ public class MetadataResolver extends NetObject  {
     /**
      * Invokes the .NET member BeginResolve.
      *
-     * @param contracts the argument of type {@code IEnumerable_1}
+     * @param contracts the argument of type {@code IEnumerable_1<ContractDescription>}
      * @param address the argument of type {@code EndpointAddress}
      * @param callback the argument of type {@code AsyncCallback}
      * @param asyncState the argument of type {@code NetObject}
@@ -195,7 +196,7 @@ public class MetadataResolver extends NetObject  {
      * @throws system.OperationCanceledException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataResolver.BeginResolve" target="_top">.NET documentation</a>
      */
-    public static IAsyncResult BeginResolve(IEnumerable_1 contracts, EndpointAddress address, AsyncCallback callback, NetObject asyncState) throws Throwable, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+    public static IAsyncResult BeginResolve(IEnumerable_1<ContractDescription> contracts, EndpointAddress address, AsyncCallback callback, NetObject asyncState) throws Throwable, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBeginResolve = null;
@@ -213,7 +214,7 @@ public class MetadataResolver extends NetObject  {
     /**
      * Invokes the .NET member BeginResolve.
      *
-     * @param contracts the argument of type {@code IEnumerable_1}
+     * @param contracts the argument of type {@code IEnumerable_1<ContractDescription>}
      * @param address the argument of type {@code EndpointAddress}
      * @param client the argument of type {@code MetadataExchangeClient}
      * @param callback the argument of type {@code AsyncCallback}
@@ -241,7 +242,7 @@ public class MetadataResolver extends NetObject  {
      * @throws system.OperationCanceledException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataResolver.BeginResolve" target="_top">.NET documentation</a>
      */
-    public static IAsyncResult BeginResolve(IEnumerable_1 contracts, EndpointAddress address, MetadataExchangeClient client, AsyncCallback callback, NetObject asyncState) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+    public static IAsyncResult BeginResolve(IEnumerable_1<ContractDescription> contracts, EndpointAddress address, MetadataExchangeClient client, AsyncCallback callback, NetObject asyncState) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBeginResolve = null;
@@ -259,7 +260,7 @@ public class MetadataResolver extends NetObject  {
     /**
      * Invokes the .NET member BeginResolve.
      *
-     * @param contracts the argument of type {@code IEnumerable_1}
+     * @param contracts the argument of type {@code IEnumerable_1<ContractDescription>}
      * @param address the argument of type {@code Uri}
      * @param mode the argument of type {@code MetadataExchangeClientMode}
      * @param callback the argument of type {@code AsyncCallback}
@@ -286,7 +287,7 @@ public class MetadataResolver extends NetObject  {
      * @throws system.OperationCanceledException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataResolver.BeginResolve" target="_top">.NET documentation</a>
      */
-    public static IAsyncResult BeginResolve(IEnumerable_1 contracts, Uri address, MetadataExchangeClientMode mode, AsyncCallback callback, NetObject asyncState) throws Throwable, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+    public static IAsyncResult BeginResolve(IEnumerable_1<ContractDescription> contracts, Uri address, MetadataExchangeClientMode mode, AsyncCallback callback, NetObject asyncState) throws Throwable, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBeginResolve = null;
@@ -304,7 +305,7 @@ public class MetadataResolver extends NetObject  {
     /**
      * Invokes the .NET member BeginResolve.
      *
-     * @param contracts the argument of type {@code IEnumerable_1}
+     * @param contracts the argument of type {@code IEnumerable_1<ContractDescription>}
      * @param address the argument of type {@code Uri}
      * @param mode the argument of type {@code MetadataExchangeClientMode}
      * @param client the argument of type {@code MetadataExchangeClient}
@@ -333,7 +334,7 @@ public class MetadataResolver extends NetObject  {
      * @throws system.OperationCanceledException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataResolver.BeginResolve" target="_top">.NET documentation</a>
      */
-    public static IAsyncResult BeginResolve(IEnumerable_1 contracts, Uri address, MetadataExchangeClientMode mode, MetadataExchangeClient client, AsyncCallback callback, NetObject asyncState) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+    public static IAsyncResult BeginResolve(IEnumerable_1<ContractDescription> contracts, Uri address, MetadataExchangeClientMode mode, MetadataExchangeClient client, AsyncCallback callback, NetObject asyncState) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectBeginResolve = null;
@@ -474,7 +475,7 @@ public class MetadataResolver extends NetObject  {
     /**
      * Invokes the .NET member Resolve.
      *
-     * @param contracts the argument of type {@code IEnumerable_1}
+     * @param contracts the argument of type {@code IEnumerable_1<ContractDescription>}
      * @param address the argument of type {@code EndpointAddress}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -493,7 +494,7 @@ public class MetadataResolver extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataResolver.Resolve" target="_top">.NET documentation</a>
      */
-    public static ServiceEndpointCollection Resolve(IEnumerable_1 contracts, EndpointAddress address) throws Throwable, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException {
+    public static ServiceEndpointCollection Resolve(IEnumerable_1<ContractDescription> contracts, EndpointAddress address) throws Throwable, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectResolve = null;
@@ -511,7 +512,7 @@ public class MetadataResolver extends NetObject  {
     /**
      * Invokes the .NET member Resolve.
      *
-     * @param contracts the argument of type {@code IEnumerable_1}
+     * @param contracts the argument of type {@code IEnumerable_1<ContractDescription>}
      * @param address the argument of type {@code EndpointAddress}
      * @param client the argument of type {@code MetadataExchangeClient}
      * @return the value returned by the .NET member
@@ -533,7 +534,7 @@ public class MetadataResolver extends NetObject  {
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataResolver.Resolve" target="_top">.NET documentation</a>
      */
-    public static ServiceEndpointCollection Resolve(IEnumerable_1 contracts, EndpointAddress address, MetadataExchangeClient client) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.xml.XmlException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException {
+    public static ServiceEndpointCollection Resolve(IEnumerable_1<ContractDescription> contracts, EndpointAddress address, MetadataExchangeClient client) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.xml.XmlException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectResolve = null;
@@ -551,7 +552,7 @@ public class MetadataResolver extends NetObject  {
     /**
      * Invokes the .NET member Resolve.
      *
-     * @param contracts the argument of type {@code IEnumerable_1}
+     * @param contracts the argument of type {@code IEnumerable_1<ContractDescription>}
      * @param address the argument of type {@code Uri}
      * @param mode the argument of type {@code MetadataExchangeClientMode}
      * @return the value returned by the .NET member
@@ -569,7 +570,7 @@ public class MetadataResolver extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataResolver.Resolve" target="_top">.NET documentation</a>
      */
-    public static ServiceEndpointCollection Resolve(IEnumerable_1 contracts, Uri address, MetadataExchangeClientMode mode) throws Throwable, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException {
+    public static ServiceEndpointCollection Resolve(IEnumerable_1<ContractDescription> contracts, Uri address, MetadataExchangeClientMode mode) throws Throwable, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectResolve = null;
@@ -587,7 +588,7 @@ public class MetadataResolver extends NetObject  {
     /**
      * Invokes the .NET member Resolve.
      *
-     * @param contracts the argument of type {@code IEnumerable_1}
+     * @param contracts the argument of type {@code IEnumerable_1<ContractDescription>}
      * @param address the argument of type {@code Uri}
      * @param mode the argument of type {@code MetadataExchangeClientMode}
      * @param client the argument of type {@code MetadataExchangeClient}
@@ -610,7 +611,7 @@ public class MetadataResolver extends NetObject  {
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.MetadataResolver.Resolve" target="_top">.NET documentation</a>
      */
-    public static ServiceEndpointCollection Resolve(IEnumerable_1 contracts, Uri address, MetadataExchangeClientMode mode, MetadataExchangeClient client) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.xml.XmlException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException {
+    public static ServiceEndpointCollection Resolve(IEnumerable_1<ContractDescription> contracts, Uri address, MetadataExchangeClientMode mode, MetadataExchangeClient client) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.xml.XmlException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectResolve = null;

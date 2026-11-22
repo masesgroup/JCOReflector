@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.EventArgs;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.componentmodel.composition.primitives.ExportDefinition;
 import system.componentmodel.composition.hosting.AtomicComposition;
 
 
@@ -158,14 +159,14 @@ public class ExportsChangeEventArgs extends system.EventArgs  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param addedExports the argument of type {@code IEnumerable_1}
-     * @param removedExports the argument of type {@code IEnumerable_1}
+     * @param addedExports the argument of type {@code IEnumerable_1<ExportDefinition>}
+     * @param removedExports the argument of type {@code IEnumerable_1<ExportDefinition>}
      * @param atomicComposition the argument of type {@code AtomicComposition}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs.-ctor" target="_top">.NET documentation</a>
      */
-    public ExportsChangeEventArgs(IEnumerable_1 addedExports, IEnumerable_1 removedExports, AtomicComposition atomicComposition) throws Throwable, system.ArgumentNullException {
+    public ExportsChangeEventArgs(IEnumerable_1<ExportDefinition> addedExports, IEnumerable_1<ExportDefinition> removedExports, AtomicComposition atomicComposition) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -191,7 +192,7 @@ public class ExportsChangeEventArgs extends system.EventArgs  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs.AddedExports" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getAddedExports() throws Throwable {
+    public IEnumerable_1<ExportDefinition> getAddedExports() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAddedExports = null;
@@ -213,7 +214,7 @@ public class ExportsChangeEventArgs extends system.EventArgs  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs.RemovedExports" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getRemovedExports() throws Throwable {
+    public IEnumerable_1<ExportDefinition> getRemovedExports() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRemovedExports = null;

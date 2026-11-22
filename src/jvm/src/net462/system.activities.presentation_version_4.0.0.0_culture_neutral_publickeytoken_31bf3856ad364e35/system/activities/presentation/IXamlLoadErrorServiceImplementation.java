@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.activities.presentation.XamlLoadErrorInfo;
 
 
 /**
@@ -148,11 +149,11 @@ public class IXamlLoadErrorServiceImplementation extends NetObject implements IX
     /**
      * Invokes the .NET member ShowXamlLoadErrors.
      *
-     * @param errors the argument of type {@code IList_1}
+     * @param errors the argument of type {@code IList_1<XamlLoadErrorInfo>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.IXamlLoadErrorService.ShowXamlLoadErrors" target="_top">.NET documentation</a>
      */
-    public void ShowXamlLoadErrors(IList_1 errors) throws Throwable {
+    public void ShowXamlLoadErrors(IList_1<XamlLoadErrorInfo> errors) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

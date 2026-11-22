@@ -43,6 +43,7 @@ import system.security.PermissionSet;
 import system.security.policy.Evidence;
 import system.Uri;
 import system.threading.tasks.Task_1;
+import system.Object;
 import system.net.ICredentials;
 import system.net.ICredentialsImplementation;
 
@@ -333,7 +334,7 @@ public class XmlSecureResolver extends system.xml.XmlResolver  {
      * @throws system.NotImplementedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlSecureResolver.GetEntityAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 GetEntityAsync(Uri absoluteUri, java.lang.String role, NetType ofObjectToReturn) throws Throwable, system.security.SecurityException, system.NotImplementedException {
+    public Task_1<Object> GetEntityAsync(Uri absoluteUri, java.lang.String role, NetType ofObjectToReturn) throws Throwable, system.security.SecurityException, system.NotImplementedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetEntityAsync = null;

@@ -174,7 +174,7 @@ public class DependencyProperty extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.DependencyProperty.FromType" target="_top">.NET documentation</a>
      */
-    public static IList_1 FromType(NetType ownerType) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
+    public static IList_1<DependencyProperty> FromType(NetType ownerType) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFromType = null;

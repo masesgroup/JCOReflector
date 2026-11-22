@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.windows.RoutedEventArgs;
 import system.Nullable_1;
+import system.DateTime;
 
 
 /**
@@ -169,7 +170,7 @@ public class CalendarDateChangedEventArgs extends system.windows.RoutedEventArgs
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.CalendarDateChangedEventArgs.AddedDate" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getAddedDate() throws Throwable {
+    public Nullable_1<DateTime> getAddedDate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAddedDate = null;
@@ -191,7 +192,7 @@ public class CalendarDateChangedEventArgs extends system.windows.RoutedEventArgs
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.CalendarDateChangedEventArgs.AddedDate" target="_top">.NET documentation</a>
      */
-    public void setAddedDate(Nullable_1 AddedDate) throws Throwable {
+    public void setAddedDate(Nullable_1<DateTime> AddedDate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -208,7 +209,7 @@ public class CalendarDateChangedEventArgs extends system.windows.RoutedEventArgs
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.CalendarDateChangedEventArgs.RemovedDate" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getRemovedDate() throws Throwable {
+    public Nullable_1<DateTime> getRemovedDate() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRemovedDate = null;
@@ -230,7 +231,7 @@ public class CalendarDateChangedEventArgs extends system.windows.RoutedEventArgs
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Controls.CalendarDateChangedEventArgs.RemovedDate" target="_top">.NET documentation</a>
      */
-    public void setRemovedDate(Nullable_1 RemovedDate) throws Throwable {
+    public void setRemovedDate(Nullable_1<DateTime> RemovedDate) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

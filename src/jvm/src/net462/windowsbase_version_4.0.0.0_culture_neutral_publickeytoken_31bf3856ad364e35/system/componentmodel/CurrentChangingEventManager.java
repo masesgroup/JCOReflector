@@ -42,6 +42,7 @@ import system.windows.WeakEventManager;
 import system.componentmodel.ICollectionView;
 import system.componentmodel.ICollectionViewImplementation;
 import system.EventHandler_1;
+import system.componentmodel.CurrentChangingEventArgs;
 import system.windows.IWeakEventListener;
 import system.windows.IWeakEventListenerImplementation;
 
@@ -166,7 +167,7 @@ public class CurrentChangingEventManager extends system.windows.WeakEventManager
      * Invokes the .NET member AddHandler.
      *
      * @param source the argument of type {@code ICollectionView}
-     * @param handler the argument of type {@code EventHandler_1}
+     * @param handler the argument of type {@code EventHandler_1<CurrentChangingEventArgs>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -178,7 +179,7 @@ public class CurrentChangingEventManager extends system.windows.WeakEventManager
      * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CurrentChangingEventManager.AddHandler" target="_top">.NET documentation</a>
      */
-    public static void AddHandler(ICollectionView source, EventHandler_1 handler) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.OverflowException {
+    public static void AddHandler(ICollectionView source, EventHandler_1<CurrentChangingEventArgs> handler) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -218,7 +219,7 @@ public class CurrentChangingEventManager extends system.windows.WeakEventManager
      * Invokes the .NET member RemoveHandler.
      *
      * @param source the argument of type {@code ICollectionView}
-     * @param handler the argument of type {@code EventHandler_1}
+     * @param handler the argument of type {@code EventHandler_1<CurrentChangingEventArgs>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -230,7 +231,7 @@ public class CurrentChangingEventManager extends system.windows.WeakEventManager
      * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.CurrentChangingEventManager.RemoveHandler" target="_top">.NET documentation</a>
      */
-    public static void RemoveHandler(ICollectionView source, EventHandler_1 handler) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.OverflowException {
+    public static void RemoveHandler(ICollectionView source, EventHandler_1<CurrentChangingEventArgs> handler) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

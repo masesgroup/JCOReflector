@@ -46,6 +46,7 @@ import system.xml.IXmlNamespaceResolver;
 import system.xml.IXmlNamespaceResolverImplementation;
 import system.threading.tasks.Task;
 import system.threading.tasks.Task_1;
+import system.Object;
 import system.xml.XmlNodeType;
 import system.xml.XmlReader;
 import system.io.Stream;
@@ -3165,7 +3166,7 @@ public class XmlReader extends NetObject implements AutoCloseable {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReader.ReadContentAsAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 ReadContentAsAsync(NetType returnType, IXmlNamespaceResolver namespaceResolver) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public Task_1<Object> ReadContentAsAsync(NetType returnType, IXmlNamespaceResolver namespaceResolver) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadContentAsAsync = null;
@@ -3193,7 +3194,7 @@ public class XmlReader extends NetObject implements AutoCloseable {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReader.ReadContentAsObjectAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 ReadContentAsObjectAsync() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public Task_1<Object> ReadContentAsObjectAsync() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadContentAsObjectAsync = null;
@@ -3223,7 +3224,7 @@ public class XmlReader extends NetObject implements AutoCloseable {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReader.ReadElementContentAsAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 ReadElementContentAsAsync(NetType returnType, IXmlNamespaceResolver namespaceResolver) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public Task_1<Object> ReadElementContentAsAsync(NetType returnType, IXmlNamespaceResolver namespaceResolver) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadElementContentAsAsync = null;
@@ -3251,7 +3252,7 @@ public class XmlReader extends NetObject implements AutoCloseable {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReader.ReadElementContentAsObjectAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 ReadElementContentAsObjectAsync() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public Task_1<Object> ReadElementContentAsObjectAsync() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadElementContentAsObjectAsync = null;
@@ -3426,7 +3427,7 @@ public class XmlReader extends NetObject implements AutoCloseable {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.XmlReader.MoveToContentAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 MoveToContentAsync() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public Task_1<XmlNodeType> MoveToContentAsync() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectMoveToContentAsync = null;

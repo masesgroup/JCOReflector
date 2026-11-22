@@ -40,8 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.workflow.runtime.tracking.TrackingDataItemValue;
 import system.DateTime;
 import system.Nullable_1;
+import system.workflow.runtime.WorkflowStatus;
 
 
 /**
@@ -199,7 +201,7 @@ public class SqlTrackingQueryOptions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingQueryOptions.TrackingDataItems" target="_top">.NET documentation</a>
      */
-    public IList_1 getTrackingDataItems() throws Throwable {
+    public IList_1<TrackingDataItemValue> getTrackingDataItems() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTrackingDataItems = null;
@@ -299,7 +301,7 @@ public class SqlTrackingQueryOptions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingQueryOptions.WorkflowStatus" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getWorkflowStatus() throws Throwable {
+    public Nullable_1<WorkflowStatus> getWorkflowStatus() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectWorkflowStatus = null;
@@ -321,7 +323,7 @@ public class SqlTrackingQueryOptions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.Tracking.SqlTrackingQueryOptions.WorkflowStatus" target="_top">.NET documentation</a>
      */
-    public void setWorkflowStatus(Nullable_1 WorkflowStatus) throws Throwable {
+    public void setWorkflowStatus(Nullable_1<WorkflowStatus> WorkflowStatus) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

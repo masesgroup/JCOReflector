@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.activities.CodeActivity;
 import system.activities.InArgument_1;
+import system.collections.generic.ICollection_1;
+import system.collections.generic.ICollection_1Implementation;
 
 
 /**
@@ -183,7 +185,7 @@ public class ClearCollection_1<T extends IJCOBridgeReflected> extends system.act
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.ClearCollection-1.Collection" target="_top">.NET documentation</a>
      */
-    public InArgument_1 getCollection() throws Throwable {
+    public InArgument_1<ICollection_1<T>> getCollection() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCollection = null;
@@ -205,7 +207,7 @@ public class ClearCollection_1<T extends IJCOBridgeReflected> extends system.act
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Statements.ClearCollection-1.Collection" target="_top">.NET documentation</a>
      */
-    public void setCollection(InArgument_1 Collection) throws Throwable {
+    public void setCollection(InArgument_1<ICollection_1<T>> Collection) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

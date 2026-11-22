@@ -247,7 +247,7 @@ public class SslStreamCertificateContext extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.SslStreamCertificateContext.IntermediateCertificates" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getIntermediateCertificates() throws Throwable {
+    public ReadOnlyCollection_1<X509Certificate2> getIntermediateCertificates() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIntermediateCertificates = null;

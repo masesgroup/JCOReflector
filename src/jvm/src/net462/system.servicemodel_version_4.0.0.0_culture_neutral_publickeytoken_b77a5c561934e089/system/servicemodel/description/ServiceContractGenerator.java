@@ -46,6 +46,7 @@ import system.servicemodel.description.ServiceEndpoint;
 import system.servicemodel.configuration.ChannelEndpointElement;
 import system.collections.generic.Dictionary_2;
 import system.collections.objectmodel.Collection_1;
+import system.servicemodel.description.MetadataConversionError;
 import system.servicemodel.description.ServiceContractGenerationOptions;
 
 
@@ -443,7 +444,7 @@ public class ServiceContractGenerator extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceContractGenerator.ReferencedTypes" target="_top">.NET documentation</a>
      */
-    public Dictionary_2 getReferencedTypes() throws Throwable {
+    public Dictionary_2<ContractDescription, NetType> getReferencedTypes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReferencedTypes = null;
@@ -489,7 +490,7 @@ public class ServiceContractGenerator extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Description.ServiceContractGenerator.Errors" target="_top">.NET documentation</a>
      */
-    public Collection_1 getErrors() throws Throwable {
+    public Collection_1<MetadataConversionError> getErrors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectErrors = null;

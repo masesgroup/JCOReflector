@@ -42,6 +42,8 @@ import system.identitymodel.metadata.MetadataBase;
 import system.identitymodel.metadata.EntityId;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.identitymodel.metadata.ContactPerson;
+import system.identitymodel.metadata.RoleDescriptor;
 import system.identitymodel.metadata.Organization;
 
 
@@ -201,7 +203,7 @@ public class EntityDescriptor extends system.identitymodel.metadata.MetadataBase
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.EntityDescriptor.Contacts" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getContacts() throws Throwable {
+    public ICollection_1<ContactPerson> getContacts() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContacts = null;
@@ -223,7 +225,7 @@ public class EntityDescriptor extends system.identitymodel.metadata.MetadataBase
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.EntityDescriptor.RoleDescriptors" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getRoleDescriptors() throws Throwable {
+    public ICollection_1<RoleDescriptor> getRoleDescriptors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectRoleDescriptors = null;

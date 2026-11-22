@@ -615,7 +615,7 @@ public class ModelStateDictionary extends NetObjectEnumerable  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelStateDictionary.Values" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getValues() throws Throwable, system.ArgumentNullException {
+    public ICollection_1<ModelState> getValues() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValues = null;

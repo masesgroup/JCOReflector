@@ -40,6 +40,7 @@ import org.mases.jcobridge.netreflection.*;
 import system.activities.presentation.ICompositeView;
 import system.activities.presentation.ICompositeViewImplementation;
 import system.collections.generic.List_1;
+import system.Object;
 import system.activities.presentation.model.ModelItem;
 import system.windows.Point;
 import system.activities.presentation.WorkflowViewElement;
@@ -123,13 +124,13 @@ public interface IMultipleDragEnabledCompositeView extends IJCOBridgeReflected, 
     // Methods section
     
 
-    public List_1 SortSelectedItems(List_1 selectedItems) throws Throwable;
+    public List_1<ModelItem> SortSelectedItems(List_1<ModelItem> selectedItems) throws Throwable;
 
 
 
 
 
-    public void OnItemsMoved(List_1 movedItems) throws Throwable;
+    public void OnItemsMoved(List_1<ModelItem> movedItems) throws Throwable;
 
 
 

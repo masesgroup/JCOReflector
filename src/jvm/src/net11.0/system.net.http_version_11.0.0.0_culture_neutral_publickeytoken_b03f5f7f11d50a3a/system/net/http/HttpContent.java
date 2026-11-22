@@ -610,7 +610,7 @@ public class HttpContent extends NetObject implements AutoCloseable {
      * @throws system.diagnostics.UnreachableException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpContent.ReadAsStreamAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 ReadAsStreamAsync() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.UnreachableException {
+    public Task_1<Stream> ReadAsStreamAsync() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.diagnostics.UnreachableException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadAsStreamAsync = null;
@@ -640,7 +640,7 @@ public class HttpContent extends NetObject implements AutoCloseable {
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Http.HttpContent.ReadAsStreamAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 ReadAsStreamAsync(CancellationToken cancellationToken) throws Throwable, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.ArgumentException {
+    public Task_1<Stream> ReadAsStreamAsync(CancellationToken cancellationToken) throws Throwable, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.diagnostics.UnreachableException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadAsStreamAsync = null;

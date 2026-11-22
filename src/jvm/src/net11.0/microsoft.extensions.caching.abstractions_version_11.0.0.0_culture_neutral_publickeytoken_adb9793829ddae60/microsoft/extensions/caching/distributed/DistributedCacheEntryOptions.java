@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.Nullable_1;
+import system.DateTimeOffset;
+import system.TimeSpan;
 
 
 /**
@@ -180,7 +182,7 @@ public class DistributedCacheEntryOptions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions.AbsoluteExpiration" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getAbsoluteExpiration() throws Throwable {
+    public Nullable_1<DateTimeOffset> getAbsoluteExpiration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAbsoluteExpiration = null;
@@ -208,7 +210,7 @@ public class DistributedCacheEntryOptions extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions.AbsoluteExpiration" target="_top">.NET documentation</a>
      */
-    public void setAbsoluteExpiration(Nullable_1 AbsoluteExpiration) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
+    public void setAbsoluteExpiration(Nullable_1<DateTimeOffset> AbsoluteExpiration) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -225,7 +227,7 @@ public class DistributedCacheEntryOptions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions.AbsoluteExpirationRelativeToNow" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getAbsoluteExpirationRelativeToNow() throws Throwable {
+    public Nullable_1<TimeSpan> getAbsoluteExpirationRelativeToNow() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAbsoluteExpirationRelativeToNow = null;
@@ -256,7 +258,7 @@ public class DistributedCacheEntryOptions extends NetObject  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions.AbsoluteExpirationRelativeToNow" target="_top">.NET documentation</a>
      */
-    public void setAbsoluteExpirationRelativeToNow(Nullable_1 AbsoluteExpirationRelativeToNow) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public void setAbsoluteExpirationRelativeToNow(Nullable_1<TimeSpan> AbsoluteExpirationRelativeToNow) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -273,7 +275,7 @@ public class DistributedCacheEntryOptions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions.SlidingExpiration" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getSlidingExpiration() throws Throwable {
+    public Nullable_1<TimeSpan> getSlidingExpiration() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectSlidingExpiration = null;
@@ -304,7 +306,7 @@ public class DistributedCacheEntryOptions extends NetObject  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Caching.Distributed.DistributedCacheEntryOptions.SlidingExpiration" target="_top">.NET documentation</a>
      */
-    public void setSlidingExpiration(Nullable_1 SlidingExpiration) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public void setSlidingExpiration(Nullable_1<TimeSpan> SlidingExpiration) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

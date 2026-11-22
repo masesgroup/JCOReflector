@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.workflow.componentmodel.compiler.AuthorizedType;
 import system.IDisposable;
 import system.IDisposableImplementation;
 import system.IServiceProvider;
@@ -175,7 +176,7 @@ public class WorkflowCompilationContext extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.WorkflowCompilationContext.GetAuthorizedTypes" target="_top">.NET documentation</a>
      */
-    public IList_1 GetAuthorizedTypes() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public IList_1<AuthorizedType> GetAuthorizedTypes() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetAuthorizedTypes = null;

@@ -43,9 +43,11 @@ import system.reflection.metadata.ecma335.HeapIndex;
 import system.reflection.metadata.ecma335.TableIndex;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.reflection.metadata.ecma335.EditAndContinueLogEntry;
+import system.reflection.metadata.EntityHandle;
+import system.reflection.metadata.TypeDefinitionHandle;
 import system.reflection.metadata.BlobHandle;
 import system.reflection.metadata.SignatureTypeKind;
-import system.reflection.metadata.EntityHandle;
 import system.reflection.metadata.StringHandle;
 import system.reflection.metadata.UserStringHandle;
 
@@ -477,7 +479,7 @@ public class MetadataReaderExtensions extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataReaderExtensions.GetEditAndContinueLogEntries" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 GetEditAndContinueLogEntries(MetadataReader reader) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public static IEnumerable_1<EditAndContinueLogEntry> GetEditAndContinueLogEntries(MetadataReader reader) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetEditAndContinueLogEntries = null;
@@ -510,7 +512,7 @@ public class MetadataReaderExtensions extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataReaderExtensions.GetEditAndContinueMapEntries" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 GetEditAndContinueMapEntries(MetadataReader reader) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public static IEnumerable_1<EntityHandle> GetEditAndContinueMapEntries(MetadataReader reader) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetEditAndContinueMapEntries = null;
@@ -543,7 +545,7 @@ public class MetadataReaderExtensions extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataReaderExtensions.GetTypesWithEvents" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 GetTypesWithEvents(MetadataReader reader) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public static IEnumerable_1<TypeDefinitionHandle> GetTypesWithEvents(MetadataReader reader) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTypesWithEvents = null;
@@ -576,7 +578,7 @@ public class MetadataReaderExtensions extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.MetadataReaderExtensions.GetTypesWithProperties" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 GetTypesWithProperties(MetadataReader reader) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
+    public static IEnumerable_1<TypeDefinitionHandle> GetTypesWithProperties(MetadataReader reader) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetTypesWithProperties = null;

@@ -209,7 +209,7 @@ public class PriorityBindingExpression extends system.windows.data.BindingExpres
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Data.PriorityBindingExpression.BindingExpressions" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getBindingExpressions() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
+    public ReadOnlyCollection_1<BindingExpressionBase> getBindingExpressions() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectBindingExpressions = null;

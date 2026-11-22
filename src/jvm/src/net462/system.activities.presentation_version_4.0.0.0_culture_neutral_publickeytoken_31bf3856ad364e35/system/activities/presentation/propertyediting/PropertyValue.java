@@ -44,6 +44,8 @@ import system.activities.presentation.propertyediting.PropertyValueCollection;
 import system.activities.presentation.propertyediting.PropertyValueSource;
 import system.componentmodel.PropertyChangedEventHandler;
 import system.EventHandler;
+import system.EventHandler_1;
+import system.activities.presentation.propertyediting.PropertyValueExceptionEventArgs;
 
 
 /**
@@ -604,6 +606,40 @@ public class PropertyValue extends NetObject  {
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.UnregisterEventListener("SubPropertyChanged", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addPropertyValueException.
+     *
+     * @param handler the argument of type {@code EventHandler_1<PropertyValueExceptionEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addPropertyValueException(EventHandler_1<PropertyValueExceptionEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("PropertyValueException", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removePropertyValueException.
+     *
+     * @param handler the argument of type {@code EventHandler_1<PropertyValueExceptionEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removePropertyValueException(EventHandler_1<PropertyValueExceptionEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("PropertyValueException", handler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.servicemodel.dispatcher.IClientMessageInspector;
+import system.servicemodel.dispatcher.IClientMessageInspectorImplementation;
 import system.collections.objectmodel.KeyedCollection_2;
 
 
@@ -170,7 +172,7 @@ public class ClientRuntimeCompatBase extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Dispatcher.ClientRuntimeCompatBase.MessageInspectors" target="_top">.NET documentation</a>
      */
-    public IList_1 getMessageInspectors() throws Throwable {
+    public IList_1<IClientMessageInspector> getMessageInspectors() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectMessageInspectors = null;

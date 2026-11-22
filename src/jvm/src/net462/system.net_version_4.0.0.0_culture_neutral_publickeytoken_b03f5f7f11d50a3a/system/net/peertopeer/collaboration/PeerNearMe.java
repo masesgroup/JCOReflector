@@ -45,6 +45,8 @@ import system.net.mail.MailAddress;
 import system.net.peertopeer.collaboration.PeerInvitationResponse;
 import system.net.peertopeer.collaboration.PeerApplication;
 import system.net.peertopeer.collaboration.PeerEndPoint;
+import system.EventHandler_1;
+import system.net.peertopeer.collaboration.RefreshDataCompletedEventArgs;
 
 
 /**
@@ -818,6 +820,40 @@ public class PeerNearMe extends system.net.peertopeer.collaboration.Peer  {
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addRefreshDataCompleted.
+     *
+     * @param handler the argument of type {@code EventHandler_1<RefreshDataCompletedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addRefreshDataCompleted(EventHandler_1<RefreshDataCompletedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("RefreshDataCompleted", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeRefreshDataCompleted.
+     *
+     * @param handler the argument of type {@code EventHandler_1<RefreshDataCompletedEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeRefreshDataCompleted(EventHandler_1<RefreshDataCompletedEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("RefreshDataCompleted", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

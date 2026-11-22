@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.Nullable_1;
+import system.DateTime;
 
 
 /**
@@ -200,7 +201,7 @@ public class PackageProperties extends NetObject implements AutoCloseable {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageProperties.Created" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getCreated() throws Throwable {
+    public Nullable_1<DateTime> getCreated() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCreated = null;
@@ -222,7 +223,7 @@ public class PackageProperties extends NetObject implements AutoCloseable {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageProperties.Created" target="_top">.NET documentation</a>
      */
-    public void setCreated(Nullable_1 Created) throws Throwable {
+    public void setCreated(Nullable_1<DateTime> Created) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -239,7 +240,7 @@ public class PackageProperties extends NetObject implements AutoCloseable {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageProperties.LastPrinted" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getLastPrinted() throws Throwable {
+    public Nullable_1<DateTime> getLastPrinted() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectLastPrinted = null;
@@ -261,7 +262,7 @@ public class PackageProperties extends NetObject implements AutoCloseable {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageProperties.LastPrinted" target="_top">.NET documentation</a>
      */
-    public void setLastPrinted(Nullable_1 LastPrinted) throws Throwable {
+    public void setLastPrinted(Nullable_1<DateTime> LastPrinted) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -278,7 +279,7 @@ public class PackageProperties extends NetObject implements AutoCloseable {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageProperties.Modified" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getModified() throws Throwable {
+    public Nullable_1<DateTime> getModified() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectModified = null;
@@ -300,7 +301,7 @@ public class PackageProperties extends NetObject implements AutoCloseable {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IO.Packaging.PackageProperties.Modified" target="_top">.NET documentation</a>
      */
-    public void setModified(Nullable_1 Modified) throws Throwable {
+    public void setModified(Nullable_1<DateTime> Modified) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

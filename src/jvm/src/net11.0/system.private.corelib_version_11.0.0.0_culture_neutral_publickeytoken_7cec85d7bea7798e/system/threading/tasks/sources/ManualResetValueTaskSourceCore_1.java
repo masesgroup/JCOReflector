@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.ValueType;
 import system.threading.tasks.sources.ValueTaskSourceStatus;
 import system.Action_1;
+import system.Object;
 import system.threading.tasks.sources.ValueTaskSourceOnCompletedFlags;
 
 
@@ -219,7 +220,7 @@ public class ManualResetValueTaskSourceCore_1<TResult extends IJCOBridgeReflecte
     /**
      * Invokes the .NET member OnCompleted.
      *
-     * @param continuation the argument of type {@code Action_1}
+     * @param continuation the argument of type {@code Action_1<Object>}
      * @param state the argument of type {@code NetObject}
      * @param token the argument of type {@code short}
      * @param flags the argument of type {@code ValueTaskSourceOnCompletedFlags}
@@ -241,7 +242,7 @@ public class ManualResetValueTaskSourceCore_1<TResult extends IJCOBridgeReflecte
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Threading.Tasks.Sources.ManualResetValueTaskSourceCore-1.OnCompleted" target="_top">.NET documentation</a>
      */
-    public void OnCompleted(Action_1 continuation, NetObject state, short token, ValueTaskSourceOnCompletedFlags flags) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.NullReferenceException, system.diagnostics.tracing.EventSourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.threading.ThreadStateException, system.OutOfMemoryException {
+    public void OnCompleted(Action_1<Object> continuation, NetObject state, short token, ValueTaskSourceOnCompletedFlags flags) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArgumentNullException, system.NullReferenceException, system.diagnostics.tracing.EventSourceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.threading.ThreadStateException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

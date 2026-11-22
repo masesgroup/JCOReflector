@@ -173,7 +173,7 @@ public class IMemoryOwner_1Implementation<T extends IJCOBridgeReflected> extends
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Buffers.IMemoryOwner-1.Memory" target="_top">.NET documentation</a>
      */
-    public Memory_1 getMemory() throws Throwable {
+    public Memory_1<T> getMemory() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectMemory = null;

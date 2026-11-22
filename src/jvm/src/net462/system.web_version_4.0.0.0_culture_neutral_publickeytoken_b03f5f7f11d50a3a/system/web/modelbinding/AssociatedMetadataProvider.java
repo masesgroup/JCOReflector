@@ -169,7 +169,7 @@ public class AssociatedMetadataProvider extends system.web.modelbinding.ModelMet
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.AssociatedMetadataProvider.GetMetadataForProperties" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetMetadataForProperties(NetObject container, NetType containerType) throws Throwable, system.ArgumentNullException {
+    public IEnumerable_1<ModelMetadata> GetMetadataForProperties(NetObject container, NetType containerType) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetMetadataForProperties = null;

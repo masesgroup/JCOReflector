@@ -42,6 +42,7 @@ import system.ValueType;
 import system.windows.media.PixelFormat;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import system.windows.media.PixelFormatChannelMask;
 
 
 /**
@@ -274,7 +275,7 @@ public class PixelFormat extends system.ValueType  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Media.PixelFormat.Masks" target="_top">.NET documentation</a>
      */
-    public IList_1 getMasks() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public IList_1<PixelFormatChannelMask> getMasks() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectMasks = null;

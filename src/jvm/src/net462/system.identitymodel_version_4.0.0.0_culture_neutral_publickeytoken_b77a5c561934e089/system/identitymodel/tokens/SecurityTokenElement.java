@@ -42,6 +42,7 @@ import system.identitymodel.tokens.SecurityToken;
 import system.xml.XmlElement;
 import system.identitymodel.tokens.SecurityTokenHandlerCollection;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.security.claims.ClaimsIdentity;
 
 
 /**
@@ -240,7 +241,7 @@ public class SecurityTokenElement extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SecurityTokenElement.GetIdentities" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 GetIdentities() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
+    public ReadOnlyCollection_1<ClaimsIdentity> GetIdentities() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetIdentities = null;

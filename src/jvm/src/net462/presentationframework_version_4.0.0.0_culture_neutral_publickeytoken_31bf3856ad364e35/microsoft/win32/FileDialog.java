@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import microsoft.win32.CommonDialog;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import microsoft.win32.FileDialogCustomPlace;
 import system.componentmodel.CancelEventHandler;
 
 
@@ -484,7 +485,7 @@ public class FileDialog extends microsoft.win32.CommonDialog  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.FileDialog.CustomPlaces" target="_top">.NET documentation</a>
      */
-    public IList_1 getCustomPlaces() throws Throwable {
+    public IList_1<FileDialogCustomPlace> getCustomPlaces() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCustomPlaces = null;
@@ -506,7 +507,7 @@ public class FileDialog extends microsoft.win32.CommonDialog  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Win32.FileDialog.CustomPlaces" target="_top">.NET documentation</a>
      */
-    public void setCustomPlaces(IList_1 CustomPlaces) throws Throwable {
+    public void setCustomPlaces(IList_1<FileDialogCustomPlace> CustomPlaces) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

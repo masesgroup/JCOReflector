@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.security.authentication.extendedprotection.TokenBinding;
 import system.security.authentication.extendedprotection.ChannelBinding;
 import system.security.authentication.extendedprotection.ChannelBindingKind;
 
@@ -166,7 +167,7 @@ public class TransportContext extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.TransportContext.GetTlsTokenBindings" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetTlsTokenBindings() throws Throwable, system.NotSupportedException {
+    public IEnumerable_1<TokenBinding> GetTlsTokenBindings() throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetTlsTokenBindings = null;

@@ -180,7 +180,7 @@ public class TypeResolvingOptions extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param defaultTypes the argument of type {@code IEnumerable_1}
+     * @param defaultTypes the argument of type {@code IEnumerable_1<NetType>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -192,7 +192,7 @@ public class TypeResolvingOptions extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.View.TypeResolvingOptions.-ctor" target="_top">.NET documentation</a>
      */
-    public TypeResolvingOptions(IEnumerable_1 defaultTypes) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
+    public TypeResolvingOptions(IEnumerable_1<NetType> defaultTypes) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

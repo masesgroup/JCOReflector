@@ -51,6 +51,7 @@ import system.security.cryptography.x509certificates.CertificateRevocationListBu
 import system.security.cryptography.x509certificates.X509Extension;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.security.cryptography.x509certificates.X509RevocationReason;
 
 
 /**
@@ -248,7 +249,7 @@ public class CertificateRevocationListBuilder extends NetObject  {
      * @param nextUpdate the argument of type {@code DateTimeOffset}
      * @param hashAlgorithm the argument of type {@code HashAlgorithmName}
      * @param authorityKeyIdentifier the argument of type {@code X509AuthorityKeyIdentifierExtension}
-     * @param thisUpdate the argument of type {@code Nullable_1}
+     * @param thisUpdate the argument of type {@code Nullable_1<DateTimeOffset>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -268,7 +269,7 @@ public class CertificateRevocationListBuilder extends NetObject  {
      * @throws system.DivideByZeroException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.CertificateRevocationListBuilder.Build" target="_top">.NET documentation</a>
      */
-    public byte[] Build(X500DistinguishedName issuerName, X509SignatureGenerator generator, BigInteger crlNumber, DateTimeOffset nextUpdate, HashAlgorithmName hashAlgorithm, X509AuthorityKeyIdentifierExtension authorityKeyIdentifier, Nullable_1 thisUpdate) throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.FormatException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.ArrayTypeMismatchException, system.OverflowException, system.DivideByZeroException {
+    public byte[] Build(X500DistinguishedName issuerName, X509SignatureGenerator generator, BigInteger crlNumber, DateTimeOffset nextUpdate, HashAlgorithmName hashAlgorithm, X509AuthorityKeyIdentifierExtension authorityKeyIdentifier, Nullable_1<DateTimeOffset> thisUpdate) throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.FormatException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.ArrayTypeMismatchException, system.OverflowException, system.DivideByZeroException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectBuild = null;
@@ -299,7 +300,7 @@ public class CertificateRevocationListBuilder extends NetObject  {
      * @param nextUpdate the argument of type {@code DateTimeOffset}
      * @param hashAlgorithm the argument of type {@code HashAlgorithmName}
      * @param rsaSignaturePadding the argument of type {@code RSASignaturePadding}
-     * @param thisUpdate the argument of type {@code Nullable_1}
+     * @param thisUpdate the argument of type {@code Nullable_1<DateTimeOffset>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -321,7 +322,7 @@ public class CertificateRevocationListBuilder extends NetObject  {
      * @throws system.DivideByZeroException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.CertificateRevocationListBuilder.Build" target="_top">.NET documentation</a>
      */
-    public byte[] Build(X509Certificate2 issuerCertificate, BigInteger crlNumber, DateTimeOffset nextUpdate, HashAlgorithmName hashAlgorithm, RSASignaturePadding rsaSignaturePadding, Nullable_1 thisUpdate) throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.security.cryptography.CryptographicException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.AccessViolationException, system.formats.asn1.AsnContentException, system.OverflowException, system.DivideByZeroException {
+    public byte[] Build(X509Certificate2 issuerCertificate, BigInteger crlNumber, DateTimeOffset nextUpdate, HashAlgorithmName hashAlgorithm, RSASignaturePadding rsaSignaturePadding, Nullable_1<DateTimeOffset> thisUpdate) throws Throwable, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.security.cryptography.CryptographicException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.AccessViolationException, system.formats.asn1.AsnContentException, system.OverflowException, system.DivideByZeroException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectBuild = null;
@@ -459,8 +460,8 @@ public class CertificateRevocationListBuilder extends NetObject  {
      * Invokes the .NET member AddEntry.
      *
      * @param serialNumber the argument of type {@code byte[]}
-     * @param revocationTime the argument of type {@code Nullable_1}
-     * @param reason the argument of type {@code Nullable_1}
+     * @param revocationTime the argument of type {@code Nullable_1<DateTimeOffset>}
+     * @param reason the argument of type {@code Nullable_1<X509RevocationReason>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -473,7 +474,7 @@ public class CertificateRevocationListBuilder extends NetObject  {
      * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.CertificateRevocationListBuilder.AddEntry" target="_top">.NET documentation</a>
      */
-    public void AddEntry(byte[] serialNumber, Nullable_1 revocationTime, Nullable_1 reason) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException {
+    public void AddEntry(byte[] serialNumber, Nullable_1<DateTimeOffset> revocationTime, Nullable_1<X509RevocationReason> reason) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -487,8 +488,8 @@ public class CertificateRevocationListBuilder extends NetObject  {
      * Invokes the .NET member AddEntry.
      *
      * @param dupParam0 the argument of type {@code JCORefOut}
-     * @param dupParam1 the argument of type {@code Nullable_1}
-     * @param dupParam2 the argument of type {@code Nullable_1}
+     * @param dupParam1 the argument of type {@code Nullable_1<DateTimeOffset>}
+     * @param dupParam2 the argument of type {@code Nullable_1<X509RevocationReason>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -501,7 +502,7 @@ public class CertificateRevocationListBuilder extends NetObject  {
      * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.CertificateRevocationListBuilder.AddEntry" target="_top">.NET documentation</a>
      */
-    public void AddEntry(JCORefOut dupParam0, Nullable_1 dupParam1, Nullable_1 dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException {
+    public void AddEntry(JCORefOut dupParam0, Nullable_1<DateTimeOffset> dupParam1, Nullable_1<X509RevocationReason> dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -515,8 +516,8 @@ public class CertificateRevocationListBuilder extends NetObject  {
      * Invokes the .NET member AddEntry.
      *
      * @param certificate the argument of type {@code X509Certificate2}
-     * @param revocationTime the argument of type {@code Nullable_1}
-     * @param reason the argument of type {@code Nullable_1}
+     * @param revocationTime the argument of type {@code Nullable_1<DateTimeOffset>}
+     * @param reason the argument of type {@code Nullable_1<X509RevocationReason>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -530,7 +531,7 @@ public class CertificateRevocationListBuilder extends NetObject  {
      * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Cryptography.X509Certificates.CertificateRevocationListBuilder.AddEntry" target="_top">.NET documentation</a>
      */
-    public void AddEntry(X509Certificate2 certificate, Nullable_1 revocationTime, Nullable_1 reason) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.OverflowException {
+    public void AddEntry(X509Certificate2 certificate, Nullable_1<DateTimeOffset> revocationTime, Nullable_1<X509RevocationReason> reason) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

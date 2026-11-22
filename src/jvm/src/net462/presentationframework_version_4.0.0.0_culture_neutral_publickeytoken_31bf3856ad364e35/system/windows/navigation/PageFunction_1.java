@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.navigation.PageFunctionBase;
+import system.windows.navigation.ReturnEventHandler_1;
 
 
 /**
@@ -185,6 +186,40 @@ public class PageFunction_1<T extends IJCOBridgeReflected> extends system.window
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addReturn.
+     *
+     * @param handler the argument of type {@code ReturnEventHandler_1<T>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addReturn(ReturnEventHandler_1<T> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("Return", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeReturn.
+     *
+     * @param handler the argument of type {@code ReturnEventHandler_1<T>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeReturn(ReturnEventHandler_1<T> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("Return", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

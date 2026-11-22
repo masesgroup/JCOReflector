@@ -42,6 +42,8 @@ import system.data.metadata.edm.EntityTypeBase;
 import system.data.metadata.edm.RefType;
 import system.data.metadata.edm.BuiltInTypeKind;
 import system.data.metadata.edm.ReadOnlyMetadataCollection_1;
+import system.data.metadata.edm.EdmProperty;
+import system.data.metadata.edm.NavigationProperty;
 
 
 /**
@@ -200,7 +202,7 @@ public class EntityType extends system.data.metadata.edm.EntityTypeBase  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EntityType.Properties" target="_top">.NET documentation</a>
      */
-    public ReadOnlyMetadataCollection_1 getProperties() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public ReadOnlyMetadataCollection_1<EdmProperty> getProperties() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectProperties = null;
@@ -224,7 +226,7 @@ public class EntityType extends system.data.metadata.edm.EntityTypeBase  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.EntityType.NavigationProperties" target="_top">.NET documentation</a>
      */
-    public ReadOnlyMetadataCollection_1 getNavigationProperties() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public ReadOnlyMetadataCollection_1<NavigationProperty> getNavigationProperties() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectNavigationProperties = null;

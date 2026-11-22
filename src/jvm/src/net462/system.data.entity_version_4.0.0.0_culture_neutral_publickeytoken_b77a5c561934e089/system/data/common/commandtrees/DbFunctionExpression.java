@@ -190,7 +190,7 @@ public class DbFunctionExpression extends system.data.common.commandtrees.DbExpr
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.DbFunctionExpression.Arguments" target="_top">.NET documentation</a>
      */
-    public IList_1 getArguments() throws Throwable {
+    public IList_1<DbExpression> getArguments() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectArguments = null;

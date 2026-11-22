@@ -43,6 +43,7 @@ import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
 import system.activities.Activity;
 import system.activities.InArgument_1;
+import system.activities.validation.ValidationContext;
 
 
 /**
@@ -184,7 +185,7 @@ public class GetWorkflowTree extends system.activities.CodeActivity_1<IEnumerabl
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.GetWorkflowTree.ValidationContext" target="_top">.NET documentation</a>
      */
-    public InArgument_1 getValidationContext() throws Throwable {
+    public InArgument_1<ValidationContext> getValidationContext() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectValidationContext = null;
@@ -206,7 +207,7 @@ public class GetWorkflowTree extends system.activities.CodeActivity_1<IEnumerabl
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Validation.GetWorkflowTree.ValidationContext" target="_top">.NET documentation</a>
      */
-    public void setValidationContext(InArgument_1 ValidationContext) throws Throwable {
+    public void setValidationContext(InArgument_1<ValidationContext> ValidationContext) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

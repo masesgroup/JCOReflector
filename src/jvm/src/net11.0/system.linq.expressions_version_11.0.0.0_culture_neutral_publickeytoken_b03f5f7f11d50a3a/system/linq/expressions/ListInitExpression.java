@@ -43,6 +43,7 @@ import system.linq.expressions.ListInitExpression;
 import system.linq.expressions.NewExpression;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.linq.expressions.ElementInit;
 import system.collections.objectmodel.ReadOnlyCollection_1;
 import system.linq.expressions.ExpressionType;
 
@@ -201,7 +202,7 @@ public class ListInitExpression extends system.linq.expressions.Expression  {
      * Invokes the .NET member Update.
      *
      * @param newExpression the argument of type {@code NewExpression}
-     * @param initializers the argument of type {@code IEnumerable_1}
+     * @param initializers the argument of type {@code IEnumerable_1<ElementInit>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -218,7 +219,7 @@ public class ListInitExpression extends system.linq.expressions.Expression  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.ListInitExpression.Update" target="_top">.NET documentation</a>
      */
-    public ListInitExpression Update(NewExpression newExpression, IEnumerable_1 initializers) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.NotSupportedException {
+    public ListInitExpression Update(NewExpression newExpression, IEnumerable_1<ElementInit> initializers) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUpdate = null;
@@ -244,7 +245,7 @@ public class ListInitExpression extends system.linq.expressions.Expression  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.ListInitExpression.Initializers" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getInitializers() throws Throwable {
+    public ReadOnlyCollection_1<ElementInit> getInitializers() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectInitializers = null;

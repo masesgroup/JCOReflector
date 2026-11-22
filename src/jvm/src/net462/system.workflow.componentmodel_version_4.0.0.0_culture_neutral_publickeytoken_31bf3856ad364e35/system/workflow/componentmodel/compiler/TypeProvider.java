@@ -827,7 +827,7 @@ public class TypeProvider extends NetObject implements AutoCloseable {
      * @throws system.reflection.TargetParameterCountException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Compiler.TypeProvider.ReferencedAssemblies" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getReferencedAssemblies() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.FormatException, system.io.FileNotFoundException, system.RankException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OverflowException, system.reflection.TargetParameterCountException {
+    public ICollection_1<Assembly> getReferencedAssemblies() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.FormatException, system.io.FileNotFoundException, system.RankException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OverflowException, system.reflection.TargetParameterCountException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReferencedAssemblies = null;

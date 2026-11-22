@@ -191,7 +191,7 @@ public class IDesignerVerbProviderServiceImplementation extends NetObject implem
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.IDesignerVerbProviderService.VerbProviders" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getVerbProviders() throws Throwable {
+    public ReadOnlyCollection_1<IDesignerVerbProvider> getVerbProviders() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectVerbProviders = null;

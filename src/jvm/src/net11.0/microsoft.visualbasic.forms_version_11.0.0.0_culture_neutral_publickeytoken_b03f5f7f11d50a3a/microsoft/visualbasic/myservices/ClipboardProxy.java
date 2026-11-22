@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.windows.forms.TextDataFormat;
 import system.Func_2;
+import system.reflection.metadata.TypeName;
 import system.collections.specialized.StringCollection;
 import system.drawing.Image;
 import system.io.Stream;
@@ -339,7 +340,7 @@ public class ClipboardProxy extends NetObject  {
      *
      * @param <T> the type of the generic argument T
      * @param format the argument of type {@code java.lang.String}
-     * @param resolver the argument of type {@code Func_2}
+     * @param resolver the argument of type {@code Func_2<TypeName, NetType>}
      * @param data the argument of type {@code JCORefOut<T>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -355,7 +356,7 @@ public class ClipboardProxy extends NetObject  {
      * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.VisualBasic.MyServices.ClipboardProxy.TryGetData" target="_top">.NET documentation</a>
      */
-    public <T extends IJCOBridgeReflected> boolean TryGetData(java.lang.String format, Func_2 resolver, JCORefOut<T> data) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
+    public <T extends IJCOBridgeReflected> boolean TryGetData(java.lang.String format, Func_2<TypeName, NetType> resolver, JCORefOut<T> data) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTryGetData = null;

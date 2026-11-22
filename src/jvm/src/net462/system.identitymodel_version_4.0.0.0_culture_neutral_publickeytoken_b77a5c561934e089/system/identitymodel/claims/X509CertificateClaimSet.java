@@ -42,8 +42,8 @@ import system.identitymodel.claims.ClaimSet;
 import system.security.cryptography.x509certificates.X509Certificate2;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
-import system.DateTime;
 import system.identitymodel.claims.Claim;
+import system.DateTime;
 
 
 /**
@@ -201,7 +201,7 @@ public class X509CertificateClaimSet extends system.identitymodel.claims.ClaimSe
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 FindClaims(java.lang.String claimType, java.lang.String right) throws Throwable {
+    public IEnumerable_1<Claim> FindClaims(java.lang.String claimType, java.lang.String right) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFindClaims = null;

@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.ValueType;
 import system.Nullable_1;
+import system.TimeSpan;
 
 
 /**
@@ -194,7 +195,7 @@ public class SseItem_1<T extends IJCOBridgeReflected> extends system.ValueType  
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServerSentEvents.SseItem-1.ReconnectionInterval" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getReconnectionInterval() throws Throwable {
+    public Nullable_1<TimeSpan> getReconnectionInterval() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReconnectionInterval = null;
@@ -224,7 +225,7 @@ public class SseItem_1<T extends IJCOBridgeReflected> extends system.ValueType  
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.ServerSentEvents.SseItem-1.ReconnectionInterval" target="_top">.NET documentation</a>
      */
-    public void setReconnectionInterval(Nullable_1 ReconnectionInterval) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
+    public void setReconnectionInterval(Nullable_1<TimeSpan> ReconnectionInterval) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

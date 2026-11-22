@@ -43,6 +43,7 @@ import system.linq.expressions.Expression_1;
 import system.linq.expressions.Expression;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.linq.expressions.ParameterExpression;
 import system.runtime.compilerservices.DebugInfoGenerator;
 
 
@@ -166,7 +167,7 @@ public class Expression_1<TDelegate extends IJCOBridgeReflected> extends system.
      * Invokes the .NET member Update.
      *
      * @param body the argument of type {@code Expression}
-     * @param parameters the argument of type {@code IEnumerable_1}
+     * @param parameters the argument of type {@code IEnumerable_1<ParameterExpression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -183,7 +184,7 @@ public class Expression_1<TDelegate extends IJCOBridgeReflected> extends system.
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Linq.Expressions.Expression-1.Update" target="_top">.NET documentation</a>
      */
-    public Expression_1 Update(Expression body, IEnumerable_1 parameters) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException {
+    public Expression_1<TDelegate> Update(Expression body, IEnumerable_1<ParameterExpression> parameters) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.ArrayTypeMismatchException, system.InvalidCastException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectUpdate = null;

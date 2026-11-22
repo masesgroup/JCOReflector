@@ -43,6 +43,7 @@ import system.xml.schema.XmlSchema;
 import system.xml.XmlReader;
 import system.xml.XmlWriter;
 import system.collections.objectmodel.Collection_1;
+import system.windows.annotations.ContentLocator;
 
 
 /**
@@ -305,7 +306,7 @@ public class ContentLocatorGroup extends system.windows.annotations.ContentLocat
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Annotations.ContentLocatorGroup.Locators" target="_top">.NET documentation</a>
      */
-    public Collection_1 getLocators() throws Throwable {
+    public Collection_1<ContentLocator> getLocators() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectLocators = null;

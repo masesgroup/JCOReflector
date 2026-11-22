@@ -42,7 +42,12 @@ import system.IDisposableImplementation;
 import microsoft.extensions.caching.memory.CacheItemPriority;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
+import microsoft.extensions.caching.memory.PostEvictionCallbackRegistration;
+import microsoft.extensions.primitives.IChangeToken;
+import microsoft.extensions.primitives.IChangeTokenImplementation;
 import system.Nullable_1;
+import system.DateTimeOffset;
+import system.TimeSpan;
 
 
 /**
@@ -130,25 +135,25 @@ public interface ICacheEntry extends IJCOBridgeReflected, system.IDisposable {
 
     public void setPriority(CacheItemPriority Priority) throws Throwable;
 
-    public IList_1 getPostEvictionCallbacks() throws Throwable;
+    public IList_1<PostEvictionCallbackRegistration> getPostEvictionCallbacks() throws Throwable;
 
-    public IList_1 getExpirationTokens() throws Throwable;
+    public IList_1<IChangeToken> getExpirationTokens() throws Throwable;
 
-    public Nullable_1 getAbsoluteExpiration() throws Throwable;
+    public Nullable_1<DateTimeOffset> getAbsoluteExpiration() throws Throwable;
 
-    public void setAbsoluteExpiration(Nullable_1 AbsoluteExpiration) throws Throwable;
+    public void setAbsoluteExpiration(Nullable_1<DateTimeOffset> AbsoluteExpiration) throws Throwable;
 
     public Nullable_1 getSize() throws Throwable;
 
     public void setSize(Nullable_1 Size) throws Throwable;
 
-    public Nullable_1 getAbsoluteExpirationRelativeToNow() throws Throwable;
+    public Nullable_1<TimeSpan> getAbsoluteExpirationRelativeToNow() throws Throwable;
 
-    public void setAbsoluteExpirationRelativeToNow(Nullable_1 AbsoluteExpirationRelativeToNow) throws Throwable;
+    public void setAbsoluteExpirationRelativeToNow(Nullable_1<TimeSpan> AbsoluteExpirationRelativeToNow) throws Throwable;
 
-    public Nullable_1 getSlidingExpiration() throws Throwable;
+    public Nullable_1<TimeSpan> getSlidingExpiration() throws Throwable;
 
-    public void setSlidingExpiration(Nullable_1 SlidingExpiration) throws Throwable;
+    public void setSlidingExpiration(Nullable_1<TimeSpan> SlidingExpiration) throws Throwable;
 
     public NetObject getKey() throws Throwable;
 

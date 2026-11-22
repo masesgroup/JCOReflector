@@ -40,9 +40,11 @@ import java.util.ArrayList;
 // Import section
 import system.workflow.componentmodel.IActivityEventListener_1;
 import system.workflow.componentmodel.IActivityEventListener_1Implementation;
+import system.workflow.componentmodel.QueueEventArgs;
 import system.IComparable;
 import system.IComparableImplementation;
 import system.workflow.runtime.WorkflowQueuingService;
+import system.EventHandler_1;
 
 
 /**
@@ -252,7 +254,7 @@ public class WorkflowQueue extends NetObject  {
     /**
      * Invokes the .NET member RegisterForQueueItemArrived.
      *
-     * @param eventListener the argument of type {@code IActivityEventListener_1}
+     * @param eventListener the argument of type {@code IActivityEventListener_1<QueueEventArgs>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -268,7 +270,7 @@ public class WorkflowQueue extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.WorkflowQueue.RegisterForQueueItemArrived" target="_top">.NET documentation</a>
      */
-    public void RegisterForQueueItemArrived(IActivityEventListener_1 eventListener) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public void RegisterForQueueItemArrived(IActivityEventListener_1<QueueEventArgs> eventListener) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -281,7 +283,7 @@ public class WorkflowQueue extends NetObject  {
     /**
      * Invokes the .NET member RegisterForQueueItemAvailable.
      *
-     * @param eventListener the argument of type {@code IActivityEventListener_1}
+     * @param eventListener the argument of type {@code IActivityEventListener_1<QueueEventArgs>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -303,7 +305,7 @@ public class WorkflowQueue extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.WorkflowQueue.RegisterForQueueItemAvailable" target="_top">.NET documentation</a>
      */
-    public void RegisterForQueueItemAvailable(IActivityEventListener_1 eventListener) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.NullReferenceException, system.OverflowException, system.PlatformNotSupportedException, system.FormatException {
+    public void RegisterForQueueItemAvailable(IActivityEventListener_1<QueueEventArgs> eventListener) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.NullReferenceException, system.OverflowException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -316,7 +318,7 @@ public class WorkflowQueue extends NetObject  {
     /**
      * Invokes the .NET member RegisterForQueueItemAvailable.
      *
-     * @param eventListener the argument of type {@code IActivityEventListener_1}
+     * @param eventListener the argument of type {@code IActivityEventListener_1<QueueEventArgs>}
      * @param subscriberQualifiedName the argument of type {@code java.lang.String}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -342,7 +344,7 @@ public class WorkflowQueue extends NetObject  {
      * @throws system.componentmodel.Win32Exception if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.WorkflowQueue.RegisterForQueueItemAvailable" target="_top">.NET documentation</a>
      */
-    public void RegisterForQueueItemAvailable(IActivityEventListener_1 eventListener, java.lang.String subscriberQualifiedName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.OverflowException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception {
+    public void RegisterForQueueItemAvailable(IActivityEventListener_1<QueueEventArgs> eventListener, java.lang.String subscriberQualifiedName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.OverflowException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -355,7 +357,7 @@ public class WorkflowQueue extends NetObject  {
     /**
      * Invokes the .NET member UnregisterForQueueItemArrived.
      *
-     * @param eventListener the argument of type {@code IActivityEventListener_1}
+     * @param eventListener the argument of type {@code IActivityEventListener_1<QueueEventArgs>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -371,7 +373,7 @@ public class WorkflowQueue extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.WorkflowQueue.UnregisterForQueueItemArrived" target="_top">.NET documentation</a>
      */
-    public void UnregisterForQueueItemArrived(IActivityEventListener_1 eventListener) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public void UnregisterForQueueItemArrived(IActivityEventListener_1<QueueEventArgs> eventListener) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -384,7 +386,7 @@ public class WorkflowQueue extends NetObject  {
     /**
      * Invokes the .NET member UnregisterForQueueItemAvailable.
      *
-     * @param eventListener the argument of type {@code IActivityEventListener_1}
+     * @param eventListener the argument of type {@code IActivityEventListener_1<QueueEventArgs>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -409,7 +411,7 @@ public class WorkflowQueue extends NetObject  {
      * @throws system.componentmodel.Win32Exception if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.Runtime.WorkflowQueue.UnregisterForQueueItemAvailable" target="_top">.NET documentation</a>
      */
-    public void UnregisterForQueueItemAvailable(IActivityEventListener_1 eventListener) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception {
+    public void UnregisterForQueueItemAvailable(IActivityEventListener_1<QueueEventArgs> eventListener) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.io.PathTooLongException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -592,6 +594,74 @@ public class WorkflowQueue extends NetObject  {
 
     // Instance Events section
     
+
+    /**
+     * Invokes the .NET member addQueueItemArrived.
+     *
+     * @param handler the argument of type {@code EventHandler_1<QueueEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addQueueItemArrived(EventHandler_1<QueueEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("QueueItemArrived", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeQueueItemArrived.
+     *
+     * @param handler the argument of type {@code EventHandler_1<QueueEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeQueueItemArrived(EventHandler_1<QueueEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("QueueItemArrived", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member addQueueItemAvailable.
+     *
+     * @param handler the argument of type {@code EventHandler_1<QueueEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void addQueueItemAvailable(EventHandler_1<QueueEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.RegisterEventListener("QueueItemAvailable", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * Invokes the .NET member removeQueueItemAvailable.
+     *
+     * @param handler the argument of type {@code EventHandler_1<QueueEventArgs>}
+     * @throws Throwable if the call fails in the bridge or in the CLR
+     * @see <a href="https://learn.microsoft.com/dotnet/api/DOCUMENTATION_MEMBER_NAME" target="_top">.NET documentation</a>
+     */
+    public void removeQueueItemAvailable(EventHandler_1<QueueEventArgs> handler) throws Throwable {
+        if (classInstance == null)
+            throw new java.lang.UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.UnregisterEventListener("QueueItemAvailable", handler);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
 
 
 }

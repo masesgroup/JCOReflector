@@ -43,6 +43,8 @@ import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
 import system.activities.Activity;
 import system.collections.objectmodel.Collection_1;
+import system.activities.validation.Constraint;
+import system.Attribute;
 import system.collections.objectmodel.KeyedCollection_2;
 import system.Version;
 
@@ -290,7 +292,7 @@ public class ActivityBuilder extends NetObject  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityBuilder.GetPropertyReferences" target="_top">.NET documentation</a>
      */
-    public static IList_1 GetPropertyReferences(NetObject target) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
+    public static IList_1<ActivityPropertyReference> GetPropertyReferences(NetObject target) throws Throwable, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetPropertyReferences = null;
@@ -397,7 +399,7 @@ public class ActivityBuilder extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityBuilder.Constraints" target="_top">.NET documentation</a>
      */
-    public Collection_1 getConstraints() throws Throwable {
+    public Collection_1<Constraint> getConstraints() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectConstraints = null;
@@ -419,7 +421,7 @@ public class ActivityBuilder extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.ActivityBuilder.Attributes" target="_top">.NET documentation</a>
      */
-    public Collection_1 getAttributes() throws Throwable {
+    public Collection_1<Attribute> getAttributes() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAttributes = null;

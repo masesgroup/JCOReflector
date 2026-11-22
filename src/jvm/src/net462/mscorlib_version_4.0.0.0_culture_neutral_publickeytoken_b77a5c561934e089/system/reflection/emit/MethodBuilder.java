@@ -57,6 +57,7 @@ import system.reflection.emit.CustomAttributeBuilder;
 import system.reflection.emit.UnmanagedMarshal;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.reflection.emit.ExceptionHandler;
 import system.Guid;
 import system.UInt32;
 import system.reflection.CallingConventions;
@@ -833,7 +834,7 @@ public class MethodBuilder extends system.reflection.MethodInfo  {
      * @param il the argument of type {@code byte[]}
      * @param maxStack the argument of type {@code int}
      * @param localSignature the argument of type {@code byte[]}
-     * @param exceptionHandlers the argument of type {@code IEnumerable_1}
+     * @param exceptionHandlers the argument of type {@code IEnumerable_1<ExceptionHandler>}
      * @param tokenFixups the argument of type {@code IEnumerable_1}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -846,7 +847,7 @@ public class MethodBuilder extends system.reflection.MethodInfo  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.MethodBuilder.SetMethodBody" target="_top">.NET documentation</a>
      */
-    public void SetMethodBody(byte[] il, int maxStack, byte[] localSignature, IEnumerable_1 exceptionHandlers, IEnumerable_1 tokenFixups) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException {
+    public void SetMethodBody(byte[] il, int maxStack, byte[] localSignature, IEnumerable_1<ExceptionHandler> exceptionHandlers, IEnumerable_1 tokenFixups) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -862,7 +863,7 @@ public class MethodBuilder extends system.reflection.MethodInfo  {
      * @param dupParam0 the argument of type {@code JCORefOut}
      * @param dupParam1 the argument of type {@code int}
      * @param dupParam2 the argument of type {@code JCORefOut}
-     * @param dupParam3 the argument of type {@code IEnumerable_1}
+     * @param dupParam3 the argument of type {@code IEnumerable_1<ExceptionHandler>}
      * @param dupParam4 the argument of type {@code IEnumerable_1}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -875,7 +876,7 @@ public class MethodBuilder extends system.reflection.MethodInfo  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Emit.MethodBuilder.SetMethodBody" target="_top">.NET documentation</a>
      */
-    public void SetMethodBody(JCORefOut dupParam0, int dupParam1, JCORefOut dupParam2, IEnumerable_1 dupParam3, IEnumerable_1 dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException {
+    public void SetMethodBody(JCORefOut dupParam0, int dupParam1, JCORefOut dupParam2, IEnumerable_1<ExceptionHandler> dupParam3, IEnumerable_1 dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

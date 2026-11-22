@@ -201,7 +201,7 @@ public class AsnReader extends NetObject  {
     /**
      * Invokes the .NET member ReadBoolean.
      *
-     * @param expectedTag the argument of type {@code Nullable_1}
+     * @param expectedTag the argument of type {@code Nullable_1<Asn1Tag>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -215,7 +215,7 @@ public class AsnReader extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnReader.ReadBoolean" target="_top">.NET documentation</a>
      */
-    public boolean ReadBoolean(Nullable_1 expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException {
+    public boolean ReadBoolean(Nullable_1<Asn1Tag> expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadBoolean = null;
@@ -233,7 +233,7 @@ public class AsnReader extends NetObject  {
      * Invokes the .NET member TryReadInt32.
      *
      * @param value the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
-     * @param expectedTag the argument of type {@code Nullable_1}
+     * @param expectedTag the argument of type {@code Nullable_1<Asn1Tag>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -246,7 +246,7 @@ public class AsnReader extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnReader.TryReadInt32" target="_top">.NET documentation</a>
      */
-    public boolean TryReadInt32(JCORefOut<java.util.concurrent.atomic.AtomicInteger> value, Nullable_1 expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException {
+    public boolean TryReadInt32(JCORefOut<java.util.concurrent.atomic.AtomicInteger> value, Nullable_1<Asn1Tag> expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTryReadInt32 = null;
@@ -264,7 +264,7 @@ public class AsnReader extends NetObject  {
      * Invokes the .NET member TryReadInt64.
      *
      * @param value the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicLong>}
-     * @param expectedTag the argument of type {@code Nullable_1}
+     * @param expectedTag the argument of type {@code Nullable_1<Asn1Tag>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -277,7 +277,7 @@ public class AsnReader extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnReader.TryReadInt64" target="_top">.NET documentation</a>
      */
-    public boolean TryReadInt64(JCORefOut<java.util.concurrent.atomic.AtomicLong> value, Nullable_1 expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException {
+    public boolean TryReadInt64(JCORefOut<java.util.concurrent.atomic.AtomicLong> value, Nullable_1<Asn1Tag> expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTryReadInt64 = null;
@@ -296,7 +296,7 @@ public class AsnReader extends NetObject  {
      *
      * @param unusedBitCount the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
      * @param value the argument of type {@code JCORefOut<ReadOnlyMemory_1>}
-     * @param expectedTag the argument of type {@code Nullable_1}
+     * @param expectedTag the argument of type {@code Nullable_1<Asn1Tag>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -310,7 +310,7 @@ public class AsnReader extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnReader.TryReadPrimitiveBitString" target="_top">.NET documentation</a>
      */
-    public boolean TryReadPrimitiveBitString(JCORefOut<java.util.concurrent.atomic.AtomicInteger> unusedBitCount, JCORefOut<ReadOnlyMemory_1> value, Nullable_1 expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException {
+    public boolean TryReadPrimitiveBitString(JCORefOut<java.util.concurrent.atomic.AtomicInteger> unusedBitCount, JCORefOut<ReadOnlyMemory_1> value, Nullable_1<Asn1Tag> expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTryReadPrimitiveBitString = null;
@@ -360,7 +360,7 @@ public class AsnReader extends NetObject  {
      * Invokes the .NET member TryReadPrimitiveOctetString.
      *
      * @param contents the argument of type {@code JCORefOut<ReadOnlyMemory_1>}
-     * @param expectedTag the argument of type {@code Nullable_1}
+     * @param expectedTag the argument of type {@code Nullable_1<Asn1Tag>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -374,7 +374,7 @@ public class AsnReader extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnReader.TryReadPrimitiveOctetString" target="_top">.NET documentation</a>
      */
-    public boolean TryReadPrimitiveOctetString(JCORefOut<ReadOnlyMemory_1> contents, Nullable_1 expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException {
+    public boolean TryReadPrimitiveOctetString(JCORefOut<ReadOnlyMemory_1> contents, Nullable_1<Asn1Tag> expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTryReadPrimitiveOctetString = null;
@@ -392,7 +392,7 @@ public class AsnReader extends NetObject  {
      * Invokes the .NET member TryReadUInt32.
      *
      * @param value the argument of type {@code JCORefOut<UInt32>}
-     * @param expectedTag the argument of type {@code Nullable_1}
+     * @param expectedTag the argument of type {@code Nullable_1<Asn1Tag>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -405,7 +405,7 @@ public class AsnReader extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnReader.TryReadUInt32" target="_top">.NET documentation</a>
      */
-    public boolean TryReadUInt32(JCORefOut<UInt32> value, Nullable_1 expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException {
+    public boolean TryReadUInt32(JCORefOut<UInt32> value, Nullable_1<Asn1Tag> expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTryReadUInt32 = null;
@@ -423,7 +423,7 @@ public class AsnReader extends NetObject  {
      * Invokes the .NET member TryReadUInt64.
      *
      * @param value the argument of type {@code JCORefOut<UInt64>}
-     * @param expectedTag the argument of type {@code Nullable_1}
+     * @param expectedTag the argument of type {@code Nullable_1<Asn1Tag>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -436,7 +436,7 @@ public class AsnReader extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnReader.TryReadUInt64" target="_top">.NET documentation</a>
      */
-    public boolean TryReadUInt64(JCORefOut<UInt64> value, Nullable_1 expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException {
+    public boolean TryReadUInt64(JCORefOut<UInt64> value, Nullable_1<Asn1Tag> expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTryReadUInt64 = null;
@@ -454,7 +454,7 @@ public class AsnReader extends NetObject  {
      * Invokes the .NET member ReadBitString.
      *
      * @param unusedBitCount the argument of type {@code JCORefOut<java.util.concurrent.atomic.AtomicInteger>}
-     * @param expectedTag the argument of type {@code Nullable_1}
+     * @param expectedTag the argument of type {@code Nullable_1<Asn1Tag>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -469,7 +469,7 @@ public class AsnReader extends NetObject  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnReader.ReadBitString" target="_top">.NET documentation</a>
      */
-    public byte[] ReadBitString(JCORefOut<java.util.concurrent.atomic.AtomicInteger> unusedBitCount, Nullable_1 expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArrayTypeMismatchException {
+    public byte[] ReadBitString(JCORefOut<java.util.concurrent.atomic.AtomicInteger> unusedBitCount, Nullable_1<Asn1Tag> expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadBitString = null;
@@ -495,7 +495,7 @@ public class AsnReader extends NetObject  {
     /**
      * Invokes the .NET member ReadOctetString.
      *
-     * @param expectedTag the argument of type {@code Nullable_1}
+     * @param expectedTag the argument of type {@code Nullable_1<Asn1Tag>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -510,7 +510,7 @@ public class AsnReader extends NetObject  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnReader.ReadOctetString" target="_top">.NET documentation</a>
      */
-    public byte[] ReadOctetString(Nullable_1 expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.ArrayTypeMismatchException {
+    public byte[] ReadOctetString(Nullable_1<Asn1Tag> expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadOctetString = null;
@@ -536,7 +536,7 @@ public class AsnReader extends NetObject  {
     /**
      * Invokes the .NET member ReadNamedBitList.
      *
-     * @param expectedTag the argument of type {@code Nullable_1}
+     * @param expectedTag the argument of type {@code Nullable_1<Asn1Tag>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -554,7 +554,7 @@ public class AsnReader extends NetObject  {
      * @throws system.InvalidCastException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnReader.ReadNamedBitList" target="_top">.NET documentation</a>
      */
-    public BitArray ReadNamedBitList(Nullable_1 expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.formats.asn1.AsnContentException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.RankException, system.InvalidCastException {
+    public BitArray ReadNamedBitList(Nullable_1<Asn1Tag> expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.formats.asn1.AsnContentException, system.InvalidOperationException, system.OutOfMemoryException, system.NotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.RankException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadNamedBitList = null;
@@ -572,7 +572,7 @@ public class AsnReader extends NetObject  {
     /**
      * Invokes the .NET member ReadGeneralizedTime.
      *
-     * @param expectedTag the argument of type {@code Nullable_1}
+     * @param expectedTag the argument of type {@code Nullable_1<Asn1Tag>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -590,7 +590,7 @@ public class AsnReader extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnReader.ReadGeneralizedTime" target="_top">.NET documentation</a>
      */
-    public DateTimeOffset ReadGeneralizedTime(Nullable_1 expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.FormatException, system.ArgumentException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.OverflowException, system.security.SecurityException, system.NotSupportedException {
+    public DateTimeOffset ReadGeneralizedTime(Nullable_1<Asn1Tag> expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.FormatException, system.ArgumentException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.OverflowException, system.security.SecurityException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadGeneralizedTime = null;
@@ -609,7 +609,7 @@ public class AsnReader extends NetObject  {
      * Invokes the .NET member ReadUtcTime.
      *
      * @param twoDigitYearMax the argument of type {@code int}
-     * @param expectedTag the argument of type {@code Nullable_1}
+     * @param expectedTag the argument of type {@code Nullable_1<Asn1Tag>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -625,7 +625,7 @@ public class AsnReader extends NetObject  {
      * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnReader.ReadUtcTime" target="_top">.NET documentation</a>
      */
-    public DateTimeOffset ReadUtcTime(int twoDigitYearMax, Nullable_1 expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.FormatException, system.ArgumentException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.OverflowException {
+    public DateTimeOffset ReadUtcTime(int twoDigitYearMax, Nullable_1<Asn1Tag> expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.FormatException, system.ArgumentException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadUtcTime = null;
@@ -643,7 +643,7 @@ public class AsnReader extends NetObject  {
     /**
      * Invokes the .NET member ReadUtcTime.
      *
-     * @param expectedTag the argument of type {@code Nullable_1}
+     * @param expectedTag the argument of type {@code Nullable_1<Asn1Tag>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -659,7 +659,7 @@ public class AsnReader extends NetObject  {
      * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnReader.ReadUtcTime" target="_top">.NET documentation</a>
      */
-    public DateTimeOffset ReadUtcTime(Nullable_1 expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.FormatException, system.ArgumentException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.OverflowException {
+    public DateTimeOffset ReadUtcTime(Nullable_1<Asn1Tag> expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.FormatException, system.ArgumentException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadUtcTime = null;
@@ -678,7 +678,7 @@ public class AsnReader extends NetObject  {
      * Invokes the .NET member ReadEnumeratedValue.
      *
      * @param enumType the argument of type {@code NetType}
-     * @param expectedTag the argument of type {@code Nullable_1}
+     * @param expectedTag the argument of type {@code Nullable_1<Asn1Tag>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -693,7 +693,7 @@ public class AsnReader extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnReader.ReadEnumeratedValue" target="_top">.NET documentation</a>
      */
-    public Enum ReadEnumeratedValue(NetType enumType, Nullable_1 expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.InvalidOperationException, system.NotSupportedException {
+    public Enum ReadEnumeratedValue(NetType enumType, Nullable_1<Asn1Tag> expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadEnumeratedValue = null;
@@ -712,7 +712,7 @@ public class AsnReader extends NetObject  {
      * Invokes the .NET member ReadNamedBitListValue.
      *
      * @param flagsEnumType the argument of type {@code NetType}
-     * @param expectedTag the argument of type {@code Nullable_1}
+     * @param expectedTag the argument of type {@code Nullable_1<Asn1Tag>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -727,7 +727,7 @@ public class AsnReader extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnReader.ReadNamedBitListValue" target="_top">.NET documentation</a>
      */
-    public Enum ReadNamedBitListValue(NetType flagsEnumType, Nullable_1 expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.InvalidOperationException, system.NotSupportedException {
+    public Enum ReadNamedBitListValue(NetType flagsEnumType, Nullable_1<Asn1Tag> expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.InvalidOperationException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadNamedBitListValue = null;
@@ -805,7 +805,7 @@ public class AsnReader extends NetObject  {
     /**
      * Invokes the .NET member ReadSequence.
      *
-     * @param expectedTag the argument of type {@code Nullable_1}
+     * @param expectedTag the argument of type {@code Nullable_1<Asn1Tag>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -820,7 +820,7 @@ public class AsnReader extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnReader.ReadSequence" target="_top">.NET documentation</a>
      */
-    public AsnReader ReadSequence(Nullable_1 expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.InvalidOperationException, system.NotSupportedException, system.FormatException {
+    public AsnReader ReadSequence(Nullable_1<Asn1Tag> expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.InvalidOperationException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadSequence = null;
@@ -839,7 +839,7 @@ public class AsnReader extends NetObject  {
      * Invokes the .NET member ReadSetOf.
      *
      * @param skipSortOrderValidation the argument of type {@code boolean}
-     * @param expectedTag the argument of type {@code Nullable_1}
+     * @param expectedTag the argument of type {@code Nullable_1<Asn1Tag>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -854,7 +854,7 @@ public class AsnReader extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnReader.ReadSetOf" target="_top">.NET documentation</a>
      */
-    public AsnReader ReadSetOf(boolean skipSortOrderValidation, Nullable_1 expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.InvalidOperationException, system.NotSupportedException, system.FormatException {
+    public AsnReader ReadSetOf(boolean skipSortOrderValidation, Nullable_1<Asn1Tag> expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.InvalidOperationException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadSetOf = null;
@@ -872,7 +872,7 @@ public class AsnReader extends NetObject  {
     /**
      * Invokes the .NET member ReadSetOf.
      *
-     * @param expectedTag the argument of type {@code Nullable_1}
+     * @param expectedTag the argument of type {@code Nullable_1<Asn1Tag>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -887,7 +887,7 @@ public class AsnReader extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnReader.ReadSetOf" target="_top">.NET documentation</a>
      */
-    public AsnReader ReadSetOf(Nullable_1 expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
+    public AsnReader ReadSetOf(Nullable_1<Asn1Tag> expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadSetOf = null;
@@ -905,7 +905,7 @@ public class AsnReader extends NetObject  {
     /**
      * Invokes the .NET member ReadInteger.
      *
-     * @param expectedTag the argument of type {@code Nullable_1}
+     * @param expectedTag the argument of type {@code Nullable_1<Asn1Tag>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -922,7 +922,7 @@ public class AsnReader extends NetObject  {
      * @throws system.InvalidCastException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnReader.ReadInteger" target="_top">.NET documentation</a>
      */
-    public BigInteger ReadInteger(Nullable_1 expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.RankException, system.InvalidCastException {
+    public BigInteger ReadInteger(Nullable_1<Asn1Tag> expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.RankException, system.InvalidCastException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadInteger = null;
@@ -1030,7 +1030,7 @@ public class AsnReader extends NetObject  {
     /**
      * Invokes the .NET member ReadEnumeratedBytes.
      *
-     * @param expectedTag the argument of type {@code Nullable_1}
+     * @param expectedTag the argument of type {@code Nullable_1<Asn1Tag>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -1044,7 +1044,7 @@ public class AsnReader extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnReader.ReadEnumeratedBytes" target="_top">.NET documentation</a>
      */
-    public ReadOnlyMemory_1 ReadEnumeratedBytes(Nullable_1 expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException {
+    public ReadOnlyMemory_1 ReadEnumeratedBytes(Nullable_1<Asn1Tag> expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadEnumeratedBytes = null;
@@ -1062,7 +1062,7 @@ public class AsnReader extends NetObject  {
     /**
      * Invokes the .NET member ReadIntegerBytes.
      *
-     * @param expectedTag the argument of type {@code Nullable_1}
+     * @param expectedTag the argument of type {@code Nullable_1<Asn1Tag>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -1076,7 +1076,7 @@ public class AsnReader extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnReader.ReadIntegerBytes" target="_top">.NET documentation</a>
      */
-    public ReadOnlyMemory_1 ReadIntegerBytes(Nullable_1 expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException {
+    public ReadOnlyMemory_1 ReadIntegerBytes(Nullable_1<Asn1Tag> expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.formats.asn1.AsnContentException, system.ArgumentNullException, system.OutOfMemoryException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadIntegerBytes = null;
@@ -1095,7 +1095,7 @@ public class AsnReader extends NetObject  {
      * Invokes the .NET member ReadCharacterString.
      *
      * @param encodingType the argument of type {@code UniversalTagNumber}
-     * @param expectedTag the argument of type {@code Nullable_1}
+     * @param expectedTag the argument of type {@code Nullable_1<Asn1Tag>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -1109,7 +1109,7 @@ public class AsnReader extends NetObject  {
      * @throws system.ArrayTypeMismatchException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnReader.ReadCharacterString" target="_top">.NET documentation</a>
      */
-    public java.lang.String ReadCharacterString(UniversalTagNumber encodingType, Nullable_1 expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException, system.ArrayTypeMismatchException {
+    public java.lang.String ReadCharacterString(UniversalTagNumber encodingType, Nullable_1<Asn1Tag> expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.formats.asn1.AsnContentException, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadCharacterString = null;
@@ -1126,7 +1126,7 @@ public class AsnReader extends NetObject  {
     /**
      * Invokes the .NET member ReadObjectIdentifier.
      *
-     * @param expectedTag the argument of type {@code Nullable_1}
+     * @param expectedTag the argument of type {@code Nullable_1<Asn1Tag>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
@@ -1145,7 +1145,7 @@ public class AsnReader extends NetObject  {
      * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnReader.ReadObjectIdentifier" target="_top">.NET documentation</a>
      */
-    public java.lang.String ReadObjectIdentifier(Nullable_1 expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArrayTypeMismatchException, system.NotSupportedException, system.RankException, system.InvalidCastException, system.OverflowException {
+    public java.lang.String ReadObjectIdentifier(Nullable_1<Asn1Tag> expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.ArrayTypeMismatchException, system.NotSupportedException, system.RankException, system.InvalidCastException, system.OverflowException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReadObjectIdentifier = null;
@@ -1162,7 +1162,7 @@ public class AsnReader extends NetObject  {
     /**
      * Invokes the .NET member ReadNull.
      *
-     * @param expectedTag the argument of type {@code Nullable_1}
+     * @param expectedTag the argument of type {@code Nullable_1<Asn1Tag>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -1175,7 +1175,7 @@ public class AsnReader extends NetObject  {
      * @throws system.FormatException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Formats.Asn1.AsnReader.ReadNull" target="_top">.NET documentation</a>
      */
-    public void ReadNull(Nullable_1 expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException {
+    public void ReadNull(Nullable_1<Asn1Tag> expectedTag) throws Throwable, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.formats.asn1.AsnContentException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

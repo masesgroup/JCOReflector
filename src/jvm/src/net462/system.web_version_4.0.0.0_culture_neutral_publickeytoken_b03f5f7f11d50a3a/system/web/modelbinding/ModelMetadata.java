@@ -40,10 +40,13 @@ import java.util.ArrayList;
 // Import section
 import system.web.modelbinding.ModelMetadataProvider;
 import system.Func_1;
+import system.Object;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.web.modelbinding.ModelValidator;
 import system.web.modelbinding.ModelBindingExecutionContext;
 import system.collections.generic.Dictionary_2;
+import system.web.modelbinding.ModelMetadata;
 
 
 /**
@@ -162,7 +165,7 @@ public class ModelMetadata extends NetObject  {
      *
      * @param provider the argument of type {@code ModelMetadataProvider}
      * @param containerType the argument of type {@code NetType}
-     * @param modelAccessor the argument of type {@code Func_1}
+     * @param modelAccessor the argument of type {@code Func_1<Object>}
      * @param modelType the argument of type {@code NetType}
      * @param propertyName the argument of type {@code java.lang.String}
      * @throws Throwable if the .NET constructor fails
@@ -172,7 +175,7 @@ public class ModelMetadata extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.-ctor" target="_top">.NET documentation</a>
      */
-    public ModelMetadata(ModelMetadataProvider provider, NetType containerType, Func_1 modelAccessor, NetType modelType, java.lang.String propertyName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException {
+    public ModelMetadata(ModelMetadataProvider provider, NetType containerType, Func_1<Object> modelAccessor, NetType modelType, java.lang.String propertyName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -195,7 +198,7 @@ public class ModelMetadata extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.GetValidators" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetValidators(ModelBindingExecutionContext context) throws Throwable {
+    public IEnumerable_1<ModelValidator> GetValidators(ModelBindingExecutionContext context) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetValidators = null;
@@ -648,7 +651,7 @@ public class ModelMetadata extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.ModelBinding.ModelMetadata.Properties" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getProperties() throws Throwable, system.ArgumentNullException, system.NotSupportedException {
+    public IEnumerable_1<ModelMetadata> getProperties() throws Throwable, system.ArgumentNullException, system.NotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectProperties = null;

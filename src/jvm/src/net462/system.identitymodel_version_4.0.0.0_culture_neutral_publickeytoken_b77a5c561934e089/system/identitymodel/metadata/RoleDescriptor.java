@@ -40,9 +40,11 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.identitymodel.metadata.ContactPerson;
+import system.identitymodel.metadata.KeyDescriptor;
+import system.Uri;
 import system.DateTime;
 import system.identitymodel.metadata.Organization;
-import system.Uri;
 
 
 /**
@@ -170,7 +172,7 @@ public class RoleDescriptor extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.RoleDescriptor.Contacts" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getContacts() throws Throwable {
+    public ICollection_1<ContactPerson> getContacts() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectContacts = null;
@@ -192,7 +194,7 @@ public class RoleDescriptor extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.RoleDescriptor.Keys" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getKeys() throws Throwable {
+    public ICollection_1<KeyDescriptor> getKeys() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectKeys = null;
@@ -214,7 +216,7 @@ public class RoleDescriptor extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.RoleDescriptor.ProtocolsSupported" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getProtocolsSupported() throws Throwable {
+    public ICollection_1<Uri> getProtocolsSupported() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectProtocolsSupported = null;

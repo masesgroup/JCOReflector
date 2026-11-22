@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.DateTime;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.identitymodel.tokens.SamlAuthorityBinding;
 import system.collections.objectmodel.ReadOnlyCollection_1;
 
 
@@ -193,7 +194,7 @@ public class SamlAuthenticationClaimResource extends NetObject  {
      * @param authenticationMethod the argument of type {@code java.lang.String}
      * @param dnsAddress the argument of type {@code java.lang.String}
      * @param ipAddress the argument of type {@code java.lang.String}
-     * @param authorityBindings the argument of type {@code IEnumerable_1}
+     * @param authorityBindings the argument of type {@code IEnumerable_1<SamlAuthorityBinding>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -209,7 +210,7 @@ public class SamlAuthenticationClaimResource extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlAuthenticationClaimResource.-ctor" target="_top">.NET documentation</a>
      */
-    public SamlAuthenticationClaimResource(DateTime authenticationInstant, java.lang.String authenticationMethod, java.lang.String dnsAddress, java.lang.String ipAddress, IEnumerable_1 authorityBindings) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+    public SamlAuthenticationClaimResource(DateTime authenticationInstant, java.lang.String authenticationMethod, java.lang.String dnsAddress, java.lang.String ipAddress, IEnumerable_1<SamlAuthorityBinding> authorityBindings) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -226,7 +227,7 @@ public class SamlAuthenticationClaimResource extends NetObject  {
      * @param authenticationMethod the argument of type {@code java.lang.String}
      * @param dnsAddress the argument of type {@code java.lang.String}
      * @param ipAddress the argument of type {@code java.lang.String}
-     * @param authorityBindings the argument of type {@code ReadOnlyCollection_1}
+     * @param authorityBindings the argument of type {@code ReadOnlyCollection_1<SamlAuthorityBinding>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -242,7 +243,7 @@ public class SamlAuthenticationClaimResource extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlAuthenticationClaimResource.-ctor" target="_top">.NET documentation</a>
      */
-    public SamlAuthenticationClaimResource(DateTime authenticationInstant, java.lang.String authenticationMethod, java.lang.String dnsAddress, java.lang.String ipAddress, ReadOnlyCollection_1 authorityBindings) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+    public SamlAuthenticationClaimResource(DateTime authenticationInstant, java.lang.String authenticationMethod, java.lang.String dnsAddress, java.lang.String ipAddress, ReadOnlyCollection_1<SamlAuthorityBinding> authorityBindings) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -268,7 +269,7 @@ public class SamlAuthenticationClaimResource extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlAuthenticationClaimResource.AuthorityBindings" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getAuthorityBindings() throws Throwable {
+    public ReadOnlyCollection_1<SamlAuthorityBinding> getAuthorityBindings() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAuthorityBindings = null;

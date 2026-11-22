@@ -603,7 +603,7 @@ public class FreeformActivityDesigner extends system.workflow.componentmodel.des
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Workflow.ComponentModel.Design.FreeformActivityDesigner.Connectors" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getConnectors() throws Throwable, system.ArgumentNullException {
+    public ReadOnlyCollection_1<Connector> getConnectors() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectConnectors = null;

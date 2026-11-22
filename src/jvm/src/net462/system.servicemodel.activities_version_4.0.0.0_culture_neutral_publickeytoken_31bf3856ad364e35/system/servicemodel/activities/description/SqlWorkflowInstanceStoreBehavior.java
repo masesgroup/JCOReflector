@@ -41,9 +41,11 @@ import java.util.ArrayList;
 import system.servicemodel.description.ServiceDescription;
 import system.servicemodel.ServiceHostBase;
 import system.collections.objectmodel.Collection_1;
+import system.servicemodel.description.ServiceEndpoint;
 import system.servicemodel.channels.BindingParameterCollection;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.xml.linq.XName;
 import system.activities.durableinstancing.InstanceCompletionAction;
 import system.activities.durableinstancing.InstanceEncodingOption;
 import system.activities.durableinstancing.InstanceLockedExceptionAction;
@@ -224,12 +226,12 @@ public class SqlWorkflowInstanceStoreBehavior extends NetObject  {
      *
      * @param serviceDescription the argument of type {@code ServiceDescription}
      * @param serviceHostBase the argument of type {@code ServiceHostBase}
-     * @param endpoints the argument of type {@code Collection_1}
+     * @param endpoints the argument of type {@code Collection_1<ServiceEndpoint>}
      * @param bindingParameters the argument of type {@code BindingParameterCollection}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.AddBindingParameters" target="_top">.NET documentation</a>
      */
-    public void AddBindingParameters(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase, Collection_1 endpoints, BindingParameterCollection bindingParameters) throws Throwable {
+    public void AddBindingParameters(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase, Collection_1<ServiceEndpoint> endpoints, BindingParameterCollection bindingParameters) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -268,8 +270,8 @@ public class SqlWorkflowInstanceStoreBehavior extends NetObject  {
      * Invokes the .NET member Promote.
      *
      * @param name the argument of type {@code java.lang.String}
-     * @param promoteAsSqlVariant the argument of type {@code IEnumerable_1}
-     * @param promoteAsBinary the argument of type {@code IEnumerable_1}
+     * @param promoteAsSqlVariant the argument of type {@code IEnumerable_1<XName>}
+     * @param promoteAsBinary the argument of type {@code IEnumerable_1<XName>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @throws system.ArgumentException if the .NET member raises it
@@ -284,7 +286,7 @@ public class SqlWorkflowInstanceStoreBehavior extends NetObject  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.Promote" target="_top">.NET documentation</a>
      */
-    public void Promote(java.lang.String name, IEnumerable_1 promoteAsSqlVariant, IEnumerable_1 promoteAsBinary) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public void Promote(java.lang.String name, IEnumerable_1<XName> promoteAsSqlVariant, IEnumerable_1<XName> promoteAsBinary) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

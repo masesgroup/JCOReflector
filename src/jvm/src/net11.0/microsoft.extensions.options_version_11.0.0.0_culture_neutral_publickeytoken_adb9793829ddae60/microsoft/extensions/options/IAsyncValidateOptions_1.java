@@ -121,7 +121,7 @@ public interface IAsyncValidateOptions_1<TOptions extends IJCOBridgeReflected> e
     // Methods section
     
 
-    public Task_1 ValidateAsync(java.lang.String name, TOptions options, CancellationToken cancellationToken) throws Throwable;
+    public Task_1<ValidateOptionsResult> ValidateAsync(java.lang.String name, TOptions options, CancellationToken cancellationToken) throws Throwable;
 
 
     

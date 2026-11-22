@@ -50,6 +50,7 @@ import system.net.security.TlsContext;
 import system.net.security.SslApplicationProtocol;
 import system.net.security.TlsCipherSuite;
 import system.Nullable_1;
+import system.net.security.SslClientHelloInfo;
 import system.security.authentication.SslProtocols;
 
 
@@ -623,7 +624,7 @@ public class TlsSession extends NetObject implements AutoCloseable {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.Security.TlsSession.ClientHelloInfo" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getClientHelloInfo() throws Throwable, system.PlatformNotSupportedException, system.ObjectDisposedException {
+    public Nullable_1<SslClientHelloInfo> getClientHelloInfo() throws Throwable, system.PlatformNotSupportedException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectClientHelloInfo = null;

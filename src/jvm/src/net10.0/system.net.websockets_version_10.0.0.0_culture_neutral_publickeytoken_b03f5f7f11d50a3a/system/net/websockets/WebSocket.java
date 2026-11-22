@@ -48,10 +48,12 @@ import system.net.websockets.WebSocketCloseStatus;
 import system.threading.CancellationToken;
 import system.net.websockets.WebSocketMessageType;
 import system.threading.tasks.Task_1;
+import system.net.websockets.WebSocketReceiveResult;
 import system.threading.tasks.ValueTask;
 import system.ReadOnlyMemory_1;
 import system.net.websockets.WebSocketMessageFlags;
 import system.threading.tasks.ValueTask_1;
+import system.net.websockets.ValueWebSocketReceiveResult;
 import system.Memory_1;
 import system.net.websockets.WebSocketState;
 import system.Nullable_1;
@@ -466,7 +468,7 @@ public class WebSocket extends NetObject implements AutoCloseable {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocket.ReceiveAsync" target="_top">.NET documentation</a>
      */
-    public Task_1 ReceiveAsync(ArraySegment_1 buffer, CancellationToken cancellationToken) throws Throwable {
+    public Task_1<WebSocketReceiveResult> ReceiveAsync(ArraySegment_1 buffer, CancellationToken cancellationToken) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReceiveAsync = null;
@@ -558,7 +560,7 @@ public class WebSocket extends NetObject implements AutoCloseable {
      * @throws system.PlatformNotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocket.ReceiveAsync" target="_top">.NET documentation</a>
      */
-    public ValueTask_1 ReceiveAsync(Memory_1 buffer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public ValueTask_1<ValueWebSocketReceiveResult> ReceiveAsync(Memory_1 buffer, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectReceiveAsync = null;
@@ -676,7 +678,7 @@ public class WebSocket extends NetObject implements AutoCloseable {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Net.WebSockets.WebSocket.CloseStatus" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getCloseStatus() throws Throwable {
+    public Nullable_1<WebSocketCloseStatus> getCloseStatus() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCloseStatus = null;

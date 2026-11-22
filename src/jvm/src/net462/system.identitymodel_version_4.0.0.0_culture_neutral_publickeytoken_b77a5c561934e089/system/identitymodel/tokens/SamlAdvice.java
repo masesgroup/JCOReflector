@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.identitymodel.tokens.SamlAssertion;
 import system.xml.XmlDictionaryReader;
 import system.identitymodel.tokens.SamlSerializer;
 import system.identitymodel.selectors.SecurityTokenSerializer;
@@ -183,7 +184,7 @@ public class SamlAdvice extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param assertions the argument of type {@code IEnumerable_1}
+     * @param assertions the argument of type {@code IEnumerable_1<SamlAssertion>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -194,7 +195,7 @@ public class SamlAdvice extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlAdvice.-ctor" target="_top">.NET documentation</a>
      */
-    public SamlAdvice(IEnumerable_1 assertions) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public SamlAdvice(IEnumerable_1<SamlAssertion> assertions) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -208,7 +209,7 @@ public class SamlAdvice extends NetObject  {
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param references the argument of type {@code IEnumerable_1}
-     * @param assertions the argument of type {@code IEnumerable_1}
+     * @param assertions the argument of type {@code IEnumerable_1<SamlAssertion>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -219,7 +220,7 @@ public class SamlAdvice extends NetObject  {
      * @throws system.NotSupportedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlAdvice.-ctor" target="_top">.NET documentation</a>
      */
-    public SamlAdvice(IEnumerable_1 references, IEnumerable_1 assertions) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public SamlAdvice(IEnumerable_1 references, IEnumerable_1<SamlAssertion> assertions) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -352,7 +353,7 @@ public class SamlAdvice extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.SamlAdvice.Assertions" target="_top">.NET documentation</a>
      */
-    public IList_1 getAssertions() throws Throwable {
+    public IList_1<SamlAssertion> getAssertions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAssertions = null;

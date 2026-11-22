@@ -97,8 +97,8 @@ import system.data.metadata.edm.RelationshipType;
 import system.data.common.commandtrees.DbScanExpression;
 import system.data.metadata.edm.EntitySetBase;
 import system.data.common.commandtrees.DbSkipExpression;
-import system.data.common.commandtrees.DbSortExpression;
 import system.data.common.commandtrees.DbSortClause;
+import system.data.common.commandtrees.DbSortExpression;
 import system.data.common.commandtrees.DbTreatExpression;
 import system.data.common.commandtrees.DbUnionAllExpression;
 
@@ -659,8 +659,8 @@ public class DbExpressionBuilder extends NetObject  {
     /**
      * Invokes the .NET member Case.
      *
-     * @param whenExpressions the argument of type {@code IEnumerable_1}
-     * @param thenExpressions the argument of type {@code IEnumerable_1}
+     * @param whenExpressions the argument of type {@code IEnumerable_1<DbExpression>}
+     * @param thenExpressions the argument of type {@code IEnumerable_1<DbExpression>}
      * @param elseExpression the argument of type {@code DbExpression}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -676,7 +676,7 @@ public class DbExpressionBuilder extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.Case" target="_top">.NET documentation</a>
      */
-    public static DbCaseExpression Case(IEnumerable_1 whenExpressions, IEnumerable_1 thenExpressions, DbExpression elseExpression) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+    public static DbCaseExpression Case(IEnumerable_1<DbExpression> whenExpressions, IEnumerable_1<DbExpression> thenExpressions, DbExpression elseExpression) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCase = null;
@@ -979,7 +979,7 @@ public class DbExpressionBuilder extends NetObject  {
     /**
      * Invokes the .NET member CrossJoin.
      *
-     * @param inputs the argument of type {@code IEnumerable_1}
+     * @param inputs the argument of type {@code IEnumerable_1<DbExpressionBinding>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -994,7 +994,7 @@ public class DbExpressionBuilder extends NetObject  {
      * @throws system.InvalidOperationException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.CrossJoin" target="_top">.NET documentation</a>
      */
-    public static DbCrossJoinExpression CrossJoin(IEnumerable_1 inputs) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static DbCrossJoinExpression CrossJoin(IEnumerable_1<DbExpressionBinding> inputs) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCrossJoin = null;
@@ -1362,7 +1362,7 @@ public class DbExpressionBuilder extends NetObject  {
      * Invokes the .NET member Where.
      *
      * @param source the argument of type {@code DbExpression}
-     * @param predicate the argument of type {@code Func_2}
+     * @param predicate the argument of type {@code Func_2<DbExpression, DbExpression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -1376,7 +1376,7 @@ public class DbExpressionBuilder extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.Where" target="_top">.NET documentation</a>
      */
-    public static DbFilterExpression Where(DbExpression source, Func_2 predicate) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
+    public static DbFilterExpression Where(DbExpression source, Func_2<DbExpression, DbExpression> predicate) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectWhere = null;
@@ -1459,7 +1459,7 @@ public class DbExpressionBuilder extends NetObject  {
      * Invokes the .NET member Invoke.
      *
      * @param function the argument of type {@code EdmFunction}
-     * @param arguments the argument of type {@code IEnumerable_1}
+     * @param arguments the argument of type {@code IEnumerable_1<DbExpression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -1472,7 +1472,7 @@ public class DbExpressionBuilder extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.Invoke" target="_top">.NET documentation</a>
      */
-    public static DbFunctionExpression Invoke(EdmFunction function, IEnumerable_1 arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public static DbFunctionExpression Invoke(EdmFunction function, IEnumerable_1<DbExpression> arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectInvoke = null;
@@ -1779,7 +1779,7 @@ public class DbExpressionBuilder extends NetObject  {
      *
      * @param left the argument of type {@code DbExpression}
      * @param right the argument of type {@code DbExpression}
-     * @param joinCondition the argument of type {@code Func_3}
+     * @param joinCondition the argument of type {@code Func_3<DbExpression, DbExpression, DbExpression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -1795,7 +1795,7 @@ public class DbExpressionBuilder extends NetObject  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.FullOuterJoin" target="_top">.NET documentation</a>
      */
-    public static DbJoinExpression FullOuterJoin(DbExpression left, DbExpression right, Func_3 joinCondition) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+    public static DbJoinExpression FullOuterJoin(DbExpression left, DbExpression right, Func_3<DbExpression, DbExpression, DbExpression> joinCondition) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectFullOuterJoin = null;
@@ -1853,7 +1853,7 @@ public class DbExpressionBuilder extends NetObject  {
      *
      * @param left the argument of type {@code DbExpression}
      * @param right the argument of type {@code DbExpression}
-     * @param joinCondition the argument of type {@code Func_3}
+     * @param joinCondition the argument of type {@code Func_3<DbExpression, DbExpression, DbExpression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -1869,7 +1869,7 @@ public class DbExpressionBuilder extends NetObject  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.InnerJoin" target="_top">.NET documentation</a>
      */
-    public static DbJoinExpression InnerJoin(DbExpression left, DbExpression right, Func_3 joinCondition) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+    public static DbJoinExpression InnerJoin(DbExpression left, DbExpression right, Func_3<DbExpression, DbExpression, DbExpression> joinCondition) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectInnerJoin = null;
@@ -1927,8 +1927,8 @@ public class DbExpressionBuilder extends NetObject  {
      *
      * @param outer the argument of type {@code DbExpression}
      * @param inner the argument of type {@code DbExpression}
-     * @param outerKey the argument of type {@code Func_2}
-     * @param innerKey the argument of type {@code Func_2}
+     * @param outerKey the argument of type {@code Func_2<DbExpression, DbExpression>}
+     * @param innerKey the argument of type {@code Func_2<DbExpression, DbExpression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -1944,7 +1944,7 @@ public class DbExpressionBuilder extends NetObject  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.Join" target="_top">.NET documentation</a>
      */
-    public static DbJoinExpression Join(DbExpression outer, DbExpression inner, Func_2 outerKey, Func_2 innerKey) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+    public static DbJoinExpression Join(DbExpression outer, DbExpression inner, Func_2<DbExpression, DbExpression> outerKey, Func_2<DbExpression, DbExpression> innerKey) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectJoin = null;
@@ -1964,7 +1964,7 @@ public class DbExpressionBuilder extends NetObject  {
      *
      * @param left the argument of type {@code DbExpression}
      * @param right the argument of type {@code DbExpression}
-     * @param joinCondition the argument of type {@code Func_3}
+     * @param joinCondition the argument of type {@code Func_3<DbExpression, DbExpression, DbExpression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -1980,7 +1980,7 @@ public class DbExpressionBuilder extends NetObject  {
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.LeftOuterJoin" target="_top">.NET documentation</a>
      */
-    public static DbJoinExpression LeftOuterJoin(DbExpression left, DbExpression right, Func_3 joinCondition) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+    public static DbJoinExpression LeftOuterJoin(DbExpression left, DbExpression right, Func_3<DbExpression, DbExpression, DbExpression> joinCondition) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLeftOuterJoin = null;
@@ -2037,7 +2037,7 @@ public class DbExpressionBuilder extends NetObject  {
      * Invokes the .NET member Lambda.
      *
      * @param body the argument of type {@code DbExpression}
-     * @param variables the argument of type {@code IEnumerable_1}
+     * @param variables the argument of type {@code IEnumerable_1<DbVariableReferenceExpression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -2050,7 +2050,7 @@ public class DbExpressionBuilder extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.Lambda" target="_top">.NET documentation</a>
      */
-    public static DbLambda Lambda(DbExpression body, IEnumerable_1 variables) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
+    public static DbLambda Lambda(DbExpression body, IEnumerable_1<DbVariableReferenceExpression> variables) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectLambda = null;
@@ -2101,7 +2101,7 @@ public class DbExpressionBuilder extends NetObject  {
      * Invokes the .NET member Invoke.
      *
      * @param lambda the argument of type {@code DbLambda}
-     * @param arguments the argument of type {@code IEnumerable_1}
+     * @param arguments the argument of type {@code IEnumerable_1<DbExpression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -2114,7 +2114,7 @@ public class DbExpressionBuilder extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.Invoke" target="_top">.NET documentation</a>
      */
-    public static DbLambdaExpression Invoke(DbLambda lambda, IEnumerable_1 arguments) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
+    public static DbLambdaExpression Invoke(DbLambda lambda, IEnumerable_1<DbExpression> arguments) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectInvoke = null;
@@ -2297,7 +2297,7 @@ public class DbExpressionBuilder extends NetObject  {
      * Invokes the .NET member New.
      *
      * @param instanceType the argument of type {@code TypeUsage}
-     * @param arguments the argument of type {@code IEnumerable_1}
+     * @param arguments the argument of type {@code IEnumerable_1<DbExpression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -2311,7 +2311,7 @@ public class DbExpressionBuilder extends NetObject  {
      * @throws system.data.ProviderIncompatibleException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.New" target="_top">.NET documentation</a>
      */
-    public static DbNewInstanceExpression New(TypeUsage instanceType, IEnumerable_1 arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException {
+    public static DbNewInstanceExpression New(TypeUsage instanceType, IEnumerable_1<DbExpression> arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.data.ProviderIncompatibleException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNew = null;
@@ -2362,7 +2362,7 @@ public class DbExpressionBuilder extends NetObject  {
     /**
      * Invokes the .NET member NewCollection.
      *
-     * @param elements the argument of type {@code IEnumerable_1}
+     * @param elements the argument of type {@code IEnumerable_1<DbExpression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -2374,7 +2374,7 @@ public class DbExpressionBuilder extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.NewCollection" target="_top">.NET documentation</a>
      */
-    public static DbNewInstanceExpression NewCollection(IEnumerable_1 elements) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static DbNewInstanceExpression NewCollection(IEnumerable_1<DbExpression> elements) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNewCollection = null;
@@ -2680,8 +2680,8 @@ public class DbExpressionBuilder extends NetObject  {
      * @param <TSelector> the type of the generic argument TSelector
      * @param outer the argument of type {@code DbExpression}
      * @param inner the argument of type {@code DbExpression}
-     * @param outerKey the argument of type {@code Func_2}
-     * @param innerKey the argument of type {@code Func_2}
+     * @param outerKey the argument of type {@code Func_2<DbExpression, DbExpression>}
+     * @param innerKey the argument of type {@code Func_2<DbExpression, DbExpression>}
      * @param selector the argument of type {@code Func_3}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -2700,7 +2700,7 @@ public class DbExpressionBuilder extends NetObject  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.Join" target="_top">.NET documentation</a>
      */
-    public static <TSelector extends IJCOBridgeReflected> DbProjectExpression Join(DbExpression outer, DbExpression inner, Func_2 outerKey, Func_2 innerKey, Func_3 selector) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.data.ProviderIncompatibleException, system.InvalidCastException, system.NullReferenceException {
+    public static <TSelector extends IJCOBridgeReflected> DbProjectExpression Join(DbExpression outer, DbExpression inner, Func_2<DbExpression, DbExpression> outerKey, Func_2<DbExpression, DbExpression> innerKey, Func_3 selector) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.data.ProviderIncompatibleException, system.InvalidCastException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectJoin = null;
@@ -2787,7 +2787,7 @@ public class DbExpressionBuilder extends NetObject  {
      * Invokes the .NET member SelectMany.
      *
      * @param source the argument of type {@code DbExpression}
-     * @param apply the argument of type {@code Func_2}
+     * @param apply the argument of type {@code Func_2<DbExpression, DbExpression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -2803,7 +2803,7 @@ public class DbExpressionBuilder extends NetObject  {
      * @throws system.data.ProviderIncompatibleException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.SelectMany" target="_top">.NET documentation</a>
      */
-    public static DbProjectExpression SelectMany(DbExpression source, Func_2 apply) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.data.ProviderIncompatibleException {
+    public static DbProjectExpression SelectMany(DbExpression source, Func_2<DbExpression, DbExpression> apply) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.data.ProviderIncompatibleException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSelectMany = null;
@@ -2823,7 +2823,7 @@ public class DbExpressionBuilder extends NetObject  {
      *
      * @param <TSelector> the type of the generic argument TSelector
      * @param source the argument of type {@code DbExpression}
-     * @param apply the argument of type {@code Func_2}
+     * @param apply the argument of type {@code Func_2<DbExpression, DbExpression>}
      * @param selector the argument of type {@code Func_3}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -2842,7 +2842,7 @@ public class DbExpressionBuilder extends NetObject  {
      * @throws system.NullReferenceException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.SelectMany" target="_top">.NET documentation</a>
      */
-    public static <TSelector extends IJCOBridgeReflected> DbProjectExpression SelectMany(DbExpression source, Func_2 apply, Func_3 selector) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.data.ProviderIncompatibleException, system.InvalidCastException, system.NullReferenceException {
+    public static <TSelector extends IJCOBridgeReflected> DbProjectExpression SelectMany(DbExpression source, Func_2<DbExpression, DbExpression> apply, Func_3 selector) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.data.ProviderIncompatibleException, system.InvalidCastException, system.NullReferenceException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSelectMany = null;
@@ -2991,7 +2991,7 @@ public class DbExpressionBuilder extends NetObject  {
      * Invokes the .NET member All.
      *
      * @param source the argument of type {@code DbExpression}
-     * @param predicate the argument of type {@code Func_2}
+     * @param predicate the argument of type {@code Func_2<DbExpression, DbExpression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -3005,7 +3005,7 @@ public class DbExpressionBuilder extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.All" target="_top">.NET documentation</a>
      */
-    public static DbQuantifierExpression All(DbExpression source, Func_2 predicate) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
+    public static DbQuantifierExpression All(DbExpression source, Func_2<DbExpression, DbExpression> predicate) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAll = null;
@@ -3058,7 +3058,7 @@ public class DbExpressionBuilder extends NetObject  {
      * Invokes the .NET member Any.
      *
      * @param source the argument of type {@code DbExpression}
-     * @param predicate the argument of type {@code Func_2}
+     * @param predicate the argument of type {@code Func_2<DbExpression, DbExpression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -3072,7 +3072,7 @@ public class DbExpressionBuilder extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.Any" target="_top">.NET documentation</a>
      */
-    public static DbQuantifierExpression Any(DbExpression source, Func_2 predicate) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
+    public static DbQuantifierExpression Any(DbExpression source, Func_2<DbExpression, DbExpression> predicate) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAny = null;
@@ -3125,7 +3125,7 @@ public class DbExpressionBuilder extends NetObject  {
      * Invokes the .NET member CreateRef.
      *
      * @param entitySet the argument of type {@code EntitySet}
-     * @param keyValues the argument of type {@code IEnumerable_1}
+     * @param keyValues the argument of type {@code IEnumerable_1<DbExpression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -3136,7 +3136,7 @@ public class DbExpressionBuilder extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.CreateRef" target="_top">.NET documentation</a>
      */
-    public static DbRefExpression CreateRef(EntitySet entitySet, IEnumerable_1 keyValues) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static DbRefExpression CreateRef(EntitySet entitySet, IEnumerable_1<DbExpression> keyValues) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateRef = null;
@@ -3186,7 +3186,7 @@ public class DbExpressionBuilder extends NetObject  {
      *
      * @param entitySet the argument of type {@code EntitySet}
      * @param entityType the argument of type {@code EntityType}
-     * @param keyValues the argument of type {@code IEnumerable_1}
+     * @param keyValues the argument of type {@code IEnumerable_1<DbExpression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -3199,7 +3199,7 @@ public class DbExpressionBuilder extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.CreateRef" target="_top">.NET documentation</a>
      */
-    public static DbRefExpression CreateRef(EntitySet entitySet, EntityType entityType, IEnumerable_1 keyValues) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public static DbRefExpression CreateRef(EntitySet entitySet, EntityType entityType, IEnumerable_1<DbExpression> keyValues) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectCreateRef = null;
@@ -3449,7 +3449,7 @@ public class DbExpressionBuilder extends NetObject  {
      * Invokes the .NET member Skip.
      *
      * @param input the argument of type {@code DbExpressionBinding}
-     * @param sortOrder the argument of type {@code IEnumerable_1}
+     * @param sortOrder the argument of type {@code IEnumerable_1<DbSortClause>}
      * @param count the argument of type {@code DbExpression}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -3463,7 +3463,7 @@ public class DbExpressionBuilder extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.Skip" target="_top">.NET documentation</a>
      */
-    public static DbSkipExpression Skip(DbExpressionBinding input, IEnumerable_1 sortOrder, DbExpression count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public static DbSkipExpression Skip(DbExpressionBinding input, IEnumerable_1<DbSortClause> sortOrder, DbExpression count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSkip = null;
@@ -3638,7 +3638,7 @@ public class DbExpressionBuilder extends NetObject  {
      * Invokes the .NET member OrderBy.
      *
      * @param source the argument of type {@code DbExpression}
-     * @param sortKey the argument of type {@code Func_2}
+     * @param sortKey the argument of type {@code Func_2<DbExpression, DbExpression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -3652,7 +3652,7 @@ public class DbExpressionBuilder extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.OrderBy" target="_top">.NET documentation</a>
      */
-    public static DbSortExpression OrderBy(DbExpression source, Func_2 sortKey) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
+    public static DbSortExpression OrderBy(DbExpression source, Func_2<DbExpression, DbExpression> sortKey) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOrderBy = null;
@@ -3671,7 +3671,7 @@ public class DbExpressionBuilder extends NetObject  {
      * Invokes the .NET member OrderBy.
      *
      * @param source the argument of type {@code DbExpression}
-     * @param sortKey the argument of type {@code Func_2}
+     * @param sortKey the argument of type {@code Func_2<DbExpression, DbExpression>}
      * @param collation the argument of type {@code java.lang.String}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -3686,7 +3686,7 @@ public class DbExpressionBuilder extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.OrderBy" target="_top">.NET documentation</a>
      */
-    public static DbSortExpression OrderBy(DbExpression source, Func_2 sortKey, java.lang.String collation) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
+    public static DbSortExpression OrderBy(DbExpression source, Func_2<DbExpression, DbExpression> sortKey, java.lang.String collation) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOrderBy = null;
@@ -3705,7 +3705,7 @@ public class DbExpressionBuilder extends NetObject  {
      * Invokes the .NET member OrderByDescending.
      *
      * @param source the argument of type {@code DbExpression}
-     * @param sortKey the argument of type {@code Func_2}
+     * @param sortKey the argument of type {@code Func_2<DbExpression, DbExpression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -3719,7 +3719,7 @@ public class DbExpressionBuilder extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.OrderByDescending" target="_top">.NET documentation</a>
      */
-    public static DbSortExpression OrderByDescending(DbExpression source, Func_2 sortKey) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
+    public static DbSortExpression OrderByDescending(DbExpression source, Func_2<DbExpression, DbExpression> sortKey) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOrderByDescending = null;
@@ -3738,7 +3738,7 @@ public class DbExpressionBuilder extends NetObject  {
      * Invokes the .NET member OrderByDescending.
      *
      * @param source the argument of type {@code DbExpression}
-     * @param sortKey the argument of type {@code Func_2}
+     * @param sortKey the argument of type {@code Func_2<DbExpression, DbExpression>}
      * @param collation the argument of type {@code java.lang.String}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -3753,7 +3753,7 @@ public class DbExpressionBuilder extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.OrderByDescending" target="_top">.NET documentation</a>
      */
-    public static DbSortExpression OrderByDescending(DbExpression source, Func_2 sortKey, java.lang.String collation) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
+    public static DbSortExpression OrderByDescending(DbExpression source, Func_2<DbExpression, DbExpression> sortKey, java.lang.String collation) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectOrderByDescending = null;
@@ -3772,7 +3772,7 @@ public class DbExpressionBuilder extends NetObject  {
      * Invokes the .NET member Sort.
      *
      * @param input the argument of type {@code DbExpressionBinding}
-     * @param sortOrder the argument of type {@code IEnumerable_1}
+     * @param sortOrder the argument of type {@code IEnumerable_1<DbSortClause>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -3785,7 +3785,7 @@ public class DbExpressionBuilder extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.Sort" target="_top">.NET documentation</a>
      */
-    public static DbSortExpression Sort(DbExpressionBinding input, IEnumerable_1 sortOrder) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public static DbSortExpression Sort(DbExpressionBinding input, IEnumerable_1<DbSortClause> sortOrder) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectSort = null;
@@ -3804,7 +3804,7 @@ public class DbExpressionBuilder extends NetObject  {
      * Invokes the .NET member ThenBy.
      *
      * @param source the argument of type {@code DbSortExpression}
-     * @param sortKey the argument of type {@code Func_2}
+     * @param sortKey the argument of type {@code Func_2<DbExpression, DbExpression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -3815,7 +3815,7 @@ public class DbExpressionBuilder extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.ThenBy" target="_top">.NET documentation</a>
      */
-    public static DbSortExpression ThenBy(DbSortExpression source, Func_2 sortKey) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static DbSortExpression ThenBy(DbSortExpression source, Func_2<DbExpression, DbExpression> sortKey) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectThenBy = null;
@@ -3834,7 +3834,7 @@ public class DbExpressionBuilder extends NetObject  {
      * Invokes the .NET member ThenBy.
      *
      * @param source the argument of type {@code DbSortExpression}
-     * @param sortKey the argument of type {@code Func_2}
+     * @param sortKey the argument of type {@code Func_2<DbExpression, DbExpression>}
      * @param collation the argument of type {@code java.lang.String}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -3846,7 +3846,7 @@ public class DbExpressionBuilder extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.ThenBy" target="_top">.NET documentation</a>
      */
-    public static DbSortExpression ThenBy(DbSortExpression source, Func_2 sortKey, java.lang.String collation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static DbSortExpression ThenBy(DbSortExpression source, Func_2<DbExpression, DbExpression> sortKey, java.lang.String collation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectThenBy = null;
@@ -3865,7 +3865,7 @@ public class DbExpressionBuilder extends NetObject  {
      * Invokes the .NET member ThenByDescending.
      *
      * @param source the argument of type {@code DbSortExpression}
-     * @param sortKey the argument of type {@code Func_2}
+     * @param sortKey the argument of type {@code Func_2<DbExpression, DbExpression>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -3876,7 +3876,7 @@ public class DbExpressionBuilder extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.ThenByDescending" target="_top">.NET documentation</a>
      */
-    public static DbSortExpression ThenByDescending(DbSortExpression source, Func_2 sortKey) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static DbSortExpression ThenByDescending(DbSortExpression source, Func_2<DbExpression, DbExpression> sortKey) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectThenByDescending = null;
@@ -3895,7 +3895,7 @@ public class DbExpressionBuilder extends NetObject  {
      * Invokes the .NET member ThenByDescending.
      *
      * @param source the argument of type {@code DbSortExpression}
-     * @param sortKey the argument of type {@code Func_2}
+     * @param sortKey the argument of type {@code Func_2<DbExpression, DbExpression>}
      * @param collation the argument of type {@code java.lang.String}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
@@ -3907,7 +3907,7 @@ public class DbExpressionBuilder extends NetObject  {
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Common.CommandTrees.ExpressionBuilder.DbExpressionBuilder.ThenByDescending" target="_top">.NET documentation</a>
      */
-    public static DbSortExpression ThenByDescending(DbSortExpression source, Func_2 sortKey, java.lang.String collation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public static DbSortExpression ThenByDescending(DbSortExpression source, Func_2<DbExpression, DbExpression> sortKey, java.lang.String collation) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectThenByDescending = null;

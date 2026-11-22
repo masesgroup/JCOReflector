@@ -40,7 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.xml.linq.XAttribute;
+import system.xml.linq.XElement;
 import system.xml.linq.XName;
+import system.xml.linq.XNode;
 
 
 /**
@@ -160,13 +163,13 @@ public class Extensions extends NetObject  {
     /**
      * Invokes the .NET member Attributes.
      *
-     * @param source the argument of type {@code IEnumerable_1}
+     * @param source the argument of type {@code IEnumerable_1<XElement>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.Extensions.Attributes" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 Attributes(IEnumerable_1 source) throws Throwable, system.ArgumentNullException {
+    public static IEnumerable_1<XAttribute> Attributes(IEnumerable_1<XElement> source) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAttributes = null;
@@ -184,14 +187,14 @@ public class Extensions extends NetObject  {
     /**
      * Invokes the .NET member Attributes.
      *
-     * @param source the argument of type {@code IEnumerable_1}
+     * @param source the argument of type {@code IEnumerable_1<XElement>}
      * @param name the argument of type {@code XName}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.Extensions.Attributes" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 Attributes(IEnumerable_1 source, XName name) throws Throwable, system.ArgumentNullException {
+    public static IEnumerable_1<XAttribute> Attributes(IEnumerable_1<XElement> source, XName name) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAttributes = null;
@@ -216,7 +219,7 @@ public class Extensions extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.Extensions.Ancestors" target="_top">.NET documentation</a>
      */
-    public static <T extends IJCOBridgeReflected> IEnumerable_1 Ancestors(IEnumerable_1 source) throws Throwable, system.ArgumentNullException {
+    public static <T extends IJCOBridgeReflected> IEnumerable_1<XElement> Ancestors(IEnumerable_1 source) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAncestors = null;
@@ -242,7 +245,7 @@ public class Extensions extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.Extensions.Ancestors" target="_top">.NET documentation</a>
      */
-    public static <T extends IJCOBridgeReflected> IEnumerable_1 Ancestors(IEnumerable_1 source, XName name) throws Throwable, system.ArgumentNullException {
+    public static <T extends IJCOBridgeReflected> IEnumerable_1<XElement> Ancestors(IEnumerable_1 source, XName name) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAncestors = null;
@@ -260,13 +263,13 @@ public class Extensions extends NetObject  {
     /**
      * Invokes the .NET member AncestorsAndSelf.
      *
-     * @param source the argument of type {@code IEnumerable_1}
+     * @param source the argument of type {@code IEnumerable_1<XElement>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.Extensions.AncestorsAndSelf" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 AncestorsAndSelf(IEnumerable_1 source) throws Throwable, system.ArgumentNullException {
+    public static IEnumerable_1<XElement> AncestorsAndSelf(IEnumerable_1<XElement> source) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAncestorsAndSelf = null;
@@ -284,14 +287,14 @@ public class Extensions extends NetObject  {
     /**
      * Invokes the .NET member AncestorsAndSelf.
      *
-     * @param source the argument of type {@code IEnumerable_1}
+     * @param source the argument of type {@code IEnumerable_1<XElement>}
      * @param name the argument of type {@code XName}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.Extensions.AncestorsAndSelf" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 AncestorsAndSelf(IEnumerable_1 source, XName name) throws Throwable, system.ArgumentNullException {
+    public static IEnumerable_1<XElement> AncestorsAndSelf(IEnumerable_1<XElement> source, XName name) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectAncestorsAndSelf = null;
@@ -316,7 +319,7 @@ public class Extensions extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.Extensions.Descendants" target="_top">.NET documentation</a>
      */
-    public static <T extends IJCOBridgeReflected> IEnumerable_1 Descendants(IEnumerable_1 source) throws Throwable, system.ArgumentNullException {
+    public static <T extends IJCOBridgeReflected> IEnumerable_1<XElement> Descendants(IEnumerable_1 source) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDescendants = null;
@@ -342,7 +345,7 @@ public class Extensions extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.Extensions.Descendants" target="_top">.NET documentation</a>
      */
-    public static <T extends IJCOBridgeReflected> IEnumerable_1 Descendants(IEnumerable_1 source, XName name) throws Throwable, system.ArgumentNullException {
+    public static <T extends IJCOBridgeReflected> IEnumerable_1<XElement> Descendants(IEnumerable_1 source, XName name) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDescendants = null;
@@ -360,13 +363,13 @@ public class Extensions extends NetObject  {
     /**
      * Invokes the .NET member DescendantsAndSelf.
      *
-     * @param source the argument of type {@code IEnumerable_1}
+     * @param source the argument of type {@code IEnumerable_1<XElement>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.Extensions.DescendantsAndSelf" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 DescendantsAndSelf(IEnumerable_1 source) throws Throwable, system.ArgumentNullException {
+    public static IEnumerable_1<XElement> DescendantsAndSelf(IEnumerable_1<XElement> source) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDescendantsAndSelf = null;
@@ -384,14 +387,14 @@ public class Extensions extends NetObject  {
     /**
      * Invokes the .NET member DescendantsAndSelf.
      *
-     * @param source the argument of type {@code IEnumerable_1}
+     * @param source the argument of type {@code IEnumerable_1<XElement>}
      * @param name the argument of type {@code XName}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.Extensions.DescendantsAndSelf" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 DescendantsAndSelf(IEnumerable_1 source, XName name) throws Throwable, system.ArgumentNullException {
+    public static IEnumerable_1<XElement> DescendantsAndSelf(IEnumerable_1<XElement> source, XName name) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDescendantsAndSelf = null;
@@ -416,7 +419,7 @@ public class Extensions extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.Extensions.Elements" target="_top">.NET documentation</a>
      */
-    public static <T extends IJCOBridgeReflected> IEnumerable_1 Elements(IEnumerable_1 source) throws Throwable, system.ArgumentNullException {
+    public static <T extends IJCOBridgeReflected> IEnumerable_1<XElement> Elements(IEnumerable_1 source) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectElements = null;
@@ -442,7 +445,7 @@ public class Extensions extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.Extensions.Elements" target="_top">.NET documentation</a>
      */
-    public static <T extends IJCOBridgeReflected> IEnumerable_1 Elements(IEnumerable_1 source, XName name) throws Throwable, system.ArgumentNullException {
+    public static <T extends IJCOBridgeReflected> IEnumerable_1<XElement> Elements(IEnumerable_1 source, XName name) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectElements = null;
@@ -467,7 +470,7 @@ public class Extensions extends NetObject  {
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.Extensions.DescendantNodes" target="_top">.NET documentation</a>
      */
-    public static <T extends IJCOBridgeReflected> IEnumerable_1 DescendantNodes(IEnumerable_1 source) throws Throwable, system.ArgumentNullException {
+    public static <T extends IJCOBridgeReflected> IEnumerable_1<XNode> DescendantNodes(IEnumerable_1 source) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDescendantNodes = null;
@@ -485,13 +488,13 @@ public class Extensions extends NetObject  {
     /**
      * Invokes the .NET member DescendantNodesAndSelf.
      *
-     * @param source the argument of type {@code IEnumerable_1}
+     * @param source the argument of type {@code IEnumerable_1<XElement>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.Extensions.DescendantNodesAndSelf" target="_top">.NET documentation</a>
      */
-    public static IEnumerable_1 DescendantNodesAndSelf(IEnumerable_1 source) throws Throwable, system.ArgumentNullException {
+    public static IEnumerable_1<XNode> DescendantNodesAndSelf(IEnumerable_1<XElement> source) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectDescendantNodesAndSelf = null;
@@ -515,7 +518,7 @@ public class Extensions extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.Extensions.Nodes" target="_top">.NET documentation</a>
      */
-    public static <T extends IJCOBridgeReflected> IEnumerable_1 Nodes(IEnumerable_1 source) throws Throwable {
+    public static <T extends IJCOBridgeReflected> IEnumerable_1<XNode> Nodes(IEnumerable_1 source) throws Throwable {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectNodes = null;
@@ -557,7 +560,7 @@ public class Extensions extends NetObject  {
     /**
      * Invokes the .NET member Remove.
      *
-     * @param source the argument of type {@code IEnumerable_1}
+     * @param source the argument of type {@code IEnumerable_1<XAttribute>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentNullException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -571,7 +574,7 @@ public class Extensions extends NetObject  {
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Xml.Linq.Extensions.Remove" target="_top">.NET documentation</a>
      */
-    public static void Remove(IEnumerable_1 source) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static void Remove(IEnumerable_1<XAttribute> source) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.identitymodel.tokens.SecurityKeyIdentifier;
 import system.collections.generic.ICollection_1;
 import system.collections.generic.ICollection_1Implementation;
+import system.identitymodel.metadata.EncryptionMethod;
 import system.identitymodel.metadata.KeyType;
 
 
@@ -200,7 +201,7 @@ public class KeyDescriptor extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Metadata.KeyDescriptor.EncryptionMethods" target="_top">.NET documentation</a>
      */
-    public ICollection_1 getEncryptionMethods() throws Throwable {
+    public ICollection_1<EncryptionMethod> getEncryptionMethods() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectEncryptionMethods = null;

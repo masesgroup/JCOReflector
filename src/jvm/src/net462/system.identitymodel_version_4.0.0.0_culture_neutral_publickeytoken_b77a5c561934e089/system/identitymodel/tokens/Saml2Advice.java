@@ -39,6 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.objectmodel.Collection_1;
+import system.identitymodel.tokens.Saml2Assertion;
+import system.identitymodel.tokens.Saml2Id;
+import system.Uri;
 
 
 /**
@@ -180,7 +183,7 @@ public class Saml2Advice extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2Advice.Assertions" target="_top">.NET documentation</a>
      */
-    public Collection_1 getAssertions() throws Throwable {
+    public Collection_1<Saml2Assertion> getAssertions() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAssertions = null;
@@ -202,7 +205,7 @@ public class Saml2Advice extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2Advice.AssertionIdReferences" target="_top">.NET documentation</a>
      */
-    public Collection_1 getAssertionIdReferences() throws Throwable {
+    public Collection_1<Saml2Id> getAssertionIdReferences() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAssertionIdReferences = null;
@@ -224,7 +227,7 @@ public class Saml2Advice extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.IdentityModel.Tokens.Saml2Advice.AssertionUriReferences" target="_top">.NET documentation</a>
      */
-    public Collection_1 getAssertionUriReferences() throws Throwable {
+    public Collection_1<Uri> getAssertionUriReferences() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAssertionUriReferences = null;

@@ -41,7 +41,9 @@ import java.util.ArrayList;
 import system.data.metadata.edm.ItemCollection;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.xml.XmlReader;
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.data.metadata.edm.PrimitiveType;
 
 
 /**
@@ -158,7 +160,7 @@ public class StoreItemCollection extends system.data.metadata.edm.ItemCollection
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param xmlReaders the argument of type {@code IEnumerable_1}
+     * @param xmlReaders the argument of type {@code IEnumerable_1<XmlReader>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
@@ -181,7 +183,7 @@ public class StoreItemCollection extends system.data.metadata.edm.ItemCollection
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.StoreItemCollection.-ctor" target="_top">.NET documentation</a>
      */
-    public StoreItemCollection(IEnumerable_1 xmlReaders) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.data.ProviderIncompatibleException, system.configuration.ConfigurationException, system.xml.XmlException, system.MulticastNotSupportedException, system.threading.SynchronizationLockException, system.data.MetadataException, system.InvalidCastException, system.collections.generic.KeyNotFoundException {
+    public StoreItemCollection(IEnumerable_1<XmlReader> xmlReaders) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.data.ProviderIncompatibleException, system.configuration.ConfigurationException, system.xml.XmlException, system.MulticastNotSupportedException, system.threading.SynchronizationLockException, system.data.MetadataException, system.InvalidCastException, system.collections.generic.KeyNotFoundException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -246,7 +248,7 @@ public class StoreItemCollection extends system.data.metadata.edm.ItemCollection
      * @throws system.ArgumentException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Data.Metadata.Edm.StoreItemCollection.GetPrimitiveTypes" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 GetPrimitiveTypes() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public ReadOnlyCollection_1<PrimitiveType> GetPrimitiveTypes() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetPrimitiveTypes = null;

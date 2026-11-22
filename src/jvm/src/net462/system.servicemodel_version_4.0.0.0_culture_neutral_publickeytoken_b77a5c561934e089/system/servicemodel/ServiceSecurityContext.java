@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.objectmodel.ReadOnlyCollection_1;
+import system.identitymodel.policy.IAuthorizationPolicy;
+import system.identitymodel.policy.IAuthorizationPolicyImplementation;
 import system.identitymodel.policy.AuthorizationContext;
 import system.security.principal.IIdentity;
 import system.security.principal.IIdentityImplementation;
@@ -160,7 +162,7 @@ public class ServiceSecurityContext extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param authorizationPolicies the argument of type {@code ReadOnlyCollection_1}
+     * @param authorizationPolicies the argument of type {@code ReadOnlyCollection_1<IAuthorizationPolicy>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -175,7 +177,7 @@ public class ServiceSecurityContext extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceSecurityContext.-ctor" target="_top">.NET documentation</a>
      */
-    public ServiceSecurityContext(ReadOnlyCollection_1 authorizationPolicies) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+    public ServiceSecurityContext(ReadOnlyCollection_1<IAuthorizationPolicy> authorizationPolicies) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -218,7 +220,7 @@ public class ServiceSecurityContext extends NetObject  {
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param authorizationContext the argument of type {@code AuthorizationContext}
-     * @param authorizationPolicies the argument of type {@code ReadOnlyCollection_1}
+     * @param authorizationPolicies the argument of type {@code ReadOnlyCollection_1<IAuthorizationPolicy>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -233,7 +235,7 @@ public class ServiceSecurityContext extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceSecurityContext.-ctor" target="_top">.NET documentation</a>
      */
-    public ServiceSecurityContext(AuthorizationContext authorizationContext, ReadOnlyCollection_1 authorizationPolicies) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+    public ServiceSecurityContext(AuthorizationContext authorizationContext, ReadOnlyCollection_1<IAuthorizationPolicy> authorizationPolicies) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -288,7 +290,7 @@ public class ServiceSecurityContext extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceSecurityContext.AuthorizationPolicies" target="_top">.NET documentation</a>
      */
-    public ReadOnlyCollection_1 getAuthorizationPolicies() throws Throwable {
+    public ReadOnlyCollection_1<IAuthorizationPolicy> getAuthorizationPolicies() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectAuthorizationPolicies = null;
@@ -310,7 +312,7 @@ public class ServiceSecurityContext extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.ServiceSecurityContext.AuthorizationPolicies" target="_top">.NET documentation</a>
      */
-    public void setAuthorizationPolicies(ReadOnlyCollection_1 AuthorizationPolicies) throws Throwable {
+    public void setAuthorizationPolicies(ReadOnlyCollection_1<IAuthorizationPolicy> AuthorizationPolicies) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

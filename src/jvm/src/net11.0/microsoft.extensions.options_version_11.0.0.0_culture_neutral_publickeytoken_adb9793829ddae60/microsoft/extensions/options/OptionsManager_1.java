@@ -156,7 +156,7 @@ public class OptionsManager_1<TOptions extends IJCOBridgeReflected> extends NetO
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param factory the argument of type {@code IOptionsFactory_1}
+     * @param factory the argument of type {@code IOptionsFactory_1<TOptions>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -167,7 +167,7 @@ public class OptionsManager_1<TOptions extends IJCOBridgeReflected> extends NetO
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Options.OptionsManager-1.-ctor" target="_top">.NET documentation</a>
      */
-    public OptionsManager_1(IOptionsFactory_1 factory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
+    public OptionsManager_1(IOptionsFactory_1<TOptions> factory) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

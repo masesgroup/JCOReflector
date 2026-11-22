@@ -42,11 +42,11 @@ import system.windows.annotations.storage.AnnotationStore;
 import system.io.Stream;
 import system.collections.generic.IDictionary_2;
 import system.collections.generic.IDictionary_2Implementation;
+import system.Uri;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
-import system.Uri;
-import system.windows.annotations.ContentLocator;
 import system.windows.annotations.Annotation;
+import system.windows.annotations.ContentLocator;
 import system.Guid;
 
 
@@ -165,7 +165,7 @@ public class XmlStreamStore extends system.windows.annotations.storage.Annotatio
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param stream the argument of type {@code Stream}
-     * @param knownNamespaces the argument of type {@code IDictionary_2}
+     * @param knownNamespaces the argument of type {@code IDictionary_2<Uri, IList_1<Uri>>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentOutOfRangeException if the .NET member raises it
@@ -185,7 +185,7 @@ public class XmlStreamStore extends system.windows.annotations.storage.Annotatio
      * @throws system.UnauthorizedAccessException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Annotations.Storage.XmlStreamStore.-ctor" target="_top">.NET documentation</a>
      */
-    public XmlStreamStore(Stream stream, IDictionary_2 knownNamespaces) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.UriFormatException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.xpath.XPathException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
+    public XmlStreamStore(Stream stream, IDictionary_2<Uri, IList_1<Uri>> knownNamespaces) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.UriFormatException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.xpath.XPathException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -249,7 +249,7 @@ public class XmlStreamStore extends system.windows.annotations.storage.Annotatio
      * @throws system.collections.generic.KeyNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Annotations.Storage.XmlStreamStore.GetWellKnownCompatibleNamespaces" target="_top">.NET documentation</a>
      */
-    public static IList_1 GetWellKnownCompatibleNamespaces(Uri name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
+    public static IList_1<Uri> GetWellKnownCompatibleNamespaces(Uri name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectGetWellKnownCompatibleNamespaces = null;
@@ -293,7 +293,7 @@ public class XmlStreamStore extends system.windows.annotations.storage.Annotatio
      * @throws system.diagnostics.UnreachableException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Annotations.Storage.XmlStreamStore.GetAnnotations" target="_top">.NET documentation</a>
      */
-    public IList_1 GetAnnotations() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.ArrayTypeMismatchException, system.io.IOException, system.UnauthorizedAccessException, system.InvalidOperationException, system.NotSupportedException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.FormatException, system.xml.XmlException, system.OverflowException, system.diagnostics.UnreachableException {
+    public IList_1<Annotation> GetAnnotations() throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.ArrayTypeMismatchException, system.io.IOException, system.UnauthorizedAccessException, system.InvalidOperationException, system.NotSupportedException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException, system.IndexOutOfRangeException, system.xml.xpath.XPathException, system.FormatException, system.xml.XmlException, system.OverflowException, system.diagnostics.UnreachableException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetAnnotations = null;
@@ -335,7 +335,7 @@ public class XmlStreamStore extends system.windows.annotations.storage.Annotatio
      * @throws system.diagnostics.UnreachableException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Annotations.Storage.XmlStreamStore.GetAnnotations" target="_top">.NET documentation</a>
      */
-    public IList_1 GetAnnotations(ContentLocator anchorLocator) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.InvalidCastException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.xml.xpath.XPathException, system.xml.XmlException, system.diagnostics.UnreachableException {
+    public IList_1<Annotation> GetAnnotations(ContentLocator anchorLocator) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.InvalidCastException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.xml.xpath.XPathException, system.xml.XmlException, system.diagnostics.UnreachableException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetAnnotations = null;
@@ -514,7 +514,7 @@ public class XmlStreamStore extends system.windows.annotations.storage.Annotatio
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Annotations.Storage.XmlStreamStore.IgnoredNamespaces" target="_top">.NET documentation</a>
      */
-    public IList_1 getIgnoredNamespaces() throws Throwable {
+    public IList_1<Uri> getIgnoredNamespaces() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIgnoredNamespaces = null;
@@ -541,7 +541,7 @@ public class XmlStreamStore extends system.windows.annotations.storage.Annotatio
      * @throws system.ArgumentNullException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Windows.Annotations.Storage.XmlStreamStore.WellKnownNamespaces" target="_top">.NET documentation</a>
      */
-    public static IList_1 getWellKnownNamespaces() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public static IList_1<Uri> getWellKnownNamespaces() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         java.lang.Object retObjectWellKnownNamespaces = null;

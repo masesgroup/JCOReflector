@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.Nullable_1;
+import system.net.security.ProtectionLevel;
 import system.security.principal.TokenImpersonationLevel;
 import system.servicemodel.Endpoint;
 import system.Uri;
@@ -259,7 +260,7 @@ public class SendSettings extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.SendSettings.ProtectionLevel" target="_top">.NET documentation</a>
      */
-    public Nullable_1 getProtectionLevel() throws Throwable {
+    public Nullable_1<ProtectionLevel> getProtectionLevel() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectProtectionLevel = null;
@@ -281,7 +282,7 @@ public class SendSettings extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.Activities.SendSettings.ProtectionLevel" target="_top">.NET documentation</a>
      */
-    public void setProtectionLevel(Nullable_1 ProtectionLevel) throws Throwable {
+    public void setProtectionLevel(Nullable_1<ProtectionLevel> ProtectionLevel) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

@@ -42,6 +42,7 @@ import system.windows.WeakEventManager;
 import system.componentmodel.INotifyPropertyChanged;
 import system.componentmodel.INotifyPropertyChangedImplementation;
 import system.EventHandler_1;
+import system.componentmodel.PropertyChangedEventArgs;
 import system.windows.IWeakEventListener;
 import system.windows.IWeakEventListenerImplementation;
 
@@ -166,7 +167,7 @@ public class PropertyChangedEventManager extends system.windows.WeakEventManager
      * Invokes the .NET member AddHandler.
      *
      * @param source the argument of type {@code INotifyPropertyChanged}
-     * @param handler the argument of type {@code EventHandler_1}
+     * @param handler the argument of type {@code EventHandler_1<PropertyChangedEventArgs>}
      * @param propertyName the argument of type {@code java.lang.String}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -184,7 +185,7 @@ public class PropertyChangedEventManager extends system.windows.WeakEventManager
      * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.PropertyChangedEventManager.AddHandler" target="_top">.NET documentation</a>
      */
-    public static void AddHandler(INotifyPropertyChanged source, EventHandler_1 handler, java.lang.String propertyName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.OverflowException {
+    public static void AddHandler(INotifyPropertyChanged source, EventHandler_1<PropertyChangedEventArgs> handler, java.lang.String propertyName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {
@@ -230,7 +231,7 @@ public class PropertyChangedEventManager extends system.windows.WeakEventManager
      * Invokes the .NET member RemoveHandler.
      *
      * @param source the argument of type {@code INotifyPropertyChanged}
-     * @param handler the argument of type {@code EventHandler_1}
+     * @param handler the argument of type {@code EventHandler_1<PropertyChangedEventArgs>}
      * @param propertyName the argument of type {@code java.lang.String}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @throws system.ArgumentException if the .NET member raises it
@@ -248,7 +249,7 @@ public class PropertyChangedEventManager extends system.windows.WeakEventManager
      * @throws system.OverflowException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ComponentModel.PropertyChangedEventManager.RemoveHandler" target="_top">.NET documentation</a>
      */
-    public static void RemoveHandler(INotifyPropertyChanged source, EventHandler_1 handler, java.lang.String propertyName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.OverflowException {
+    public static void RemoveHandler(INotifyPropertyChanged source, EventHandler_1<PropertyChangedEventArgs> handler, java.lang.String propertyName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException, system.componentmodel.Win32Exception, system.OverflowException {
         if (classType == null)
             throw new java.lang.UnsupportedOperationException("classType is null.");
         try {

@@ -40,8 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.activities.Variable;
 import system.linq.expressions.Expression_1;
-import system.activities.Location_1;
+import system.Func_2;
 import system.activities.ActivityContext;
+import system.activities.Location_1;
 import system.activities.Activity_1;
 
 
@@ -175,7 +176,7 @@ public class Variable_1<T extends IJCOBridgeReflected> extends system.activities
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param defaultExpression the argument of type {@code Expression_1}
+     * @param defaultExpression the argument of type {@code Expression_1<Func_2<ActivityContext, T>>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -188,7 +189,7 @@ public class Variable_1<T extends IJCOBridgeReflected> extends system.activities
      * @throws system.globalization.CultureNotFoundException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Variable-1.-ctor" target="_top">.NET documentation</a>
      */
-    public Variable_1(Expression_1 defaultExpression) throws Throwable, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+    public Variable_1(Expression_1<Func_2<ActivityContext, T>> defaultExpression) throws Throwable, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -224,7 +225,7 @@ public class Variable_1<T extends IJCOBridgeReflected> extends system.activities
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param name the argument of type {@code java.lang.String}
-     * @param defaultExpression the argument of type {@code Expression_1}
+     * @param defaultExpression the argument of type {@code Expression_1<Func_2<ActivityContext, T>>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.InvalidOperationException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -234,7 +235,7 @@ public class Variable_1<T extends IJCOBridgeReflected> extends system.activities
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Variable-1.-ctor" target="_top">.NET documentation</a>
      */
-    public Variable_1(java.lang.String name, Expression_1 defaultExpression) throws Throwable, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public Variable_1(java.lang.String name, Expression_1<Func_2<ActivityContext, T>> defaultExpression) throws Throwable, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -296,7 +297,7 @@ public class Variable_1<T extends IJCOBridgeReflected> extends system.activities
      * @throws system.ObjectDisposedException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Variable-1.GetLocationNewVariable_1" target="_top">.NET documentation</a>
      */
-    public Location_1 GetLocationNewVariable_1(ActivityContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public Location_1<T> GetLocationNewVariable_1(ActivityContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetLocation = null;

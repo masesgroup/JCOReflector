@@ -159,7 +159,7 @@ public class FaultReason extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param translations the argument of type {@code IEnumerable_1}
+     * @param translations the argument of type {@code IEnumerable_1<FaultReasonText>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.IndexOutOfRangeException if the .NET member raises it
@@ -174,7 +174,7 @@ public class FaultReason extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.FaultReason.-ctor" target="_top">.NET documentation</a>
      */
-    public FaultReason(IEnumerable_1 translations) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
+    public FaultReason(IEnumerable_1<FaultReasonText> translations) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -332,7 +332,7 @@ public class FaultReason extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.ServiceModel.FaultReason.Translations" target="_top">.NET documentation</a>
      */
-    public SynchronizedReadOnlyCollection_1 getTranslations() throws Throwable {
+    public SynchronizedReadOnlyCollection_1<FaultReasonText> getTranslations() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectTranslations = null;

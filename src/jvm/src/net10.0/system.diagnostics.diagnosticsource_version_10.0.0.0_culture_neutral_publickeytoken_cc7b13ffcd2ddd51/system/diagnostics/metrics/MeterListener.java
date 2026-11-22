@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.diagnostics.metrics.Instrument;
 import system.Action_2;
+import system.diagnostics.metrics.MeterListener;
+import system.Object;
 
 
 /**
@@ -335,15 +337,15 @@ public class MeterListener extends NetObject implements AutoCloseable {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.MeterListener.InstrumentPublished" target="_top">.NET documentation</a>
      */
-    public Action_2 getInstrumentPublished() throws Throwable {
+    public Action_2<Instrument, MeterListener> getInstrumentPublished() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectInstrumentPublished = null;
         try {
             retObjectInstrumentPublished = classInstance.Get("InstrumentPublished");
-            return (Action_2)retObjectInstrumentPublished;
+            return (Action_2<Instrument, MeterListener>)retObjectInstrumentPublished;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_2", retObjectInstrumentPublished != null ? retObjectInstrumentPublished.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_2<Instrument, MeterListener>", retObjectInstrumentPublished != null ? retObjectInstrumentPublished.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,7 +358,7 @@ public class MeterListener extends NetObject implements AutoCloseable {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.MeterListener.InstrumentPublished" target="_top">.NET documentation</a>
      */
-    public void setInstrumentPublished(Action_2 InstrumentPublished) throws Throwable {
+    public void setInstrumentPublished(Action_2<Instrument, MeterListener> InstrumentPublished) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -373,15 +375,15 @@ public class MeterListener extends NetObject implements AutoCloseable {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.MeterListener.MeasurementsCompleted" target="_top">.NET documentation</a>
      */
-    public Action_2 getMeasurementsCompleted() throws Throwable {
+    public Action_2<Instrument, Object> getMeasurementsCompleted() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectMeasurementsCompleted = null;
         try {
             retObjectMeasurementsCompleted = classInstance.Get("MeasurementsCompleted");
-            return (Action_2)retObjectMeasurementsCompleted;
+            return (Action_2<Instrument, Object>)retObjectMeasurementsCompleted;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_2", retObjectMeasurementsCompleted != null ? retObjectMeasurementsCompleted.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Action_2<Instrument, Object>", retObjectMeasurementsCompleted != null ? retObjectMeasurementsCompleted.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -394,7 +396,7 @@ public class MeterListener extends NetObject implements AutoCloseable {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Diagnostics.Metrics.MeterListener.MeasurementsCompleted" target="_top">.NET documentation</a>
      */
-    public void setMeasurementsCompleted(Action_2 MeasurementsCompleted) throws Throwable {
+    public void setMeasurementsCompleted(Action_2<Instrument, Object> MeasurementsCompleted) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

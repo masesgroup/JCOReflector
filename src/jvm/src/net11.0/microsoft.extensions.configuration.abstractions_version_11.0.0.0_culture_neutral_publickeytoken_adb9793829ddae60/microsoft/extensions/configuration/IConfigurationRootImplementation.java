@@ -46,6 +46,8 @@ import microsoft.extensions.primitives.IChangeToken;
 import microsoft.extensions.primitives.IChangeTokenImplementation;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import microsoft.extensions.configuration.IConfigurationProvider;
+import microsoft.extensions.configuration.IConfigurationProviderImplementation;
 
 
 /**
@@ -203,7 +205,7 @@ public class IConfigurationRootImplementation extends NetObject implements IConf
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Configuration.IConfigurationRoot.GetChildren" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 GetChildren() throws Throwable {
+    public IEnumerable_1<IConfigurationSection> GetChildren() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectGetChildren = null;
@@ -245,7 +247,7 @@ public class IConfigurationRootImplementation extends NetObject implements IConf
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/Microsoft.Extensions.Configuration.IConfigurationRoot.Providers" target="_top">.NET documentation</a>
      */
-    public IEnumerable_1 getProviders() throws Throwable {
+    public IEnumerable_1<IConfigurationProvider> getProviders() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectProviders = null;

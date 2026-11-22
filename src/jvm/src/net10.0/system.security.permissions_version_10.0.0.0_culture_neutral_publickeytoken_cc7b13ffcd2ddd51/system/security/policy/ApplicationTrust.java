@@ -43,6 +43,7 @@ import system.ApplicationIdentity;
 import system.security.PermissionSet;
 import system.collections.generic.IEnumerable_1;
 import system.collections.generic.IEnumerable_1Implementation;
+import system.security.policy.StrongName;
 import system.security.SecurityElement;
 import system.collections.generic.IList_1;
 import system.collections.generic.IList_1Implementation;
@@ -194,11 +195,11 @@ public class ApplicationTrust extends system.security.policy.EvidenceBase  {
      * Initializes a new instance by invoking the .NET constructor.
      *
      * @param defaultGrantSet the argument of type {@code PermissionSet}
-     * @param fullTrustAssemblies the argument of type {@code IEnumerable_1}
+     * @param fullTrustAssemblies the argument of type {@code IEnumerable_1<StrongName>}
      * @throws Throwable if the .NET constructor fails
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.ApplicationTrust.-ctor" target="_top">.NET documentation</a>
      */
-    public ApplicationTrust(PermissionSet defaultGrantSet, IEnumerable_1 fullTrustAssemblies) throws Throwable {
+    public ApplicationTrust(PermissionSet defaultGrantSet, IEnumerable_1<StrongName> fullTrustAssemblies) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -377,7 +378,7 @@ public class ApplicationTrust extends system.security.policy.EvidenceBase  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Security.Policy.ApplicationTrust.FullTrustAssemblies" target="_top">.NET documentation</a>
      */
-    public IList_1 getFullTrustAssemblies() throws Throwable {
+    public IList_1<StrongName> getFullTrustAssemblies() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectFullTrustAssemblies = null;

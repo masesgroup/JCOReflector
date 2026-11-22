@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.collections.generic.List_1;
+import system.Object;
 import system.activities.presentation.model.ModelItem;
 import system.windows.Point;
 import system.activities.presentation.WorkflowViewElement;
@@ -151,12 +152,12 @@ public class ICompositeViewImplementation extends NetObject implements IComposit
     /**
      * Invokes the .NET member CanPasteItems.
      *
-     * @param itemsToPaste the argument of type {@code List_1}
+     * @param itemsToPaste the argument of type {@code List_1<Object>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ICompositeView.CanPasteItems" target="_top">.NET documentation</a>
      */
-    public boolean CanPasteItems(List_1 itemsToPaste) throws Throwable {
+    public boolean CanPasteItems(List_1<Object> itemsToPaste) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectCanPasteItems = null;
@@ -173,12 +174,12 @@ public class ICompositeViewImplementation extends NetObject implements IComposit
     /**
      * Invokes the .NET member OnItemsCopied.
      *
-     * @param itemsToCopy the argument of type {@code List_1}
+     * @param itemsToCopy the argument of type {@code List_1<ModelItem>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ICompositeView.OnItemsCopied" target="_top">.NET documentation</a>
      */
-    public NetObject OnItemsCopied(List_1 itemsToCopy) throws Throwable {
+    public NetObject OnItemsCopied(List_1<ModelItem> itemsToCopy) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOnItemsCopied = null;
@@ -196,12 +197,12 @@ public class ICompositeViewImplementation extends NetObject implements IComposit
     /**
      * Invokes the .NET member OnItemsCut.
      *
-     * @param itemsToCut the argument of type {@code List_1}
+     * @param itemsToCut the argument of type {@code List_1<ModelItem>}
      * @return the value returned by the .NET member
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ICompositeView.OnItemsCut" target="_top">.NET documentation</a>
      */
-    public NetObject OnItemsCut(List_1 itemsToCut) throws Throwable {
+    public NetObject OnItemsCut(List_1<ModelItem> itemsToCut) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectOnItemsCut = null;
@@ -236,11 +237,11 @@ public class ICompositeViewImplementation extends NetObject implements IComposit
     /**
      * Invokes the .NET member OnItemsDelete.
      *
-     * @param itemsToDelete the argument of type {@code List_1}
+     * @param itemsToDelete the argument of type {@code List_1<ModelItem>}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ICompositeView.OnItemsDelete" target="_top">.NET documentation</a>
      */
-    public void OnItemsDelete(List_1 itemsToDelete) throws Throwable {
+    public void OnItemsDelete(List_1<ModelItem> itemsToDelete) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {
@@ -253,14 +254,14 @@ public class ICompositeViewImplementation extends NetObject implements IComposit
     /**
      * Invokes the .NET member OnItemsPasted.
      *
-     * @param itemsToPaste the argument of type {@code List_1}
-     * @param metadata the argument of type {@code List_1}
+     * @param itemsToPaste the argument of type {@code List_1<Object>}
+     * @param metadata the argument of type {@code List_1<Object>}
      * @param pastePoint the argument of type {@code Point}
      * @param pastePointReference the argument of type {@code WorkflowViewElement}
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Activities.Presentation.ICompositeView.OnItemsPasted" target="_top">.NET documentation</a>
      */
-    public void OnItemsPasted(List_1 itemsToPaste, List_1 metadata, Point pastePoint, WorkflowViewElement pastePointReference) throws Throwable {
+    public void OnItemsPasted(List_1<Object> itemsToPaste, List_1<Object> metadata, Point pastePoint, WorkflowViewElement pastePointReference) throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         try {

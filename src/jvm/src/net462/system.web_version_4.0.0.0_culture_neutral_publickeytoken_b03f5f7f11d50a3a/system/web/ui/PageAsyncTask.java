@@ -39,7 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.Func_1;
+import system.threading.tasks.Task;
 import system.Func_2;
+import system.threading.CancellationToken;
 import system.web.BeginEventHandler;
 import system.web.EndEventHandler;
 
@@ -158,7 +160,7 @@ public class PageAsyncTask extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param handler the argument of type {@code Func_1}
+     * @param handler the argument of type {@code Func_1<Task>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
@@ -174,7 +176,7 @@ public class PageAsyncTask extends NetObject  {
      * @throws system.IndexOutOfRangeException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageAsyncTask.-ctor" target="_top">.NET documentation</a>
      */
-    public PageAsyncTask(Func_1 handler) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public PageAsyncTask(Func_1<Task> handler) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -187,7 +189,7 @@ public class PageAsyncTask extends NetObject  {
     /**
      * Initializes a new instance by invoking the .NET constructor.
      *
-     * @param handler the argument of type {@code Func_2}
+     * @param handler the argument of type {@code Func_2<CancellationToken, Task>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.configuration.ConfigurationErrorsException if the .NET member raises it
@@ -203,7 +205,7 @@ public class PageAsyncTask extends NetObject  {
      * @throws system.OutOfMemoryException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Web.UI.PageAsyncTask.-ctor" target="_top">.NET documentation</a>
      */
-    public PageAsyncTask(Func_2 handler) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.web.HttpException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.configuration.ConfigurationException, system.InvalidCastException, system.NullReferenceException, system.OutOfMemoryException {
+    public PageAsyncTask(Func_2<CancellationToken, Task> handler) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.web.HttpException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.configuration.ConfigurationException, system.InvalidCastException, system.NullReferenceException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

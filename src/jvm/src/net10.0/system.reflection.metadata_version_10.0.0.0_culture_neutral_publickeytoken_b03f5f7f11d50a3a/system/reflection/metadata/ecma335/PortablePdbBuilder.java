@@ -42,6 +42,9 @@ import system.reflection.metadata.ecma335.MetadataBuilder;
 import system.collections.immutable.ImmutableArray_1;
 import system.reflection.metadata.MethodDefinitionHandle;
 import system.Func_2;
+import system.collections.generic.IEnumerable_1;
+import system.collections.generic.IEnumerable_1Implementation;
+import system.reflection.metadata.Blob;
 import system.reflection.metadata.BlobContentId;
 import system.reflection.metadata.BlobBuilder;
 import system.UInt16;
@@ -164,7 +167,7 @@ public class PortablePdbBuilder extends NetObject  {
      * @param tablesAndHeaps the argument of type {@code MetadataBuilder}
      * @param typeSystemRowCounts the argument of type {@code ImmutableArray_1}
      * @param entryPoint the argument of type {@code MethodDefinitionHandle}
-     * @param idProvider the argument of type {@code Func_2}
+     * @param idProvider the argument of type {@code Func_2<IEnumerable_1<Blob>, BlobContentId>}
      * @throws Throwable if the .NET constructor fails
      * @throws system.ArgumentException if the .NET member raises it
      * @throws system.ArgumentNullException if the .NET member raises it
@@ -182,7 +185,7 @@ public class PortablePdbBuilder extends NetObject  {
      * @throws system.runtime.interopservices.ExternalException if the .NET member raises it
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.PortablePdbBuilder.-ctor" target="_top">.NET documentation</a>
      */
-    public PortablePdbBuilder(MetadataBuilder tablesAndHeaps, ImmutableArray_1 typeSystemRowCounts, MethodDefinitionHandle entryPoint, Func_2 idProvider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
+    public PortablePdbBuilder(MetadataBuilder tablesAndHeaps, ImmutableArray_1 typeSystemRowCounts, MethodDefinitionHandle entryPoint, Func_2<IEnumerable_1<Blob>, BlobContentId> idProvider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -242,15 +245,15 @@ public class PortablePdbBuilder extends NetObject  {
      * @throws Throwable if the call fails in the bridge or in the CLR
      * @see <a href="https://learn.microsoft.com/dotnet/api/System.Reflection.Metadata.Ecma335.PortablePdbBuilder.IdProvider" target="_top">.NET documentation</a>
      */
-    public Func_2 getIdProvider() throws Throwable {
+    public Func_2<IEnumerable_1<Blob>, BlobContentId> getIdProvider() throws Throwable {
         if (classInstance == null)
             throw new java.lang.UnsupportedOperationException("classInstance is null.");
         java.lang.Object retObjectIdProvider = null;
         try {
             retObjectIdProvider = classInstance.Get("IdProvider");
-            return (Func_2)retObjectIdProvider;
+            return (Func_2<IEnumerable_1<Blob>, BlobContentId>)retObjectIdProvider;
         } catch (java.lang.ClassCastException cce) {
-            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2", retObjectIdProvider != null ? retObjectIdProvider.getClass() : "null"), cce);
+            throw new java.lang.IllegalStateException(java.lang.String.format("Failed to cast %s into Func_2<IEnumerable_1<Blob>, BlobContentId>", retObjectIdProvider != null ? retObjectIdProvider.getClass() : "null"), cce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

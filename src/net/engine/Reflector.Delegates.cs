@@ -259,7 +259,7 @@ namespace MASES.JCOReflector.Engine
             if (EnableGenerics && item.IsGenericTypeDefinition)
             {
                 Type[] genericArguments = item.GetGenericArguments();
-                classParameters = string.Join(", ", genericArguments.Select(t => $"{t.Name} extends IJCOBridgeReflected"));
+                classParameters = BuildTypeParameters(genericArguments, imports);
                 methodArguments = string.Join(", ", genericArguments.Select(t => t.Name));
             }
             // 1. Process and save the pure Java interface file
